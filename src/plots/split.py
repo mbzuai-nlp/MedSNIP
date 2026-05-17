@@ -1,91 +1,107 @@
-"""Plot the dev/test split: entry counts and false-rate per (subset, split) cell."""
+"""Plot the train/dev/test split: entry counts and false-rate per cell.
+
+Color encodes subset (blue=consumer, red=vignette); alpha encodes
+split (solid=train, mid=dev, light=test).
+"""
 import json
 from pathlib import Path
 
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import numpy as np
+from matplotlib.patches import Patch
+from matplotlib.legend_handler import HandlerTuple
+import pandas as pd
+import seaborn as sns
 
 ROOT = Path(__file__).resolve().parents[2]
 IN_PATH = ROOT / "data" / "3-split" / "stats.json"
 OUT_PATH = ROOT / "data" / "3-split" / "split_reasoning.png"
 
-CONSUMER_COLOR = "#3274A1"
-VIGNETTE_COLOR = "#C44E52"
+PALETTE = {"consumer": "#3274A1", "vignette": "#C44E52"}
+SUBSET_LABEL = {"consumer": "Consumer Health", "vignette": "Clinical Vignettes"}
+SPLITS = ["train", "dev", "test"]
+SPLIT_ALPHA = {"train": 1.0, "dev": 0.62, "test": 0.32}
 
-plt.rcParams.update({
-    "font.family": "sans-serif",
-    "font.size": 11,
-    "axes.spines.top": False,
-    "axes.spines.right": False,
-})
+
+def style_bars(ax, subsets):
+    """Recolor a grouped bar plot: base color per x-category, alpha per hue."""
+    for sp_idx, sp in enumerate(SPLITS):
+        container = ax.containers[sp_idx]
+        for bar, subset in zip(container, subsets):  # type: ignore[arg-type]
+            bar.set_facecolor(PALETTE[subset])
+            bar.set_alpha(SPLIT_ALPHA[sp])
+            bar.set_edgecolor("white")
+            bar.set_linewidth(0.6)
+
+
+def split_legend(ax):
+    """Each split row shows a paired (consumer-blue + vignette-red) swatch at
+    the split's alpha — matches the two-color bars in the chart."""
+    handles = [
+        (Patch(facecolor=PALETTE["consumer"], alpha=SPLIT_ALPHA[sp],
+               edgecolor="white", linewidth=0.6),
+         Patch(facecolor=PALETTE["vignette"], alpha=SPLIT_ALPHA[sp],
+               edgecolor="white", linewidth=0.6))
+        for sp in SPLITS
+    ]
+    ax.legend(handles=handles, labels=list(SPLITS),
+              title="Split", fontsize=9, framealpha=0.9,
+              handler_map={tuple: HandlerTuple(ndivide=None, pad=0.4)},
+              handlelength=2.6)
 
 
 def main():
+    sns.set_theme(style="whitegrid", context="notebook", font_scale=0.95)
+
     stats = json.loads(IN_PATH.read_text())
     by = stats["by_subset"]
-
-    cells = {
-        ("consumer", "dev"):  by["consumer"]["dev"],
-        ("consumer", "test"): by["consumer"]["test"],
-        ("vignette", "dev"):  by["vignette"]["dev"],
-        ("vignette", "test"): by["vignette"]["test"],
-    }
-
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 4.5), gridspec_kw={"wspace": 0.35})
-
-    # (a) Entries: stacked dev+test per subset
     subsets = ["consumer", "vignette"]
-    dev_vals = [cells[(s, "dev")]["entries"] for s in subsets]
-    test_vals = [cells[(s, "test")]["entries"] for s in subsets]
-    x = np.arange(len(subsets))
-    width = 0.5
-    b1 = ax1.bar(x, dev_vals, width, color=[CONSUMER_COLOR, VIGNETTE_COLOR], alpha=0.9, label="dev")
-    b2 = ax1.bar(x, test_vals, width, bottom=dev_vals,
-                 color=[CONSUMER_COLOR, VIGNETTE_COLOR], alpha=0.45,
-                 edgecolor="white", linewidth=1, label="test")
-    for bars, vals, offset in [(b1, dev_vals, 0), (b2, test_vals, dev_vals)]:
-        for i, (bar, v) in enumerate(zip(bars, vals)):
-            y = bar.get_y() + bar.get_height() / 2
-            ax1.annotate(f"{v}", xy=(bar.get_x() + bar.get_width() / 2, y),
-                         ha="center", va="center", fontsize=10, fontweight="bold",
-                         color="white")
-    for i, s in enumerate(subsets):
-        total = dev_vals[i] + test_vals[i]
-        test_pct = 100 * test_vals[i] / total
-        ax1.annotate(f"test = {test_pct:.1f}%", xy=(i, total + 3),
-                     ha="center", fontsize=9, color="#666666", fontstyle="italic")
-    ax1.set_xticks(x)
-    ax1.set_xticklabels(["Consumer Health", "Clinical Vignettes"])
-    ax1.set_ylabel("Number of Entries")
-    ax1.set_title("(a) Dev/Test Entries by Subset", fontweight="bold", pad=10)
-    ax1.set_ylim(0, max(d + t for d, t in zip(dev_vals, test_vals)) * 1.18)
 
-    # (b) False-claim rate per cell
-    labels = ["consumer\ndev", "consumer\ntest", "vignette\ndev", "vignette\ntest"]
-    rates = [
-        100 * cells[k]["false_claims"] / cells[k]["claims"]
-        for k in [("consumer", "dev"), ("consumer", "test"),
-                  ("vignette", "dev"), ("vignette", "test")]
-    ]
-    colors = [CONSUMER_COLOR, CONSUMER_COLOR, VIGNETTE_COLOR, VIGNETTE_COLOR]
-    alphas = [0.9, 0.45, 0.9, 0.45]
-    bars = ax2.bar(labels, rates, width=0.6, color=colors)
-    for bar, a in zip(bars, alphas):
-        bar.set_alpha(a)
-    for bar, val in zip(bars, rates):
-        ax2.annotate(f"{val:.1f}%", xy=(bar.get_x() + bar.get_width() / 2, bar.get_height()),
-                     xytext=(0, 4), textcoords="offset points",
-                     ha="center", fontsize=10, fontweight="bold")
-    overall = 100 * sum(c["false_claims"] for c in cells.values()) \
-              / sum(c["claims"] for c in cells.values())
-    ax2.axhline(y=overall, color="gray", linestyle=":", linewidth=1, alpha=0.6)
-    ax2.annotate(f"Overall: {overall:.1f}%", xy=(3.5, overall + 0.2),
-                 fontsize=8, color="gray", fontstyle="italic", ha="right")
-    ax2.set_ylabel("False Claim Rate (%)")
-    ax2.set_title("(b) False-Claim Rate per (Subset × Split)", fontweight="bold", pad=10)
-    ax2.set_ylim(0, max(rates) * 1.4)
+    rows = []
+    for s in subsets:
+        for sp in SPLITS:
+            c = by[s][sp]
+            rate = 100 * c["false_claims"] / c["claims"] if c["claims"] else 0.0
+            rows.append({"subset": s, "split": sp, "entries": c["entries"],
+                         "claims": c["claims"], "rate": rate})
+    df = pd.DataFrame(rows)
+
+    overall = (100 * sum(by[s][sp]["false_claims"] for s in subsets for sp in SPLITS)
+                     / sum(by[s][sp]["claims"]       for s in subsets for sp in SPLITS))
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4.5), gridspec_kw={"wspace": 0.28})
+
+    # (a) entries
+    sns.barplot(data=df, x="subset", y="entries", hue="split",
+                hue_order=SPLITS, order=subsets, ax=ax1)
+    style_bars(ax1, subsets)
+    for container in ax1.containers:
+        ax1.bar_label(container, fmt="%d", fontsize=9.5, fontweight="bold", padding=3)
+    ax1.set_xticks([0, 1])
+    ax1.set_xticklabels([SUBSET_LABEL[s] for s in subsets])
+    ax1.set_xlabel("")
+    ax1.set_ylabel("Number of Entries")
+    ax1.set_title("(a) Train / Dev / Test Entries by Subset", fontweight="bold")
+    split_legend(ax1)
+    ax1.set_ylim(0, df["entries"].max() * 1.18)
+
+    # (b) false-claim rate
+    sns.barplot(data=df, x="subset", y="rate", hue="split",
+                hue_order=SPLITS, order=subsets, ax=ax2)
+    style_bars(ax2, subsets)
+    for container in ax2.containers:
+        ax2.bar_label(container, fmt="%.1f%%", fontsize=9.5, fontweight="bold", padding=3)
+    ax2.axhline(overall, color="gray", linestyle=":", linewidth=1, alpha=0.7)
+    ax2.annotate(f"Overall: {overall:.1f}%", xy=(-0.45, overall + 0.15),
+                 fontsize=8, color="gray", fontstyle="italic", ha="left")
+    ax2.set_xticks([0, 1])
+    ax2.set_xticklabels([SUBSET_LABEL[s] for s in subsets])
+    ax2.set_xlabel("")
+    ax2.set_ylabel("False Atomic-Claim Rate (%)")
+    ax2.set_title("(b) False Atomic-Claim Rate per (Subset × Split)", fontweight="bold")
+    split_legend(ax2)
+    ax2.set_ylim(0, df["rate"].max() * 1.3)
 
     plt.tight_layout()
     plt.savefig(OUT_PATH, dpi=200, bbox_inches="tight", facecolor="white")

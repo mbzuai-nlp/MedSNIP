@@ -1,36 +1,61 @@
 {
-  "strategy": "stratified random by subset, entry-level, seed-fixed",
-  "test_frac": 0.2,
-  "seed": 42,
+  "strategy": "stratified random by (subset, false_bucket 0|1-2|3-5|6+), entry-level, seed-fixed",
+  "target_sizes": {
+    "dev": 50,
+    "test": 56
+  },
+  "seed": 274,
+  "strata_sizes": {
+    "consumer_0": 68,
+    "consumer_1-2": 44,
+    "consumer_3-5": 24,
+    "consumer_6+": 4,
+    "vignette_0": 51,
+    "vignette_1-2": 35,
+    "vignette_3-5": 39,
+    "vignette_6+": 11
+  },
   "totals": {
-    "dev_entries": 221,
-    "test_entries": 55,
-    "dev_claims": 4588,
-    "test_claims": 1167
+    "train_entries": 171,
+    "dev_entries": 49,
+    "test_entries": 56,
+    "train_claims": 3511,
+    "dev_claims": 1024,
+    "test_claims": 1220
   },
   "by_subset": {
     "consumer": {
+      "train": {
+        "entries": 86,
+        "claims": 1772,
+        "false_claims": 114
+      },
       "dev": {
-        "entries": 112,
-        "claims": 2336,
-        "false_claims": 148
+        "entries": 25,
+        "claims": 511,
+        "false_claims": 34
       },
       "test": {
-        "entries": 28,
-        "claims": 584,
+        "entries": 29,
+        "claims": 637,
         "false_claims": 42
       }
     },
     "vignette": {
+      "train": {
+        "entries": 85,
+        "claims": 1739,
+        "false_claims": 175
+      },
       "dev": {
-        "entries": 109,
-        "claims": 2252,
-        "false_claims": 231
+        "entries": 24,
+        "claims": 513,
+        "false_claims": 52
       },
       "test": {
         "entries": 27,
         "claims": 583,
-        "false_claims": 53
+        "false_claims": 57
       }
     }
   }

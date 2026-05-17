@@ -1,23 +1,25 @@
-"""Tag every MedQA row with a `subset` key.
+"""Tag every MedQA claim with a `subset` key.
 
 Subsets are based on query length:
   - consumer:  short patient/public questions  (< 80 words)
   - vignette:  long clinical-presentation questions  (>= 80 words)
 
-Inputs (1-raw):
-  data/1-raw/medqa.json       (276 entries, one per query)
+From this step on the pipeline carries only the flat schema (one row
+per claim). The nested per-query JSON stays in 1-raw as the original
+source; everything downstream filters/aggregates the flat file.
+
+Input:
   data/1-raw/medqa_flat.json  (5755 rows, one per claim)
 
-Outputs (2-subset):
-  data/2-subset/medqa.json       (same shape + `subset` on each entry)
-  data/2-subset/medqa_flat.json  (same shape + `subset` on each row)
+Outputs:
+  data/2-subset/medqa.json    (same rows + `subset` key)
   data/2-subset/stats.json
 """
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW_DIR = ROOT / "data" / "1-raw"
+IN_PATH = ROOT / "data" / "1-raw" / "medqa_flat.json"
 OUT_DIR = ROOT / "data" / "2-subset"
 
 WORD_THRESHOLD = 80
@@ -27,34 +29,35 @@ def label(query: str) -> str:
     return "consumer" if len(query.split()) < WORD_THRESHOLD else "vignette"
 
 
+def entry_id_of(row_id) -> int:
+    return int(str(row_id).split("-")[0])
+
+
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    entries = json.loads((RAW_DIR / "medqa.json").read_text())
-    flat = json.loads((RAW_DIR / "medqa_flat.json").read_text())
-
-    # entries: one per query
-    by_id = {}
-    for e in entries:
-        e["subset"] = label(e["query"])
-        by_id[e["id"]] = e["subset"]
-
-    # flat: one per claim; id is "<entry_id>-<claim_idx>"
+    flat = json.loads(IN_PATH.read_text())
     for row in flat:
-        entry_id = int(str(row["id"]).split("-")[0])
-        row["subset"] = by_id[entry_id]
+        row["subset"] = label(row["query"])
 
-    (OUT_DIR / "medqa.json").write_text(json.dumps(entries, indent=2, ensure_ascii=False))
-    (OUT_DIR / "medqa_flat.json").write_text(json.dumps(flat, indent=2, ensure_ascii=False))
+    (OUT_DIR / "medqa.json").write_text(json.dumps(flat, indent=2, ensure_ascii=False))
+
+    # Per-entry view (one row per entry_id) for entry-level counts
+    seen_entries: dict[int, str] = {}
+    seen_queries: dict[str, set[str]] = {"consumer": set(), "vignette": set()}
+    for r in flat:
+        eid = entry_id_of(r["id"])
+        if eid not in seen_entries:
+            seen_entries[eid] = r["subset"]
+            seen_queries[r["subset"]].add(r["query"])
 
     per_subset = {}
     for s in ("consumer", "vignette"):
-        s_entries = [e for e in entries if e["subset"] == s]
         s_claims = [r for r in flat if r["subset"] == s]
         n_false = sum(1 for r in s_claims if not r["label"])
         per_subset[s] = {
-            "entries": len(s_entries),
-            "unique_queries": len({e["query"] for e in s_entries}),
+            "entries": sum(1 for sub in seen_entries.values() if sub == s),
+            "unique_queries": len(seen_queries[s]),
             "claims": len(s_claims),
             "false_claims": n_false,
             "false_rate": round(n_false / len(s_claims), 4) if s_claims else 0.0,
@@ -62,7 +65,7 @@ def main():
 
     stats = {
         "word_threshold": WORD_THRESHOLD,
-        "total_entries": len(entries),
+        "total_entries": len(seen_entries),
         "total_claims": len(flat),
         "consumer": per_subset["consumer"],
         "vignette": per_subset["vignette"],
