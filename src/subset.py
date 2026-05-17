@@ -47,26 +47,29 @@ def main():
     (OUT_DIR / "medqa.json").write_text(json.dumps(entries, indent=2, ensure_ascii=False))
     (OUT_DIR / "medqa_flat.json").write_text(json.dumps(flat, indent=2, ensure_ascii=False))
 
-    stats = {
-        "word_threshold": WORD_THRESHOLD,
-        "total_entries": len(entries),
-        "total_claims": len(flat),
-    }
+    per_subset = {}
     for s in ("consumer", "vignette"):
         s_entries = [e for e in entries if e["subset"] == s]
         s_claims = [r for r in flat if r["subset"] == s]
         n_false = sum(1 for r in s_claims if not r["label"])
-        stats[s] = {
+        per_subset[s] = {
             "entries": len(s_entries),
             "unique_queries": len({e["query"] for e in s_entries}),
             "claims": len(s_claims),
             "false_claims": n_false,
             "false_rate": round(n_false / len(s_claims), 4) if s_claims else 0.0,
         }
+
+    stats = {
+        "word_threshold": WORD_THRESHOLD,
+        "total_entries": len(entries),
+        "total_claims": len(flat),
+        "consumer": per_subset["consumer"],
+        "vignette": per_subset["vignette"],
+    }
     (OUT_DIR / "stats.json").write_text(json.dumps(stats, indent=2))
 
-    for s in ("consumer", "vignette"):
-        info = stats[s]
+    for s, info in per_subset.items():
         print(f"{s:9s}  entries={info['entries']:4d}  "
               f"unique_q={info['unique_queries']:3d}  "
               f"claims={info['claims']:5d}  "
