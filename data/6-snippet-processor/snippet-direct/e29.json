@@ -1,0 +1,166 @@
+{
+  "entry_id": 29,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 71-year-old man arrives to the emergency room appearing cyanotic and having weak, shallow respirations. He is brought in by his home care nurse, who reports that the patient has a history of myasthenia gravis and frequent urinary tract infections. The patient was in his normal state of health until 5 days ago when he developed a urinary tract infection. He was receiving gentamicin infusions for his infections. This morning, he experienced poor grip strength and progressive difficulty breathing. The patient’s medications include pyridostigmine and aspirin, both of which he takes as prescribed. His temperature is 99.0°F (37.2°C), blood pressure is 128/78 mmHg, pulse is 92/min, and respirations are 28/min with an oxygen saturation of 86% O2 on room air. The patient has gray-blue skin, hypophonia, weak upper extremities, and normal leg strength. An arterial blood gas is drawn with results as shown below:\n\nPO2: 55 mmHg\nPCO2: 60 mmHg\npH: 7.30\n\nThe patient is intubated. Which of the following is the most appropriate next step in management? (A) Atropine (B) Edrophonium (C) Neostigmine (D) Plasmapheresis (E) Thymectomy",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2775,
+    "output_tokens": 1202,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2775,
+      "output_tokens": 1202,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "71",
+    "sex": "male",
+    "chief_complaint": "cyanosis, weak shallow respirations, poor grip strength, and progressive difficulty breathing",
+    "medical_history": "myasthenia gravis; frequent urinary tract infections",
+    "medications": "pyridostigmine; aspirin; recent gentamicin infusions for urinary tract infection",
+    "vitals": "T 99.0°F (37.2°C), BP 128/78 mmHg, pulse 92/min, respirations 28/min, oxygen saturation 86% on room air",
+    "exam_findings": "gray-blue skin, hypophonia, weak upper extremities, normal leg strength; ABG: PO2 55 mmHg, PCO2 60 mmHg, pH 7.30",
+    "treatment_history": "intubated",
+    "correct_answer": "Plasmapheresis"
+  },
+  "sentences": [
+    "A 71-year-old man presents with cyanosis, weak and shallow respirations",
+    "History includes myasthenia gravis (MG) and frequent urinary tract infections (UTIs)",
+    "Recently treated with gentamicin for a UTI",
+    "Symptoms include poor grip strength and progressive difficulty breathing",
+    "Medication history includes pyridostigmine (a cholinesterase inhibitor) and aspirin",
+    "Vital Signs and Physical Examination",
+    "Temperature is normal at 99.0°F (37.2°C)",
+    "Blood pressure is within normal limits at 128/78 mmHg",
+    "Pulse rate is 92/min, which is slightly elevated but within the acceptable range",
+    "Respirations are increased at 28/min, indicating respiratory distress",
+    "Oxygen saturation is significantly low at 86% on room air",
+    "Physical exam shows gray-blue skin (cyanosis), hypophonia (weak voice), weak upper extremities, and normal leg strength",
+    "PO2: 55 mmHg (low, indicating hypoxemia)",
+    "PCO2: 60 mmHg (high, indicating hypercapnia)",
+    "pH: 7.30 (acidic, indicating respiratory acidosis)",
+    "The patient is experiencing respiratory failure, likely due to myasthenic crisis, which can be precipitated by infections or certain medications (e.g., aminoglycosides like gentamicin)",
+    "Myasthenic crisis is a severe exacerbation of MG leading to respiratory compromise and requires urgent management",
+    "Evaluation of Treatment Options",
+    "(A) Atropine: Mainly used to treat bradycardia and is not indicated for myasthenic crisis",
+    "(B) Edrophonium: Historically used for diagnostic purposes in MG but is not a treatment for myasthenic crisis",
+    "(C) Neostigmine: Another cholinesterase inhibitor similar to pyridostigmine, not typically used as an emergency treatment in myasthenic crisis",
+    "(D) Plasmapheresis: An effective treatment for myasthenic crisis as it removes circulating antibodies against acetylcholine receptors",
+    "(E) Thymectomy: A surgical procedure for thymus removal, beneficial in long-term MG management but not suitable for acute crisis management",
+    "The most appropriate next step in management for the patient in myasthenic crisis is plasmapheresis",
+    "(D) Plasmapheresis"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "This 71-year-old man presents with cyanosis, weak shallow respirations, poor grip strength, and progressive difficulty breathing in the setting of myasthenia gravis, frequent urinary tract infections, recent gentamicin treatment for a urinary tract infection, and home pyridostigmine plus aspirin use.",
+      "pattern": "A",
+      "notes": "Enumeration of the same patient's presenting history and medication context."
+    },
+    {
+      "source_sentences": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "In this 71-year-old man, the vital signs and examination show temperature 99.0°F (37.2°C), blood pressure 128/78 mmHg, pulse 92/min, respirations 28/min indicating respiratory distress, oxygen saturation 86% on room air, and physical findings of gray-blue skin, hypophonia, weak upper extremities, and normal leg strength.",
+      "pattern": "A",
+      "notes": "Enumeration of vital signs and physical examination findings for the same patient."
+    },
+    {
+      "source_sentences": [
+        12,
+        13,
+        14
+      ],
+      "output": "In this 71-year-old man, arterial blood gas shows PO2 55 mmHg indicating hypoxemia, PCO2 60 mmHg indicating hypercapnia, and pH 7.30 indicating respiratory acidosis.",
+      "pattern": "A",
+      "notes": "Enumeration of related ABG interpretations from the same test."
+    },
+    {
+      "source_sentences": [
+        15,
+        16
+      ],
+      "output": "This 71-year-old man is experiencing respiratory failure likely due to myasthenic crisis, which can be precipitated by infection or aminoglycosides such as gentamicin; myasthenic crisis is a severe exacerbation of myasthenia gravis that causes respiratory compromise and requires urgent management.",
+      "pattern": "B",
+      "notes": "Causal chain links the patient's respiratory failure to myasthenic crisis and its known precipitants."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "The response next evaluates treatment options for this 71-year-old man with myasthenic crisis.",
+      "pattern": "E",
+      "notes": "Standalone transition sentence marking a topic shift to treatment-option evaluation."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Atropine is mainly used to treat bradycardia and is not indicated for myasthenic crisis in this 71-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone treatment-option assessment."
+    },
+    {
+      "source_sentences": [
+        19
+      ],
+      "output": "Edrophonium was historically used diagnostically in myasthenia gravis but is not a treatment for myasthenic crisis in this 71-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone treatment-option assessment."
+    },
+    {
+      "source_sentences": [
+        20
+      ],
+      "output": "Neostigmine is another cholinesterase inhibitor similar to pyridostigmine and is not typically used as emergency treatment for myasthenic crisis in this 71-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone treatment-option assessment."
+    },
+    {
+      "source_sentences": [
+        21
+      ],
+      "output": "Plasmapheresis is an effective treatment for myasthenic crisis in this 71-year-old man because it removes circulating antibodies against acetylcholine receptors.",
+      "pattern": "B",
+      "notes": "Causal explanation links the recommendation to the mechanism of benefit."
+    },
+    {
+      "source_sentences": [
+        22
+      ],
+      "output": "Thymectomy is a surgical procedure for thymus removal that can help with long-term myasthenia gravis management but is not appropriate for acute crisis management in this 71-year-old man.",
+      "pattern": "F",
+      "notes": "Same treatment topic but a distinct, independently checkable fact about thymectomy."
+    },
+    {
+      "source_sentences": [
+        23,
+        24
+      ],
+      "output": "For this 71-year-old man with myasthenic crisis and respiratory failure, the most appropriate next step in management is plasmapheresis (choice D).",
+      "pattern": "C",
+      "notes": "Conclusion statement with final answer; merged with the answer-choice sentence."
+    }
+  ]
+}

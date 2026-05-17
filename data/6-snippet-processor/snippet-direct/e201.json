@@ -1,0 +1,66 @@
+{
+  "entry_id": 201,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1770,
+    "output_tokens": 360,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1770,
+      "output_tokens": 360,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "poison ivy contagiousness",
+    "condition": "poison ivy exposure",
+    "symptom": "rash, blisters, and itching"
+  },
+  "sentences": [
+    "Poison ivy (Toxicodendron radicans) is a plant that contains an oil called urushiol, which causes an allergic reaction in most people",
+    "The urushiol oil is responsible for the characteristic rash, blisters, and itching associated with poison ivy exposure",
+    "The urushiol oil is not contagious between people, meaning it cannot be spread from person to person through direct contact or other means",
+    "However, it can be transferred to other surfaces, such as clothing, tools, or pets, and then cause a reaction when someone comes into contact with those contaminated items",
+    "It's worth noting that people who have not previously been exposed to urushiol may develop an allergic reaction after exposure, while those who have been previously exposed may not react at all or may experience a milder reaction",
+    "This is because the body builds up a tolerance to the urushiol oil over time"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "Poison ivy (Toxicodendron radicans) contains an oil called urushiol, and urushiol causes the characteristic allergic rash, blisters, and itching associated with poison ivy exposure in most people.",
+      "pattern": "B",
+      "notes": "Merged because sentence 1 depends on sentence 0 identifying urushiol as the oil in poison ivy."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Urushiol oil is not contagious between people and cannot be spread from person to person by direct contact, but urushiol can be transferred to surfaces such as clothing, tools, or pets and can then cause a reaction when someone touches those contaminated items.",
+      "pattern": "C",
+      "notes": "Merged because the main conclusion about non-contagiousness is qualified by the supporting clarification that contaminated objects can transfer urushiol."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "The response states that people not previously exposed to urushiol may develop an allergic reaction after exposure, while previously exposed people may not react or may react more mildly, because the body builds up tolerance to urushiol over time.",
+      "pattern": "B",
+      "notes": "Merged because sentence 5 gives the explicit causal explanation for sentence 4."
+    }
+  ]
+}

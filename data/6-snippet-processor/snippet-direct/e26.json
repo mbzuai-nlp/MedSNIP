@@ -1,0 +1,128 @@
+{
+  "entry_id": 26,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to his primary care physician with a 6-month history of increasing lower back pain. He first felt the pain while lifting boxes at work but thought that he had just strained a muscle. The pain appears to be worse in the mornings and after rest. Exercise and physical activity appear to temporarily make the pain better. He has taken acetaminophen and ibuprofen for the pain. He has no significant medical history and takes no medications. His temperature is 98.6°F (37.0°C), blood pressure is 115/70 mmHg, pulse is 70/min, and respirations are 12/min. On physical exam, he is found to have limited flexion and extension of his spine as well as tenderness to palpation over the insertion of his patellar tendons bilaterally. Results from laboratory tests are shown below:\n\nSerum:\nErythrocyte sedimentation rate (ESR): 61 mm/hr\nC-reactive protein (CRP): 36 mg/L (normal <10 mg/L)\n\nWhich of the following is the most accurate test for this patient's condition? (A) Bone scan (B) Computed tomography (C) Magnetic resonance imaging (D) Radiograph (E) Ultrasound",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2633,
+    "output_tokens": 852,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2633,
+      "output_tokens": 852,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "26",
+    "sex": "male",
+    "chief_complaint": "6-month history of increasing lower back pain",
+    "medical_history": "no significant medical history",
+    "medications": "acetaminophen and ibuprofen",
+    "vitals": "temperature 98.6°F (37.0°C), blood pressure 115/70 mmHg, pulse 70/min, respirations 12/min",
+    "exam_findings": "limited flexion and extension of the spine; tenderness over the insertion of the patellar tendons bilaterally",
+    "correct_answer": "Magnetic resonance imaging (MRI)"
+  },
+  "sentences": [
+    "To determine the most accurate test for the condition described in the question, we need to consider the patient's symptoms, physical examination findings, and laboratory test results in the context of common clinical scenarios",
+    "A 26-year-old man with a 6-month history of increasing lower back pain",
+    "Pain worsens in the mornings and after rest, which suggests inflammatory back pain",
+    "Pain improves with exercise and physical activity",
+    "Limited flexion and extension of the spine",
+    "Tenderness over the insertion of the patellar tendons bilaterally (enthesitis)",
+    "Elevated erythrocyte sedimentation rate (ESR) of 61 mm/hr",
+    "Elevated C-reactive protein (CRP) of 36 mg/L",
+    "The combination of chronic back pain, morning stiffness, improvement with activity, and enthesitis suggests a spondyloarthropathy, such as ankylosing spondylitis (AS)",
+    "Bone Scan: Not typically used for the initial diagnosis of spondyloarthropathies",
+    "Computed Tomography (CT): Useful for detecting bony changes but less sensitive than MRI for early inflammatory changes",
+    "Magnetic Resonance Imaging (MRI): Highly sensitive for detecting early inflammatory changes and sacroiliitis, which are characteristic of AS",
+    "Radiograph: Useful for detecting advanced bony changes like syndesmophytes but less sensitive for early disease",
+    "Ultrasound: Useful for detecting enthesitis but not typically used for diagnosing axial involvement",
+    "Given the clinical suspicion of ankylosing spondylitis and the need to detect early inflammatory changes, Magnetic Resonance Imaging (MRI) is the most accurate test for this patient's condition",
+    "MRI can reveal early signs of sacroiliitis and other inflammatory changes in the spine and sacroiliac joints that are characteristic of ankylosing spondylitis",
+    "(C) Magnetic resonance imaging (MRI)"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most accurate test for this 26-year-old man with 6 months of increasing lower back pain, the clinical assessment should integrate symptoms, physical examination findings, and laboratory results.",
+      "pattern": "D",
+      "notes": "Standalone framing statement about diagnostic approach."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "This 26-year-old man has a 6-month history of increasing lower back pain that is worse in the mornings and after rest and improves with exercise, along with limited flexion and extension of the spine, bilateral patellar tendon insertion tenderness consistent with enthesitis, ESR 61 mm/hr, and CRP 36 mg/L; this combination suggests a spondyloarthropathy such as ankylosing spondylitis.",
+      "pattern": "C",
+      "notes": "Conclusion that the patient likely has spondyloarthropathy requires the preceding symptom, exam, and inflammatory marker premises."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Bone scan is not typically used for the initial diagnosis of spondyloarthropathies.",
+      "pattern": "D",
+      "notes": "Standalone imaging-test fact."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Computed tomography is useful for detecting bony changes but is less sensitive than MRI for early inflammatory changes.",
+      "pattern": "F",
+      "notes": "Self-contained checkable fact about CT, distinct from other modality facts."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Magnetic resonance imaging is highly sensitive for detecting early inflammatory changes and sacroiliitis, which are characteristic of ankylosing spondylitis.",
+      "pattern": "D",
+      "notes": "Standalone modality-performance statement."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Radiographs are useful for detecting advanced bony changes such as syndesmophytes but are less sensitive for early ankylosing spondylitis.",
+      "pattern": "D",
+      "notes": "Standalone imaging-test fact."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Ultrasound is useful for detecting enthesitis but is not typically used to diagnose axial involvement in this 26-year-old man with inflammatory back pain.",
+      "pattern": "D",
+      "notes": "Standalone modality fact with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        14,
+        15,
+        16
+      ],
+      "output": "Given this 26-year-old man's clinical picture suggestive of ankylosing spondylitis and the need to detect early inflammatory changes, magnetic resonance imaging is the most accurate test because MRI can reveal early sacroiliitis and other inflammatory changes in the spine and sacroiliac joints that are characteristic of ankylosing spondylitis; the correct answer is (C) Magnetic resonance imaging (MRI).",
+      "pattern": "C",
+      "notes": "Recommendation/answer merged with its supporting rationale and restated final choice."
+    }
+  ]
+}

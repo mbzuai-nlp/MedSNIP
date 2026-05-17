@@ -1,0 +1,176 @@
+{
+  "entry_id": 73,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 72-year-old man presents to his primary care physician for a general checkup. He states that he has been a bit more fatigued lately but believes it is secondary to poor sleep at his new house. The patient is otherwise healthy and takes no medications. His temperature is 98.0°F (36.7°C), blood pressure is 141/90 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 98% on room air. Physical exam is notable only for minor pallor but is otherwise unremarkable. Basic laboratory studies are ordered as seen below.\n\nHemoglobin: 10 g/dL\nHematocrit: 30%\nLeukocyte count: 67,500/mm^3\nPlatelet count: 119,000/mm^3\n\nSerum:\nNa: 141 mEq/L\nCl: 103 mEq/L\nK: 4.0 Eq/L\nHCO3-: 24 mEq/L\nBUN: 22 mg/dL\nGlucose: 109 mg/dL\nCreatinine: 1.2 mg/dL\nCa: 10.0 mg/dL\n\nWhich of the following is the most likely diagnosis? (A) Acute lymphoblastic leukemia (B) Acute myelogenous leukemia (C) Chronic lymphocytic leukemia (D) Chronic myelogenous leukemia (E) Hairy cell leukemia",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2967,
+    "output_tokens": 1282,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2967,
+      "output_tokens": 1282,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "72",
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "medical_history": "otherwise healthy; takes no medications",
+    "vitals": "T 98.0°F (36.7°C), BP 141/90 mmHg, pulse 82/min, respirations 16/min, oxygen saturation 98% on room air",
+    "exam_findings": "minor pallor; otherwise unremarkable physical exam",
+    "correct_answer": "Chronic myelogenous leukemia (D)"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for this 72-year-old man with fatigue and abnormal blood test results, we need to analyze the clinical and laboratory findings step-by-step and compare them against the characteristics of each potential diagnosis",
+    "Clinical Presentation: The patient is an elderly man (aged 72) with recent-onset fatigue and minor pallor but otherwise unremarkable physical exam",
+    "Vital Signs: His vital signs are relatively normal, except for a mildly elevated blood pressure of 141/90 mmHg, which is less relevant to the primary concern",
+    "Hemoglobin: 10 g/dL (low, indicating anemia)",
+    "Hematocrit: 30% (low, consistent with anemia)",
+    "Leukocyte count: 67,500/mm^3 (markedly elevated, suggestive of a leukemic process)",
+    "Platelet count: 119,000/mm^3 (mild thrombocytopenia)",
+    "Serum chemistry: Essentially within normal limits except for mildly elevated BUN (22 mg/dL) and creatinine (1.2 mg/dL)",
+    "Acute Lymphoblastic Leukemia (ALL): Typically occurs in children and young adults, characterized by rapid onset and severe constitutional symptoms",
+    "Acute Myelogenous Leukemia (AML): Common in older adults, often presents with symptoms like fatigue, bleeding, and infection due to bone marrow failure",
+    "Blood smear usually shows blasts",
+    "Chronic Lymphocytic Leukemia (CLL): Most common in older adults, indolent progression, often asymptomatic apart from incidental findings or mild symptoms like fatigue and lymphocytosis",
+    "Chronic Myelogenous Leukemia (CML): Present in older adults, characterized by marked leukocytosis (often >50,000/mm^3), splenomegaly, and presence of the Philadelphia chromosome (BCR-ABL fusion gene)",
+    "Hairy Cell Leukemia: Rare, usually presents with pancytopenia and splenomegaly, not typically with markedly elevated leukocyte counts",
+    "The leukocyte count is significantly elevated (67,500/mm^3), which is highly suggestive of a chronic leukemia rather than an acute one, as acute leukemias usually present with blasts and not such a high leukocyte count in peripheral blood",
+    "ALL and AML: Less likely due to the patient's age and the chronic nature of his symptoms",
+    "Additionally, acute leukemias usually present with a high number of blasts on the blood smear, which is not indicated here",
+    "CLL: Fits with the patient's age and chronic symptoms but rarely reaches such a high leukocyte count",
+    "CLL typically presents with a lymphocyte predominance on blood smear",
+    "CML: Fits well with the patient's age, significant leukocytosis, and relatively mild symptoms",
+    "CML often presents with elevated granulocytes (neutrophils, basophils, eosinophils) and can be confirmed by detecting the Philadelphia chromosome",
+    "Hairy Cell Leukemia: The patient does not exhibit typical findings such as pancytopenia or significant splenomegaly and is not consistent with the markedly elevated leukocyte count",
+    "Considering all the above points, the most likely diagnosis for this patient is Chronic Myelogenous Leukemia (CML)",
+    "Final Answer: (D) Chronic myelogenous leukemia"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "For this 72-year-old man with fatigue and abnormal blood test results, the diagnosis should be determined by analyzing the clinical and laboratory findings and comparing them with the features of each candidate diagnosis.",
+      "pattern": "D",
+      "notes": "Standalone framing statement."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "This 72-year-old man has recent-onset fatigue and minor pallor with otherwise unremarkable examination, and his vital signs are relatively normal except for mildly elevated blood pressure of 141/90 mmHg, which is less relevant to the main hematologic concern.",
+      "pattern": "A",
+      "notes": "Enumeration of the patient's general presentation and vitals."
+    },
+    {
+      "source_sentences": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "This 72-year-old man has hemoglobin 10 g/dL and hematocrit 30%, consistent with anemia, leukocyte count 67,500/mm^3 suggesting a leukemic process, platelet count 119,000/mm^3 indicating mild thrombocytopenia, and serum chemistries that are essentially normal except for mildly elevated BUN 22 mg/dL and creatinine 1.2 mg/dL.",
+      "pattern": "A",
+      "notes": "Enumeration of laboratory properties for the same patient."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Acute lymphoblastic leukemia typically occurs in children and young adults and is characterized by rapid onset and severe constitutional symptoms.",
+      "pattern": "D",
+      "notes": "Standalone disease characterization."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "Acute myelogenous leukemia is common in older adults, often presents with fatigue, bleeding, and infection due to bone marrow failure, and blood smear usually shows blasts.",
+      "pattern": "A",
+      "notes": "Enumeration of features of one diagnosis."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Chronic lymphocytic leukemia is most common in older adults, has an indolent course, and is often asymptomatic apart from incidental findings or mild symptoms such as fatigue and lymphocytosis.",
+      "pattern": "D",
+      "notes": "Standalone disease characterization."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Chronic myelogenous leukemia occurs in older adults and is characterized by marked leukocytosis, often greater than 50,000/mm^3, splenomegaly, and the Philadelphia chromosome (BCR-ABL fusion gene).",
+      "pattern": "D",
+      "notes": "Standalone disease characterization."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Hairy cell leukemia is rare and usually presents with pancytopenia and splenomegaly rather than markedly elevated leukocyte counts.",
+      "pattern": "D",
+      "notes": "Standalone disease characterization."
+    },
+    {
+      "source_sentences": [
+        14,
+        15,
+        16
+      ],
+      "output": "In this 72-year-old man, the leukocyte count of 67,500/mm^3 suggests a chronic leukemia rather than an acute leukemia because acute leukemias usually show blasts rather than this pattern of marked peripheral leukocytosis; therefore ALL and AML are less likely given the patient's age and chronic symptoms.",
+      "pattern": "B",
+      "notes": "Causal reasoning chain linking leukocytosis and age/symptom tempo to reduced likelihood of acute leukemias."
+    },
+    {
+      "source_sentences": [
+        17,
+        18
+      ],
+      "output": "In this 72-year-old man, chronic lymphocytic leukemia fits the patient's age and chronic symptoms, but CLL rarely reaches such a high leukocyte count and typically shows lymphocyte predominance on blood smear.",
+      "pattern": "A",
+      "notes": "Multiple checkable features of CLL applied to the patient."
+    },
+    {
+      "source_sentences": [
+        19,
+        20
+      ],
+      "output": "In this 72-year-old man, chronic myelogenous leukemia fits well because the patient has an appropriate age group, significant leukocytosis, and relatively mild symptoms; CML often presents with elevated granulocytes including neutrophils, basophils, and eosinophils and can be confirmed by detecting the Philadelphia chromosome.",
+      "pattern": "B",
+      "notes": "Conclusion about CML supported by explicit diagnostic features and confirmatory test."
+    },
+    {
+      "source_sentences": [
+        21
+      ],
+      "output": "In this 72-year-old man, hairy cell leukemia is less consistent because the patient does not have typical findings such as pancytopenia or significant splenomegaly and instead has markedly elevated leukocyte count.",
+      "pattern": "D",
+      "notes": "Standalone exclusion statement with sufficient context."
+    },
+    {
+      "source_sentences": [
+        22,
+        23
+      ],
+      "output": "Considering the clinical picture and laboratory findings in this 72-year-old man, the most likely diagnosis is chronic myelogenous leukemia (CML), corresponding to answer choice D.",
+      "pattern": "C",
+      "notes": "Final diagnosis statement; merged with explicit final answer."
+    }
+  ]
+}
