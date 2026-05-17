@@ -1,0 +1,557 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2026
+
+% The authors should use one of these tracks.
+% Before accepting by the NeurIPS conference, select one of the options below.
+% 0. "default" for submission
+\usepackage[main, final]{neurips_2026}
+% the "default" option is equal to the "main" option, which is used for the Main Track with double-blind reviewing.
+% 1. "main" option is used for the Main Track
+%  \usepackage[main]{neurips_2026}
+% 2. "position" option is used for the Position Paper Track
+%  \usepackage[position]{neurips_2026}
+% 3. "eandd" option is used for the Evaluations & Datasets Track
+ % \usepackage[eandd]{neurips_2026}
+ % if you want to opt-in for a de-anomymized submission (not recommended, but OK):
+ %\usepackage[eandd, nonanonymous]{neurips_2026}
+% 4. "creativeai" option is used for the Creative AI Track
+%  \usepackage[creativeai]{neurips_2026}
+% 5. "sglblindworkshop" option is used for the Workshop with single-blind reviewing
+ % \usepackage[sglblindworkshop]{neurips_2026}
+% 6. "dblblindworkshop" option is used for the Workshop with double-blind reviewing
+%  \usepackage[dblblindworkshop]{neurips_2026}
+
+% After being accepted, the authors should add "final" behind the track to compile a camera-ready version.
+% 1. Main Track
+ % \usepackage[main, final]{neurips_2026}
+% 2. Position Paper Track
+%  \usepackage[position, final]{neurips_2026}
+% 3. Evaluations & Datasets Track
+ % \usepackage[eandd, final]{neurips_2026}
+% 4. Creative AI Track
+%  \usepackage[creativeai, final]{neurips_2026}
+% 5. Workshop with single-blind reviewing
+%  \usepackage[sglblindworkshop, final]{neurips_2026}
+% 6. Workshop with double-blind reviewing
+%  \usepackage[dblblindworkshop, final]{neurips_2026}
+% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote.
+% For workshops (5., 6.), the authors should add the name of the workshop, "\workshoptitle" command is used to set the workshop title.
+% \workshoptitle{WORKSHOP TITLE}
+
+% "preprint" option is used for arXiv or other preprint submissions
+ % \usepackage[preprint]{neurips_2026}
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2026}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{amssymb}        % extended math symbols (\checkmark, etc.)
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{array}          % extended column specs
+\usepackage{tabularx}       % variable-width tables
+\usepackage{enumitem}       % list spacing control
+
+% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote. 
+\title{MedFactCheck: Annotation Guidelines}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{
+}
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\section{Background}
+\label{sec:background}
+
+We have 5{,}755 atomic claims from 276 medical QA entries. Your job is to \textbf{group these atoms into snippets} and \textbf{label each snippet} with dual labels.
+
+Each entry shows:
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Query}: the medical question.
+    \item \textbf{Full Response}: the LLM-generated answer (collapsible).
+    \item \textbf{Atomic Claims}: individual statements extracted from the response, each with an expert label ($\checkmark$ true / $\times$ false).
+\end{itemize}
+
+\subsection*{Why we merge at all (the motivation)}
+
+Atomic-claim extraction is often \textbf{too fine-grained}: a single atom like \textit{``Option B is the correct answer''} or \textit{``The factors include the individual's age''} is \textbf{unverifiable in isolation}, because it needs the surrounding reasoning to make sense. Medical responses, especially clinical vignettes, chain claims together with \textit{because / since / therefore / requires}. Splitting those chains destroys the verifiable unit.
+
+\textbf{We merge atoms whose logical dependency would be lost if each stood alone.} Every rule below, and every judgment call during consensus, should trace back to this one question:
+
+\begin{quote}
+\textbf{``If I read only this atom (or only this snippet), do I have enough to check whether it's medically correct?''}
+\end{quote}
+
+If \textbf{yes} $\rightarrow$ atomic is fine. If \textbf{no} $\rightarrow$ merge with the atoms that carry the missing context.
+
+
+\section{Your Task}
+\label{sec:task}
+
+For each entry:
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Define Shared Context}: key-value pairs describing the query/response context (e.g., patient demographics, medications, topic). Click ``Generate'' to auto-extract, then edit as needed.
+    \item \textbf{Select atoms}: check the atoms in the left panel that belong together.
+    \item \textbf{Create Snippet}: click ``+ Create Snippet'' to group them.
+    \item \textbf{Generate or write text}: click ``Generate'' to get an LLM draft, or write the merged text yourself. Edit as needed.
+    \item \textbf{Set dual labels}, for each snippet:
+        \begin{itemize}[leftmargin=*,itemsep=1pt]
+            \item \textbf{With context}: Is this correct \textit{for this specific patient/query}?
+            \item \textbf{In general}: Is this correct as a \textit{general medical statement}?
+        \end{itemize}
+    \item \textbf{Mark ambiguity}: check ``Ambiguous'' if you genuinely can't determine correctness.
+    \item \textbf{Add notes}: explain your reasoning, especially when the two labels differ.
+    \item \textbf{Repeat} until all atoms are assigned to snippets.
+\end{enumerate}
+
+
+\section{Shared Context}
+\label{sec:shared-context}
+
+Shared context is defined \textbf{per entry} and applies to all snippets. It captures the key facts from the query/response that snippets may reference.
+
+\paragraph{For clinical vignettes:}
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Key} & \textbf{Example} \\
+\midrule
+age & 23 \\
+sex & male \\
+chief\_complaint & shouting on subway, claiming little people trying to kill him \\
+medical\_history & marijuana and IV drug use, multiple suicide attempts \\
+medications & haloperidol, diphenhydramine \\
+vitals & temperature 98.6\textdegree{}F, BP 115/71, pulse 72 \\
+treatment\_history & failure of risperidone, haloperidol, ziprasidone \\
+correct\_answer & Clozapine (B) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{For consumer health queries:}
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Key} & \textbf{Example} \\
+\midrule
+topic & drug interaction \\
+drug\_a & NyQuil \\
+drug\_b & Benadryl \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Click \textbf{``Generate''} to auto-extract context from the query. Review and edit: delete irrelevant keys, and fix values.
+
+
+\section{Grouping Rules (Merge vs Keep Atomic)}
+\label{sec:grouping}
+
+\textbf{Guiding question (repeat it for every atom):} \textit{If this atom stood alone, could I still verify it?}
+
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Yes, standalone is verifiable} $\rightarrow$ keep atomic.
+    \item \textbf{No, it needs neighboring atoms for meaning} $\rightarrow$ merge.
+\end{itemize}
+
+\subsection{Three patterns that trigger MERGE}
+\label{sec:merge-patterns}
+
+All three were observed to hit full or near-full agreement in the test batch (6/6 or 5/6 annotators merged). If you see any of these, merge.
+
+\paragraph{Pattern A: Enumeration of properties of one subject.}
+The response lists multiple features, factors, or properties of the same thing. Merge the whole list into one snippet, even if each item is independently verifiable; the enumeration is the unit the LLM produced and the unit a reader evaluates.
+
+\medskip
+\noindent\textit{Example A.1} (Entry 17, consumer query: ``What is the most safe amount of Advil to take at one time?'').
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 1:}] ``The safe amount of Advil (ibuprofen) to take at one time depends on several factors.''
+    \item[\textit{atom 2:}] ``The factors include the individual's age.''
+    \item[\textit{atom 3:}] ``The factors include the individual's weight.''
+    \item[\textit{atom 4:}] ``The factors include the individual's overall health.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE (6/6 annotators). \\
+\noindent\textbf{Why:} atoms 2--4 begin with ``The factors include\ldots{}'' and are meaningless without atom 1. The enumeration is the verifiable unit.
+
+\medskip
+\noindent\textit{Example A.2} (Entry 75, vignette on a 72-year-old man with suspected leukemia).
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 10:}] ``Chronic Lymphocytic Leukemia (CLL) typically presents with a high leukocyte count.''
+    \item[\textit{atom 11:}] ``CLL typically presents with anemia.''
+    \item[\textit{atom 12:}] ``CLL typically presents with thrombocytopenia.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE (6/6 annotators). \\
+\noindent\textbf{Why:} the response lists three clinical features that together form the ``CLL picture''. The same pattern applies to atoms 13--15 (CML) and 16--18 (HCL); each leukemia subtype gets its own merged snippet.
+
+\paragraph{Pattern B: Causal or conditional chain.}
+Atoms connected by \textit{because / since / as / due to / requires / therefore}, or where one atom is the premise for another. Merge so the logical link survives the decomposition.
+
+\medskip
+\noindent\textit{Example B.1} (Entry 37, 23-year-old man with treatment-resistant schizophrenia in the ED).
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 7:}] ``Clozapine is generally reserved for patients who have failed to respond to at least two previous adequate trials of antipsychotic medications.''
+    \item[\textit{atom 8:}] ``Patients must have failed at least one conventional antipsychotic.''
+    \item[\textit{atom 9:}] ``Patients must have failed at least one second-generation antipsychotic.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE (6/6 annotators). \\
+\noindent\textbf{Why:} atom 7 states the condition; atoms 8 and 9 specify the two required failures. Splitting would leave atoms 8 and 9 referring to an unstated requirement.
+
+\medskip
+\noindent\textit{Example B.2} (Entry 9, consumer query on Hepatitis A IgM).
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 7:}] ``A non-reactive result does not necessarily rule out a past infection.''
+    \item[\textit{atom 8:}] ``IgM antibodies may not be detectable after a certain period.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE (5/6 annotators). \\
+\noindent\textbf{Why:} atom 8 is the \textit{reason} for atom 7 (non-reactive doesn't rule out past infection \textit{because} IgM fades). The causal link is the verifiable unit.
+
+\paragraph{Pattern C: Conclusion + its supporting premises.}
+A recommendation, diagnosis, or final answer that is only meaningful when read with the reasoning that produced it. Merge the conclusion with its premises.
+
+\medskip
+\noindent\textit{Example C.1} (Entry 37, same schizophrenia vignette, end of the response).
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 19:}] ``The most appropriate next step in management is to initiate clozapine.''
+    \item[\textit{atom 20:}] ``Option B is the correct answer.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE (5/6 annotators). \\
+\noindent\textbf{Why:} atom 20 is unverifiable alone; \textit{what} is Option B? Atom 19 provides the referent.
+
+\medskip
+\noindent\textit{Example C.2} (Entry 37, same vignette, earlier in the response).
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 1:}] ``The patient's aggressive behavior is likely secondary to schizophrenia.''
+    \item[\textit{atom 2:}] ``The patient's aggressive behavior could be due to a psychotic disorder.''
+    \item[\textit{atom 3:}] ``The most appropriate next step in management is to consider an alternative antipsychotic medication.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE (5/6 annotators). \\
+\noindent\textbf{Why:} atoms 1--2 give the differential; atom 3 is the conclusion drawn from that differential.
+
+\subsection{Three patterns that justify KEEPING ATOMIC}
+\label{sec:atomic-patterns}
+
+\paragraph{Pattern D: Complete standalone fact, definition, or lab interpretation.}
+The atom reads as a self-contained medical statement. No surrounding text needed.
+
+\medskip
+\noindent\textit{Example D.1} (Entry 9 / atom 1, Hepatitis A IgM definition).
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 1:}] ``A non-reactive result for the Hepatitis A IgM (Immunoglobulin M) antibody test indicates that the individual does not have a recent or current Hepatitis A infection.''
+\end{itemize}
+\noindent\textbf{Decision:} ATOMIC (6/6 annotators). \\
+\noindent\textbf{Why:} a complete definition of what a non-reactive IgM result means. Nothing else from the response is needed to judge it.
+
+\medskip
+\noindent\textit{Example D.2} (Entry 75 / atom 1, lab value interpretation).
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 1:}] ``A platelet count of 119{,}000/mm$^3$ is within normal limits.''
+\end{itemize}
+\noindent\textbf{Decision:} ATOMIC (6/6 annotators). \\
+\noindent\textbf{Why:} a single lab-value claim verifiable in isolation. It happens to be \textbf{false} (the normal range is 150{,}000--400{,}000), but that is a labeling question, not a grouping one.
+
+\paragraph{Pattern E: Topic genuinely shifts.}
+The response moves from one subject to an unrelated one (e.g., drug composition $\rightarrow$ overdose risk, or one differential diagnosis $\rightarrow$ a different one). Split at the topic boundary. In Entry 75, the five leukemia subtypes (ALL, AML, CLL, CML, HCL) each got their own snippet, so \textbf{never merge across subjects.}
+
+\paragraph{Pattern F: Same topic, but each atom carries a different checkable fact.}
+Two claims about the same drug can still be separate if they convey distinct information. A standalone fact does not need to be dragged into a nearby enumeration just because it sits next to one.
+
+\subsection{When you're torn}
+
+Default to \textbf{atomic}. It is cheaper and easier to merge during consensus review than to split a bad merge. But if Pattern A, B, or C clearly fires, merge without hesitation.
+
+\subsection{Consensus decisions from the test batch (apply these going forward)}
+\label{sec:consensus-decisions}
+
+These were real disagreements in our test batch. For each case below, the decision preserves the merge motivation. Use them as tie-breakers in the remaining batches.
+
+\paragraph{Case 1: Entry 9 / atoms 9--10.}
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 9:}] ``To confirm the status of Hepatitis A immunity, a Hepatitis A IgG (Immunoglobulin G) antibody test may be performed.''
+    \item[\textit{atom 10:}] ``A Hepatitis A IgG antibody test can detect antibodies that provide long-term immunity.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE. \\
+\noindent\textbf{Why:} atom 10 specifies \textit{what} the test in atom 9 does. Pattern B (extension). Without the merge, atom 9 refers to an unnamed test and atom 10 to an orphan test type.
+
+\medskip
+\paragraph{Case 2: Entry 17 / atoms 5--6.}
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 5:}] ``For adults and children over 12 years old, the typical over-the-counter dose is 200--400 mg every 4--6 hours as needed for pain or fever.''
+    \item[\textit{atom 6:}] ``The maximum daily dose for adults and children over 12 years old should not exceed 1200 mg unless directed by a healthcare provider.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE. \\
+\noindent\textbf{Why:} both atoms describe the adult/adolescent dosing rule (Pattern A). A dosing recommendation needs both the per-dose amount and the daily cap to be useful.
+
+\medskip
+\paragraph{Case 3: Entry 37 / atoms 4--6.}
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 4:}] ``Clozapine is a second-generation antipsychotic.''
+    \item[\textit{atom 5:}] ``Clozapine is often used in treatment-resistant schizophrenia.''
+    \item[\textit{atom 6:}] ``Clozapine has a lower risk of extrapyramidal side effects.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE. \\
+\noindent\textbf{Why:} enumerated properties of one drug: class, indication, side-effect profile (Pattern A). The majority (4/6) already merged.
+
+\medskip
+\paragraph{Case 4: Entry 37 / atoms 10--12.}
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 10:}] ``Clozapine can cause agranulocytosis.''
+    \item[\textit{atom 11:}] ``Agranulocytosis is a potentially life-threatening condition.''
+    \item[\textit{atom 12:}] ``Clozapine requires regular monitoring of the white blood cell count.''
+\end{itemize}
+\noindent\textbf{Decision:} MERGE all three. \\
+\noindent\textbf{Why:} drug $\rightarrow$ side effect $\rightarrow$ required monitoring is a causal chain (Pattern B). Atom 12 alone (``Clozapine requires monitoring'') loses \textit{what for} without atoms 10--11.
+
+\medskip
+\paragraph{Case 5: Entry 37 / atoms 13--18.}
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 13:}] ``Clozapine is initiated at a dose of 12.5--25 mg twice daily.''
+    \item[\textit{atom 14:}] ``Clozapine requires gradual titration to a therapeutic dose.''
+    \item[\textit{atom 15:}] ``The therapeutic dose of clozapine is typically in the range of 300--450 mg per day.''
+    \item[\textit{atom 16:}] ``Initiation of clozapine requires a trial of 2 weeks.''
+    \item[\textit{atom 17:}] ``During the trial period, the patient is monitored for agranulocytosis.''
+    \item[\textit{atom 18:}] ``During the trial period, the patient is monitored for other potential side effects.''
+\end{itemize}
+\noindent\textbf{Decision:} \textbf{Two snippets:} \{13, 14, 15\} as the dosing protocol, and \{16, 17, 18\} as the trial-and-monitoring protocol. \\
+\noindent\textbf{Why:} atoms 13--15 describe the dose regimen; atoms 16--18 describe the trial duration and what is being monitored. Pattern A applies within each group. Merging all six would create a long blob spanning two different sub-topics.
+
+\medskip
+\paragraph{Case 6: Entry 75 / atoms 19--25.}
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 19:}] ``Based on the patient's age, symptoms, and laboratory results, the most likely diagnosis is Chronic Lymphocytic Leukemia (CLL).''
+    \item[\textit{atom 20:}] ``Chronic Lymphocytic Leukemia (CLL) is a type of cancer that affects the blood and bone marrow.''
+    \item[\textit{atom 21:}] ``CLL is characterized by the production of an excessive number of immature white blood cells (lymphocytes).''
+    \item[\textit{atom 22:}] ``CLL is most commonly diagnosed in individuals over the age of 50.''
+    \item[\textit{atom 23:}] ``CLL often presents with a high leukocyte count.''
+    \item[\textit{atom 24:}] ``CLL often presents with anemia.''
+    \item[\textit{atom 25:}] ``CLL often presents with a mild enlargement of the spleen.''
+\end{itemize}
+\noindent\textbf{Decision:} \textbf{Two snippets:} \{19\} alone (the final diagnosis), and \{20--25\} as the CLL profile expansion. \\
+\noindent\textbf{Why:} atom 19 is the answer to the case; atoms 20--25 are the LLM expanding on what CLL is. Avoid the 7-atom blob that 3 annotators produced.
+
+\medskip
+\paragraph{Every atom must be assigned.}
+The dashboard shows an ``unassigned'' counter. The Next button warns you if atoms are left unassigned.
+
+
+\section{Snippet Text}
+\label{sec:snippet-text}
+
+The snippet text should be a \textbf{self-contained verifiable statement}. A reader should be able to judge its correctness without reading the original query.
+
+\textbf{Click ``Generate''} to get an LLM draft. The LLM will:
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+    \item Merge the selected atoms into coherent text.
+    \item Resolve pronouns using the shared context (e.g., ``the patient'' $\rightarrow$ ``a 23-year-old male'').
+    \item Keep standalone facts as-is (no unnecessary context added).
+    \item NOT add medical facts not present in the atoms.
+\end{itemize}
+
+\textbf{Always review and edit} the generated text. The LLM is a starting point, not final.
+
+
+\section{Dual Labels}
+\label{sec:dual-labels}
+
+Each snippet gets TWO labels.
+
+\textbf{What ``context'' refers to}: the information in the user \textbf{query}, plus the \textbf{earlier statements in the same response} that precede the current snippet. It is \textit{not} outside medical knowledge or anything from other entries.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}lp{0.30\linewidth}X@{}}
+\toprule
+\textbf{Label} & \textbf{Question} & \textbf{Example (Entry 37)} \\
+\midrule
+\textbf{In general} & Is this correct as a \textit{general medical statement}? & ``Initiation of clozapine requires a 2-week trial'' $\rightarrow$ \textbf{True} (a short initial trial is reasonable in general). \\
+\addlinespace
+\textbf{With context} & Is this correct \textit{for this specific patient/query}? & Same snippet $\rightarrow$ \textbf{False} (this treatment-resistant patient needs a longer trial). \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{When the two labels differ, flag it!}
+This is the most interesting case for our research: \textbf{``generally true, contextually wrong''} (or vice versa). Always add a note explaining why.
+
+\paragraph{Label values.}
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+    \item \textbf{True}: the snippet is medically/factually correct.
+    \item \textbf{False}: the snippet contains a factual error.
+    \item If unsure, mark \textbf{Ambiguous} and add a note.
+\end{itemize}
+
+
+\section{Worked Examples (all from the test batch)}
+\label{sec:worked-examples}
+
+These four labeling cases come directly from the test batch. They cover the four label configurations you will encounter: both-true, both-false (medical error), context-dependent split, and single-atom lab error.
+
+\subsection*{Example 1: Consumer, both labels True}
+\textit{Entry 17 (consumer query): ``What is the most safe amount of Advil to take at one time?''}
+
+\medskip
+\noindent Source atoms (1--4):
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 1:}] ``The safe amount of Advil (ibuprofen) to take at one time depends on several factors.''
+    \item[\textit{atom 2:}] ``The factors include the individual's age.''
+    \item[\textit{atom 3:}] ``The factors include the individual's weight.''
+    \item[\textit{atom 4:}] ``The factors include the individual's overall health.''
+\end{itemize}
+
+\noindent Merged snippet:
+\begin{quote}
+``The safe amount of Advil (ibuprofen) depends on several factors, including age, weight, and overall health.''
+\end{quote}
+
+\noindent\textbf{Labels:} in general = \textbf{True}; with context = \textbf{True}. \\
+\noindent\textbf{Grouping:} Pattern A (enumeration). All 6 annotators merged. \\
+\noindent\textbf{Reasoning:} the statement is generically correct and nothing in a consumer query changes it.
+
+\subsection*{Example 2: Consumer, both labels False (medical error)}
+\textit{Entry 9 (consumer query): ``So what does the non reactive mean for the hep a igm''}
+
+\medskip
+\noindent Source atoms (4--6):
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 4:}] ``A non-reactive result suggests that the individual may have been vaccinated against Hepatitis A.''
+    \item[\textit{atom 5:}] ``A non-reactive result suggests that the individual has a past infection that is no longer active.''
+    \item[\textit{atom 6:}] ``A non-reactive result suggests that the individual has never been infected with the Hepatitis A virus.''
+\end{itemize}
+
+\noindent Merged snippet:
+\begin{quote}
+``A non-reactive Hep A IgM result suggests that the individual may have been vaccinated against Hepatitis A, has a past infection that is no longer active, or has never been infected with the Hepatitis A virus.''
+\end{quote}
+
+\noindent\textbf{Labels:} in general = \textbf{False}; with context = \textbf{False}. \\
+\noindent\textbf{Grouping:} Pattern A (enumeration of three interpretations of ``non-reactive''). \\
+\noindent\textbf{Reasoning:} vaccination and past infection are detected by \textbf{IgG}, not IgM; IgM detects recent or current infection. Both labels are False because the fact itself is wrong; no context can rescue it.
+
+\subsection*{Example 3: Vignette, context-dependent (the key case for our paper)}
+\textit{Entry 37 (vignette): ``A 23-year-old man in the ED, treatment-resistant schizophrenia, failed risperidone, haloperidol, and ziprasidone\ldots{}''}
+
+\medskip
+\noindent Source atoms (16--18):
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 16:}] ``Initiation of clozapine requires a trial of 2 weeks.''
+    \item[\textit{atom 17:}] ``During the trial period, the patient is monitored for agranulocytosis.''
+    \item[\textit{atom 18:}] ``During the trial period, the patient is monitored for other potential side effects.''
+\end{itemize}
+
+\noindent Merged snippet:
+\begin{quote}
+``Initiation of clozapine requires a trial of 2 weeks, during which the patient is monitored for agranulocytosis and other potential side effects.''
+\end{quote}
+
+\noindent\textbf{Labels:} in general = \textbf{True}; with context = \textbf{False}. \\
+\noindent\textbf{Note (required when labels differ):} in general, a short initial observation period is reasonable for starting clozapine. \textbf{For this specific treatment-resistant patient}, the expected trial period before declaring treatment failure is longer than 2 weeks, so the ``2 weeks'' claim is contextually wrong. \\
+\noindent\textbf{Why this example matters:} this is the failure mode our paper targets, namely \textit{generally plausible, contextually wrong}. When the two labels diverge, a note is mandatory; it is the artifact our analysis depends on.
+
+\subsection*{Example 4: Vignette, single-atom lab error}
+\textit{Entry 75 (vignette): ``A 72-year-old man, fatigue, leukocyte count 67{,}500, platelet count 119{,}000\ldots{}''}
+
+\medskip
+\noindent Source atom (1):
+\begin{itemize}[leftmargin=1.8em,labelsep=0.5em,itemsep=2pt,topsep=3pt]
+    \item[\textit{atom 1:}] ``A platelet count of 119{,}000/mm$^3$ is within normal limits.''
+\end{itemize}
+
+\noindent Snippet (kept atomic, same text):
+\begin{quote}
+``A platelet count of 119{,}000/mm$^3$ is within normal limits.''
+\end{quote}
+
+\noindent\textbf{Labels:} in general = \textbf{False}; with context = \textbf{False}. \\
+\noindent\textbf{Grouping:} Pattern D (standalone lab interpretation). All 6 annotators kept atomic. \\
+\noindent\textbf{Reasoning:} 119{,}000/mm$^3$ is below the normal range (150{,}000--400{,}000). Both labels are False: a pure medical error.
+
+\subsection*{Quick reference: when to write a note}
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Always} when \textit{in general} $\neq$ \textit{with context}.
+    \item \textbf{Always} when you mark a snippet Ambiguous.
+    \item \textbf{Optional} when the medical error is subtle, or when you made a non-obvious grouping choice.
+\end{itemize}
+
+
+\section{Suggestions (Optional)}
+\label{sec:suggestions}
+
+The dashboard offers two optional features using the pre-clustered LLM groupings:
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+    \item \textbf{``Show suggestions''} checkbox (left panel): overlays purple borders on atoms showing the LLM's original grouping. Off by default to avoid bias.
+    \item \textbf{``Import Suggestions''} button: loads pre-clustered snippets as editable cards. Use if you agree with the grouping, but you must still set dual labels.
+\end{itemize}
+Both are optional. You can ignore them and cluster entirely from scratch.
+
+
+\section{Dashboard Workflow}
+\label{sec:workflow}
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+    \item Open your assigned batch from the home screen.
+    \item For each entry:
+        \begin{itemize}[leftmargin=*,itemsep=1pt]
+            \item Read the \textbf{query} (and optionally the full response).
+            \item Click \textbf{``Generate''} on Shared Context to auto-extract, then review.
+            \item Select atoms by clicking checkboxes $\rightarrow$ \textbf{``+ Create Snippet''}.
+            \item Click \textbf{``Generate''} on each snippet for draft text $\rightarrow$ edit as needed.
+            \item Set \textbf{both labels} (With context + In general) and mark ambiguity if needed.
+            \item Add \textbf{notes} when labels differ or when something is interesting.
+            \item Click \textbf{Next $\rightarrow$} (warns if anything is incomplete).
+        \end{itemize}
+    \item Click \textbf{``Export Batch''} to download your annotations as JSON.
+    \item Export regularly as backup.
+\end{enumerate}
+
+\paragraph{Keyboard shortcuts:} $\leftarrow$ $\rightarrow$ to navigate entries, Escape to go back to batches.
+
+
+\section{Batch Assignments}
+\label{sec:batches}
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Annotator} & \textbf{Batches} \\
+\midrule
+Annotator 1 & 1, 7, 13, 19, 25 \\
+Annotator 2 & 4, 10, 16, 22 \\
+Annotator 3 & 6, 12, 18, 24, 28 \\
+Annotator 4 & 2, 11, 17, 23, 27 \\
+Annotator 5 & 5, 8, 14, 20, 26 \\
+Annotator 6 & 3, 9, 15, 21 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Start with the \textbf{Test Batch} for practice.
+
+\medskip
+\noindent\textbf{Dashboard:} \url{https://mbzuai-nlp.github.io/medfactcheck/}
+
+
+\end{document}

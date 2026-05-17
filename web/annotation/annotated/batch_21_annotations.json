@@ -1,0 +1,1032 @@
+[
+  {
+    "entry_id": 201,
+    "shared_context": {
+      "topic": "poison ivy contagiousness between people",
+      "condition": "poison ivy / urushiol contact dermatitis"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1,
+          2,
+          3
+        ],
+        "output": "Poison ivy (Toxicodendron radicans) is a plant that contains an oil called urushiol, which causes an allergic reaction in most people.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of basic properties of poison ivy/urushiol."
+      },
+      {
+        "source_claims": [
+          4,
+          5,
+          6
+        ],
+        "output": "The urushiol oil is responsible for the characteristic rash, blisters, and itching associated with poison ivy exposure.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of symptoms caused by urushiol."
+      },
+      {
+        "source_claims": [
+          7,
+          8
+        ],
+        "output": "Urushiol oil is not contagious between people and cannot be spread from person to person through direct contact or other means.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Pattern A: two restatements of the same claim. Expert-false: urushiol oil itself CAN be transferred person-to-person via skin/clothing contact while the oil remains on the surface. The rash (immune reaction) is not contagious, but the oil is transferable. The blanket statement that urushiol cannot be spread person-to-person is incorrect."
+      },
+      {
+        "source_claims": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "output": "Urushiol oil can be transferred to surfaces such as clothing, tools, or pets, and can cause a reaction when someone comes into contact with those contaminated items.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A+B: enumeration of contaminated surfaces with causal chain to reaction."
+      },
+      {
+        "source_claims": [
+          13
+        ],
+        "output": "People who have not previously been exposed to urushiol may develop an allergic reaction after exposure.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Kept atomic to isolate the true atom from the neighboring expert-false tolerance claims (14-16)."
+      },
+      {
+        "source_claims": [
+          14,
+          15,
+          16
+        ],
+        "output": "People who have been previously exposed to urushiol may not react at all or may experience a milder reaction, because the body builds up a tolerance to urushiol oil over time.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Pattern C: conclusion (tolerance) + premises (milder/no reaction). Expert-false: this is medically backwards. Repeat exposure to urushiol typically sensitizes a person, often producing stronger or earlier reactions on subsequent exposures rather than tolerance."
+      }
+    ]
+  },
+  {
+    "entry_id": 202,
+    "shared_context": {
+      "topic": "poison ivy contagiousness between people",
+      "condition": "poison ivy / urushiol contact dermatitis"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1,
+          2
+        ],
+        "output": "Poison ivy itself is not contagious between people; the rash it causes is known as contact dermatitis.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern C: direct answer to the query plus the medical name for the rash."
+      },
+      {
+        "source_claims": [
+          3
+        ],
+        "output": "The rash results from an allergic reaction to urushiol, an oil found in the plant.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": ""
+      },
+      {
+        "source_claims": [
+          4
+        ],
+        "output": "Urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "entry_id": 203,
+    "shared_context": {
+      "topic": "poison ivy contagiousness between people (response misinterpreted query as the DC Comics character Poison Ivy)",
+      "condition": "n/a \u2014 fictional character, not the plant/dermatitis"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1,
+          2
+        ],
+        "output": "Poison Ivy's powers in the DC Comics universe are based on her ability to control and manipulate plants, and they are not a contagious disease.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "true",
+        "notes": "ctx vs gen diverge: the response misinterprets the medical query as a question about the DC Comics character, so for the patient context it does not correctly address the query. In general (as a statement about the fictional character) the claim is correct."
+      },
+      {
+        "source_claims": [
+          3,
+          15,
+          16,
+          17
+        ],
+        "output": "In certain storylines, Poison Ivy's powers have been transferred to others through physical contact or exposure to her essence, but these are exceptions rather than the norm: her powers are not typically depicted as contagious between people, and such transfers are explored as a plot device in specific storylines and adaptations.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "true",
+        "notes": "Pattern C: framing claim plus its qualifying premises. ctx=false because the response is about the fictional character and does not answer the medical query; gen=true as a description of the comics."
+      },
+      {
+        "source_claims": [
+          4,
+          5
+        ],
+        "output": "In the Batman comics, Poison Ivy can transfer her powers to others through skin-to-skin contact or by injecting them with her venom.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Pattern A: enumeration of two transfer mechanisms. Both atoms expert-false \u2014 this is not an established Batman-comics canon claim."
+      },
+      {
+        "source_claims": [
+          6
+        ],
+        "output": "Poison Ivy's essence is transmitted to Mary Hamilton in the episode 'Trust Destiny' of the Batwoman series.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Kept atomic to isolate this expert-false claim (specific episode attribution) from neighbors 7 and 8 which are expert-true."
+      },
+      {
+        "source_claims": [
+          7,
+          8
+        ],
+        "output": "In the Batwoman series, Mary Hamilton is dubbed 'Poison Mary,' and Poison Ivy infects her with her essence.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "true",
+        "notes": "Pattern A: two true facts about the Batwoman storyline. ctx=false (off-topic for medical query); gen=true."
+      },
+      {
+        "source_claims": [
+          9
+        ],
+        "output": "It is unclear whether Poison Ivy's infection of Poison Mary in the Batwoman series is a direct transfer of powers or a separate phenomenon.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Atomic to isolate expert-false claim from neighbors."
+      },
+      {
+        "source_claims": [
+          11,
+          12,
+          14
+        ],
+        "output": "'Poison Ivy' is a 1992 film whose main character is Ivy, and Sylvie is a character in that film.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of background facts about the 1992 film. Separated from the expert-false transfer-of-powers claim about that film. ctx=false (off-topic); gen=true."
+      },
+      {
+        "source_claims": [
+          10,
+          13
+        ],
+        "output": "In the 1992 film 'Poison Ivy,' the main character Ivy transfers her powers to her partner Sylvie through a kiss.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Atoms 10 and 13 are near-duplicates of the same false claim \u2014 Ivy in the 1992 film does not have or transfer 'powers'; the film is a psychological thriller, not a superhero story. Merged as Pattern A (same claim restated)."
+      }
+    ]
+  },
+  {
+    "entry_id": 204,
+    "shared_context": {
+      "topic": "poison ivy contagiousness between people",
+      "condition": "poison ivy / urushiol contact dermatitis"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1,
+          10
+        ],
+        "output": "Poison ivy is not contagious between people; the rash itself cannot be spread from person to person.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern C: direct answer plus its supporting premise (the rash itself isn't transmissible)."
+      },
+      {
+        "source_claims": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "output": "The rash from poison ivy is caused by an allergic reaction to urushiol oil, which is found in the plant's leaves, stems, and roots.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A+B: cause of the rash plus enumeration of where urushiol is located in the plant."
+      },
+      {
+        "source_claims": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "output": "Urushiol oil can stick to skin, clothes, tools, and other surfaces.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of surfaces urushiol adheres to."
+      },
+      {
+        "source_claims": [
+          11,
+          12,
+          13
+        ],
+        "output": "Contact with urushiol oil from an affected person's skin, clothing, or other contaminated objects can cause a reaction in another person.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of contamination sources that can cause secondary reactions."
+      },
+      {
+        "source_claims": [
+          14,
+          15
+        ],
+        "output": "It is the urushiol oil that is responsible for spreading the reaction, not the rash itself.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern C: conclusion (urushiol spreads the reaction) plus its contrastive premise (not the rash)."
+      }
+    ]
+  },
+  {
+    "entry_id": 205,
+    "shared_context": {
+      "topic": "remedies for muscular pain (myalgia)"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1,
+          2,
+          3
+        ],
+        "output": "Muscular pain, also known as myalgia, is a common symptom that can be challenging to manage.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: definitional/framing properties of muscular pain merged."
+      },
+      {
+        "source_claims": [
+          4,
+          5
+        ],
+        "output": "There are several effective ways to alleviate muscular pain, and the effectiveness of treatment depends on its underlying cause.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: general framing claim about treatment effectiveness."
+      },
+      {
+        "source_claims": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "output": "Exercise can help reduce muscle soreness and improve range of motion; gentle forms such as yoga, stretching, and low-impact aerobics can help reduce muscle soreness.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: subject = exercise; enumerates beneficial types."
+      },
+      {
+        "source_claims": [
+          10
+        ],
+        "output": "A study published in the Scandinavian Journal of Public Health found that women with chronic muscular pain reported improved symptoms after participating in a movement training program.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Isolated because expert label is false (citation/study claim cannot be verified or is fabricated)."
+      },
+      {
+        "source_claims": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "output": "Over-the-counter pain relievers such as acetaminophen and ibuprofen can help alleviate muscle pain; it is essential to follow the recommended dosage when taking any medication.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: subject = OTC pain relievers (NSAID/acetaminophen class) plus directly related dosage guidance."
+      },
+      {
+        "source_claims": [
+          15
+        ],
+        "output": "It's essential to consult with a healthcare professional before taking any medication.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Isolated due to expert-false label; the blanket claim that consultation is required before any medication overstates standard guidance for OTC analgesics."
+      },
+      {
+        "source_claims": [
+          16,
+          17
+        ],
+        "output": "Applying heat or cold packs to the affected area can help relax muscles and reduce pain; a study in the Journal of Pain Research found heat therapy was effective in reducing pain and improving function in patients with chronic pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: subject = heat/cold therapy with supporting study."
+      },
+      {
+        "source_claims": [
+          18,
+          19,
+          20
+        ],
+        "output": "Massage therapy can reduce muscle tension, promote relaxation, and may alleviate pain; a study in the Journal of Clinical Rheumatology found that massage therapy reduced pain and improved function in patients with fibromyalgia.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: properties of massage therapy plus supporting study."
+      },
+      {
+        "source_claims": [
+          21,
+          22,
+          23
+        ],
+        "output": "Maintaining a balanced diet and staying hydrated can help reduce muscle inflammation and promote healing; a study in the Journal of the International Society of Sports Nutrition found adequate protein intake was associated with reduced muscle soreness.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: nutrition/hydration with supporting study."
+      },
+      {
+        "source_claims": [
+          24,
+          25,
+          26,
+          27,
+          28
+        ],
+        "output": "Stress can exacerbate muscle pain, and engaging in stress-reducing activities such as meditation, deep breathing, and yoga can help alleviate muscle pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern B/A: causal premise (stress exacerbates pain) plus enumerated stress-management techniques."
+      },
+      {
+        "source_claims": [
+          29,
+          30
+        ],
+        "output": "Getting adequate rest and allowing your muscles time to recover is essential for reducing muscle soreness.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: rest/recovery as one remedy."
+      },
+      {
+        "source_claims": [
+          31
+        ],
+        "output": "A study published in the Journal of Strength and Conditioning Research found that adequate recovery time was associated with reduced muscle soreness.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Isolated; expert-false (study citation cannot be verified)."
+      },
+      {
+        "source_claims": [
+          32,
+          33,
+          34
+        ],
+        "output": "Recognizing and addressing the emotional aspects of muscular pain can help improve treatment outcomes; a study in the Scandinavian Journal of Public Health found that women with chronic muscular pain valued being recognized and acknowledged by healthcare providers, which can help improve treatment outcomes.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern C: conclusion (emotional recognition improves outcomes) plus supporting study/premise."
+      },
+      {
+        "source_claims": [
+          35,
+          36
+        ],
+        "output": "It's essential to consult with a healthcare professional to determine the underlying cause of your muscular pain and to develop a personalized treatment plan.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Pattern A merge of two HCP-consultation atoms; both expert-false because routine muscular pain typically does not require professional consultation; framing as essential overstates guidance for common self-limited muscle pain."
+      }
+    ]
+  },
+  {
+    "entry_id": 206,
+    "shared_context": {
+      "topic": "remedies for muscular pain"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1,
+          2
+        ],
+        "output": "Several approaches can be effective for managing muscular pain, and their effectiveness depends on the severity and underlying cause of the pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: framing claim."
+      },
+      {
+        "source_claims": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "output": "Rest and immobilization can be effective for managing muscular pain; allowing the affected muscle to rest can prevent further injury and promote healing, and is particularly important in the initial stages following an injury.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: properties of one remedy (rest/immobilization)."
+      },
+      {
+        "source_claims": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "output": "Ice and heat therapy can be effective for managing muscular pain: applying ice packs to the affected area for the first 24-48 hours can reduce inflammation and numb pain, and after that period heat therapy can relax and loosen tissues and stimulate blood flow to the area.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern B: temporal/causal chain (ice first, then heat) presented as one combined therapy approach."
+      },
+      {
+        "source_claims": [
+          13,
+          14,
+          15
+        ],
+        "output": "Over-the-counter NSAIDs such as ibuprofen or naproxen can help reduce inflammation and alleviate pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: subject = NSAIDs (one drug class)."
+      },
+      {
+        "source_claims": [
+          16,
+          17
+        ],
+        "output": "Acetaminophen is another option for pain relief but does not have anti-inflammatory properties.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: subject = acetaminophen (distinct drug from NSAIDs, so split per Pattern E)."
+      },
+      {
+        "source_claims": [
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "output": "Physical therapy and exercise can help strengthen muscles around the affected area, improve flexibility, and prevent future injuries; gentle stretching and strengthening exercises can be beneficial.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: properties of physical therapy/exercise as one remedy."
+      },
+      {
+        "source_claims": [
+          24,
+          25
+        ],
+        "output": "Topical analgesics such as creams, gels, or patches with menthol, capsaicin, or lidocaine can provide localized pain relief.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: properties of topical analgesics."
+      },
+      {
+        "source_claims": [
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "output": "Professional massage therapy can be effective for managing muscular pain by reducing muscle tension, improving circulation, promoting relaxation, and alleviating pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumerated benefits of massage therapy."
+      },
+      {
+        "source_claims": [
+          31,
+          32,
+          33
+        ],
+        "output": "Adequate hydration and a balanced diet rich in essential nutrients can support muscle health and recovery.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: hydration/nutrition as one remedy class."
+      },
+      {
+        "source_claims": [
+          34,
+          35,
+          36,
+          37,
+          38
+        ],
+        "output": "Alternative therapies such as acupuncture, chiropractic care, and yoga may provide relief for some individuals, though evidence supporting their efficacy varies.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A/C: alternative therapies enumerated with shared caveat about evidence."
+      }
+    ]
+  },
+  {
+    "entry_id": 207,
+    "shared_context": {
+      "topic": "remedies for muscular pain"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1
+        ],
+        "output": "Managing muscular pain effectively involves a combination of interventions tailored to the type and cause of the pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Standalone framing claim."
+      },
+      {
+        "source_claims": [
+          2,
+          3,
+          4
+        ],
+        "output": "Rest and recovery are evidence-based strategies for muscular pain: allowing muscles to rest after intense physical activity helps in recovery and reduces soreness.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of properties of rest/recovery."
+      },
+      {
+        "source_claims": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "output": "Cold and heat therapy are evidence-based strategies for muscular pain: ice packs help reduce inflammation and numb sore tissues, while heat packs help relax and loosen tissues and stimulate blood flow.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: properties of the cold/heat therapy section as presented in the source."
+      },
+      {
+        "source_claims": [
+          10,
+          11,
+          12
+        ],
+        "output": "Over-the-counter NSAIDs such as ibuprofen or aspirin are an evidence-based strategy that can help alleviate pain and reduce inflammation in muscular pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of properties of NSAIDs."
+      },
+      {
+        "source_claims": [
+          13,
+          14,
+          15,
+          16
+        ],
+        "output": "Physical therapy is an evidence-based strategy: physical therapy exercises can strengthen muscles, improve flexibility, and reduce pain over time.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of properties of physical therapy."
+      },
+      {
+        "source_claims": [
+          17,
+          18,
+          19,
+          20
+        ],
+        "output": "Massage therapy is an evidence-based strategy: massage helps increase blood flow to the muscles, aiding recovery and reducing soreness.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of properties of massage therapy."
+      },
+      {
+        "source_claims": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "output": "Stretching exercises are an evidence-based strategy: regular stretching helps maintain flexibility, prevents muscle stiffness, and is beneficial for reducing muscular pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of properties of stretching."
+      },
+      {
+        "source_claims": [
+          25,
+          26,
+          27
+        ],
+        "output": "Hydration and nutrition are evidence-based strategies: staying hydrated supports overall muscle health, and a balanced diet rich in essential nutrients supports muscle recovery.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: hydration and nutrition presented together as a single supportive lifestyle category."
+      },
+      {
+        "source_claims": [
+          28,
+          29,
+          30,
+          31
+        ],
+        "output": "Alternative therapies such as acupuncture, yoga, or TENS (Transcutaneous Electrical Nerve Stimulation) can provide relief from muscular pain for some individuals.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of items within the 'alternative therapies' umbrella, all framed identically as 'may provide relief for some individuals'."
+      },
+      {
+        "source_claims": [
+          32,
+          33,
+          34,
+          35,
+          36
+        ],
+        "output": "Proper warm-up and cool-down routines before and after exercise are an evidence-based strategy that can help minimize post-workout muscle soreness and prevent injuries.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: warm-up and cool-down presented together as paired pre/post-exercise routines with the same effects."
+      }
+    ]
+  },
+  {
+    "entry_id": 208,
+    "shared_context": {
+      "topic": "remedies for muscular pain"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1
+        ],
+        "output": "Several options are available for managing muscular pain, depending on the severity and cause of the pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Standalone framing claim."
+      },
+      {
+        "source_claims": [
+          2
+        ],
+        "output": "Topical creams and ointments can provide temporary relief for muscular pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "General true claim about topicals; isolated from false subclaims about composition."
+      },
+      {
+        "source_claims": [
+          3
+        ],
+        "output": "Topical creams and ointments contain capsaicin.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Isolated as false: not all topical creams/ointments contain capsaicin; this is an overgeneralization (expert label false)."
+      },
+      {
+        "source_claims": [
+          4
+        ],
+        "output": "Topical creams and ointments contain menthol.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Isolated as false: not all topical creams/ointments contain menthol; overgeneralization (expert label false)."
+      },
+      {
+        "source_claims": [
+          5,
+          7
+        ],
+        "output": "Capsaicin can provide temporary relief for muscular pain by blocking the production of substance P, a chemical that transmits pain signals to the brain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern C: capsaicin mechanism plus the supporting fact that substance P transmits pain signals. Atom 7 attached here since it underpins capsaicin's mechanism."
+      },
+      {
+        "source_claims": [
+          6
+        ],
+        "output": "Menthol can provide temporary relief for muscular pain by blocking the production of substance P.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Isolated as false: menthol's analgesic mechanism is via TRPM8 cooling receptors, not substance P inhibition (expert label false)."
+      },
+      {
+        "source_claims": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "output": "Over-the-counter pain relievers such as ibuprofen (Advil, Motrin) and naproxen (Aleve) can be effective in reducing muscular pain and inflammation.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of OTC NSAIDs and their brand names, all true."
+      },
+      {
+        "source_claims": [
+          15,
+          17
+        ],
+        "output": "Heat therapy, such as applying a warm compress to the affected area, can help relax muscles and reduce pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: heat therapy and warm-compress application are the same modality stated at general and specific levels."
+      },
+      {
+        "source_claims": [
+          16,
+          18
+        ],
+        "output": "Cold therapy, including applying a cold compress to the affected area, can help relax muscles and reduce pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Split from heat therapy (Pattern E: distinct mechanism). Both atoms expert-false: cold therapy reduces inflammation and numbs pain but does not 'relax muscles' (cold typically causes muscle contraction)."
+      },
+      {
+        "source_claims": [
+          19,
+          20,
+          21,
+          22
+        ],
+        "output": "Physical therapy, including massage, stretching, and strengthening exercises, can be beneficial in managing muscular pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of physical-therapy components."
+      },
+      {
+        "source_claims": [
+          23,
+          24,
+          25,
+          26
+        ],
+        "output": "Prescription medications such as muscle relaxants or corticosteroid injections may be necessary to manage severe or chronic muscular pain.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of prescription-medication options under the same umbrella claim."
+      }
+    ]
+  },
+  {
+    "entry_id": 209,
+    "shared_context": {
+      "topic": "corneal abrasion symptoms and eye discharge",
+      "condition": "corneal abrasion"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "output": "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, and foreign body sensation.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of symptoms of the same subject (corneal abrasion). Atom 5 (gritty feeling) was isolated because it is expert-labeled false."
+      },
+      {
+        "source_claims": [
+          5
+        ],
+        "output": "Corneal abrasions typically cause a gritty feeling.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "false",
+        "label_in_general": "false",
+        "notes": "Isolated as false per expert atom label, separated from the otherwise-true symptom enumeration in atoms 1-4."
+      },
+      {
+        "source_claims": [
+          6
+        ],
+        "output": "Corneal abrasions do not usually result in discharge from the eye.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern D: standalone fact directly answering the query."
+      },
+      {
+        "source_claims": [
+          7,
+          8,
+          9
+        ],
+        "output": "The primary symptoms of corneal abrasions are related to the disruption of the corneal epithelium, which leads to a reflex production of tears rather than discharge.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern B: causal chain (epithelial disruption -> reflex tears, not discharge)."
+      },
+      {
+        "source_claims": [
+          10,
+          11,
+          12
+        ],
+        "output": "Discharge from the eye could indicate a secondary infection or a different underlying condition and should be evaluated further.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern C: conclusion (should be evaluated) supported by premises (could indicate infection or other condition)."
+      }
+    ]
+  },
+  {
+    "entry_id": 210,
+    "shared_context": {
+      "topic": "corneal abrasion definition, causes, and discharge",
+      "condition": "corneal abrasion"
+    },
+    "snippets": [
+      {
+        "source_claims": [
+          1,
+          2
+        ],
+        "output": "A corneal abrasion is a superficial injury to the cornea, the clear layer on the front of the eye.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: definition of the subject combining the abrasion and the cornea description."
+      },
+      {
+        "source_claims": [
+          3,
+          4,
+          5
+        ],
+        "output": "A corneal abrasion can be caused by trauma, foreign bodies, or chemical exposure.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of causes."
+      },
+      {
+        "source_claims": [
+          6,
+          7,
+          8
+        ],
+        "output": "In most cases a corneal abrasion does not typically cause discharge from the eye, although some individuals may experience a mild amount of tearing or discharge due to irritation of the cornea.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern C: main answer to the query plus its qualifying premises about exceptions."
+      },
+      {
+        "source_claims": [
+          9,
+          10,
+          11
+        ],
+        "output": "The discharge from a corneal abrasion is usually clear or watery in nature and may be accompanied by a foreign body sensation or grittiness in the eye.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of properties of the discharge associated with corneal abrasion."
+      },
+      {
+        "source_claims": [
+          12,
+          13,
+          14
+        ],
+        "output": "The presence of discharge in a corneal abrasion can be influenced by the severity of the injury, the presence of a foreign body, and the individual's overall eye health.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of factors influencing discharge."
+      },
+      {
+        "source_claims": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "output": "If the discharge is excessive, yellow or green in color, or accompanied by pain, redness, or vision changes, it may indicate a more serious underlying condition that requires medical attention.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern A: enumeration of warning signs all sharing the same consequent (serious condition needing medical attention)."
+      },
+      {
+        "source_claims": [
+          21,
+          22
+        ],
+        "output": "A corneal abrasion can increase the risk of infection, particularly if it is not properly treated.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern B: conditional chain about infection risk and treatment."
+      },
+      {
+        "source_claims": [
+          23,
+          24
+        ],
+        "output": "If you suspect a corneal abrasion, it is recommended to seek medical attention from an eye care professional for proper evaluation and treatment.",
+        "is_ambiguous": "no",
+        "label_with_patient_context": "true",
+        "label_in_general": "true",
+        "notes": "Pattern C: recommendation plus its rationale (proper evaluation and treatment)."
+      }
+    ]
+  }
+]

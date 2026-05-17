@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedFactCheck — Annotation Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f6fa; color: #2c3e50; font-size: 14px; }
+
+    /* Header */
+    .header { background: #2c3e50; color: white; padding: 12px 20px; display: flex; align-items: center; gap: 14px; position: sticky; top: 0; z-index: 100; }
+    .header h1 { font-size: 1.05em; font-weight: 600; }
+    .header .btn-header { padding: 5px 12px; border-radius: 6px; border: 1px solid #4a6785; background: #34495e; color: #ecf0f1; cursor: pointer; font-size: 0.8em; }
+    .header .btn-header:hover { background: #4a6785; }
+    .header .stats { margin-left: auto; font-size: 0.78em; opacity: 0.8; }
+
+    /* Nav */
+    .nav-bar { background: white; border-bottom: 1px solid #ddd; padding: 8px 20px; display: flex; align-items: center; gap: 10px; position: sticky; top: 44px; z-index: 99; }
+    .nav-bar button { padding: 5px 12px; border-radius: 6px; border: 1px solid #bdc3c7; background: white; cursor: pointer; font-size: 0.82em; }
+    .nav-bar button:hover { background: #ecf0f1; }
+    .nav-bar button:disabled { opacity: 0.4; cursor: default; }
+    .nav-bar .progress { flex: 1; text-align: center; font-size: 0.82em; color: #7f8c8d; }
+    .nav-bar .progress strong { color: #2c3e50; }
+
+    /* Batch grid */
+    .batch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+    .batch-card { background: white; border-radius: 8px; padding: 14px; border: 1px solid #eee; cursor: pointer; transition: all 0.15s; }
+    .batch-card:hover { border-color: #3498db; box-shadow: 0 2px 8px rgba(52,152,219,0.12); }
+    .batch-card h3 { font-size: 0.95em; margin-bottom: 4px; }
+    .batch-card .batch-meta { font-size: 0.75em; color: #7f8c8d; line-height: 1.5; }
+    .batch-card .batch-meta strong { color: #2c3e50; }
+    .batch-card.complete { border: 2px solid #27ae60; background: #f1f9f4; }
+    .batch-card.complete:hover { border-color: #1e8449; box-shadow: 0 2px 8px rgba(39,174,96,0.18); }
+    .batch-card.complete h3::after { content: ' ✓'; color: #27ae60; font-weight: 700; }
+    .badge-consumer { background: #eaf2f8; color: #2980b9; padding: 2px 7px; border-radius: 4px; font-size: 0.68em; font-weight: 600; }
+    .badge-vignette { background: #fdf0ed; color: #e74c3c; padding: 2px 7px; border-radius: 4px; font-size: 0.68em; font-weight: 600; }
+    .badge-done { background: #eafaf1; color: #27ae60; padding: 2px 7px; border-radius: 4px; font-size: 0.68em; font-weight: 600; }
+
+    /* Two-panel layout */
+    .workspace { display: flex; gap: 16px; max-width: 1400px; margin: 12px auto; padding: 0 16px; }
+    @media (max-width: 900px) { .workspace { flex-direction: column; } }
+
+    .panel { background: white; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); overflow: hidden; }
+    .panel-left { width: 44%; position: sticky; top: 100px; max-height: calc(100vh - 110px); overflow-y: auto; }
+    .panel-right { width: 56%; min-height: 400px; }
+    @media (max-width: 900px) { .panel-left, .panel-right { width: 100%; position: static; max-height: none; } }
+
+    .panel-header { background: #f8f9fa; padding: 10px 16px; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 8px; font-size: 0.82em; font-weight: 600; }
+    .panel-header .id-badge { background: #2c3e50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+    .panel-header .meta { margin-left: auto; font-size: 0.85em; color: #7f8c8d; font-weight: 400; }
+
+    /* Query & full text */
+    .section { padding: 10px 16px; border-bottom: 1px solid #f0f0f0; }
+    .section-title { font-size: 0.68em; text-transform: uppercase; color: #95a5a6; margin-bottom: 4px; letter-spacing: 0.5px; font-weight: 600; }
+    .section-text { font-size: 0.82em; line-height: 1.5; }
+    .toggle-btn { background: none; border: none; color: #3498db; cursor: pointer; font-size: 0.78em; padding: 6px 0; }
+    .collapsible { display: none; padding: 8px 16px; font-size: 0.78em; line-height: 1.5; background: #fafbfc; border-bottom: 1px solid #f0f0f0; max-height: 180px; overflow-y: auto; white-space: pre-wrap; }
+    .collapsible.show { display: block; }
+
+    /* Atom list */
+    .atom-list { padding: 8px 0; }
+    .atom-counter { padding: 6px 16px; font-size: 0.75em; color: #7f8c8d; display: flex; align-items: center; gap: 8px; }
+    .atom-counter .unassigned { color: #e74c3c; font-weight: 600; }
+    .atom-counter .all-done { color: #27ae60; font-weight: 600; }
+
+    .atom-row { display: flex; align-items: flex-start; gap: 8px; padding: 5px 16px; border-bottom: 1px solid #f8f8f8; font-size: 0.8em; cursor: pointer; transition: background 0.1s; }
+    .atom-row:hover { background: #f8f9fa; }
+    .atom-row.selected { background: #eaf2f8; }
+    .atom-row input[type="checkbox"] { margin-top: 3px; flex-shrink: 0; }
+    .atom-idx { min-width: 26px; color: #8e44ad; font-weight: 600; font-size: 0.9em; }
+    .atom-text { flex: 1; line-height: 1.4; user-select: text; cursor: text; }
+    .atom-copy { flex-shrink: 0; background: transparent; border: 1px solid #ddd; border-radius: 3px; font-size: 0.95em; padding: 0 5px; line-height: 1.4; cursor: pointer; color: #7f8c8d; opacity: 0; transition: opacity 0.12s, background 0.12s; }
+    .atom-row:hover .atom-copy, .atom-copy:focus { opacity: 1; }
+    .atom-copy:hover { background: #ecf0f1; color: #2c3e50; }
+    .atom-copy.copied { opacity: 1; color: #27ae60; border-color: #27ae60; }
+    .atom-label { font-size: 0.85em; flex-shrink: 0; }
+    .atom-label-true { color: #27ae60; }
+    .atom-label-false { color: #e74c3c; }
+    .atom-assigned { font-size: 0.65em; padding: 1px 5px; border-radius: 3px; background: #ddd; color: #555; flex-shrink: 0; }
+
+    /* Suggestion overlay */
+    .atom-row.sugg-start { border-top: 2px solid #d5b8ff; }
+    .atom-row.sugg-group { background: #faf5ff; }
+
+    /* Right panel: shared context */
+    .shared-ctx { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; }
+    .ctx-row { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; }
+    .ctx-row input { padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.8em; }
+    .ctx-key { width: 120px; }
+    .ctx-val { flex: 1; }
+    .ctx-del { background: none; border: none; color: #e74c3c; cursor: pointer; font-size: 1em; padding: 0 4px; }
+    .btn-sm { padding: 4px 10px; border-radius: 4px; border: 1px solid #ddd; background: white; cursor: pointer; font-size: 0.75em; }
+    .btn-sm:hover { background: #ecf0f1; }
+
+    /* Snippet cards */
+    .snippet-list { padding: 12px 16px; }
+    .snippet-card { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+    .snippet-card-header { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #f8f9fa; flex-wrap: wrap; }
+    .snippet-card-header .sn-id { font-weight: 700; font-size: 0.85em; color: #8e44ad; }
+    .snippet-card-header .sn-badge { font-size: 0.65em; padding: 2px 6px; border-radius: 3px; background: #f0e6ff; color: #8e44ad; }
+    .snippet-card-header .sn-del { margin-left: auto; background: none; border: none; color: #e74c3c; cursor: pointer; font-size: 0.85em; }
+    .snippet-card-header .sn-del:hover { text-decoration: underline; }
+    .sn-claims-inline { display: flex; flex-wrap: wrap; gap: 3px; }
+
+    .sn-claims { padding: 6px 12px; display: flex; flex-wrap: wrap; gap: 4px; }
+    .claim-chip { padding: 2px 7px; border-radius: 4px; background: #eaf2f8; color: #2980b9; font-size: 0.72em; font-weight: 600; }
+    .claim-chip-false { background: #fdf0ed; color: #e74c3c; }
+
+    .sn-body { padding: 8px 12px; }
+    .sn-body textarea { width: 100%; min-height: 60px; border: 1px solid #ddd; border-radius: 6px; padding: 8px; font-size: 0.82em; line-height: 1.5; font-family: inherit; resize: vertical; }
+    .sn-generate { margin-top: 6px; display: flex; gap: 6px; align-items: center; }
+    .btn-generate { padding: 4px 12px; border-radius: 4px; border: 1px solid #8e44ad; background: white; color: #8e44ad; cursor: pointer; font-size: 0.75em; font-weight: 600; }
+    .btn-generate:hover { background: #f0e6ff; }
+    .btn-generate:disabled { opacity: 0.5; cursor: default; }
+    .gen-status { font-size: 0.72em; color: #7f8c8d; }
+
+    .sn-labels { padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; border-top: 1px solid #f0f0f0; }
+    .sn-labels label { font-size: 0.72em; color: #7f8c8d; white-space: nowrap; }
+    .sn-labels select { padding: 3px 6px; border-radius: 4px; border: 1px solid #ddd; font-size: 0.78em; }
+    .sn-labels input[type="checkbox"] { margin-left: 2px; }
+    .sn-labels input[type="text"] { flex: 1; min-width: 120px; padding: 3px 6px; border-radius: 4px; border: 1px solid #ddd; font-size: 0.78em; }
+
+    /* Action bar */
+    .action-bar { padding: 12px 16px; border-top: 1px solid #eee; display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-primary { padding: 8px 16px; border-radius: 6px; border: none; background: #8e44ad; color: white; cursor: pointer; font-size: 0.82em; font-weight: 600; }
+    .btn-primary:hover { background: #7d3c98; }
+    .btn-primary:disabled { opacity: 0.5; cursor: default; }
+    .btn-secondary { padding: 8px 16px; border-radius: 6px; border: 1px solid #bdc3c7; background: white; cursor: pointer; font-size: 0.82em; }
+    .btn-secondary:hover { background: #ecf0f1; }
+
+    /* Export float */
+    .export-float { position: fixed; bottom: 16px; right: 16px; z-index: 200; }
+    .export-float button { padding: 10px 20px; border-radius: 8px; border: none; background: #27ae60; color: white; font-size: 0.85em; cursor: pointer; font-weight: 600; box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+    .export-float button:hover { background: #219a52; }
+
+    /* Modal */
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 500; }
+    .modal-overlay.show { display: flex; align-items: center; justify-content: center; }
+    .modal { background: white; border-radius: 12px; width: 90%; max-width: 700px; max-height: 85vh; overflow-y: auto; padding: 28px; position: relative; box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+    .modal h2 { font-size: 1.1em; margin: 16px 0 8px; color: #2c3e50; }
+    .modal p, .modal li { font-size: 0.85em; line-height: 1.5; }
+    .modal table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 0.8em; }
+    .modal table th, .modal table td { border: 1px solid #ddd; padding: 5px 8px; text-align: left; }
+    .modal table th { background: #2c3e50; color: white; }
+    .modal .close-btn { position: sticky; top: 0; float: right; background: #e74c3c; color: white; border: none; border-radius: 6px; padding: 5px 12px; cursor: pointer; font-size: 0.82em; font-weight: 600; }
+    .modal ul { padding-left: 18px; }
+    .modal code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>MedFactCheck — Annotation</h1>
+  <button class="btn-header" onclick="window.open('guidlines.pdf', '_blank', 'noopener')">Guidelines</button>
+  <button class="btn-header" onclick="openModal('settings-modal')">Settings</button>
+  <div class="stats" id="stats"></div>
+</div>
+
+<div id="app"></div>
+<div class="export-float" id="export-float" style="display:none;"><button onclick="exportBatch()">Export Batch</button></div>
+
+<!-- Settings Modal -->
+<div class="modal-overlay" id="settings-modal" onclick="if(event.target===this)this.classList.remove('show')">
+  <div class="modal" style="max-width:800px;">
+    <button class="close-btn" onclick="closeModal('settings-modal')">Close</button>
+    <h2 style="margin-top:0;">LLM Settings</h2>
+    <p style="font-size:0.82em;color:#7f8c8d;">API key is stored locally and never exported. Prompts are editable — changes are saved automatically.</p>
+    <div style="display:flex;gap:12px;margin:12px 0;">
+      <div style="flex:1;">
+        <label style="font-size:0.82em;display:block;margin-bottom:4px;">API Provider</label>
+        <select id="set-provider" style="padding:6px;border-radius:4px;border:1px solid #ddd;width:100%;" onchange="saveSettings()">
+          <option value="openai">OpenAI</option>
+        </select>
+      </div>
+      <div style="flex:2;">
+        <label style="font-size:0.82em;display:block;margin-bottom:4px;">API Key</label>
+        <input id="set-apikey" type="password" style="padding:6px;border-radius:4px;border:1px solid #ddd;width:100%;" placeholder="sk-..." onchange="saveSettings()">
+      </div>
+      <div style="flex:1;">
+        <label style="font-size:0.82em;display:block;margin-bottom:4px;">Model</label>
+        <input id="set-model" type="text" style="padding:6px;border-radius:4px;border:1px solid #ddd;width:100%;" value="gpt-5.4" onchange="saveSettings()">
+      </div>
+    </div>
+    <div style="margin:16px 0;">
+      <label style="font-size:0.82em;display:block;margin-bottom:4px;font-weight:600;">Snippet Generation Prompt</label>
+      <textarea id="set-snippet-prompt" style="width:100%;min-height:100px;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:0.78em;font-family:monospace;line-height:1.4;" onchange="saveSettings()"></textarea>
+    </div>
+    <div style="margin:16px 0;">
+      <label style="font-size:0.82em;display:block;margin-bottom:4px;font-weight:600;">Context Generation Prompt</label>
+      <textarea id="set-context-prompt" style="width:100%;min-height:100px;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:0.78em;font-family:monospace;line-height:1.4;" onchange="saveSettings()"></textarea>
+    </div>
+    <button class="btn-secondary" onclick="resetPrompts()">Reset Prompts to Defaults</button>
+  </div>
+</div>
+
+<script>
+// ========== STATE ==========
+let batchIndex = [];
+let currentBatch = null;
+let currentEntryIdx = 0;
+let checkedAtoms = new Set();
+let showSuggestions = false;
+// Server-loaded annotations from annotated/batch_<N>_annotations.json (read-only fallback).
+// Used on first visit / fresh browser; once the annotator edits, localStorage takes over.
+const serverAnnotations = new Map();  // entry_id -> {shared_context, snippets}
+
+function getEntryState(entryId) {
+  const raw = localStorage.getItem(`medfactcheck_v2_${entryId}`);
+  if (raw) return JSON.parse(raw);
+  const seeded = serverAnnotations.get(entryId);
+  if (seeded) return JSON.parse(JSON.stringify(seeded));  // deep copy so edits don't mutate the cache
+  return { shared_context: {}, snippets: [] };
+}
+
+function saveEntryState(entryId, state) {
+  localStorage.setItem(`medfactcheck_v2_${entryId}`, JSON.stringify(state));
+}
+
+const DEFAULT_SNIPPET_PROMPT = `Combine the following atomic claims into a single verifiable statement.
+
+Rules:
+1. RESOLVE ALL PRONOUNS — Replace every instance of "the patient", "this patient", "he/she", "the condition" etc. with the actual details from the shared context. Never leave "the patient" unresolved.
+   Example: "The patient's aggressive behavior is likely secondary to schizophrenia" → "A 23-year-old male's aggressive behavior is likely secondary to schizophrenia"
+2. INCLUDE DEPENDENT CONTEXT — If a claim depends on patient details to be verifiable, include only the minimum necessary context from shared context to resolve references.
+   Example: "The most appropriate next step is an alternative antipsychotic" → add "given failure of risperidone, haloperidol, and ziprasidone" because the claims reference treatment decisions.
+   CRITICAL: NEVER add medical facts, drug names, diagnoses, or conclusions that are NOT already stated in the atomic claims. The shared context is ONLY for resolving pronouns and references, not for adding new content.
+3. STANDALONE FACTS STAY STANDALONE — If claims are general medical facts with no pronouns or patient references (e.g., "Clozapine is a second-generation antipsychotic"), output them as-is without adding context.
+4. MERGE ENUMERATED ITEMS — Combine listed items into a single list.
+5. CONCISE — One to two sentences. Do not pad with unnecessary background.
+
+Output only the merged snippet text, nothing else.`;
+
+const DEFAULT_CONTEXT_PROMPT = `Extract the shared context needed to understand the given claims. Output a JSON object with specific, standardized keys. Use ONLY these keys (omit any that don't apply):
+
+For clinical vignettes: "age", "sex", "chief_complaint", "medical_history", "medications", "family_history", "vitals", "labs", "exam_findings", "imaging", "correct_answer"
+For consumer health: "topic", "drug_a", "drug_b", "condition"
+
+IMPORTANT: All values MUST be flat strings (never nested objects or arrays). For "correct_answer", write the full answer text not just a letter (e.g., "Clozapine (B)" not just "B"). For vitals/labs, write as a single string (e.g., "BP 120/80, pulse 90, temp 98.6F").
+
+Output ONLY valid JSON, no markdown.`;
+
+function getLLMSettings() {
+  const raw = localStorage.getItem('medfactcheck_llm_config');
+  const defaults = { provider: 'openai', apikey: '', model: 'gpt-5.4', snippet_prompt: DEFAULT_SNIPPET_PROMPT, context_prompt: DEFAULT_CONTEXT_PROMPT };
+  if (!raw) return defaults;
+  const saved = JSON.parse(raw);
+  return { ...defaults, ...saved };
+}
+
+function saveSettings() {
+  const config = {
+    provider: document.getElementById('set-provider').value,
+    apikey: document.getElementById('set-apikey').value,
+    model: document.getElementById('set-model').value,
+    snippet_prompt: document.getElementById('set-snippet-prompt').value,
+    context_prompt: document.getElementById('set-context-prompt').value,
+  };
+  localStorage.setItem('medfactcheck_llm_config', JSON.stringify(config));
+}
+
+function loadSettings() {
+  const c = getLLMSettings();
+  document.getElementById('set-provider').value = c.provider;
+  document.getElementById('set-apikey').value = c.apikey;
+  document.getElementById('set-model').value = c.model;
+  document.getElementById('set-snippet-prompt').value = c.snippet_prompt;
+  document.getElementById('set-context-prompt').value = c.context_prompt;
+}
+
+function resetPrompts() {
+  document.getElementById('set-snippet-prompt').value = DEFAULT_SNIPPET_PROMPT;
+  document.getElementById('set-context-prompt').value = DEFAULT_CONTEXT_PROMPT;
+  saveSettings();
+}
+
+function openModal(id) { document.getElementById(id).classList.add('show'); }
+function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+
+// ========== BATCH SELECTOR ==========
+async function init() {
+  batchIndex = await fetch('data/index.json').then(r => r.json());
+  await preloadServerAnnotations();
+  loadSettings();
+  renderBatchSelector();
+}
+
+// Try to fetch annotated/batch_<N>_annotations.json for every batch in the index.
+// 404s are silently ignored, so adding/removing files in annotated/ requires no other code changes.
+async function preloadServerAnnotations() {
+  const tasks = batchIndex.map(async b => {
+    if (b.is_test) return;  // test batch is for practice, no shared annotations
+    try {
+      const r = await fetch(`annotated/batch_${b.batch}_annotations.json`, { cache: 'no-cache' });
+      if (!r.ok) return;
+      const data = await r.json();
+      if (!Array.isArray(data)) return;
+      data.forEach(entry => {
+        if (entry && typeof entry.entry_id === 'number') {
+          serverAnnotations.set(entry.entry_id, {
+            shared_context: entry.shared_context || {},
+            snippets: Array.isArray(entry.snippets) ? entry.snippets : [],
+          });
+        }
+      });
+    } catch (e) {
+      // network error or invalid JSON — skip silently
+    }
+  });
+  await Promise.all(tasks);
+}
+
+function renderBatchSelector() {
+  document.getElementById('export-float').style.display = 'none';
+  currentBatch = null;
+  let html = '<div style="padding:16px 20px;"><h2 style="margin-bottom:4px;">Select a Batch</h2><p style="color:#7f8c8d;font-size:0.82em;">Each batch has ~10 entries. Select atoms, create snippets, label them.</p></div><div class="batch-grid">';
+  batchIndex.forEach(b => {
+    const isTest = b.is_test || false;
+    const annotated = countBatchAnnotated(b);
+    const complete = !isTest && isBatchComplete(b);
+    const subsets = b.subsets.map(s => s === 'consumer' ? '<span class="badge-consumer">Consumer</span>' : '<span class="badge-vignette">Vignette</span>').join(' ');
+    const cardClass = `batch-card${complete ? ' complete' : ''}`;
+    const inlineStyle = isTest ? 'border:2px solid #e67e22;background:#fef9f3;' : '';
+    const annotatedLabel = complete ? `<strong style="color:#27ae60;">Done</strong> (${annotated}/${b.entries})` : `${annotated}/${b.entries} annotated`;
+    html += `<div class="${cardClass}" onclick="loadBatch(${b.batch})" ${inlineStyle ? `style="${inlineStyle}"` : ''}>
+      <h3>${isTest ? '⭐ Test Batch' : 'Batch '+b.batch}</h3>
+      <div class="batch-meta"><strong>${b.entries}</strong> entries, <strong>${b.total_snippets}</strong> atoms<br>${subsets} <span style="font-size:0.9em;">${annotatedLabel}</span></div>
+    </div>`;
+  });
+  html += '</div>';
+  document.getElementById('app').innerHTML = html;
+  updateStats();
+}
+
+function countBatchAnnotated(b) {
+  let n = 0;
+  b.entry_ids.forEach(id => {
+    const s = getEntryState(id);
+    if (s.snippets.length > 0) n++;
+  });
+  return n;
+}
+
+// "Fully complete" = every entry has at least one snippet AND every snippet has both labels.
+// (Doesn't verify all atoms are assigned — that needs the batch JSON; nextEntry checks it.)
+function isBatchComplete(b) {
+  return b.entry_ids.every(id => {
+    const s = getEntryState(id);
+    if (!s.snippets.length) return false;
+    return s.snippets.every(sn => sn.label_with_patient_context && sn.label_in_general);
+  });
+}
+
+async function loadBatch(num) {
+  const info = batchIndex.find(b => b.batch === num);
+  currentBatch = await fetch(`data/${info.file}`).then(r => r.json());
+  currentEntryIdx = 0;
+  checkedAtoms = new Set();
+  showSuggestions = false;
+  renderEntry();
+}
+
+// ========== ENTRY VIEW ==========
+function renderEntry() {
+  if (!currentBatch) return;
+  document.getElementById('export-float').style.display = 'block';
+  const entry = currentBatch[currentEntryIdx];
+  const state = getEntryState(entry.id);
+  const batchNum = batchIndex.find(b => b.entry_ids.includes(entry.id))?.batch || '?';
+
+  // Build atom assignment map
+  const atomAssign = {};
+  state.snippets.forEach((sn, si) => {
+    (sn.source_claims || []).forEach(a => {
+      if (!atomAssign[a]) atomAssign[a] = [];
+      atomAssign[a].push(si + 1);
+    });
+  });
+
+  const atoms = entry.atoms_detail || [];
+  const totalAtoms = atoms.length;
+  const assignedCount = Object.keys(atomAssign).length;
+  const unassigned = totalAtoms - assignedCount;
+
+  // Suggestion groups
+  const suggGroups = {};
+  (entry.snippets || []).forEach((sn, i) => {
+    (sn.atoms || []).forEach(a => { suggGroups[a] = i; });
+  });
+
+  let html = `
+  <div class="nav-bar">
+    <button onclick="renderBatchSelector()">← Batches</button>
+    <button onclick="prevEntry()" ${currentEntryIdx===0?'disabled':''}>← Prev</button>
+    <button onclick="nextEntry()" ${currentEntryIdx===currentBatch.length-1?'disabled':''}>Next →</button>
+    <div class="progress">Batch ${batchNum} — Entry <strong>${currentEntryIdx+1}</strong>/${currentBatch.length}</div>
+  </div>
+  <div class="workspace">
+    <div class="panel panel-left">
+      <div class="panel-header">
+        <span class="id-badge">ID ${entry.id}</span>
+        <span class="${entry.subset==='consumer'?'badge-consumer':'badge-vignette'}">${entry.subset}</span>
+        <span class="meta">${totalAtoms} atoms</span>
+      </div>
+      <div class="section">
+        <div class="section-title">Query</div>
+        <div class="section-text">${esc(entry.full_query || entry.query || '')}</div>
+      </div>
+      <div style="padding:4px 16px;"><button class="toggle-btn" onclick="document.getElementById('ft').classList.toggle('show')">Show/Hide Full Response</button></div>
+      <div class="collapsible" id="ft">${esc(entry.full_text || '')}</div>
+      <div class="atom-counter">
+        <label><input type="checkbox" id="sugg-toggle" ${showSuggestions?'checked':''} onchange="showSuggestions=this.checked;renderEntry()"> Show suggestions</label>
+        <span style="margin-left:auto;">${unassigned > 0 ? `<span class="unassigned">${unassigned} unassigned</span>` : '<span class="all-done">All assigned ✓</span>'}</span>
+      </div>
+      <div class="atom-list">
+        ${atoms.map((a, i) => {
+          const idx = a.index;
+          const assigned = atomAssign[idx];
+          const checked = checkedAtoms.has(idx);
+          const suggGroup = suggGroups[idx];
+          const prevGroup = i > 0 ? suggGroups[atoms[i-1].index] : -1;
+          const isStart = showSuggestions && suggGroup !== undefined && suggGroup !== prevGroup;
+          const isGroup = showSuggestions && suggGroup !== undefined;
+          return `<div class="atom-row ${checked?'selected':''} ${isStart?'sugg-start':''} ${isGroup?'sugg-group':''}" onclick="atomRowClick(event,${idx})">
+            <input type="checkbox" ${checked?'checked':''} onclick="event.stopPropagation();toggleAtom(${idx})">
+            <span class="atom-idx">#${idx}</span>
+            <span class="atom-text">${esc(a.text)}</span>
+            <button class="atom-copy" onclick="event.stopPropagation();copyAtomText(event,${idx})" title="Copy claim text">⎘</button>
+            <span class="atom-label ${a.label?'atom-label-true':'atom-label-false'}">${a.label?'✓':'✗'}</span>
+            ${assigned ? assigned.map(s=>`<span class="atom-assigned">S${s}</span>`).join('') : ''}
+          </div>`;
+        }).join('')}
+      </div>
+    </div>
+
+    <div class="panel panel-right">
+      <div class="panel-header">
+        <span style="font-weight:600;">Snippet Builder</span>
+        <span class="meta">${state.snippets.length} snippet${state.snippets.length!==1?'s':''}</span>
+      </div>
+
+      <!-- Shared Context (entry-level) -->
+      <div class="shared-ctx">
+        <div class="section-title" style="margin-bottom:6px;">Shared Context</div>
+        ${renderSharedContext(entry.id, state)}
+        <div style="display:flex;gap:6px;align-items:center;margin-top:4px;">
+          <button class="btn-sm" onclick="addContext(${entry.id})">+ Add</button>
+          <button class="btn-sm" onclick="generateContext(${entry.id})" id="gen-ctx-btn" style="color:#8e44ad;border-color:#8e44ad;">Generate</button>
+          <span class="gen-status" id="gen-ctx-status" style="font-size:0.72em;"></span>
+        </div>
+      </div>
+
+      <!-- Action Bar -->
+      <div class="action-bar">
+        <button class="btn-primary" onclick="createSnippet(${entry.id})" ${checkedAtoms.size===0?'disabled':''}>+ Create Snippet (${checkedAtoms.size} selected)</button>
+        <button class="btn-secondary" onclick="importSuggestions(${entry.id})">Import Suggestions</button>
+      </div>
+
+      <!-- Snippet List -->
+      <div class="snippet-list" id="snippet-list">
+        ${state.snippets.length === 0
+          ? '<div style="padding:20px;text-align:center;color:#bdc3c7;font-size:0.85em;">No snippets yet. Select atoms on the left and click "Create Snippet".</div>'
+          : state.snippets.map((sn, si) => renderSnippetCard(entry, state, sn, si)).join('')}
+      </div>
+    </div>
+  </div>`;
+
+  // Preserve scroll positions across re-renders so checkbox clicks don't jump to top.
+  // Both the window (right panel flows in window) and .panel-left (atom list has its own
+  // internal overflow scroll) need to be saved. Entry-navigation callers (prevEntry/nextEntry)
+  // explicitly reset scroll after calling renderEntry, so they still start fresh.
+  const prevWindowY = window.scrollY;
+  const prevLeftTop = document.querySelector('.panel-left')?.scrollTop || 0;
+  const prevRightTop = document.querySelector('.panel-right')?.scrollTop || 0;
+
+  document.getElementById('app').innerHTML = html;
+  updateStats();
+
+  window.scrollTo(0, prevWindowY);
+  const newLeft = document.querySelector('.panel-left');
+  if (newLeft) newLeft.scrollTop = prevLeftTop;
+  const newRight = document.querySelector('.panel-right');
+  if (newRight) newRight.scrollTop = prevRightTop;
+}
+
+
+function renderSharedContext(entryId, state) {
+  const ctx = state.shared_context || {};
+  const keys = Object.keys(ctx);
+  if (keys.length === 0) return '<div style="font-size:0.75em;color:#bbb;">No context defined.</div>';
+  return keys.map(k => `<div class="ctx-row">
+    <input class="ctx-key" value="${esc(k)}" onchange="updateCtxKey(${entryId},'${esc(k)}',this.value)">
+    <input class="ctx-val" value="${esc(ctx[k])}" onchange="updateCtxVal(${entryId},'${esc(k)}',this.value)">
+    <button class="ctx-del" onclick="deleteCtx(${entryId},'${esc(k)}')">×</button>
+  </div>`).join('');
+}
+
+function addContext(entryId) {
+  const state = getEntryState(entryId);
+  const key = prompt('Context key (e.g., "patient", "condition", "medications"):');
+  if (!key) return;
+  if (!state.shared_context) state.shared_context = {};
+  state.shared_context[key] = '';
+  saveEntryState(entryId, state);
+  renderEntry();
+}
+
+function updateCtxKey(entryId, oldKey, newKey) {
+  const state = getEntryState(entryId);
+  const val = state.shared_context[oldKey];
+  delete state.shared_context[oldKey];
+  state.shared_context[newKey] = val;
+  saveEntryState(entryId, state);
+}
+
+function updateCtxVal(entryId, key, val) {
+  const state = getEntryState(entryId);
+  state.shared_context[key] = val;
+  saveEntryState(entryId, state);
+}
+
+function deleteCtx(entryId, key) {
+  const state = getEntryState(entryId);
+  delete state.shared_context[key];
+  saveEntryState(entryId, state);
+  renderEntry();
+}
+
+function renderSnippetCard(entry, state, sn, si) {
+  const atoms = entry.atoms_detail || [];
+  const claimChips = (sn.source_claims || []).map(idx => {
+    const atom = atoms.find(a => a.index === idx);
+    const isFalse = atom && !atom.label;
+    return `<span class="claim-chip ${isFalse?'claim-chip-false':''}">#${idx}</span>`;
+  }).join('');
+
+  return `<div class="snippet-card">
+    <div class="snippet-card-header">
+      <span class="sn-id">S${si+1}</span>
+      <span class="sn-claims-inline">${claimChips}</span>
+      ${sn._from_suggestion ? '<span class="sn-badge">Suggested</span>' : ''}
+      <button class="sn-del" onclick="deleteSnippet(${entry.id},${si})">Delete</button>
+    </div>
+    <div class="sn-body">
+      <textarea placeholder="Write or generate the merged snippet text..." onchange="updateSnippetField(${entry.id},${si},'output',this.value)">${esc(sn.output || '')}</textarea>
+      <div style="display:flex;gap:6px;align-items:center;margin-top:4px;">
+        <button class="btn-generate" onclick="generateSnippet(${entry.id},${si})" id="gen-btn-${si}">Generate</button>
+        <span class="gen-status" id="gen-status-${si}"></span>
+      </div>
+    </div>
+    <div class="sn-labels">
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+        <label>With context:</label>
+        <select onchange="updateSnippetField(${entry.id},${si},'label_with_patient_context',this.value)">
+          <option value="">—</option>
+          <option value="true" ${sn.label_with_patient_context==='true'?'selected':''}>True</option>
+          <option value="false" ${sn.label_with_patient_context==='false'?'selected':''}>False</option>
+        </select>
+        <label>In general:</label>
+        <select onchange="updateSnippetField(${entry.id},${si},'label_in_general',this.value)">
+          <option value="">—</option>
+          <option value="true" ${sn.label_in_general==='true'?'selected':''}>True</option>
+          <option value="false" ${sn.label_in_general==='false'?'selected':''}>False</option>
+        </select>
+        <label><input type="checkbox" ${sn.is_ambiguous==='yes'?'checked':''} onchange="updateSnippetField(${entry.id},${si},'is_ambiguous',this.checked?'yes':'no')"> Ambiguous</label>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center;margin-top:6px;">
+        <label>Note:</label>
+        <input type="text" value="${esc(sn.notes || '')}" placeholder="Optional..." onchange="updateSnippetField(${entry.id},${si},'notes',this.value)">
+      </div>
+    </div>
+  </div>`;
+}
+
+// ========== ACTIONS ==========
+function toggleAtom(idx) {
+  if (checkedAtoms.has(idx)) checkedAtoms.delete(idx); else checkedAtoms.add(idx);
+  renderEntry();
+}
+
+// Atom-row click: skip toggle if the user is selecting text inside the row
+// (so double-click-to-select-word and click-drag-to-select work normally).
+function atomRowClick(event, idx) {
+  const sel = window.getSelection();
+  if (sel && sel.toString().length > 0) {
+    const row = event.currentTarget;
+    if (row.contains(sel.anchorNode) || row.contains(sel.focusNode)) return;
+  }
+  // Don't toggle when the click target is inside the selectable text span.
+  if (event.target.classList && event.target.classList.contains('atom-text')) return;
+  toggleAtom(idx);
+}
+
+function copyAtomText(event, idx) {
+  const entry = currentBatch[currentEntryIdx];
+  const atom = (entry.atoms_detail || []).find(a => a.index === idx);
+  if (!atom) return;
+  const btn = event.currentTarget;
+  navigator.clipboard.writeText(atom.text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 900);
+  }).catch(() => {
+    // Fallback: select the text so the user can Cmd/Ctrl+C manually.
+    const range = document.createRange();
+    range.selectNodeContents(btn.previousElementSibling);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  });
+}
+
+function createSnippet(entryId) {
+  if (checkedAtoms.size === 0) return;
+  const state = getEntryState(entryId);
+  state.snippets.push({
+    source_claims: Array.from(checkedAtoms).sort((a,b) => a-b),
+    output: '',
+    is_ambiguous: 'no',
+    label_with_patient_context: '',
+    label_in_general: '',
+    notes: '',
+  });
+  saveEntryState(entryId, state);
+  checkedAtoms = new Set();
+  renderEntry();
+}
+
+function deleteSnippet(entryId, idx) {
+  const state = getEntryState(entryId);
+  state.snippets.splice(idx, 1);
+  saveEntryState(entryId, state);
+  renderEntry();
+}
+
+function updateSnippetField(entryId, idx, field, value) {
+  const state = getEntryState(entryId);
+  if (state.snippets[idx]) {
+    state.snippets[idx][field] = value;
+    saveEntryState(entryId, state);
+  }
+}
+
+function importSuggestions(entryId) {
+  if (!confirm('Import pre-clustered suggestions? This will add them as editable snippets.')) return;
+  const entry = currentBatch[currentEntryIdx];
+  const state = getEntryState(entryId);
+  (entry.snippets || []).forEach(sn => {
+    state.snippets.push({
+      source_claims: sn.atoms || [],
+      output: sn.content || '',
+      is_ambiguous: 'no',
+      label_with_patient_context: '',
+      label_in_general: '',
+      notes: '',
+      _from_suggestion: true,
+    });
+  });
+  saveEntryState(entryId, state);
+  renderEntry();
+}
+
+// ========== LLM GENERATION ==========
+async function generateContext(entryId) {
+  const config = getLLMSettings();
+  if (!config.apikey) { alert('Set your API key in Settings first.'); return; }
+
+  const entry = currentBatch[currentEntryIdx];
+  const state = getEntryState(entryId);
+
+  const btn = document.getElementById('gen-ctx-btn');
+  const statusEl = document.getElementById('gen-ctx-status');
+  btn.disabled = true;
+  statusEl.textContent = 'Generating...';
+
+  const messages = [
+    { role: 'system', content: config.context_prompt },
+    { role: 'user', content: `Query:\n${entry.full_query || entry.query || ''}\n\nFull response:\n${entry.full_text || ''}\n\nExtract shared context as JSON:` }
+  ];
+
+  try {
+    const resp = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${config.apikey}` },
+      body: JSON.stringify({ model: config.model, messages, max_completion_tokens: 500, temperature: 0 }),
+    });
+    const data = await resp.json();
+    if (data.error) throw new Error(data.error.message);
+    let text = data.choices[0].message.content.trim();
+    if (text.startsWith('```')) { text = text.split('\n').slice(1).join('\n').replace(/```$/,'').trim(); }
+    const raw = JSON.parse(text);
+    const ctx = {};
+    for (const [k, v] of Object.entries(raw)) {
+      if (v == null) continue;
+      // Flatten nested objects/arrays into strings
+      const str = (typeof v === 'object') ? JSON.stringify(v).replace(/[{}\[\]"]/g, '').replace(/,/g, ', ').replace(/:/g, ': ') : String(v).trim();
+      if (str) ctx[k] = str;
+    }
+    state.shared_context = ctx;
+    saveEntryState(entryId, state);
+    statusEl.textContent = 'Done ✓';
+    renderEntry();
+  } catch (e) {
+    statusEl.textContent = `Error: ${e.message}`;
+    btn.disabled = false;
+  }
+}
+
+
+async function generateSnippet(entryId, snippetIdx) {
+  const config = getLLMSettings();
+  if (!config.apikey) { alert('Set your API key in Settings first.'); return; }
+
+  const entry = currentBatch[currentEntryIdx];
+  const state = getEntryState(entryId);
+  const sn = state.snippets[snippetIdx];
+  if (!sn) return;
+
+  const atoms = entry.atoms_detail || [];
+  const selectedAtoms = (sn.source_claims || []).map(idx => {
+    const a = atoms.find(x => x.index === idx);
+    return a ? `${idx}. ${a.text}` : `${idx}. [not found]`;
+  }).join('\n');
+
+  const ctxStr = Object.entries(state.shared_context || {}).map(([k,v]) => `${k}: ${v}`).join('\n');
+
+  const btn = document.getElementById(`gen-btn-${snippetIdx}`);
+  const status = document.getElementById(`gen-status-${snippetIdx}`);
+  btn.disabled = true;
+  status.textContent = 'Generating...';
+
+  const messages = [
+    { role: 'system', content: config.snippet_prompt },
+    { role: 'user', content: `Query:\n${entry.full_query || entry.query || ''}\n\nShared context:\n${ctxStr || '(none)'}\n\nAtomic claims to merge:\n${selectedAtoms}\n\nMerged snippet:` }
+  ];
+
+  try {
+    const resp = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${config.apikey}` },
+      body: JSON.stringify({ model: config.model, messages, max_completion_tokens: 300, temperature: 0 }),
+    });
+    const data = await resp.json();
+    if (data.error) throw new Error(data.error.message);
+    const text = data.choices[0].message.content.trim();
+    sn.output = text;
+    saveEntryState(entryId, state);
+    status.textContent = 'Done ✓';
+    renderEntry();
+  } catch (e) {
+    status.textContent = `Error: ${e.message}`;
+    btn.disabled = false;
+  }
+}
+
+// ========== NAVIGATION ==========
+function prevEntry() { if (currentEntryIdx > 0) { currentEntryIdx--; checkedAtoms = new Set(); renderEntry(); window.scrollTo(0,0); } }
+function nextEntry() {
+  if (currentEntryIdx >= currentBatch.length - 1) return;
+  const entry = currentBatch[currentEntryIdx];
+  const state = getEntryState(entry.id);
+  const totalAtoms = (entry.atoms_detail || []).length;
+  const warnings = [];
+
+  // Check unassigned atoms
+  const assigned = new Set();
+  state.snippets.forEach(sn => (sn.source_claims || []).forEach(a => assigned.add(a)));
+  const unassigned = totalAtoms - assigned.size;
+  if (unassigned > 0) warnings.push(`${unassigned} atomic claim${unassigned > 1 ? 's' : ''} not assigned to any snippet`);
+
+  // Check empty snippets
+  state.snippets.forEach((sn, i) => {
+    if (!sn.output || !sn.output.trim()) warnings.push(`S${i+1}: empty snippet text`);
+    if (!sn.label_with_patient_context) warnings.push(`S${i+1}: missing "With context" label`);
+    if (!sn.label_in_general) warnings.push(`S${i+1}: missing "In general" label`);
+  });
+
+  // No snippets at all
+  if (state.snippets.length === 0) warnings.push('No snippets created for this entry');
+
+  if (warnings.length > 0) {
+    if (!confirm(`Entry ${entry.id} has ${warnings.length} warning${warnings.length > 1 ? 's' : ''}:\n\n${warnings.join('\n')}\n\nContinue anyway?`)) return;
+  }
+
+  currentEntryIdx++;
+  checkedAtoms = new Set();
+  renderEntry();
+  window.scrollTo(0, 0);
+}
+
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === 'ArrowLeft') prevEntry();
+  if (e.key === 'ArrowRight') nextEntry();
+  if (e.key === 'Escape' && currentBatch) renderBatchSelector();
+});
+
+// ========== EXPORT ==========
+function exportBatch() {
+  if (!currentBatch) return;
+  const output = currentBatch.map(entry => {
+    const state = getEntryState(entry.id);
+    return {
+      entry_id: entry.id,
+      shared_context: state.shared_context || {},
+      snippets: state.snippets.map(sn => ({
+        source_claims: sn.source_claims,
+        output: sn.output,
+        is_ambiguous: sn.is_ambiguous || 'no',
+        label_with_patient_context: sn.label_with_patient_context || '',
+        label_in_general: sn.label_in_general || '',
+        notes: sn.notes || '',
+      })),
+    };
+  });
+
+  // Validation
+  let warnings = [];
+  output.forEach(e => {
+    const entry = currentBatch.find(x => x.id === e.entry_id);
+    const totalAtoms = (entry?.atoms_detail || []).length;
+    const assigned = new Set();
+    e.snippets.forEach(s => (s.source_claims||[]).forEach(a => assigned.add(a)));
+    const unassigned = totalAtoms - assigned.size;
+    if (unassigned > 0) warnings.push(`Entry ${e.entry_id}: ${unassigned} unassigned atoms`);
+    e.snippets.forEach((s, i) => {
+      if (!s.output) warnings.push(`Entry ${e.entry_id} S${i+1}: empty snippet text`);
+      if (!s.label_with_patient_context) warnings.push(`Entry ${e.entry_id} S${i+1}: missing context label`);
+    });
+  });
+
+  if (warnings.length > 0) {
+    if (!confirm(`Warnings (${warnings.length}):\n${warnings.slice(0,10).join('\n')}${warnings.length>10?'\n...':''}\\n\\nExport anyway?`)) return;
+  }
+
+  const blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  const batchNum = batchIndex.find(b => b.entry_ids.includes(currentBatch[0].id))?.batch || 0;
+  a.download = `batch_${batchNum}_annotations.json`;
+  a.click();
+}
+
+function updateStats() {
+  let total = 0;
+  batchIndex.forEach(b => { total += countBatchAnnotated(b); });
+  document.getElementById('stats').textContent = `${total}/276 entries annotated`;
+}
+
+function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+// Guidelines are served as guidlines.pdf in this folder (header button opens it in a new tab).
+
+init();
+</script>
+</body>
+</html>
