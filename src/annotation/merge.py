@@ -20,12 +20,12 @@ Each snippet row carries:
   - batch_id              (which annotation batch the entry was in)
   - shared_context        (annotator-supplied context dict)
   - snippet_text          (human-edited snippet text)
-  - atoms                 (list of {index, text, llm_label} for the
-                           atoms this snippet covers; llm_label is the
-                           per-atom LLM self-label from raw MedQA)
+  - atoms                 (list of {index, text, label} for the atoms
+                           this snippet covers; `label` is the
+                           expert-supplied gold label from MedQA)
   - is_ambiguous          ("yes"/"no")
   - notes                 (annotator's free-text)
-  - label_atomic          (AND over atoms' llm_label; bool)
+  - label_atomic          (AND over atoms' gold labels; bool)
   - label_human_general   (annotator's label_in_general; bool)
   - label_human_contextual (annotator's label_with_patient_context; bool)
 """
@@ -63,7 +63,7 @@ def main():
         atom_by_key[(eid, aid)] = {
             "index": aid,
             "text": r["claim"],
-            "llm_label": bool(r["label"]),
+            "label": bool(r["label"]),
         }
         if eid not in entry_attrs:
             entry_attrs[eid] = {
@@ -93,7 +93,7 @@ def main():
                         n_atoms_missing += 1
                         continue
                     atoms.append(a)
-                label_atomic = all(a["llm_label"] for a in atoms) if atoms else True
+                label_atomic = all(a["label"] for a in atoms) if atoms else True
 
                 out_rows.append({
                     "snippet_id":    f"{eid}-S{s_idx}",
