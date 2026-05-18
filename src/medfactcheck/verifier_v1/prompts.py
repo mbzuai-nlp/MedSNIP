@@ -108,7 +108,7 @@ medically-correct definition of a wrong-answer option (e.g., "Pessimism is an \
 attitude in which a person expects negative outcomes") is still **true**, \
 because the definition is correct in general.
 
-# Compound claim rule (materially wrong only) — DEFAULT TO TRUE on imprecision
+# Compound claim rule (materially wrong only)
 
 If the snippet states multiple sub-claims, the snippet is true only if every \
 **material** sub-claim is true. A "material" sub-claim is one that materially \
@@ -120,22 +120,6 @@ wrong mechanism, wrong target population. Ignore:
 proximity" — broadly true even if Candida can transfer in close skin contact).
   - Hedge words that don't change the medical claim ("may be", "can be", \
 "in some cases").
-  - **Phrasing/mechanism imprecision** when the core medical assertion stands \
-(e.g., "blocks production of substance P" vs the strictly-correct "depletes \
-substance P" — the snippet's medical message that capsaicin reduces substance \
-P signaling is still right).
-  - **Overlapping-category framing** — listing a parent and child condition \
-side-by-side (e.g., "idiopathic generalized epilepsy and complex partial \
-seizures" as similar conditions in a differential) is loose but does not \
-materially flip the medical assertion.
-  - **Comparative claims with edge-case counterexamples** — a broad comparative \
-("bone scan is more sensitive than CT/MRI/...") that is true on the central \
-case but has a known exception (MRI better for marrow disease) is still **true** \
-under this rubric unless the snippet specifically asserts the exception.
-  - **Distinguishing-feature framing** — phrasing like "X is typically Y, \
-whereas Z is typically W" is medically defensible if Y and W are recognized \
-features, even if not the single best discriminator. Do not flip to false \
-solely because a better discriminator exists.
 
 Worked example of a TRULY materially-wrong compound claim: *"Chlorpromazine is \
 a first-generation antipsychotic with a pharmacologic profile similar to \
@@ -146,108 +130,6 @@ Worked example that should NOT be flagged false despite imperfection: \
 *"HSV lesions are painful and heal over 2-4 weeks."* — Typical oral HSV \
 recurrences heal faster (7-14 days) but primary infections can take 2-4 weeks. \
 The claim is medically defensible — **true**.
-
-Worked example to NOT flip on mechanism phrasing: *"Capsaicin can provide \
-temporary relief for muscular pain by blocking the production of substance P."* \
-— Mechanism is more precisely "depletion/reduced availability" of substance P, \
-but the medical claim (capsaicin reduces substance P-mediated pain signaling) \
-is correct → **true**.
-
-When in doubt on compound snippets, ask: "If I removed the imprecise phrasing, \
-would the remaining medical assertion still be correct?" If yes → **true**.
-
-# Common mistakes to avoid — explicit anti-examples
-
-The verifier has historically made the following classes of error. **Do not \
-repeat them.**
-
-## A) Do NOT mark FALSE just because you can find an edge-case exception
-
-A1) SNIPPET: *"CT and MRI are more sensitive for detecting soft tissue injuries \
-than bone scans, radiograph, and ultrasound."*
-- Wrong reasoning to avoid: "But ultrasound is preferred over CT for some \
-tendon/soft-tissue problems, so the comparative is false."
-- **CORRECT VERDICT: TRUE.** The central comparison (CT/MRI ≫ radiograph/bone \
-scan for soft tissue) is right. Edge cases where ultrasound > CT for specific \
-tendons don't invalidate the broad comparative.
-
-A2) SNIPPET: *"Canker sores usually present as a single lesion, whereas herpes \
-infections often present with multiple lesions."*
-- Wrong reasoning to avoid: "But minor aphthae can occur as 1-5 lesions, so \
-'usually a single lesion' is too restrictive."
-- **CORRECT VERDICT: TRUE.** Typical-pattern descriptions of "X usually Y, \
-whereas Z often W" are TRUE if Y and W are the recognized typical patterns, \
-even when both can have exceptions.
-
-A3) SNIPPET: *"Most yeast infections are caused by opportunistic pathogens \
-that take advantage of a compromised immune system."*
-- Wrong reasoning to avoid: "Vulvovaginal candidiasis commonly occurs in \
-immunocompetent women, so 'compromised immune system' is overstated."
-- **CORRECT VERDICT: TRUE.** "Opportunistic" is the accepted classification \
-for Candida and most pathogenic yeasts. Local/transient immune factors count \
-as "compromised defense" in medical parlance; don't reject on this technicality.
-
-A4) SNIPPET: *"Gently clean the piercing area with saline solution and dry it \
-thoroughly before applying ointment."*
-- Wrong reasoning to avoid: "Routine ointment isn't always recommended for \
-piercing aftercare."
-- **CORRECT VERDICT: TRUE.** Practical aftercare advice with debatable \
-specifics is TRUE if the central guidance (clean + dry) is sound. Don't reject \
-because some authorities discourage one component.
-
-A5) SNIPPET: *"A pH of 7.30 indicates respiratory acidosis."* (in a vignette \
-context where PaCO2 is elevated)
-- Wrong reasoning to avoid: "pH 7.30 alone only indicates acidemia, not \
-respiratory acidosis specifically."
-- **CORRECT VERDICT: TRUE in context.** Vignette claims read literally are \
-often incomplete by design; they implicitly rely on the rest of the case. Read \
-the snippet WITH the shared_context — if the inference holds given the \
-context, mark TRUE.
-
-## B) Do NOT mark TRUE just because the claim sounds plausible
-
-B1) SNIPPET: *"Yeasts can be spread from person to person through contact with \
-contaminated surfaces."*
-- Wrong reasoning to avoid: "Plausible — Candida auris does spread via \
-surfaces in hospitals, so this is defensible."
-- **CORRECT VERDICT: FALSE.** For the common yeast infections people \
-experience (vaginal candidiasis, oral thrush), fomite/surface transmission is \
-NOT a typical or significant route. Don't accept a mechanism for the common \
-case based on a rare hospital subtype.
-
-B2) SNIPPET: *"The pain worsens after rest, which suggests inflammatory back \
-pain."*
-- Wrong reasoning to avoid: "Inflammatory back pain classically isn't \
-relieved by rest, so 'worsens after rest' fits."
-- **CORRECT VERDICT: FALSE.** The clinical criterion is "not relieved by \
-rest" or "improves with exercise" — NOT "worsens after rest." Paraphrased \
-criteria that shift the directional meaning are materially wrong. Check \
-clinical criteria literally, not approximately.
-
-B3) SNIPPET: *"Abdominal pain is a common symptom in various gastrointestinal \
-conditions and in cancers."*
-- Wrong reasoning to avoid: "Broadly correct medical statement, no specific \
-claim is wrong."
-- **CORRECT VERDICT: FALSE.** Snippets that are vague to the point of being \
-unfalsifiable, with no specific medical content, should be marked FALSE when \
-they appear in an evaluation context as if they were factual claims. \
-"Defensibly broad" is not the same as "true."
-
-B4) SNIPPET: *"For each location, minor seasonal influenza epidemics usually \
-take about three weeks to reach their peak and another three weeks to \
-significantly diminish."*
-- Wrong reasoning to avoid: "Local outbreaks often peak in 2-3 weeks and last \
-5-10 weeks, so this is defensible."
-- **CORRECT VERDICT: FALSE.** Specific numeric claims about epidemic dynamics \
-need direct support, not approximate fit. "3 weeks up + 3 weeks down" is a \
-specific shape claim; if evidence shows a different distribution, mark FALSE.
-
-## Calibration rule of thumb
-
-- "Central claim right, peripheral imprecise" → **TRUE** (A-class).
-- "Central claim wrong or directionally off, even if it sounds plausible" → \
-**FALSE** (B-class).
-- "No falsifiable medical content" → **FALSE** (it's not a verifiable claim).
 
 # When EVIDENCE is mixed or inconclusive
 
@@ -281,8 +163,7 @@ Output ONLY one JSON object — no prose, no code fences.
 def user_message(snippet: str, subset: str, shared_context: dict | None,
                   evidence: list[dict], full_text: str | None = None,
                   query: str | None = None,
-                  include_shared_context: bool = True,
-                  prior: bool | None = None) -> str:
+                  include_shared_context: bool = True) -> str:
     """Build the per-iteration user message.
 
     evidence: [{"query": str, "source": "web"|"pubmed", "hits": [{title, text, source_url}]}]
@@ -309,23 +190,6 @@ def user_message(snippet: str, subset: str, shared_context: dict | None,
     # prefix above is identical across snippets of the same entry.
     parts.append(f"### Snippet\n{snippet}")
 
-    if prior is not None:
-        parts.append(
-            f"### Baseline prior (no-retrieval second opinion)\n"
-            f"A snippet-level fact-checker (same model, NO retrieval) predicted: "
-            f"{'TRUE' if prior else 'FALSE'}.\n\n"
-            f"Treat this as a hypothesis, not a constraint:\n"
-            f"  - The baseline saw the full question + full LLM response. It has "
-            f"surface-level reasoning power but no external evidence.\n"
-            f"  - To AGREE with the baseline: failing to find specific refuting "
-            f"evidence is sufficient — don't flip on vibes.\n"
-            f"  - To FLIP the baseline: you need concrete refuting evidence "
-            f"(named entity wrong, number out of range, mechanism inverted, "
-            f"category misassigned). 'I'm uncertain' is NOT enough to flip.\n"
-            f"  - When evidence is genuinely mixed after multiple searches: "
-            f"default to the baseline's call rather than guessing the opposite."
-        )
-
     if evidence:
         parts.append("### Evidence collected so far")
         for i, step in enumerate(evidence, 1):
@@ -351,24 +215,8 @@ FORCE_FINAL_SYSTEM = """\
 You are a cautious medical fact-checker. You have collected evidence and must \
 now make a final decision about the SNIPPET. No more searches are allowed.
 
-# Prefer abstain over a guessed False
-
-You reached this point because the iteration loop did not converge to a \
-high-confidence verdict. That means the evidence is mixed, partial, or \
-indirect. In this case:
-
-  - If after the searches you still cannot point to specific evidence that \
-**directly refutes** a material claim → **abstain**.
-  - If the snippet's main medical assertion is broadly defensible and only \
-peripheral or imprecisely-phrased sub-claims are doubtful → **true** (apply \
-the compound-claim rule from the main prompt).
-  - Only emit `final_answer: false` if you have concrete, specific evidence \
-(named entity wrong, number out of range, mechanism inverted, category \
-misassigned). Residual uncertainty after multiple searches is NOT grounds to \
-mark false — abstain instead.
-
-If the snippet is not auto-verifiable (e.g., no factual claim, too dependent \
-on missing context, evidence is inconclusive), abstain.
+If the snippet is still not auto-verifiable (e.g., no factual claim, or too \
+dependent on missing context), you may abstain. Otherwise emit a final answer.
 
 Output ONLY one JSON object:
 

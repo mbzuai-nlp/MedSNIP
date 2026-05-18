@@ -137,11 +137,6 @@ def main():
     ap.add_argument("--baseline-priors", default=None,
                     help="path to a baseline predictions.json (snippet-level) "
                          "to feed as a per-snippet prior into the verifier prompt")
-    ap.add_argument("--min-confidence", type=float, default=None,
-                    help="Phase B: in-loop confidence gate. Reject final_answer "
-                         "below this threshold and re-prompt for a search.")
-    ap.add_argument("--provider", choices=["openai", "anthropic"], default="openai",
-                    help="LLM provider for the verifier (default openai)")
     args = ap.parse_args()
 
     if args.source == "human":
@@ -196,8 +191,6 @@ def main():
         use_query=args.use_query,
         use_shared_context=not args.no_shared_context,
         reasoning_effort=args.reasoning_effort,
-        min_confidence=args.min_confidence,
-        provider=args.provider,
         **kw,
     )
 

@@ -121,7 +121,7 @@ def main():
     ap.add_argument("--skip-existing", action="store_true")
     ap.add_argument("--workers", type=int, default=12)
     ap.add_argument("--model", default=None)
-    ap.add_argument("--max-iters", type=int, default=5)
+    ap.add_argument("--max-iters", type=int, default=3)
     ap.add_argument("--retrieval-k", type=int, default=3)
     ap.add_argument("--use-full-text", action="store_true",
                     help="pass the original full LLM response to the verifier")
@@ -134,28 +134,12 @@ def main():
     ap.add_argument("--reasoning-effort", choices=["minimal", "low", "medium", "high"],
                     default=None,
                     help="reasoning_effort for reasoning-capable models (e.g. gpt-5.4)")
-    ap.add_argument("--baseline-priors", default=None,
-                    help="path to a baseline predictions.json (snippet-level) "
-                         "to feed as a per-snippet prior into the verifier prompt")
-    ap.add_argument("--min-confidence", type=float, default=None,
-                    help="Phase B: in-loop confidence gate. Reject final_answer "
-                         "below this threshold and re-prompt for a search.")
-    ap.add_argument("--provider", choices=["openai", "anthropic"], default="openai",
-                    help="LLM provider for the verifier (default openai)")
     args = ap.parse_args()
 
     if args.source == "human":
         tasks = load_tasks_human(args.split)
     else:
         tasks = load_tasks_auto(args.source, args.split)
-
-    priors: dict[str, bool] = {}
-    if args.baseline_priors:
-        for r in json.loads(Path(args.baseline_priors).read_text()):
-            sid = r.get("snippet_id") or r.get("id")
-            if sid is not None and "prediction" in r:
-                priors[sid] = bool(r["prediction"])
-        print(f"loaded {len(priors)} baseline priors from {args.baseline_priors}")
 
     if args.entry_ids:
         wanted = set(args.entry_ids)
@@ -196,8 +180,6 @@ def main():
         use_query=args.use_query,
         use_shared_context=not args.no_shared_context,
         reasoning_effort=args.reasoning_effort,
-        min_confidence=args.min_confidence,
-        provider=args.provider,
         **kw,
     )
 
@@ -220,7 +202,6 @@ def main():
                 shared_context=task["shared_context"],
                 full_text=task.get("full_text"),
                 query=task.get("query"),
-                prior=priors.get(task["id"]),
                 cache_key=f"medfactcheck-entry-{task['entry_id']}",
             )
         except Exception as exc:
