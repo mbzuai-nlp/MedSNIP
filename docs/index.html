@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedSNIP — Snippet-Level Granularity for Medical Fact Verification</title>
+<meta name="description" content="A medical claim's correctness depends on the clinical structure around it. MedSNIP verifies clause-grouped snippets instead of atoms. 276 responses, 2,524 human-annotated snippets.">
+<meta property="og:title" content="MedSNIP: Building and Benchmarking Snippet-Level Granularity for Medical Fact Verification">
+<meta property="og:description" content="276 responses · 2,524 human-annotated snippets · 6 structural patterns · 3 corpora">
+<meta property="og:type" content="website">
+<link rel="icon" href="./assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#04325D;      /* the "med" pill */
+    --red:#D2413B;       /* the "snip" pill */
+    --ink:#564545;       /* warm gray from the mark */
+    --paper:#FBFAF8;
+    --gap:4.5rem;      /* one vertical rhythm for the whole page */
+    --line:#E8E2DC;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.6;
+  }
+  .wrap{max-width:64rem;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem}
+  .band{background:#fff}
+  .narrow{max-width:44rem}
+
+  /* ── hero ─────────────────────────────────────────────── */
+  header{padding-top:5rem;padding-bottom:var(--gap);text-align:center}
+  header img.mark{width:min(230px,58vw);height:auto;margin:0 auto 2rem;display:block}
+  h1{
+    font-family:Newsreader,Georgia,serif; font-weight:400;
+    font-size:clamp(1.9rem,4.4vw,2.9rem); line-height:1.18;
+    color:var(--navy); margin:0 0 .9rem; letter-spacing:-.01em;
+  }
+  h1 em{font-style:italic;color:var(--red)}
+  .authors{font-size:.95rem;color:var(--ink);margin:1.6rem 0 .3rem}
+  .authors b{font-weight:600;color:#3A2E2E}
+  .affil{font-size:.82rem;color:#9A8F88}
+  sup{font-size:.62em;vertical-align:super}
+
+  /* ── buttons ──────────────────────────────────────────── */
+  .btns{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.9rem}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.6rem 1.05rem;border-radius:999px;
+    border:1px solid var(--line);background:#fff;color:var(--navy);
+    font-size:.9rem;font-weight:500;text-decoration:none;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(4,50,93,.10);border-color:#D6CEC6}
+  .btn svg{width:16px;height:16px}
+  .btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+  .btn.primary:hover{box-shadow:0 8px 22px rgba(4,50,93,.28)}
+
+  /* ── sections ─────────────────────────────────────────── */
+  section{padding-top:var(--gap);padding-bottom:var(--gap)}
+  .intro{max-width:40rem;margin:0 auto 2rem;text-align:center}
+  .eyebrow{
+    font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--red);margin-bottom:.7rem
+  }
+  h2{
+    font-family:Newsreader,Georgia,serif;font-weight:400;
+    font-size:clamp(1.4rem,2.6vw,1.85rem);color:var(--navy);
+    margin:0 0 1rem;letter-spacing:-.01em
+  }
+  p.lead{font-size:1.03rem;color:#4A3C3C;margin:0 0 1rem}
+
+  /* ── the demo ─────────────────────────────────────────── */
+  .demo{
+    background:var(--paper);border:1px solid var(--line);border-radius:1.25rem;
+    padding:1.75rem;box-shadow:0 1px 2px rgba(0,0,0,.03)
+  }
+  .picker{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.15rem}
+  .picker button{
+    border:1px solid var(--line);background:#fff;color:#8A7C7C;cursor:pointer;
+    border-radius:999px;padding:.34rem .8rem;font-size:.78rem;font-weight:500;
+    font-family:inherit;transition:all .16s ease;display:inline-flex;align-items:center;gap:.4rem
+  }
+  .picker button .pc{
+    font-family:"JetBrains Mono",monospace;font-size:.68rem;font-weight:500;
+    color:#B3A79F
+  }
+  .picker button:hover{border-color:#D6CEC6;color:#5A4C4C}
+  .picker button[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+  .picker button[aria-selected="true"] .pc{color:rgba(255,255,255,.62)}
+  .vignette{
+    font-size:.86rem;color:#7A6C6C;background:#fff;
+    border-left:3px solid var(--line);padding:.7rem .95rem;border-radius:.4rem;
+    margin-bottom:1.3rem
+  }
+  .toggle{display:inline-flex;background:#EDE7E1;border-radius:999px;padding:.25rem;gap:.2rem;margin-bottom:1.3rem}
+  .toggle button{
+    border:0;background:transparent;cursor:pointer;border-radius:999px;
+    padding:.42rem 1rem;font-size:.86rem;font-weight:600;color:#8A7C7C;
+    font-family:inherit;transition:all .18s ease
+  }
+  .toggle button[aria-pressed="true"]{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.09)}
+  .units{display:grid;gap:.6rem;min-height:11rem;align-content:start}
+  .unit{
+    display:flex;gap:.75rem;align-items:flex-start;
+    padding:.85rem 1rem;border-radius:.7rem;border:1px solid;
+    animation:rise .32s cubic-bezier(.2,.7,.3,1) both;
+  }
+  .unit .tag{
+    flex:none;font-family:"JetBrains Mono",monospace;font-size:.68rem;font-weight:500;
+    padding:.16rem .42rem;border-radius:.3rem;color:#fff;margin-top:.12rem
+  }
+  .unit .txt{font-size:.92rem}
+  .unit.snip{background:rgba(4,50,93,.045);border-color:rgba(4,50,93,.18);color:#22303F}
+  .unit.snip .tag{background:var(--navy)}
+  .unit.atom{background:rgba(210,65,59,.04);border-color:rgba(210,65,59,.16);color:#5A4444}
+  .unit.atom .tag{background:var(--red)}
+  @keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+  .verdict{
+    margin-top:1.15rem;font-size:.88rem;padding-top:1rem;border-top:1px dashed var(--line);
+    color:#6B5D5D
+  }
+  .verdict b{color:var(--navy);font-weight:600}
+  .verdict.bad b{color:var(--red)}
+
+  /* ── stats ────────────────────────────────────────────── */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+         border:1px solid var(--line);border-radius:1rem;overflow:hidden}
+  .stat{background:#fff;padding:1.5rem .8rem;text-align:center}
+  .stat .n{font-size:1.85rem;font-weight:700;color:var(--navy);line-height:1;letter-spacing:-.02em}
+  .stat .l{font-size:.72rem;color:#9A8F88;margin-top:.45rem;letter-spacing:.04em}
+  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* ── figure ───────────────────────────────────────────── */
+  figure{margin:0}
+  .figbox{background:var(--paper);border:1px solid var(--line);border-radius:1rem;padding:.7rem;overflow-x:auto}
+  .figbox img{width:100%;min-width:640px;display:block}
+  figcaption{font-size:.8rem;color:#9A8F88;text-align:center;margin-top:.8rem;
+             max-width:38rem;margin-left:auto;margin-right:auto}
+
+  /* ── patterns ─────────────────────────────────────────── */
+  .pats{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}
+  @media(max-width:720px){.pats{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:420px){.pats{grid-template-columns:1fr}}
+  .pat{background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:.95rem 1rem}
+  .pat .code{
+    font-family:"JetBrains Mono",monospace;font-weight:500;font-size:.72rem;
+    padding:.14rem .4rem;border-radius:.28rem;color:#fff
+  }
+  .pat.merge .code{background:var(--navy)}
+  .pat.keep  .code{background:var(--red)}
+  .pat .nm{font-size:.88rem;color:#3A2E2E;margin-top:.55rem;font-weight:500}
+  .pat .ct{font-size:.75rem;color:#9A8F88;margin-top:.15rem}
+  .legend{font-size:.78rem;color:#9A8F88;margin:1.1rem 0 0;text-align:center}
+
+  /* ── bibtex ───────────────────────────────────────────── */
+  pre.bib{
+    background:#082139;color:#DDE6EE;border-radius:.9rem;padding:1.15rem 1.3rem;
+    font-family:"JetBrains Mono",monospace;font-size:.76rem;line-height:1.7;
+    overflow-x:auto;margin:0
+  }
+  .bibhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:.7rem;gap:1rem}
+
+  footer{border-top:1px solid var(--line);padding-top:var(--gap);padding-bottom:3rem;text-align:center;
+         font-size:.85rem;color:#9A8F88}
+  footer a{color:var(--navy);text-decoration:none;margin:0 .55rem}
+  footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<header class="wrap">
+  <img class="mark" src="./assets/logo.svg" alt="MedSNIP">
+  <h1>A medical claim is only as correct<br>as the <em>structure</em> around it</h1>
+  <p class="lead narrow" style="margin:0 auto">
+    Atom-level decomposition fragments clinical judgments, leaving the verifier with claims
+    that are formally standalone but clinically incomplete. MedSNIP verifies
+    <strong>snippets</strong> instead, clause-grouped units that keep the structure intact.
+  </p>
+
+  <p class="authors">
+    <b>Hasan Iqbal</b><sup>1</sup>,
+    <b>Sarfraz Ahmad</b><sup>1</sup>,
+    <b>Hyunjae Kim</b><sup>2</sup>,
+    <b>Sihyeon Park</b><sup>3</sup>,
+    <b>Junjie Liao</b><sup>4,5</sup>,
+    <b>Qingyu Chen</b><sup>2</sup>,
+    <b>Preslav Nakov</b><sup>1</sup>,
+    <b>Yuxia Wang</b><sup>5</sup>
+  </p>
+  <p class="affil">
+    <sup>1</sup>MBZUAI &nbsp;·&nbsp; <sup>2</sup>Yale &nbsp;·&nbsp; <sup>3</sup>Korea University
+    &nbsp;·&nbsp; <sup>4</sup>Beijing Normal &nbsp;·&nbsp; <sup>5</sup>INSAIT, Sofia University
+  </p>
+
+  <div class="btns">
+    <a class="btn primary" href="https://openreview.net/forum?id=1vYUGLZnvr" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+      Paper
+    </a>
+    <a class="btn" href="https://huggingface.co/datasets/MBZUAI/MedSNIP" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+      Dataset
+    </a>
+    <a class="btn" href="https://github.com/mbzuai-nlp/MedSNIP" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.24-3.24-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.24a11.5 11.5 0 0 1 6.01 0c2.29-1.56 3.3-1.24 3.3-1.24.65 1.66.24 2.88.12 3.18.77.84 1.23 1.92 1.23 3.24 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
+      Code
+    </a>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════ DEMO ═══════════════════════ -->
+<div class="band">
+<section class="wrap">
+  <div class="intro">
+    <div class="eyebrow">The problem, in one judgment</div>
+    <h2>Watch a judgment come apart</h2>
+    <p class="lead">
+      Three real judgments from MedSNIP-Bench, each grouped by a different structural
+      pattern. Toggle the verification unit and see what the verifier actually receives.
+    </p>
+  </div>
+
+  <div class="demo narrow" style="margin:0 auto">
+    <div class="picker" id="picker" role="tablist" aria-label="Example"></div>
+
+    <div class="vignette" id="vignette"></div>
+
+    <div class="toggle" role="group" aria-label="Verification unit">
+      <button id="b-snip" aria-pressed="true">1 snippet</button>
+      <button id="b-atom" aria-pressed="false">4 atoms</button>
+    </div>
+
+    <div class="units" id="units"></div>
+    <div class="verdict" id="verdict"></div>
+  </div>
+</section>
+</div>
+
+
+<!-- ═══════════════════════ STATS ═══════════════════════ -->
+<section class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n">276</div><div class="l">RESPONSES</div></div>
+    <div class="stat"><div class="n">2,524</div><div class="l">SNIPPETS</div></div>
+    <div class="stat"><div class="n">6</div><div class="l">PATTERNS</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">CORPORA</div></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ FIGURE ═══════════════════════ -->
+<div class="band">
+<section class="wrap">
+  <div class="intro">
+    <div class="eyebrow">Three judgments, three fragmentations</div>
+    <h2>The same failure, three ways</h2>
+  </div>
+  <figure>
+    <div class="figbox">
+      <img src="./assets/fig-motivation.svg" alt="Three clinical judgments, each preserved as one snippet but split into three or four atoms">
+    </div>
+    <figcaption>
+      Each column is one judgment from a clinical-vignette answer. Snippet-level decomposition
+      keeps the evidence, its interpretation, and the caveat as a single verifiable unit.
+      Atom-level decomposition splits the same judgment into three or four claims.
+    </figcaption>
+  </figure>
+</section>
+</div>
+
+
+<!-- ═══════════════════════ PATTERNS ═══════════════════════ -->
+<section class="wrap">
+  <div class="intro">
+    <div class="eyebrow">Taxonomy</div>
+    <h2>Six ways a judgment holds together</h2>
+    <p class="lead">
+      Annotators labelled every snippet with the structure that justifies it. Three patterns merge
+      atoms and three keep a claim standalone.
+    </p>
+  </div>
+  <div class="pats">
+    <div class="pat merge"><span class="code">A</span><div class="nm">Enumeration</div><div class="ct">1,008 snippets</div></div>
+    <div class="pat merge"><span class="code">B</span><div class="nm">Causal or conditional chain</div><div class="ct">225 snippets</div></div>
+    <div class="pat merge"><span class="code">C</span><div class="nm">Conclusion with its premises</div><div class="ct">321 snippets</div></div>
+    <div class="pat keep"><span class="code">D</span><div class="nm">Standalone claim</div><div class="ct">617 snippets</div></div>
+    <div class="pat keep"><span class="code">E</span><div class="nm">Distinct alternative</div><div class="ct">39 snippets</div></div>
+    <div class="pat keep"><span class="code">F</span><div class="nm">Deliberately isolated</div><div class="ct">314 snippets</div></div>
+  </div>
+  <p class="legend">
+    <span style="color:var(--navy);font-weight:600">A–C</span> merge related atoms &nbsp;·&nbsp;
+    <span style="color:var(--red);font-weight:600">D–F</span> keep a claim atomic.
+    The largest merge-pattern gain is on <b>B</b>, the causal-conditional chains.
+  </p>
+</section>
+
+
+<!-- ═══════════════════════ CITATION ═══════════════════════ -->
+<div class="band">
+<section class="wrap narrow">
+  <div class="bibhead">
+    <h2 style="margin:0">Citation</h2>
+    <button class="btn" id="copy">Copy BibTeX</button>
+  </div>
+<pre class="bib" id="bib">@inproceedings{
+anonymous2026medsnip,
+title={Med{SNIP}: Building and Benchmarking Snippet-Level Granularity for Medical Fact Verification},
+author={Anonymous},
+booktitle={The 2026 Conference on Empirical Methods in Natural Language Processing},
+year={2026},
+url={https://openreview.net/forum?id=1vYUGLZnvr}
+}</pre>
+</section>
+</div>
+
+<footer>
+  <div>
+    <a href="https://openreview.net/forum?id=1vYUGLZnvr" target="_blank" rel="noopener">Paper</a>
+    <a href="https://github.com/mbzuai-nlp/MedSNIP" target="_blank" rel="noopener">Code</a>
+    <a href="https://huggingface.co/datasets/MBZUAI/MedSNIP" target="_blank" rel="noopener">Dataset</a>
+    <a href="https://mbzuai.ac.ae" target="_blank" rel="noopener">MBZUAI</a>
+  </div>
+  <p style="margin:.9rem 0 0">&copy; <span id="yr"></span> The Authors. Code released under GPL-3.0.</p>
+</footer>
+
+<script>
+  // Three real snippets from MedSNIP-Bench, with the expert atoms they group.
+  const EXAMPLES = [
+    {
+      id: '72-S6', pattern: 'B', label: 'Causal chain',
+      ctx: 'A 55-year-old man on warfarin for atrial fibrillation presents with uncontrolled epistaxis.',
+      snip: 'Patients on warfarin are at increased risk of bleeding because warfarin prolongs the prothrombin time (PT) and can cause excessive bleeding.',
+      atoms: [
+        'Patients on warfarin are at increased risk of bleeding.',
+        'Warfarin prolongs the prothrombin time (PT).',
+        'Warfarin can cause excessive bleeding.'
+      ],
+      why: 'The risk claim is <b>the conclusion of the mechanism</b> beside it. Split apart, the verifier checks three facts and never checks the inference.'
+    },
+    {
+      id: '142-S2', pattern: 'A', label: 'Enumeration',
+      ctx: 'A 32-year-old man presents with a new, severe headache. CSF studies are returned.',
+      snip: 'CSF analysis shows a cell count of 175/mm³ indicating pleocytosis, which is common in meningitis. The absence of red blood cells rules out a traumatic tap and subarachnoid hemorrhage.',
+      atoms: [
+        'A cell count of 175/mm³ indicates pleocytosis (increased white blood cell count).',
+        'Pleocytosis is a common finding in meningitis.',
+        'The absence of red blood cells rules out a traumatic tap.',
+        'The absence of red blood cells rules out subarachnoid hemorrhage.'
+      ],
+      why: 'The findings only reshape the differential when read <b>together</b>. Individually each is true and none carries the interpretation.'
+    },
+    {
+      id: '49-S3', pattern: 'C', label: 'Conclusion with premises',
+      ctx: 'Consumer health question: “Is there a reason why my urine is clear?”',
+      snip: 'Consistently clear urine may indicate that the kidneys are not concentrating urine properly, which can be a sign of kidney disease or diabetes insipidus.',
+      atoms: [
+        'Consistently clear urine may indicate that the kidneys are not concentrating the urine properly.',
+        'Consistently clear urine can be a sign of kidney disease.',
+        'Consistently clear urine can be a sign of diabetes insipidus.'
+      ],
+      why: 'The two possible causes are <b>hedged by the conclusion</b> above them. Alone, they read as flat assertions about clear urine.'
+    }
+  ];
+
+  let current = 0, mode = 'snip';
+  const picker   = document.getElementById('picker');
+  const vignette = document.getElementById('vignette');
+  const units    = document.getElementById('units');
+  const verdict  = document.getElementById('verdict');
+  const bSnip    = document.getElementById('b-snip');
+  const bAtom    = document.getElementById('b-atom');
+
+  picker.innerHTML = EXAMPLES.map((e, i) =>
+    `<button role="tab" data-i="${i}" aria-selected="${i === 0}">
+       <span class="pc">${e.pattern}</span>${e.label}
+     </button>`).join('');
+
+  function render() {
+    const e = EXAMPLES[current];
+    vignette.textContent = e.ctx;
+    bAtom.textContent = e.atoms.length + ' atoms';
+
+    const rows = mode === 'snip'
+      ? [{ tag: 'S', txt: e.snip }]
+      : e.atoms.map((a, i) => ({ tag: 'A' + (i + 1), txt: a }));
+
+    units.innerHTML = rows.map((r, i) =>
+      `<div class="unit ${mode}" style="animation-delay:${i * 55}ms">
+         <span class="tag">${r.tag}</span><span class="txt">${r.txt}</span>
+       </div>`).join('');
+
+    verdict.className = 'verdict' + (mode === 'atom' ? ' bad' : '');
+    verdict.innerHTML = mode === 'snip'
+      ? `<b>One verifier call.</b> ${e.why}`
+      : `<b>${e.atoms.length} verifier calls.</b> Each atom is checkable on its own, yet none of them carries the judgment.`;
+
+    bSnip.setAttribute('aria-pressed', mode === 'snip');
+    bAtom.setAttribute('aria-pressed', mode === 'atom');
+    [...picker.children].forEach((b, i) => b.setAttribute('aria-selected', i === current));
+  }
+
+  picker.addEventListener('click', (ev) => {
+    const b = ev.target.closest('button'); if (!b) return;
+    current = +b.dataset.i; render();
+  });
+  bSnip.addEventListener('click', () => { mode = 'snip'; render(); });
+  bAtom.addEventListener('click', () => { mode = 'atom'; render(); });
+  render();
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('copy').addEventListener('click', async (e) => {
+    await navigator.clipboard.writeText(document.getElementById('bib').innerText.trim());
+    const b = e.currentTarget; const old = b.textContent;
+    b.textContent = 'Copied'; setTimeout(() => b.textContent = old, 1400);
+  });
+</script>
+</body>
+</html>
