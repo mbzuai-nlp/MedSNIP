@@ -1,8 +1,7 @@
-"""Plot the train/dev/test split: entry counts and false-rate per cell.
+"""Plot the train/dev/test split as two separate panels.
 
 (a) Stacked entry counts per subset, broken down by split.
-(b) Heatmap of false-rates across (label type) × (subset × split).
-    Heatmap keeps 18 numbers readable when grouped bars would overlap.
+(b) Heatmap of false-rates across (label type) x (subset x split).
 """
 import json
 from pathlib import Path
@@ -13,12 +12,11 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from matplotlib.legend_handler import HandlerTuple
 import numpy as np
-import pandas as pd
 import seaborn as sns
 
 ROOT = Path(__file__).resolve().parents[2]
-IN_PATH = ROOT / "data" / "4-split" / "stats.json"
-OUT_PATH = ROOT / "data" / "4-split" / "split_reasoning.png"
+DATA_DIR = ROOT / "data" / "4-split"
+IN_PATH = DATA_DIR / "stats.json"
 
 PALETTE = {"consumer": "#3274A1", "vignette": "#C44E52"}
 SUBSET_LABEL = {"consumer": "Consumer Health", "vignette": "Clinical Vignettes"}
@@ -30,19 +28,23 @@ LABEL_PRETTY = {
     "human_contextual_false_rate": "contextual",
 }
 
+PANEL_FIGSIZE = (5.5, 5.5)
 
-def main():
-    sns.set_theme(style="whitegrid", context="notebook", font_scale=0.95)
-    stats = json.loads(IN_PATH.read_text())
-    by = stats["by_subset"]
-    subsets = ["consumer", "vignette"]
 
-    fig, (ax1, ax2) = plt.subplots(
-        1, 2, figsize=(13.5, 4.8),
-        gridspec_kw={"wspace": 0.28, "width_ratios": [0.85, 1.15]}
-    )
+def save_panel(fig, name: str) -> None:
+    out_png = DATA_DIR / f"{name}.png"
+    out_pdf = DATA_DIR / f"{name}.pdf"
+    fig.savefig(out_png, dpi=200, bbox_inches="tight", facecolor="white")
+    fig.savefig(out_pdf, bbox_inches="tight", facecolor="white")
+    print(f"saved {out_png}")
+    print(f"saved {out_pdf}")
+    plt.close(fig)
 
-    # (a) Stacked entry counts per subset
+
+def panel_a(by: dict, subsets: list) -> None:
+    fig, ax1 = plt.subplots(figsize=PANEL_FIGSIZE)
+    ax1.set_box_aspect(1)
+
     x = np.arange(len(subsets))
     width = 0.55
     bottoms = np.zeros(len(subsets))
@@ -66,7 +68,6 @@ def main():
     ax1.set_xticks(x)
     ax1.set_xticklabels([SUBSET_LABEL[s] for s in subsets])
     ax1.set_ylabel("Number of Entries")
-    ax1.set_title("(a) Train / Dev / Test Entries by Subset", fontweight="bold")
 
     legend_handles = [
         (Patch(facecolor=PALETTE["consumer"], alpha=SPLIT_ALPHA[sp],
@@ -79,11 +80,16 @@ def main():
                title="Split", fontsize=9, framealpha=0.95,
                handler_map={tuple: HandlerTuple(ndivide=None, pad=0.4)},
                handlelength=2.6, loc="upper right")
-    # Extra headroom so the legend doesn't overlap the n=... annotations
     ax1.set_ylim(0, max(sum(by[sub][sp]["entries"] for sp in SPLITS)
                         for sub in subsets) * 1.45)
 
-    # (b) Heatmap: rows = label types, cols = (subset × split) cells
+    save_panel(fig, "split_reasoning_a")
+
+
+def panel_b(by: dict, subsets: list) -> None:
+    fig, ax2 = plt.subplots(figsize=PANEL_FIGSIZE)
+    ax2.set_box_aspect(1)
+
     label_rows = list(LABEL_PRETTY.values())
     cell_cols = [(sub, sp) for sub in subsets for sp in SPLITS]
     matrix = np.zeros((len(label_rows), len(cell_cols)))
@@ -98,18 +104,23 @@ def main():
                 cmap="RdYlGn_r", vmin=0, vmax=max(20, matrix.max() * 1.05),
                 cbar_kws={"label": "False Rate (%)", "pad": 0.02},
                 linewidths=0.6, linecolor="white", square=False)
-    ax2.set_title("(b) Snippet-Level False Rate (%) per (Subset × Split)",
-                  fontweight="bold")
     ax2.tick_params(axis="x", rotation=0)
     ax2.tick_params(axis="y", rotation=0, labelsize=10)
 
-    # Vertical separator between consumer and vignette column groups
     ax2.axvline(x=len(SPLITS), color="white", linewidth=4)
     ax2.axvline(x=len(SPLITS), color="#222222", linewidth=1.4)
 
-    plt.tight_layout()
-    plt.savefig(OUT_PATH, dpi=200, bbox_inches="tight", facecolor="white")
-    print(f"saved {OUT_PATH}")
+    save_panel(fig, "split_reasoning_b")
+
+
+def main():
+    sns.set_theme(style="whitegrid", context="notebook", font_scale=0.95)
+    stats = json.loads(IN_PATH.read_text())
+    by = stats["by_subset"]
+    subsets = ["consumer", "vignette"]
+
+    panel_a(by, subsets)
+    panel_b(by, subsets)
 
 
 if __name__ == "__main__":
