@@ -77,12 +77,3 @@ def search_serper(query: str, k: int = 5) -> list[dict[str, Any]]:
         })
 
     return hits[:k]
-
-
-if __name__ == "__main__":
-    res = search_serper("ibuprofen maximum daily dose adults", k=5)
-    print(f"got {len(res)} hits")
-    for h in res[:3]:
-        print(f"  [{h['source']}] {h['title']}")
-        print(f"    {h['text'][:140]}")
-        print(f"    {h['source_url']}")

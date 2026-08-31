@@ -126,12 +126,3 @@ def search_pubmed(query: str, k: int = 5) -> list[dict[str, Any]]:
             "journal":    a.get("journal", ""),
         })
     return out
-
-
-if __name__ == "__main__":
-    res = search_pubmed("clozapine agranulocytosis monitoring frequency", k=3)
-    print(f"got {len(res)} hits")
-    for h in res:
-        print(f"  [{h['journal']} {h['year']}] {h['title']}")
-        print(f"    {h['text'][:200]}")
-        print(f"    {h['source_url']}")
