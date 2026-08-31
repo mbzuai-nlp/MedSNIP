@@ -1,4 +1,4 @@
-"""Camera-ready external results: pipeline snippets vs pipeline atoms.
+"""External results: pipeline snippets vs pipeline atoms.
 
 Replaces the published external rows, which compared the *undecomposed* claim
 or answer against pipeline atoms. The paper describes those units as

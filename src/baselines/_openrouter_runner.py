@@ -6,8 +6,7 @@ OpenAI Python SDK pointed at `https://openrouter.ai/api/v1` with
 chat.completions, which is the one call shape every model on the router
 supports.
 
-Two things this runner records that the older runners do not, both needed
-for the camera-ready:
+Two things this runner records that the older runners do not:
 
   - `upstream_provider`: which backend OpenRouter actually routed to.
     Open-weight models are served by several providers at different

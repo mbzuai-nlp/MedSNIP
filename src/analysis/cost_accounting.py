@@ -1,7 +1,7 @@
 """End-to-end cost accounting: decomposition overhead included.
 
-Answers meta-review revision #3 and reviewer W5ZC's objection that the
-"22-47% cost reduction" ignores the extra call needed to build snippets.
+A verify-only "22-47% cost reduction" ignores the extra call needed to build
+snippets. This accounts for that decomposition overhead as well.
 
 The accounting charges each pipeline for everything it actually needs:
 
@@ -145,9 +145,9 @@ EXTERNAL = [
 def call_accounting() -> list[dict]:
     """Exact call counts per pipeline, decomposition included.
 
-    The reviewer's objection is fundamentally about calls ("you also need a
-    query to create the snippets"), and calls are countable without pricing
-    anything, so this answers it exactly for all three corpora.
+    The question is fundamentally about calls ("you also need a query to
+    create the snippets"), and calls are countable without pricing anything,
+    so this answers it exactly for all three corpora.
     """
     def _snips(path: Path) -> int:
         return sum(len(r.get("snippets") or [])
@@ -373,7 +373,7 @@ def main() -> None:
         L += ["", f"## End-to-end, verifier = {args.verifier}", "",
               "Snippet reduction is reported two ways: verification calls only "
               "(what the paper currently reports) and end-to-end including "
-              "decomposition (what the reviewers asked for).", "",
+              "decomposition.", "",
               "| Decomposer | atom calls | snip calls | call red. | atom $ | snip $ | verify-only red. | end-to-end red. |",
               "|---|---:|---:|---:|---:|---:|---:|---:|"]
         for r in report["end_to_end"]:

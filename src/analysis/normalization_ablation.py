@@ -1,4 +1,4 @@
-"""Three-way result for the D/F normalization ablation (meta-review #2).
+"""Three-way result for the D/F normalization ablation.
 
 Compares, over the same units:
 

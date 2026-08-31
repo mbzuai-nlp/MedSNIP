@@ -1,9 +1,8 @@
 """Split the D/F snippet-vs-atom gain by whether the snippet was reworded.
 
-Reviewer FJrT observed that patterns D and F improve despite involving no
-grouping at all - one atom in, one snippet out - and suggested the gain may
-come from the pipeline writing cleaner, more decontextualised text rather than
-from granularity.
+Patterns D and F improve despite involving no grouping at all - one atom in,
+one snippet out - which leaves open whether the gain may come from the pipeline
+writing cleaner, more decontextualised text rather than from granularity.
 
 Roughly half of D/F snippets are byte-identical to their source atom, so for
 those there is no wording difference that could explain anything. That makes a
@@ -13,7 +12,7 @@ free partial test possible before running the paid ablation:
     reworded subgroup   -> a gain here MAY be a wording effect
 
 If the gain is similar in both subgroups, rewording is not the driver. If it
-concentrates in the reworded subgroup, the reviewer is right and the paid
+concentrates in the reworded subgroup, wording is implicated and the paid
 ablation should quantify how much.
 
 This compares the same units under two verifications that already exist: the

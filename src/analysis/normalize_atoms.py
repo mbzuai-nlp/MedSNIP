@@ -1,7 +1,7 @@
-"""Normalization-vs-grouping ablation for patterns D and F (meta-review #2).
+"""Normalization-vs-grouping ablation for patterns D and F.
 
-Reviewer FJrT observed that patterns D and F improve without any grouping -
-one atom in, one snippet out - and suggested the gain comes from the pipeline
+Patterns D and F improve without any grouping at all - one atom in, one
+snippet out - which leaves open whether the gain comes from the pipeline
 writing cleaner, decontextualised text rather than from granularity.
 
 `df_rewrite_split.py` established the correlation for free: where annotators

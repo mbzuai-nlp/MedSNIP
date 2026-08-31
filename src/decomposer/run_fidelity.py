@@ -4,9 +4,8 @@ Runs the existing snippet-processor evaluator once per row, writing each row's
 results to its own directory so the paper's published GPT-5.4 numbers are never
 overwritten, then collects the summary into one table.
 
-Fidelity is the metric the camera-ready actually needs: the meta-review asks for
-"chunking fidelity and downstream F1" from an open-weight decomposer, and
-sentence-set F1 against human boundaries is the former. Merge ratio is not a
+Fidelity is the metric the open-weight decomposer claim rests on: sentence-set
+F1 against human boundaries, reported alongside downstream F1. Merge ratio is not a
 substitute — GPT-4o matches the human ratio almost exactly while agreeing less
 with human boundaries.
 
