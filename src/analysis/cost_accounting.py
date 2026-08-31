@@ -39,7 +39,7 @@ OUT_JSON = OUT_DIR / "cost_accounting.json"
 
 DECOMP_ROOT = ROOT / "data" / "6-snippet-processor" / "atom-to-snippet"
 DIRECT_ROOT = ROOT / "data" / "6-snippet-processor" / "snippet-direct"
-MATRIX_PRED = ROOT / "data" / "12-decomposer-matrix" / "predictions" / "claim-only"
+MATRIX_PRED = ROOT / "data" / "12-decomposer" / "predictions" / "claim-only"
 PAPER_PRED = ROOT / "data" / "5-baselines" / "predictions"
 
 # USD per million tokens (input, output). Used only for runs that predate

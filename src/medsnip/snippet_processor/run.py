@@ -89,7 +89,7 @@ def main():
                          "being silently accepted")
     ap.add_argument("--provider-pin", default=None,
                     help="pin one OpenRouter upstream (fallbacks off), e.g. deepinfra. "
-                         "Omit to use the model's default pin from decomposer_matrix.models")
+                         "Omit to use the model's default pin from decomposer.models")
     ap.add_argument("--workers", type=int, default=8,
                     help="concurrent worker threads (default 8)")
     args = ap.parse_args()
@@ -114,7 +114,7 @@ def main():
         kwargs["provider_pin"] = args.provider_pin
     else:
         # Fall back to the matrix's per-model pin so every entry point agrees.
-        from ...decomposer_matrix.models import PROVIDER_PIN
+        from ...decomposer.models import PROVIDER_PIN
         kwargs["provider_pin"] = PROVIDER_PIN.get(kwargs.get("model", DEFAULT_MODEL))
     proc = SnippetProcessor(**kwargs)
 

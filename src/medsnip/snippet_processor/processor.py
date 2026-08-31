@@ -209,7 +209,7 @@ class SnippetProcessor:
                 # upstreams on OpenRouter reject it, and under
                 # `require_parameters` that fails routing outright — which is
                 # what blocked all four open-weight decomposers until we
-                # probed it (data/12-decomposer-matrix/param_probe.md).
+                # probed it (data/12-decomposer/param_probe.md).
                 if self.route == "openrouter":
                     kwargs["max_tokens"] = MAX_TOKENS
                     extra = {
