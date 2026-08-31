@@ -5,7 +5,7 @@ Inputs:
   - data/3-annotated/pattern/entries/entry_<N>_patterns.json  (per-entry pattern labels)
 
 Output:
-  - data/!-final/dataset.json  (same snippet records, with an added `pattern` field)
+  - data/15-final/dataset.json  (same snippet records, with an added `pattern` field)
 
 Matching strategy: for each snippet in the split file, look up the pattern
 entry for its entry_id and find the pattern record whose `source_claims`
@@ -23,7 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SPLIT_FILE = ROOT / "data" / "4-split" / "medsnip-bench.json"
 PATTERN_DIR = ROOT / "data" / "3-annotated" / "pattern" / "entries"
-OUT_DIR = ROOT / "data" / "!-final"
+OUT_DIR = ROOT / "data" / "15-final"
 OUT_FILE = OUT_DIR / "dataset.json"
 
 

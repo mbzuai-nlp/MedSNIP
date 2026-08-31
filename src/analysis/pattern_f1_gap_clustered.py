@@ -27,7 +27,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 
-DATASET = ROOT / "data" / "!-final" / "dataset.json"
+DATASET = ROOT / "data" / "15-final" / "dataset.json"
 SNIPPET_PRED = ROOT / "data" / "5-baselines" / "predictions" / "snippet" / "claim-only" / "gpt-5.4-high" / "predictions.json"
 ATOM_PRED = ROOT / "data" / "5-baselines" / "predictions" / "atom" / "claim-only" / "gpt-5.4-high" / "predictions.json"
 OUT_JSON = ROOT / "data" / "11-analysis" / "pattern-analysis" / "pattern_f1_gap_clustered.json"

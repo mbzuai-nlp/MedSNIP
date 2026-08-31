@@ -30,7 +30,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SP_ROOT = ROOT / "data" / "6-snippet-processor"
 ALIGN = SP_ROOT / "sentence_alignment.json"
-FINAL = ROOT / "data" / "!-final" / "dataset.json"
+FINAL = ROOT / "data" / "15-final" / "dataset.json"
 OUT_DIR = ROOT / "data" / "11-analysis" / "pattern-analysis"
 OUT_JSON = OUT_DIR / "pattern_agreement.json"
 

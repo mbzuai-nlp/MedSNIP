@@ -27,7 +27,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 ABL = ROOT / "data" / "14-normalization"
-FINAL = ROOT / "data" / "!-final" / "dataset.json"
+FINAL = ROOT / "data" / "15-final" / "dataset.json"
 PRED = ROOT / "data" / "5-baselines" / "predictions"
 VERIFIER = "gpt-5.4-high"
 NOISE_FLOOR = 0.013

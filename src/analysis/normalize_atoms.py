@@ -41,7 +41,7 @@ from threading import Lock
 from ..baselines._openrouter_runner import build_kwargs, make_client, usage_row
 
 ROOT = Path(__file__).resolve().parents[2]
-FINAL = ROOT / "data" / "!-final" / "dataset.json"
+FINAL = ROOT / "data" / "15-final" / "dataset.json"
 OUT_DIR = ROOT / "data" / "14-normalization"
 OUT_PATH = OUT_DIR / "normalized_atoms.json"
 

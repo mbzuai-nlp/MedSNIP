@@ -31,7 +31,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-FINAL = ROOT / "data" / "!-final" / "dataset.json"
+FINAL = ROOT / "data" / "15-final" / "dataset.json"
 PRED = ROOT / "data" / "5-baselines" / "predictions"
 OUT_DIR = ROOT / "data" / "11-analysis" / "rewrite-analysis"
 OUT_JSON = ROOT / "data" / "11-analysis" / "rewrite-analysis" / "df_rewrite_split.json"

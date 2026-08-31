@@ -80,7 +80,7 @@ def from_decomp(path: Path, text_key: str, label: str) -> dict | None:
 
 def from_medsnip() -> dict:
     """MedSNIP-Bench: human snippets, expert atoms, answers as source."""
-    rows = json.loads((ROOT / "data" / "!-final" / "dataset.json").read_text())
+    rows = json.loads((ROOT / "data" / "15-final" / "dataset.json").read_text())
     by_entry: dict[int, dict] = {}
     for r in rows:
         e = by_entry.setdefault(r["entry_id"], {"text": r["full_text"], "sn": [], "at": 0})

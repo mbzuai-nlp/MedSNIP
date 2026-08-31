@@ -1,6 +1,6 @@
-"""Compute comprehensive dataset statistics for data/!-final/dataset.json.
+"""Compute comprehensive dataset statistics for data/15-final/dataset.json.
 
-Output: data/!-final/stats.json — a single JSON file with:
+Output: data/15-final/stats.json — a single JSON file with:
   - totals (entries, snippets, atoms)
   - per-split counts
   - per-subset counts
@@ -19,8 +19,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-IN_FILE = ROOT / "data" / "!-final" / "dataset.json"
-OUT_FILE = ROOT / "data" / "!-final" / "stats.json"
+IN_FILE = ROOT / "data" / "15-final" / "dataset.json"
+OUT_FILE = ROOT / "data" / "15-final" / "stats.json"
 
 PATTERN_CODES = ["A", "B", "C", "D", "E", "F"]
 
