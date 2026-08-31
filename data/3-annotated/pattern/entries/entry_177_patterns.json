@@ -1,0 +1,117 @@
+{
+  "entry_id": 177,
+  "batch": 18,
+  "shared_context": {
+    "age": "26-year-old",
+    "sex": "man",
+    "chief_complaint": "fatigue and dark urine over the past day",
+    "medical_history": "recently diagnosed cellulitis of the left leg; no significant past medical history",
+    "medications": "trimethoprim-sulfamethoxazole",
+    "vitals": "temperature 98.6°F (37°C), blood pressure 115/72 mmHg, pulse 98/min, respirations 14/min",
+    "labs": "Hemoglobin 7.2 g/dL, total bilirubin 2.1 mg/dL, direct bilirubin 0.8 mg/dL, lactate dehydrogenase 470 U/L, glucose-6-phosphate dehydrogenase 7 U/gHb (normal 6-20 U/gHb)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "The patient's symptoms of fatigue and dark urine suggest hemolysis, which can be triggered by trimethoprim-sulfamethoxazole in patients with G6PD deficiency. Conjunctival icterus and bilateral flank tenderness may indicate hemoglobinuria or renal involvement from hemolysis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of clinical features suggesting hemolysis."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Laboratory results show hemoglobin at 7.2 g/dL, indicating anemia from hemolysis. Total bilirubin is 2.1 mg/dL with indirect bilirubin predominance, and LDH is 470 U/L, both elevated and consistent with hemolysis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Parallel lab findings all consistent with hemolysis."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "G6PD levels can be normal during an acute hemolytic episode due to the destruction of older, more enzyme-deficient cells, leaving younger cells with relatively higher G6PD activity.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal explanation: destruction of older cells leaves younger cells with higher G6PD activity."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Degmacytes (bite cells) are formed when macrophages 'bite' out a portion of the red cell containing denatured hemoglobin (Heinz bodies) and are commonly seen in G6PD deficiency.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Properties of degmacytes: formation mechanism and disease association."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        14,
+        15
+      ],
+      "output": "Acanthocytes are associated with liver disease or abetalipoproteinemia. Codocytes (target cells) are seen in thalassemias, liver disease, and hemoglobinopathies. Schistocytes are seen in microangiopathic hemolytic anemias like DIC, TTP, or HUS. Spherocytes are seen in hereditary spherocytosis and autoimmune hemolytic anemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of distractor cell types and their associations."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "Given the patient's clinical presentation and the likely diagnosis of G6PD deficiency-induced hemolysis, the peripheral blood smear will most likely show degmacytes (bite cells). Oxidative damage caused by the drug leads to the removal of denatured hemoglobin by the spleen.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Conclusion (degmacytes likely on smear) plus supporting mechanism (oxidative damage)."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "Final Answer: (C) Degmacytes.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone final answer."
+    }
+  ]
+}

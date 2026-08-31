@@ -1,0 +1,59 @@
+{
+  "entry_id": 250,
+  "batch": 25,
+  "shared_context": {
+    "topic": "Singulair (montelukast) drug form clarification",
+    "drug_a": "Singulair (montelukast)"
+  },
+  "atoms": {
+    "1": "Singulair is an oral medication.",
+    "2": "Singulair is not an inhaler.",
+    "3": "Singulair is also known as montelukast.",
+    "4": "Montelukast is an oral medication.",
+    "5": "Montelukast is not an inhaler.",
+    "6": "Montelukast is a leukotriene receptor antagonist.",
+    "7": "Montelukast is used for the prophylaxis of chronic asthma.",
+    "8": "Montelukast is used for the treatment of chronic asthma.",
+    "9": "Montelukast is used for the prevention of exercise-induced bronchoconstriction.",
+    "10": "Montelukast is used for the symptomatic relief of allergic rhinitis."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "Singulair (also known as montelukast) is an oral medication, not an inhaler.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Montelukast is a leukotriene receptor antagonist.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "Montelukast is used for the prophylaxis and treatment of chronic asthma, the prevention of exercise-induced bronchoconstriction, and the symptomatic relief of allergic rhinitis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Atom 7 (\"prophylaxis of chronic asthma\") is expert-false — montelukast is used for chronic management/treatment, not prophylaxis of the chronic disease itself; merged with the other indications since the response presents them as one list."
+    }
+  ]
+}

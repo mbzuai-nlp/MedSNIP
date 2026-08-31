@@ -1,0 +1,60 @@
+{
+  "entry_id": 242,
+  "batch": 25,
+  "shared_context": {
+    "topic": "Augmentin vs Amoxicillin comparison",
+    "drug_a": "Augmentin",
+    "drug_b": "Amoxicillin"
+  },
+  "atoms": {
+    "1": "Augmentin is not the same thing as amoxicillin.",
+    "2": "Augmentin is a combination antibiotic.",
+    "3": "Augmentin contains amoxicillin and clavulanic acid.",
+    "4": "Amoxicillin is a penicillin-type antibiotic.",
+    "5": "Amoxicillin can treat a variety of bacterial infections.",
+    "6": "Clavulanic acid is a beta-lactamase inhibitor.",
+    "7": "Clavulanic acid is added to Augmentin to overcome bacterial resistance.",
+    "8": "Clavulanic acid inhibits the enzyme beta-lactamase produced by certain bacteria.",
+    "9": "Certain bacteria produce the enzyme beta-lactamase.",
+    "10": "The enzyme beta-lactamase would otherwise inactivate amoxicillin."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Augmentin is not the same thing as amoxicillin; it is a combination antibiotic containing amoxicillin and clavulanic acid.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Amoxicillin is a penicillin-type antibiotic that can treat a variety of bacterial infections.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "Clavulanic acid is a beta-lactamase inhibitor that is added to Augmentin to overcome bacterial resistance: certain bacteria produce the enzyme beta-lactamase, which inhibits this enzyme that would otherwise inactivate amoxicillin.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B causal chain: clavulanic acid added → mechanism (inhibits beta-lactamase) → why (the enzyme would otherwise inactivate amoxicillin)."
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "entry_id": 29,
+  "batch": 3,
+  "shared_context": {
+    "patient": "A 71-year-old man arrives to the emergency room appearing cyanotic and having weak, shallow respirations. He is brought in by his home care nurse, who reports that the patient has a history of myasthenia gravis and frequent urinary tract infections. The patient was in his normal state of health until 5 days ago when he developed a urinary tract infection. He was receiving gentamicin infusions for his infections. This morning, he experienced poor grip strength and progressive difficulty breathing. The patient’s medications include pyridostigmine and aspirin, both of which he takes as prescribed. His temperature is 99.0°F (37.2°C), blood pressure is 128/78 mmHg, pulse is 92/min, and respirations are 28/min with an oxygen saturation of 86% O2 on room air. The patient has gray-blue skin, hypophonia, weak upper extremities, and normal leg strength. An arterial blood gas is drawn with results as shown below: PO2: 55 mmHg PCO2: 60 mmHg pH: 7.30 The patient is intubated. "
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Pyridostigmine is a cholinesterase inhibitor.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone definition of pyridostigmine."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The patient's increased respirations indicate respiratory distress.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single atom interpreting clinical finding, distinct fact."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "A PO2 of 55 mmHg indicates hypoxemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone lab interpretation."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "A PCO2 of 60 mmHg indicates hypercapnia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone lab interpretation."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "A pH of 7.30 indicates respiratory acidosis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone lab interpretation."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "The patient is experiencing respiratory failure, likely due to myasthenic crisis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "the possibility of myasthenic crisis is meaningful when discussed in the context of this patient.",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Diagnostic conclusion (respiratory failure) merged with likely cause (myasthenic crisis)."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Myasthenic crisis can be precipitated by infections or certain medications (e.g., aminoglycosides like gentamicin).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "relationship \"or\"",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of precipitating factors of myasthenic crisis."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Myasthenic crisis is a severe exacerbation of MG.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone definition of myasthenic crisis."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Myasthenic crisis leads to respiratory compromise.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about consequence of myasthenic crisis, same topic as neighbors."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Myasthenic crisis requires urgent management.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about management urgency, same topic."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Atropine is mainly used to treat bradycardia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone fact about atropine."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Atropine is not indicated for myasthenic crisis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about atropine relative to crisis."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Edrophonium is historically used for diagnostic purposes in MG.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone fact about edrophonium."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Edrophonium is not a treatment for myasthenic crisis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about edrophonium relative to crisis."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Neostigmine is another cholinesterase inhibitor similar to pyridostigmine.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone fact defining neostigmine."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "Neostigmine is not typically used as an emergency treatment in myasthenic crisis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about neostigmine relative to crisis."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "Plasmapheresis is an effective treatment for myasthenic crisis as it removes circulating antibodies against acetylcholine receptors.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "causal relationship",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes specify causal relationship: plasmapheresis effective because it removes antibodies."
+    },
+    {
+      "source_claims": [
+        21
+      ],
+      "output": "Thymectomy is beneficial in long-term MG management.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone fact about thymectomy."
+    },
+    {
+      "source_claims": [
+        22
+      ],
+      "output": "Thymectomy is not suitable for acute crisis management.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about thymectomy relative to acute crisis."
+    },
+    {
+      "source_claims": [
+        23
+      ],
+      "output": "The most appropriate next step in management for the patient in myasthenic crisis is plasmapheresis, among  (A) Atropine (B) Edrophonium (C) Neostigmine (D) Plasmapheresis (E) Thymectomy",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone final answer selection."
+    }
+  ]
+}

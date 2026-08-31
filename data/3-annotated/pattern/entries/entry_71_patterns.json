@@ -1,0 +1,129 @@
+{
+  "entry_id": 71,
+  "batch": 8,
+  "shared_context": {
+    "age": "55-year-old",
+    "sex": "man",
+    "chief_complaint": "Epistaxis for the past hour, unable to control with pressure, head elevation, and ice",
+    "medical_history": "Atrial fibrillation; no prior history of epistaxis",
+    "medications": "Metoprolol and warfarin",
+    "vitals": "Temperature 98.5°F (36.9°C), blood pressure 123/81 mmHg, pulse 90/min, respirations 13/min, oxygen saturation 97% on room air",
+    "exam_findings": "Comfortable man in no distress; active bleeding in the anterior nares; no clear single bleeding vessel identified",
+    "correct_answer": "Topical oxymetazoline (E)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "Warfarin increases the risk of bleeding. The patient's INR is not provided, but he may be on the higher end of the therapeutic range given his history of atrial fibrillation and current anticoagulation therapy.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of facts about the patient's warfarin/INR status."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "The most appropriate initial step is not to administer fresh frozen plasma and intravenous phytonadione (vitamin K).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Parallel rejection of two co-listed options (FFP and vitamin K) as initial step."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "In a 55-year-old man with active bleeding in the anterior nares, placement of posterior nasal packing may not be necessary because the bleeding is anterior.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (packing not necessary) supported by reason (bleeding is anterior)."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "Option E, topical oxymetazoline, may be used in this 55-year-old man with active bleeding in the anterior nares to reduce nasal mucosal blood flow, although topical oxymetazoline does not address the underlying coagulopathy.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two properties of oxymetazoline: mechanism and limitation, enumerated together."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "In a 55-year-old man with active anterior epistaxis, no clear single bleeding vessel, and warfarin use, cauterization with silver nitrate may not be effective given the active bleeding and potential coagulopathy.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single atom; distinct checkable fact about silver nitrate option among neighboring option assessments."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "For a 55-year-old man with epistaxis who is taking warfarin, option C, intravenous tranexamic acid, may not be the best initial step because intravenous tranexamic acid may not address the underlying coagulopathy caused by warfarin.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (TXA not best initial step) with causal reason (doesn't address warfarin coagulopathy)."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "In a 55-year-old man with epistaxis for the past hour who is taking warfarin, initial management should focus on stabilizing the 55-year-old man and addressing the bleeding.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single atom standalone management principle, distinct from neighboring option-specific atoms."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10
+      ],
+      "output": "Administering fresh frozen plasma and intravenous phytonadione (vitamin K) reverses warfarin anticoagulation; warfarin exerts its anticoagulant effect by inhibiting the production of vitamin K-dependent clotting factors, and phytonadione helps restore the normal coagulation pathway.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal chain: warfarin inhibits vit-K factors -> phytonadione restores coagulation -> FFP/vit K reverses anticoagulation."
+    }
+  ]
+}

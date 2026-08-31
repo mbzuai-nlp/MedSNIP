@@ -1,0 +1,144 @@
+{
+  "entry_id": 37,
+  "batch": 4,
+  "shared_context": {
+    "age": "23-year-old",
+    "sex": "man",
+    "chief_complaint": "Brought to the emergency department for shouting on a subway and claiming little people were trying to kill him",
+    "medical_history": "Marijuana use, IV drug use, multiple suicide attempts, homelessness, persistent psychosis with failure to obtain symptom control with risperidone, haloperidol, and ziprasidone",
+    "medications": "Received IM haloperidol and diphenhydramine in the ED; continued on haloperidol during inpatient psychiatric admission",
+    "vitals": "Temperature 98.6°F (37°C), blood pressure 115/71 mmHg, pulse 72/min, respirations 12/min",
+    "exam_findings": "Combative and refused physical exam initially; after a week no longer aggressive but continues psychotic behavior, making 'armor' out of paper plates and plastic silverware to defend himself",
+    "correct_answer": "Clozapine (B)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "A 23-year-old man's aggressive behavior is likely due to schizophrenia or another psychotic disorder, and given persistent psychosis despite risperidone, haloperidol, and ziprasidone, the most appropriate next step in management is to consider an alternative antipsychotic medication.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "No detailed description of the patient's aggressive behavior in this snippet",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (alternative antipsychotic) with supporting premises (aggression likely from schizophrenia/psychotic disorder)."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6
+      ],
+      "output": "Clozapine is a second-generation antipsychotic that is often used in treatment-resistant schizophrenia and has a lower risk of extrapyramidal side effects.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of clozapine properties: drug class + indication + side-effect profile (anchor Case 3)."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "Clozapine is generally reserved for patients who have failed to respond to at least two previous adequate trials of antipsychotic medications, including at least one conventional antipsychotic and at least one second-generation antipsychotic.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates the criteria for clozapine reservation (two prior trials, including one conventional and one second-generation)."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Clozapine can cause agranulocytosis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone fact about clozapine adverse effect."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Agranulocytosis is a potentially life-threatening condition that requires regular monitoring of the white blood cell count.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Statement #12 was proposed as “Clozapine requires regular monitoring of white blood cell count.” While this is correct, the original text more precisely refers to agranulocytosis rather than clozapine itself.",
+      "pattern": "B",
+      "pattern_secondary": "C",
+      "pattern_notes": "Causal chain: agranulocytosis is life-threatening, therefore requires WBC monitoring."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "For this 23-year-old man with persistent psychosis despite failure to obtain symptom control with risperidone, haloperidol, and ziprasidone, clozapine is initiated at a dose of 12.5–25 mg twice daily.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "The patient information may not be necessary in this case",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct checkable dosing fact, same topic as neighbors but isolated."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Clozapine requires gradual titration to a therapeutic dose, which is typically 300–450 mg/day.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Conditional/extension: titration required to reach the therapeutic dose range."
+    },
+    {
+      "source_claims": [
+        16,
+        17,
+        18
+      ],
+      "output": "For this 23-year-old man with persistent psychosis despite risperidone, haloperidol, and ziprasidone, initiation of clozapine requires a 2-week trial period during which the 23-year-old man is monitored for agranulocytosis and other potential side effects.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "The patient information may not be necessary in this case",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates trial-period monitoring components (agranulocytosis, other side effects) (anchor Case 5)."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "Given persistent psychosis in a 23-year-old man despite failure to obtain symptom control with risperidone, haloperidol, and ziprasidone, the most appropriate next step in management is to initiate clozapine (Option B).",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (initiate clozapine, Option B) with supporting premise (persistent psychosis despite three prior antipsychotics)."
+    }
+  ]
+}

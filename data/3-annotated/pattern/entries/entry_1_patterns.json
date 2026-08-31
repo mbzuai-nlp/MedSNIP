@@ -1,0 +1,66 @@
+{
+  "entry_id": 1,
+  "batch": 1,
+  "shared_context": {
+    "topic": "Taking NyQuil and Benadryl at the same time",
+    "drug_a": "NyQuil",
+    "drug_b": "Benadryl"
+  },
+  "snippets": [
+    {
+      "source_claims": [1, 2],
+      "output": "It is not recommended to take NyQuil and Benadryl at the same time because both NyQuil and Benadryl contain antihistamines.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Recommendation (atom 1) merged with its reason (atom 2) via 'because'. Pattern B causal/conditional chain."
+    },
+    {
+      "source_claims": [3],
+      "output": "NyQuil usually contains doxylamine.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone composition fact."
+    },
+    {
+      "source_claims": [4],
+      "output": "Benadryl contains diphenhydramine.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone composition fact."
+    },
+    {
+      "source_claims": [5, 6, 7, 8, 9],
+      "output": "Taking NyQuil and Benadryl together can increase the risk of side effects, including severe drowsiness, dizziness, confusion, and impaired coordination.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "General side-effect claim (atom 5) plus enumerated specific side effects (atoms 6-9). Pattern A enumeration."
+    },
+    {
+      "source_claims": [10, 11],
+      "output": "Combining NyQuil and Benadryl can potentially lead to an antihistamine overdose, and an antihistamine overdose can be dangerous.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal chain: combining drugs -> antihistamine overdose -> dangerous outcome."
+    }
+  ]
+}

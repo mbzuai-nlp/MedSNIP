@@ -1,0 +1,87 @@
+{
+  "entry_id": 198,
+  "batch": 20,
+  "shared_context": {
+    "topic": "taking a nausea prescription at the same time as Dramamine",
+    "drug_a": "Dramamine (dimenhydrinate)",
+    "drug_b": "prescription nausea medication such as ondansetron (Zofran) or promethazine (Phenergan)",
+    "condition": "nausea"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Whether a nausea prescription can be taken with Dramamine depends on the specific medication prescribed for nausea.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Claim plus conditional qualifier - the answer depends on which medication, conditional chain."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "Dramamine is an over-the-counter antihistamine commonly used to prevent and treat motion sickness and nausea.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of Dramamine's properties: drug class and indications."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Some prescription medications for nausea, such as ondansetron (Zofran), work through different mechanisms and can be safely combined with Dramamine.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Different mechanism therefore safe to combine - causal/reason chain."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "Combining multiple medications that have sedative effects, such as promethazine (Phenergan) and Dramamine, can increase the risk of excessive drowsiness and other side effects.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "A",
+      "pattern_notes": "Both have sedative effects, therefore combining increases drowsiness/side effects - causal chain."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "It is essential to consult with a healthcare provider before combining medications to ensure safety and avoid potential drug interactions.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Recommendation (consult provider) merged with supporting reasons (ensure safety, avoid interactions)."
+    }
+  ]
+}

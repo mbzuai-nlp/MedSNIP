@@ -1,0 +1,148 @@
+{
+  "entry_id": 120,
+  "batch": 12,
+  "shared_context": {
+    "age": "16-year-old",
+    "sex": "female",
+    "chief_complaint": "inattentiveness in school with episodes of daydreaming and not responding or participating",
+    "medical_history": "recently immigrated from Bolivia; unknown medical history; not sexually active and does not intend to become pregnant in the near future",
+    "medications": "currently not on any medications",
+    "family_history": "not provided",
+    "vitals": "temperature 98.6°F (37°C), blood pressure 112/74 mmHg, pulse 63/min, respirations 11/min",
+    "labs": "not provided",
+    "exam_findings": "young healthy girl with normal neurological exam; mother reports occasional arm jerking upon awakening that patient says is unintentional",
+    "correct_answer": "Valproic acid (E)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The 16-year-old girl presents with possible nocturnal myoclonus, characterized by sudden, involuntary muscle jerks.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone clinical observation."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "The differential diagnosis for the girl's symptoms includes attention deficit hyperactivity disorder (ADHD), a sleep disorder, and a seizure disorder.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of differential diagnosis items for the same subject."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The laboratory findings do not provide any evidence of a severe underlying medical condition, and the neurological exam is within normal limits.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone interpretation of labs/exam."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "The patient's symptoms of inattentiveness and daydreaming are characteristic of ADHD, particularly ADHD-PI.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone clinical reasoning fact."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "The presence of nocturnal myoclonus may suggest an underlying seizure disorder or a sleep disorder, such as restless legs syndrome (RLS). However, there is a lack of clear evidence of a seizure disorder, so we can rule out the option of using antiepileptic medications.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "C",
+      "pattern_notes": "Causal chain: suggests seizure/sleep disorder, but lack of evidence -> rule out antiepileptics."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "The patient's symptoms do not meet the diagnostic criteria for a sleep disorder such as RLS, as she does not report discomfort in her legs or an urge to move.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Conditional/causal: does not meet RLS criteria because no urge to move legs."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "output": "Cognitive behavioral therapy (CBT) is an effective treatment for ADHD, particularly in conjunction with pharmacological therapy. CBT may be beneficial in addressing the patient's inattentive symptoms and may help improve her daily functioning.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "true",
+      "notes": "CBT is effective for ADHD (generally correct), but the patient is not ADHD (contextual error)",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of CBT properties/benefits for ADHD."
+    },
+    {
+      "source_claims": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "output": "Lamotrigine and valproic acid are antiepileptic medications that may be used in the treatment of seizures or bipolar disorder, which is not suggested in this case.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of properties of lamotrigine/valproic acid (class, indications) plus contextual note."
+    },
+    {
+      "source_claims": [
+        22
+      ],
+      "output": "The most appropriate initial treatment is cognitive behavioral therapy (CBT) in conjunction with a thorough evaluation for ADHD.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone treatment recommendation."
+    }
+  ]
+}

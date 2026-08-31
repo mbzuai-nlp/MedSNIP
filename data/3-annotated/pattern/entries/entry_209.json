@@ -1,0 +1,81 @@
+{
+  "entry_id": 209,
+  "batch": 21,
+  "shared_context": {
+    "topic": "corneal abrasion symptoms and eye discharge",
+    "condition": "corneal abrasion"
+  },
+  "atoms": {
+    "1": "Corneal abrasions typically cause symptoms such as pain.",
+    "2": "Corneal abrasions typically cause symptoms such as tearing.",
+    "3": "Corneal abrasions typically cause symptoms such as photophobia.",
+    "4": "Corneal abrasions typically cause symptoms such as foreign body sensation.",
+    "5": "Corneal abrasions typically cause symptoms such as a gritty feeling.",
+    "6": "Corneal abrasions do not usually result in discharge from the eye.",
+    "7": "The primary symptoms of corneal abrasions are related to the disruption of the corneal epithelium.",
+    "8": "Disruption of the corneal epithelium leads to a reflex production of tears.",
+    "9": "Disruption of the corneal epithelium does not usually lead to discharge.",
+    "10": "Discharge from the eye could indicate a secondary infection.",
+    "11": "Discharge from the eye could indicate a different underlying condition.",
+    "12": "Discharge from the eye should be evaluated further."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, and foreign body sensation.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of symptoms of the same subject (corneal abrasion). Atom 5 (gritty feeling) was isolated because it is expert-labeled false."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Corneal abrasions typically cause a gritty feeling.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Isolated as false per expert atom label, separated from the otherwise-true symptom enumeration in atoms 1-4."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Corneal abrasions do not usually result in discharge from the eye.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern D: standalone fact directly answering the query."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "The primary symptoms of corneal abrasions are related to the disruption of the corneal epithelium, which leads to a reflex production of tears rather than discharge.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B: causal chain (epithelial disruption -> reflex tears, not discharge)."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "Discharge from the eye could indicate a secondary infection or a different underlying condition and should be evaluated further.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: conclusion (should be evaluated) supported by premises (could indicate infection or other condition)."
+    }
+  ]
+}

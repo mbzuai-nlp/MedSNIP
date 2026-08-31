@@ -1,0 +1,98 @@
+{
+  "entry_id": 201,
+  "batch": 21,
+  "shared_context": {
+    "topic": "poison ivy contagiousness between people",
+    "condition": "poison ivy / urushiol contact dermatitis"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Poison ivy (Toxicodendron radicans) is a plant that contains an oil called urushiol, which causes an allergic reaction in most people.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of basic properties of poison ivy/urushiol.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A: enumeration of basic properties of poison ivy/urushiol."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6
+      ],
+      "output": "The urushiol oil is responsible for the characteristic rash, blisters, and itching associated with poison ivy exposure.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of symptoms caused by urushiol.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A: enumeration of symptoms caused by urushiol."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Urushiol oil is not contagious between people and cannot be spread from person to person through direct contact or other means.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Pattern A: two restatements of the same claim. Expert-false: urushiol oil itself CAN be transferred person-to-person via skin/clothing contact while the oil remains on the surface. The rash (immune reaction) is not contagious, but the oil is transferable. The blanket statement that urushiol cannot be spread person-to-person is incorrect.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A: two parallel restatements of the non-contagion claim."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "Urushiol oil can be transferred to surfaces such as clothing, tools, or pets, and can cause a reaction when someone comes into contact with those contaminated items.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A+B: enumeration of contaminated surfaces with causal chain to reaction.",
+      "pattern": "A",
+      "pattern_secondary": "B",
+      "pattern_notes": "Pattern A+B: enumeration of contaminated surfaces with causal chain to reaction."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "People who have not previously been exposed to urushiol may develop an allergic reaction after exposure.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Kept atomic to isolate the true atom from the neighboring expert-false tolerance claims (14-16).",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Isolated true atom kept apart from neighboring expert-false tolerance claims."
+    },
+    {
+      "source_claims": [
+        14,
+        15,
+        16
+      ],
+      "output": "People who have been previously exposed to urushiol may not react at all or may experience a milder reaction, because the body builds up a tolerance to urushiol oil over time.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Pattern C: conclusion (tolerance) + premises (milder/no reaction). Expert-false: this is medically backwards. Repeat exposure to urushiol typically sensitizes a person, often producing stronger or earlier reactions on subsequent exposures rather than tolerance.",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern C: conclusion (tolerance) supported by premises (milder/no reaction)."
+    }
+  ]
+}

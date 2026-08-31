@@ -1,0 +1,174 @@
+{
+  "entry_id": 124,
+  "batch": 13,
+  "shared_context": {
+    "topic": "Pelvic inflammatory disease treatment",
+    "condition": "Pelvic inflammatory disease (PID)"
+  },
+  "atoms": {
+    "1": "The treatment of Pelvic Inflammatory Disease (PID) involves a combination of antibiotics.",
+    "2": "Antibiotic treatment for PID should provide broad-spectrum coverage of likely etiologic pathogens.",
+    "3": "Likely etiologic pathogens for PID include N. gonorrhoeae.",
+    "4": "Likely etiologic pathogens for PID include C. trachomatis.",
+    "5": "Likely etiologic pathogens for PID include gram-negatives.",
+    "6": "Likely etiologic pathogens for PID include anaerobes.",
+    "7": "Likely etiologic pathogens for PID include Group B streptococcus.",
+    "8": "Likely etiologic pathogens for PID include genital mycoplasmas.",
+    "9": "The choice of empirical treatment regimen depends on the severity of symptoms.",
+    "10": "The choice of empirical treatment regimen depends on the local epidemiology of sexually transmitted infections.",
+    "11": "For mild-to-moderate acute PID, outpatient oral therapy can be considered.",
+    "12": "Outpatient oral therapy regimens for mild-to-moderate acute PID can include a cephalosporin (e.g., cefoxitin) plus doxycycline or clindamycin.",
+    "13": "Patients who do not respond to oral therapy within 72 hours should be reevaluated.",
+    "14": "Patients who do not respond to oral therapy within 72 hours should be administered parenteral therapy.",
+    "15": "Parenteral therapy for non-responding patients can be administered on an outpatient basis.",
+    "16": "Parenteral therapy for non-responding patients can be administered on an inpatient basis.",
+    "17": "For more severe cases of PID, parenteral therapy is recommended.",
+    "18": "For cases of PID with severe symptoms, parenteral therapy is recommended.",
+    "19": "Options for parenteral therapy include intravenous cefoxitin and doxycycline.",
+    "20": "Options for parenteral therapy include clindamycin/gentamicin.",
+    "21": "Hospitalization may be considered for patients who require intravenous therapy.",
+    "22": "Hospitalization may be considered for patients who have a temperature above 101.0°F (38.3°C).",
+    "23": "Hospitalization may be considered for patients who are unable to follow outpatient treatment regimens.",
+    "24": "Prevention of long-term complications of PID includes using broad-spectrum antibiotics.",
+    "25": "Prevention of long-term complications of PID includes addressing the underlying cause of the infection.",
+    "26": "Close follow-up is recommended to prevent reinfection.",
+    "27": "Evaluation of male sexual partners is recommended to prevent reinfection."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Treatment of pelvic inflammatory disease (PID) involves a combination of antibiotics that should provide broad-spectrum coverage of likely etiologic pathogens.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C merge: general treatment claim plus its rationale."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "Likely etiologic pathogens covered in pelvic inflammatory disease (PID) treatment include N. gonorrhoeae, C. trachomatis, gram-negatives, and anaerobes.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: enumeration of true causative organisms."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Likely etiologic pathogens covered in pelvic inflammatory disease (PID) treatment include Group B streptococcus and genital mycoplasmas.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Pattern A merge: both atoms list pathogens not considered typical causative organisms for PID; both are false."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "The choice of empirical treatment regimen for pelvic inflammatory disease (PID) depends on the severity of symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Kept separate from atom 10 to isolate the false atom."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "The choice of empirical treatment regimen for pelvic inflammatory disease (PID) depends on the local epidemiology of sexually transmitted infections.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Isolated false atom; standard guidance is not driven by local STI epidemiology for PID empirical regimens."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "For mild-to-moderate acute pelvic inflammatory disease (PID), outpatient oral therapy can be considered, with regimens such as a cephalosporin (e.g., cefoxitin) plus doxycycline or clindamycin.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: severity tier plus its outpatient regimen."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        16
+      ],
+      "output": "Patients with pelvic inflammatory disease (PID) who do not respond to oral therapy within 72 hours should be reevaluated and administered parenteral therapy on an inpatient basis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B causal/conditional chain: non-response leads to reevaluation and switch to inpatient parenteral therapy. Atom 15 split out because it is false."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Parenteral therapy for pelvic inflammatory disease (PID) patients who do not respond to oral therapy can be administered on an outpatient basis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Isolated false atom; non-responders to oral therapy generally require inpatient parenteral therapy, not outpatient parenteral."
+    },
+    {
+      "source_claims": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "output": "For more severe cases of pelvic inflammatory disease (PID) or those with severe symptoms, parenteral therapy is recommended, with options including intravenous cefoxitin plus doxycycline or clindamycin plus gentamicin.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: indication plus its parenteral regimen options."
+    },
+    {
+      "source_claims": [
+        21,
+        22,
+        23
+      ],
+      "output": "Hospitalization may be considered for pelvic inflammatory disease (PID) patients who require intravenous therapy, have a temperature above 101.0 degrees F (38.3 degrees C), or are unable to follow outpatient treatment regimens.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: enumeration of hospitalization criteria."
+    },
+    {
+      "source_claims": [
+        24,
+        25
+      ],
+      "output": "Prevention of long-term complications of pelvic inflammatory disease (PID) includes using broad-spectrum antibiotics and addressing the underlying cause of the infection.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: enumeration of prevention measures."
+    },
+    {
+      "source_claims": [
+        26,
+        27
+      ],
+      "output": "Close follow-up and evaluation of male sexual partners are recommended to prevent reinfection in pelvic inflammatory disease (PID).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: both measures share the goal of preventing reinfection."
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "entry_id": 69,
+  "batch": 7,
+  "shared_context": {
+    "age": "55-year-old",
+    "sex": "man",
+    "chief_complaint": "Epistaxis for the past hour, unable to control with pressure, head elevation, and ice",
+    "medical_history": "Atrial fibrillation; no prior history of epistaxis",
+    "medications": "Metoprolol and warfarin",
+    "vitals": "Temperature 98.5°F (36.9°C), blood pressure 123/81 mmHg, pulse 90/min, respirations 13/min, oxygen saturation 97% on room air",
+    "exam_findings": "Comfortable man in no distress; active bleeding in the anterior nares; no clear single bleeding vessel identified",
+    "correct_answer": "Topical oxymetazoline (E)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The 55-year-old man with epistaxis for the past hour, who is comfortable and in no distress with stable vital signs, is not in acute hypovolemic shock.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone clinical assessment."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "Warfarin increases the risk of bleeding, including epistaxis, in this 55-year-old man with atrial fibrillation who is taking warfarin.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of warfarin bleeding risks (general + epistaxis)."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Management of epistaxis in patients on anticoagulant therapy must consider reversing anticoagulation if bleeding is severe or uncontrolled.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone management principle."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Fresh frozen plasma is used for warfarin reversal in cases of severe bleeding.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct fact about FFP, same topic as neighbor but separately checkable."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Intravenous phytonadione (vitamin K1) is used for warfarin reversal in cases of severe bleeding.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "E",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct alternative reversal agent (vitamin K1)."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Conservative measures for a 55-year-old man with active anterior epistaxis include topical vasoconstrictors such as topical oxymetazoline and cauterization if a bleeding vessel is identified.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of conservative measures: vasoconstrictors and cauterization."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Topical vasoconstrictors like oxymetazoline can be effective in controlling anterior epistaxis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone fact about oxymetazoline efficacy."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Cauterization with silver nitrate is appropriate if a specific bleeding site is identified.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone fact about silver nitrate cauterization indication."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Fresh frozen plasma and intravenous phytonadione are used to reverse warfarin anticoagulation in cases of severe bleeding.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone fact about warfarin reversal agents."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Given the 55-year-old man’s stable vital signs, absence of severe hemorrhage, and active anterior epistaxis without a clear single bleeding vessel, the most appropriate initial step is topical oxymetazoline, and reversing warfarin anticoagulation may not be necessary as the first step.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom conclusion combining patient context with management decision."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "Intravenous tranexamic acid is typically used for severe, trauma-induced hemorrhage and is not indicated as the initial step for a 55-year-old man with anterior epistaxis for the past hour that has not responded to pressure, head elevation, and ice.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Conclusion (not indicated initially) supported by premises about typical indications."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "Posterior nasal packing is used for posterior epistaxis or when anterior packing fails; given the anterior location of bleeding in this 55-year-old man with active bleeding in the anterior nares, posterior nasal packing is not the initial step.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Premise about posterior packing indications + conclusion it is not the initial step here."
+    },
+    {
+      "source_claims": [
+        18,
+        19,
+        20
+      ],
+      "output": "Topical oxymetazoline is a first-line treatment for anterior epistaxis and can reduce bleeding by vasoconstriction; therefore, the most appropriate initial step for this 55-year-old man with active anterior epistaxis and no clear single bleeding vessel is application of topical oxymetazoline.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Premises (first-line + vasoconstriction mechanism) supporting final recommendation."
+    }
+  ]
+}

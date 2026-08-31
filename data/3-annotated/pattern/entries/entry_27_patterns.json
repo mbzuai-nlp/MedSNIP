@@ -1,0 +1,220 @@
+{
+  "entry_id": 27,
+  "batch": 3,
+  "shared_context": {
+    "CT": "Computed tomography",
+    "MRI": "Magnetic resonance imaging",
+    "patient": "A 26-year-old man presents to his primary care physician with a 6-month history of increasing lower back pain. He first felt the pain while lifting boxes at work but thought that he had just strained a muscle. The pain appears to be worse in the mornings and after rest. Exercise and physical activity appear to temporarily make the pain better. He has taken acetaminophen and ibuprofen for the pain. He has no significant medical history and takes no medications. His temperature is 98.6°F (37.0°C), blood pressure is 115/70 mmHg, pulse is 70/min, and respirations are 12/min. On physical exam, he is found to have limited flexion and extension of his spine as well as tenderness to palpation over the insertion of his patellar tendons bilaterally. Results from laboratory tests are shown below: Serum: Erythrocyte sedimentation rate (ESR): 61 mm/hr C-reactive protein (CRP): 36 mg/L (normal <10 mg/L)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Symptoms that worsen in the mornings and after rest, and improve with exercise and physical activity are characteristic of inflammatory back pain.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Isolated false atom about inflammatory back pain features, kept apart from true claims."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Elevation in ESR and CRP levels suggests an underlying inflammatory process.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone lab interpretation fact."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Limited flexion and extension of the spine as well as tenderness to palpation over the insertion of the patellar tendons bilaterally, this is suggestive of spondyloarthritis (SpA), particularly ankylosing spondylitis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "particularly xxx should be under its context.",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Exam findings suggest spondyloarthritis (premise) leading to specific suggestion of ankylosing spondylitis (conclusion)."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "In spondyloarthritis, plain radiographs (X-rays) can show changes in the spine.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single distinct checkable fact about X-ray findings in spine; same topic as neighbor but separate."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "In spondyloarthritis, plain radiographs (X-rays) can show changes in the sacroiliac joints.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single distinct fact about X-ray findings in sacroiliac joints, parallel to neighbor."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Changes in the spine and sacroiliac joints may not be visible in the early stages of spondyloarthritis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct caveat fact about early-stage invisibility; same topic, separate claim."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Bone scans are not generally used for diagnosing spondyloarthritis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone fact about bone scan utility in SpA; topic continues but distinct."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Bone scans are more often used for detecting bone metastasis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about bone scan use for metastasis."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Bone scans are more often used for detecting osteomyelitis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about bone scan use for osteomyelitis."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Computed tomography (CT) scans provide more detailed images than X-rays.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone general fact comparing CT and X-ray detail."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "CT scans can help identify sacroiliitis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct checkable fact about CT identifying sacroiliitis."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "CT scans can help identify spinal changes in more detail.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct checkable fact about CT for spinal changes."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "MRI provides the most sensitive detection of early changes in spondyloarthritis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about MRI sensitivity for early SpA changes."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "MRI is the preferred imaging modality for diagnosing spondyloarthritis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact: MRI is preferred modality for SpA."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Ultrasound is not typically used for initial imaging of spondyloarthritis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Distinct fact about ultrasound not being used."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "The most accurate test for the patient's condition is Magnetic Resonance Imaging (MRI), among five options: (A) Bone scan (B) Computed tomography (C) Magnetic resonance imaging (D) Radiograph (E) Ultrasound",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone final answer to the MCQ."
+    }
+  ]
+}

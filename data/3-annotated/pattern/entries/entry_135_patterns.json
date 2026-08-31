@@ -1,0 +1,72 @@
+{
+  "entry_id": 135,
+  "batch": 14,
+  "shared_context": {
+    "topic": "losartan dosing timing",
+    "drug_a": "losartan",
+    "condition": "blood pressure control"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "It is generally recommended to take losartan as prescribed by your healthcare provider. Losartan is typically administered once daily, but the specific regimen may vary depending on your condition and response to treatment.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates losartan administration properties: prescription guidance, typical frequency, and variability factors."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "Some studies suggest that single daily doses of losartan may not provide 24-hour blood pressure control in all patients. In such cases, splitting the dose to be taken twice daily might be considered to maintain more consistent blood pressure levels throughout the day. However, dose adjustments should only be made under the guidance of your healthcare provider.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "C",
+      "pattern_notes": "Conditional chain: single doses may fail 24h control -> consider splitting -> but only under provider guidance."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "One study found that an extended-release formulation of losartan provided better 24-hour blood pressure control compared to a single-dose formulation, suggesting that splitting doses may not always be necessary if an appropriate formulation is used.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Study finding (premise) supports conclusion that splitting may not be necessary with appropriate formulation."
+    },
+    {
+      "source_claims": [
+        11,
+        12,
+        13
+      ],
+      "output": "It is important to follow your doctor's recommendations regarding dosage and timing of losartan administration to ensure optimal control of your blood pressure and to minimize the risk of adverse effects.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Recommendation tied to its purposes (ensures BP control, minimizes adverse effects) via 'to ensure'/'to minimize' — causal/purpose chain."
+    }
+  ]
+}

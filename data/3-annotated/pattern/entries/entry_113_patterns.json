@@ -1,0 +1,103 @@
+{
+  "entry_id": 113,
+  "batch": 12,
+  "shared_context": {
+    "age": "40-year-old",
+    "sex": "male",
+    "chief_complaint": "chronic cough worse at night",
+    "medical_history": "Chronic cough for several years worsening over the last few months; recently moved to the United States to work in construction; 10-pound weight loss over 3 months; darker stools; denies difficulty swallowing or sensation of food getting stuck; drinks alcohol 1-2 times per week; never smoked; no family history of cancer",
+    "family_history": "Denies family history of cancer",
+    "vitals": "Temperature 98.6°F (37°C), blood pressure 114/72 mmHg, pulse 82/min, respirations 12/min",
+    "exam_findings": "Lungs clear to auscultation bilaterally without wheezing; abdomen soft and non-distended; no tenderness to palpation; bowel sounds present",
+    "correct_answer": "Upper endoscopy (E)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Chronic cough can have many etiologies, including gastroesophageal reflux disease (GERD), which often presents with nocturnal symptoms and can be exacerbated by lifestyle factors such as diet.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of GERD: etiology of cough, nocturnal presentation, lifestyle exacerbation."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "The patient's weight loss and dark stools raise concern for gastrointestinal bleeding and are considered alarm features in the evaluation of gastrointestinal symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Lists two parallel properties of the symptoms: concerning for GI bleed and being alarm features."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "The absence of difficulty swallowing lessens the likelihood of an esophageal obstruction but does not rule out other serious conditions.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel properties about the absence of dysphagia: lowers obstruction likelihood, doesn't rule out other conditions."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Normal vital signs are reassuring but do not exclude internal pathology. Working in construction could expose the patient to various environmental factors affecting his health.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of clinical assessment points (vitals + occupational exposure)."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Weight loss and dark stools are significant alarm symptoms, making it crucial to rule out serious gastrointestinal conditions, including malignancy or peptic ulcer disease.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "C",
+      "pattern_notes": "Causal/conditional: alarm symptoms therefore must rule out serious GI conditions."
+    },
+    {
+      "source_claims": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "output": "The most appropriate next step is Upper Endoscopy, which will help visualize the upper gastrointestinal tract to identify sources of bleeding, such as ulcers or malignancies, and allows for biopsy if needed.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "A",
+      "pattern_notes": "Recommendation (upper endoscopy) merged with supporting reasons (visualize GI tract, identify ulcers/malignancies, allow biopsy)."
+    }
+  ]
+}

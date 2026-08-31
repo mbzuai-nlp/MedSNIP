@@ -1,0 +1,253 @@
+{
+  "entry_id": 224,
+  "batch": 23,
+  "shared_context": {
+    "age": "27-year-old",
+    "sex": "man",
+    "chief_complaint": "fatigue, cough, and 15-pound weight loss over 3 weeks",
+    "medical_history": "recently released from prison; intravenous drug use in prison; positive QuantiFERON gold test; started on treatment for tuberculosis",
+    "vitals": "temperature 99.5°F (37.5°C), blood pressure 127/68 mmHg, pulse 100/min, respirations 18/min, oxygen saturation 98% on room air",
+    "correct_answer": "Optic neuritis (C)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "A 27-year-old man with fatigue, cough, and 15-pound weight loss over 3 weeks has been diagnosed with tuberculosis based on a positive QuantiFERON gold test.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Diagnosis + basis for diagnosis enumerated as properties."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The standard initial treatment for active tuberculosis in a 27-year-old man with fatigue, cough, 15-pound weight loss over 3 weeks, recent release from prison, intravenous drug use in prison, and a positive QuantiFERON gold test includes isoniazid, rifampin, pyrazinamide, and ethambutol.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone fact about standard TB regimen."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Isoniazid can cause hepatotoxicity.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct drug side-effect fact alongside neighbors."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Rifampin can cause hepatotoxicity.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct drug side-effect fact."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Pyrazinamide can cause hepatotoxicity.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct drug side-effect fact."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Elevated liver enzymes can be a serious side effect of tuberculosis treatment in a 27-year-old man with fatigue, cough, 15-pound weight loss over 3 weeks, recent release from prison, intravenous drug use in prison, a positive QuantiFERON gold test, and started on treatment for tuberculosis, but elevated liver enzymes do not typically necessitate the immediate discontinuation of all tuberculosis medications.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel properties of elevated liver enzymes (severity + management implication)."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Elevated liver enzymes in a 27-year-old man started on treatment for tuberculosis might require dose adjustment or closer monitoring.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct management fact about elevated LFTs."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Pyrazinamide can cause hyperuricemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone pharmacology fact."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Hyperuricemia alone usually does not require discontinuation of tuberculosis treatment in a 27-year-old man with fatigue, cough, 15-pound weight loss over 3 weeks, recent release from prison, intravenous drug use in prison, a positive QuantiFERON gold test, and initiation of tuberculosis therapy.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct management fact about hyperuricemia."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Hyperuricemia during tuberculosis treatment in a 27-year-old man recently released from prison with fatigue, cough, 15-pound weight loss over 3 weeks, intravenous drug use in prison, and a positive QuantiFERON gold test might require discontinuation of treatment if it leads to symptomatic gout.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct conditional management fact."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "Ethambutol can cause optic neuritis, which can lead to vision loss.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal chain: ethambutol -> optic neuritis -> vision loss."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Optic neuritis warrants discontinuation of ethambutol in a 27-year-old man started on treatment for tuberculosis to prevent permanent damage.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct management directive."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "Isoniazid can cause peripheral neuropathy, and peripheral neuropathy can often be managed with pyridoxine (vitamin B6) supplementation.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Property + management enumeration for isoniazid-induced neuropathy."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "In a 27-year-old man recently released from prison with fatigue, cough, 15-pound weight loss over 3 weeks, a positive QuantiFERON gold test, and started on tuberculosis treatment, optic neuritis is the most likely indication to discontinue treatment, whereas peripheral neuropathy does not necessarily require discontinuing treatment.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct claim contrasting management implications."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "Rifampin can cause red-orange discoloration of body fluids such as urine, sweat, and tears, and these red body excretions are a benign side effect.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel properties of rifampin-induced discoloration."
+    },
+    {
+      "source_claims": [
+        21
+      ],
+      "output": "Red body excretions do not require discontinuation of tuberculosis treatment in a 27-year-old man with a positive QuantiFERON gold test who was started on treatment for tuberculosis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct management fact."
+    },
+    {
+      "source_claims": [
+        22
+      ],
+      "output": "Optic neuritis is the most severe side effect for a 27-year-old man with fatigue, cough, 15-pound weight loss over 3 weeks, recent release from prison, intravenous drug use in prison, a positive QuantiFERON gold test, and started on treatment for tuberculosis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone comparative severity claim."
+    },
+    {
+      "source_claims": [
+        23
+      ],
+      "output": "Optic neuritis warrants immediate discontinuation of the offending drug, ethambutol, in a 27-year-old man started on treatment for tuberculosis, to prevent permanent vision loss.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom conclusion-style management fact, same topic as neighbor."
+    }
+  ]
+}

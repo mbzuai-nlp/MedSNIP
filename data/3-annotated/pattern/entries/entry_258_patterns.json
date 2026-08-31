@@ -1,0 +1,73 @@
+{
+  "entry_id": 258,
+  "batch": 26,
+  "shared_context": {
+    "age": "3 years",
+    "sex": "female",
+    "chief_complaint": "Routine well-child visit with recent withdrawal, intermittently ignoring parents/physician, and unchanged language skills over 6 months",
+    "medical_history": "Born preterm at 35 weeks; several ear infections over the last year; started preschool 3 months ago",
+    "family_history": "Older brother diagnosed with ADHD; otherwise unremarkable",
+    "vitals": "Temp 98.6°F (37°C), BP 98/62 mmHg, pulse 97/min, respirations 26/min",
+    "exam_findings": "Successfully draws a square, can stand on 1 foot, neurologic examination normal, 50th percentile for height and weight, distracted during interview, responds only intermittently to directions",
+    "correct_answer": "Audiometry testing (A)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The patient's behaviors, such as becoming more withdrawn and ignoring tasks, are concerning and suggest a possible attention or developmental issue. However, it is difficult to pinpoint the exact cause due to her normal development and physical examination.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Observation about concerning behaviors followed by reasoning about difficulty pinpointing cause; connected reasoning."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Her language skills are not significantly delayed, making conditions like autism or significant developmental delays less likely.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Language skills intact -> therefore autism/developmental delay less likely. Causal/inferential link."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "The most effective method for diagnosing ADHD is through behavioral observations and specific rating scales, such as the Vanderbilt ADHD rating scales, which assess the child's symptoms of inattention and hyperactivity across different settings. These scales should be completed by parents and teachers.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of ADHD diagnostic method: rating scales, what they assess, who completes them."
+    },
+    {
+      "source_claims": [
+        5,
+        9
+      ],
+      "output": "Given a 3-year-old girl's symptoms and risk factors, the most appropriate next step would be to assess for ADHD and other attention or developmental issues by completing parent and teacher ADHD rating scales.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Recommendation (assess for ADHD) merged with the specific action justifying it (complete parent/teacher rating scales)."
+    }
+  ]
+}

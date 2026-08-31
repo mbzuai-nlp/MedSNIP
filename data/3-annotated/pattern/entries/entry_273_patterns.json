@@ -1,0 +1,80 @@
+{
+  "entry_id": 273,
+  "batch": 28,
+  "shared_context": {
+    "age": "60-year-old",
+    "sex": "woman",
+    "chief_complaint": "back pain after gardening",
+    "medical_history": "hypertension; recent asthma flare requiring a prednisone taper; denies fever, night sweats, unintentional weight loss, and bowel or bladder incontinence; does not drink alcohol or smoke",
+    "medications": "hydrochlorothiazide; recent prednisone taper",
+    "vitals": "temperature 98.6°F (37.0°C), blood pressure 120/80 mmHg, pulse 90/min, respirations 18/min"
+  },
+  "snippets": [
+    {
+      "source_claims": [8, 9, 10, 11, 12, 13, 14],
+      "output": "Lumbosacral strain is often caused by overuse or sudden injury and typically presents with muscle spasms, stiffness, and pain in the lower back. The patient does not have muscle spasms, but lumbosacral strain should still be considered given her recent gardening activity.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Atoms 8-12 enumerate LS strain features (premises); atoms 13-14 add patient-specific observation and soft conclusion (still consider despite no spasms)."
+    },
+    {
+      "source_claims": [15, 16, 17, 18, 19, 20],
+      "output": "Elevated calcium levels can be associated with multiple myeloma, a type of plasma cell neoplasm. However, the patient does not have anemia or bone pain, making multiple myeloma less likely.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Atoms 15-19 are premises (MM association + patient's labs + negative findings); atom 20 is the conclusion (MM less likely)."
+    },
+    {
+      "source_claims": [21, 22, 23, 24],
+      "output": "Spondylolisthesis is a condition where a vertebral body slips out of place, often causing back pain and stiffness. This is less likely in this patient as there is no tenderness to palpation or pain with specific movements.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Atoms 21-23 = spondylolisthesis features (premises); atom 24 = conclusion (less likely)."
+    },
+    {
+      "source_claims": [25, 26, 27, 28, 29],
+      "output": "The patient's back pain, which is not relieved by rest and not radiating, suggests a possible vertebral compression fracture. Elevated calcium levels (Ca2+: 10.6 mg/dL) and hypercalcemia can be associated with osteoporosis, which increases the risk of vertebral compression fractures.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "C",
+      "pattern_notes": "Causal chain: elevated Ca -> hypercalcemia -> osteoporosis -> VCF risk -> diagnosis. Atom 29 is also the conclusion supported by the chain, so secondary C."
+    },
+    {
+      "source_claims": [1, 2, 3, 4, 5, 6],
+      "output": "A herniated disc typically presents with radiating pain, numbness, and tingling in the lower extremities, and the pain is often exacerbated by bending, lifting, or prolonged sitting.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pure enumeration of herniated disc properties (presenting symptoms + aggravating activities)."
+    },
+    {
+      "source_claims": [7],
+      "output": "Herniated disc is less likely in a 60-year-old woman with back pain after gardening.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom conclusion statement, standalone and self-contained (parallels guidelines Case 6 atom 19)."
+    }
+  ]
+}

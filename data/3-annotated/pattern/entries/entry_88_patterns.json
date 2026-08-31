@@ -1,0 +1,136 @@
+{
+  "entry_id": 88,
+  "batch": 9,
+  "shared_context": "Consumer query: zoonotic transmission of cat tapeworm to humans",
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "Transmissible tapeworms to humans include Dipylidium caninum, which requires ingestion of the intermediate host, the dog or cat flea, which contains the larva (cysticercoids) of the agent.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C/A: correct life cycle description with intermediate host.",
+      "pattern": "C",
+      "pattern_secondary": "A",
+      "pattern_notes": "Existing note: Pattern C/A. Life cycle description with intermediate host."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "However, for your cat to be a source of transmission, it would require the presence of infected fleas.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern D: standalone consequence of the flea-mediated life cycle.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Existing note: Pattern D. Standalone consequence."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Cats infested with Dipylidium caninum may be asymptomatic, but the infection can be detected by the presence of the tapeworms on the flea.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Atom 7 is awkwardly phrased; clinically infection is usually detected by visualizing proglottids in stool/perianal area, though larval cysticercoids can indeed be present in fleas. Both atoms labeled true in source.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel properties of Dipylidium-infested cats (asymptomatic presentation + detection method)."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Humans are resistant to infection with Dipylidium caninum due to the high frequency of flea infestation on dogs and cats and the relative rarity of human disease.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "INCORRECT and circular reasoning. Human D. caninum infections are rare because direct flea ingestion by humans is uncommon (not because humans are intrinsically 'resistant'); rarity of disease is not a cause of resistance. Both atoms labeled false.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal claim: humans resistant due to two stated reasons (even though reasoning is flawed)."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "However, if your cat has a different species of tapeworm, it may be possible for transmission to occur.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern D: standalone hedging statement.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern D per human-annotator note: standalone hedging statement."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Humans can become an accidental host of Dirofilaria when bitten by an infected mosquito, but the microfilaria will not mature to the adult form in humans.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Off-topic and partly incorrect: Dirofilaria is a filarial nematode, not a tapeworm, so its inclusion in a tapeworm-from-cats response is a hallucination/irrelevant. Also, in human Dirofilaria infections it is the infective L3 larvae transmitted by mosquito (not microfilaria) that fail to mature; atom 12 is mislabeled in the source as referencing microfilaria. Atom 12 already labeled false.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal/conditional chain: humans become accidental host when bitten, but larvae fail to mature."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "It is crucial to consult with a veterinarian to determine the type of tapeworm infestation and ensure proper treatment for both you and your cat.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Slightly off: a veterinarian treats the cat; a physician treats the human. But the recommendation to involve a vet for the cat's diagnosis/treatment is reasonable.",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Recommendation (consult vet) + justification (ensures proper treatment)."
+    },
+    {
+      "source_claims": [
+        15,
+        16,
+        17
+      ],
+      "output": "Prevention of tapeworm transmission from pets to humans includes regular flea control measures, such as using flea preventatives and keeping the environment clean.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: prevention conclusion + enumerated measures.",
+      "pattern": "C",
+      "pattern_secondary": "A",
+      "pattern_notes": "Existing note: Pattern C. Prevention conclusion + enumerated measures."
+    },
+    {
+      "source_claims": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "output": "Additionally, proper hand hygiene and avoiding contact with feces or contaminated soil can help prevent the transmission of other parasites, such as Toxocara.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A/C: hygiene measures with Toxocara as illustrative example.",
+      "pattern": "A",
+      "pattern_secondary": "C",
+      "pattern_notes": "Existing note: Pattern A/C. Enumerated hygiene measures with Toxocara example."
+    }
+  ]
+}

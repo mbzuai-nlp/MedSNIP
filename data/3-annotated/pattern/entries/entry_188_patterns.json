@@ -1,0 +1,181 @@
+{
+  "entry_id": 188,
+  "batch": 19,
+  "shared_context": {
+    "age": "43",
+    "sex": "male",
+    "chief_complaint": "bright red blood per rectum after heavy alcohol use and forceful vomiting",
+    "labs": "Hgb 12, Hct 36, leukocytes 5500, platelets 179000",
+    "correct_answer": "Submucosal esophageal tear / Mallory-Weiss (D)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "His vital signs indicate no acute distress or instability.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Enumeration (A). HR 82, BP 110/75, RR 16, SpO2 100% are stable.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Enumeration (A): parallel vital sign assessments."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Normal bowel sounds reduce the likelihood of an intra-abdominal source of bleeding.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Standalone fact (D). Bowel sounds are non-specific; normal BS do NOT meaningfully argue against intra-abdominal bleeding sources (e.g., diverticular bleed, angiodysplasia, ischemia early). False reasoning.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Standalone fact (D)."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Normal hemoglobin and hematocrit levels suggest there is no significant acute blood loss.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Standalone fact (D). Hgb 12/Hct 36 are borderline-low and the case explicitly notes slight anemia; furthermore, in acute bleeding Hgb/Hct lag (do not equilibrate for hours). Both ctx and gen false. Original gold false.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Standalone fact (D)."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Normal leukocyte count and differential do not indicate an acute infection, and a normal platelet count reduces the likelihood of a bleeding disorder.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Enumeration (A). WBC 5500 with normal diff and platelets 179k support these statements.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Enumeration (A): parallel lab interpretations."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The most likely cause of the patient's symptoms is a submucosal esophageal tear (Mallory-Weiss syndrome).",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "Standalone conclusion (D). Matches answer key D for this patient (ctx true). As a context-free generic claim, false. Marquee ctx!=gen divergence; original gold false but case key is D.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Standalone conclusion (D)."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Mallory-Weiss syndrome typically presents with hematemesis or hematochezia, often after a period of intense or prolonged vomiting.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "Causal chain (B). Mallory-Weiss CLASSICALLY presents with hematemesis; hematochezia is uncommon and only occurs with massive/brisk bleeding and rapid transit. As a generic medical statement, lumping hematochezia with hematemesis is misleading (false in general). For THIS patient who actually has hematochezia attributed to MW, ctx is borderline-true (consistent with massive MW bleed). Original gold false; ctx!=gen.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Causal chain (B)."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "The patient's history of vomiting aligns with Mallory-Weiss syndrome, which is more common in individuals who consume a large amount of alcohol in a short period, such as during a birthday celebration.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Causal chain (B). Standard MW risk factor; matches the vignette.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Causal chain (B)."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "Mallory-Weiss syndrome is less likely to cause significant hemodynamic instability or anemia due to its upper GI origin, as suggested by the patient's normal laboratory values.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Conclusion+premises (C). The 'upper GI origin' is not what protects against hemodynamic instability/anemia; severity depends on bleed volume/rate. MW can absolutely cause significant bleeding and anemia in some cases. Reasoning is incorrect both for this patient and generically. Original gold false.",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Conclusion+premises (C)."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Erosion into a gastric vessel is more likely to present with hematemesis rather than hematochezia.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Standalone fact (D). Dieulafoy's lesion / brisk gastric vessel erosion can absolutely present with hematochezia (and even shock) when bleeding is rapid; clinically it is a notorious cause of obscure massive GI bleeding. Saying it 'is more likely' hematemesis as a discriminating feature is misleading. Original gold false.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Standalone fact (D)."
+    },
+    {
+      "source_claims": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "output": "Diverticulitis typically presents with abdominal pain, fever, and leukocytosis, which is not present in this case.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Causal chain (B). Classic diverticulitis features; absent here.",
+      "pattern": "B",
+      "pattern_secondary": "A",
+      "pattern_notes": "Notes explicitly say Causal chain (B); enumerates diverticulitis features then concludes absent."
+    },
+    {
+      "source_claims": [
+        21,
+        22
+      ],
+      "output": "Malignancy would likely have a more gradual onset and additional signs and symptoms such as weight loss or abdominal pain.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Enumeration (A). Standard presentation of GI malignancy.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Enumeration (A)."
+    },
+    {
+      "source_claims": [
+        23,
+        24
+      ],
+      "output": "Vascular malformation would likely have been diagnosed earlier in life and is not the first suspicion given the patient's age and symptoms.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Causal chain (B). Many vascular malformations causing GI bleeding (angiodysplasia, Dieulafoy, AVMs) commonly present in adulthood and are frequently undiagnosed until first bleed; the claim that they 'would likely have been diagnosed earlier' is incorrect. Original gold false.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Notes explicitly say Causal chain (B)."
+    }
+  ]
+}

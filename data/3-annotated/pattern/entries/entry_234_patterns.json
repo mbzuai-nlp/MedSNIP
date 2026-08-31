@@ -1,0 +1,138 @@
+{
+  "entry_id": 234,
+  "batch": 24,
+  "shared_context": {
+    "age": "45-year-old",
+    "sex": "female",
+    "chief_complaint": "Not feeling well with cough for 1 week, abdominal pain, trouble focusing, recent 5-pound weight loss, and poorly controlled GERD",
+    "medical_history": "African American woman, non-smoker, history of GERD",
+    "medications": "Antacids",
+    "vitals": "Temp 98.6°F (37°C), BP 115/71 mmHg, pulse 72/min, respirations 12/min",
+    "labs": "Serum: Na+ 139 mEq/L, K+ 4.1 mEq/L, Cl- 101 mEq/L, HCO3- 24 mEq/L, urea nitrogen 12 mg/dL, glucose 70 mg/dL, creatinine 0.9 mg/dL, Ca2+ 12.5 mg/dL, alkaline phosphatase 150 U/L, phosphorus 2.0 mg/dL; Urine: color amber, nitrites negative, sodium 5 mmol/24 hours, red blood cells 0/hpf"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "The lack of fever and normal physical exam suggests the cough might not be a primary concern. Difficulty focusing could be due to malnutrition, and abdominal pain and difficulty focusing could be indicative of malabsorption. Recent weight loss could also indicate malabsorption.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of symptom interpretations all pointing to features of the patient's presentation."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "Recent weight loss and poorly controlled GERD could suggest malabsorption or another underlying condition. Elevated alkaline phosphatase is often seen in liver or bone diseases and can indicate hyperparathyroidism, vitamin D deficiency, or malignancy. Normal parathyroid hormone (PTH) levels were not provided.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Lists properties/associations of elevated alkaline phosphatase and related findings."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11,
+        13
+      ],
+      "output": "High calcium levels can be associated with primary hyperparathyroidism, malignancy, or vitamin D toxicity. Recent weight loss and malabsorption symptoms point to malabsorption, which can lead to secondary hyperparathyroidism and osteomalacia. Given the patient's symptoms and lab results, malabsorption should be considered.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "C",
+      "pattern_notes": "Causal chain: malabsorption leads to secondary hyperparathyroidism and osteomalacia, supporting the consideration."
+    },
+    {
+      "source_claims": [
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "output": "Malabsorption is the primary concern. Recent weight loss and malabsorption symptoms indicate a chronic issue, which may be due to gastrointestinal diseases such as celiac disease, Crohn's disease, or chronic pancreatitis. These conditions can lead to vitamin D deficiency and secondary hyperparathyroidism. Low phosphorus, elevated alkaline phosphatase, and high calcium levels suggest malabsorption.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Conclusion (malabsorption is primary concern) supported by GI disease causes and lab findings."
+    },
+    {
+      "source_claims": [
+        18,
+        19,
+        20
+      ],
+      "output": "Increased 1,25-dihydroxyvitamin D (option B) is not the most likely explanation, as a decrease in vitamin D can lead to secondary hyperparathyroidism. Antacid overuse (option A) might not directly explain elevated alkaline phosphatase or malabsorption symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Reasoning chain ruling out options B and A with causal justification."
+    },
+    {
+      "source_claims": [
+        21,
+        22,
+        23
+      ],
+      "output": "Malignancy (option D) could be a consideration given elevated alkaline phosphatase, but it is not the most direct explanation without further evidence. Viral illness (option E) does not account for the prolonged nature of the patient's symptoms and lab results.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Reasoning ruling out options D and E with justifications."
+    },
+    {
+      "source_claims": [
+        24,
+        25,
+        26
+      ],
+      "output": "Increased parathyroid hormone (PTH) (option C) could be a consideration, as it is associated with hypercalcemia. The primary issue seems to be malabsorption leading to secondary hyperparathyroidism.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Conclusion that PTH is the answer, supported by hypercalcemia association and malabsorption causing secondary hyperparathyroidism."
+    },
+    {
+      "source_claims": [
+        27
+      ],
+      "output": "The closest correct option, given the choices provided, is increased parathyroid hormone (PTH) in the context of secondary hyperparathyroidism caused by malabsorption.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone final answer statement."
+    }
+  ]
+}

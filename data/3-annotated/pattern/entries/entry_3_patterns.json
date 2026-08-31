@@ -1,0 +1,121 @@
+{
+  "entry_id": 3,
+  "batch": 1,
+  "shared_context": {
+    "topic": "Taking NyQuil and Benadryl at the same time",
+    "drug_a": "NyQuil",
+    "drug_b": "Benadryl"
+  },
+  "snippets": [
+    {
+      "source_claims": [1],
+      "output": "It is not recommended to take NyQuil and Benadryl at the same time.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone recommendation."
+    },
+    {
+      "source_claims": [2, 3],
+      "output": "NyQuil is an over-the-counter (OTC) medication that contains dextromethorphan, doxylamine, and acetaminophen.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel facts about one drug: class + composition."
+    },
+    {
+      "source_claims": [4, 5],
+      "output": "Benadryl is an antihistamine that contains diphenhydramine.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel facts about one drug: class + active ingredient."
+    },
+    {
+      "source_claims": [6, 7, 8],
+      "output": "Taking NyQuil and Benadryl together may increase the risk of drowsiness, dizziness, and other side effects.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerated side effects of combining."
+    },
+    {
+      "source_claims": [9, 10, 11, 12, 13, 14],
+      "output": "Doxylamine is an active ingredient in NyQuil, and doxylamine can interact with diphenhydramine, which may increase the risk of anticholinergic side effects such as dry mouth, blurred vision, and constipation.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "A",
+      "pattern_notes": "Causal chain atoms 9-11 (doxylamine in Nyquil -> can interact with diphenhydramine -> anticholinergic effects), then enumerated effects 12-14. Primary B (mechanism); secondary A (enumeration)."
+    },
+    {
+      "source_claims": [15, 16],
+      "output": "Combining NyQuil and Benadryl may increase the risk of sedation and impaired cognitive function.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerated effects of combining."
+    },
+    {
+      "source_claims": [17],
+      "output": "It is essential to follow the recommended dosage instructions for both NyQuil and Benadryl.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone dosage recommendation."
+    },
+    {
+      "source_claims": [18],
+      "output": "Consult with a healthcare professional before taking NyQuil and Benadryl together.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone consult-HCP recommendation."
+    },
+    {
+      "source_claims": [19],
+      "output": "Consult with a pharmacist before taking NyQuil and Benadryl together.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom kept separate from atom 18 (HCP consult); same topic but distinct professional. Possibly isolated-false-atom (label_in_general=false) per the guidelines idiom."
+    },
+    {
+      "source_claims": [20, 21],
+      "output": "If you experience adverse effects from NyQuil and Benadryl or have concerns about taking NyQuil and Benadryl together, seek medical attention immediately.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel triggers (adverse effects, concerns) sharing the same recommendation."
+    }
+  ]
+}

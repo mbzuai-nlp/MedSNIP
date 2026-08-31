@@ -1,0 +1,215 @@
+{
+  "entry_id": 67,
+  "batch": 7,
+  "shared_context": {
+    "age": "52-year-old",
+    "sex": "man",
+    "chief_complaint": "hematemesis with vomiting of bright red blood",
+    "medical_history": "alcohol use disorder; prior episodes of small streaks of blood with vomiting; likely chronic liver disease/cirrhosis with portal hypertension",
+    "vitals": "temperature 98.4°F (36.9°C), blood pressure 98/68 mmHg, pulse 125/min, respirations 22/min",
+    "labs": "hemoglobin 8.8 g/dL, platelet count 80,000/mm^3",
+    "exam_findings": "bright red blood in mouth and pharynx; distended abdomen with fluid wave; jaundice; scattered spider angiomas; multiple ecchymoses; hemodynamically unstable",
+    "correct_answer": "Octreotide (D)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A 52-year-old man’s vomiting of bright red blood indicates an upper gastrointestinal bleed (UGIB).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single atom standalone fact about UGIB."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "In a 52-year-old man with hematemesis, previous episodes of vomiting with blood suggest potential esophageal varices due to underlying liver disease. The 52-year-old man exhibits signs consistent with chronic liver disease, including jaundice, spider angiomas, and ascites.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "A",
+      "pattern_notes": "Causal chain: prior bleeding -> varices due to liver disease, with enumeration of liver disease signs."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Ascites is indicated by a distended abdomen with a fluid wave.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone definitional fact about ascites detection."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "A 52-year-old man with hematemesis, alcohol use disorder, a distended abdomen with a fluid wave, jaundice, scattered spider angiomas, and multiple ecchymoses has findings that suggest cirrhosis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single atom; standalone conclusion that findings suggest cirrhosis."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "In the 52-year-old man with hematemesis, tachycardia and hypotension indicate hemodynamic instability, which is likely due to significant blood loss.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal: tachycardia/hypotension -> hemodynamic instability -> due to blood loss."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "A platelet count of 80,000/mm^3 in a 52-year-old man with hematemesis and likely chronic liver disease/cirrhosis indicates thrombocytopenia, which is common in liver cirrhosis due to hypersplenism or bone marrow suppression.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Lab finding plus causal mechanism (thrombocytopenia due to hypersplenism)."
+    },
+    {
+      "source_claims": [
+        12,
+        13,
+        14
+      ],
+      "output": "Given the 52-year-old man’s hypotension and tachycardia, immediate efforts should focus on hemodynamic stabilization. Considering the high likelihood of variceal bleeding in this 52-year-old man with hematemesis and signs of chronic liver disease, specific therapies to control and prevent further bleeding are essential.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Conditional/causal: given instability, stabilize; given variceal risk, specific therapies needed."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "Patients with cirrhosis and upper gastrointestinal bleeding are at high risk of bacterial infections, including spontaneous bacterial peritonitis (SBP).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of infection risks in cirrhosis+UGIB patients."
+    },
+    {
+      "source_claims": [
+        17,
+        18
+      ],
+      "output": "Balloon tamponade is effective for controlling variceal bleeding, but it is generally used only as a temporizing measure when other therapies fail or are unavailable.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Properties of balloon tamponade: efficacy and usage role."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "Ceftriaxone is an antibiotic, and antibiotic prophylaxis is crucial in cirrhotic patients with upper gastrointestinal bleeding to prevent spontaneous bacterial peritonitis and other infections.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Properties of ceftriaxone: drug class + indication for prophylaxis."
+    },
+    {
+      "source_claims": [
+        21,
+        22,
+        23
+      ],
+      "output": "Nadolol is a non-selective beta-blocker used for long-term prevention of variceal bleeding, but nadolol is not useful in acute settings.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of nadolol properties: class, indication, limitation."
+    },
+    {
+      "source_claims": [
+        24,
+        25,
+        26
+      ],
+      "output": "Octreotide is a somatostatin analogue that reduces splanchnic blood flow and portal pressures, making it effective in acute variceal hemorrhage.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of octreotide properties: class, mechanism, indication."
+    },
+    {
+      "source_claims": [
+        27,
+        28
+      ],
+      "output": "Platelet transfusion is typically indicated when platelet count is extremely low (<50,000/mm^3) or when there is active bleeding and platelet dysfunction.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Parallel indications for platelet transfusion."
+    },
+    {
+      "source_claims": [
+        29,
+        30,
+        31
+      ],
+      "output": "For the 52-year-old man with acute massive hematemesis, suspected variceal bleeding, hypotension, and tachycardia, octreotide is the most appropriate initial step because immediate priority is rapid control of bleeding and hemodynamic stabilization. Ceftriaxone is also important, but the final answer is Octreotide.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Final answer (Octreotide) merged with supporting reasoning."
+    }
+  ]
+}

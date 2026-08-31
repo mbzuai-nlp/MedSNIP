@@ -1,0 +1,79 @@
+{
+  "entry_id": 116,
+  "batch": 12,
+  "shared_context": {
+    "age": "40-year-old",
+    "sex": "male",
+    "chief_complaint": "chronic cough worse at night",
+    "medical_history": "Chronic cough for several years worsening over the last few months; recently moved to the United States to work in construction; 10-pound weight loss over 3 months; darker stools; denies difficulty swallowing or sensation of food getting stuck; drinks alcohol 1-2 times per week; never smoked; no family history of cancer; South Asian background",
+    "family_history": "Denies family history of cancer",
+    "vitals": "Temp 98.6°F (37°C), BP 114/72 mmHg, pulse 82/min, respirations 12/min",
+    "exam_findings": "Lungs clear to auscultation bilaterally without wheezing; abdomen soft and non-distended; no tenderness to palpation; bowel sounds present",
+    "correct_answer": "Helicobacter pylori stool antigen test (C)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "The patient's cough is worse at night, which is a common symptom of gastroesophageal reflux disease (GERD). However, the lack of difficulty swallowing or a feeling of food getting stuck reduces the likelihood of a mechanical obstruction.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates symptom features pointing toward/against GERD vs mechanical obstruction."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "The patient's weight loss and darker stools could indicate a gastrointestinal issue. Darker stools can be caused by gastrointestinal bleeding, which could be due to peptic ulcer disease (PUD) or gastric cancer.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "A",
+      "pattern_notes": "Causal chain: GI symptoms -> GI bleeding -> possible causes (PUD, gastric cancer)."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "The patient's southern Asian background increases his risk for Helicobacter pylori infection and subsequent peptic ulcers.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Parallel risk factors from same background trait (H. pylori risk, ulcer risk)."
+    },
+    {
+      "source_claims": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "output": "The most appropriate next step is to investigate the cause of the patient's possible bleeding. Option C, Helicobacter pylori stool antigen test, is the most appropriate next step. This test can help diagnose H. pylori infection, which is associated with peptic ulcer disease (PUD) and gastric cancer.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (H. pylori stool antigen test) merged with supporting rationale about disease associations."
+    }
+  ]
+}

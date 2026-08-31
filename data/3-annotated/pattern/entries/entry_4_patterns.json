@@ -1,0 +1,55 @@
+{
+  "entry_id": 4,
+  "batch": 1,
+  "shared_context": {
+    "topic": "Taking NyQuil and Benadryl at the same time",
+    "drug_a": "NyQuil",
+    "drug_b": "Benadryl"
+  },
+  "snippets": [
+    {
+      "source_claims": [1, 2, 3],
+      "output": "Taking NyQuil and Benadryl at the same time is generally not recommended because it increases the risk of side effects and the potential for overdose.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Recommendation (atom 1) with causal reasons (atoms 2-3) via 'because'."
+    },
+    {
+      "source_claims": [4, 5, 6, 7],
+      "output": "Both NyQuil and Benadryl contain antihistamines, and taking NyQuil and Benadryl at the same time can lead to excessive sedation, dizziness, and impaired coordination.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "A",
+      "pattern_notes": "Mechanism (both contain antihistamines) -> enumerated effects (sedation, dizziness, coordination). Primary B causal; secondary A enumeration of effects."
+    },
+    {
+      "source_claims": [8, 9, 10, 11, 12, 13, 14, 15, 16],
+      "output": "NyQuil typically contains doxylamine, an antihistamine, while Benadryl contains diphenhydramine, another antihistamine. Combining these can enhance the sedative effects and increase the risk of side effects such as dry mouth, urinary retention, and confusion, especially in older adults.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": "A",
+      "pattern_notes": "Drug profiles (8-11) -> combining enhances sedation (12, mechanism) -> enumerated side effects (13-15) -> risk modifier (16, older adults). Primary B (mechanism-to-effect chain); secondary A (enumeration of effects and shared properties)."
+    },
+    {
+      "source_claims": [17, 18, 19],
+      "output": "It is important to consult with a healthcare provider before taking NyQuil and Benadryl at the same time, because a healthcare provider can determine whether taking NyQuil and Benadryl together is safe based on individual health conditions and other medications being taken.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Recommendation (atom 17) with causal reasons via 'because' (atoms 18-19: HCP can ensure safety based on conditions + medications)."
+    }
+  ]
+}

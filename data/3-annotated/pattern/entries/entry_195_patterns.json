@@ -1,0 +1,185 @@
+{
+  "entry_id": 195,
+  "batch": 20,
+  "shared_context": {
+    "age": "15-year-old",
+    "sex": "male",
+    "chief_complaint": "amber-colored urine and persistent proteinuria on urinalysis after appendectomy follow-up",
+    "medical_history": "appendectomy 1 week ago; otherwise asymptomatic with no abdominal pain, fevers, chills, nausea, vomiting, diarrhea, or constipation; tolerating solids and liquids; back to playing basketball without difficulty",
+    "vitals": "Temperature 98.6°F (37°C), blood pressure 110/70 mmHg, pulse 76/min, respirations 15/min",
+    "labs": "Urinalysis on two occasions: epithelial cells scant, glucose negative, protein 3+, WBC 3/hpf, bacteria none, leukocyte esterase negative, nitrites negative",
+    "exam_findings": "physical exam unremarkable; laparoscopic incision sites clean without erythema",
+    "correct_answer": "Urine dipstick in the morning and in the afternoon (D)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The 15-year-old patient appears to be recovering well after an appendectomy, with no significant symptoms or abnormalities in his physical exam.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single standalone assessment of recovery status."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "The urinalysis shows 3+ protein in the urine with scant epithelial cells, negative glucose, WBC, bacteria, leukocyte esterase, and nitrites, suggesting a possible kidney issue, including acute kidney injury (AKI) or urinary tract infection (UTI).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates possible kidney issues (AKI, UTI) suggested by findings."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "The lack of symptoms such as pain, fever, and abdominal tenderness makes a urinary tract infection (UTI) less likely.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Lists parallel absent symptoms making UTI less likely."
+    },
+    {
+      "source_claims": [
+        16,
+        17,
+        18
+      ],
+      "output": "Option A (CT scan abdomen and pelvis with contrast) might be considered if there is a suspicion of obstruction or structural abnormalities, but it is not the most appropriate next step given the patient's presentation.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "A",
+      "pattern_notes": "Conclusion (not appropriate next step) supported by premises about when Option A would apply."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "Option B (Renal biopsy) would be an invasive procedure and is not indicated without further diagnostic workup.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (not indicated) with supporting premise (invasive without workup)."
+    },
+    {
+      "source_claims": [
+        21,
+        22
+      ],
+      "output": "Option D (Urine dipstick in the morning and in the afternoon) would be helpful to assess the dynamic nature of proteinuria but does not provide a comprehensive assessment of renal function.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Evaluates Option D: helpful for proteinuria but incomplete - reasoning + judgment."
+    },
+    {
+      "source_claims": [
+        23
+      ],
+      "output": "Option E (Urine electrolytes and creatinine) would provide valuable information about renal function.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single standalone claim about Option E's utility."
+    },
+    {
+      "source_claims": [
+        24,
+        25
+      ],
+      "output": "The most appropriate next step in management would be to assess the patient's renal function through urine electrolytes and creatinine levels. The final answer is E) Urine electrolytes and creatinine.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Final answer (E) merged with justifying recommendation."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "Acute kidney injury can be caused by various factors, including nephrotoxic medications, sepsis, and vascular issues.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of causes of AKI."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Acute kidney injury can lead to changes in urine output.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone fact about AKI and urine output."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "A 15-year-old boy’s amber-colored urine could indicate a possible kidney issue.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single standalone interpretation of amber urine."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Urine electrolytes and creatinine levels are essential for diagnosing AKI and assessing renal function.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Parallel properties of urine electrolytes/creatinine (diagnose AKI, assess renal function)."
+    }
+  ]
+}

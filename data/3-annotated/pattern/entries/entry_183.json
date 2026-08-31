@@ -1,0 +1,110 @@
+{
+  "entry_id": 183,
+  "batch": 19,
+  "shared_context": {
+    "age": "45",
+    "sex": "male",
+    "chief_complaint": "dysphagia, slurred speech, coughing on liquids for 3 months",
+    "exam_findings": "tongue fasciculations, brisk jaw-jerk",
+    "correct_answer": "Riluzole (D)"
+  },
+  "atoms": {
+    "1": "Difficulty swallowing (dysphagia) and slurred speech may indicate a neuromuscular disorder.",
+    "2": "The patient's past coughing when drinking liquids suggests a disorder of the central or peripheral nervous system.",
+    "3": "Slurred speech suggests a disorder of the central or peripheral nervous system.",
+    "4": "These symptoms (coughing when drinking liquids and slurred speech) can lead to aspiration.",
+    "5": "No significant medical history makes it less likely that the symptoms are due to a secondary cause.",
+    "6": "A secondary cause could be a medication side effect or another medical condition.",
+    "7": "The lack of fever, normal blood pressure, and normal pulse and respirations make an infectious or acute inflammatory cause less likely.",
+    "8": "These physical exam findings suggest a disorder of the lower motor neuron.",
+    "9": "No sensory deficits support a lower motor neuron disorder.",
+    "10": "The most likely diagnosis is amyotrophic lateral sclerosis (ALS).",
+    "11": "ALS is a motor neuron disease.",
+    "12": "ALS is characterized by the progressive degeneration of both upper and lower motor neurons.",
+    "13": "Given the diagnosis of ALS, the best therapy for improving survival is Riluzole.",
+    "14": "Riluzole is the only FDA-approved medication for ALS.",
+    "15": "Riluzole has been shown to prolong survival by an average of 2-3 months.",
+    "16": "The correct answer is: (D) Riluzole."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "Dysphagia and slurred speech may indicate a neuromuscular disorder; coughing when drinking liquids and slurred speech suggest a disorder of the central or peripheral nervous system, and these symptoms can lead to aspiration.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A enumeration of symptom-to-disorder reasoning."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "No significant medical history makes it less likely that the symptoms are due to a secondary cause such as a medication side effect or another medical condition.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B causal chain; atom 6 defines 'secondary cause' from atom 5."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The lack of fever, normal blood pressure, and normal pulse and respirations make an infectious or acute inflammatory cause less likely.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "The physical exam findings suggest a disorder of the lower motor neuron, and the absence of sensory deficits supports a lower motor neuron disorder.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A; ALS involves both UMN (jaw-jerk) and LMN (fasciculations), so labeling only as LMN disorder is incomplete but not wrong."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "The most likely diagnosis is amyotrophic lateral sclerosis (ALS), a motor neuron disease characterized by the progressive degeneration of both upper and lower motor neurons.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: conclusion (10) + premises defining ALS (11, 12)."
+    },
+    {
+      "source_claims": [
+        13,
+        15,
+        16
+      ],
+      "output": "Given the diagnosis of ALS, the best therapy for improving survival is Riluzole, which has been shown to prolong survival by an average of 2-3 months; the correct answer is (D) Riluzole.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C conclusion + premise + answer restatement."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Riluzole is the only FDA-approved medication for ALS.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Factually outdated: Edaravone (2017), Relyvrio (2022), and tofersen (2023) are also FDA-approved for ALS. Kept atomic to preserve label."
+    }
+  ]
+}

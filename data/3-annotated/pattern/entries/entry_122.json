@@ -1,0 +1,121 @@
+{
+  "entry_id": 122,
+  "batch": 13,
+  "shared_context": {
+    "topic": "PID (pelvic inflammatory disease) treatment"
+  },
+  "atoms": {
+    "1": "Pelvic inflammatory disease (PID) is typically treated with a combination of antibiotics and supportive care.",
+    "2": "The primary goal of treatment for PID is to eliminate the infection.",
+    "3": "The primary goal of treatment for PID is to alleviate symptoms.",
+    "4": "The primary goal of treatment for PID is to prevent long-term complications.",
+    "5": "The choice of antibiotics for PID depends on the severity of the infection.",
+    "6": "The choice of antibiotics for PID depends on the patient's medical history.",
+    "7": "The choice of antibiotics for PID depends on any allergies or sensitivities of the patient.",
+    "8": "For mild to moderate PID, a combination of oral antibiotics such as ceftriaxone and doxycycline is often prescribed.",
+    "9": "For severe cases of PID, hospitalization may be necessary.",
+    "10": "For severe cases of PID, intravenous antibiotics such as cefotetan and clindamycin may be administered.",
+    "11": "Supportive care is essential in managing PID symptoms in addition to antibiotics.",
+    "12": "Pain management with over-the-counter pain relievers such as ibuprofen or acetaminophen is part of supportive care for PID.",
+    "13": "Rest and hydration help the body recover from the infection in PID.",
+    "14": "Avoiding sexual activity until symptoms resolve and the patient is no longer contagious is recommended for PID patients.",
+    "15": "Follow-up appointments with a healthcare provider are necessary to monitor progress and adjust treatment for PID as needed.",
+    "16": "In some cases, surgical intervention may be necessary to treat complications of PID.",
+    "17": "Surgical intervention may be necessary to treat tubo-ovarian abscesses in PID.",
+    "18": "Surgical intervention may be necessary to treat infertility in PID.",
+    "19": "A healthcare provider will determine the need for surgery on a case-by-case basis for PID."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        4
+      ],
+      "output": "PID is typically treated with a combination of antibiotics and supportive care, with the primary goals of eliminating the infection and preventing long-term complications.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: framing claim plus enumeration of true treatment goals. Atom 3 (alleviate symptoms as a primary goal) is isolated because it is expert-false."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The primary goal of treatment for PID is to alleviate symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Isolated false atom; expert label is false (symptom relief is supportive, not a primary therapeutic goal of PID treatment)."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "The choice of antibiotics for PID depends on the severity of the infection, the patient's medical history, and any allergies or sensitivities.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of factors influencing antibiotic choice (same subject)."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "For mild to moderate PID, a combination of oral antibiotics such as ceftriaxone and doxycycline is often prescribed.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern E: kept atomic; outpatient ceftriaxone+doxycycline regimen is a distinct management line from the severe/inpatient regimen below."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "For severe cases of PID, hospitalization may be necessary and intravenous antibiotics such as cefotetan and clindamycin may be administered.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: conditional conclusion (severe cases need hospitalization) plus the inpatient IV regimen used."
+    },
+    {
+      "source_claims": [
+        11,
+        12,
+        14,
+        15
+      ],
+      "output": "Supportive care is essential alongside antibiotics for PID, including pain management with over-the-counter analgesics such as ibuprofen or acetaminophen, avoiding sexual activity until symptoms resolve and the patient is no longer contagious, and follow-up appointments to monitor progress and adjust treatment.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: conclusion (supportive care is essential) plus enumeration of its components. Atom 13 (rest and hydration) is isolated because it is expert-false."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Rest and hydration help the body recover from the infection in PID.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Isolated false atom; expert label is false. Kept separate so the rest of the supportive-care enumeration remains true."
+    },
+    {
+      "source_claims": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "output": "In some cases, surgical intervention may be necessary to treat complications of PID such as tubo-ovarian abscesses or infertility, with the need for surgery determined by a healthcare provider on a case-by-case basis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: conclusion (surgery may be needed) + enumeration of indications (tubo-ovarian abscess, infertility) + decision rule (case-by-case)."
+    }
+  ]
+}

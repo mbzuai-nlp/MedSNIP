@@ -1,0 +1,114 @@
+{
+  "entry_id": 146,
+  "batch": 15,
+  "shared_context": {
+    "age": "44-year-old",
+    "sex": "male",
+    "chief_complaint": "Multiple stab wounds to the abdomen",
+    "medical_history": "Homeless, intoxicated on presentation, unable to provide further history",
+    "vitals": "Initial: temperature 97.5°F (36.4°C), blood pressure 92/52 mmHg, pulse 145/min, respirations 33/min, oxygen saturation 90% on room air; next day vitals within normal limits",
+    "exam_findings": "Sparse hair falling out throughout the body, rash at the corners of the mouth, multiple loose bowel movements, poor surgical wound healing on day 6 with wound held together only by sutures and minimal underlying healing",
+    "correct_answer": "Zinc (E)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "The patient has hemodynamic instability with blood pressure 92/52 mmHg, pulse 145/min, respirations 33/min, and oxygen saturation 90%. The initial management, including intubation and blood transfusions, is consistent with trauma protocols and addresses immediate life-threatening conditions.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties/features of initial management and patient state."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "On physical examination, the patient has a rash at the corners of his mouth (angular cheilitis), sparse hair falling out, multiple loose bowel movements, and poor wound healing observed on day 6.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Escalation resolved: Single source atom (4) but output enumerates multiple physical exam findings; structurally single-atom snippet listing one exam finding alon"
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Riboflavin (Vitamin B2) deficiency can cause angular cheilitis and stomatitis but is less likely to cause poor wound healing and hair loss.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of Riboflavin deficiency (what it causes vs. what it doesn't)."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Thiamine (Vitamin B1) deficiency is related to conditions like beriberi and Wernicke-Korsakoff syndrome, which do not correspond with the described symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of Thiamine deficiency (associated conditions and mismatch with symptoms)."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Vitamin C deficiency (scurvy) can lead to poor wound healing, easy bruising, and bleeding gums, but is less likely to cause hair loss and diarrhea.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of Vitamin C deficiency (what it causes vs. what it doesn't)."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Vitamin D deficiency mainly leads to bone-related issues such as osteomalacia and rickets, not specifically the symptoms described here.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of Vitamin D deficiency (associated conditions and mismatch with symptoms)."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "Zinc deficiency can cause alopecia (hair loss), dermatitis (rashes), diarrhea, and poor wound healing, aligning well with the patient's symptoms. The most likely deficiency is Zinc.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "A",
+      "pattern_notes": "Conclusion (Zinc is the most likely deficiency) merged with supporting premises (symptoms zinc deficiency causes and alignment with patient)."
+    }
+  ]
+}

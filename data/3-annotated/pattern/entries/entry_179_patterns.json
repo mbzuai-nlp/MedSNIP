@@ -1,0 +1,87 @@
+{
+  "entry_id": 179,
+  "batch": 18,
+  "shared_context": {
+    "age": "26-year-old",
+    "sex": "man",
+    "chief_complaint": "Fatigue and dark urine for 1 day",
+    "medical_history": "Recently diagnosed cellulitis of the left leg; no significant past medical history",
+    "medications": "Recently prescribed trimethoprim-sulfamethoxazole; no other current medications",
+    "vitals": "Temperature 98.6°F (37°C), blood pressure 115/72 mmHg, pulse 98/min, respirations 14/min",
+    "labs": "Hemoglobin 7.2 g/dL, total bilirubin 2.1 mg/dL, direct bilirubin 0.8 mg/dL, lactate dehydrogenase 470 U/L, glucose-6-phosphate dehydrogenase 7 U/gHb (normal 6-20 U/gHb)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Conjunctival icterus and dark urine suggest hemolysis. Fatigue and low hemoglobin indicate anemia. Elevated bilirubin and LDH levels support hemolysis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of findings supporting hemolysis/anemia diagnosis."
+    },
+    {
+      "source_claims": [
+        4,
+        8
+      ],
+      "output": "Trimethoprim-sulfamethoxazole can trigger hemolysis in patients with G6PD deficiency. The medication triggers hemolysis due to oxidative stress.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal chain: TMP-SMX triggers hemolysis via oxidative stress in G6PD deficiency."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "G6PD deficiency is an X-linked recessive disorder that predisposes red blood cells to oxidative damage, leading to hemolytic anemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal chain: X-linked G6PD deficiency -> oxidative damage -> hemolytic anemia."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Oxidative damage to red blood cells in G6PD deficiency can lead to the formation of Heinz bodies. These damaged cells can result in 'bite cells' or 'degmacytes' on a peripheral blood smear.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal chain: oxidative damage -> Heinz bodies -> bite cells on smear."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "The most likely finding on a peripheral blood smear in this patient is degmacytes (bite cells). The correct answer is degmacytes (bite cells).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion/final answer: most likely finding restated as the correct answer."
+    }
+  ]
+}

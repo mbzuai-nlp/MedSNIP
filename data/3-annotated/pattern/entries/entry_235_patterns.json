@@ -1,0 +1,137 @@
+{
+  "entry_id": 235,
+  "batch": 24,
+  "shared_context": {
+    "age": "45",
+    "sex": "female",
+    "chief_complaint": "Not feeling well with 1 week of cough, abdominal pain, trouble focusing, and 5-pound weight loss",
+    "medical_history": "African American woman with poorly controlled gastroesophageal reflux disease; non-smoker",
+    "medications": "Antacids",
+    "vitals": "Temp 98.6F (37C), BP 115/71 mmHg, pulse 72/min, respirations 12/min",
+    "labs": "Serum: Na+ 139 mEq/L, K+ 4.1 mEq/L, Cl- 101 mEq/L, HCO3- 24 mEq/L, urea nitrogen 12 mg/dL, glucose 70 mg/dL, creatinine 0.9 mg/dL, Ca2+ 12.5 mg/dL, alkaline phosphatase 150 U/L, phosphorus 2.0 mg/dL; Urine: amber, nitrites negative, sodium 5 mmol/24 hours, RBCs 0/hpf"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "output": "The normal range for serum calcium is 8.5-10.2 mg/dL, and the patient's level is 12.5 mg/dL, indicating hypercalcemia. The normal range for serum alkaline phosphatase is 44-147 U/L, and the patient's level is 150 U/L, which is elevated. The normal range for serum phosphorus is 2.5-4.5 mg/dL, and the patient's level is 2.0 mg/dL, indicating hypophosphatemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of lab reference ranges and interpretations for multiple analytes."
+    },
+    {
+      "source_claims": [
+        6,
+        13
+      ],
+      "output": "Antacid overuse can cause hypercalcemia if calcium-containing antacids are overused. However, without a history of such overuse, this is less likely.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Mechanism followed by conditional negation based on history."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        14
+      ],
+      "output": "Increased 1,25-dihydroxyvitamin D is typically seen in granulomatous diseases like sarcoidosis and some lymphomas. There is no evidence of granulomatous disease or lymphoma in the patient's history.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Disease associations with vitamin D followed by reasoning that those diseases are absent."
+    },
+    {
+      "source_claims": [
+        9,
+        15,
+        16,
+        17
+      ],
+      "output": "Primary hyperparathyroidism is a common cause of hypercalcemia and causes hypophosphatemia. It sometimes causes elevated alkaline phosphatase.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerated properties/effects of primary hyperparathyroidism."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        24,
+        25,
+        26
+      ],
+      "output": "Certain cancers can cause hypercalcemia through mechanisms like ectopic PTH-related protein (PTHrP) production or osteolytic metastases. Malignancy can also cause hypercalcemia through direct bone invasion leading to increased calcium release.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of mechanisms by which malignancy causes hypercalcemia."
+    },
+    {
+      "source_claims": [
+        12,
+        20
+      ],
+      "output": "Viral illness is unlikely to cause isolated hypercalcemia and typically does not cause hypercalcemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Parallel statements about viral illness and hypercalcemia."
+    },
+    {
+      "source_claims": [
+        18,
+        19,
+        21,
+        22,
+        23
+      ],
+      "output": "In a 45-year-old African American woman with 1 week of cough, abdominal pain, trouble focusing, 5-pound weight loss, and significant hypercalcemia, malignancy is the most likely cause of the current presentation. Malignancy can cause hypercalcemia through production of PTHrP.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (malignancy most likely) supported by symptom premises and mechanism."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "A 45-year-old African American woman’s urine red blood cell count of 0/hpf is normal.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone lab interpretation fact."
+    }
+  ]
+}

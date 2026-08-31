@@ -1,0 +1,177 @@
+{
+  "entry_id": 187,
+  "batch": 19,
+  "shared_context": {
+    "age": "43",
+    "sex": "male",
+    "chief_complaint": "bright red blood per rectum after heavy alcohol use and forceful vomiting",
+    "labs": "Hgb 12, Hct 36, leukocytes 5500, platelets 179000",
+    "correct_answer": "Submucosal esophageal tear / Mallory-Weiss (D)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This suggests a recent onset of symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "BRBPR began yesterday (scant) and worsened today; recent onset is correct.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone observation about onset."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The patient's drinking and vomiting may be contributing factors to his current condition.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Heavy drinking and forceful vomiting are the proximate cause (Mallory-Weiss).",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone causal observation."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Laboratory studies show normal hematocrit, indicating the patient is not significantly anemic.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "true",
+      "notes": "Causal chain (B). Hct 36 is at the low end of normal for males (ref ~41-50), and the case states slight anemia with Hgb 12. Calling Hct 'normal' and patient 'not significantly anemic' understates the finding in this patient. As a generic statement (Hct ~36 is roughly normal range, no severe anemia), broadly acceptable.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern B in notes: causal chain from normal Hct to no significant anemia."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Erosion into a gastric vessel is less likely given the patient's symptoms; melena (black, tarry stools) would be more characteristic of upper GI bleeding, and the presentation with bright red blood in the stool suggests it is less likely to be erosion into a gastric vessel.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Conclusion+premises (C). The reasoning is internally inconsistent and incorrect: Dieulafoy/gastric erosion is upper GI and can present with massive hematochezia when brisk; the correct answer (Mallory-Weiss) is also upper GI yet still presents with BRBPR here. Using BRBPR alone to exclude an upper GI source is wrong, and melena vs. hematochezia depends on transit/volume, not source location alone.",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern C in notes: conclusion (less likely) + premises (melena pattern, BRBPR)."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Diverticulitis typically presents with abdominal pain, fever, and signs of infection such as leukocytosis, which are not present in this case.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Causal chain (B). Classic diverticulitis features; absent here (afebrile, nontender, WBC 5500).",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern B in notes: diverticulitis features as causal/conditional chain."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Malignancy is less likely given the patient's age (43) and the acute onset of symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Causal chain (B). Reasonable rationale; CRC less likely at 43 with abrupt onset post-vomiting.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern B in notes: malignancy less likely due to age + acute onset."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Submucosal esophageal tear (Mallory-Weiss syndrome) is characterized by a mucosal tear in the esophagus, which can be caused by intense, forceful emesis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Causal chain (B). Standard definition/etiology of Mallory-Weiss.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern B in notes: definition + etiology causal link."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Vomiting after heavy drinking can cause a submucosal esophageal tear, and the patient's history of vomiting profusely overnight makes this a likely cause of his symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Causal chain (B). Matches the canonical Mallory-Weiss vignette.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern B in notes: vomiting causes tear, applied to patient."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Vascular malformation is an unlikely cause.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Standalone fact (D). Vascular malformations (e.g., AVMs, angiodysplasia) are an important cause of painless lower GI bleeding; while less likely than Mallory-Weiss here given the vomiting history, calling them 'unlikely' as a blanket statement is too strong. Original gold also marked false.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern D in notes: standalone (incorrect) claim."
+    },
+    {
+      "source_claims": [
+        17,
+        18
+      ],
+      "output": "There is no mention of a personal or family history of vascular malformations.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Enumeration (A). Accurate description of the vignette.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern A in notes: enumeration of absent personal/family history."
+    },
+    {
+      "source_claims": [
+        19
+      ],
+      "output": "There are no other associated symptoms indicative of vascular malformation.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Standalone fact (D). Many vascular malformations (e.g., colonic angiodysplasia, Dieulafoy) present with painless bleeding alone; absence of 'other symptoms' does not argue against them. Original gold false.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern D in notes: standalone fact about absent associated symptoms."
+    },
+    {
+      "source_claims": [
+        20
+      ],
+      "output": "The most likely cause of the patient's bleeding is submucosal esophageal tear (Mallory-Weiss syndrome).",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "Standalone conclusion (D). Correct for THIS patient (matches answer key D). As a generic statement it is meaningless without context, hence false in general. Marquee ctx>=gen divergence; original gold marked false but the labeled correct answer is D.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern D in notes: standalone conclusion identifying Mallory-Weiss."
+    }
+  ]
+}

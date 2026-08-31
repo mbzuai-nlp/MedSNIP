@@ -1,0 +1,57 @@
+{
+  "entry_id": 242,
+  "batch": 25,
+  "shared_context": {
+    "topic": "Augmentin vs Amoxicillin comparison",
+    "drug_a": "Augmentin",
+    "drug_b": "Amoxicillin"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Augmentin is not the same thing as amoxicillin; it is a combination antibiotic containing amoxicillin and clavulanic acid.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of Augmentin: not same as amoxicillin, combination antibiotic, contains amoxicillin + clavulanic acid."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Amoxicillin is a penicillin-type antibiotic that can treat a variety of bacterial infections.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of amoxicillin: drug class and indication."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "Clavulanic acid is a beta-lactamase inhibitor that is added to Augmentin to overcome bacterial resistance: certain bacteria produce the enzyme beta-lactamase, which inhibits this enzyme that would otherwise inactivate amoxicillin.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B causal chain: clavulanic acid added → mechanism (inhibits beta-lactamase) → why (the enzyme would otherwise inactivate amoxicillin).",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern B causal chain: clavulanic acid added → inhibits beta-lactamase → would otherwise inactivate amoxicillin."
+    }
+  ]
+}

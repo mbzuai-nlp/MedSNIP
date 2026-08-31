@@ -1,0 +1,130 @@
+{
+  "entry_id": 144,
+  "batch": 15,
+  "shared_context": {
+    "age": "32-year-old",
+    "sex": "man",
+    "chief_complaint": "headache",
+    "medical_history": "asthma, occasional migraine headaches",
+    "vitals": "Temp 100.4°F (38.0°C), BP 110/60 mmHg, pulse 95/min, respirations 17/min, oxygen saturation 98% on room air",
+    "labs": "CSF cell count 175/mm^3, RBCs 0/mm^3, Cl- 119 mEq/L, glucose 49 mg/dL, pressure 150 mmH2O, total protein 55 mg/dL",
+    "exam_findings": "appears uncomfortable, no focal neurologic deficits, pain with passive neck flexion, no edema or rashes, lungs clear to auscultation bilaterally",
+    "correct_answer": "Ceftriaxone and vancomycin (C)"
+  },
+  "atoms": {
+    "1": "A fever of 100.4°F (38.0°C) is indicative of an infectious process.",
+    "2": "Pain with passive neck flexion suggests possible meningitis.",
+    "3": "No focal deficits rule out significant intracranial pathology like a stroke.",
+    "4": "No edema or rashes make some infectious processes like certain viral infections less likely.",
+    "5": "Clear lungs rule out concurrent respiratory infection.",
+    "6": "An elevated WBC count indicates inflammation or infection.",
+    "7": "A RBC count of 0/mm^3 indicates no bleeding or traumatic lumbar puncture.",
+    "8": "A chloride level of 119 mEq/L is within normal limits.",
+    "9": "A glucose level of 49 mg/dL is slightly lower than normal and can be seen in bacterial meningitis.",
+    "10": "An elevated CSF pressure suggests increased intracranial pressure.",
+    "11": "An elevated protein level is consistent with infection/inflammation.",
+    "12": "Elevated WBC count and protein, slightly decreased glucose, and elevated opening pressure point towards bacterial meningitis.",
+    "13": "Viral meningitis typically shows a lower WBC count and normal glucose levels.",
+    "14": "Fungal meningitis would typically present with a more chronic picture and different patient demographics.",
+    "15": "The appropriate treatment for bacterial meningitis should be empiric antibiotics.",
+    "16": "Empiric antibiotics should cover common bacterial pathogens.",
+    "17": "Ceftriaxone and vancomycin cover a broad range of bacteria.",
+    "18": "Ceftriaxone and vancomycin cover Streptococcus pneumoniae and Neisseria meningitidis.",
+    "19": "Steroids may be added to reduce inflammation and prevent complications in some cases.",
+    "20": "The most appropriate treatment regimen based on the patient's clinical presentation and CSF findings is Ceftriaxone and vancomycin."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The patient, a 32-year-old man, presents with a fever of 100.4°F (38.0°C), headache, nausea, vomiting, and neck pain, which are indicative of an infectious process. Pain with passive neck flexion suggests possible meningitis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "The neurologic exam reveals no focal deficits, which rules out significant intracranial pathology like a stroke. No edema or rashes make some infectious processes like certain viral infections less likely. Clear lungs rule out concurrent respiratory infection.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "The CSF analysis shows an elevated WBC count of 175/mm^3, indicating inflammation or infection, and a RBC count of 0/mm^3, indicating no bleeding or traumatic lumbar puncture. The chloride level is 119 mEq/L, which is within normal limits.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11
+      ],
+      "output": "The CSF glucose level is 49 mg/dL, slightly lower than normal, which can be seen in bacterial meningitis. The elevated CSF pressure of 150 mmH2O suggests increased intracranial pressure, and the elevated protein level of 55 mg/dL is consistent with infection/inflammation.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "false",
+      "label_in_general": "true",
+      "notes": "General principles (low glucose → bacterial, elevated pressure → ICP, elevated protein → infection) are correct. However, 49 mg/dL is within normal CSF glucose range (40–70), and 150 mmH₂O is within normal opening pressure (60–200). Misapplied to this patient."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "Viral meningitis typically shows a lower WBC count and normal glucose levels. Fungal meningitis would typically present with a more chronic picture and different patient demographics.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "output": "The appropriate treatment for bacterial meningitis should be empiric antibiotics that cover common bacterial pathogens. Ceftriaxone and vancomycin cover a broad range of bacteria, including Streptococcus pneumoniae and Neisseria meningitidis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        19
+      ],
+      "output": "Steroids may be added to reduce inflammation and prevent complications in some cases.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        12,
+        20
+      ],
+      "output": "The most appropriate treatment regimen based on the patient's clinical presentation and CSF findings is Ceftriaxone and vancomycin.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "entry_id": 152,
+  "batch": 16,
+  "shared_context": {
+    "age": "24-year-old",
+    "sex": "man",
+    "chief_complaint": "Left leg thermal burn with worsening pain, edema, cold toes, and absent distal pulses after MRI",
+    "medical_history": "Epilepsy refractory to valproic acid, phenytoin, and levetiracetam; admitted to medical intensive care unit for continuous electroencephalogram monitoring after circumferential thermal burn from electrocardiogram lead during magnetic resonance imaging",
+    "medications": "Valproic acid, phenytoin, levetiracetam, midazolam infusion",
+    "vitals": "Temperature 100°F (37.8°C), blood pressure 110/75 mmHg, pulse 80/min, respirations 10/min, oxygen saturation 95% on 2 liters nasal cannula",
+    "exam_findings": "Significant thermal burn circumferentially around the left leg; left toes cold to touch with significant edema; no dorsalis pedis or posterior tibial pulses detected on the left lower extremity",
+    "labs": "Delta pressure 25 mmHg in the left leg",
+    "imaging": "Brain magnetic resonance imaging performed under anesthetic monitoring",
+    "correct_answer": "Fasciotomy (C)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Delta pressure, defined as diastolic blood pressure minus intracompartmental pressure, is used to diagnose compartment syndrome, and in this 24-year-old man with a circumferential left leg thermal burn, a left leg delta pressure of 25 mmHg suggests compartment syndrome.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates diagnostic criteria: definition of delta pressure + threshold value applied to patient."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Compartment syndrome is a condition in which increased pressure within a closed muscle compartment compromises the circulation and function of the tissues within that space.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone definition of compartment syndrome."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "A 24-year-old man with a circumferential left leg thermal burn has signs strongly indicating compartment syndrome, including cold left toes, significant edema, and absent dorsalis pedis and posterior tibial pulses, and a left leg delta pressure of 25 mmHg also strongly indicates compartment syndrome.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates parallel signs (clinical findings + delta pressure) all indicating compartment syndrome."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "The definitive treatment for compartment syndrome is fasciotomy, which relieves the increased intracompartmental pressure.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Treatment + mechanism: fasciotomy is definitive because it relieves intracompartmental pressure."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Intravenous fluid infusion based on the Parkland formula is critical for general burn management, but intravenous fluid infusion based on the Parkland formula does not relieve compartment syndrome.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel properties of Parkland-formula IV fluids: useful for burns, not for compartment syndrome."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "For a 24-year-old man with a circumferential left leg thermal burn, cold edematous toes, absent dorsalis pedis and posterior tibial pulses, and a left leg delta pressure of 25 mmHg, transfer to a burn center is not the immediate next step given the emergent nature of compartment syndrome.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct checkable fact ruling out an alternative management option."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "The most appropriate next step in management for a 24-year-old man with a circumferential left leg thermal burn, cold edematous toes, absent dorsalis pedis and posterior tibial pulses, and a left leg delta pressure of 25 mmHg is fasciotomy (C).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Final answer conclusion combined with the supporting clinical premises."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "For a 24-year-old man with a circumferential left leg thermal burn, cold edematous toes, absent dorsalis pedis and posterior tibial pulses, and a left leg delta pressure of 25 mmHg, the most appropriate next step is fasciotomy; amputation is not initially indicated without first attempting limb-saving procedures.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "E",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom kept separate addressing a distinct alternative option (amputation)."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Escharotomy is typically performed for circumferential burns that restrict chest expansion or blood flow. In this 24-year-old man with a circumferential left leg thermal burn, cold edematous toes, absent distal pulses, and a left leg delta pressure of 25 mmHg, the primary issue is compartment syndrome, not eschar restriction.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "General indication for escharotomy contrasted with reason it doesn't apply here; conditional/causal structure."
+    }
+  ]
+}

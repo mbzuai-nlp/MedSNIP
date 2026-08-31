@@ -1,0 +1,94 @@
+{
+  "entry_id": 243,
+  "batch": 25,
+  "shared_context": {
+    "topic": "Augmentin vs Amoxicillin comparison",
+    "drug_a": "Augmentin",
+    "drug_b": "Amoxicillin"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Augmentin is a brand name for a combination antibiotic medication that contains amoxicillin and clavulanate.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of Augmentin: brand name + contents."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Amoxicillin is the generic name for a type of penicillin antibiotic.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates properties of amoxicillin: generic name + drug class."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "The addition of clavulanate in Augmentin is intended to inhibit beta-lactamase enzymes produced by certain bacteria, which makes the antibiotic more effective against a broader range of bacteria.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal chain: clavulanate inhibits beta-lactamase, therefore broader effectiveness."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Augmentin is a specific formulation of amoxicillin that includes clavulanate, which enhances its antibacterial properties.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Augmentin includes clavulanate, which enhances antibacterial properties — reason/extension."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Amoxicillin by itself does not contain clavulanate.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single standalone fact, same topic as neighbors but distinct checkable claim."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Amoxicillin by itself is a more general term for a type of antibiotic.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Amoxicillin is a specific antibiotic, not a general term — kept atomic so the false claim is isolated.",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Isolated false atom kept apart so it doesn't contaminate true claims."
+    }
+  ]
+}

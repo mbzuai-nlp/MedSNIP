@@ -1,0 +1,78 @@
+{
+  "entry_id": 87,
+  "batch": 9,
+  "shared_context": "Consumer query: zoonotic transmission of cat tapeworm to humans",
+  "atoms": {
+    "1": "It is possible for humans to contract a tapeworm infection from their pets.",
+    "2": "Contracting a tapeworm infection from pets is relatively rare.",
+    "3": "The most common tapeworm in dogs is Dipylidium caninum.",
+    "4": "The most common tapeworm in cats is Dipylidium caninum.",
+    "5": "Humans can become infected with Dipylidium caninum if they accidentally ingest an infected flea that contains the larval tapeworm.",
+    "6": "Infection with Dipylidium caninum typically happens when infants or young children come into close contact with pets.",
+    "7": "Infants or young children may accidentally swallow a flea while playing with or cuddling with pets.",
+    "8": "To prevent infection, ensure your pet is regularly treated for fleas.",
+    "9": "To prevent infection, practice good hygiene.",
+    "10": "Practicing good hygiene includes washing hands after handling pets.",
+    "11": "Practicing good hygiene includes avoiding close contact with pets' bedding.",
+    "12": "Practicing good hygiene includes avoiding areas where fleas might be present."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "It is possible for humans to contract a tapeworm infection from their pets, although it is relatively rare.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: claim + qualifier."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "The most common tapeworm in dogs and cats is Dipylidium caninum.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: parallel facts about dogs and cats."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Humans can become infected with Dipylidium caninum if they accidentally ingest an infected flea that contains the larval tapeworm.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern D: standalone, biologically accurate transmission mechanism."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Infection typically happens when infants or young children come into close contact with pets and may accidentally swallow a flea while playing or cuddling with the animal.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B: cause (close pet contact in young children) + effect (flea ingestion)."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "To prevent infection, ensure your pet is regularly treated for fleas and practice good hygiene, such as washing hands after handling pets and avoiding close contact with pets' bedding or areas where fleas might be present.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: prevention conclusion + enumerated hygiene examples."
+    }
+  ]
+}

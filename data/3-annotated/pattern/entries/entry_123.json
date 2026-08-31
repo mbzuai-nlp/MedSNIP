@@ -1,0 +1,127 @@
+{
+  "entry_id": 123,
+  "batch": 13,
+  "shared_context": {
+    "topic": "Pelvic inflammatory disease treatment",
+    "condition": "Pelvic inflammatory disease (PID)"
+  },
+  "atoms": {
+    "1": "Pelvic inflammatory disease (PID) is treated with a combination of antibiotics.",
+    "2": "The antibiotics used for treating PID cover the most likely pathogens.",
+    "3": "The most likely pathogens for PID include Neisseria gonorrhoeae.",
+    "4": "The most likely pathogens for PID include Chlamydia trachomatis.",
+    "5": "The most likely pathogens for PID include anaerobes.",
+    "6": "The most likely pathogens for PID include Gram-negative facultative bacteria.",
+    "7": "The most likely pathogens for PID include streptococci.",
+    "8": "The treatment regimen for PID typically includes a combination of a cephalosporin and doxycycline.",
+    "9": "The treatment regimen for PID may include metronidazole.",
+    "10": "For outpatient treatment of PID, a common regimen is ceftriaxone 250 mg intramuscularly in a single dose.",
+    "11": "For outpatient treatment of PID, a common regimen includes doxycycline 100 mg orally twice a day for 14 days.",
+    "12": "For outpatient treatment of PID, metronidazole 500 mg orally twice a day for 14 days may be included.",
+    "13": "For inpatient treatment of PID, one option is cefotetan 2 g intravenously every 12 hours.",
+    "14": "For inpatient treatment of PID, one option is cefoxitin 2 g intravenously every 6 hours.",
+    "15": "For inpatient treatment of PID, doxycycline 100 mg orally or intravenously every 12 hours is included.",
+    "16": "Patients with PID should be re-evaluated within 48-72 hours to ensure clinical improvement.",
+    "17": "Sexual partners of patients with PID should also be treated to prevent reinfection."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Pelvic inflammatory disease (PID) is treated with a combination of antibiotics that cover the most likely causative pathogens.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C merge: general claim plus its rationale (broad-spectrum coverage)."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "The likely pathogens targeted in pelvic inflammatory disease (PID) treatment include Neisseria gonorrhoeae, Chlamydia trachomatis, anaerobes, and gram-negative facultative bacteria.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: enumeration of true causative organisms."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Streptococci are among the most likely pathogens in pelvic inflammatory disease (PID).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Isolated as a false atom; streptococci are not among the typical causative pathogens for PID."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Treatment regimens for pelvic inflammatory disease (PID) typically combine a cephalosporin with doxycycline, with or without metronidazole.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: properties of the same general regimen line."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "For outpatient treatment of pelvic inflammatory disease (PID), a common regimen is ceftriaxone 250 mg intramuscularly in a single dose.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Isolated false atom; current CDC guidance recommends ceftriaxone 500 mg IM (not 250 mg)."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "An outpatient regimen for pelvic inflammatory disease (PID) includes doxycycline 100 mg orally twice daily for 14 days, with or without metronidazole 500 mg orally twice daily for 14 days.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: components of the same outpatient oral regimen."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "An inpatient parenteral regimen for pelvic inflammatory disease (PID) is cefotetan 2 g intravenously every 12 hours or cefoxitin 2 g intravenously every 6 hours, plus doxycycline 100 mg orally or intravenously every 12 hours.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A merge: components of the same inpatient parenteral regimen line."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Patients with pelvic inflammatory disease (PID) should be re-evaluated within 48-72 hours to ensure clinical improvement.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Sexual partners of patients with pelvic inflammatory disease (PID) should also be treated to prevent reinfection.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    }
+  ]
+}

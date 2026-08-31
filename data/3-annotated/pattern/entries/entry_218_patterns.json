@@ -1,0 +1,152 @@
+{
+  "entry_id": 218,
+  "batch": 22,
+  "shared_context": {
+    "age": "33-year-old",
+    "sex": "woman",
+    "chief_complaint": "Muscle spasms and twitching in both upper and lower extremities for 3 days",
+    "medical_history": "No significant medical history; fatigue for 1 month; training for a marathon",
+    "medications": "Whey protein supplements, multivitamin, fish oil",
+    "vitals": "Temperature 98.5°F (36.9°C), blood pressure 103/71 mmHg, pulse 105/min, respirations 11/min, oxygen saturation 100% on room air",
+    "labs": "Hemoglobin 10 g/dL, hematocrit 30%, leukocyte count 6,100/mm^3 with normal differential, platelet count 187,500/mm^3, Na+ 130 mEq/L, Cl- 100 mEq/L, K+ 2.3 mEq/L initially then 2.4 and 2.5 mEq/L after potassium replacement, HCO3- 28 mEq/L, BUN 40 mg/dL then 20 mg/dL after fluids, glucose 79 mg/dL, creatinine 0.9 mg/dL, Ca2+ 8.2 mg/dL, Mg2+ 1.8 mg/dL, TSH 4.0 mIU/L, free T4 0.4 ng/dL",
+    "exam_findings": "Thin woman with thinning hair, pale appearance, dry mucous membranes; neurological and cardiac exams unremarkable",
+    "correct_answer": "Hypothyroidism (D)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A 33-year-old woman’s blood pressure of 103/71 mmHg suggests possible mild hypovolemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone interpretation of BP finding."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "The 33-year-old woman’s elevated pulse could be a response to dehydration or stress.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates two possible causes (dehydration, stress) of the same finding."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "A 33-year-old woman with muscle spasms and twitching has a normal TSH level of 4.0 mIU/L.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone lab interpretation."
+    },
+    {
+      "source_claims": [
+        5,
+        10
+      ],
+      "output": "The 33-year-old woman has hypothyroidism, as shown by a low free T4 with a normal TSH.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Diagnosis plus supporting lab feature listed together as properties of the patient."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "A 33-year-old woman’s calcium level of 8.2 mg/dL is slightly low but not critically low, and this mildly decreased calcium level is unlikely to explain the 33-year-old woman’s muscle spasms or twitching.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates two properties of the calcium finding: severity and clinical relevance."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The 33-year-old woman’s magnesium level is normal at 1.8 mg/dL, ruling out hypomagnesemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone lab interpretation."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "The 33-year-old woman’s mild hyponatremia alone is less likely to explain the persistent hypokalemia and muscle spasms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single false/uncertain atom kept apart; distinct checkable fact about hyponatremia."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Hypothyroidism can lead to electrolyte imbalances, including persistent hypokalemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone general physiology statement."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "The 33-year-old woman’s initial signs of hypovolemia improved with fluid administration.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone clinical fact about response to fluids."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "In this 33-year-old woman with 3 days of muscle spasms and twitching, the most likely underlying etiology is hypothyroidism. Hypothyroidism can lead to secondary electrolyte disturbances, including persistent hypokalemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Final diagnosis/conclusion merged with supporting reasoning about electrolyte disturbance mechanism."
+    }
+  ]
+}

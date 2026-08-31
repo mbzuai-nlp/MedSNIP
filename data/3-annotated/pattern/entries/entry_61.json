@@ -1,0 +1,123 @@
+{
+  "entry_id": 61,
+  "batch": 7,
+  "shared_context": {
+    "age": "55",
+    "sex": "male",
+    "chief_complaint": "right arm weakness over a few weeks; dropped a cup of tea today",
+    "medical_history": "diabetes; bodybuilder using anabolic steroids; 2 packs/day smoking since age 25; 2-7 alcoholic drinks/day; 17 lb weight loss over the last month",
+    "vitals": "temperature 99.5F, BP 177/108, pulse 90, RR 17, O2 98% RA",
+    "exam_findings": "decreased sensation in right arm, 2/5 strength right arm, 5/5 left arm; dull aching and burning pain in right arm; symptoms unchanged with head/neck position",
+    "correct_answer": "Cerebral infarction (C)"
+  },
+  "atoms": {
+    "1": "The patient's history of smoking and hypertension raises the risk for vascular events.",
+    "2": "The profound weakness and sensory changes suggest potential central nervous system involvement.",
+    "3": "Apical lung tumor (Pancoast tumor) may present with shoulder pain and muscle wasting.",
+    "4": "Pancoast tumor often affects the ulnar nerve distribution.",
+    "5": "The patient's symptoms are not consistent with Horner syndrome, which often accompanies Pancoast tumors.",
+    "6": "Brachial plexopathy can present with weakness and sensory deficits in the arm.",
+    "7": "Brachial plexopathy often results from trauma, compression, or radiation.",
+    "8": "The absence of positional changes somewhat argues against brachial plexopathy.",
+    "9": "Cerebral infarction (stroke) can cause sudden onset of unilateral weakness and sensory loss.",
+    "10": "The acute exacerbation of symptoms aligns well with cerebral infarction.",
+    "11": "Scalenus Anticus Syndrome is a type of thoracic outlet syndrome.",
+    "12": "Scalenus Anticus Syndrome typically presents with positional changes in symptoms.",
+    "13": "Scalenus Anticus Syndrome is less likely given the patient's presentation.",
+    "14": "Subclavian Steal Syndrome can cause arm weakness.",
+    "15": "Subclavian Steal Syndrome usually presents with arm claudication, dizziness, or syncope due to reversed blood flow in the vertebral artery.",
+    "16": "Subclavian Steal Syndrome is less likely without these additional symptoms.",
+    "17": "The most likely diagnosis is cerebral infarction (stroke)."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The 55-year-old male's history of heavy smoking (2 packs/day since age 25) and hypertension (BP 177/108) raises the risk for vascular events.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "In a 55-year-old male with right arm weakness over a few weeks, decreased sensation in the right arm, and 2/5 strength in the right arm, the profound weakness and sensory changes suggest potential central nervous system involvement.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "Apical lung tumor (Pancoast tumor) may present with shoulder pain, muscle wasting, and often affects the ulnar nerve distribution, but this 55-year-old male's symptoms are not consistent with Horner syndrome, which often accompanies Pancoast tumors.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "The reasoning incorrectly downplays Pancoast for this patient. Given heavy smoking, 17 lb weight loss, and lower-brachial-plexus arm weakness, Pancoast is the most likely diagnosis (correct answer A). The vignette doesn't document pupils/ptosis/anhidrosis, so absence of Horner is not established."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "Brachial plexopathy can present with weakness and sensory deficits in the arm and often results from trauma, compression, or radiation; in this 55-year-old male with right arm weakness and sensory loss, symptoms unchanged with head and neck position somewhat argue against brachial plexopathy.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Positional change is a hallmark of thoracic outlet syndromes (e.g., scalenus anticus), not of brachial plexopathy in general. Its absence does not specifically argue against brachial plexopathy."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Cerebral infarction (stroke) can cause sudden onset unilateral weakness and sensory loss, and the acute exacerbation of right arm weakness and decreased sensation in this 55-year-old male aligns well with cerebral infarction.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        11,
+        12,
+        13
+      ],
+      "output": "Scalenus anticus syndrome is a type of thoracic outlet syndrome that typically presents with positional changes in symptoms, so it is less likely in this 55-year-old male with right arm weakness, decreased sensation, and dull aching and burning right arm pain that are unchanged with head and neck position.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        14,
+        15,
+        16
+      ],
+      "output": "Subclavian steal syndrome can cause arm weakness, but subclavian steal syndrome usually presents with arm claudication, dizziness, or syncope due to reversed blood flow in the vertebral artery. In this 55-year-old male with right arm weakness, subclavian steal syndrome is less likely without arm claudication, dizziness, or syncope.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": ""
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "In this 55-year-old male with several weeks of progressive right arm weakness, acute worsening causing him to drop a cup of tea, decreased sensation and 2/5 strength in the right arm, and symptoms unchanged by head and neck position, the most likely diagnosis is cerebral infarction (stroke).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": ""
+    }
+  ]
+}

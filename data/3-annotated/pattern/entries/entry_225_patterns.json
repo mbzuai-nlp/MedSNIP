@@ -1,0 +1,244 @@
+{
+  "entry_id": 225,
+  "batch": 23,
+  "shared_context": {
+    "age": "77-year-old",
+    "sex": "man",
+    "chief_complaint": "Sudden onset right upper extremity weakness followed by trouble speaking and rapid decline in responsiveness",
+    "medical_history": "Hypertension and atrial fibrillation",
+    "medications": "Metoprolol, apixaban, lisinopril",
+    "vitals": "Temperature 99.0°F (37.2°C), blood pressure 170/100 mmHg, pulse 95/min, respirations 16/min",
+    "labs": "Fingerstick blood glucose 122 mg/dL",
+    "exam_findings": "Initially not responding to verbal stimuli and only withdrawing left upper extremity and lower extremity to pain; had a seizure, developed agonal breathing, and then no longer responded to painful stimuli",
+    "correct_answer": "Intracerebral hemorrhage (B)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "In a 77-year-old man with hypertension and atrial fibrillation, both hypertension and atrial fibrillation are notable risk factors for cerebrovascular events.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel risk factors enumerated for cerebrovascular events."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "A fingerstick blood glucose of 122 mg/dL in a 77-year-old man is within the normal range.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone lab interpretation."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Epidural hematomas typically result from trauma and are associated with a lucid interval followed by rapid deterioration.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerated properties of epidural hematoma (cause + clinical course)."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "A 77-year-old man with sudden right upper extremity weakness, trouble speaking, and rapid decline in responsiveness has no history of head trauma and does not have a lucid interval, making an epidural hematoma less likely.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Premises (no trauma, no lucid interval) supporting conclusion (epidural less likely)."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "Intracerebral hemorrhage can present with sudden neurological deficits, seizures, and rapid deterioration, especially in hypertensive patients.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerated presenting features of intracerebral hemorrhage."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "In a 77-year-old man with sudden right upper extremity weakness, trouble speaking, and rapid decline in responsiveness, the absence of a history of severe headache and the absence of other focal neurological signs prior to onset suggest other possibilities might be more likely.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel absent features suggesting other possibilities."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "Ischemic stroke, is very likely given a 77-year-old man's sudden onset right upper extremity weakness followed by trouble speaking and rapid decline in responsiveness.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (ischemic stroke likely) supported by clinical presentation premise."
+    },
+    {
+      "source_claims": [
+        17,
+        18
+      ],
+      "output": "Hypertension and atrial fibrillation significantly increase the risk of ischemic stroke, with atrial fibrillation increasing risk due to thrombosis or embolism.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of risk factors for ischemic stroke."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "Neurological deterioration with seizures can occur in ischemic stroke, but in a 77-year-old man with sudden onset right upper extremity weakness followed by trouble speaking and rapid decline in responsiveness, this is less common without early ischemic changes on imaging.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel properties of neurological deterioration with seizures in ischemic stroke."
+    },
+    {
+      "source_claims": [
+        21,
+        22
+      ],
+      "output": "Subarachnoid hemorrhage typically presents with a sudden, severe “thunderclap” headache.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "SAH option header + characteristic presentation property."
+    },
+    {
+      "source_claims": [
+        23,
+        24
+      ],
+      "output": "A 77-year-old man with sudden onset right upper extremity weakness, trouble speaking, and rapid decline in responsiveness has a clinical picture that is not classic for subarachnoid hemorrhage, although the deterioration could be consistent with a severe case of subarachnoid hemorrhage.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two contrasting properties of the patient's fit with SAH."
+    },
+    {
+      "source_claims": [
+        25,
+        26,
+        27
+      ],
+      "output": "Subdural hematomas often result from head trauma and typically present with a gradual onset of symptoms as the hematoma expands.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Subdural hematoma option header + enumerated properties (cause, onset)."
+    },
+    {
+      "source_claims": [
+        28,
+        29
+      ],
+      "output": "There is no history of trauma in this 77-year-old man with sudden right upper extremity weakness, trouble speaking, and rapid decline in responsiveness, making a subdural hematoma less likely.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Premise (no trauma) supporting conclusion (subdural less likely)."
+    },
+    {
+      "source_claims": [
+        30
+      ],
+      "output": "Given a 77-year-old man’s history of hypertension, sudden neurological deficit, and rapid clinical deterioration, the most likely diagnosis is intracerebral hemorrhage.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone diagnostic conclusion."
+    },
+    {
+      "source_claims": [
+        30,
+        31
+      ],
+      "output": "Given a 77-year-old man's history of hypertension, sudden neurological deficit, and rapid clinical deterioration, the most likely diagnosis is intracerebral hemorrhage, although ischemic stroke is also a strong consideration.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Diagnostic conclusion with supporting premises and alternative consideration."
+    },
+    {
+      "source_claims": [
+        30,
+        32,
+        33
+      ],
+      "output": "Given a 77-year-old man’s history of hypertension, sudden neurological deficit, seizure, and rapid clinical deterioration, the most likely diagnosis is intracerebral hemorrhage, as the rapid progression and seizure point toward a hemorrhagic event.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Final diagnosis merged with supporting reasoning (rapid progression and seizure)."
+    }
+  ]
+}

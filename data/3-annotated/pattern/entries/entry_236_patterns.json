@@ -1,0 +1,129 @@
+{
+  "entry_id": 236,
+  "batch": 24,
+  "shared_context": {
+    "age": "45-year-old",
+    "sex": "female",
+    "chief_complaint": "Not feeling well with cough for 1 week, abdominal pain, trouble focusing, recent 5-pound weight loss, and poorly controlled GERD",
+    "medical_history": "African American woman, non-smoker, history of gastroesophageal reflux disease",
+    "medications": "Antacids",
+    "vitals": "Temperature 98.6°F (37°C), blood pressure 115/71 mmHg, pulse 72/min, respirations 12/min",
+    "labs": "Serum: Na+ 139 mEq/L, K+ 4.1 mEq/L, Cl- 101 mEq/L, HCO3- 24 mEq/L, urea nitrogen 12 mg/dL, glucose 70 mg/dL, creatinine 0.9 mg/dL, Ca2+ 12.5 mg/dL, alkaline phosphatase 150 U/L, phosphorus 2.0 mg/dL; Urine: color amber, nitrites negative, sodium 5 mmol/24 hours, red blood cells 0/hpf"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The patient's symptoms are non-specific but suggest a systemic process.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two properties of the symptoms (non-specific + systemic) enumerated."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "The normal range for serum calcium is 8.5-10.2 mg/dL, for serum alkaline phosphatase is 44-147 U/L, for serum phosphorus is 2.5-4.5 mg/dL, and for urine sodium is 40-220 mmol/24 hours.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Parallel enumeration of normal lab reference ranges."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Chronic antacid use can cause electrolyte imbalances, but antacid overuse is less likely to cause significant hypercalcemia and hypophosphatemia.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Conditional/contrastive reasoning about antacid effects on electrolytes."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11
+      ],
+      "output": "Increased 1,25-dihydroxyvitamin D typically leads to hypercalcemia and hypophosphatemia due to increased intestinal absorption of calcium and phosphorus. It is less common without a specific context like granulomatous diseases or lymphoma.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal chain: increased 1,25-D causes absorption leading to hypercalcemia/hypophosphatemia, plus contextual qualifier."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Primary hyperparathyroidism is a common cause of hypercalcemia and hypophosphatemia. Increased parathyroid hormone is consistent with the lab results of elevated calcium, low phosphorus, and elevated alkaline phosphatase.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Conclusion (primary hyperparathyroidism) supported by lab consistency."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Certain cancers can cause hypercalcemia through bone metastasis or paraneoplastic syndrome, but malignancy causing such lab findings alongside the specific symptoms is less likely unless more specific signs of cancer are present.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal mechanism plus conditional qualifier about malignancy likelihood."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Viral infections are generally not associated with hypercalcemia or significant electrolyte disturbances.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single standalone fact about viral infections and electrolytes."
+    },
+    {
+      "source_claims": [
+        17,
+        18
+      ],
+      "output": "The combination of hypercalcemia, hypophosphatemia, and elevated alkaline phosphatase, along with the symptoms, strongly suggests increased parathyroid hormone as the most likely explanation. The final answer is increased parathyroid hormone.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Final diagnosis/answer merged with the supporting lab+symptom reasoning."
+    }
+  ]
+}

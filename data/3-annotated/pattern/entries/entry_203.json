@@ -1,0 +1,118 @@
+{
+  "entry_id": 203,
+  "batch": 21,
+  "shared_context": {
+    "topic": "poison ivy contagiousness between people (response misinterpreted query as the DC Comics character Poison Ivy)",
+    "condition": "n/a — fictional character, not the plant/dermatitis"
+  },
+  "atoms": {
+    "1": "Poison Ivy's powers in the DC Comics universe are based on her ability to control and manipulate plants.",
+    "2": "Poison Ivy's powers are not a contagious disease.",
+    "3": "In certain storylines, Poison Ivy's powers have been transferred to others through physical contact or exposure to her essence.",
+    "4": "In the Batman comics, Poison Ivy can transfer her powers to others through skin-to-skin contact.",
+    "5": "In the Batman comics, Poison Ivy can transfer her powers to others by injecting them with her venom.",
+    "6": "Poison Ivy's essence is transmitted to Mary Hamilton in the episode 'Trust Destiny' of the Batwoman series.",
+    "7": "Mary Hamilton is dubbed 'Poison Mary' in the Batwoman series.",
+    "8": "In the Batwoman series, Poison Ivy also infects Poison Mary with her essence.",
+    "9": "It is unclear if Poison Ivy's infection of Poison Mary in the Batwoman series is a direct transfer of powers or a separate phenomenon.",
+    "10": "In the 1992 film 'Poison Ivy,' the main character Ivy is able to transfer her powers to her partner, Sylvie, through a kiss.",
+    "11": "'Poison Ivy' is a film released in 1992.",
+    "12": "Ivy is the main character in the 1992 film 'Poison Ivy.'",
+    "13": "Ivy transfers her powers to Sylvie through a kiss in the 1992 film 'Poison Ivy.'",
+    "14": "Sylvie is a character in the 1992 film 'Poison Ivy.'",
+    "15": "These instances of power transfer are exceptions rather than the norm in the DC Comics universe.",
+    "16": "Poison Ivy's powers are not typically depicted as contagious between people.",
+    "17": "The transfer of Poison Ivy's powers to others has been explored as a plot device in specific storylines and adaptations."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Poison Ivy's powers in the DC Comics universe are based on her ability to control and manipulate plants, and they are not a contagious disease.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "true",
+      "notes": "ctx vs gen diverge: the response misinterprets the medical query as a question about the DC Comics character, so for the patient context it does not correctly address the query. In general (as a statement about the fictional character) the claim is correct."
+    },
+    {
+      "source_claims": [
+        3,
+        15,
+        16,
+        17
+      ],
+      "output": "In certain storylines, Poison Ivy's powers have been transferred to others through physical contact or exposure to her essence, but these are exceptions rather than the norm: her powers are not typically depicted as contagious between people, and such transfers are explored as a plot device in specific storylines and adaptations.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "true",
+      "notes": "Pattern C: framing claim plus its qualifying premises. ctx=false because the response is about the fictional character and does not answer the medical query; gen=true as a description of the comics."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "In the Batman comics, Poison Ivy can transfer her powers to others through skin-to-skin contact or by injecting them with her venom.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Pattern A: enumeration of two transfer mechanisms. Both atoms expert-false — this is not an established Batman-comics canon claim."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Poison Ivy's essence is transmitted to Mary Hamilton in the episode 'Trust Destiny' of the Batwoman series.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Kept atomic to isolate this expert-false claim (specific episode attribution) from neighbors 7 and 8 which are expert-true."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "In the Batwoman series, Mary Hamilton is dubbed 'Poison Mary,' and Poison Ivy infects her with her essence.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "true",
+      "notes": "Pattern A: two true facts about the Batwoman storyline. ctx=false (off-topic for medical query); gen=true."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "It is unclear whether Poison Ivy's infection of Poison Mary in the Batwoman series is a direct transfer of powers or a separate phenomenon.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Atomic to isolate expert-false claim from neighbors."
+    },
+    {
+      "source_claims": [
+        11,
+        12,
+        14
+      ],
+      "output": "'Poison Ivy' is a 1992 film whose main character is Ivy, and Sylvie is a character in that film.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of background facts about the 1992 film. Separated from the expert-false transfer-of-powers claim about that film. ctx=false (off-topic); gen=true."
+    },
+    {
+      "source_claims": [
+        10,
+        13
+      ],
+      "output": "In the 1992 film 'Poison Ivy,' the main character Ivy transfers her powers to her partner Sylvie through a kiss.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Atoms 10 and 13 are near-duplicates of the same false claim — Ivy in the 1992 film does not have or transfer 'powers'; the film is a psychological thriller, not a superhero story. Merged as Pattern A (same claim restated)."
+    }
+  ]
+}

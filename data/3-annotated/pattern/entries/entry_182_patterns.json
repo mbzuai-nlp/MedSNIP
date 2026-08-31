@@ -1,0 +1,155 @@
+{
+  "entry_id": 182,
+  "batch": 19,
+  "shared_context": {
+    "age": "45",
+    "sex": "male",
+    "chief_complaint": "dysphagia, slurred speech, coughing on liquids for 3 months",
+    "exam_findings": "unable to fully extend tongue, tongue fasciculations, brisk jaw-jerk",
+    "vitals": "T 98.6F, BP 110/80, HR 60, RR 12",
+    "correct_answer": "Riluzole (D)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Dysphagia and dysarthria are common symptoms of neurological disorders affecting the cranial nerves or the brainstem; tongue fasciculations and difficulty with tongue movements suggest involvement of the lower motor neurons (LMNs).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: interpretation of bulbar/LMN findings.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A per notes: interpretation of bulbar/LMN findings."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "A pronounced jaw jerk reflex indicates upper motor neuron (UMN) involvement, and the combination of UMN and LMN signs is characteristic of amyotrophic lateral sclerosis (ALS).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B: causal chain from UMN sign to ALS diagnosis.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern B per notes: causal chain from UMN sign to ALS diagnosis."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "ALS is a neurodegenerative disorder that affects both UMNs and LMNs, leading to muscle weakness, atrophy, and fasciculations, along with exaggerated reflexes.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of properties of ALS.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A per notes: enumeration of properties of ALS."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "The absence of sensory deficits supports the diagnosis of ALS, as ALS typically spares sensory neurons.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B: causal/conditional reasoning linking sensory sparing to ALS.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern B per notes: causal/conditional reasoning linking sensory sparing to ALS."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11
+      ],
+      "output": "Baclofen is used primarily for muscle spasticity and may provide symptomatic relief in ALS but does not improve survival in ALS.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of Baclofen properties. Generally true; in this vignette the question asks about survival, and the claim correctly states Baclofen does not improve survival, so context label is also true.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A per notes: enumeration of Baclofen properties."
+    },
+    {
+      "source_claims": [
+        12,
+        13,
+        14
+      ],
+      "output": "Dextromethorphan and quinidine are used to treat pseudobulbar affect as a symptom management strategy and do not improve survival in ALS.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of DM/quinidine properties.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A per notes: enumeration of DM/quinidine properties."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "Edaravone has been shown to slow the progression of ALS in specific patient populations and may modestly improve survival in ALS.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Pattern A: enumeration of Edaravone properties. Atom 16 (modest survival improvement) is labeled false by experts; the survival benefit of Edaravone is not well established. Merged claim therefore false in general and in context (where the question is specifically about survival).",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A per notes: enumeration of Edaravone properties."
+    },
+    {
+      "source_claims": [
+        17,
+        18
+      ],
+      "output": "Riluzole is the standard treatment for ALS and has been shown to extend survival in patients with ALS.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of Riluzole properties — the correct answer's supporting facts.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A per notes: enumeration of Riluzole properties."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "Tizanidine is an antispastic agent used for muscle spasticity and does not improve survival in ALS.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of Tizanidine properties.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Pattern A per notes: enumeration of Tizanidine properties."
+    },
+    {
+      "source_claims": [
+        21
+      ],
+      "output": "Given the diagnosis of ALS based on the patient's symptoms and clinical findings, the therapy most likely to improve survival is Riluzole.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Standalone final-answer conclusion (D).",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone final-answer conclusion per notes."
+    }
+  ]
+}

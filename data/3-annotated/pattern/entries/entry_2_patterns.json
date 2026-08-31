@@ -1,0 +1,88 @@
+{
+  "entry_id": 2,
+  "batch": 1,
+  "shared_context": {
+    "topic": "Taking NyQuil and Benadryl at the same time",
+    "drug_a": "NyQuil",
+    "drug_b": "Benadryl"
+  },
+  "snippets": [
+    {
+      "source_claims": [1],
+      "output": "Taking Nyquil and Benadryl at the same time for cold/flu symptoms is not recommended without consulting a healthcare professional.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone recommendation."
+    },
+    {
+      "source_claims": [2, 3, 4, 5, 6],
+      "output": "Nyquil is an over-the-counter (OTC) medication that contains a combination of doxylamine (an antihistamine), dextromethorphan (a cough suppressant), and acetaminophen (a pain reliever and fever reducer).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Definition + composition + each component's role: enumerated properties of one drug (Nyquil)."
+    },
+    {
+      "source_claims": [7, 8],
+      "output": "Benadryl is an antihistamine that contains diphenhydramine.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel facts about one drug: class + active ingredient."
+    },
+    {
+      "source_claims": [9, 10],
+      "output": "Combining Nyquil and Benadryl can increase the risk of adverse effects, including drowsiness, dizziness, and confusion.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "General adverse-effect claim plus enumerated specifics."
+    },
+    {
+      "source_claims": [11, 12],
+      "output": "Nyquil and Benadryl both have sedative properties, and taking Nyquil and Benadryl together can lead to excessive sedation.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Causal chain: shared sedative properties (mechanism) -> excessive sedation (outcome)."
+    },
+    {
+      "source_claims": [13],
+      "output": "Taking high doses of acetaminophen with other medications that contain acetaminophen can increase the risk of liver damage.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone drug-interaction risk fact."
+    },
+    {
+      "source_claims": [14, 15, 16, 17],
+      "output": "When taking Nyquil and Benadryl together, it is essential to follow the recommended dosage instructions for each medication and to consult a healthcare professional first; a healthcare professional can determine the best course of treatment and help ensure safety when taking Nyquil and Benadryl together.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": "C",
+      "pattern_notes": "Enumerated safety guidance (follow dosage, consult HCP) with reasons appended (HCP determines treatment, ensures safety). Primary A; secondary C since atoms 16-17 justify atom 15."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "entry_id": 143,
+  "batch": 15,
+  "shared_context": {
+    "age": "32-year-old",
+    "sex": "man",
+    "chief_complaint": "headache",
+    "medical_history": "occasional migraine headaches, asthma",
+    "vitals": "temperature 100.4°F (38.0°C), blood pressure 110/60 mmHg, pulse 95/min, respirations 17/min, oxygen saturation 98% on room air",
+    "labs": "CSF cell count 175/mm^3, RBCs 0/mm^3, chloride 119 mEq/L, glucose 49 mg/dL, pressure 150 mmH2O, total protein 55 mg/dL",
+    "exam_findings": "appears uncomfortable, no focal neurologic deficits, pain with passive neck flexion, no edema or rashes, lungs clear to auscultation bilaterally",
+    "correct_answer": "Supportive care and monitoring (E)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "output": "Headache, nausea, vomiting, fever, and neck pain are classic symptoms of meningitis. The patient's symptoms and CSF results suggest viral meningitis, which is typically treated with supportive care.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Diagnosis (viral meningitis) + treatment conclusion supported by symptoms premise."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "The CSF cell count of 175/mm^3 indicates lymphocytic pleocytosis. The glucose level is mildly decreased at 49 mg/dL, and the protein level is not normal, which aligns with viral meningitis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of CSF findings (cell count, glucose, protein) as properties of the CSF."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "Supportive care for viral meningitis includes rest, hydration, and pain management. Antiviral medications are not typically used and are not effective in treating viral meningitis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerates components of supportive care and properties of antiviral use for viral meningitis."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "output": "Acyclovir is used for herpes simplex encephalitis, which is a different diagnosis. Amphotericin and 5-flucytosine treat fungal infections, not indicated here. Ceftriaxone and vancomycin are for bacterial meningitis, which is less likely. Ceftriaxone, vancomycin, and steroids are not indicated for viral meningitis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Parallel enumeration of each answer-choice drug regimen and its indication."
+    },
+    {
+      "source_claims": [
+        20
+      ],
+      "output": "The most appropriate treatment regimen for this patient is supportive care and monitoring.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone final answer statement."
+    }
+  ]
+}

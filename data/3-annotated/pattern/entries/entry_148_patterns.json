@@ -1,0 +1,117 @@
+{
+  "entry_id": 148,
+  "batch": 15,
+  "shared_context": {
+    "age": "44-year-old",
+    "sex": "male",
+    "chief_complaint": "Multiple stab wounds to the abdomen",
+    "medical_history": "Homelessness, intoxication, likely poor nutrition",
+    "vitals": "Initial: temperature 97.5°F (36.4°C), blood pressure 92/52 mmHg, pulse 145/min, respirations 33/min, oxygen saturation 90% on room air; next day vitals within normal limits",
+    "exam_findings": "Sparse hair falling out throughout the body, rash at the corners of the mouth, multiple loose bowel movements, poor surgical wound healing with wound held together only by sutures and minimal underlying healing",
+    "correct_answer": "Zinc (E)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The patient being intoxicated may imply poor nutrition and possibly an alcohol use disorder. Homelessness can lead to poor nutrition due to limited access to food.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel context factors (intoxication, homelessness) both pointing to poor nutrition."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "The symptoms of sparse hair, falling out, and a rash by the corners of the mouth are classic signs of nutritional deficiency. The rash is often associated with ariboflavinosis (riboflavin deficiency) but can also be a sign of other deficiencies.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of properties of the symptom finding: classic signs, associated deficiency, alternative deficiencies."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Multiple loose bowel movements and poor wound healing can be indicative of a variety of deficiencies, including those in vitamins and minerals.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Parallel symptoms (loose stools, poor wound healing) both indicative of deficiencies."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Vitamin D deficiency can lead to poor wound healing and muscle weakness, but it is not as directly linked to the symptoms described.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Premise (Vit D effects) plus conclusion (not linked to symptoms here)."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Thiamine deficiency (beriberi) can cause nerve damage and muscle weakness, but it is not typically associated with the symptoms described.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Premise (thiamine effects) plus conclusion (not matching symptoms)."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "output": "Riboflavin is essential for energy production, nerve function, and growth. A deficiency in riboflavin can cause ariboflavinosis, characterized by a sore throat, cracked and red lips, a smooth red tongue, and a mouth and lip rash (angular stomatitis). It can also cause hair loss.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of riboflavin properties: function, deficiency name, features, additional effect."
+    },
+    {
+      "source_claims": [
+        12,
+        17,
+        18
+      ],
+      "output": "In a 44-year-old homeless male with sparse hair falling out throughout the body, a rash at the corners of the mouth, multiple loose bowel movements, and poor surgical wound healing, the described symptoms are consistent with riboflavin (vitamin B2) deficiency, which can cause poor wound healing.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Final diagnostic conclusion (riboflavin deficiency) merged with supporting symptom premises."
+    }
+  ]
+}

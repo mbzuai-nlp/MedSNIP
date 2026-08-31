@@ -1,0 +1,234 @@
+{
+  "entry_id": 230,
+  "batch": 23,
+  "shared_context": {
+    "age": "35",
+    "sex": "female",
+    "chief_complaint": "Irregular menstruation with only 2 periods in the last year",
+    "medical_history": "G0P0000, Hashimoto thyroiditis",
+    "medications": "Levothyroxine daily",
+    "family_history": "Mother with type 1 diabetes mellitus",
+    "vitals": "Temp 98.5°F (36.9°C), pulse 70/min, BP 118/76 mmHg, respirations 13/min",
+    "labs": "TSH 28 µIU/mL, cycle day 3 FSH 49 mIU/mL, cycle day 3 estradiol 8 pg/mL, prolactin 14 ng/mL, testosterone 42 ng/dL",
+    "exam_findings": "Flushing without provocation, occasional dyspareunia with post-coital spotting, more frequent headaches, Tanner 5 breasts and pubic hair, cardiopulmonary and abdominal exams unremarkable, pelvic exam with normal cervix, anteverted uterus without tenderness, no adnexal masses",
+    "correct_answer": "Estradiol patch with oral medroxyprogesterone (C)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Although a 35-year-old woman with Hashimoto thyroiditis has a TSH of 28 µIU/mL, this is on the higher end of the stated 9–30 µIU/mL baseline range for Hashimoto thyroiditis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone lab interpretation."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "A cycle day 3 FSH level of 49 mIU/mL in this 35-year-old woman with irregular menstruation suggests primary ovarian insufficiency or menopause.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone lab interpretation."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Elevated FSH levels are indicative of decreased ovarian function and decreased ovarian follicle reserve.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel properties of elevated FSH (decreased function, decreased reserve)."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "A low estradiol level of 8 pg/mL in this 35-year-old woman supports the diagnosis of primary ovarian insufficiency or menopause and indicates reduced ovarian estrogen production.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel properties of low estradiol: diagnostic implication and physiologic meaning."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "In this 35-year-old woman with irregular menstruation, a prolactin level of 14 ng/mL and a testosterone level of 42 ng/dL rule out hyperprolactinemia and significant androgen excess.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerated rule-outs from normal prolactin and testosterone."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Given a 35-year-old woman with irregular menstruation, elevated cycle day 3 FSH of 49 mIU/mL, and low estradiol of 8 pg/mL, the most likely diagnosis is primary ovarian insufficiency (POI).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone diagnostic conclusion."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "Brain MRI is not indicated in this 35-year-old woman with irregular menstruation because her prolactin level is normal, there is no evidence of hyperprolactinemia, and she has no neurological symptoms suggestive of a pituitary issue.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Conclusion (no MRI) with supporting premises (normal prolactin, no hyperprolactinemia, no neuro symptoms)."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Combined oral contraceptives can help regulate menstrual cycles.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone fact about OCPs."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Combined oral contraceptives are not the first-line treatment for managing primary ovarian insufficiency symptoms in this 35-year-old woman with irregular menstruation, elevated cycle day 3 FSH, and low estradiol; the most appropriate next step is an estradiol patch with oral medroxyprogesterone.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct checkable fact about OCPs not being first-line for POI; same topic neighbor."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Hormone replacement therapy with estrogen and progestin is appropriate for managing primary ovarian insufficiency in this 35-year-old woman with irregular menstruation, elevated FSH, and low estradiol.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone treatment fact."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "In a 35-year-old woman with primary ovarian insufficiency, hormone replacement therapy with an estradiol patch and oral medroxyprogesterone relieves primary ovarian insufficiency symptoms by replacing the hormones that the ovaries are no longer producing.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "HRT relieves symptoms because it replaces missing hormones — causal chain."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "Hormone replacement therapy prevents the long-term consequences of estrogen deficiency in this 35-year-old woman with irregular menstruation, elevated FSH, and low estradiol.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone benefit of HRT."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "A 35-year-old woman with Hashimoto thyroiditis who takes levothyroxine daily has a TSH level within the normal range for her condition, so adjusting her thyroid medication is unnecessary.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "TSH within normal range, therefore no medication adjustment — causal/conditional."
+    },
+    {
+      "source_claims": [
+        21,
+        22
+      ],
+      "output": "Vaginal estradiol gel can help with local symptoms of vaginal atrophy, but vaginal estradiol gel alone is not sufficient to manage the systemic symptoms of primary ovarian insufficiency in this 35-year-old woman with irregular menstruation, elevated FSH, and low estradiol.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Two parallel properties of vaginal estradiol gel: helps local symptoms vs insufficient for systemic."
+    },
+    {
+      "source_claims": [
+        23
+      ],
+      "output": "The most appropriate next step in management for this 35-year-old woman with irregular menstruation, elevated FSH, and low estradiol is hormone replacement therapy with an estradiol patch and oral medroxyprogesterone.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone final management recommendation."
+    },
+    {
+      "source_claims": [
+        24
+      ],
+      "output": "The most appropriate next step in management for this 35-year-old G0P0000 woman with irregular menstruation, flushing, dyspareunia, elevated FSH, and low estradiol is hormone replacement therapy with an estradiol patch and oral medroxyprogesterone.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom restatement of final management recommendation, distinct checkable fact from neighbor."
+    }
+  ]
+}

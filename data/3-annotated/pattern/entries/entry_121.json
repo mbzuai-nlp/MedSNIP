@@ -1,0 +1,213 @@
+{
+  "entry_id": 121,
+  "batch": 13,
+  "shared_context": {
+    "topic": "PID (pelvic inflammatory disease) treatment"
+  },
+  "atoms": {
+    "1": "Pelvic inflammatory disease (PID) is treated with a combination of antibiotics.",
+    "2": "The antibiotics used for PID target likely causative organisms.",
+    "3": "Likely causative organisms for PID include N. gonorrhoeae.",
+    "4": "Likely causative organisms for PID include C. trachomatis.",
+    "5": "Likely causative organisms for PID include gram-negative bacteria.",
+    "6": "Likely causative organisms for PID include anaerobes.",
+    "7": "Likely causative organisms for PID include Group B streptococcus.",
+    "8": "Likely causative organisms for PID include genital mycoplasmas.",
+    "9": "The treatment regimens for PID should ensure broad-spectrum coverage.",
+    "10": "Ensuring broad-spectrum coverage addresses the polymicrobial nature of PID.",
+    "11": "Patients with mild to moderately severe acute PID can be treated as outpatients.",
+    "12": "Clinical outcomes among women treated with oral therapy for PID are similar to those treated with parenteral therapy.",
+    "13": "Patients with PID who do not improve within 72 hours of starting oral therapy should be reassessed.",
+    "14": "Patients with PID who do not improve within 72 hours of starting oral therapy may need intravenous therapy.",
+    "15": "Intravenous therapy for PID may be administered on an outpatient or inpatient basis.",
+    "16": "For patients requiring inpatient treatment for PID, the CDC recommends a combination of clindamycin and gentamicin.",
+    "17": "For patients requiring inpatient treatment for PID, the CDC recommends a combination of cefoxitin and doxycycline.",
+    "18": "Hospitalization for PID should be considered if the patient is severely ill.",
+    "19": "Hospitalization for PID should be considered if the patient is pregnant.",
+    "20": "Hospitalization for PID should be considered if the patient is unable to follow or tolerate an outpatient regimen.",
+    "21": "Hospitalization for PID should be considered if the patient has failed outpatient therapy.",
+    "22": "Hospitalization for PID should be considered if a surgical emergency cannot be excluded.",
+    "23": "A common oral/outpatient regimen for PID includes a single intramuscular dose of cefoxitin (2 g) with oral doxycycline (100 mg twice daily for 14 days).",
+    "24": "The addition of metronidazole (500 mg twice daily for 14 days) to an oral/outpatient regimen can provide coverage for anaerobes.",
+    "25": "The addition of metronidazole (500 mg twice daily for 14 days) to an oral/outpatient regimen can treat bacterial vaginosis associated with PID.",
+    "26": "An effective inpatient regimen for PID includes intravenous cefoxitin (2 g every 6 hours) combined with doxycycline (100 mg orally or intravenously every 12 hours) until 24 hours after clinical improvement.",
+    "27": "After clinical improvement, the inpatient regimen for PID is followed by oral doxycycline to complete a 14-day course.",
+    "28": "Another effective inpatient regimen for PID includes intravenous clindamycin (900 mg every 8 hours) with gentamicin (loading dose of 2 mg/kg body weight followed by 1.5 mg/kg every 8 hours).",
+    "29": "Close follow-up for PID is crucial to ensure resolution of symptoms.",
+    "30": "Close follow-up for PID is crucial to prevent long-term complications.",
+    "31": "Patients with PID should be reevaluated within 72 hours of starting treatment to confirm clinical improvement.",
+    "32": "Evaluation and treatment of male sexual partners are imperative to prevent reinfection of PID.",
+    "33": "Early diagnosis and treatment of acute PID are essential to minimize long-term sequelae.",
+    "34": "Long-term sequelae of PID include chronic pelvic pain.",
+    "35": "Long-term sequelae of PID include tubal infertility.",
+    "36": "Long-term sequelae of PID include ectopic pregnancy.",
+    "37": "Improved diagnostic techniques are needed to further reduce complications of PID.",
+    "38": "Improved treatment modalities are needed to further reduce complications of PID."
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "PID is treated with a combination of antibiotics that target the likely causative organisms, including N. gonorrhoeae, C. trachomatis, gram-negative bacteria, anaerobes, Group B streptococcus, and genital mycoplasmas.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Pattern C: conclusion + enumeration of causative organisms targeted by treatment. Atoms 7 (Group B streptococcus) and 8 (genital mycoplasmas) are expert-false; they are not standard PID pathogens, so the merged enumeration is incorrect."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "PID treatment regimens should ensure broad-spectrum coverage to address the polymicrobial nature of the disease.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B: causal chain (broad-spectrum coverage -> addresses polymicrobial nature)."
+    },
+    {
+      "source_claims": [
+        11,
+        13,
+        14
+      ],
+      "output": "Patients with mild to moderately severe acute PID can be treated as outpatients; those who do not improve within 72 hours of starting oral therapy should be reassessed and may need intravenous therapy.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: outpatient management policy plus the conditional reassessment chain. Atoms 12 and 15 (also about outpatient management) are isolated below because they are expert-false."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Clinical outcomes among women treated with oral therapy for PID are similar to those treated with parenteral therapy.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Isolated false atom; expert label is false. Kept separate from the other outpatient-management atoms so the true claims are not contaminated."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Intravenous therapy for PID may be administered on an outpatient or inpatient basis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "Isolated false atom; IV therapy for PID is generally administered inpatient. Kept separate from the true outpatient atoms."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "For patients requiring inpatient treatment for PID, the CDC recommends either a combination of clindamycin and gentamicin or a combination of cefoxitin and doxycycline.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of CDC-recommended inpatient regimens (same subject = CDC recommendations)."
+    },
+    {
+      "source_claims": [
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "output": "Hospitalization for PID should be considered if the patient is severely ill, pregnant, unable to follow or tolerate an outpatient regimen, has failed outpatient therapy, or if a surgical emergency cannot be excluded.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of hospitalization criteria for the same subject (when to hospitalize)."
+    },
+    {
+      "source_claims": [
+        23,
+        24,
+        25
+      ],
+      "output": "A common oral/outpatient regimen for PID is a single intramuscular dose of cefoxitin (2 g) with oral doxycycline (100 mg twice daily for 14 days); adding metronidazole (500 mg twice daily for 14 days) provides anaerobic coverage and treats associated bacterial vaginosis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: components and properties of one outpatient regimen (cefoxitin + doxycycline base, with metronidazole add-on properties)."
+    },
+    {
+      "source_claims": [
+        26,
+        27
+      ],
+      "output": "An effective inpatient regimen for PID is intravenous cefoxitin (2 g every 6 hours) combined with doxycycline (100 mg orally or intravenously every 12 hours) until 24 hours after clinical improvement, followed by oral doxycycline to complete a 14-day course.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern B: causal/conditional chain describing one inpatient regimen across its IV-to-oral transition."
+    },
+    {
+      "source_claims": [
+        28
+      ],
+      "output": "Another effective inpatient regimen for PID is intravenous clindamycin (900 mg every 8 hours) with gentamicin (loading dose of 2 mg/kg body weight followed by 1.5 mg/kg every 8 hours).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern E: kept separate from the cefoxitin+doxycycline inpatient regimen because it is a distinct alternative regimen."
+    },
+    {
+      "source_claims": [
+        29,
+        30,
+        31
+      ],
+      "output": "Close follow-up is crucial to ensure resolution of symptoms and prevent long-term complications; patients should be reevaluated within 72 hours of starting treatment to confirm clinical improvement.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: conclusion (follow-up is crucial) plus enumeration of purposes (29, 30) and the concrete reevaluation timing (31)."
+    },
+    {
+      "source_claims": [
+        32
+      ],
+      "output": "Evaluation and treatment of male sexual partners are imperative to prevent reinfection of PID.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern E: kept atomic; partner management is a distinct topic from patient follow-up."
+    },
+    {
+      "source_claims": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "output": "Early diagnosis and treatment of acute PID are essential to minimize long-term sequelae such as chronic pelvic pain, tubal infertility, and ectopic pregnancy.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern C: conclusion (early treatment minimizes sequelae) + enumeration of those sequelae."
+    },
+    {
+      "source_claims": [
+        37,
+        38
+      ],
+      "output": "Improved diagnostic techniques and treatment modalities are needed to further reduce the complications of PID.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Pattern A: enumeration of two parallel needs (diagnostics and treatments) for the same subject."
+    }
+  ]
+}

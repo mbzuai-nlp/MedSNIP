@@ -1,0 +1,196 @@
+{
+  "entry_id": 11,
+  "batch": 2,
+  "shared_context": {
+    "topic": "hepatitis A IgM test result interpretation"
+  },
+  "snippets": [
+    {
+      "source_claims": [1],
+      "output": "A non-reactive result for the hepatitis A IgM (anti-HAV IgM) test means that the test did not detect any antibodies to the hepatitis A virus in the blood.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom complete lab definition."
+    },
+    {
+      "source_claims": [3],
+      "output": "In the context of acute viral hepatitis, a non-reactive hepatitis A IgM result can occur if hepatitis A was contracted very recently but the immune response has not yet been triggered, usually in the very early phase of infection.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom complete interpretation of an edge case."
+    },
+    {
+      "source_claims": [4],
+      "output": "A non-reactive anti-HAV IgM result can be seen in patients with non-A, non-B hepatitis or other forms of viral hepatitis where the immune response is directed against a different viral antigen.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom complete interpretation of another edge case."
+    },
+    {
+      "source_claims": [1, 2, 3, 4],
+      "output": "A non-reactive hepatitis A IgM (anti-HAV IgM) result means the test did not detect antibodies to the hepatitis A virus in the blood, and its interpretation depends on the clinical context. In the context of acute viral hepatitis, a non-reactive anti-HAV IgM result can occur very early after hepatitis A infection before the immune response has been triggered, or in non-A, non-B hepatitis or other forms of viral hepatitis where the immune response is directed against a different viral antigen.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumerated interpretations of a non-reactive result (clinical-context + early-phase + non-A,non-B)."
+    },
+    {
+      "source_claims": [5],
+      "output": "A positive anti-HAV IgM retest result was associated with a high initial anti-HAV IgM cutoff index (COI ≥0.5) in a study of initially seronegative patients.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone study finding."
+    },
+    {
+      "source_claims": [6],
+      "output": "A positive result for anti-HAV IgM retesting was associated with low serum total bilirubin (<1.4 mg/dl) in a study conducted among initially seronegative patients.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone study finding."
+    },
+    {
+      "source_claims": [7],
+      "output": "A positive anti-HAV IgM retest result was associated with a low platelet count of less than 165 × 10^3/μl in a study of initially seronegative patients.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone study finding."
+    },
+    {
+      "source_claims": [5, 6, 7, 8],
+      "output": "In a study of initially seronegative patients, a positive anti-HAV IgM retest was associated with a high initial anti-HAV IgM cutoff index (COI ≥0.5), low serum total bilirubin (<1.4 mg/dl), and low platelet count (<165 × 10^3/μl), but these associations were not statistically significant on multivariate analysis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "A",
+      "pattern_secondary": "C",
+      "pattern_notes": "Enumerated retest associations (atoms 5-7) + statistical-significance qualification (atom 8). Primary A; secondary C (atom 8 qualifies atoms 5-7)."
+    },
+    {
+      "source_claims": [9],
+      "output": "Only 0.3% of patients tested positive for anti-HEV IgM in a study examining the prevalence of hepatitis E virus infection among patients with acute non-A, non-B hepatitis in Central Brazil.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone study finding."
+    },
+    {
+      "source_claims": [9, 10],
+      "output": "Only 0.3% of patients tested positive for anti-HEV IgM in a study examining the prevalence of hepatitis E virus infection among patients with acute non-A, non-B hepatitis in Central Brazil, suggesting that hepatitis E virus may be responsible for a small percentage of acute hepatitis cases.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Study finding (atom 9) + drawn implication (atom 10)."
+    },
+    {
+      "source_claims": [11, 12],
+      "output": "A non-reactive hepatitis A IgM result does not necessarily rule out the possibility of viral hepatitis. Further testing, including evaluation of other serological markers, should be considered to determine the cause of the symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Claim (atom 11: doesn't rule out) + actionable recommendation (atom 12: further testing)."
+    },
+    {
+      "source_claims": [13],
+      "output": "Norkrans G, Nilsson LA, Frösner G, Wahl M, and Iwarson S. conducted a study on serum immunoglobulin levels in hepatitis non-A, non-B, comparing them with hepatitis A and B.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone bibliographic reference."
+    },
+    {
+      "source_claims": [14],
+      "output": "Findor JA, Lafage M, Bruch Igartua EM, Domecq P, Firpo AM, and Domecq RB published an article on acute non-A, non-B viral hepatitis.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone bibliographic reference."
+    },
+    {
+      "source_claims": [15],
+      "output": "Psichogiou M, Tzala E, Boletis J, Zakopoulou N, Loutradi A, Maliori M, et al. conducted a study on hepatitis E virus infection in individuals at high risk of transmission of non-A, non-B hepatitis and sexually transmitted diseases.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone bibliographic reference."
+    },
+    {
+      "source_claims": [16],
+      "output": "Shin HP, Lee JI, Jung SW, Cha JM, Joo KR, and Kang SY published a study on factors for predicting positive results for anti-HAV IgM retesting among initially seronegative patients.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone bibliographic reference."
+    },
+    {
+      "source_claims": [17],
+      "output": "Freitas NR, Santana EB, Silva AM, Silva SM, Teles SA, Gardinali NR, et al. conducted a study on hepatitis E virus infection in patients with acute non-A, non-B, non-C hepatitis in Central Brazil.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone bibliographic reference."
+    },
+    {
+      "source_claims": [18],
+      "output": "Darwish MA, Shaker M, and al-Kady AM published a study on non-A, non-B viral hepatitis in Egypt.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone bibliographic reference."
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "entry_id": 114,
+  "batch": 12,
+  "shared_context": {
+    "age": "40-year-old",
+    "sex": "man",
+    "chief_complaint": "Chronic cough worse at night",
+    "medical_history": "Several-year history of cough worsening over the last few months; recently moved to the United States to work in construction; 10-pound weight loss over 3 months; darker stools; denies difficulty swallowing or sensation of food getting stuck; drinks alcohol 1-2 times per week; never smoked; no family history of cancer",
+    "vitals": "Temperature 98.6°F (37°C), blood pressure 114/72 mmHg, pulse 82/min, respirations 12/min",
+    "exam_findings": "Lungs clear to auscultation bilaterally without wheezing; abdomen soft and non-distended; no tenderness to palpation; bowel sounds present",
+    "correct_answer": "Trial of lansoprazole (D)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A chronic cough is a common symptom of gastroesophageal reflux disease (GERD).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone definitional fact about GERD symptom."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Unintentional weight loss, darker stools, and a change in diet might be indicative of a gastrointestinal issue.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom general clinical fact, self-contained."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Given the patient's symptoms, a potential cause could be GERD, especially considering his recent weight loss and change in diet.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (GERD as cause) merged with supporting premise (weight loss, diet change)."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "A chronic cough that's worse at night could also be due to asthma, but the physical exam does not show any wheezing.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single atom, distinct checkable fact about asthma differential."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Other differential diagnoses include gastroesophageal reflux disease-related aspiration.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single atom, distinct differential diagnosis fact."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "A trial of lansoprazole, a proton pump inhibitor, is often the first-line treatment for GERD.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Standalone fact about first-line GERD treatment."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "A trial of lansoprazole may help alleviate the patient's symptoms of cough, weight loss, and darker stools. The most appropriate next step in management is a trial of lansoprazole.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Recommendation (next step is lansoprazole trial) merged with supporting rationale (symptom relief)."
+    }
+  ]
+}

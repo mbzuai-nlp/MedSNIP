@@ -1,0 +1,118 @@
+{
+  "entry_id": 189,
+  "batch": 19,
+  "shared_context": {
+    "age": "36",
+    "sex": "female",
+    "obstetric_history": "G3P2002, 10 weeks 2 days gestation, prior 2 uncomplicated full-term deliveries",
+    "chief_complaint": "first prenatal visit, concerned about Down syndrome (sister had affected child at age 43)",
+    "medical_history": "generalized anxiety, atopic dermatitis",
+    "medications": "escitalopram",
+    "correct_answer": "Chorionic villus sampling (C)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The patient is in a high-risk category for Down syndrome due to her advanced maternal age. 10 weeks and 2 days is an optimal time for certain prenatal tests.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "36yo is advanced maternal age (>=35), and 10w2d is in the CVS window.",
+      "pattern": "B",
+      "pattern_secondary": null,
+      "pattern_notes": "Risk category + optimal timing form a conditional setup linking patient status to test timing."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "Amniocentesis is a diagnostic test that involves withdrawing a sample of amniotic fluid from the uterus to test for chromosomal abnormalities, and can test for Down syndrome. It is typically performed after 15 weeks of gestation.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Descriptive enumeration about amniocentesis; correct generally and consistent with this case (excludes amnio at 10w).",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of properties of amniocentesis: type, procedure, indication, timing."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "Anatomy ultrasound can be performed as early as 10 weeks, can check for anatomical abnormalities, and is not a definitive test for Down syndrome.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Anatomy (fetal survey) ultrasound is conventionally performed at 18-22 weeks, not 10 weeks; early ultrasound at 10 weeks is dating/viability. Mildly inaccurate phrasing but the salient claim (not definitive for Down syndrome) is correct.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of properties of anatomy ultrasound: timing, purpose, limitation."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12,
+        18
+      ],
+      "output": "Chorionic villus sampling (CVS) involves taking a sample of tissue from the placenta, can test for chromosomal abnormalities including Down syndrome, and can be performed between 10 and 12 weeks of gestation.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "CVS window typically 10-13 weeks; 10-12 is within this range. Correct in context (patient is 10w2d).",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of CVS properties: procedure, indication, timing window."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Genetic testing of the patient's sister is not relevant to the current pregnancy.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Sister's testing does not diagnose this fetus.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone fact about irrelevance of sister's testing."
+    },
+    {
+      "source_claims": [
+        14,
+        15,
+        16
+      ],
+      "output": "The nuchal translucency test measures the thickness of the fluid-filled space at the back of the fetal neck, can be performed as early as 11-14 weeks, and is not a definitive test for Down syndrome.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "NT is screening only.",
+      "pattern": "A",
+      "pattern_secondary": null,
+      "pattern_notes": "Enumeration of NT test properties: measurement, timing, limitation."
+    },
+    {
+      "source_claims": [
+        17,
+        19
+      ],
+      "output": "Considering the patient's gestational age and the options provided, the most appropriate next step for definitively determining whether this patient's fetus has Down syndrome is chorionic villus sampling (CVS).",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Matches the correct answer (C).",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Final recommendation (CVS) merged with justifying reasoning about gestational age and definitive testing."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "entry_id": 66,
+  "batch": 7,
+  "shared_context": {
+    "age": "52-year-old",
+    "sex": "man",
+    "chief_complaint": "hematemesis with bright red blood, about 5 cups total",
+    "medical_history": "alcohol use disorder; prior episodes of small streaks of blood in vomit without formal workup; signs of chronic liver disease/cirrhosis with likely portal hypertension and variceal bleeding",
+    "vitals": "temperature 98.4°F (36.9°C), blood pressure 98/68 mmHg, pulse 125/min, respirations 22/min",
+    "labs": "hemoglobin 8.8 g/dL, platelet count 80,000/mm^3",
+    "exam_findings": "bright red blood in mouth and pharynx, distended abdomen with fluid wave, jaundice, scattered spider angiomas, multiple ecchymoses",
+    "correct_answer": "Octreotide (D)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A 52-year-old man with hematemesis shows signs of possible liver disease, including jaundice, spider angiomas, and ecchymoses.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone fact about clinical signs of liver disease."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "In a 52-year-old man with massive bright red hematemesis, hypotension, tachycardia, anemia, thrombocytopenia, and signs of chronic liver disease after initial normal saline administration, the primary concern is the need to stabilize the 52-year-old man.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone clinical assessment about stabilization priority."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "Balloon tamponade is used to treat bleeding esophageal varices, a complication of liver disease. However, in this 52-year-old man with massive hematemesis, alcohol use disorder, ascites, jaundice, spider angiomas, thrombocytopenia, and ecchymoses, there is no indication that he has esophageal varices.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "A",
+      "pattern_notes": "Drug description + ruling-out conclusion based on lack of variceal indication."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "Ceftriaxone is an antibiotic used to treat bacterial infections. However, in this 52-year-old man with massive hematemesis, alcohol use disorder, ascites, jaundice, spider angiomas, thrombocytopenia, and ecchymoses, there is no indication of a bacterial infection.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "A",
+      "pattern_notes": "Ceftriaxone description + conclusion ruling it out for lack of bacterial infection."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "Nadolol is a beta-blocker used to manage bleeding varices, However, in this 52-year-old man with massive hematemesis, alcohol use disorder, ascites, jaundice, spider angiomas, thrombocytopenia, and ecchymoses, there is no indication that he has esophageal varices.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "false",
+      "label_in_general": "false",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "A",
+      "pattern_notes": "Nadolol description + conclusion ruling it out due to no variceal indication."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "output": "For a 52-year-old man with hematemesis, alcohol use disorder, and signs of liver disease, bleeding varices causing acute variceal hemorrhage are a possible cause of the bleeding, and octreotide is used to treat bleeding varices and acute variceal hemorrhage by reducing blood flow to the gastrointestinal tract, which can potentially stop the bleeding.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": "B",
+      "pattern_notes": "Conclusion that octreotide treats variceal hemorrhage supported by mechanism and patient risk factors."
+    },
+    {
+      "source_claims": [
+        20,
+        21,
+        22
+      ],
+      "output": "In a 52-year-old man with massive hematemesis, the primary concern is the immediate risk of severe bleeding, not just the platelet count of 80,000/mm^3.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion about primary concern being bleeding, supported by platelet count premise."
+    },
+    {
+      "source_claims": [
+        23
+      ],
+      "output": "Octreotide is the most likely to be effective for a 52-year-old man with massive bright red hematemesis, hypotension and tachycardia, thrombocytopenia, and signs of chronic liver disease/cirrhosis with likely portal hypertension and variceal bleeding.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom final answer/conclusion as standalone."
+    }
+  ]
+}

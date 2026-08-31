@@ -1,0 +1,137 @@
+{
+  "entry_id": 185,
+  "batch": 19,
+  "shared_context": {
+    "age": "43",
+    "sex": "male",
+    "chief_complaint": "bright red blood per rectum after heavy alcohol use and forceful vomiting",
+    "vitals": "T 99.2F, BP 110/75, HR 82, RR 16, O2 100% RA",
+    "labs": "Hgb 12, Hct 36, leukocytes 5500, platelets 179000",
+    "exam_findings": "nontender abdomen, normal bowel sounds, grossly bloody stool on rectal exam",
+    "correct_answer": "Submucosal esophageal tear / Mallory-Weiss (D)"
+  },
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Choice A: Erosion into a gastric vessel typically presents as upper gastrointestinal bleeding with melena or hematemesis rather than bright red blood per rectum.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Generally true; helps rule out option A in this patient.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone fact ruling out option A."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "Choice B: Diverticulitis usually presents with abdominal pain, fever, and changes in bowel habits, and is less likely in a young, healthy individual without these symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Premise (typical presentation) plus conclusion (less likely here) merged per pattern C.",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern C in notes: premise + conclusion merged."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Choice C: Colorectal cancer can present with bloody stools but is less likely in a young patient without significant medical history or other systemic symptoms.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Premise plus conclusion merged per pattern C.",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Explicit Pattern C in notes: premise + conclusion merged."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Choice D: Submucosal esophageal tear (Mallory-Weiss tear) is commonly associated with vomiting.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Generic accurate fact about MW.",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom distinct fact about MW, same broader topic as neighbors but checkable separately."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Mallory-Weiss tear typically presents with bright red bleeding.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "ctx!=gen: In general MW typically presents with hematemesis, not BRBPR; however in THIS patient bright red bleeding is what is observed (MW can cause BRBPR with rapid transit), so the claim is consistent with this presentation. Ambiguous because 'bright red bleeding' is loose phrasing.",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom isolated claim (false in general) kept apart from true MW facts."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Mallory-Weiss tear results from a tear in the esophagus or proximal stomach mucosa following forceful vomiting.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Accurate generic mechanism.",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone mechanism fact about MW."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Choice E: Vascular malformation (angiodysplasia) can cause gastrointestinal bleeding.",
+      "is_ambiguous": "no",
+      "label_with_patient_context": "true",
+      "label_in_general": "true",
+      "notes": "Generic fact about angiodysplasia.",
+      "pattern": "D",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom standalone generic fact about angiodysplasia."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Angiodysplasia typically presents in older adults and in more chronic or recurrent patterns.",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "ctx!=gen: Angiodysplasia is more common in older adults and often presents chronically/recurrently, but it can also cause acute bleeding; calling this the 'typical' pattern is an oversimplification, hence false in general. For ruling out angiodysplasia in this 43yo with acute presentation, the reasoning is contextually serviceable.",
+      "pattern": "F",
+      "pattern_secondary": null,
+      "pattern_notes": "Single-atom isolated claim (false in general) kept separate."
+    },
+    {
+      "source_claims": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "output": "Given the patient's heavy alcohol consumption and profuse vomiting, a Mallory-Weiss tear (mucosal laceration at the gastroesophageal junction from forceful vomiting) leading to acute GI bleeding with bright red blood is the most likely cause; the most likely diagnosis is a submucosal esophageal tear (Mallory-Weiss tear).",
+      "is_ambiguous": "yes",
+      "label_with_patient_context": "true",
+      "label_in_general": "false",
+      "notes": "ctx!=gen: For THIS patient, MW is the correct answer (D). However, as a general claim, MW typically causes hematemesis rather than acute BRBPR; saying it 'leads to acute GI bleeding with bright red blood' is misleading in general (atoms 13 and 11/14 marked false in source). Conclusion+premises merged per pattern C.",
+      "pattern": "C",
+      "pattern_secondary": null,
+      "pattern_notes": "Conclusion (MW most likely diagnosis) merged with supporting premises per pattern C."
+    }
+  ]
+}
