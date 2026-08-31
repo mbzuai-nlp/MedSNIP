@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="MedSNIP" width="180">
+  <img src="assets/logo.svg" alt="MedSNIP" width="350">
 </p>
-
-<h1 align="center">MedSNIP</h1>
 
 <p align="center">
   Building and Benchmarking Snippet-Level Granularity for Medical Fact Verification
