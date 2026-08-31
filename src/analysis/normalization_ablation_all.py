@@ -26,7 +26,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-ABL = ROOT / "data" / "14-normalization-ablation"
+ABL = ROOT / "data" / "14-normalization"
 FINAL = ROOT / "data" / "!-final" / "dataset.json"
 PRED = ROOT / "data" / "5-baselines" / "predictions"
 VERIFIER = "gpt-5.4-high"
@@ -177,7 +177,31 @@ def main() -> None:
         })
 
     OUT_JSON.write_text(json.dumps(rows, indent=2))
+    L = ["# Wording vs granularity, all patterns", "",
+         "`normalized atom` is the raw atom decontextualised but NOT merged. "
+         "`wording share` = (normalized - raw) / (snippet - raw): the fraction "
+         "of the gain that text alone recovers. High share = the gain is "
+         "wording; low share = grouping is doing the work.", "",
+         f"Verifier `{VERIFIER}`, claim-only. Noise floor ~{NOISE_FLOOR:.3f} F1_F.", "",
+         f"Units whose normalized text grew by >={LEAK_GROWTH_CHARS} characters are "
+         "excluded from the main rows: on those the normalizer reconstructed the "
+         "merge from `shared_context` rather than ablating it, and the normalized "
+         "atom outscores the snippet - impossible for a true ablation. They are "
+         "reported in the `excluded (leak)` row. The filter applies to merge "
+         "patterns only: a merge can only be reconstructed where one exists, and "
+         "keep-atomic units show no overshoot.", "",
+         "| Pattern | kind | atoms | snips | raw | normalized | snippet | "
+         "norm-raw | snip-raw | wording share |",
+         "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    for r in rows:
+        ws = f"{r['wording_share_pct']:.0f}%" if r["wording_share_pct"] is not None else "—"
+        L.append(f"| {r['pattern']} | {r['kind']} | {r['n_atoms']} | {r['n_snippets']} | "
+                 f"{r['raw_atom']:.3f} | {r['normalized_atom']:.3f} | "
+                 f"{r['human_snippet']:.3f} | {r['norm_minus_raw']:+.3f} | "
+                 f"{r['snip_minus_raw']:+.3f} | {ws} |")
     print("\n".join(L))
+    print("\n".join(L))
+    print(f"\nwrote {OUT_JSON}")
 
 
 if __name__ == "__main__":

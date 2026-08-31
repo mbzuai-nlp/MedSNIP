@@ -130,7 +130,22 @@ def main() -> None:
 
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(json.dumps(rows, indent=2))
+    L = ["# How much structure does each corpus offer?", "",
+         "MedSNIP's argument is that atomization fragments long, context-rich "
+         "answers. That only applies where the source has multiple clauses to "
+         "fragment. `merge ratio` is atoms per snippet: 1.0 means no grouping "
+         "happened at all.", "",
+         "| Corpus | sources | src words (med) | src sents (med) | % 1-sentence | "
+         "atoms/src | snips/src | merge | atom words | snip words |",
+         "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    for r in rows:
+        L.append(f"| {r['corpus']} | {r['n_sources']} | {r['src_words_med']} | "
+                 f"{r['src_sents_med']} | {r['pct_single_sentence_src']}% | "
+                 f"{r['atoms_per_src']} | {r['snips_per_src']} | {r['merge_ratio']} | "
+                 f"{r['atom_words_med']} | {r['snip_words_med']} |")
     print("\n".join(L))
+    print("\n".join(L))
+    print(f"\nwrote {OUT_JSON}")
 
 
 if __name__ == "__main__":

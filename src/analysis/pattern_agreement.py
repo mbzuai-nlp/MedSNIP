@@ -140,7 +140,24 @@ def main() -> None:
     OUT_JSON.write_text(json.dumps(payload, indent=2))
 
     ht = sum(human_dist.values())
+    L = ["# Do decomposers reproduce the human A-F pattern taxonomy?", "",
+         "Mode 1 snippets. `agree` is pattern accuracy on auto snippets whose "
+         f"covered-sentence set overlaps a human snippet at Jaccard >= "
+         f"{MATCH_THRESHOLD} (i.e. plausibly the same unit); `unmatched` are auto "
+         "snippets with no such counterpart, which is a boundary disagreement "
+         "rather than a labelling one.", "",
+         "| Decomposer | snippets | matched | agree | " +
+         " | ".join(f"%{p}" for p in PATTERNS) + " |",
+         "|---|---:|---:|---:|" + "---:|" * len(PATTERNS)]
+    L.append("| *human gold* | " + f"{ht} | — | — | " +
+             " | ".join(f"{100*human_dist.get(p,0)/ht:.1f}" for p in PATTERNS) + " |")
+    for r in rows:
+        acc = f"{r['accuracy']:.3f}" if r["accuracy"] is not None else "—"
+        L.append(f"| {r['slug']} | {r['snippets']} | {r['matched']} | {acc} | " +
+                 " | ".join(f"{r['distribution_pct'].get(p, 0):.1f}" for p in PATTERNS) + " |")
     print("\n".join(L))
+    print("\n".join(L))
+    print(f"\nwrote {OUT_JSON}")
 
 
 if __name__ == "__main__":

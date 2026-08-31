@@ -110,7 +110,27 @@ def main() -> None:
     OUT_JSON.write_text(json.dumps(rows, indent=2))
     f = lambda v: f"{v:.3f}" if isinstance(v, float) else "—"
     d = lambda v: f"{v:+.3f}" if isinstance(v, float) else "—"
+    L = ["# HealthFC: published vs corrected (declarative) conditions", "",
+         "`published` = raw question vs atoms decomposed from questions (26% of "
+         "which were meta-statements). `decl M1` = pipeline snippets vs pipeline "
+         "atoms from the same call, both from declarative input. `decl M2` = "
+         "Mode 2 snippets against the same M1 atoms.", "",
+         "The published column and the declarative columns answer different "
+         "questions and are not a before/after of one number.", "",
+         "| Verifier | pub atom | pub snip | pub Δ | M1 atom | M1 snip | M1 Δ | M2 snip | M2 Δ |",
+         "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    for r in rows:
+        L.append(f"| {r['verifier']} | {f(r['pub_atom'])} | {f(r['pub_snip'])} | "
+                 f"{d(r.get('pub_delta'))} | {f(r['m1_atom'])} | {f(r['m1_snip'])} | "
+                 f"{d(r.get('m1_delta'))} | {f(r['m2_snip'])} | {d(r.get('m2_delta'))} |")
+    for key, lab in (("pub_delta", "published"), ("m1_delta", "decl M1"), ("m2_delta", "decl M2")):
+        vals = [r[key] for r in rows if isinstance(r.get(key), float)]
+        if vals:
+            L += ["", f"**{lab}**: mean Δ {sum(vals)/len(vals):+.4f}, "
+                      f"positive {sum(1 for v in vals if v > 0)}/{len(vals)}"]
     print("\n".join(L))
+    print("\n".join(L))
+    print(f"\nwrote {OUT_JSON}")
 
 
 if __name__ == "__main__":

@@ -42,7 +42,7 @@ from ..baselines._openrouter_runner import build_kwargs, make_client, usage_row
 
 ROOT = Path(__file__).resolve().parents[2]
 FINAL = ROOT / "data" / "!-final" / "dataset.json"
-OUT_DIR = ROOT / "data" / "14-normalization-ablation"
+OUT_DIR = ROOT / "data" / "14-normalization"
 OUT_PATH = OUT_DIR / "normalized_atoms.json"
 
 MODEL = "openai/gpt-5.4"
@@ -131,7 +131,7 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--workers", type=int, default=16)
     ap.add_argument("--out-name", default="normalized_atoms.json",
-                    help="output filename inside data/14-normalization-ablation/")
+                    help="output filename inside data/14-normalization/")
     args = ap.parse_args()
 
     global OUT_PATH

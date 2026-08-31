@@ -28,7 +28,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-ABL = ROOT / "data" / "14-normalization-ablation"
+ABL = ROOT / "data" / "14-normalization"
 FINAL = ROOT / "data" / "!-final" / "dataset.json"
 PRED = ROOT / "data" / "5-baselines" / "predictions"
 NORM_PRED = ABL / "predictions" / "claim-only" / "openai__gpt-5.4-high" / "predictions.json"
@@ -99,7 +99,24 @@ def main() -> None:
         })
     OUT_JSON.write_text(json.dumps(out, indent=2))
 
+    L = ["# D/F normalization ablation: wording vs granularity", "",
+         "Same units throughout; nothing is grouped in any condition, so "
+         "movement between columns is a text effect. `norm-raw` is how much of "
+         "the gain decontextualisation alone recovers; `snip-norm` is what the "
+         "human rewrite added beyond it.", "",
+         f"Verifier `{VERIFIER}`, claim-only. Noise floor on identical text is "
+         f"~{NOISE_FLOOR:.3f} F1_F - treat smaller differences as nil.", "",
+         "| Subgroup | n | raw atom | normalized | human snippet | norm-raw | "
+         "snip-raw | wording share |",
+         "|---|---:|---:|---:|---:|---:|---:|---:|"]
+    for r in out:
+        ws = f"{r['wording_share_pct']:.0f}%" if r["wording_share_pct"] is not None else "—"
+        L.append(f"| {r['subgroup']} | {r['n']} | {r['raw_atom']:.3f} | "
+                 f"{r['normalized_atom']:.3f} | {r['human_snippet']:.3f} | "
+                 f"{r['norm_minus_raw']:+.3f} | {r['snip_minus_raw']:+.3f} | {ws} |")
     print("\n".join(L))
+    print("\n".join(L))
+    print(f"\nwrote {OUT_JSON}")
 
 
 if __name__ == "__main__":

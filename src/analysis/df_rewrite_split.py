@@ -117,7 +117,20 @@ def main() -> None:
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(json.dumps(out, indent=2))
 
+    L = ["# D/F gain split by whether the snippet was reworded", "",
+         f"Single-atom patterns only, verifier `{args.verifier}`, claim-only. "
+         "`identical` means the snippet text matches its source atom exactly "
+         "(ignoring whitespace and punctuation), so no wording effect is "
+         "possible there. A gain in the identical subgroup cannot be explained "
+         "by decontextualisation.", "",
+         "| Pattern | subgroup | n | atom F1_F | snippet F1_F | Δ |",
+         "|---|---|---:|---:|---:|---:|"]
+    for r in out:
+        L.append(f"| {r['pattern']} | {r['subgroup']} | {r['n']} | "
+                 f"{r['atom_f1_F']:.3f} | {r['snippet_f1_F']:.3f} | {r['delta']:+.3f} |")
     print("\n".join(L))
+    print("\n".join(L))
+    print(f"\nwrote {OUT_JSON}")
 
 
 if __name__ == "__main__":
