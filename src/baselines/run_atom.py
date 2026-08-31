@@ -24,7 +24,7 @@ from pathlib import Path
 from ._openai_runner import run
 
 ROOT = Path(__file__).resolve().parents[2]
-IN_PATH = ROOT / "data" / "2-subset" / "medqa.json"
+IN_PATH = ROOT / "data" / "2-subset" / "kim.json"
 OUT_BASE = ROOT / "data" / "5-baselines" / "predictions" / "atom"
 
 CLAIM_ONLY_PROMPT = (

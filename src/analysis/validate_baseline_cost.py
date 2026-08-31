@@ -106,7 +106,7 @@ def load_medqa_dev_snippet_items(n: int = 200, seed: int = 42) -> list[dict]:
 
 
 def load_medqa_dev_atom_items(n: int = 200, seed: int = 42) -> list[dict]:
-    atoms = json.load(open(ROOT/"data/2-subset/medqa.json"))
+    atoms = json.load(open(ROOT/"data/2-subset/kim.json"))
     gold = json.load(open(ROOT/"data/4-split/medqa.json"))
     entry_split = {r["entry_id"]: r["split"] for r in gold}
     dev_atoms = [a for a in atoms

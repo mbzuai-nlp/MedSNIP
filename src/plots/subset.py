@@ -1,7 +1,11 @@
-"""Plot the MedQA subset split: word-count histogram + atomic-claim composition.
+"""Plot the Kim subset split as two separate panels.
 
-Reads data/2-subset/medqa.json (flat) + stats.json and writes
-data/2-subset/subset_reasoning.png.
+(a) Query word-count distribution with the natural gap that justifies the
+    consumer/vignette partition.
+(b) Atomic-claim composition per subset, with the false-rate annotated.
+
+Reads data/2-subset/kim.json (flat) + stats.json and writes
+data/2-subset/subset_reasoning_{a,b}.{png,pdf}.
 """
 import json
 from pathlib import Path
@@ -14,34 +18,31 @@ import seaborn as sns
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data" / "2-subset"
-OUT_PATH = DATA_DIR / "subset_reasoning.png"
 
 PALETTE = {"consumer": "#3274A1", "vignette": "#C44E52"}
 SUBSET_LABEL = {"consumer": "Consumer Health", "vignette": "Clinical Vignettes"}
+
+PANEL_FIGSIZE = (5.5, 5.5)
 
 
 def entry_id_of(row_id) -> int:
     return int(str(row_id).split("-")[0])
 
 
-def main():
-    sns.set_theme(style="whitegrid", context="notebook", font_scale=0.95)
+def save_panel(fig, name: str) -> None:
+    out_png = DATA_DIR / f"{name}.png"
+    out_pdf = DATA_DIR / f"{name}.pdf"
+    fig.savefig(out_png, dpi=200, bbox_inches="tight", facecolor="white")
+    fig.savefig(out_pdf, bbox_inches="tight", facecolor="white")
+    print(f"saved {out_png}")
+    print(f"saved {out_pdf}")
+    plt.close(fig)
 
-    rows = json.loads((DATA_DIR / "medqa.json").read_text())
-    stats = json.loads((DATA_DIR / "stats.json").read_text())
 
-    # Per-entry view for the histogram
-    seen: dict[int, dict] = {}
-    for r in rows:
-        eid = entry_id_of(r["id"])
-        if eid not in seen:
-            seen[eid] = {"subset": r["subset"], "word_count": len(r["query"].split())}
-    entry_df = pd.DataFrame(seen.values())
+def panel_a(entry_df: pd.DataFrame) -> None:
+    fig, ax1 = plt.subplots(figsize=PANEL_FIGSIZE)
+    ax1.set_box_aspect(1)
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4.5),
-                                   gridspec_kw={"width_ratios": [1.3, 1.0], "wspace": 0.28})
-
-    # (a) Word-count histogram
     sns.histplot(
         data=entry_df, x="word_count", hue="subset", bins=40,
         palette=PALETTE, hue_order=["consumer", "vignette"],
@@ -57,8 +58,6 @@ def main():
                  ha="center", va="center", fontsize=9,
                  color="#555555", fontstyle="italic")
 
-    # Place the pills along the top of the plot (axes-fraction coords)
-    # so they don't collide with the y-axis or sit on top of the bars.
     pill_x_axfrac = {"consumer": 0.20, "vignette": 0.78}
     for s in ("consumer", "vignette"):
         wc = entry_df.loc[entry_df["subset"] == s, "word_count"]
@@ -72,12 +71,16 @@ def main():
         )
     ax1.set_xlabel("Query Word Count")
     ax1.set_ylabel("Number of Entries")
-    ax1.set_title("(a) Query Length Distribution", fontweight="bold")
-    # Headroom so the pills at top don't sit on the bars.
     ymax = entry_df.groupby(pd.cut(entry_df["word_count"], bins=40)).size().max()
     ax1.set_ylim(0, ymax * 1.45)
 
-    # (b) Stacked claim composition: true (light) + false (saturated), with rate
+    save_panel(fig, "subset_reasoning_a")
+
+
+def panel_b(stats: dict) -> None:
+    fig, ax2 = plt.subplots(figsize=PANEL_FIGSIZE)
+    ax2.set_box_aspect(1)
+
     subsets = ["consumer", "vignette"]
     x = list(range(len(subsets)))
     true_counts = [stats[s]["claims"] - stats[s]["false_claims"] for s in subsets]
@@ -93,12 +96,10 @@ def main():
         total = stats[s]["claims"]
         n_false = stats[s]["false_claims"]
         rate = 100 * stats[s]["false_rate"]
-        # Total above the bar
         ax2.annotate(f"{total:,} atomic claims", xy=(i, total),
                      xytext=(0, 6), textcoords="offset points",
                      ha="center", fontsize=9.5, fontweight="bold",
                      color=PALETTE[s])
-        # False count + rate inside the false segment
         ax2.annotate(f"{n_false} false ({rate:.1f}%)",
                      xy=(i, total - n_false / 2),
                      ha="center", va="center", fontsize=10, fontweight="bold",
@@ -108,12 +109,26 @@ def main():
     ax2.set_xticklabels([SUBSET_LABEL[s] for s in subsets])
     ax2.set_xlabel("")
     ax2.set_ylabel("Number of Atomic Claims")
-    ax2.set_title("(b) Atomic-Claim Composition by Subset", fontweight="bold")
     ax2.set_ylim(0, max(stats[s]["claims"] for s in subsets) * 1.18)
 
-    plt.tight_layout()
-    plt.savefig(OUT_PATH, dpi=200, bbox_inches="tight", facecolor="white")
-    print(f"saved {OUT_PATH}")
+    save_panel(fig, "subset_reasoning_b")
+
+
+def main():
+    sns.set_theme(style="whitegrid", context="notebook", font_scale=0.95)
+
+    rows = json.loads((DATA_DIR / "kim.json").read_text())
+    stats = json.loads((DATA_DIR / "stats.json").read_text())
+
+    seen: dict[int, dict] = {}
+    for r in rows:
+        eid = entry_id_of(r["id"])
+        if eid not in seen:
+            seen[eid] = {"subset": r["subset"], "word_count": len(r["query"].split())}
+    entry_df = pd.DataFrame(seen.values())
+
+    panel_a(entry_df)
+    panel_b(stats)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""Merge human annotations onto a snippet-level flat MedQA schema.
+"""Merge human annotations onto a snippet-level flat Kim schema.
 
 After this step, medqa.json carries one row per *snippet* (not per
 atom). Snippets are the meaningful unit downstream — the annotator's
@@ -22,7 +22,7 @@ Each snippet row carries:
   - snippet_text          (human-edited snippet text)
   - atoms                 (list of {index, text, label} for the atoms
                            this snippet covers; `label` is the
-                           expert-supplied gold label from MedQA)
+                           expert-supplied gold label from Kim)
   - is_ambiguous          ("yes"/"no")
   - notes                 (annotator's free-text)
   - label_atomic          (AND over atoms' gold labels; bool)
@@ -35,7 +35,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-IN_PATH = ROOT / "data" / "2-subset" / "medqa.json"
+IN_PATH = ROOT / "data" / "2-subset" / "kim.json"
 BATCHES_DIR = ROOT / "data" / "3-annotated" / "batches"
 OUT_DIR = ROOT / "data" / "3-annotated"
 

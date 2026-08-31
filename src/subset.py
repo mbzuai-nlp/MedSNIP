@@ -1,4 +1,4 @@
-"""Tag every MedQA claim with a `subset` key.
+"""Tag every Kim claim with a `subset` key.
 
 Subsets are based on query length:
   - consumer:  short patient/public questions  (< 80 words)
@@ -9,17 +9,17 @@ per claim). The nested per-query JSON stays in 1-raw as the original
 source; everything downstream filters/aggregates the flat file.
 
 Input:
-  data/1-raw/medqa_flat.json  (5755 rows, one per claim)
+  data/1-raw/kim_flat.json  (5755 rows, one per claim)
 
 Outputs:
-  data/2-subset/medqa.json    (same rows + `subset` key)
+  data/2-subset/kim.json    (same rows + `subset` key)
   data/2-subset/stats.json
 """
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-IN_PATH = ROOT / "data" / "1-raw" / "medqa_flat.json"
+IN_PATH = ROOT / "data" / "1-raw" / "kim_flat.json"
 OUT_DIR = ROOT / "data" / "2-subset"
 
 WORD_THRESHOLD = 80
@@ -40,7 +40,7 @@ def main():
     for row in flat:
         row["subset"] = label(row["query"])
 
-    (OUT_DIR / "medqa.json").write_text(json.dumps(flat, indent=2, ensure_ascii=False))
+    (OUT_DIR / "kim.json").write_text(json.dumps(flat, indent=2, ensure_ascii=False))
 
     # Per-entry view (one row per entry_id) for entry-level counts
     seen_entries: dict[int, str] = {}

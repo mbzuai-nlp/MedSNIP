@@ -139,7 +139,7 @@ def load_medqa_set(split: str, mode: str, model: str):
             text_to_sid[(eid, a["text"].strip().lower())] = snip["snippet_id"]
     # 2-subset has the atom text under 'claim'
     aid_to_text = {a["id"]: a["claim"].strip().lower()
-                   for a in json.load(open(ROOT/"data/2-subset/medqa.json"))}
+                   for a in json.load(open(ROOT/"data/2-subset/kim.json"))}
 
     snip_path = ROOT/f"data/5-baselines/predictions/snippet/{mode}/{model}/predictions.json"
     atom_path = ROOT/f"data/5-baselines/predictions/atom/{mode}/{model}/predictions.json"
