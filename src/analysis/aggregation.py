@@ -13,7 +13,8 @@ Aggregation rules implemented:
   - first_atom    : claim = prediction on first atom (sanity check)
 
 Output:
-  data/!-analysis/aggregation_summary.json — per-(dataset, mode, model, rule) F1 + bootstrap CIs
+  data/11-analysis/aggregation_summary.json — per-(dataset, mode, model, rule) F1 + bootstrap CIs
+  data/11-analysis/aggregation_summary.md   — human-readable table
 
 Usage:
     python -m src.analysis.aggregation
@@ -27,7 +28,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT_DIR = ROOT / "data" / "!-analysis"
+OUT_DIR = ROOT / "data" / "11-analysis" / "aggregation-analysis"
 OUT_JSON = OUT_DIR / "aggregation_summary.json"
 
 

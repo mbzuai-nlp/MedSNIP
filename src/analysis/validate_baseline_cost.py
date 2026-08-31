@@ -3,10 +3,10 @@
 Runs 200 fresh LLM calls per critical cell (gpt-5.4-high × {snippet, atom} ×
 {full-context, claim-only} on MedSNIP-Bench dev), captures `usage` and per-call
 `wall_seconds`. Compares the measured aggregate cost to our tiktoken estimate
-in `data/8-verifier/metrics.json`, plus reports actual wall time (which we don't have for baselines
+in results.md, plus reports actual wall time (which we don't have for baselines
 otherwise).
 
-Output: data/!-analysis/baseline_cost_validation.json
+Output: data/11-analysis/baseline_cost_validation.json + .md summary.
 
 Usage:
     python -m src.analysis.validate_baseline_cost
@@ -26,7 +26,7 @@ from openai import OpenAI
 ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env")
 
-OUT_DIR = ROOT / "data" / "!-analysis"
+OUT_DIR = ROOT / "data" / "11-analysis" / "cost-analysis"
 OUT_JSON = OUT_DIR / "baseline_cost_validation.json"
 PER_CALL_DIR = OUT_DIR / "baseline_cost_per_call"  # one file per cell
 
@@ -234,6 +234,7 @@ def main():
 
     OUT_JSON.write_text(json.dumps(all_results, indent=2))
     print(f"\nwrote {OUT_JSON}")
+
 
 
 if __name__ == "__main__":
