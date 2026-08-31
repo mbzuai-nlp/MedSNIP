@@ -1,5 +1,5 @@
 ---
-license: gpl-3.0
+license: cc-by-4.0
 language:
   - en
 pretty_name: MedSNIP-Bench
