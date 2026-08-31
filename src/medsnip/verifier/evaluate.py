@@ -1,7 +1,7 @@
 """Compute verifier metrics from saved verdicts — no LLM calls.
 
 Walks data/8-verifier/**/verdicts_<split>_<source>.json and produces
-data/8-verifier/metrics.json with per-(version × split × source × subset ×
+data/8-verifier/metrics.json with per-(split × source × subset ×
 ground_truth × abstain_mode) metrics.
 
 Headline metric: F1 on the FALSE class against gold field `label_atomic`
@@ -235,16 +235,14 @@ def _compute_calibrated_table(joined: list[dict]) -> dict:
     return table
 
 
-def _iter_verdict_files() -> list[tuple[str, str, str, Path]]:
-    """Yield (version, split, source, path). version='' for files at the root."""
+def _iter_verdict_files() -> list[tuple[str, str, Path]]:
+    """Yield (split, source, path) for each verdict file in data/8-verifier/."""
     out = []
-    for path in sorted(VERIFIER_DIR.rglob("verdicts_*.json")):
+    for path in sorted(VERIFIER_DIR.glob("verdicts_*.json")):
         m = FNAME_RE.match(path.name)
         if not m:
             continue
-        rel_parent = path.parent.relative_to(VERIFIER_DIR)
-        version = "" if rel_parent == Path(".") else str(rel_parent)
-        out.append((version, m["split"], m["source"], path))
+        out.append((m["split"], m["source"], path))
     return out
 
 
@@ -266,7 +264,7 @@ def main():
     headline_rows: list[tuple] = []
     calibrated_rows: list[tuple] = []
 
-    for version, split, source, path in _iter_verdict_files():
+    for split, source, path in _iter_verdict_files():
         records = json.loads(path.read_text())
         joined = []
         for rec in records:
@@ -282,9 +280,8 @@ def main():
                 "label_human_contextual": g["label_human_contextual"],
                 "_baseline_pred":         baseline_pred.get(rec["id"]),
             })
-        ver_key = version or "_root"
         run_key = f"{split}_{source}"
-        results.setdefault(ver_key, {})[run_key] = {
+        results[run_key] = {
             "n_records":   len(records),
             "n_joined":    len(joined),
             "n_unresolved": sum(1 for r in records
@@ -292,33 +289,33 @@ def main():
             "table":       _compute_table(joined),
             "calibrated":  _compute_calibrated_table(joined),
         }
-        cell = results[ver_key][run_key]["table"]["dev"]["all"]["label_atomic"]["drop"]
-        headline_rows.append((ver_key, run_key, cell))
+        cell = results[run_key]["table"]["dev"]["all"]["label_atomic"]["drop"]
+        headline_rows.append((run_key, cell))
         for thr, fb in CALIBRATED_STRATEGIES:
             key = f"conf>={thr}{' +baseline-fallback' if fb else ' NA-dropped'}"
-            ccell = results[ver_key][run_key]["calibrated"][key]["dev"]["all"]["label_atomic"]
-            calibrated_rows.append((ver_key, run_key, key, ccell))
+            ccell = results[run_key]["calibrated"][key]["dev"]["all"]["label_atomic"]
+            calibrated_rows.append((run_key, key, ccell))
 
     VERIFIER_DIR.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(results, indent=2))
 
     print("\nHeadline (dev, all subsets, gt=label_atomic, abstain=drop):")
-    print(f"{'version':<10s} {'run':<22s} {'n':>5s} {'acc':>6s} "
+    print(f"{'run':<22s} {'n':>5s} {'acc':>6s} "
           f"{'P_F':>6s} {'R_F':>6s} {'F1_F':>6s} {'F1_T':>6s} {'macro':>6s}")
-    for ver_key, run_key, cell in headline_rows:
+    for run_key, cell in headline_rows:
         if cell["n"] == 0:
             continue
-        print(f"{ver_key:<10s} {run_key:<22s} {cell['n']:>5d} {cell['accuracy']:>6.3f} "
+        print(f"{run_key:<22s} {cell['n']:>5d} {cell['accuracy']:>6.3f} "
               f"{cell['precision_F']:>6.3f} {cell['recall_F']:>6.3f} "
               f"{cell['f1_F']:>6.3f} {cell['f1_T']:>6.3f} {cell['macro_f1']:>6.3f}")
 
     print("\nCalibrated strategies (dev, all subsets, gt=label_atomic):")
-    print(f"{'version':<10s} {'run':<22s} {'strategy':<30s} {'n':>5s} "
+    print(f"{'run':<22s} {'strategy':<30s} {'n':>5s} "
           f"{'acc':>6s} {'F1_F':>6s} {'F1_T':>6s} {'macro':>6s}")
-    for ver_key, run_key, strategy, cell in calibrated_rows:
+    for run_key, strategy, cell in calibrated_rows:
         if cell["n"] == 0:
             continue
-        print(f"{ver_key:<10s} {run_key:<22s} {strategy:<30s} {cell['n']:>5d} "
+        print(f"{run_key:<22s} {strategy:<30s} {cell['n']:>5d} "
               f"{cell['accuracy']:>6.3f} {cell['f1_F']:>6.3f} {cell['f1_T']:>6.3f} "
               f"{cell['macro_f1']:>6.3f}")
 

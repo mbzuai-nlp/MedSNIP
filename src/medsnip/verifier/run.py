@@ -129,8 +129,6 @@ def main():
                     help="pass the literal user query to the verifier")
     ap.add_argument("--no-shared-context", action="store_true",
                     help="drop the curated shared_context dict from the prompt")
-    ap.add_argument("--version", default=None,
-                    help="optional subdir under data/8-verifier/ (e.g. 'v1') for the run")
     ap.add_argument("--reasoning-effort", choices=["minimal", "low", "medium", "high"],
                     default=None,
                     help="reasoning_effort for reasoning-capable models (e.g. gpt-5.4)")
@@ -168,9 +166,8 @@ def main():
     if args.limit:
         tasks = tasks[: args.limit]
 
-    out_dir = OUT_DIR / args.version if args.version else OUT_DIR
-    out_path = out_dir / f"verdicts_{args.split}_{args.source}.json"
-    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = OUT_DIR / f"verdicts_{args.split}_{args.source}.json"
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     existing: dict[str, dict] = {}
     if args.skip_existing and out_path.exists():
