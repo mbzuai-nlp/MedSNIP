@@ -23,7 +23,7 @@ import json
 # ---------------------------------------------------------------------------
 
 SHARED_GUIDELINES = """\
-You are mirroring the work of a medical-text annotator on the MedFactCheck \
+You are mirroring the work of a medical-text annotator on the MedSNIP \
 project. Your job: take an LLM-generated medical response and group its content \
 into **snippets** — coherent, self-contained, verifiable units of medical \
 information.

@@ -1,5 +1,5 @@
 # Baseline cost + wall-time validation
-Sampled 200 fresh calls per cell on MedQA dev. Measured tokens + wall time, then extrapolated to the full dev sweep and compared against the tiktoken-estimated costs in [data/8-verifier/results.md](../8-verifier/results.md).
+Sampled 200 fresh calls per cell on MedSNIP-Bench dev. Measured tokens + wall time, then extrapolated to the full dev sweep and compared against the tiktoken-estimated costs in [data/8-verifier/results.md](../8-verifier/results.md).
 
 | cell | n | tokens in (cached) | tokens out | ¢/call (measured) | full dev $ (measured-extrap) | full dev $ (tiktoken-est) | wall p95 (s) |
 |---|---:|---:|---:|---:|---:|---:|---:|

@@ -1,6 +1,6 @@
 # Snippet Processor — Sentence-Grounded Evaluation
 
-Evaluated **51** entries against human gold (data/3-annotated/medqa.json).
+Evaluated **51** entries against human gold (data/3-annotated/medsnip-bench.json).
 
 Evaluation currency: **sentence indices** into a deterministic segmentation of `full_text` (see sentence_utils.py). Gold atoms are pre-mapped to sentence indices once (sentence_alignment.json), so all snippet comparisons are on the same currency — no embedding alignment.
 

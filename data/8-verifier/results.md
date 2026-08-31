@@ -88,7 +88,7 @@ Baselines only (no verifier ablations were run on train — train kept as the tr
 - **full-context**: snippet F1_F **0.475** = atom F1_F **0.475** (tied) at **lower cost** ($11.27 vs $17.67)
 - **claim-only**: snippet F1_F **0.433** > atom F1_F **0.302** (+0.131) at **lower cost** ($7.13 vs $10.27)
 
-Pattern replicates across all 3 MedQA splits: snippet matches or beats atom F1_F at ~30% lower cost.
+Pattern replicates across all 3 MedSNIP-Bench splits: snippet matches or beats atom F1_F at ~30% lower cost.
 
 ### Cross-(split × model × mode) granularity summary
 
@@ -156,13 +156,13 @@ Dev had consumer→v3 wins / vignette→baseline wins. **Test has the opposite.*
 ### Paper-defensible claims (post-test, post-aggregation-audit)
 
 **Primary claims (cost + time, rule-independent):**
-- **Snippet-level fact-checking costs ~68-74% of atom-level inference cost** across **all 12 baseline settings** (3 splits × 2 modes × 2 models on MedQA), driven by per-call output volume — atom calls have ~half the reasoning tokens of snippet calls but ~2.2× more calls, so the per-call savings partly offsets the call-count savings.
+- **Snippet-level fact-checking costs ~68-74% of atom-level inference cost** across **all 12 baseline settings** (3 splits × 2 modes × 2 models on MedSNIP-Bench), driven by per-call output volume — atom calls have ~half the reasoning tokens of snippet calls but ~2.2× more calls, so the per-call savings partly offsets the call-count savings.
 - **At fixed worker parallelism, snippet runs in ~half the wall-clock time** (proportional to call count). Replicates on HealthFC (750 vs 967 calls → 78% of atom) and MedHallu (2000 vs 3798 calls → 53% of atom).
 - **Both cost and time savings are aggregation-rule-independent** — they're properties of the inference pipeline, not the evaluation method.
 
 **Secondary claims (F1 — rule-conditional):**
 - **Under OR-False aggregation** (the standard rule used in the FActScore lineage):
-  - Snippet F1_F **≥ atom F1_F in claim-only mode** across 5/6 MedQA settings; the 1 exception (test/gpt-4o-none) is a statistical tie (95% CI [−0.170, +0.104]).
+  - Snippet F1_F **≥ atom F1_F in claim-only mode** across 5/6 MedSNIP-Bench settings; the 1 exception (test/gpt-4o-none) is a statistical tie (95% CI [−0.170, +0.104]).
   - Snippet F1_F **statistically significantly > atom F1_F** on HealthFC (+0.040, 95% CI [+0.004, +0.077]) and MedHallu (+0.055, 95% CI [+0.047, +0.070]).
   - Full-context mode is mixed: snippet ties strong models, loses to atom with gpt-4o-none (-0.04 to -0.09).
 - **Under threshold-k≥2 aggregation** (more lenient), snippet > atom in **12/14 settings with P(>0) ≥ 0.95**. The OR-False mixed-result on full-context disappears under more lenient rules.
@@ -183,10 +183,10 @@ See [data/!-analysis/aggregation_summary.md](../!-analysis/aggregation_summary.m
 
 ## Headline: snippet-level fact-checking costs ~half as much as atom-level, with no F1 loss
 
-**Primary finding (rule-independent):** across 12 MedQA settings + 2 external datasets, **snippet baselines use 43-51% of atom inference cost and wall time** (driven by the call-count ratio). This holds for both modes (full-context, claim-only) and both models (gpt-5.4-high, gpt-4o-none).
+**Primary finding (rule-independent):** across 12 MedSNIP-Bench settings + 2 external datasets, **snippet baselines use 43-51% of atom inference cost and wall time** (driven by the call-count ratio). This holds for both modes (full-context, claim-only) and both models (gpt-5.4-high, gpt-4o-none).
 
 **Secondary finding (F1):** snippet F1 is **preserved** across grains. Under the standard OR-False aggregation:
-- claim-only mode: snippet ≥ atom in 5/6 MedQA settings; 1 statistical tie
+- claim-only mode: snippet ≥ atom in 5/6 MedSNIP-Bench settings; 1 statistical tie
 - HealthFC: snippet > atom by +0.040 F1_F (95% CI [+0.004, +0.077])
 - MedHallu: snippet > atom by +0.055 F1_F (95% CI [+0.047, +0.070])
 - full-context mode: ties under strong models; mode-dependent under weak ones

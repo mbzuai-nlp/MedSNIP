@@ -3,7 +3,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 `gap` = snippet F1_F − atom F1_F under the rule. Bootstrap 95% CI in brackets.
 `P(>0)` = bootstrap probability that snippet > atom (the granularity claim).
 
-**MedQA train · full-context · gpt-5.4-high**: snippet F1_F=0.4692 (n=1575)
+**MedSNIP-Bench train · full-context · gpt-5.4-high**: snippet F1_F=0.4692 (n=1575)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -13,7 +13,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.2819 | 0.925 | 0.6034 | +0.1876 | [+0.1160, +0.2587] | 1.000 |
 | `first_atom` | 0.4582 | 0.9277 | 0.6929 | +0.0110 | [-0.0509, +0.0727] | 0.633 |
 
-**MedQA train · full-context · gpt-4o-none**: snippet F1_F=0.2887 (n=1575)
+**MedSNIP-Bench train · full-context · gpt-4o-none**: snippet F1_F=0.2887 (n=1575)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -23,7 +23,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.1839 | 0.9263 | 0.5551 | +0.1043 | [+0.0179, +0.1905] | 0.989 |
 | `first_atom` | 0.3323 | 0.9216 | 0.627 | -0.0436 | [-0.1119, +0.0232] | 0.097 |
 
-**MedQA train · claim-only · gpt-5.4-high**: snippet F1_F=0.4294 (n=1575)
+**MedSNIP-Bench train · claim-only · gpt-5.4-high**: snippet F1_F=0.4294 (n=1575)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -33,7 +33,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.2779 | 0.8831 | 0.5805 | +0.1523 | [+0.0962, +0.2092] | 1.000 |
 | `first_atom` | 0.3859 | 0.8394 | 0.6127 | +0.0436 | [+0.0064, +0.0823] | 0.988 |
 
-**MedQA train · claim-only · gpt-4o-none**: snippet F1_F=0.408 (n=1575)
+**MedSNIP-Bench train · claim-only · gpt-4o-none**: snippet F1_F=0.408 (n=1575)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -43,7 +43,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.2485 | 0.9097 | 0.5791 | +0.1595 | [+0.0858, +0.2334] | 1.000 |
 | `first_atom` | 0.3714 | 0.8766 | 0.624 | +0.0368 | [-0.0128, +0.0871] | 0.926 |
 
-**MedQA dev · full-context · gpt-5.4-high**: snippet F1_F=0.5109 (n=483)
+**MedSNIP-Bench dev · full-context · gpt-5.4-high**: snippet F1_F=0.5109 (n=483)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -53,7 +53,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.2609 | 0.9222 | 0.5915 | +0.2504 | [+0.1150, +0.3785] | 0.999 |
 | `first_atom` | 0.464 | 0.9203 | 0.6922 | +0.0466 | [-0.0484, +0.1448] | 0.829 |
 
-**MedQA dev · full-context · gpt-4o-none**: snippet F1_F=0.234 (n=483)
+**MedSNIP-Bench dev · full-context · gpt-4o-none**: snippet F1_F=0.234 (n=483)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -63,7 +63,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.125 | 0.921 | 0.523 | +0.1078 | [-0.0132, +0.2324] | 0.961 |
 | `first_atom` | 0.2857 | 0.9063 | 0.596 | -0.0540 | [-0.1842, +0.0786] | 0.209 |
 
-**MedQA dev · claim-only · gpt-5.4-high**: snippet F1_F=0.4 (n=483)
+**MedSNIP-Bench dev · claim-only · gpt-5.4-high**: snippet F1_F=0.4 (n=483)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -73,7 +73,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.2645 | 0.8947 | 0.5796 | +0.1353 | [+0.0183, +0.2488] | 0.986 |
 | `first_atom` | 0.3662 | 0.8207 | 0.5935 | +0.0334 | [-0.0393, +0.1075] | 0.811 |
 
-**MedQA dev · claim-only · gpt-4o-none**: snippet F1_F=0.3836 (n=483)
+**MedSNIP-Bench dev · claim-only · gpt-4o-none**: snippet F1_F=0.3836 (n=483)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -83,7 +83,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.2316 | 0.9162 | 0.5739 | +0.1514 | [+0.0154, +0.2847] | 0.983 |
 | `first_atom` | 0.3529 | 0.8618 | 0.6074 | +0.0297 | [-0.0579, +0.1178] | 0.741 |
 
-**MedQA test · full-context · gpt-5.4-high**: snippet F1_F=0.497 (n=414)
+**MedSNIP-Bench test · full-context · gpt-5.4-high**: snippet F1_F=0.497 (n=414)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -93,7 +93,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.3721 | 0.9272 | 0.6497 | +0.1271 | [-0.0159, +0.2705] | 0.959 |
 | `first_atom` | 0.4381 | 0.9184 | 0.6782 | +0.0602 | [-0.0689, +0.1859] | 0.822 |
 
-**MedQA test · full-context · gpt-4o-none**: snippet F1_F=0.1389 (n=414)
+**MedSNIP-Bench test · full-context · gpt-4o-none**: snippet F1_F=0.1389 (n=414)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -103,7 +103,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.125 | 0.9267 | 0.5259 | +0.0147 | [-0.1290, +0.1615] | 0.569 |
 | `first_atom` | 0.1266 | 0.9079 | 0.5172 | +0.0132 | [-0.1065, +0.1342] | 0.596 |
 
-**MedQA test · claim-only · gpt-5.4-high**: snippet F1_F=0.4526 (n=414)
+**MedSNIP-Bench test · claim-only · gpt-5.4-high**: snippet F1_F=0.4526 (n=414)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
@@ -113,7 +113,7 @@ Tests robustness of the snippet > atom claim under different atom→claim aggreg
 | `threshold_k2` | 0.3158 | 0.8691 | 0.5924 | +0.1383 | [+0.0264, +0.2486] | 0.991 |
 | `first_atom` | 0.3218 | 0.8196 | 0.5707 | +0.1309 | [+0.0403, +0.2196] | 0.998 |
 
-**MedQA test · claim-only · gpt-4o-none**: snippet F1_F=0.3571 (n=414)
+**MedSNIP-Bench test · claim-only · gpt-4o-none**: snippet F1_F=0.3571 (n=414)
 
 | rule | atom F1_F | atom F1_T | atom macro | gap | 95% CI | P(snippet>atom) |
 |---|---:|---:|---:|---:|---|---:|
