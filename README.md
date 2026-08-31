@@ -19,6 +19,14 @@ A medical claim's correctness often depends not on the claim alone, but on the c
 
 This repository reformulates medical fact-checking around **snippet-level** verification, where clause-grouped units preserve local clinical structure. It contains **MedSNIP-Bench**, a human-annotated benchmark of 2,524 snippets over 276 responses, and **MedSNIP**, the pipeline that generates snippets automatically.
 
+<p align="center">
+  <img src="assets/fig-motivation.svg" alt="One clinical judgment fragmenting into three or four atoms" width="100%">
+</p>
+
+<p align="center">
+  <sub>A clinical judgment stays intact as one snippet, but fragments into three or four atoms that are each verifiable in isolation yet clinically incomplete.</sub>
+</p>
+
 ## Setup
 
 ```bash
