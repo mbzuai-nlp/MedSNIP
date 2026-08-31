@@ -1,15 +1,15 @@
 """Run the snippet processor over the annotated dataset.
 
-Reads data/4-split/medqa.json. Aggregates per entry, runs the
+Reads data/4-split/medsnip-bench.json. Aggregates per entry, runs the
 SnippetProcessor on each, saves data/6-snippet-processor/<mode>/e<id>.json.
 Each mode gets its own subdirectory so both can coexist.
 
 Usage:
-  python -m src.medfactcheck.snippet_processor.run --mode atom-to-snippet
-  python -m src.medfactcheck.snippet_processor.run --mode snippet-direct
-  python -m src.medfactcheck.snippet_processor.run --mode atom-to-snippet --split dev
-  python -m src.medfactcheck.snippet_processor.run --entry-ids 1 61
-  python -m src.medfactcheck.snippet_processor.run --skip-existing
+  python -m src.medsnip.snippet_processor.run --mode atom-to-snippet
+  python -m src.medsnip.snippet_processor.run --mode snippet-direct
+  python -m src.medsnip.snippet_processor.run --mode atom-to-snippet --split dev
+  python -m src.medsnip.snippet_processor.run --entry-ids 1 61
+  python -m src.medsnip.snippet_processor.run --skip-existing
 """
 import argparse
 import json
@@ -21,7 +21,7 @@ from threading import Lock
 from .processor import DEFAULT_MODE, MODES, SnippetProcessor
 
 ROOT = Path(__file__).resolve().parents[3]
-SPLIT_PATH = ROOT / "data" / "4-split" / "medqa.json"
+SPLIT_PATH = ROOT / "data" / "4-split" / "medsnip-bench.json"
 OUT_ROOT = ROOT / "data" / "6-snippet-processor"
 
 

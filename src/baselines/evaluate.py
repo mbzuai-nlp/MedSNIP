@@ -21,7 +21,7 @@ from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[2]
 PRED_BASE = ROOT / "data" / "5-baselines" / "predictions"
-SPLIT_PATH = ROOT / "data" / "4-split" / "medqa.json"
+SPLIT_PATH = ROOT / "data" / "4-split" / "medsnip-bench.json"
 OUT_PATH = ROOT / "data" / "5-baselines" / "metrics.json"
 
 ATOM_GTS = ["label"]

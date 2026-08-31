@@ -20,7 +20,7 @@ Abstain modes:
   - as_true   : count an abstain as a 'true' prediction
 
 Usage:
-  python -m src.medfactcheck.verifier.evaluate
+  python -m src.medsnip.verifier.evaluate
 """
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 VERIFIER_DIR = ROOT / "data" / "8-verifier"
-SPLIT_PATH = ROOT / "data" / "4-split" / "medqa.json"
+SPLIT_PATH = ROOT / "data" / "4-split" / "medsnip-bench.json"
 BASELINE_PATH = (ROOT / "data" / "5-baselines" / "predictions" / "snippet" /
                  "full-context" / "gpt-5.4-high" / "predictions.json")
 OUT_PATH = VERIFIER_DIR / "metrics.json"

@@ -16,10 +16,10 @@ false-rate gap *jointly* across:
 So all three rates stay close in every (subset, split) cell.
 
 Input:
-  data/3-annotated/medqa.json   (snippet rows with subset + human labels)
+  data/3-annotated/medsnip-bench.json   (snippet rows with subset + human labels)
 
 Outputs:
-  data/4-split/medqa.json       (same rows + `split` key)
+  data/4-split/medsnip-bench.json       (same rows + `split` key)
   data/4-split/stats.json
 """
 import json
@@ -28,7 +28,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-IN_PATH = ROOT / "data" / "3-annotated" / "medqa.json"
+IN_PATH = ROOT / "data" / "3-annotated" / "medsnip-bench.json"
 OUT_DIR = ROOT / "data" / "4-split"
 
 DEV_N = 50
@@ -150,7 +150,7 @@ def main():
         r["split"] = "dev" if eid in best_dev else "test" if eid in best_test else "train"
 
     rows.sort(key=lambda r: (r["entry_id"], int(r["snippet_id"].split("-S")[1])))
-    (OUT_DIR / "medqa.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
+    (OUT_DIR / "medsnip-bench.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
 
     # Stats
     by_cell = {(sub, sp): {"entries": set(), "snippets": 0,

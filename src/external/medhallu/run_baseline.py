@@ -1,7 +1,7 @@
 """Run the snippet / atom baselines on MedHallu (binary subset).
 
 Mirrors src.external.healthfc.run_baseline. Same `claim-only` prompt as the
-existing MedFactCheck baselines.
+existing MedSNIP baselines.
 
 Output: data/10-medhallu/baselines/predictions/{grain}/claim-only/{tag}/predictions.json
 

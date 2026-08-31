@@ -1,4 +1,4 @@
-# MedFactCheck
+# MedSNIP
 
 Context-aware fact verification for medical open-domain QA.
 

@@ -42,7 +42,7 @@ def _params(extra: dict[str, Any]) -> dict[str, Any]:
         p["email"] = NCBI_EMAIL
     if NCBI_API_KEY:
         p["api_key"] = NCBI_API_KEY
-    p["tool"] = "medfactcheck"
+    p["tool"] = "medsnip"
     return p
 
 

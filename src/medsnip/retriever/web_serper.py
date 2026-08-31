@@ -10,7 +10,7 @@ from typing import Any
 import requests
 from dotenv import load_dotenv
 
-# Repo root is four parents above this file (src/medfactcheck/retriever/web_serper.py)
+# Repo root is four parents above this file (src/medsnip/retriever/web_serper.py)
 load_dotenv(Path(__file__).resolve().parents[3] / ".env")
 
 SERPER_URL = "https://google.serper.dev/search"

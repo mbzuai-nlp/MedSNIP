@@ -1,6 +1,6 @@
 """Precompute the gold-atom → sentence-index alignment for every entry.
 
-Reads data/4-split/medqa.json (snippet rows; we aggregate per entry) and
+Reads data/4-split/medsnip-bench.json (snippet rows; we aggregate per entry) and
 writes data/6-snippet-processor/sentence_alignment.json:
 
   {
@@ -22,7 +22,7 @@ from .run import aggregate_entries
 from .sentence_utils import align_atoms_to_sentences, split_sentences
 
 ROOT = Path(__file__).resolve().parents[3]
-SPLIT_PATH = ROOT / "data" / "4-split" / "medqa.json"
+SPLIT_PATH = ROOT / "data" / "4-split" / "medsnip-bench.json"
 OUT_PATH = ROOT / "data" / "6-snippet-processor" / "sentence_alignment.json"
 
 

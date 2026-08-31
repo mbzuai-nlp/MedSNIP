@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MedFactCheck — Annotation Dashboard</title>
+  <title>MedSNIP — Annotation Dashboard</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f6fa; color: #2c3e50; font-size: 14px; }
@@ -151,7 +151,7 @@
 <body>
 
 <div class="header">
-  <h1>MedFactCheck — Annotation</h1>
+  <h1>MedSNIP — Annotation</h1>
   <button class="btn-header" onclick="window.open('guidlines.pdf', '_blank', 'noopener')">Guidelines</button>
   <button class="btn-header" onclick="openModal('settings-modal')">Settings</button>
   <div class="stats" id="stats"></div>
@@ -206,7 +206,7 @@ let showSuggestions = false;
 const serverAnnotations = new Map();  // entry_id -> {shared_context, snippets}
 
 function getEntryState(entryId) {
-  const raw = localStorage.getItem(`medfactcheck_v2_${entryId}`);
+  const raw = localStorage.getItem(`medsnip_v2_${entryId}`);
   if (raw) return JSON.parse(raw);
   const seeded = serverAnnotations.get(entryId);
   if (seeded) return JSON.parse(JSON.stringify(seeded));  // deep copy so edits don't mutate the cache
@@ -214,7 +214,7 @@ function getEntryState(entryId) {
 }
 
 function saveEntryState(entryId, state) {
-  localStorage.setItem(`medfactcheck_v2_${entryId}`, JSON.stringify(state));
+  localStorage.setItem(`medsnip_v2_${entryId}`, JSON.stringify(state));
 }
 
 const DEFAULT_SNIPPET_PROMPT = `Combine the following atomic claims into a single verifiable statement.
@@ -241,7 +241,7 @@ IMPORTANT: All values MUST be flat strings (never nested objects or arrays). For
 Output ONLY valid JSON, no markdown.`;
 
 function getLLMSettings() {
-  const raw = localStorage.getItem('medfactcheck_llm_config');
+  const raw = localStorage.getItem('medsnip_llm_config');
   const defaults = { provider: 'openai', apikey: '', model: 'gpt-5.4', snippet_prompt: DEFAULT_SNIPPET_PROMPT, context_prompt: DEFAULT_CONTEXT_PROMPT };
   if (!raw) return defaults;
   const saved = JSON.parse(raw);
@@ -256,7 +256,7 @@ function saveSettings() {
     snippet_prompt: document.getElementById('set-snippet-prompt').value,
     context_prompt: document.getElementById('set-context-prompt').value,
   };
-  localStorage.setItem('medfactcheck_llm_config', JSON.stringify(config));
+  localStorage.setItem('medsnip_llm_config', JSON.stringify(config));
 }
 
 function loadSettings() {

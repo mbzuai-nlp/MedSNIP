@@ -1,6 +1,6 @@
 """Merge human annotations onto a snippet-level flat Kim schema.
 
-After this step, medqa.json carries one row per *snippet* (not per
+After this step, medsnip-bench.json carries one row per *snippet* (not per
 atom). Snippets are the meaningful unit downstream — the annotator's
 chunks of the response — and annotators sometimes produce overlapping
 snippet groupings (the same atom appearing in multiple snippets, e.g.,
@@ -116,7 +116,7 @@ def main():
     # regardless of which batch each entry was annotated in.
     out_rows.sort(key=lambda r: (r["entry_id"], int(r["snippet_id"].split("-S")[1])))
 
-    (OUT_DIR / "medqa.json").write_text(json.dumps(out_rows, indent=2, ensure_ascii=False))
+    (OUT_DIR / "medsnip-bench.json").write_text(json.dumps(out_rows, indent=2, ensure_ascii=False))
 
     # Stats per subset
     by: dict[str, dict] = defaultdict(lambda: {

@@ -126,9 +126,9 @@ def bootstrap_gap(rows_a: list[dict], rows_b: list[dict], B: int = 5000,
 
 # ──────────────────────────────────────────── loaders for each dataset ──
 
-def load_medqa_set(split: str, mode: str, model: str):
+def load_medsnip_bench_set(split: str, mode: str, model: str):
     """Return (snippet_rows, atom_groups_by_snippet, all_gold_True_count, all_gold_False_count)."""
-    gold = json.load(open(ROOT/"data/4-split/medqa.json"))
+    gold = json.load(open(ROOT/"data/4-split/medsnip-bench.json"))
     snippet_gold = {r["snippet_id"]: bool(r["label_atomic"])
                     for r in gold if r["split"] == split}
     # Build (entry_id, text_lower) → snippet_id mapping
@@ -254,21 +254,21 @@ def analyze(snip_rows, atom_groups, gold, atom_counts_needed=None):
 
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    results: dict = {"medqa": {}, "healthfc": {}, "medhallu": {}}
+    results: dict = {"medsnip-bench": {}, "healthfc": {}, "medhallu": {}}
 
-    # MedQA: train/dev/test × full-context/claim-only × gpt-5.4-high/gpt-4o-none
+    # MedSNIP-Bench: train/dev/test × full-context/claim-only × gpt-5.4-high/gpt-4o-none
     for split in ("train", "dev", "test"):
         for mode in ("full-context", "claim-only"):
             for model in ("gpt-5.4-high", "gpt-4o-none"):
-                got = load_medqa_set(split, mode, model)
+                got = load_medsnip_bench_set(split, mode, model)
                 if got is None: continue
                 snip_rows, atom_groups, gold = got
-                # For MedQA, all atoms expected per snippet — count from gold snippet atoms
-                gold_snip = {r["snippet_id"]: r for r in json.load(open(ROOT/"data/4-split/medqa.json"))}
+                # For MedSNIP-Bench, all atoms expected per snippet — count from gold snippet atoms
+                gold_snip = {r["snippet_id"]: r for r in json.load(open(ROOT/"data/4-split/medsnip-bench.json"))}
                 atom_counts = {sid: len(gold_snip[sid].get("atoms", []))
                                for sid in gold_snip}
                 analysis = analyze(snip_rows, atom_groups, gold, atom_counts_needed=atom_counts)
-                results["medqa"].setdefault(split, {}).setdefault(mode, {})[model] = analysis
+                results["medsnip-bench"].setdefault(split, {}).setdefault(mode, {})[model] = analysis
 
     # HealthFC
     hfc = load_healthfc("gpt-5.4-high")
@@ -310,8 +310,8 @@ def main():
     for split in ("train", "dev", "test"):
         for mode in ("full-context", "claim-only"):
             for model in ("gpt-5.4-high", "gpt-4o-none"):
-                run = results["medqa"].get(split, {}).get(mode, {}).get(model)
-                if run: fmt_run(f"MedQA {split} · {mode} · {model}", run)
+                run = results["medsnip-bench"].get(split, {}).get(mode, {}).get(model)
+                if run: fmt_run(f"MedSNIP-Bench {split} · {mode} · {model}", run)
 
     if results["healthfc"]:
         fmt_run("HealthFC · claim-only · gpt-5.4-high", results["healthfc"]["gpt-5.4-high"])
@@ -329,9 +329,9 @@ def main():
     for split in ("train", "dev", "test"):
         for mode in ("full-context", "claim-only"):
             for model in ("gpt-5.4-high", "gpt-4o-none"):
-                r = results["medqa"].get(split, {}).get(mode, {}).get(model)
+                r = results["medsnip-bench"].get(split, {}).get(mode, {}).get(model)
                 if r:
-                    rows_to_print.append((f"MedQA/{split}/{mode}/{model}", r))
+                    rows_to_print.append((f"MedSNIP-Bench/{split}/{mode}/{model}", r))
     for tag, r in [("HealthFC/claim-only/gpt-5.4-high", results["healthfc"].get("gpt-5.4-high")),
                    ("MedHallu/claim-only/gpt-5.4-high", results["medhallu"].get("gpt-5.4-high"))]:
         if r: rows_to_print.append((tag, r))

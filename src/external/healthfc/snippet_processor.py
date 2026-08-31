@@ -1,6 +1,6 @@
-"""Run our MedFactCheck SnippetProcessor on HealthFC claims.
+"""Run our MedSNIP SnippetProcessor on HealthFC claims.
 
-Uses `mode="atom-to-snippet"` — the same pipeline MedFactCheck's
+Uses `mode="atom-to-snippet"` — the same pipeline MedSNIP's
 preprocessing uses (data/6-snippet-processor/atom-to-snippet/). We keep
 both `generated_atoms` and `snippets` outputs so the downstream baselines
 can run at either granularity.
@@ -29,7 +29,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 
-from src.medfactcheck.snippet_processor.processor import SnippetProcessor
+from src.medsnip.snippet_processor.processor import SnippetProcessor
 
 ROOT = Path(__file__).resolve().parents[3]
 IN_PATH = ROOT / "data" / "1-raw" / "healthfc.json"

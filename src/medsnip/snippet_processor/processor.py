@@ -40,7 +40,7 @@ from .prompts import (
 )
 from .sentence_utils import split_sentences
 
-# Repo root is three parents above this file (src/medfactcheck/snippet_processor/ → repo root).
+# Repo root is three parents above this file (src/medsnip/snippet_processor/ → repo root).
 load_dotenv(Path(__file__).resolve().parents[3] / ".env")
 
 DEFAULT_MODEL = "gpt-5.4"

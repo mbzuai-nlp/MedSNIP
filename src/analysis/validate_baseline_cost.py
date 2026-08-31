@@ -1,7 +1,7 @@
 """Sample-validate baseline cost estimates with measured token usage + wall time.
 
 Runs 200 fresh LLM calls per critical cell (gpt-5.4-high × {snippet, atom} ×
-{full-context, claim-only} on MedQA dev), captures `usage` and per-call
+{full-context, claim-only} on MedSNIP-Bench dev), captures `usage` and per-call
 `wall_seconds`. Compares the measured aggregate cost to our tiktoken estimate
 in results.md, plus reports actual wall time (which we don't have for baselines
 otherwise).
@@ -92,8 +92,8 @@ def call_once(client: OpenAI, model: str, sys_prompt: str, user: str,
     return {"input": inp, "cached": cached, "output": out, "wall": wall}, wall
 
 
-def load_medqa_dev_snippet_items(n: int = 200, seed: int = 42) -> list[dict]:
-    rows = [r for r in json.load(open(ROOT/"data/4-split/medqa.json"))
+def load_medsnip_bench_dev_snippet_items(n: int = 200, seed: int = 42) -> list[dict]:
+    rows = [r for r in json.load(open(ROOT/"data/4-split/medsnip-bench.json"))
             if r["split"] == "dev"]
     rng = random.Random(seed)
     sample = rng.sample(rows, min(n, len(rows)))
@@ -105,9 +105,9 @@ def load_medqa_dev_snippet_items(n: int = 200, seed: int = 42) -> list[dict]:
     } for r in sample]
 
 
-def load_medqa_dev_atom_items(n: int = 200, seed: int = 42) -> list[dict]:
+def load_medsnip_bench_dev_atom_items(n: int = 200, seed: int = 42) -> list[dict]:
     atoms = json.load(open(ROOT/"data/2-subset/kim.json"))
-    gold = json.load(open(ROOT/"data/4-split/medqa.json"))
+    gold = json.load(open(ROOT/"data/4-split/medsnip-bench.json"))
     entry_split = {r["entry_id"]: r["split"] for r in gold}
     dev_atoms = [a for a in atoms
                  if entry_split.get(int(str(a["id"]).split("-")[0])) == "dev"]
@@ -196,9 +196,9 @@ def main():
     for grain, mode, model in cells:
         print(f"\n--- {grain} / {mode} / {model} ---")
         if grain == "snippet":
-            items = load_medqa_dev_snippet_items(args.n_per_cell)
+            items = load_medsnip_bench_dev_snippet_items(args.n_per_cell)
         else:
-            items = load_medqa_dev_atom_items(args.n_per_cell)
+            items = load_medsnip_bench_dev_atom_items(args.n_per_cell)
         cell_key = f"{grain}/{mode}/{model}"
         per_call_file = PER_CALL_DIR / f"{grain}_{mode}_{model}.json"
         r = run_cell(items, grain, mode, model, args.workers,
@@ -238,7 +238,7 @@ def main():
 
     # Write markdown
     md = ["# Baseline cost + wall-time validation\n",
-          f"Sampled {args.n_per_cell} fresh calls per cell on MedQA dev. "
+          f"Sampled {args.n_per_cell} fresh calls per cell on MedSNIP-Bench dev. "
           "Measured tokens + wall time, then extrapolated to the full dev sweep "
           "and compared against the tiktoken-estimated costs in [data/8-verifier/results.md](../8-verifier/results.md).\n\n"]
     md.append(f"| cell | n | tokens in (cached) | tokens out | ¢/call (measured) | "

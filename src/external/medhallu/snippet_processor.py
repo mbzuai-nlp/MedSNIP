@@ -1,4 +1,4 @@
-"""Run our MedFactCheck SnippetProcessor on MedHallu answers.
+"""Run our MedSNIP SnippetProcessor on MedHallu answers.
 
 Each MedHallu row gives us TWO claims:
   - `ground_truth`        → gold_bool = True  (correct answer)
@@ -6,7 +6,7 @@ Each MedHallu row gives us TWO claims:
 
 So we get 2000 binary claims from the 1000-row `pqa_labeled` split.
 
-Uses `mode="atom-to-snippet"` — same pipeline as MedFactCheck preprocessing.
+Uses `mode="atom-to-snippet"` — same pipeline as MedSNIP preprocessing.
 
 Output: data/10-medhallu/snippet-processor/atom-to-snippet/medhallu.json
 
@@ -22,7 +22,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 
-from src.medfactcheck.snippet_processor.processor import SnippetProcessor
+from src.medsnip.snippet_processor.processor import SnippetProcessor
 
 ROOT = Path(__file__).resolve().parents[3]
 IN_PATH = ROOT / "data" / "1-raw" / "medhallu.json"

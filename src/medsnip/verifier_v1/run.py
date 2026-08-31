@@ -2,7 +2,7 @@
 
 Source of snippets is selectable:
 
-  --source human            : human gold snippets from data/4-split/medqa.json
+  --source human            : human gold snippets from data/4-split/medsnip-bench.json
                               (the oracle path — what humans curated)
   --source atom-to-snippet  : auto snippets from
                               data/6-snippet-processor/atom-to-snippet/
@@ -15,14 +15,14 @@ Writes per-snippet verdicts to
 data/8-verifier/verdicts_<split>_<source>.jsonl. Resumable.
 
 Usage:
-  python -m src.medfactcheck.verifier.run --source human --split dev --workers 16
-  python -m src.medfactcheck.verifier.run --source atom-to-snippet --split dev
-  python -m src.medfactcheck.verifier.run --split dev --limit 5           # smoke
-  python -m src.medfactcheck.verifier.run --entry-ids 1 62 65             # specific
-  python -m src.medfactcheck.verifier.run --snippet-ids 1-S2 62-S5
-  python -m src.medfactcheck.verifier.run --disable-abstain
-  python -m src.medfactcheck.verifier.run --max-iters 5
-  python -m src.medfactcheck.verifier.run --skip-existing
+  python -m src.medsnip.verifier.run --source human --split dev --workers 16
+  python -m src.medsnip.verifier.run --source atom-to-snippet --split dev
+  python -m src.medsnip.verifier.run --split dev --limit 5           # smoke
+  python -m src.medsnip.verifier.run --entry-ids 1 62 65             # specific
+  python -m src.medsnip.verifier.run --snippet-ids 1-S2 62-S5
+  python -m src.medsnip.verifier.run --disable-abstain
+  python -m src.medsnip.verifier.run --max-iters 5
+  python -m src.medsnip.verifier.run --skip-existing
 """
 import argparse
 import json
@@ -34,7 +34,7 @@ from threading import Lock
 from .verifier import Verifier
 
 ROOT = Path(__file__).resolve().parents[3]
-SPLIT_PATH = ROOT / "data" / "4-split" / "medqa.json"
+SPLIT_PATH = ROOT / "data" / "4-split" / "medsnip-bench.json"
 SNIPPET_PROC_ROOT = ROOT / "data" / "6-snippet-processor"
 OUT_DIR = ROOT / "data" / "8-verifier"
 
@@ -52,7 +52,7 @@ def _strip_correct_answer(ctx) -> dict:
 
 
 def load_tasks_human(split: str | None) -> list[dict]:
-    """One task per human snippet from data/4-split/medqa.json."""
+    """One task per human snippet from data/4-split/medsnip-bench.json."""
     rows = json.loads(SPLIT_PATH.read_text())
     out = []
     for r in rows:
@@ -78,7 +78,7 @@ def load_tasks_auto(source: str, split: str | None) -> list[dict]:
     if not src_dir.exists():
         raise SystemExit(
             f"missing {src_dir}; run "
-            f"`python -m src.medfactcheck.snippet_processor.run --mode {source}` first"
+            f"`python -m src.medsnip.snippet_processor.run --mode {source}` first"
         )
     # Entry-level split lookup
     split_rows = json.loads(SPLIT_PATH.read_text())
@@ -202,7 +202,7 @@ def main():
                 shared_context=task["shared_context"],
                 full_text=task.get("full_text"),
                 query=task.get("query"),
-                cache_key=f"medfactcheck-entry-{task['entry_id']}",
+                cache_key=f"medsnip-entry-{task['entry_id']}",
             )
         except Exception as exc:
             with out_lock:

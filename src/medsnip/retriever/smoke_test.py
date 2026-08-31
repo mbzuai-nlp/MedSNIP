@@ -1,7 +1,7 @@
 """Quick sanity check for both retriever backends.
 
 Usage:
-    python -m src.medfactcheck.retriever.smoke_test
+    python -m src.medsnip.retriever.smoke_test
 """
 from .retriever import Retriever
 

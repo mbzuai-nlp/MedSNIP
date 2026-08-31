@@ -14,7 +14,7 @@ F1 reflect true grouping disagreements, not artifacts. Text similarity
 context only.
 
 Reads:
-  data/3-annotated/medqa.json                       (gold, snippet rows)
+  data/3-annotated/medsnip-bench.json                       (gold, snippet rows)
   data/6-snippet-processor/outputs/<mode>/e<id>.json (predicted per-entry)
   data/6-snippet-processor/sentence_alignment.json   (atom → sentence index)
 
@@ -36,7 +36,7 @@ from rouge_score import rouge_scorer
 from sentence_transformers import SentenceTransformer, util
 
 ROOT = Path(__file__).resolve().parents[3]
-ANNOTATED_PATH = ROOT / "data" / "3-annotated" / "medqa.json"
+ANNOTATED_PATH = ROOT / "data" / "3-annotated" / "medsnip-bench.json"
 DATA_DIR = ROOT / "data" / "6-snippet-processor"
 ALIGN_PATH = DATA_DIR / "sentence_alignment.json"
 
@@ -261,7 +261,7 @@ def _write_md(summary, n_entries):
     md = []
     md.append("# Snippet Processor — Sentence-Grounded Evaluation\n")
     md.append(f"Evaluated **{n_entries}** entries against human gold "
-              f"(data/3-annotated/medqa.json).\n")
+              f"(data/3-annotated/medsnip-bench.json).\n")
     md.append("Evaluation currency: **sentence indices** into a deterministic "
               "segmentation of `full_text` (see sentence_utils.py). Gold atoms are "
               "pre-mapped to sentence indices once (sentence_alignment.json), so "
@@ -308,7 +308,7 @@ def main():
     if not ALIGN_PATH.exists():
         raise SystemExit(
             f"missing {ALIGN_PATH}; run "
-            f"`python -m src.medfactcheck.snippet_processor.precompute_alignment` first"
+            f"`python -m src.medsnip.snippet_processor.precompute_alignment` first"
         )
     rows = json.loads(ANNOTATED_PATH.read_text())
     human_entries = aggregate_human(rows)

@@ -5,7 +5,7 @@
                     atom predictions are aggregated to the claim level by
                     OR-False (any atom False → claim False) for evaluation.
 
-Same `claim-only` prompt as the existing MedFactCheck snippet/atom baselines.
+Same `claim-only` prompt as the existing MedSNIP snippet/atom baselines.
 
 Output: data/9-healthfc/baselines/predictions/{grain}/claim-only/{model}-{reasoning}/predictions.json
 

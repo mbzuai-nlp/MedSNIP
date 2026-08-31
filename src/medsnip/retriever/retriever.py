@@ -1,6 +1,6 @@
 """Unified retrieval interface.
 
-    from src.medfactcheck.retriever import Retriever
+    from src.medsnip.retriever import Retriever
     r = Retriever(index="web")     # serper.dev
     r = Retriever(index="pubmed")  # NCBI E-utilities
     hits = r.search("...", k=5)
