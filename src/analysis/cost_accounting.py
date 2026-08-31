@@ -34,7 +34,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT_DIR = ROOT / "data" / "13-cost-accounting"
+OUT_DIR = ROOT / "data" / "13-cost"
 OUT_JSON = OUT_DIR / "cost_accounting.json"
 
 DECOMP_ROOT = ROOT / "data" / "6-snippet-processor" / "atom-to-snippet"
@@ -125,7 +125,7 @@ def verification_cost(path: Path) -> dict | None:
 
 
 # Per-call verifier rates measured on the paper's own cells (200 fresh calls
-# each, data/11-analysis/baseline_cost_validation.md). Used only for the
+# each, data/11-analysis/cost-analysis/baseline_cost_validation.md). Used only for the
 # paper's original runs, whose prediction files carry no usage at all.
 PAPER_RATES_USD = {"atom": 0.0027, "snippet": 0.0045}
 
@@ -355,7 +355,96 @@ def main() -> None:
     report["mode_dollars"] = mode_dollar_comparison()
     OUT_JSON.write_text(json.dumps(report, indent=2))
 
+    L = ["# End-to-end cost accounting", "",
+         "Decomposition overhead included. The atom pipeline is charged one "
+         "decomposition call (extract); the snippet pipeline is charged two "
+         "(extract + cluster). Costs are measured per call where the run was "
+         "routed through OpenRouter, otherwise priced at list rates.", "",
+         "## Decomposition cost per row (276 MedSNIP-Bench entries)", "",
+         "| Decomposer | entries | extract | cluster | total | atoms | snippets | source |",
+         "|---|---:|---:|---:|---:|---:|---:|---|"]
+    for slug, c in report["decomposition"].items():
+        L.append(f"| {slug} | {c['entries']} | ${c['extract_usd']:.2f} | "
+                 f"${c['cluster_usd']:.2f} | ${c['decomp_total_usd']:.2f} | "
+                 f"{c['atoms']:,} | {c['snippets']:,} | "
+                 f"{'measured' if c['measured'] else 'priced'} |")
+
+    if report["end_to_end"]:
+        L += ["", f"## End-to-end, verifier = {args.verifier}", "",
+              "Snippet reduction is reported two ways: verification calls only "
+              "(what the paper currently reports) and end-to-end including "
+              "decomposition (what the reviewers asked for).", "",
+              "| Decomposer | atom calls | snip calls | call red. | atom $ | snip $ | verify-only red. | end-to-end red. |",
+              "|---|---:|---:|---:|---:|---:|---:|---:|"]
+        for r in report["end_to_end"]:
+            L.append(f"| {r['decomposer']} | {r['atom_calls']:,} | {r['snippet_calls']:,} | "
+                     f"{r['call_reduction_pct']:+.1f}% | ${r['atom_total_usd']:.2f} | "
+                     f"${r['snippet_total_usd']:.2f} | "
+                     f"{r['verify_only_reduction_pct']:+.1f}% | "
+                     f"**{r['end_to_end_reduction_pct']:+.1f}%** |")
+
+    if report.get("calls"):
+        L += ["", "## Call accounting across all three corpora", "",
+              "Exact counts, no pricing. Atom pipeline = 1 decomposition call "
+              "per answer + one verifier call per atom. Snippet pipeline (Mode 1) "
+              "= 2 decomposition calls + one per snippet. Mode 2 needs only one "
+              "decomposition call.", "",
+              "| Dataset | items | atom units | M1 units | M1 verify-only | M1 end-to-end | M2 units | M2 verify-only | M2 end-to-end |",
+              "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
+        for r in report["calls"]:
+            L.append(f"| {r['dataset']} | {r['items']:,} | {r['atom_units']:,} | "
+                     f"{r['snippet_units']:,} | {r['verify_only_red_pct']:+.1f}% | "
+                     f"**{r['end_to_end_red_pct']:+.1f}%** | "
+                     f"{r['mode2_units']:,} | "
+                     f"{r['mode2_verify_only_red_pct']:+.1f}% | "
+                     f"**{r['mode2_red_pct']:+.1f}%** |")
+
+    if report.get("per_decomposer_calls"):
+        L += ["", "## Mode 1 vs Mode 2 end-to-end calls, per decomposer "
+              "(MedSNIP-Bench)", "",
+              "Mode 2 saves one decomposition call per answer but merges less, "
+              "so it verifies more units. Which mode wins end-to-end depends on "
+              "the decomposer.", "",
+              "| Decomposer | atom calls | M1 calls | M1 red. | M1 decomp $ | "
+              "M2 calls | M2 red. | M2 decomp $ |",
+              "|---|---:|---:|---:|---:|---:|---:|---:|"]
+        for r in report["per_decomposer_calls"]:
+            has2 = "m2_calls" in r
+            L.append(
+                f"| {r['decomposer']} | {r['atom_calls']:,} | {r['m1_calls']:,} | "
+                f"{r['m1_red_pct']:+.1f}% | ${r['m1_decomp_usd']:.2f} | "
+                + (f"{r['m2_calls']:,} | {r['m2_red_pct']:+.1f}% | "
+                   f"${r['m2_decomp_usd']:.2f} |" if has2 else "— | — | — |"))
+
+    if report.get("mode_dollars"):
+        L += ["", "## Does Mode 2 save money? (GPT-5.4 verifier)", "",
+              "Decomposition measured; verification projected at the measured "
+              f"rate of ${VERIFY_USD_PER_SNIPPET:.5f}/snippet call. The saving "
+              "comes from halving decomposition, so it scales with decomposer "
+              "price and shrinks toward zero for cheap decomposers.", "",
+              "| Decomposer | M1 decomp | M1 verify* | M1 total* | M2 decomp | "
+              "M2 verify* | M2 total* | M2 saving |",
+              "|---|---:|---:|---:|---:|---:|---:|---:|"]
+        for r in report["mode_dollars"]:
+            L.append(
+                f"| {r['decomposer']} | ${r['m1_decomp']:.2f} | ${r['m1_verify_est']:.2f} | "
+                f"${r['m1_total_est']:.2f} | ${r['m2_decomp']:.2f} | "
+                f"${r['m2_verify_est']:.2f} | ${r['m2_total_est']:.2f} | "
+                f"**{r['m2_saving_pct']:+.1f}%** |")
+        L += ["", "`*` verification projected, not measured.", ""]
+
+    if report["modes"]:
+        L += ["", "## Mode 2 (snippet-direct) decomposition", "",
+              "One call instead of two, so its decomposition overhead is about "
+              "half of Mode 1's.", "",
+              "| Decomposer | entries | total | snippets | source |",
+              "|---|---:|---:|---:|---|"]
+        for slug, c in report["modes"].items():
+            L.append(f"| {slug} | {c['entries']} | ${c['decomp_total_usd']:.2f} | "
+                     f"{c['snippets']:,} | {'measured' if c['measured'] else 'priced'} |")
+
     print("\n".join(L))
+    print(f"\nwrote {OUT_JSON}")
 
 
 if __name__ == "__main__":
