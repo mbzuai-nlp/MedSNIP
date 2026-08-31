@@ -1,12 +1,11 @@
-"""Plot inter-annotator agreement on the IAA test batch.
+"""Plot inter-annotator agreement on the IAA test batch as three separate panels.
 
 Reads data/3-annotated/iaa_stats.json and writes
-data/3-annotated/iaa_reasoning.png.
+  data/3-annotated/iaa_reasoning_{a,b,c}.{png,pdf}.
 
-Three panels:
   (a) ARI per entry (grouping agreement) + overall mean
-  (b) Fleiss' κ per labeled field, with Landis & Koch interpretation bands
-  (c) Pairwise Cohen's κ heatmap for `label_in_general` (the headline label)
+  (b) Fleiss' kappa per labeled field, with Landis & Koch interpretation bands
+  (c) Pairwise Cohen's kappa heatmap for `label_in_general` (the headline label)
 """
 import json
 from pathlib import Path
@@ -16,14 +15,12 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 import numpy as np
-import pandas as pd
 import seaborn as sns
 
 ROOT = Path(__file__).resolve().parents[2]
-IN_PATH = ROOT / "data" / "3-annotated" / "iaa_stats.json"
-OUT_PATH = ROOT / "data" / "3-annotated" / "iaa_reasoning.png"
+DATA_DIR = ROOT / "data" / "3-annotated"
+IN_PATH = DATA_DIR / "iaa_stats.json"
 
-# Landis & Koch (1977) bands for κ interpretation
 KAPPA_BANDS = [
     (0.00, 0.20, "slight",       "#F5C6C6"),
     (0.20, 0.40, "fair",         "#FAD7B7"),
@@ -32,19 +29,23 @@ KAPPA_BANDS = [
     (0.80, 1.00, "almost perfect", "#A9D3A4"),
 ]
 
+PANEL_FIGSIZE = (5.0, 5.0)
 
-def main():
-    sns.set_theme(style="whitegrid", context="notebook", font_scale=0.95)
-    stats = json.loads(IN_PATH.read_text())
-    ids = stats["annotator_ids"]
-    grouping = stats["grouping_ari"]
-    metrics = stats["metrics"]
 
-    fig = plt.figure(figsize=(15, 4.6))
-    gs = fig.add_gridspec(1, 3, width_ratios=[1.0, 1.0, 1.05], wspace=0.32)
-    ax1, ax2, ax3 = (fig.add_subplot(gs[i]) for i in range(3))
+def save_panel(fig, name: str) -> None:
+    out_png = DATA_DIR / f"{name}.png"
+    out_pdf = DATA_DIR / f"{name}.pdf"
+    fig.savefig(out_png, dpi=200, bbox_inches="tight", facecolor="white")
+    fig.savefig(out_pdf, bbox_inches="tight", facecolor="white")
+    print(f"saved {out_png}")
+    print(f"saved {out_pdf}")
+    plt.close(fig)
 
-    # (a) ARI per entry + overall mean
+
+def panel_a(grouping: dict) -> None:
+    fig, ax1 = plt.subplots(figsize=PANEL_FIGSIZE)
+    ax1.set_box_aspect(1)
+
     per_entry = grouping["per_entry"]
     entries = sorted(per_entry.keys(), key=int)
     aris = [per_entry[e]["mean_ari"] for e in entries]
@@ -65,10 +66,15 @@ def main():
                  fontsize=8, color="gray", fontstyle="italic", ha="left")
     ax1.set_xlabel("Entry ID")
     ax1.set_ylabel("Mean Pairwise ARI")
-    ax1.set_title("(a) Grouping Agreement\n(Adjusted Rand Index per entry)", fontweight="bold")
     ax1.set_ylim(0, 1.08)
 
-    # (b) Fleiss' κ per field with Landis & Koch bands
+    save_panel(fig, "iaa_reasoning_a")
+
+
+def panel_b(metrics: dict) -> None:
+    fig, ax2 = plt.subplots(figsize=PANEL_FIGSIZE)
+    ax2.set_box_aspect(1)
+
     fields = list(metrics.keys())
     kappas = [metrics[f]["fleiss_kappa"] for f in fields]
     field_labels = [f.replace("label_", "") for f in fields]
@@ -86,11 +92,15 @@ def main():
     ax2.legend(handles=band_handles, title="Landis & Koch", fontsize=7.5,
                loc="upper right", framealpha=0.95, ncol=1, title_fontsize=8.5)
     ax2.set_ylabel("Fleiss' κ")
-    ax2.set_title("(b) Label Agreement\n(Fleiss' κ per field, 6 annotators)", fontweight="bold")
     ax2.set_ylim(0, 1.0)
     plt.setp(ax2.get_xticklabels(), rotation=14, ha="right", fontsize=9)
 
-    # (c) Pairwise Cohen's κ heatmap for label_in_general
+    save_panel(fig, "iaa_reasoning_b")
+
+
+def panel_c(ids: list, metrics: dict) -> None:
+    fig, ax3 = plt.subplots(figsize=PANEL_FIGSIZE)
+
     n = len(ids)
     mat = np.full((n, n), np.nan)
     pw = metrics["label_in_general"]["pairwise_cohen_kappa"]
@@ -109,13 +119,18 @@ def main():
                 xticklabels=tick_labels, yticklabels=tick_labels,
                 cbar_kws={"label": "Cohen's κ"}, square=True,
                 linewidths=0.6, linecolor="white")
-    ax3.set_title("(c) Pairwise Cohen's κ\n(label_in_general)", fontweight="bold")
     ax3.tick_params(axis="x", rotation=0)
     ax3.tick_params(axis="y", rotation=0)
 
-    plt.tight_layout()
-    plt.savefig(OUT_PATH, dpi=200, bbox_inches="tight", facecolor="white")
-    print(f"saved {OUT_PATH}")
+    save_panel(fig, "iaa_reasoning_c")
+
+
+def main():
+    sns.set_theme(style="whitegrid", context="notebook", font_scale=0.95)
+    stats = json.loads(IN_PATH.read_text())
+    panel_a(stats["grouping_ari"])
+    panel_b(stats["metrics"])
+    panel_c(stats["annotator_ids"], stats["metrics"])
 
 
 if __name__ == "__main__":
