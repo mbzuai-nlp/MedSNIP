@@ -33,14 +33,25 @@ from src.medsnip.snippet_processor.processor import SnippetProcessor
 
 ROOT = Path(__file__).resolve().parents[3]
 IN_PATH = ROOT / "data" / "1-raw" / "healthfc.json"
-OUT_PATH = (ROOT / "data" / "9-healthfc" / "snippet-processor"
+OUT_ROOT = (ROOT / "data" / "9-healthfc" / "snippet-processor"
             / "atom-to-snippet" / "healthfc.json")
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default=None, help="override SnippetProcessor default")
+    ap.add_argument("--claim-source", default="raw", choices=["raw", "declarative"],
+                    help="raw = en_claim as-is (99%% are questions, which the "
+                         "extract prompt mishandles); declarative = the "
+                         "statement form from declarativize.py")
+    ap.add_argument("--mode", default="atom-to-snippet",
+                    choices=["atom-to-snippet", "snippet-direct"],
+                    help="snippet-direct writes to its own directory, so the "
+                         "published Mode 1 outputs are never overwritten")
     ap.add_argument("--workers", type=int, default=12)
+    ap.add_argument("--reasoning", default=None,
+                    choices=["minimal", "low", "medium", "high"],
+                    help="reasoning effort; the MedSNIP-Bench runs use high")
     ap.add_argument("--skip-existing", action="store_true")
     ap.add_argument("--limit", type=int, default=None,
                     help="Only atomize the first N claims (smoke test)")
@@ -49,7 +60,27 @@ def main():
                          "HealthFC is consumer-health so default consumer.")
     args = ap.parse_args()
 
+    global OUT_PATH
+    OUT_PATH = Path(str(OUT_ROOT).replace("atom-to-snippet", args.mode))
+    if args.claim_source == "declarative":
+        # Separate tree so the published raw-claim decomposition is preserved.
+        OUT_PATH = OUT_PATH.parent / "declarative" / OUT_PATH.name
+
     rows = json.loads(IN_PATH.read_text())
+    if args.claim_source == "declarative":
+        decl_path = ROOT / "data" / "9-healthfc" / "declarative.json"
+        if not decl_path.exists():
+            raise SystemExit(f"missing {decl_path}; run "
+                             f"`python -m src.external.healthfc.declarativize` first")
+        decl = {r["id"]: r["statement"] for r in json.loads(decl_path.read_text())}
+        missing = 0
+        for i, r in enumerate(rows):
+            st = decl.get(f"hfc-{i}")
+            if st:
+                r["en_claim"] = st
+            else:
+                missing += 1
+        print(f"claim source: declarative ({len(rows) - missing}/{len(rows)} substituted)")
     if args.limit:
         rows = rows[: args.limit]
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -60,9 +91,11 @@ def main():
             existing[rec["id"]] = rec
         print(f"resuming: {len(existing)} already atomized")
 
-    proc_kwargs = {"mode": "atom-to-snippet"}
+    proc_kwargs = {"mode": args.mode}
     if args.model:
         proc_kwargs["model"] = args.model
+    if args.reasoning:
+        proc_kwargs["reasoning_effort"] = args.reasoning
     proc = SnippetProcessor(**proc_kwargs)
 
     lock = Lock()

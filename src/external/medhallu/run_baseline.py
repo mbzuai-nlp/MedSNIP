@@ -17,14 +17,14 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from src.baselines._openai_runner import run
+from src.baselines import _hf_runner, _openai_runner, _openrouter_runner
 
 ROOT = Path(__file__).resolve().parents[3]
 load_dotenv(ROOT / ".env")
 
 IN_RAW = ROOT / "data" / "1-raw" / "medhallu.json"
-IN_ATOMS = (ROOT / "data" / "10-medhallu" / "snippet-processor"
-            / "atom-to-snippet" / "medhallu.json")
+SP_ROOT = ROOT / "data" / "10-medhallu" / "snippet-processor"
+IN_ATOMS = SP_ROOT / "atom-to-snippet" / "medhallu.json"  # default; --decomp-mode overrides
 OUT_BASE = ROOT / "data" / "10-medhallu" / "baselines" / "predictions"
 
 CLAIM_ONLY_PROMPT = (
@@ -63,6 +63,37 @@ def load_items_snippet() -> list[dict]:
     return out
 
 
+def load_items_pipeline_snippet() -> list[dict]:
+    """One item per pipeline-generated SNIPPET.
+
+    The published `snippet` grain verifies the whole raw answer, i.e. the
+    undecomposed unit. That is a legitimate document-level baseline but is not
+    what the paper describes; the pipeline's snippets were generated and never
+    verified. This grain verifies them, so snippet and atom arms come from the
+    same decomposition call.
+    """
+    rows = json.loads(IN_ATOMS.read_text())
+    out = []
+    for rec in rows:
+        claim_id = rec["id"]
+        snips = [x for x in (rec.get("snippets") or []) if isinstance(x, dict)]
+        for j, sn in enumerate(snips, 1):
+            text = sn.get("output") or sn.get("text")
+            if not text:
+                continue
+            out.append({
+                "id":          f"{claim_id}-S{j}",
+                "claim_text":  text,
+                "claim_id":    claim_id,
+                "medhallu_id": rec["medhallu_id"],
+                "kind":        rec["kind"],
+                "difficulty":  rec["difficulty"],
+                "gold_bool":   rec["gold_bool"],
+                "is_binary":   True,
+            })
+    return out
+
+
 def load_items_atom() -> list[dict]:
     """One item per atom, carrying claim_id for aggregation later."""
     atoms_rows = json.loads(IN_ATOMS.read_text())
@@ -85,8 +116,18 @@ def load_items_atom() -> list[dict]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--grain", choices=["snippet", "atom"], required=True)
+    ap.add_argument("--grain",
+                    choices=["snippet", "atom", "pipeline-snippet"], required=True,
+                    help="snippet = raw undecomposed answer (published); "
+                         "pipeline-snippet = the pipeline's generated snippets")
     ap.add_argument("--model", required=True)
+    ap.add_argument("--provider", choices=["openai", "hf", "openrouter"],
+                    default="openrouter")
+    ap.add_argument("--decomp-mode", default="atom-to-snippet",
+                    choices=["atom-to-snippet", "snippet-direct"],
+                    help="which decomposition to verify; snippet-direct writes "
+                         "to its own tag so Mode 1 predictions are preserved")
+    ap.add_argument("--hf-provider", default="novita")
     ap.add_argument("--reasoning", default=None,
                     choices=["minimal", "low", "medium", "high", None])
     ap.add_argument("--temperature", type=float, default=0.0)
@@ -94,8 +135,16 @@ def main():
     ap.add_argument("--save-every", type=int, default=100)
     args = ap.parse_args()
 
+    global IN_ATOMS
+    IN_ATOMS = SP_ROOT / args.decomp_mode / "medhallu.json"
+    mode_tag = "" if args.decomp_mode == "atom-to-snippet" else "mode2-"
+
     if args.grain == "snippet":
         items = load_items_snippet()
+    elif args.grain == "pipeline-snippet":
+        if not IN_ATOMS.exists():
+            raise SystemExit(f"missing {IN_ATOMS}")
+        items = load_items_pipeline_snippet()
     else:
         if not IN_ATOMS.exists():
             raise SystemExit(
@@ -106,8 +155,9 @@ def main():
 
     print(f"loaded {len(items)} {args.grain}-level items")
 
-    tag = f"{args.model}-{args.reasoning or 'none'}"
-    out_dir = OUT_BASE / args.grain / "claim-only" / tag
+    model_slug = args.model.replace("/", "__")
+    tag = f"{model_slug}-{args.reasoning or 'none'}"
+    out_dir = OUT_BASE / args.grain / "claim-only" / f"{mode_tag}{tag}"
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / "predictions.json"
 
@@ -122,7 +172,7 @@ def main():
             "gold_bool":   item["gold_bool"],
         }
 
-    run(
+    common_kwargs = dict(
         items=items,
         output_path=out_path,
         build_user_message=build_user,
@@ -134,6 +184,12 @@ def main():
         save_every=args.save_every,
         extra_row_fields=extra,
     )
+    if args.provider == "hf":
+        _hf_runner.run(**common_kwargs, provider=args.hf_provider)
+    elif args.provider == "openrouter":
+        _openrouter_runner.run(**common_kwargs)
+    else:
+        _openai_runner.run(**common_kwargs)
     print(f"\nwrote {out_path}")
 
 

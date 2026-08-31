@@ -26,7 +26,7 @@ from src.medsnip.snippet_processor.processor import SnippetProcessor
 
 ROOT = Path(__file__).resolve().parents[3]
 IN_PATH = ROOT / "data" / "1-raw" / "medhallu.json"
-OUT_PATH = (ROOT / "data" / "10-medhallu" / "snippet-processor"
+OUT_ROOT = (ROOT / "data" / "10-medhallu" / "snippet-processor"
             / "atom-to-snippet" / "medhallu.json")
 
 
@@ -60,14 +60,24 @@ def flatten(rows: list[dict]) -> list[dict]:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default=None)
+    ap.add_argument("--mode", default="atom-to-snippet",
+                    choices=["atom-to-snippet", "snippet-direct"],
+                    help="snippet-direct writes to its own directory, so the "
+                         "published Mode 1 outputs are never overwritten")
     ap.add_argument("--workers", type=int, default=12)
+    ap.add_argument("--reasoning", default=None,
+                    choices=["minimal", "low", "medium", "high"],
+                    help="reasoning effort; the MedSNIP-Bench runs use high")
     ap.add_argument("--skip-existing", action="store_true")
     ap.add_argument("--limit", type=int, default=None,
                     help="only process first N items (smoke test)")
     ap.add_argument("--subset", default="vignette",
                     help="few-shot subset for the processor (default vignette — "
-                         "PubMedQA-style scientific reasoning)")
+                         "PubMedSNIP-Bench-style scientific reasoning)")
     args = ap.parse_args()
+
+    global OUT_PATH
+    OUT_PATH = Path(str(OUT_ROOT).replace("atom-to-snippet", args.mode))
 
     raw_rows = json.loads(IN_PATH.read_text())
     items = flatten(raw_rows)
@@ -81,9 +91,11 @@ def main():
             existing[rec["id"]] = rec
         print(f"resuming: {len(existing)} already atomized")
 
-    proc_kwargs = {"mode": "atom-to-snippet"}
+    proc_kwargs = {"mode": args.mode}
     if args.model:
         proc_kwargs["model"] = args.model
+    if args.reasoning:
+        proc_kwargs["reasoning_effort"] = args.reasoning
     proc = SnippetProcessor(**proc_kwargs)
 
     lock = Lock()
