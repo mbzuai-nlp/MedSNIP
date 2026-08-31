@@ -1,0 +1,154 @@
+{
+  "entry_id": 237,
+  "batch_id": 24,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "If this is just muscle strain, how many days should I expect the pain to go away?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2825,
+    "output_tokens": 613,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1291,
+      "output_tokens": 320,
+      "cached_input_tokens": 0,
+      "cost": 3.862e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1534,
+      "output_tokens": 293,
+      "cached_input_tokens": 0,
+      "cost": 4.24e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "pain duration from muscle strain",
+    "condition": "muscle strain"
+  },
+  "sentences": [
+    "Muscle strain is a common injury that can be caused by overuse, overstretching, or direct blows to the muscle",
+    "The duration of pain from muscle strain can vary depending on the severity of the injury and the individual's overall health",
+    "Mild muscle strains typically resolve on their own within 7-14 days",
+    "However, more severe strains may take longer to heal, often requiring 4-6 weeks or more for full recovery",
+    "Factors that can influence the healing time include the location of the strain, the severity of the injury, and the effectiveness of treatment",
+    "For example, strains in the lower back may take longer to heal than those in the upper body",
+    "It's essential to note that if the pain persists or worsens over time, it may be a sign of a more serious underlying condition, such as a herniated disc or a stress fracture",
+    "In such cases, medical attention should be sought"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The duration of pain from muscle strain can vary depending on the severity of the injury.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Mild muscle strains typically resolve on their own within 7-14 days.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "More severe strains may take longer to heal, often requiring 4-6 weeks or more for full recovery.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The location of the strain can influence the healing time.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Strains in the lower back may take longer to heal than those in the upper body.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Pain that persists or worsens over time may be a sign of a more serious underlying condition.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "A herniated disc or a stress fracture may be a sign of a more serious underlying condition.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Medical attention should be sought if the pain persists or worsens over time.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The duration of pain from muscle strain can vary depending on the severity of the injury.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Mild muscle strains typically resolve on their own within 7-14 days.",
+      "pattern": "D",
+      "notes": "Different time frame for mild strain."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "More severe strains may take longer to heal, often requiring 4-6 weeks or more for full recovery.",
+      "pattern": "D",
+      "notes": "Different time frame for severe strain."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "The location of the strain can influence the healing time, and strains in the lower back may take longer to heal than those in the upper body.",
+      "pattern": "A",
+      "notes": "Enumeration of factors."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "Pain that persists or worsens over time may be a sign of a more serious underlying condition, such as a herniated disc or stress fracture, and medical attention should be sought if the pain persists or worsens over time.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises."
+    }
+  ]
+}

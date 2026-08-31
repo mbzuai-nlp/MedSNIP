@@ -1,0 +1,161 @@
+{
+  "entry_id": 114,
+  "batch_id": 12,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 40-year-old south asian man presents to a primary care provider with a chronic cough that is worse at night. He has had the cough for several years but it has been getting worse over the last few months. He recently moved to the United States to work in construction. He has lost 10 pounds in the last 3 months along with darker stools which he believes is caused by a Western diet. He denies any difficulty swallowing or feeling of food getting stuck in his throat. He drinks alcohol 1-2 times per week and has never smoked. He denies any family history of cancer. His temperature is 98.6°F (37°C), blood pressure is 114/72 mmHg, pulse is 82/min, and respirations are 12/min. On physical exam, his lungs are clear to auscultation bilaterally without wheezing. His abdomen is soft and non-distended. He has no tenderness to palpation and bowel sounds are present. Which of the following is the most appropriate next step in management? (A) Barium swallow (B) Colonoscopy (C) Helicobacter pylori stool antigen test (D) Trial of lansoprazole (E) Upper endoscopy",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4328,
+    "output_tokens": 855,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1763,
+      "output_tokens": 480,
+      "cached_input_tokens": 0,
+      "cost": 0.0003299
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2565,
+      "output_tokens": 375,
+      "cached_input_tokens": 0,
+      "cost": 0.0003765
+    }
+  ],
+  "shared_context": {
+    "age": 40,
+    "sex": "male",
+    "ethnicity": "South Asian",
+    "occupation": "construction",
+    "chief_complaint": "chronic cough worsened at night",
+    "symptoms": "weight loss, darker stools",
+    "medications": "none mentioned",
+    "social_history": "alcohol use 1-2 times per week, never smoked",
+    "family_history": "no family history of cancer",
+    "vitals": "temperature 98.6°F, blood pressure 114/72 mmHg, pulse 82/min, respirations 12/min"
+  },
+  "sentences": [
+    "To approach this patient's case, let's consider his symptoms and history",
+    "The patient presents with a chronic cough worsened at night (coughing up mucus that might be blood tinged or non-productive) which is a common symptom of gastroesophageal reflux disease (GERD)",
+    "The patient has also experienced unintentional weight loss, darker stools, and a change in diet, which might be indicative of a gastrointestinal issue",
+    "Given the patient's symptoms, a potential cause could be GERD, especially considering his recent weight loss and change in diet",
+    "However, the patient also mentions a chronic cough that's worse at night, which could also be due to asthma, but the physical exam does not show any wheezing",
+    "Other differential diagnoses include gastroesophageal reflux disease-related aspiration, though the patient does not report difficulty swallowing or a sensation of food getting stuck in his throat",
+    "A trial of lansoprazole, a proton pump inhibitor (PPI), is often the first-line treatment for GERD, which may also help alleviate the patient's symptoms of cough, weight loss, and darker stools",
+    "Therefore, the most appropriate next step in management is a trial of lansoprazole"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient presents with a chronic cough worsened at night, which is a common symptom of gastroesophageal reflux disease (GERD).",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient has experienced unintentional weight loss, darker stools, and a change in diet, which might be indicative of a gastrointestinal issue.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "GERD is a potential cause of the patient's symptoms, especially considering his recent weight loss and change in diet.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's chronic cough that's worse at night could also be due to asthma, but the physical exam does not show any wheezing.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Gastroesophageal reflux disease-related aspiration is another differential diagnosis, though the patient does not report difficulty swallowing or a sensation of food getting stuck in his throat.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A trial of lansoprazole, a proton pump inhibitor (PPI), is often the first-line treatment for GERD, which may also help alleviate the patient's symptoms of cough, weight loss, and darker stools.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The most appropriate next step in management is a trial of lansoprazole.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This 40-year-old South Asian man presents with a chronic cough worsened at night, a common symptom of gastroesophageal reflux disease (GERD).",
+      "pattern": "D",
+      "notes": "Symptom presentation."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The patient has experienced unintentional weight loss, darker stools, and a change in diet, which might be indicative of a gastrointestinal issue.",
+      "pattern": "D",
+      "notes": "Additional symptoms."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "GERD is a potential cause of the patient's symptoms, especially considering his recent weight loss and change in diet.",
+      "pattern": "D",
+      "notes": "Differential consideration."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The patient's chronic cough that's worse at night could also be due to asthma, but the physical exam does not show any wheezing.",
+      "pattern": "D",
+      "notes": "Alternative diagnosis"
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Gastroesophageal reflux disease-related aspiration is another differential diagnosis, though the patient does not report difficulty swallowing or a sensation of food getting stuck in his throat.",
+      "pattern": "D",
+      "notes": "Additional differential"
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "A trial of lansoprazole, a proton pump inhibitor (PPI), is often the first-line treatment for GERD, which may also help alleviate the patient's symptoms of cough, weight loss, and darker stools, making it the most appropriate next step in management.",
+      "pattern": "C",
+      "notes": "Conclusion with premise."
+    }
+  ]
+}

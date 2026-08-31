@@ -1,0 +1,155 @@
+{
+  "entry_id": 185,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 43-year-old man presents to the emergency department with bright red blood in his stool this morning. He noticed this yesterday as well, but it was much scanter. The patient is otherwise healthy. He was celebrating his birthday last night and admits having \"too much to drink\" and vomited profusely overnight. He currently feels well and is not nauseous. He has no other significant medical history and does not take any medications. His temperature is 99.2°F (37.3°C), blood pressure is 110/75 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 100% on room air. Physical exam reveals a nontender abdomen with normal bowel sounds. Rectal exam reveals grossly bloody stool. Laboratory studies are ordered as shown below.\n\nHemoglobin: 12 g/dL\nHematocrit: 36%\nLeukocyte count: 5,500/mm^3 with normal differential\nPlatelet count: 179,000/mm^3\n\nWhich of the following is the most likely cause of this patient's symptoms? (A) Erosion into a gastric vessel (B) Inflammation and infection of colonic outpouching (C) Malignancy (D) Submucosal esophageal tear (E) Vascular malformation",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2813,
+    "output_tokens": 3820,
+    "cached_input_tokens": 0,
+    "cost": 0.00061919
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2813,
+      "output_tokens": 3820,
+      "cached_input_tokens": 0,
+      "cost": 0.00061919
+    }
+  ],
+  "shared_context": {
+    "age": "43",
+    "sex": "male",
+    "chief_complaint": "bright red blood in stool for two days",
+    "medical_history": "",
+    "vitals": "temperature 99.2°F, BP 110/75, pulse 82, respirations 16, O₂ 100% RA",
+    "exam_findings": "nontender abdomen, normal bowel sounds, grossly bloody stool on rectal exam"
+  },
+  "sentences": [
+    "To approach this multiple-choice question, we'll analyze the patient's clinical presentation, including symptoms, physical exam findings, and laboratory results",
+    "Our goal is to identify the most likely cause of the patient's symptoms",
+    "A 43-year-old man with bright red blood in his stool for the last two days",
+    "Vomited profusely after heavy alcohol consumption",
+    "Currently feels well, no nausea, and otherwise healthy",
+    "Physical exam: nontender abdomen, normal bowel sounds, grossly bloody stool on rectal exam",
+    "Temperature: 99.2°F (37.3°C)",
+    "Blood pressure: 110/75 mmHg",
+    "Pulse: 82/min",
+    "Respirations: 16/min",
+    "Oxygen saturation: 100% on room air",
+    "Hemoglobin: 12 g/dL",
+    "Hematocrit: 36%",
+    "Leukocyte count: 5,500/mm^3 with normal differential",
+    "Platelet count: 179,000/mm^3",
+    "Choice A: Erosion into a gastric vessel: This typically presents as upper gastrointestinal bleeding with melena or hematemesis rather than bright red blood per rectum",
+    "Choice B: Inflammation and infection of colonic outpouching (Diverticulitis): This condition usually presents with abdominal pain, fever, and changes in bowel habits",
+    "It is less likely in a young, healthy individual without these symptoms",
+    "Choice C: Malignancy: Colorectal cancer could present with bloody stools, but it is less likely in a young patient without a significant medical history or other systemic symptoms",
+    "Choice D: Submucosal esophageal tear (Mallory-Weiss tear): This is commonly associated with vomiting and typically presents with bright red bleeding due to the tear in the esophagus or proximal stomach mucosa following forceful vomiting",
+    "Choice E: Vascular malformation (Angiodysplasia): This can cause gastrointestinal bleeding, but it typically presents in older adults and in more chronic or recurrent patterns",
+    "Given the patient's history of heavy alcohol consumption and profuse vomiting, a Mallory-Weiss tear is the most likely cause",
+    "This condition results from mucosal laceration at the gastroesophageal junction due to forceful vomiting, leading to acute gastrointestinal bleeding with bright red blood",
+    "The most likely cause of this patient's symptoms is a submucosal esophageal tear (Mallory-Weiss tear)"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "To determine the cause of bright red blood in stool for this 43-year-old male, we analyze his symptoms, physical exam, and laboratory results.",
+      "pattern": "D",
+      "notes": "Introductory statement about how to approach the question."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "This 43-year-old male presents with bright red blood in stool for the last two days, profuse vomiting after heavy alcohol consumption, feels well with no nausea, a nontender abdomen, normal bowel sounds, grossly bloody stool on rectal exam, a temperature of 99.2°F, blood pressure 110/75 mmHg, pulse 82/min, respirations 16/min, and oxygen saturation 100% on room air.",
+      "pattern": "A",
+      "notes": "Enumeration of the patient’s presenting symptoms, exam findings and vital signs."
+    },
+    {
+      "source_sentences": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "output": "Laboratory studies for this 43-year-old male show hemoglobin 12 g/dL, hematocrit 36%, leukocyte count 5,500/mm³ with a normal differential, and platelet count 179,000/mm³.",
+      "pattern": "A",
+      "notes": "Enumeration of laboratory values for the patient."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "Erosion into a gastric vessel typically presents as upper gastrointestinal bleeding with melena or hematemesis rather than bright red blood per rectum.",
+      "pattern": "F",
+      "notes": "Fact about diagnostic option A."
+    },
+    {
+      "source_sentences": [
+        16,
+        17
+      ],
+      "output": "Inflammation and infection of a colonic outpouching (diverticulitis) usually presents with abdominal pain, fever, and changes in bowel habits; it is less likely in a young, healthy individual without these symptoms.",
+      "pattern": "F",
+      "notes": "Fact about diagnostic option B with supporting premise."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Malignancy such as colorectal cancer may present with bloody stools but is less likely in a young patient without a significant medical history or other systemic symptoms.",
+      "pattern": "F",
+      "notes": "Fact about diagnostic option C."
+    },
+    {
+      "source_sentences": [
+        19
+      ],
+      "output": "Submucosal esophageal tear (Mallory‑Weiss tear) is commonly associated with vomiting and typically presents with bright red bleeding due to a tear in the esophagus or proximal stomach mucosa following forceful vomiting.",
+      "pattern": "F",
+      "notes": "Fact about diagnostic option D."
+    },
+    {
+      "source_sentences": [
+        20
+      ],
+      "output": "Vascular malformation (angiodysplasia) can cause gastrointestinal bleeding but typically presents in older adults and in chronic or recurrent patterns.",
+      "pattern": "F",
+      "notes": "Fact about diagnostic option E."
+    },
+    {
+      "source_sentences": [
+        21,
+        22,
+        23
+      ],
+      "output": "In this 43-year-old male, the most likely cause of bright red rectal bleeding is a submucosal esophageal tear (Mallory‑Weiss tear), which results from mucosal laceration at the gastroesophageal junction due to forceful vomiting and leads to acute gastrointestinal bleeding with bright red blood.",
+      "pattern": "C",
+      "notes": "Conclusion supported by the preceding premises and the patient’s history."
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "entry_id": 263,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 37-year-old woman presents to the emergency department in cardiac arrest. She was found to have altered mental status at home, and during transport to the hospital, she became pulseless. Cardiopulmonary resuscitation is ongoing and 2 intravenous lines are placed. The patient is obese, and her only medication is an oral contraceptive pill. She recently underwent Achilles tendon repair. She otherwise is known to smoke cigarettes on occasion. Physical exam is notable for a critically ill patient with chest compressions ongoing. The monitor shows pulseless electrical activity. Her right lower extremity is in a post-operative splint. The patient regains her pulse after several rounds of CPR and epinephrine. A bedside echocardiograph is notable for a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle. Which of the following is the most likely diagnosis? (A) Cardiogenic shock (B) Hemorrhagic shock (C) Neurogenic shock (D) Obstructive shock (E) Septic shock",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4758,
+    "output_tokens": 3605,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1975,
+      "output_tokens": 1804,
+      "cached_input_tokens": 0,
+      "cost": 0.00031181
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2783,
+      "output_tokens": 1801,
+      "cached_input_tokens": 0,
+      "cost": 0.00033563
+    }
+  ],
+  "shared_context": {
+    "age": 37,
+    "sex": "female",
+    "chief_complaint": "cardiac arrest with pulseless electrical activity",
+    "medical_history": [
+      "obesity",
+      "occasional smoking",
+      "oral contraceptive pill"
+    ],
+    "recent_surgery": "Achilles tendon repair",
+    "medications": [
+      "oral contraceptive pill"
+    ],
+    "exam_findings": "critical, chest compressions ongoing, PEA on monitor, right lower extremity in postoperative splint",
+    "treatment_history": [
+      "cartesian CPR",
+      "epinephrine",
+      "two IV lines",
+      "pulseless electrical activity resuscitation"
+    ],
+    "echo_findings": "dilated hypokinetic right ventricle with septal bowing into hyperkinetic left ventricle",
+    "question": "most likely type of shock",
+    "correct_answer": "obstructive shock"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for the patient, let's break down the key information provided",
+    "The patient presents with altered mental status, becomes pulseless, and experiences cardiopulmonary resuscitation",
+    "The patient is obese and has a history of smoking but no other significant medical history",
+    "The patient had an Achilles tendon repair surgery recently",
+    "The physical exam shows a critically ill patient with chest compressions, and the monitor shows pulseless electrical activity",
+    "The patient regains her pulse after several rounds of CPR and epinephrine",
+    "The bedside echocardiogram shows a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle",
+    "Considering these points, the key findings are the patient's initial presentation with cardiac arrest, the regaining of pulse after CPR and epinephrine, and the echocardiographic findings of a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle",
+    "Cardiogenic shock often presents with depressed left ventricular function, but the given echocardiographic findings of a dilated and hypokinetic right ventricle are unusual",
+    "Hemorrhagic shock can be considered given the patient's recent surgery, but there is no clear indication of significant blood loss",
+    "Neurogenic shock is less likely as there is no mention of a spinal cord injury or other neurological cause",
+    "Septic shock can be ruled out because there are no signs of infection",
+    "Obstructive shock, caused by a significant obstruction of blood flow, could explain the patient's initial presentation and the echocardiographic findings, which may indicate right ventricular failure secondary to left ventricular volume overload due to an obstruction",
+    "The right lower extremity being in a post-operative splint may be the key to this diagnosis, as it may indicate a possible inferior vena cava obstruction, which could lead to the described echocardiographic findings",
+    "Based on these points, the most likely diagnosis is obstructive shock, likely due to an inferior vena cava obstruction secondary to the post-operative splint causing a right ventricular outflow obstruction",
+    "Final Answer: (D)"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The question aims to determine the most likely diagnosis based on the provided clinical vignette.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient presented with altered mental status, became pulseless, and received cardiopulmonary resuscitation.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient is obese and has a history of smoking but no other significant medical history.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient recently underwent Achilles tendon repair surgery.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Physical exam shows a critically ill patient undergoing chest compressions with pulseless electrical activity on monitor.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient regained a pulse following several rounds of CPR and epinephrine.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Bedside echocardiography demonstrates a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Cardiogenic shock typically presents with depressed left ventricular function, which is unusual in this patient due to the dilated hypokinetic right ventricle.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Hemorrhagic shock could be considered given the recent surgery, but there is no clear indication of significant blood loss.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Neurogenic shock is unlikely because there is no mention of spinal cord injury or other neurological cause.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Septic shock can be ruled out because there are no signs of infection.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Obstructive shock, caused by a significant obstruction of blood flow, could explain the initial presentation and echocardiographic findings of right ventricular failure secondary to left ventricular volume overload from the obstruction.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The post-operative splint on the right lower extremity may indicate a potential inferior vena cava obstruction, which could result in the described echocardiographic findings.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Based on these points, the most likely diagnosis is obstructive shock, likely due to inferior vena cava obstruction secondary to the post-operative splint causing right ventricular outflow obstruction.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The final answer is (D) obstructive shock.",
+      "source_sentences": [
+        15
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The question aims to determine the most likely diagnosis based on the clinical vignette of a 37‑year‑old female who collapsed with pulseless electrical activity in the emergency department.",
+      "pattern": "D",
+      "notes": "Statement of intent; self‑contained."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "A 37‑year‑old obese woman with occasional smoking and an oral contraceptive pill presents to the ED in cardiac arrest with pulseless electrical activity. She has recently undergone Achilles tendon repair. During transport she became pulseless, CPR and epinephrine were promptly administered, and two IV lines were placed. Bedside echocardiography revealed a dilated, hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle.",
+      "pattern": "A",
+      "notes": "Enumeration of all clinical features of one subject."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "Cardiogenic shock was deemed unlikely because the right‑ventricular dilation with hypokinesis rather than left‑ventricular depression does not fit. Hemorrhagic shock was considered but no evidence of significant blood loss existed. Neurogenic shock was ruled out due to the absence of spinal cord injury or other neurological insults. Septic shock was excluded because there were no signs of infection.",
+      "pattern": "A",
+      "notes": "Listing of differential shock types with reasoning."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Obstructive shock best explains the presentation and echo findings: a significant obstruction of blood flow can produce right‑ventricular failure and the observed septal bowing. The postoperative right‑lower‑extremity splint raises the possibility of inferior vena cava obstruction, which would cause the right‑ventricular overload described on echo.",
+      "pattern": "B",
+      "notes": "Causal/conditional chain linking obstruction to echo findings."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "The most likely diagnosis is obstructive shock, likely secondary to inferior vena cava obstruction from the postoperative splint—answer (D) obstructive shock.",
+      "pattern": "C",
+      "notes": "Conclusion plus supporting premise."
+    }
+  ]
+}

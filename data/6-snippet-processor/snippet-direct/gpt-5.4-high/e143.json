@@ -1,0 +1,105 @@
+{
+  "entry_id": 143,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 32-year-old man presents to the emergency department for evaluation of headache. His symptoms started last night and have persisted. He occasionally has migraine headaches, but he has not had a headache like this in the past. He reports associated nausea, vomiting, fevers, and neck pain. He has a medical history of asthma. His temperature is 100.4°F (38.0°C), blood pressure is 110/60 mmHg, pulse is 95/min, respirations are 17/min, and oxygen saturation is 98% on room air. On physical exam, he appears uncomfortable. Neurologic exam reveals no focal deficits. There is pain with passive neck flexion. No edema or rashes are noted. Lungs are clear to auscultation bilaterally. Lumbar puncture is performed and CSF results are obtained as shown below. Cerebrospinal fluid (CSF): Cell count: 175/mm^3 RBCs: 0/mm^3 Cl-: 119 mEq/L Glucose: 49 mg/dL Pressure: 150 mmH2O Total protein: 55 mg/dL Based on these results, which of the following is the most appropriate treatment regimen for this patient? (A) Acyclovir (B) Amphotericin and 5-flucytosine (C) Ceftriaxone and vancomycin (D) Ceftriaxone, vancomycin and steroids (E) Supportive care and monitoring",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2607,
+    "output_tokens": 6008,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2607,
+      "output_tokens": 6008,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "32",
+    "sex": "male",
+    "chief_complaint": "persistent headache since last night with nausea, vomiting, fever, and neck pain",
+    "medical_history": "asthma; occasional migraine headaches",
+    "vitals": "temperature 100.4°F (38.0°C), blood pressure 110/60 mmHg, pulse 95/min, respirations 17/min, oxygen saturation 98% on room air",
+    "exam_findings": "appears uncomfortable; no focal neurologic deficits; pain with passive neck flexion; no edema or rashes; lungs clear to auscultation bilaterally; CSF cell count 175/mm^3, RBCs 0/mm^3, chloride 119 mEq/L, glucose 49 mg/dL, pressure 150 mmH2O, total protein 55 mg/dL",
+    "correct_answer": "Supportive care and monitoring (E)"
+  },
+  "sentences": [
+    "To determine the most appropriate treatment regimen for the patient, we must first interpret the cerebrospinal fluid (CSF) results and consider the clinical presentation",
+    "The patient presents with headache, nausea, vomiting, fever, and neck pain, which are classic symptoms of meningitis",
+    "The CSF results show a cell count of 175/mm^3, which is within the range of lymphocytic pleocytosis",
+    "The glucose level is mildly decreased at 49 mg/dL, and the protein level is normal",
+    "These findings are consistent with viral meningitis",
+    "Given the patient's symptoms and CSF results, the most likely diagnosis is viral meningitis",
+    "Viral meningitis is typically treated with supportive care, including rest, hydration, and pain management",
+    "Antiviral medications are not typically used for viral meningitis, as they are not effective in treating the condition",
+    "Option A, Acyclovir, is used to treat herpes simplex encephalitis, which is a different diagnosis",
+    "Option B, Amphotericin and 5-flucytosine, is used to treat fungal infections, which is not indicated in this case",
+    "Option C, Ceftriaxone and vancomycin, is used to treat bacterial meningitis, which is less likely given the patient's presentation and CSF results",
+    "Option D, Ceftriaxone, vancomycin, and steroids, is also not indicated for viral meningitis",
+    "Therefore, the most appropriate treatment regimen for this patient is Option E, Supportive care and monitoring"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "In this 32-year-old man with headache, nausea, vomiting, fever, neck pain, pain with passive neck flexion, and no focal neurologic deficits, the clinical presentation and CSF are interpreted together: the symptoms are described as classic for meningitis, the CSF cell count of 175/mm^3 is interpreted as lymphocytic pleocytosis, the glucose of 49 mg/dL as mildly decreased, and the protein of 55 mg/dL as normal, leading to the conclusion that the most likely diagnosis is viral meningitis.",
+      "pattern": "C",
+      "notes": "The diagnosis of viral meningitis is explicitly supported by the symptom and CSF interpretation, so these sentences form one conclusion-plus-premises unit."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        12
+      ],
+      "output": "For this 32-year-old man with presumed viral meningitis, the response recommends supportive care and monitoring, including rest, hydration, and pain management, because antiviral medications are not typically effective for routine viral meningitis.",
+      "pattern": "C",
+      "notes": "The treatment recommendation is merged with its supporting rationale and final answer."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "In this 32-year-old man, acyclovir is described as treatment for herpes simplex encephalitis rather than for the diagnosis favored here.",
+      "pattern": "F",
+      "notes": "Option-specific treatment fact kept separate because it is independently checkable from the other answer-choice eliminations."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "In this 32-year-old man, amphotericin plus 5-flucytosine is described as treatment for fungal infections and not indicated for the favored diagnosis here.",
+      "pattern": "F",
+      "notes": "Option-specific treatment fact kept separate because it is independently checkable from the other answer-choice eliminations."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "In this 32-year-old man, ceftriaxone plus vancomycin is described as treatment for bacterial meningitis, which the response considers less likely given the presentation and CSF results.",
+      "pattern": "F",
+      "notes": "Option-specific treatment fact kept separate because it is independently checkable from the other answer-choice eliminations."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "In this 32-year-old man, ceftriaxone, vancomycin, and steroids are described as not indicated for viral meningitis.",
+      "pattern": "F",
+      "notes": "Option-specific treatment fact kept separate because it is independently checkable from the other answer-choice eliminations."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "entry_id": 211,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1678,
+    "output_tokens": 1045,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1678,
+      "output_tokens": 1045,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "corneal abrasion and eye discharge",
+    "condition": "corneal abrasion",
+    "symptom": "eye discharge"
+  },
+  "sentences": [
+    "A corneal abrasion typically does not cause significant discharge from the eye",
+    "The primary symptoms of a corneal abrasion include pain, a sensation of a foreign body in the eye, tearing, redness, and sensitivity to light",
+    "While mild discharge can occur due to increased tearing, it is not a prominent feature",
+    "If there is significant discharge, it may indicate a secondary infection or another underlying condition, such as conjunctivitis"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "A corneal abrasion typically does not cause significant discharge from the eye.",
+      "pattern": "D",
+      "notes": "Standalone fact answering whether corneal abrasion usually causes discharge."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The primary symptoms of a corneal abrasion include pain, a sensation of a foreign body in the eye, tearing, redness, and sensitivity to light.",
+      "pattern": "A",
+      "notes": "Enumeration of multiple symptoms of the same condition."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "In a corneal abrasion, mild eye discharge can occur due to increased tearing, but discharge is not a prominent feature.",
+      "pattern": "B",
+      "notes": "Causal link within the sentence connects mild discharge to increased tearing."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Significant eye discharge in the setting of a corneal abrasion may indicate a secondary infection or another underlying condition, such as conjunctivitis.",
+      "pattern": "B",
+      "notes": "Conditional relationship: significant discharge suggests another cause or complication."
+    }
+  ]
+}

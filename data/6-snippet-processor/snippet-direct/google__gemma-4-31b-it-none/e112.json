@@ -1,0 +1,210 @@
+{
+  "entry_id": 112,
+  "batch_id": 12,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 51-year-old man presents for his annual wellness visit with his primary care physician. His wife has noticed a tremor while he is working on his car and knows that his father died of Parkinson disease. He says that the tremor is nothing to worry about and only occurs during a few activities such as pouring drinks, pointing the remote at the television, or fixing his car. The patient states his wife is just overreacting. His medical problems include hypertension, diabetes, and hyperlipidemia for which he takes lisinopril, metformin, and atorvastatin. He has 3-5 drinks of scotch per night before working on his car. On physical exam, the tremor is replicated during finger to nose testing. Romberg sign is negative. Cranial nerves II-XII are intact. The rest of the exam is benign. Which of the following is the most appropriate treatment for this patient's tremor? (A) Alcoholics anonymous (B) Aripiprazole (C) Carbidopa (D) Phenobarbital (E) Propranolol",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2838,
+    "output_tokens": 1197,
+    "cached_input_tokens": 0,
+    "cost": 0.0008238
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2838,
+      "output_tokens": 1197,
+      "cached_input_tokens": 0,
+      "cost": 0.0008238
+    }
+  ],
+  "shared_context": {
+    "age": "51",
+    "sex": "male",
+    "chief_complaint": "tremor during activities",
+    "medical_history": "hypertension, diabetes, hyperlipidemia",
+    "medications": "lisinopril, metformin, atorvastatin",
+    "vitals": null,
+    "exam_findings": "tremor replicated during finger to nose testing; Romberg sign negative; CN II-XII intact",
+    "treatment_history": "3-5 drinks of scotch per night",
+    "correct_answer": "Propranolol (E)"
+  },
+  "sentences": [
+    "To determine the most appropriate treatment for this patient's tremor, we need to carefully analyze the clinical presentation and consider the differential diagnoses",
+    "A 51-year-old man presents with a tremor noticed by his wife during specific activities such as pouring drinks, pointing the remote, or fixing his car",
+    "The patient has a family history of Parkinson disease as his father died of it",
+    "The tremor occurs during voluntary actions (intention tremor) and is not present at rest",
+    "Medical history includes hypertension, diabetes, and hyperlipidemia",
+    "The patient consumes 3-5 drinks of scotch per night",
+    "Physical exam shows the tremor during finger-to-nose testing but no other significant neurological findings",
+    "Tremor type: The tremor is described as occurring during specific activities, typical of an essential tremor or intention tremor",
+    "Essential tremor is commonly seen during actions and can be familial",
+    "Intention tremor associated with cerebellar disorders is another consideration but less likely given the isolated nature of the tremor and the absence of other cerebellar signs",
+    "Parkinsonian tremor usually presents at rest and is accompanied by other signs such as bradykinesia and rigidity, which are not observed here",
+    "Essential Tremor: Most likely given the action-related tremor, absence of rest tremor, and family history (though his father had Parkinson disease, tremors can be familial)",
+    "Alcohol-induced tremor: Less likely as the tremor is specific to actions and not described as generalized postural tremor",
+    "Medication-induced tremor: No evidence suggests that lisinopril, metformin, or atorvastatin causes tremor",
+    "Cerebellar tremor: Unlikely due to lack of other cerebellar signs",
+    "Essential Tremor: First-line treatment includes propranolol or primidone",
+    "Alcoholics anonymous: Indicated for alcohol use disorder, but the primary concern here is treating the tremor",
+    "Aripiprazole: Antipsychotic, not indicated for essential tremor",
+    "Carbidopa: Used for Parkinson disease, which is less likely given the tremor characteristics",
+    "Phenobarbital: Anticonvulsant, not typically used for essential tremor",
+    "Given the nature of the tremor (action-related), the most appropriate treatment is propranolol, a beta-blocker commonly used for essential tremor",
+    "(E) Propranolol"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate treatment for this 51-year-old man's tremor, the clinical presentation and differential diagnoses must be analyzed.",
+      "pattern": "D",
+      "notes": "Introductory framing statement."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3
+      ],
+      "output": "This 51-year-old man presents with a tremor noticed by his wife during specific activities (pouring drinks, pointing the remote, fixing his car) that occurs during voluntary actions (intention tremor) and is not present at rest, and he has a family history of Parkinson disease.",
+      "pattern": "A",
+      "notes": "Enumeration of patient's clinical presentation features."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "The 51-year-old man's medical history includes hypertension, diabetes, and hyperlipidemia, and he consumes 3-5 drinks of scotch per night.",
+      "pattern": "A",
+      "notes": "Enumeration of medical history and habits."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Physical exam of this 51-year-old man shows the tremor during finger-to-nose testing but no other significant neurological findings.",
+      "pattern": "D",
+      "notes": "Standalone exam finding."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "The tremor is described as occurring during specific activities, typical of an essential tremor or intention tremor; essential tremor is commonly seen during actions and can be familial.",
+      "pattern": "B",
+      "notes": "Causal link between the observation and the typical definition of essential tremor."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Intention tremor associated with cerebellar disorders is a consideration but is less likely given the isolated nature of the tremor and the absence of other cerebellar signs in this patient.",
+      "pattern": "C",
+      "notes": "Conclusion (less likely) supported by premises (isolated tremor, no other signs)."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Parkinsonian tremor usually presents at rest and is accompanied by other signs such as bradykinesia and rigidity, which are not observed in this 51-year-old man.",
+      "pattern": "C",
+      "notes": "Conclusion (not Parkinsonian) supported by absence of classic signs."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Essential Tremor is the most likely diagnosis given the action-related tremor, absence of rest tremor, and family history (though the father had Parkinson disease, tremors can be familial).",
+      "pattern": "C",
+      "notes": "Diagnosis conclusion supported by specific premises."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Alcohol-induced tremor is less likely as the tremor is specific to actions and not described as generalized postural tremor.",
+      "pattern": "B",
+      "notes": "Reasoning ('as') for why alcohol-induced tremor is unlikely."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Medication-induced tremor is unlikely as there is no evidence that lisinopril, metformin, or atorvastatin causes tremor.",
+      "pattern": "B",
+      "notes": "Reasoning ('as') for why medication-induced tremor is unlikely."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Cerebellar tremor is unlikely due to lack of other cerebellar signs.",
+      "pattern": "B",
+      "notes": "Causal link ('due to') for ruling out cerebellar tremor."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "First-line treatment for essential tremor includes propranolol or primidone.",
+      "pattern": "D",
+      "notes": "Standalone medical fact."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "Alcoholics anonymous is indicated for alcohol use disorder, but it is not the primary concern for treating the tremor in this patient.",
+      "pattern": "C",
+      "notes": "Reasoning for rejecting option A."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "Aripiprazole is an antipsychotic and is not indicated for essential tremor.",
+      "pattern": "B",
+      "notes": "Property of drug explains why it's not indicated."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Carbidopa is used for Parkinson disease, which is less likely given the characteristics of the tremor in this 51-year-old man.",
+      "pattern": "B",
+      "notes": "Link between drug use and the likelihood of the diagnosis."
+    },
+    {
+      "source_sentences": [
+        19
+      ],
+      "output": "Phenobarbital is an anticonvulsant and is not typically used for essential tremor.",
+      "pattern": "B",
+      "notes": "Property of drug explains why it's not indicated."
+    },
+    {
+      "source_sentences": [
+        20,
+        21
+      ],
+      "output": "Given the nature of the tremor (action-related) in this 51-year-old man, the most appropriate treatment is (E) propranolol, a beta-blocker commonly used for essential tremor.",
+      "pattern": "C",
+      "notes": "Final recommendation based on previously established tremor nature."
+    }
+  ]
+}

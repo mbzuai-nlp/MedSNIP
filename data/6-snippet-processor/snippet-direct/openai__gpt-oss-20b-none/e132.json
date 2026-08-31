@@ -1,0 +1,63 @@
+{
+  "entry_id": 132,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "If the side effects of the Prozac become too much is there a wean down period I would have to go through or would I be able to stop it immediately?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1760,
+    "output_tokens": 1785,
+    "cached_input_tokens": 0,
+    "cost": 0.0003027
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1760,
+      "output_tokens": 1785,
+      "cached_input_tokens": 0,
+      "cost": 0.0003027
+    }
+  ],
+  "shared_context": {
+    "topic": "Prozac withdrawal",
+    "drug_a": "Prozac (fluoxetine)",
+    "condition": "withdrawal symptoms"
+  },
+  "sentences": [
+    "Abrupt discontinuation of Prozac (fluoxetine), a selective serotonin reuptake inhibitor (SSRI), is not recommended due to the potential for withdrawal symptoms",
+    "Gradual tapering is generally advised to minimize these effects",
+    "These symptoms can include dizziness, nausea, headache, irritability, and insomnia",
+    "Medications that affect the central nervous system, such as SSRIs, should be tapered off under the guidance of a healthcare provider to avoid these withdrawal symptoms"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2
+      ],
+      "output": "Abrupt discontinuation of Prozac (fluoxetine) is not recommended because it can cause withdrawal symptoms such as dizziness, nausea, headache, irritability, and insomnia. Gradual tapering is advised to reduce these effects.",
+      "pattern": "C",
+      "notes": "Merge because the sentences form a causal chain: abrupt stop leads to withdrawal, therefore tapering is recommended, and the symptoms are enumerated."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Medications affecting the central nervous system, such as SSRIs, should be tapered off under a healthcare provider’s guidance to avoid withdrawal symptoms.",
+      "pattern": "D",
+      "notes": "A standalone recommendation that can be verified independently."
+    }
+  ]
+}

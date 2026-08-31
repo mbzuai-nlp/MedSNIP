@@ -1,0 +1,168 @@
+{
+  "entry_id": 164,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is flu test same as influenza test ?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2863,
+    "output_tokens": 633,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1355,
+      "output_tokens": 305,
+      "cached_input_tokens": 0,
+      "cost": 3.93e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1508,
+      "output_tokens": 328,
+      "cached_input_tokens": 0,
+      "cost": 4.328e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "flu test vs. influenza test",
+    "condition": "influenza virus"
+  },
+  "sentences": [
+    "The terms \"flu test\" and \"influenza test\" are often used interchangeably, as they refer to diagnostic tests used to detect the presence of the influenza virus in a patient's body",
+    "These tests typically involve collecting a sample from the nose, throat, or other respiratory areas and sending it to a laboratory for analysis",
+    "The specific terms used may vary depending on the context and location, but they generally refer to the same concept",
+    "For example, the Centers for Disease Control and Prevention (CDC) uses the term \"influenza diagnostic tests,\" including rapid influenza diagnostic tests (RIDTs) and molecular assays like PCR (polymerase chain reaction)",
+    "Rapid influenza diagnostic tests (RIDTs): These tests provide quick results, usually within 15-30 minutes, and are often used in outpatient settings",
+    "Polymerase chain reaction (PCR) tests: These molecular tests detect the genetic material of the influenza virus and are often used in clinical laboratories",
+    "Immunochromatographic tests: These tests use antibodies to detect the presence of influenza antigens in a sample and are often used in point-of-care settings",
+    "In summary, \"flu test\" and \"influenza test\" refer to the same type of diagnostic test used to detect the presence of the influenza virus"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The terms 'flu test' and 'influenza test' are often used interchangeably.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "They refer to diagnostic tests used to detect the presence of the influenza virus in a patient's body.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The specific terms used may vary depending on the context and location.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "However, they generally refer to the same concept.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Rapid influenza diagnostic tests (RIDTs) provide quick results, usually within 15-30 minutes.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "RIDTs are often used in outpatient settings.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Polymerase chain reaction (PCR) tests detect the genetic material of the influenza virus.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "PCR tests are often used in clinical laboratories.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The terms 'flu test' and 'influenza test' are often used interchangeably and refer to diagnostic tests used to detect the presence of the influenza virus.",
+      "pattern": "C",
+      "notes": "Conclusion + premises."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The specific terms used may vary depending on the context and location.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "They generally refer to the same concept.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Rapid influenza diagnostic tests (RIDTs) provide quick results, usually within 15-30 minutes.",
+      "pattern": "D",
+      "notes": "Different diagnostic method; kept atomic."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "RIDTs are often used in outpatient settings.",
+      "pattern": "D",
+      "notes": "Different diagnostic method; kept atomic."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Polymerase chain reaction (PCR) tests detect the genetic material of the influenza virus.",
+      "pattern": "D",
+      "notes": "Different diagnostic method; kept atomic."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "PCR tests are often used in clinical laboratories.",
+      "pattern": "D",
+      "notes": "Different diagnostic method; kept atomic."
+    }
+  ]
+}

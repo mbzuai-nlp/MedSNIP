@@ -1,0 +1,184 @@
+{
+  "entry_id": 254,
+  "batch_id": 26,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "do chlamdia often cure itself or does it cause permanent damage",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2774,
+    "output_tokens": 670,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1243,
+      "output_tokens": 369,
+      "cached_input_tokens": 0,
+      "cost": 3.962e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1531,
+      "output_tokens": 301,
+      "cached_input_tokens": 0,
+      "cost": 4.266e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "Chlamydia",
+    "condition": "Chlamydia infection"
+  },
+  "sentences": [
+    "Chlamydia is a common sexually transmitted infection caused by the bacterium *Chlamydia trachomatis*",
+    "Chlamydia does not often cure itself without treatment",
+    "Most individuals with chlamydia are asymptomatic, which means they may not seek treatment, allowing the infection to persist",
+    "If left untreated, chlamydia can cause permanent damage",
+    "In women, it can lead to pelvic inflammatory disease (PID), which can result in chronic pelvic pain, ectopic pregnancy, and infertility",
+    "In men, untreated chlamydia can cause epididymitis, which may lead to infertility",
+    "Additionally, untreated chlamydia can increase the risk of acquiring or transmitting HIV"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlamydia does not often cure itself without treatment.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Chlamydia often requires treatment to resolve.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "If left untreated, chlamydia can cause permanent damage.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Chlamydia can lead to pelvic inflammatory disease (PID) in women.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "PID can result in chronic pelvic pain in women.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "PID can result in ectopic pregnancy in women.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "PID can result in infertility in women.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Chlamydia can cause epididymitis in men.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Epididymitis can lead to infertility in men.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Untreated chlamydia can increase the risk of acquiring HIV.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Untreated chlamydia can increase the risk of transmitting HIV.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Chlamydia often requires treatment to resolve, and it does not often cure itself without treatment.",
+      "pattern": "C",
+      "notes": "Both claims necessary for full context."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "If left untreated, chlamydia can cause permanent damage.",
+      "pattern": "D",
+      "notes": "Standalone consequence."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Untreated chlamydia can cause PID, leading to chronic pelvic pain, ectopic pregnancy, and infertility in women.",
+      "pattern": "A",
+      "notes": "Enumeration of complications in women."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Chlamydia can cause epididymitis in men.",
+      "pattern": "D",
+      "notes": "Different complication (Pattern E topic shift); kept atomic."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Epididymitis can lead to infertility in men.",
+      "pattern": "D",
+      "notes": "Standalone consequence."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Untreated chlamydia can increase the risk of acquiring and transmitting HIV.",
+      "pattern": "A",
+      "notes": "Enumeration of HIV risks."
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "entry_id": 75,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 72-year-old man presents to his primary care physician for a general checkup. He states that he has been a bit more fatigued lately but believes it is secondary to poor sleep at his new house. The patient is otherwise healthy and takes no medications. His temperature is 98.0°F (36.7°C), blood pressure is 141/90 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 98% on room air. Physical exam is notable only for minor pallor but is otherwise unremarkable. Basic laboratory studies are ordered as seen below.\n\nHemoglobin: 10 g/dL\nHematocrit: 30%\nLeukocyte count: 67,500/mm^3\nPlatelet count: 119,000/mm^3\n\nSerum:\nNa: 141 mEq/L\nCl: 103 mEq/L\nK: 4.0 Eq/L\nHCO3-: 24 mEq/L\nBUN: 22 mg/dL\nGlucose: 109 mg/dL\nCreatinine: 1.2 mg/dL\nCa: 10.0 mg/dL\n\nWhich of the following is the most likely diagnosis? (A) Acute lymphoblastic leukemia (B) Acute myelogenous leukemia (C) Chronic lymphocytic leukemia (D) Chronic myelogenous leukemia (E) Hairy cell leukemia",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5088,
+    "output_tokens": 5311,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2137,
+      "output_tokens": 2465,
+      "cached_input_tokens": 0,
+      "cost": 0.00040921
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2951,
+      "output_tokens": 2846,
+      "cached_input_tokens": 0,
+      "cost": 0.00048697
+    }
+  ],
+  "shared_context": {
+    "patient_age": 72,
+    "patient_sex": "male",
+    "presenting_complaint": "fatigue",
+    "key_symptoms": "fatigue attributed to poor sleep",
+    "key_lab_findings": "hemoglobin 10 g/dL, hematocrit 30%, leukocyte 67,500/mm³, platelet 119,000/mm³, normal electrolytes, elevated glucose, slightly elevated creatinine",
+    "exam_findings": "minor pallor only",
+    "question_type": "most likely diagnosis"
+  },
+  "sentences": [
+    "To approach this question, we need to analyze the patient's symptoms, laboratory results, and other relevant information",
+    "The patient is a 72-year-old man presenting with fatigue, which he attributes to poor sleep",
+    "Hemoglobin: 10 g/dL (slightly low)",
+    "Hematocrit: 30% (slightly low)",
+    "Leukocyte count: 67,500/mm^3 (elevated)",
+    "Platelet count: 119,000/mm^3 (within normal limits)",
+    "Serum studies: normal electrolytes, elevated glucose, and slightly elevated creatinine",
+    "The patient's physical exam is notable only for minor pallor",
+    "Given these findings, we need to consider the possible diagnoses",
+    "Acute Lymphoblastic Leukemia (ALL): Typically presents with a high leukocyte count (often > 50,000/mm^3), anemia, and thrombocytopenia",
+    "The patient's leukocyte count is elevated, but not extremely high, and his platelet count is within normal limits",
+    "Acute Myelogenous Leukemia (AML): Often presents with a high leukocyte count, anemia, and thrombocytopenia",
+    "The patient's leukocyte count is elevated, but not extremely high, and his platelet count is within normal limits",
+    "Chronic Lymphocytic Leukemia (CLL): Typically presents with a high leukocyte count, anemia, and thrombocytopenia",
+    "The patient's leukocyte count is elevated, and his hemoglobin and hematocrit are slightly low",
+    "Chronic Myelogenous Leukemia (CML): Often presents with a high leukocyte count, anemia, and thrombocytopenia",
+    "The patient's leukocyte count is elevated, but not extremely high, and his platelet count is within normal limits",
+    "Hairy Cell Leukemia (HCL): Typically presents with a high leukocyte count, anemia, and splenomegaly",
+    "The patient's leukocyte count is elevated, and his hemoglobin and hematocrit are slightly low, but there is no mention of splenomegaly",
+    "Based on the patient's age, symptoms, and laboratory results, the most likely diagnosis is Chronic Lymphocytic Leukemia (CLL)",
+    "CLL is a type of cancer that affects the blood and bone marrow, characterized by the production of an excessive number of immature white blood cells (lymphocytes)",
+    "It is most commonly diagnosed in individuals over the age of 50 and often presents with a high leukocyte count, anemia, and a mild enlargement of the spleen",
+    "Answer: C"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "To approach this question, we need to analyze the patient's symptoms, laboratory results, and other relevant information.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient is a 72-year-old man presenting with fatigue, which he attributes to poor sleep.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Hemoglobin is 10 g/dL, which is slightly low.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Hematocrit is 30%, which is slightly low.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Leukocyte count is 67,500/mm³, which is elevated.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Platelet count is 119,000/mm³, which is within normal limits.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Serum studies show normal electrolytes, elevated glucose, and slightly elevated creatinine.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Physical exam is notable only for minor pallor and is otherwise unremarkable.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Given these findings, we need to consider the possible diagnoses.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Acute lymphoblastic leukemia (ALL) typically presents with a high leukocyte count (often > 50,000/mm³), anemia, and thrombocytopenia.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "In this patient, the leukocyte count is elevated but not extremely high, and the platelet count is within normal limits.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Acute myelogenous leukemia (AML) often presents with a high leukocyte count, anemia, and thrombocytopenia.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "In this patient, the leukocyte count is elevated but not extremely high, and the platelet count is within normal limits.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Chronic lymphocytic leukemia (CLL) typically presents with a high leukocyte count, anemia, and thrombocytopenia.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 15,
+      "text": "In this patient, the leukocyte count is elevated, and hemoglobin and hematocrit are slightly low.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Chronic myelogenous leukemia (CML) often presents with a high leukocyte count, anemia, and thrombocytopenia.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 17,
+      "text": "In this patient, the leukocyte count is elevated but not extremely high, and the platelet count is within normal limits.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Hairy cell leukemia (HCL) typically presents with a high leukocyte count, anemia, and splenomegaly.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 19,
+      "text": "In this patient, the leukocyte count is elevated, and hemoglobin and hematocrit are slightly low, but there is no mention of splenomegaly.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Based on the patient's age, symptoms, and laboratory results, the most likely diagnosis is chronic lymphocytic leukemia (CLL).",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 21,
+      "text": "CLL is a type of cancer that affects the blood and bone marrow, characterized by the production of an excess of immature white blood cells (lymphocytes).",
+      "source_sentences": [
+        20
+      ]
+    },
+    {
+      "index": 22,
+      "text": "CLL is most commonly diagnosed in individuals over the age of 50 and often presents with a high leukocyte count, anemia, and mild enlargement of the spleen.",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 23,
+      "text": "Answer: C",
+      "source_sentences": [
+        22
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "This 72‑year‑old male presenting with fatigue attributed to poor sleep has laboratory findings of hemoglobin 10 g/dL, hematocrit 30 %, leukocyte count 67,500/mm³, platelet count 119,000/mm³, normal electrolytes, elevated glucose, and slightly elevated creatinine. His physical exam shows only minor pallor. These findings indicate the need to consider possible diagnoses.",
+      "pattern": "A",
+      "notes": "Enumeration of patient demographics, symptoms, labs and initial diagnostic prompt."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Acute lymphoblastic leukemia (ALL) typically presents with a very high leukocyte count (>50,000/mm³), anemia, and thrombocytopenia. In this 72‑year‑old male, the leukocyte count is elevated but not extremely high, and the platelet count is within normal limits, making ALL less likely.",
+      "pattern": "A",
+      "notes": "One subject (ALL) with its defining features and case alignment."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Acute myelogenous leukemia (AML) often presents with a high leukocyte count, anemia, and thrombocytopenia. Here, the leukocyte count is elevated but not extremely high, and the platelet count remains normal, rendering AML unlikely.",
+      "pattern": "A",
+      "notes": "One subject (AML) with features and patient data."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Chronic lymphocytic leukemia (CLL) is characterized by a high leukocyte count, anemia, and usually normal platelets. This 72‑year‑old male has an elevated leukocyte count and slightly low hemoglobin and hematocrit, aligning with CLL, though platelets are normal.",
+      "pattern": "A",
+      "notes": "One subject (CLL) summarized with relevant lab alignment."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "Chronic myelogenous leukemia (CML) often presents with a high leukocyte count, anemia, and thrombocytopenia. In this patient, leukocyte count is elevated but not extremely high and platelets are normal, making CML unlikely.",
+      "pattern": "A",
+      "notes": "One subject (CML) with diagnostic criteria."
+    },
+    {
+      "source_claims": [
+        18,
+        19
+      ],
+      "output": "Hairy cell leukemia (HCL) typically presents with a high leukocyte count, anemia, and splenomegaly. This patient shows leukocytosis and mild anemia but no splenomegaly, so HCL is less likely.",
+      "pattern": "A",
+      "notes": "One subject (HCL) with characteristic findings."
+    },
+    {
+      "source_claims": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "output": "Based on the patient’s age, presentation of fatigue, laboratory profile showing anemia with leukocytosis and a relatively preserved platelet count, and the characteristic features of each leukemia subtype, the most likely diagnosis is chronic lymphocytic leukemia (CLL). Thus, the correct answer is C.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises and final answer."
+    }
+  ]
+}

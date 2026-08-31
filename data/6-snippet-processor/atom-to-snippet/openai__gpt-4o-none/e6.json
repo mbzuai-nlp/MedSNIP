@@ -1,0 +1,174 @@
+{
+  "entry_id": 6,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How long does this years flu usually last?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2795,
+    "output_tokens": 814,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1247,
+      "output_tokens": 436,
+      "cached_input_tokens": 0,
+      "cost": 0.0074775
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1548,
+      "output_tokens": 378,
+      "cached_input_tokens": 0,
+      "cost": 0.00765
+    }
+  ],
+  "shared_context": {
+    "condition": "flu"
+  },
+  "sentences": [
+    "The duration of influenza (flu) can vary depending on several factors, including the individual's age, overall health, and the specific strain of the virus",
+    "Generally, the flu typically lasts around 1-2 weeks, but it can range from 5-14 days",
+    "Symptoms can start to improve within 3-4 days after the onset of illness, but it may take up to 2 weeks for a person to fully recover",
+    "However, some people, especially older adults and young children, may experience prolonged illness or complications that can last longer",
+    "It's essential to note that antiviral medications, such as oseltamivir (Tamiflu) and zanamivir (Relenza), can help shorten the duration and severity of the flu when started within 48 hours of symptom onset"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The duration of influenza (flu) can vary depending on several factors.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The factors affecting flu duration include the individual's age.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The factors affecting flu duration include the individual's overall health.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The factors affecting flu duration include the specific strain of the virus.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Generally, the flu typically lasts around 1-2 weeks.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The duration of the flu can range from 5-14 days.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Symptoms of flu can start to improve within 3-4 days after the onset of illness.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "It may take up to 2 weeks for a person to fully recover from the flu.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Some people, especially older adults and young children, may experience prolonged illness or complications that can last longer than the typical flu duration.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Antiviral medications, such as oseltamivir (Tamiflu) and zanamivir (Relenza), can help shorten the duration of the flu when started within 48 hours of symptom onset.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Antiviral medications can help reduce the severity of the flu when started within 48 hours of symptom onset.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "The duration of influenza (flu) can vary depending on several factors, including the individual's age, overall health, and the specific strain of the virus.",
+      "pattern": "A",
+      "notes": "Enumeration of factors affecting flu duration."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        8
+      ],
+      "output": "Generally, the flu typically lasts around 1-2 weeks, with its duration ranging from 5-14 days, and it may take up to 2 weeks for full recovery.",
+      "pattern": "A",
+      "notes": "Enumeration of general flu duration ranges."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Symptoms of flu can start to improve within 3-4 days after the onset of illness.",
+      "pattern": "D",
+      "notes": "Standalone fact about symptom improvement time."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Some people, especially older adults and young children, may experience prolonged illness or complications that can last longer than the typical flu duration.",
+      "pattern": "D",
+      "notes": "Specific subgroup with different flu duration."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Antiviral medications, such as oseltamivir (Tamiflu) and zanamivir (Relenza), can help shorten the duration and reduce the severity of the flu when started within 48 hours of symptom onset.",
+      "pattern": "A",
+      "notes": "Benefits of antivirals are related (duration and severity)."
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "entry_id": 165,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is pepto peptobismol?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3011,
+    "output_tokens": 1183,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1305,
+      "output_tokens": 677,
+      "cached_input_tokens": 0,
+      "cost": 0.00034714
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1706,
+      "output_tokens": 506,
+      "cached_input_tokens": 0,
+      "cost": 0.00033252
+    }
+  ],
+  "shared_context": {
+    "topic": "Pepto-Bismol",
+    "drug_a": "Pepto-Bismol",
+    "active_ingredient": "bismuth subsalicylate"
+  },
+  "sentences": [
+    "Pepto-Bismol is a brand name for a medication that contains bismuth subsalicylate as its active ingredient",
+    "Bismuth subsalicylate is an antacid and an anti-diarrheal medication used to treat various gastrointestinal symptoms, including heartburn, indigestion, nausea, and diarrhea",
+    "It works by coating the stomach and intestines with a protective barrier, reducing inflammation, and slowing the movement of food through the digestive system",
+    "The medication is also used to treat traveler's diarrhea, irritable bowel syndrome (IBS), and stomach ulcers",
+    "Pepto-Bismol is available over-the-counter (OTC) in various forms, including liquid, tablets, and chewable tablets",
+    "It is essential to note that while Pepto-Bismol can provide relief from gastrointestinal symptoms, it is not suitable for everyone, particularly those with certain medical conditions, such as bleeding disorders, kidney disease, or stomach ulcers",
+    "Additionally, it is not recommended for pregnant or breastfeeding women without consulting a healthcare provider"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Pepto-Bismol is a medication that contains bismuth subsalicylate as its active ingredient.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Bismuth subsalicylate is an antacid.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Bismuth subsalicylate is an anti-diarrheal medication.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Bismuth subsalicylate treats heartburn.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Bismuth subsalicylate treats indigestion.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Bismuth subsalicylate treats nausea.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Bismuth subsalicylate treats diarrhea.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Bismuth subsalicylate works by coating the stomach and intestines with a protective barrier.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Bismuth subsalicylate reduces inflammation.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Bismuth subsalicylate slows the movement of food through the digestive system.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Pepto-Bismol treats traveler's diarrhea.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Pepto-Bismol treats irritable bowel syndrome (IBS).",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Pepto-Bismol treats stomach ulcers.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Pepto-Bismol is available over-the-counter (OTC) in various forms.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Pepto-Bismol is not suitable for everyone, particularly those with bleeding disorders.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Pepto-Bismol is not suitable for everyone, particularly those with kidney disease.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Pepto-Bismol is not suitable for everyone, particularly those with stomach ulcers.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Pepto-Bismol is not recommended for pregnant women without consulting a healthcare provider.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Pepto-Bismol is not recommended for breastfeeding women without consulting a healthcare provider.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Pepto-Bismol is a medication that contains bismuth subsalicylate as its active ingredient.",
+      "pattern": "D",
+      "notes": "Standalone definition of Pepto-Bismol."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "Bismuth subsalicylate is an antacid and an anti-diarrheal medication.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of bismuth subsalicylate."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Bismuth subsalicylate treats heartburn, indigestion, nausea, and diarrhea.",
+      "pattern": "A",
+      "notes": "Enumeration of conditions treated by bismuth subsalicylate."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10
+      ],
+      "output": "Bismuth subsalicylate works by coating the stomach and intestines with a protective barrier, reducing inflammation, and slowing the movement of food through the digestive system.",
+      "pattern": "B",
+      "notes": "Causal chain of how bismuth subsalicylate works."
+    },
+    {
+      "source_claims": [
+        11,
+        12,
+        13
+      ],
+      "output": "Pepto-Bismol treats traveler's diarrhea, irritable bowel syndrome (IBS), and stomach ulcers.",
+      "pattern": "A",
+      "notes": "Enumeration of conditions treated by Pepto-Bismol."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Pepto-Bismol is available over-the-counter (OTC) in various forms.",
+      "pattern": "D",
+      "notes": "Standalone fact about Pepto-Bismol availability."
+    },
+    {
+      "source_claims": [
+        15,
+        16,
+        17
+      ],
+      "output": "Pepto-Bismol is not suitable for everyone, particularly those with bleeding disorders, kidney disease, or stomach ulcers.",
+      "pattern": "A",
+      "notes": "Enumeration of conditions where Pepto-Bismol is not suitable."
+    },
+    {
+      "source_claims": [
+        18,
+        19
+      ],
+      "output": "Pepto-Bismol is not recommended for pregnant or breastfeeding women without consulting a healthcare provider.",
+      "pattern": "A",
+      "notes": "Enumeration of populations where Pepto-Bismol requires caution."
+    }
+  ]
+}

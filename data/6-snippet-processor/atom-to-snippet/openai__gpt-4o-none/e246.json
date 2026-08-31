@@ -1,0 +1,184 @@
+{
+  "entry_id": 246,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is there anti nausea medication that can be taken to allow fluids to stay down?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2843,
+    "output_tokens": 867,
+    "cached_input_tokens": 1152
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1278,
+      "output_tokens": 463,
+      "cached_input_tokens": 0,
+      "cost": 0.007825
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1565,
+      "output_tokens": 404,
+      "cached_input_tokens": 1152,
+      "cost": 0.0065125
+    }
+  ],
+  "shared_context": {
+    "topic": "anti-nausea medication to help fluids stay down"
+  },
+  "sentences": [
+    "There are several anti-nausea medications that can help alleviate nausea and vomiting, making it easier to keep fluids down",
+    "Metoclopramide is a commonly used medication for this purpose",
+    "It works by blocking dopamine receptors in the brain, which helps to reduce nausea and vomiting",
+    "Another option is ondansetron, a serotonin 5-HT3 receptor antagonist that is effective in preventing nausea and vomiting caused by chemotherapy, radiation therapy, and surgery",
+    "Ondansetron is often used in combination with other medications, such as dexamethasone, to enhance its anti-nausea effects",
+    "Other medications like promethazine and prochlorperazine can also be used to treat nausea and vomiting, although they may have more sedative effects",
+    "It's essential to consult a healthcare professional to determine the best medication for your specific needs and to discuss any potential side effects or interactions with other medications"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "There are several anti-nausea medications that can help alleviate nausea and vomiting.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Anti-nausea medications make it easier to keep fluids down.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Metoclopramide is a commonly used medication for alleviating nausea and vomiting.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Metoclopramide works by blocking dopamine receptors in the brain.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Blocking dopamine receptors helps reduce nausea and vomiting.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Ondansetron is a serotonin 5-HT3 receptor antagonist effective in preventing nausea and vomiting caused by chemotherapy, radiation therapy, and surgery.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Ondansetron is often used in combination with other medications, such as dexamethasone, to enhance its anti-nausea effects.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Promethazine can be used to treat nausea and vomiting.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Prochlorperazine can be used to treat nausea and vomiting.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Promethazine and prochlorperazine may have more sedative effects.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 11,
+      "text": "It's essential to consult a healthcare professional to determine the best medication for your specific needs.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 12,
+      "text": "It's essential to discuss any potential side effects or interactions with other medications with a healthcare professional.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "There are several anti-nausea medications that can help alleviate nausea and vomiting, making it easier to keep fluids down.",
+      "pattern": "B",
+      "notes": "Causal relationship between alleviating nausea and helping to keep fluids down."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "Metoclopramide is a commonly used medication for alleviating nausea and vomiting, working by blocking dopamine receptors in the brain, which helps reduce these symptoms.",
+      "pattern": "B",
+      "notes": "Causal chain linking the action of the drug to its effects."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Ondansetron is a serotonin 5-HT3 receptor antagonist effective in preventing nausea and vomiting caused by chemotherapy, radiation therapy, and surgery. It is often used in combination with other medications, such as dexamethasone, to enhance its anti-nausea effects.",
+      "pattern": "A",
+      "notes": "Characteristic listing of Ondansetron properties and effects."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10
+      ],
+      "output": "Promethazine and prochlorperazine can be used to treat nausea and vomiting, but they may have more sedative effects.",
+      "pattern": "A",
+      "notes": "Enumeration of two similar drugs and a shared side effect."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "It's essential to consult a healthcare professional to determine the best medication for your specific needs and to discuss any potential side effects or interactions with other medications.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premise about healthcare consultation."
+    }
+  ]
+}

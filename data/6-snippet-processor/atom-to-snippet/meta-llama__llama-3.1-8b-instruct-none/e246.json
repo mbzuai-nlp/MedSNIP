@@ -1,0 +1,183 @@
+{
+  "entry_id": 246,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is there anti nausea medication that can be taken to allow fluids to stay down?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2875,
+    "output_tokens": 782,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1286,
+      "output_tokens": 409,
+      "cached_input_tokens": 0,
+      "cost": 4.208e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1589,
+      "output_tokens": 373,
+      "cached_input_tokens": 0,
+      "cost": 4.67e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "anti-nausea medication to allow fluids to stay down",
+    "condition": "nausea and vomiting"
+  },
+  "sentences": [
+    "There are several anti-nausea medications that can help alleviate nausea and vomiting, making it easier to keep fluids down",
+    "Metoclopramide is a commonly used medication for this purpose",
+    "It works by blocking dopamine receptors in the brain, which helps to reduce nausea and vomiting",
+    "Another option is ondansetron, a serotonin 5-HT3 receptor antagonist that is effective in preventing nausea and vomiting caused by chemotherapy, radiation therapy, and surgery",
+    "Ondansetron is often used in combination with other medications, such as dexamethasone, to enhance its anti-nausea effects",
+    "Other medications like promethazine and prochlorperazine can also be used to treat nausea and vomiting, although they may have more sedative effects",
+    "It's essential to consult a healthcare professional to determine the best medication for your specific needs and to discuss any potential side effects or interactions with other medications"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "There are several anti-nausea medications available.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Metoclopramide is a commonly used anti-nausea medication.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Metoclopramide works by blocking dopamine receptors in the brain.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Ondansetron is a serotonin 5-HT3 receptor antagonist that prevents nausea and vomiting.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Ondansetron is effective in preventing nausea and vomiting caused by chemotherapy, radiation therapy, and surgery.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Ondansetron can be used in combination with other medications, such as dexamethasone, to enhance its anti-nausea effects.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Other medications like promethazine and prochlorperazine can be used to treat nausea and vomiting.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Promethazine and prochlorperazine may have more sedative effects.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "It's essential to consult a healthcare professional to determine the best medication for your specific needs.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Consulting a healthcare professional is necessary to discuss potential side effects or interactions with other medications.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "output": "Several anti-nausea medications are available, including Metoclopramide, Ondansetron, and other medications like promethazine and prochlorperazine.",
+      "pattern": "A",
+      "notes": "Enumeration of anti-nausea medications."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Metoclopramide works by blocking dopamine receptors in the brain.",
+      "pattern": "D",
+      "notes": "Standalone mechanism of action."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Ondansetron is effective in preventing nausea and vomiting caused by chemotherapy, radiation therapy, and surgery.",
+      "pattern": "D",
+      "notes": "Standalone indication."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Ondansetron can be used in combination with other medications, such as dexamethasone, to enhance its anti-nausea effects.",
+      "pattern": "D",
+      "notes": "Standalone combination therapy."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Promethazine and prochlorperazine may have more sedative effects.",
+      "pattern": "D",
+      "notes": "Standalone side effect."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "It's essential to consult a healthcare professional to determine the best medication for your specific needs.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Consulting a healthcare professional is necessary to discuss potential side effects or interactions with other medications.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    }
+  ]
+}

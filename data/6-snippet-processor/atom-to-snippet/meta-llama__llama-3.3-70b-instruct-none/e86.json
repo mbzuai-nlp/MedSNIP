@@ -1,0 +1,160 @@
+{
+  "entry_id": 86,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "My cat was just diagnosed with a tapeworm, could that be something I can get from him?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2818,
+    "output_tokens": 675,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1233,
+      "output_tokens": 401,
+      "cached_input_tokens": 0,
+      "cost": 0.00025162
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1585,
+      "output_tokens": 274,
+      "cached_input_tokens": 0,
+      "cost": 0.00024618
+    }
+  ],
+  "shared_context": {
+    "topic": "tapeworm transmission from cats to humans",
+    "condition": "tapeworm infection"
+  },
+  "sentences": [
+    "Yes, it is possible for humans to contract tapeworms from cats, although it is relatively uncommon",
+    "The most common type of tapeworm in cats is Dipylidium caninum, which is transmitted through the ingestion of infected fleas",
+    "Humans, particularly children, can become infected if they accidentally ingest an infected flea",
+    "To reduce the risk of transmission, it is important to maintain good hygiene, such as washing hands thoroughly after handling your cat and ensuring your cat is treated for fleas regularly",
+    "Additionally, keeping your cat's living environment clean and free of fleas can help prevent the spread of tapeworms"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "It is possible for humans to contract tapeworms from cats.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Contracting tapeworms from cats is relatively uncommon.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The most common type of tapeworm in cats is Dipylidium caninum.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Dipylidium caninum is transmitted through the ingestion of infected fleas.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Humans can become infected with tapeworms if they accidentally ingest an infected flea.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Children are particularly at risk of becoming infected with tapeworms from ingesting infected fleas.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Maintaining good hygiene can reduce the risk of tapeworm transmission from cats to humans.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Washing hands thoroughly after handling your cat can help reduce the risk of tapeworm transmission.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Treating your cat for fleas regularly can help reduce the risk of tapeworm transmission.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Keeping your cat's living environment clean and free of fleas can help prevent the spread of tapeworms.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "It is possible for humans to contract tapeworms from cats, although this is relatively uncommon.",
+      "pattern": "C",
+      "notes": "General statement with qualifying detail."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "The most common type of tapeworm in cats, Dipylidium caninum, is transmitted through the ingestion of infected fleas, which can also infect humans if accidentally ingested.",
+      "pattern": "B",
+      "notes": "Causal chain explaining transmission."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Children are particularly at risk of becoming infected with tapeworms from ingesting infected fleas.",
+      "pattern": "D",
+      "notes": "Standalone fact about a specific at-risk group."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "To reduce the risk of tapeworm transmission from cats to humans, maintain good hygiene, wash hands thoroughly after handling your cat, treat your cat for fleas regularly, and keep their living environment clean and free of fleas.",
+      "pattern": "A",
+      "notes": "Enumeration of preventative measures."
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "entry_id": 240,
+  "batch_id": 24,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "If this is just muscle strain, how many days should I expect the pain to go away?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2809,
+    "output_tokens": 704,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1250,
+      "output_tokens": 394,
+      "cached_input_tokens": 0,
+      "cost": 0.00025108
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1559,
+      "output_tokens": 310,
+      "cached_input_tokens": 0,
+      "cost": 0.0002551
+    }
+  ],
+  "shared_context": {
+    "topic": "muscle strain",
+    "symptom": "pain"
+  },
+  "sentences": [
+    "Muscle strain, also known as pulled muscle, typically causes pain that can resolve within a few days to several weeks, depending on the severity of the strain",
+    "Mild muscle strains: Pain usually improves within a few days to a week",
+    "Moderate muscle strains: Pain may last for several weeks, often 2 to 3 weeks",
+    "Severe muscle strains: Pain and dysfunction can last for several months and may require rehabilitation",
+    "General healing process: The healing time for muscle strains can vary based on the individual's overall health, the specific muscle involved, and adherence to recommended treatment protocols",
+    "Common treatment: Rest, ice, compression, and elevation (RICE) and over-the-counter pain medications are commonly used to manage muscle strain symptoms"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Muscle strain typically causes pain that can resolve within a few days to several weeks.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The resolution of pain from muscle strain depends on the severity of the strain.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Mild muscle strains typically improve within a few days to a week.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Moderate muscle strains typically last for several weeks, often 2 to 3 weeks.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Severe muscle strains can last for several months.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Severe muscle strains may require rehabilitation.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The healing time for muscle strains varies based on the individual's overall health.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The healing time for muscle strains varies based on the specific muscle involved.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The healing time for muscle strains varies based on adherence to recommended treatment protocols.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Rest, ice, compression, and elevation (RICE) are commonly used to manage muscle strain symptoms.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Over-the-counter pain medications are commonly used to manage muscle strain symptoms.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Muscle strain typically causes pain that can resolve within a few days to several weeks.",
+      "pattern": "D",
+      "notes": "General statement of recovery time."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "The resolution of pain from muscle strain depends on the severity of the strain, with mild strains improving within a few days to a week, moderate strains lasting 2 to 3 weeks, and severe strains potentially lasting several months.",
+      "pattern": "B",
+      "notes": "Causal chain explaining variability in recovery time based on strain severity."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Severe muscle strains may require rehabilitation.",
+      "pattern": "D",
+      "notes": "Standalone fact about severe strains."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "The healing time for muscle strains also varies based on the individual's overall health, the specific muscle involved, and adherence to recommended treatment protocols.",
+      "pattern": "A",
+      "notes": "Enumeration of factors influencing healing time."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Common management strategies for muscle strain symptoms include rest, ice, compression, and elevation (RICE), as well as over-the-counter pain medications.",
+      "pattern": "A",
+      "notes": "Enumeration of management strategies."
+    }
+  ]
+}

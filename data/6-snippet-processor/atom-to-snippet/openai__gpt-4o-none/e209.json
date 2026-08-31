@@ -1,0 +1,158 @@
+{
+  "entry_id": 209,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2660,
+    "output_tokens": 645,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1171,
+      "output_tokens": 357,
+      "cached_input_tokens": 0,
+      "cost": 0.0064975
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1489,
+      "output_tokens": 288,
+      "cached_input_tokens": 0,
+      "cost": 0.0066025
+    }
+  ],
+  "shared_context": {
+    "condition": "corneal abrasion",
+    "symptom": "discharge from the eye"
+  },
+  "sentences": [
+    "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, foreign body sensation, and a gritty feeling, but they do not usually result in discharge from the eye",
+    "The primary symptoms are related to the disruption of the corneal epithelium, leading to a reflex production of tears rather than discharge",
+    "Discharge could indicate a secondary infection or a different underlying condition and should be evaluated further"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Corneal abrasions typically cause symptoms such as pain.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Corneal abrasions typically cause tearing.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Corneal abrasions typically cause photophobia.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Corneal abrasions typically cause a foreign body sensation.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Corneal abrasions typically cause a gritty feeling.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Corneal abrasions do not usually result in discharge from the eye.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The primary symptoms of corneal abrasions are related to the disruption of the corneal epithelium.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The disruption of the corneal epithelium leads to a reflex production of tears rather than discharge.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Discharge could indicate a secondary infection or a different underlying condition.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Discharge from the eye should be evaluated further.",
+      "source_sentences": [
+        2
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, a foreign body sensation, and a gritty feeling.",
+      "pattern": "A",
+      "notes": "Enumeration of symptoms of corneal abrasions."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Corneal abrasions do not usually result in discharge from the eye.",
+      "pattern": "D",
+      "notes": "Standalone claim about discharge related to corneal abrasions."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "The primary symptoms of corneal abrasions are related to the disruption of the corneal epithelium, which leads to a reflex production of tears rather than discharge.",
+      "pattern": "B",
+      "notes": "Causal explanation connecting symptoms to corneal epithelium disruption."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Discharge could indicate a secondary infection or a different underlying condition, and should be evaluated further.",
+      "pattern": "B",
+      "notes": "Discharge implications and need for further evaluation are causally connected."
+    }
+  ]
+}

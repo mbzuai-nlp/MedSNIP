@@ -1,0 +1,195 @@
+{
+  "entry_id": 67,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 52-year-old man presents to the emergency department by ambulance for evaluation of hematemesis. His wife states that he began vomiting bright red blood this evening while eating dinner, and has produced about 5 cups total. He has a history of alcohol use disorder and has vomited small streaks of blood in the past, but has never undergone formal medical workup for it. On exam, he has bright red blood in his mouth and pharynx, and also displays a distended abdomen with a fluid wave, jaundice, scattered spider angiomas, and multiple ecchymoses. His temperature is 98.4°F (36.9°C), blood pressure is 98/68 mmHg, pulse is 125/min, and respirations are 22/min. A rapid point-of-care hemoglobin and platelet count is 8.8 g/dL and 80,000/mm^3, respectively. The patient is given 1L of normal saline. Which of the following is the most appropriate initial step in management? (A) Balloon tamponade (B) Ceftriaxone (C) Nadolol (D) Octreotide (E) Platelet transfusion",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2824,
+    "output_tokens": 1181,
+    "cached_input_tokens": 0,
+    "cost": 0.00010372
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2824,
+      "output_tokens": 1181,
+      "cached_input_tokens": 0,
+      "cost": 0.00010372
+    }
+  ],
+  "shared_context": {
+    "age": "52",
+    "sex": "male",
+    "chief_complaint": "hematemesis (vomiting bright red blood) over several hours",
+    "medical_history": "alcohol use disorder, previous episodes of vomiting with blood, jaundice, spider angiomas, ascites",
+    "vitals": "98.4°F (36.9°C), 98/68 mmHg, 125/min, 22/min",
+    "exam_findings": "bright red blood in mouth and pharynx, distended abdomen with fluid wave, jaundice, spider angiomas, ecchymoses, low hemoglobin, low platelet count",
+    "correct_answer": "Octreotide (D)"
+  },
+  "sentences": [
+    "To determine the most appropriate initial step in management for this patient presenting with hematemesis and a background of alcohol use disorder, we'll evaluate the clinical scenario step-by-step",
+    "Hematemsis: The patient is vomiting bright red blood, indicating an upper gastrointestinal bleed (UGIB)",
+    "History: He has a history of alcohol use disorder and previous episodes of vomiting with blood, suggesting potential esophageal varices due to underlying liver disease",
+    "Physical Exam: The patient exhibits signs consistent with chronic liver disease, such as jaundice, spider angiomas, and ascites (distended abdomen with fluid wave)",
+    "These findings suggest cirrhosis",
+    "Vital Signs: He is tachycardic (pulse 125/min) and hypotensive (BP 98/68 mmHg), indicating hemodynamic instability likely due to significant blood loss",
+    "Hemoglobin: 8.8 g/dL (low, indicating anemia due to blood loss)",
+    "Platelet Count: 80,000/mm^3 (thrombocytopenia, common in liver cirrhosis due to hypersplenism or bone marrow suppression)",
+    "Hemodynamic Stabilization: Given the patient’s hypotension and tachycardia, immediate efforts should focus on stabilizing the patient",
+    "Control of Bleeding: Considering the high likelihood of variceal bleeding, specific therapies to control and prevent further bleeding are essential",
+    "Infection Prophylaxis: Patients with cirrhosis and UGIB are at high risk of bacterial infections, notably spontaneous bacterial peritonitis (SBP)",
+    "(A) Balloon Tamponade: Effective for controlling variceal bleeding, but generally used as a temporizing measure when other therapies fail or are unavailable",
+    "(B) Ceftriaxone: Antibiotic prophylaxis is crucial in cirrhotic patients with UGIB to prevent SBP and other infections",
+    "(C) Nadolol: A non-selective beta-blocker used for long-term prevention of variceal bleeding, but not useful acutely",
+    "(D) Octreotide: A somatostatin analogue that reduces splanchnic blood flow and portal pressures, effective in acute variceal hemorrhage",
+    "(E) Platelet Transfusion: Typically indicated when platelet count is extremely low (<50,000/mm^3) or if there is active bleeding and platelet dysfunction",
+    "Given the acute nature of the bleeding and the need for rapid hemodynamic stabilization and control of bleeding, Octreotide is the most appropriate initial step",
+    "While ceftriaxone is also important, the immediate priority is to control the bleeding",
+    "(D) Octreotide"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate initial step in management for this patient presenting with hematemesis and a background of alcohol use disorder, we'll evaluate the clinical scenario step-by-step.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The patient is vomiting bright red blood, indicating an upper gastrointestinal bleed (UGIB).",
+      "pattern": "D",
+      "notes": "Standalone clinical finding."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "The patient exhibits signs consistent with chronic liver disease, such as jaundice, spider angiomas, and ascites, suggesting cirrhosis. These findings suggest cirrhosis.",
+      "pattern": "A",
+      "notes": "All properties of one subject (cirrhosis)."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "He is tachycardic (pulse 125/min) and hypotensive (BP 98/68 mmHg), indicating hemodynamic instability likely due to significant blood loss.",
+      "pattern": "A",
+      "notes": "All properties of one subject (hemodynamic instability)."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "He has a low hemoglobin (8.8 g/dL) and low platelet count (80,000/mm^3), indicating anemia and thrombocytopenia.",
+      "pattern": "A",
+      "notes": "All properties of one subject (anemia and thrombocytopenia)."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Given the patient’s hypotension and tachycardia, immediate efforts should focus on stabilizing the patient.",
+      "pattern": "D",
+      "notes": "Standalone clinical recommendation."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Considering the high likelihood of variceal bleeding, specific therapies to control and prevent further bleeding are essential.",
+      "pattern": "D",
+      "notes": "Standalone clinical consideration."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Patients with cirrhosis and UGIB are at high risk of bacterial infections, notably spontaneous bacterial peritonitis (SBP).",
+      "pattern": "D",
+      "notes": "Standalone clinical fact."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Effective for controlling variceal bleeding, but generally used as a temporizing measure when other therapies fail or are unavailable.",
+      "pattern": "D",
+      "notes": "Standalone description of treatment option."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Antibiotic prophylaxis is crucial in cirrhotic patients with UGIB to prevent SBP and other infections.",
+      "pattern": "D",
+      "notes": "Standalone clinical recommendation."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "A non-selective beta-blocker used for long-term prevention of variceal bleeding, but not useful acutely.",
+      "pattern": "D",
+      "notes": "Standalone description of treatment option."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "A somatostatin analogue that reduces splanchnic blood flow and portal pressures, effective in acute variceal hemorrhage.",
+      "pattern": "D",
+      "notes": "Standalone description of treatment option."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "Typically indicated when platelet count is extremely low (<50,000/mm^3) or if there is active bleeding and platelet dysfunction.",
+      "pattern": "D",
+      "notes": "Standalone description of treatment option."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "Given the acute nature of the bleeding and the need for rapid hemodynamic stabilization and control of bleeding, Octreotide is the most appropriate initial step.",
+      "pattern": "C",
+      "notes": "Conclusion with surrounding context."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "While ceftriaxone is also important, the immediate priority is to control the bleeding.",
+      "pattern": "D",
+      "notes": "Standalone clinical consideration."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Octreotide",
+      "pattern": "D",
+      "notes": "Standalone treatment option."
+    }
+  ]
+}

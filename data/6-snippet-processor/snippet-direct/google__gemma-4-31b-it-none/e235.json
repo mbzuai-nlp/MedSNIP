@@ -1,0 +1,218 @@
+{
+  "entry_id": 235,
+  "batch_id": 24,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 45-year-old African American woman presents to her primary care physician for not feeling well. She states she has had a cough for the past week. She also has abdominal pain and trouble focusing that has been worsening and has lost 5 pounds recently. Her gastroesophageal reflux disease (GERD) has been poorly controlled recently. The patient is a non-smoker and has a history of GERD for which she takes antacids. Her temperature is 98.6°F (37°C), blood pressure is 115/71 mmHg, pulse is 72/min, and respirations are 12/min. A physical exam is within normal limits. Laboratory studies are ordered and are below:\n\nSerum:\nNa+: 139 mEq/L\nK+: 4.1 mEq/L\nCl-: 101 mEq/L\nHCO3-: 24 mEq/L\nUrea nitrogen: 12 mg/dL\nGlucose: 70 mg/dL\nCreatinine: 0.9 mg/dL\nCa2+: 12.5 mg/dL\nAlkaline phosphatase: 150 U/L\nPhosphorus: 2.0 mg/dL\n\nUrine:\nColor: amber\nNitrites: negative\nSodium: 5 mmol/24 hours\nRed blood cells: 0/hpf\n\nWhich of the following is the most likely explanation of this patient's current presentation? (A) Antacid overuse (B) Increased 1,25-dihydroxyvitamin D (C) Increased parathyroid hormone (D) Malignancy (E) Viral illness",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3208,
+    "output_tokens": 1303,
+    "cached_input_tokens": 0,
+    "cost": 0.00091218
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 3208,
+      "output_tokens": 1303,
+      "cached_input_tokens": 0,
+      "cost": 0.00091218
+    }
+  ],
+  "shared_context": {
+    "age": "45",
+    "sex": "female",
+    "race": "African American",
+    "chief_complaint": "cough, abdominal pain, trouble focusing, weight loss",
+    "medical_history": "GERD",
+    "medications": "antacids",
+    "vitals": "T 98.6F, BP 115/71, P 72, RR 12",
+    "exam_findings": "physical exam within normal limits",
+    "laboratory_studies": {
+      "Na": "139 mEq/L",
+      "K": "4.1 mEq/L",
+      "Cl": "101 mEq/L",
+      "HCO3": "24 mEq/L",
+      "BUN": "12 mg/dL",
+      "Glucose": "70 mg/dL",
+      "Creatinine": "0.9 mg/dL",
+      "Ca2+": "12.5 mg/dL",
+      "Alkaline phosphatase": "150 U/L",
+      "Phosphorus": "2.0 mg/dL",
+      "Urine_Na": "5 mmol/24h",
+      "Urine_RBC": "0/hpf"
+    }
+  },
+  "sentences": [
+    "To determine the most likely explanation for this patient's presentation, we need to analyze the provided history, symptoms, and laboratory results step by step",
+    "Recent cough, abdominal pain, trouble focusing, and weight loss",
+    "Poorly controlled GERD",
+    "Uses antacids for GERD",
+    "Normal vital signs",
+    "Physical exam within normal limits",
+    "Na+: 139 mEq/L (normal)",
+    "K+: 4.1 mEq/L (normal)",
+    "Cl-: 101 mEq/L (normal)",
+    "HCO3-: 24 mEq/L (normal)",
+    "Urea nitrogen: 12 mg/dL (normal)",
+    "Glucose: 70 mg/dL (normal)",
+    "Creatinine: 0.9 mg/dL (normal)",
+    "Ca2+: 12.5 mg/dL (elevated, normal range is 8.5-10.2 mg/dL)",
+    "Alkaline phosphatase: 150 U/L (elevated, normal range is 44-147 U/L)",
+    "Phosphorus: 2.0 mg/dL (low, normal range is 2.5-4.5 mg/dL)",
+    "Color: amber",
+    "Nitrites: negative",
+    "Sodium: 5 mmol/24 hours (low, considering dietary and renal excretion)",
+    "Red blood cells: 0/hpf (normal)",
+    "Hypercalcemia (serum calcium 12.5 mg/dL)",
+    "Elevated alkaline phosphatase",
+    "Hypophosphatemia (serum phosphorus 2.0 mg/dL)",
+    "Antacid overuse: Can cause hypercalcemia if calcium-containing antacids are overused",
+    "Increased 1,25-dihydroxyvitamin D: Typically seen in granulomatous diseases like sarcoidosis or some lymphomas",
+    "Increased parathyroid hormone (PTH): Primary hyperparathyroidism is a common cause of hypercalcemia",
+    "Malignancy: Certain cancers can cause hypercalcemia through mechanisms like ectopic PTH-related protein (PTHrP) production or osteolytic metastases",
+    "Viral illness: Unlikely to cause isolated hypercalcemia",
+    "Antacid Overuse: Common with excessive use of calcium-containing antacids",
+    "However, without a history of such overuse, this is less likely",
+    "Increased 1,25-dihydroxyvitamin D: No evidence of granulomatous disease or lymphoma in the history",
+    "Increased Parathyroid Hormone: Primary hyperparathyroidism causes hypercalcemia, hypophosphatemia, and sometimes elevated alkaline phosphatase",
+    "Malignancy: Given the patient’s symptoms (weight loss, poorly controlled GERD, cough, and hypercalcemia), malignancy should be strongly considered, particularly if the malignancy is producing PTHrP",
+    "Viral Illness: Typically does not cause hypercalcemia",
+    "Given the patient's history, symptoms, and significant hypercalcemia, the most likely cause is malignancy",
+    "Malignancy can cause hypercalcemia through various mechanisms, including PTHrP production or direct bone invasion leading to increased calcium release",
+    "Final Answer: (D) Malignancy"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely explanation for the presentation of this 45-year-old African American woman, the provided history, symptoms, and laboratory results must be analyzed.",
+      "pattern": "D",
+      "notes": "Introductory sentence; patient demographics inlined."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "This 45-year-old African American woman presents with a cough for one week, abdominal pain, trouble focusing, weight loss of 5 pounds, and poorly controlled GERD for which she uses antacids; her vital signs and physical exam are within normal limits.",
+      "pattern": "A",
+      "notes": "Enumeration of patient history and physical findings."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "Laboratory studies for this 45-year-old woman show normal levels of sodium (139 mEq/L), potassium (4.1 mEq/L), chloride (101 mEq/L), bicarbonate (24 mEq/L), urea nitrogen (12 mg/dL), glucose (70 mg/dL), and creatinine (0.9 mg/dL).",
+      "pattern": "A",
+      "notes": "Enumeration of normal lab values."
+    },
+    {
+      "source_sentences": [
+        13,
+        14,
+        15
+      ],
+      "output": "Laboratory studies for this 45-year-old woman show elevated calcium (12.5 mg/dL), elevated alkaline phosphatase (150 U/L), and low phosphorus (2.0 mg/dL).",
+      "pattern": "A",
+      "notes": "Enumeration of abnormal lab values."
+    },
+    {
+      "source_sentences": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "output": "The urine analysis for this 45-year-old woman shows amber color, negative nitrites, low sodium (5 mmol/24 hours), and normal red blood cells (0/hpf).",
+      "pattern": "A",
+      "notes": "Enumeration of urinary findings."
+    },
+    {
+      "source_sentences": [
+        20,
+        21,
+        22
+      ],
+      "output": "The key laboratory abnormalities in this 45-year-old woman are hypercalcemia (serum calcium 12.5 mg/dL), elevated alkaline phosphatase, and hypophosphatemia (serum phosphorus 2.0 mg/dL).",
+      "pattern": "A",
+      "notes": "Summary of key biochemical findings."
+    },
+    {
+      "source_sentences": [
+        23,
+        28,
+        29
+      ],
+      "output": "Antacid overuse can cause hypercalcemia if calcium-containing antacids are used excessively, but without a history of such overuse in this 45-year-old woman, this is less likely.",
+      "pattern": "B",
+      "notes": "Causal link between overuse and calcium, followed by a conditional exclusion based on history."
+    },
+    {
+      "source_sentences": [
+        24,
+        30
+      ],
+      "output": "Increased 1,25-dihydroxyvitamin D is typically seen in granulomatous diseases like sarcoidosis or some lymphomas, but there is no evidence of granulomatous disease or lymphoma in the history of this 45-year-old woman.",
+      "pattern": "B",
+      "notes": "Causal link between vitamin D and disease, followed by exclusion based on history."
+    },
+    {
+      "source_sentences": [
+        25,
+        31
+      ],
+      "output": "Primary hyperparathyroidism, caused by increased parathyroid hormone (PTH), is a common cause of hypercalcemia and results in hypophosphatemia and sometimes elevated alkaline phosphatase.",
+      "pattern": "B",
+      "notes": "Causal chain linking PTH to biochemical findings."
+    },
+    {
+      "source_sentences": [
+        26,
+        32,
+        35
+      ],
+      "output": "Malignancy can cause hypercalcemia through mechanisms such as ectopic PTH-related protein (PTHrP) production or direct bone invasion leading to increased calcium release; given the 45-year-old woman's symptoms of weight loss, poorly controlled GERD, cough, and hypercalcemia, malignancy should be strongly considered.",
+      "pattern": "C",
+      "notes": "Combination of the mechanism of malignancy-induced hypercalcemia with the patient's specific clinical presentation."
+    },
+    {
+      "source_sentences": [
+        27,
+        33
+      ],
+      "output": "Viral illness is unlikely to cause isolated hypercalcemia.",
+      "pattern": "D",
+      "notes": "Standalone fact regarding differential diagnosis."
+    },
+    {
+      "source_sentences": [
+        34,
+        36
+      ],
+      "output": "Given the history, symptoms, and significant hypercalcemia of this 45-year-old woman, the most likely diagnosis is malignancy (Option D).",
+      "pattern": "C",
+      "notes": "Conclusion based on previous premises."
+    }
+  ]
+}

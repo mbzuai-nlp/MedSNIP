@@ -1,0 +1,153 @@
+{
+  "entry_id": 172,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Should I take a lower dose of my sertraline while taking the zofran?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2785,
+    "output_tokens": 651,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1213,
+      "output_tokens": 359,
+      "cached_input_tokens": 0,
+      "cost": 3.862e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1572,
+      "output_tokens": 292,
+      "cached_input_tokens": 0,
+      "cost": 4.312e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "sertraline dose adjustment while taking Zofran",
+    "drug_a": "sertraline",
+    "drug_b": "ondansetron (Zofran)",
+    "condition": "serotonin syndrome"
+  },
+  "sentences": [
+    "There is no direct interaction between sertraline and ondansetron (Zofran) that necessitates a dose adjustment of sertraline",
+    "However, both medications can increase the risk of a condition called serotonin syndrome, which is characterized by symptoms such as confusion, rapid heart rate, and high blood pressure",
+    "It is important to monitor for symptoms of serotonin syndrome when these medications are taken together",
+    "Consult your healthcare provider before making any changes to your medication regimen",
+    "They can provide personalized advice based on your medical history and current condition"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "There is no direct interaction between sertraline and ondansetron (Zofran) that necessitates a dose adjustment of sertraline.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Taking sertraline and ondansetron (Zofran) together can increase the risk of serotonin syndrome.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Symptoms of serotonin syndrome include confusion.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Symptoms of serotonin syndrome include a rapid heart rate.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Symptoms of serotonin syndrome include high blood pressure.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "It is essential to monitor for symptoms of serotonin syndrome when taking sertraline and ondansetron (Zofran) together.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Consult your healthcare provider before making any changes to your medication regimen.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Your healthcare provider can provide personalized advice based on your medical history and current condition.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "There is no direct interaction between sertraline and ondansetron (Zofran) that necessitates a dose adjustment of sertraline.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Taking sertraline and ondansetron (Zofran) together can increase the risk of serotonin syndrome.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "Symptoms of serotonin syndrome include confusion, a rapid heart rate, and high blood pressure.",
+      "pattern": "A",
+      "notes": "Enumeration of symptoms."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "It is essential to monitor for symptoms of serotonin syndrome when taking sertraline and ondansetron (Zofran) together.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Consult your healthcare provider before making any changes to your medication regimen, and they can provide personalized advice based on your medical history and current condition.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    }
+  ]
+}

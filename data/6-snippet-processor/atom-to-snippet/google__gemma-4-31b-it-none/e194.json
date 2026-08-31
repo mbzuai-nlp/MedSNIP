@@ -1,0 +1,172 @@
+{
+  "entry_id": 194,
+  "batch_id": 20,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 15-year-old boy presents to his pediatrician after an appendectomy 1 week ago. The patient denies any abdominal pain, fevers, chills, nausea, vomiting, diarrhea, or constipation. He eats solids and drinks liquids without difficulty. He is back to playing basketball for his school team without any difficulty. His urine appears more amber than usual but he suspects dehydration. His temperature is 98.6°F (37°C), blood pressure is 110/70 mmHg, pulse is 76/min, and respirations are 15/min. His physical exam is unremarkable. The laparoscopic incision sites are all clean without erythema. The pediatrician orders a urinalysis, which is notable for the following. Urine: Epithelial cells: Scant Glucose: Negative Protein: 3+ WBC: 3/hpf Bacteria: None Leukocyte esterase: Negative Nitrites: Negative The patient is told to return in 3 days for a follow-up appointment; however, his urinalysis at that time is similar. Which of the following is the most appropriate next step in management? (A) CT scan abdomen and pelvis with contrast (B) Renal biopsy (C) Repeat urinalysis (D) Urine dipstick in the morning and in the afternoon (E) Urine electrolytes and creatinine",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4699,
+    "output_tokens": 1018,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1913,
+      "output_tokens": 557,
+      "cached_input_tokens": 0,
+      "cost": 0.00046035
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2786,
+      "output_tokens": 461,
+      "cached_input_tokens": 0,
+      "cost": 0.00053736
+    }
+  ],
+  "shared_context": {
+    "age": 15,
+    "sex": "male",
+    "chief_complaint": "follow-up after appendectomy",
+    "medical_history": "appendectomy 1 week ago",
+    "vitals": {
+      "temperature": "98.6°F (37°C)",
+      "blood_pressure": "110/70 mmHg",
+      "pulse": "76/min",
+      "respirations": "15/min"
+    },
+    "exam_findings": "unremarkable; laparoscopic incision sites clean without erythema",
+    "treatment_history": "appendectomy 1 week ago",
+    "correct_answer": "Repeat urinalysis"
+  },
+  "sentences": [
+    "Given the patient's presentation, laboratory results, and clinical course, the most appropriate next step in management is to repeat the urinalysis, as the current results are notable for the presence of 3+ proteinuria, which warrants further evaluation",
+    "Proteinuria can be a significant indicator of renal disease, and the pediatrician should consider further evaluation to determine the cause of the proteinuria",
+    "The presence of 3+ proteinuria on urinalysis, with otherwise unremarkable physical examination and no signs or symptoms of renal disease, suggests the need for further investigation to rule out renal disease",
+    "Repeat urinalysis will help to confirm the presence of proteinuria and assess whether the proteinuria is persistent or transient",
+    "A) CT scan abdomen and pelvis with contrast: This test is not indicated in this case, as there is no indication of acute abdominal pathology or suspected obstruction",
+    "B) Renal biopsy: This test is not indicated in this case, as the proteinuria is not severe and there is no indication of renal failure or chronic kidney disease",
+    "D) Urine dipstick in the morning and in the afternoon: While this can be a useful test to assess for proteinuria, it is not the most appropriate next step in management, as the patient has already had a urinalysis and the results are noted for proteinuria",
+    "E) Urine electrolytes and creatinine: While this test may be useful in certain cases of renal disease, it is not the most appropriate next step in management in this case, as the patient's urinalysis results suggest proteinuria, but there is no indication of electrolyte imbalances or renal failure"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Given the patient's presentation, laboratory results, and clinical course, the most appropriate next step in management is to repeat the urinalysis, as the current results are notable for the presence of 3+ proteinuria, which warrants further evaluation.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Proteinuria can be a significant indicator of renal disease, and the pediatrician should consider further evaluation to determine the cause of the proteinuria.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The presence of 3+ proteinuria on urinalysis, with otherwise unremarkable physical examination and no signs or symptoms of renal disease, suggests the need for further investigation to rule out renal disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Repeat urinalysis will help to confirm the presence of proteinuria and assess whether the proteinuria is persistent or transient.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "CT scan abdomen and pelvis with contrast is not indicated in this case, as there is no indication of acute abdominal pathology or suspected obstruction.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Renal biopsy is not indicated in this case, as the proteinuria is not severe and there is no indication of renal failure or chronic kidney disease.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Urine dipstick in the morning and in the afternoon is not the most appropriate next step in management, as the patient has already had a urinalysis and the results are noted for proteinuria.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Urine electrolytes and creatinine is not the most appropriate next step in management in this case, as the patient's urinalysis results suggest proteinuria, but there is no indication of electrolyte imbalances or renal failure.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        3,
+        4
+      ],
+      "output": "Given the clinical course of this 15-year-old male after an appendectomy, the most appropriate next step in management is to repeat the urinalysis; the presence of 3+ proteinuria with an otherwise unremarkable physical examination suggests the need for further investigation, and a repeat urinalysis will confirm whether the proteinuria is persistent or transient.",
+      "pattern": "C",
+      "notes": "Recommendation merged with supporting premises regarding the need for confirmation and the specific finding of proteinuria."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Proteinuria can be a significant indicator of renal disease, and the pediatrician should consider further evaluation to determine the cause.",
+      "pattern": "D",
+      "notes": "Standalone medical fact/principle."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "CT scan of the abdomen and pelvis with contrast is not indicated for this 15-year-old male, as there is no indication of acute abdominal pathology or suspected obstruction.",
+      "pattern": "B",
+      "notes": "Conclusion merged with causal reasoning (Pattern B)."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Renal biopsy is not indicated in this case, as the proteinuria is not severe and there is no indication of renal failure or chronic kidney disease in this 15-year-old male.",
+      "pattern": "B",
+      "notes": "Conclusion merged with causal reasoning (Pattern B)."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Urine dipstick in the morning and in the afternoon is not the most appropriate next step in management, as this 15-year-old male has already had a urinalysis that noted proteinuria.",
+      "pattern": "B",
+      "notes": "Conclusion merged with causal reasoning (Pattern B)."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Urine electrolytes and creatinine is not the most appropriate next step in management in this case, as while the 15-year-old male's results suggest proteinuria, there is no indication of electrolyte imbalances or renal failure.",
+      "pattern": "B",
+      "notes": "Conclusion merged with causal reasoning (Pattern B)."
+    }
+  ]
+}

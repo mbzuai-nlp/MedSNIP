@@ -1,0 +1,101 @@
+{
+  "entry_id": 122,
+  "batch_id": 13,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "How is PID treated?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1879,
+    "output_tokens": 517,
+    "cached_input_tokens": 0,
+    "cost": 0.00035334
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1879,
+      "output_tokens": 517,
+      "cached_input_tokens": 0,
+      "cost": 0.00035334
+    }
+  ],
+  "shared_context": {
+    "topic": "PID treatment",
+    "condition": "Pelvic inflammatory disease (PID)"
+  },
+  "sentences": [
+    "Pelvic inflammatory disease (PID) is typically treated with a combination of antibiotics and supportive care",
+    "The primary goal of treatment is to eliminate the infection, alleviate symptoms, and prevent long-term complications",
+    "The choice of antibiotics depends on the severity of the infection, the patient's medical history, and any allergies or sensitivities",
+    "For mild to moderate PID, a combination of oral antibiotics such as ceftriaxone and doxycycline is often prescribed",
+    "For more severe cases, hospitalization may be necessary, and intravenous antibiotics such as cefotetan and clindamycin may be administered",
+    "In addition to antibiotics, supportive care is essential in managing PID symptoms",
+    "This may include",
+    "Pain management with over-the-counter pain relievers such as ibuprofen or acetaminophen",
+    "Rest and hydration to help the body recover from the infection",
+    "Avoiding sexual activity until symptoms resolve and the patient is no longer contagious",
+    "Follow-up appointments with a healthcare provider to monitor progress and adjust treatment as needed",
+    "In some cases, surgical intervention may be necessary to treat complications of PID, such as tubo-ovarian abscesses or infertility",
+    "A healthcare provider will determine the need for surgery on a case-by-case basis"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "Pelvic inflammatory disease (PID) is typically treated with a combination of antibiotics and supportive care, with the primary goal of eliminating the infection, alleviating symptoms, and preventing long-term complications.",
+      "pattern": "C",
+      "notes": "Introduction to PID treatment + its primary goal; conclusion and premise."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4
+      ],
+      "output": "The choice of antibiotics for PID depends on the severity of the infection, the patient's medical history, and any allergies or sensitivities, with a combination of oral antibiotics such as ceftriaxone and doxycycline often prescribed for mild to moderate cases, and intravenous antibiotics such as cefotetan and clindamycin administered for more severe cases.",
+      "pattern": "A",
+      "notes": "Enumeration of factors determining antibiotic choice + examples of antibiotics used; same subject (antibiotic choice)."
+    },
+    {
+      "source_sentences": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "In addition to antibiotics, supportive care for PID includes pain management with over-the-counter pain relievers such as ibuprofen or acetaminophen, rest and hydration to help the body recover, and avoiding sexual activity until symptoms resolve and the patient is no longer contagious.",
+      "pattern": "A",
+      "notes": "Enumeration of supportive care components; same subject (supportive care)."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Follow-up appointments with a healthcare provider are necessary to monitor progress and adjust PID treatment as needed.",
+      "pattern": "D",
+      "notes": "Standalone fact about follow-up appointments."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "In some cases, surgical intervention may be necessary to treat complications of PID, such as tubo-ovarian abscesses or infertility, with the need for surgery determined by a healthcare provider on a case-by-case basis.",
+      "pattern": "C",
+      "notes": "Conditional rule + instruction; conclusion (surgical intervention) and premise (healthcare provider determination)."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "entry_id": 159,
+  "batch_id": 16,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can you provide a short term solution that is designed for insomnia?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2968,
+    "output_tokens": 792,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1382,
+      "output_tokens": 396,
+      "cached_input_tokens": 0,
+      "cost": 4.348e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1586,
+      "output_tokens": 396,
+      "cached_input_tokens": 0,
+      "cost": 4.756e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "short-term solution for insomnia",
+    "condition": "insomnia"
+  },
+  "sentences": [
+    "A short-term solution for insomnia can be achieved through the use of pharmacologic treatments, particularly hypnotic medications such as non-benzodiazepine hypnotics (e.g., zolpidem)",
+    "These medications are effective for short-term relief and can help reduce sleep onset latency and improve sleep duration",
+    "However, their use should be limited to avoid tolerance and dependence",
+    "Non-benzodiazepine hypnotics are preferred over classic benzodiazepines due to their higher selectivity and lower risk of undesirable effects, such as residual sedation and cognitive impairment",
+    "An \"as-needed\" approach to zolpidem administration, where patients take the medication only on certain nights rather than nightly, has been shown to be effective and reduces the risk of tolerance and dependence",
+    "For example, in studies involving patients with chronic insomnia, an \"as-needed\" zolpidem treatment schedule resulted in reduced hypnotic intake over time without compromising treatment efficacy",
+    "Additionally, this approach was well tolerated by patients and associated with a low incidence of adverse events",
+    "It is important to note that while pharmacologic treatments can provide rapid relief, the first-line treatment for chronic insomnia should be cognitive-behavioral therapy for insomnia (CBT-I), which is effective for long-term management",
+    "Pharmacologic treatments should be used as adjuncts to CBT-I or when CBT-I is not immediately accessible"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Hypnotic medications, such as non-benzodiazepine hypnotics (e.g., zolpidem), can be effective for short-term relief of insomnia.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "These medications can help reduce sleep onset latency and improve sleep duration.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The use of hypnotic medications should be limited to avoid tolerance and dependence.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Non-benzodiazepine hypnotics are preferred over classic benzodiazepines due to their higher selectivity and lower risk of undesirable effects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "An 'as-needed' approach to zolpidem administration has been shown to be effective and reduces the risk of tolerance and dependence.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "This approach is well tolerated by patients and associated with a low incidence of adverse events.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Pharmacologic treatments can provide rapid relief of insomnia.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Cognitive-behavioral therapy for insomnia (CBT-I) is the first-line treatment for chronic insomnia.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Pharmacologic treatments should be used as adjuncts to CBT-I or when CBT-I is not immediately accessible.",
+      "source_sentences": [
+        8
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Hypnotic medications, such as non-benzodiazepine hypnotics (e.g., zolpidem), can be effective for short-term relief of insomnia by reducing sleep onset latency and improving sleep duration.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The use of hypnotic medications should be limited to avoid tolerance and dependence.",
+      "pattern": "D",
+      "notes": "Standalone warning."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Non-benzodiazepine hypnotics are preferred over classic benzodiazepines due to their higher selectivity and lower risk of undesirable effects.",
+      "pattern": "D",
+      "notes": "Different medication characteristic; kept atomic."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "An 'as-needed' approach to zolpidem administration has been shown to be effective, well-tolerated, and associated with a low incidence of adverse events.",
+      "pattern": "A",
+      "notes": "Enumeration of benefits."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Pharmacologic treatments can provide rapid relief of insomnia.",
+      "pattern": "D",
+      "notes": "Standalone benefit."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Cognitive-behavioral therapy for insomnia (CBT-I) is the first-line treatment for chronic insomnia.",
+      "pattern": "D",
+      "notes": "Standalone treatment recommendation."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Pharmacologic treatments should be used as adjuncts to CBT-I or when CBT-I is not immediately accessible.",
+      "pattern": "D",
+      "notes": "Standalone treatment guideline."
+    }
+  ]
+}

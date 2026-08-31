@@ -1,0 +1,170 @@
+{
+  "entry_id": 255,
+  "batch_id": 26,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "do chlamdia often cure itself or does it cause permanent damage",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2891,
+    "output_tokens": 733,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1282,
+      "output_tokens": 462,
+      "cached_input_tokens": 0,
+      "cost": 0.00027604
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1609,
+      "output_tokens": 271,
+      "cached_input_tokens": 0,
+      "cost": 0.00024762
+    }
+  ],
+  "shared_context": {
+    "topic": "Chlamydia",
+    "condition": "Chlamydia trachomatis infection"
+  },
+  "sentences": [
+    "Chlamydia trachomatis infections may not always cure themselves, and if left untreated, they can cause permanent damage",
+    "The bacteria can persist in the host epithelial cells, leading to chronic infection, and the host's immune response may not be able to eliminate the infection",
+    "In some cases, the infection can lead to serious complications, such as pelvic inflammatory disease, tubal factor infertility, and ectopic pregnancy",
+    "The bacteria's ability to evade the host's immune system and survive in a persistent, non-replicative state contributes to its ability to cause long-term damage",
+    "However, studies have shown that Chlamydia trachomatis can be treated with antibiotics, and prompt treatment can help prevent long-term damage and complications",
+    "A study published in the journal Clinical and Vaccine Immunology found that early treatment with antibiotics can help restore fertility in women with Chlamydia-induced pelvic inflammatory disease"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlamydia trachomatis infections may not always cure themselves.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Untreated Chlamydia trachomatis infections can cause permanent damage.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The bacteria can persist in the host epithelial cells.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The host's immune response may not be able to eliminate Chlamydia trachomatis infection.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Chlamydia trachomatis infection can lead to pelvic inflammatory disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Chlamydia trachomatis infection can lead to tubal factor infertility.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Chlamydia trachomatis infection can lead to ectopic pregnancy.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Chlamydia trachomatis can evade the host's immune system.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Chlamydia trachomatis can survive in a persistent, non-replicative state.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Chlamydia trachomatis can be treated with antibiotics.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Prompt antibiotic treatment can help prevent long-term damage and complications from Chlamydia trachomatis infection.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Early antibiotic treatment can help restore fertility in women with Chlamydia-induced pelvic inflammatory disease.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        3,
+        4,
+        8,
+        9
+      ],
+      "output": "Chlamydia trachomatis infections may not always cure themselves because the bacteria can persist in the host epithelial cells, evade the host's immune system, and survive in a persistent, non-replicative state, making it difficult for the host's immune response to eliminate the infection.",
+      "pattern": "B",
+      "notes": "Causal chain explaining why Chlamydia may not cure itself."
+    },
+    {
+      "source_claims": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "output": "Untreated Chlamydia trachomatis infections can cause permanent damage, including pelvic inflammatory disease, tubal factor infertility, and ectopic pregnancy.",
+      "pattern": "A",
+      "notes": "Enumeration of potential permanent damages."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "Chlamydia trachomatis can be treated with antibiotics, and prompt antibiotic treatment can help prevent long-term damage and complications, including restoring fertility in women with Chlamydia-induced pelvic inflammatory disease.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises about treatment and prevention of damage."
+    }
+  ]
+}

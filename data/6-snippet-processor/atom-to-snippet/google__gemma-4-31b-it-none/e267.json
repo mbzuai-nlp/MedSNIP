@@ -1,0 +1,329 @@
+{
+  "entry_id": 267,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 36-year-old man presents to the office for follow up after initiating antidepressant therapy. Two months ago, he was started on citalopram after several weeks of depressed mood, loss of interest in activities, depressed appetite, and inability to sleep. Today, he reports minimal improvement in his symptoms. He had some nausea after starting the medication, but this has resolved. He denies thoughts of suicide or self-harm. His temperature is 98.6°F (37.0°C), pulse is 80/min, blood pressure is 120/80 mmHg, respirations are 22/min, and oxygen saturation is 97% on room air. Exam reveals a depressed, tired appearing man. Which of the following is the most appropriate next step in management? (A) Add mirtazapine (B) Electroconvulsive therapy (C) Switch to amitriptyline (D) Switch to paroxetine (E) Switch to phenelzine",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5130,
+    "output_tokens": 1933,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2106,
+      "output_tokens": 1110,
+      "cached_input_tokens": 0,
+      "cost": 0.00069558
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 3024,
+      "output_tokens": 823,
+      "cached_input_tokens": 0,
+      "cost": 0.00070586
+    }
+  ],
+  "shared_context": {
+    "age": 36,
+    "sex": "male",
+    "chief_complaint": "minimal improvement after antidepressant therapy",
+    "medical_history": "depressed mood, loss of interest, depressed appetite, insomnia",
+    "medications": "citalopram",
+    "vitals": "T 98.6F, P 80, BP 120/80, RR 22, SpO2 97%",
+    "exam_findings": "depressed, tired appearing",
+    "treatment_history": "citalopram for two months",
+    "correct_answer": "Switch to paroxetine"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in managing this patient, we should consider the efficacy of switching antidepressants after an initial trial has not been effective",
+    "The patient has been on citalopram, a selective serotonin reuptake inhibitor (SSRI), for two months with minimal improvement in depressive symptoms",
+    "Initial side effects (nausea) have resolved, and the patient denies suicidal thoughts or self-harm",
+    "His vital signs are stable, and there are no acute medical concerns",
+    "The exam is consistent with ongoing depression",
+    "According to treatment guidelines for major depressive disorder, if there is minimal improvement after an adequate trial period (usually 6-8 weeks), it is reasonable to consider switching antidepressants",
+    "Switching to another antidepressant in the same class or a different class can be beneficial",
+    "Add mirtazapine (Option A): Adding another antidepressant can be considered, but typically if there is partial response rather than minimal improvement",
+    "It might be more appropriate after trying a different monotherapy first",
+    "Electroconvulsive therapy (Option B): Reserved for severe depression or when rapid response is needed, such as cases involving suicidality or significant functional impairment, which is not the case here",
+    "Switch to amitriptyline (Option C): A tricyclic antidepressant (TCA), effective but with a higher side effect profile and potential for toxicity, generally not first-line for younger patients without severe depression",
+    "Switch to paroxetine (Option D): Another SSRI, similar in action to citalopram",
+    "It might not offer significant benefit over the first SSRI",
+    "Switch to phenelzine (Option E): A monoamine oxidase inhibitor (MAOI), effective but with a significant dietary restriction and side effect burden, typically reserved for treatment-resistant cases after several failed trials",
+    "Studies indicate that switching to another SSRI or to a different class can be effective in cases of initial SSRI nonresponse",
+    "Specifically, a trial comparing early switching strategies found benefits in switching antidepressants after early nonresponse",
+    "Given the patient's minimal improvement after an adequate trial of citalopram and the side effect profile of the alternatives, switching to another SSRI or a different class is reasonable",
+    "Switching to paroxetine, while an SSRI like citalopram, might not offer significant new benefits",
+    "Switching to a different class, such as an SNRI (e.g., paroxetine or another), provides a new mechanism of action that could be beneficial",
+    "Among the options provided, switching to paroxetine (another SSRI) is a reasonable next step given the patient's stable presentation and lack of severe symptoms",
+    "(D) Switch to paroxetine"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The most appropriate next step in managing this patient involves considering the efficacy of switching antidepressants after an initial trial has not been effective.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient has been on citalopram, a selective serotonin reuptake inhibitor (SSRI), for two months with minimal improvement in depressive symptoms.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Initial side effects (nausea) have resolved, and the patient denies suicidal thoughts or self-harm.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's vital signs are stable, and there are no acute medical concerns.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The exam is consistent with ongoing depression.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "According to treatment guidelines for major depressive disorder, if there is minimal improvement after an adequate trial period (usually 6-8 weeks), it is reasonable to consider switching antidepressants.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Switching to another antidepressant in the same class or a different class can be beneficial.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Adding mirtazapine can be considered typically if there is partial response rather than minimal improvement.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Adding mirtazapine might be more appropriate after trying a different monotherapy first.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Electroconvulsive therapy is reserved for severe depression or when rapid response is needed, such as cases involving suicidality or significant functional impairment, which is not present in this patient.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Amitriptyline is a tricyclic antidepressant (TCA) that is effective but has a higher side effect profile and potential for toxicity.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Amitriptyline is generally not first-line for younger patients without severe depression.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Paroxetine is another SSRI and is similar in action to citalopram.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Switching to paroxetine might not offer significant benefit over the first SSRI.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Phenelzine is a monoamine oxidase inhibitor (MAOI) that is effective but has a significant dietary restriction and side effect burden.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Phenelzine is typically reserved for treatment-resistant cases after several failed trials.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Studies indicate that switching to another SSRI or to a different class can be effective in cases of initial SSRI nonresponse.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 18,
+      "text": "A trial comparing early switching strategies found benefits in switching antidepressants after early nonresponse.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Given the patient's minimal improvement after an adequate trial of citalopram and the side effect profile of the alternatives, switching to another SSRI or a different class is reasonable.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Switching to paroxetine, while an SSRI like citalopram, might not offer significant new benefits.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 21,
+      "text": "Switching to a different class, such as an SNRI (e.g., paroxetine or another), provides a new mechanism of action that could be beneficial.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 22,
+      "text": "Switching to paroxetine (another SSRI) is a reasonable next step given the patient's stable presentation and lack of severe symptoms.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 23,
+      "text": "The most appropriate next step is (D) Switch to paroxetine.",
+      "source_sentences": [
+        20
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "This 36-year-old male has been on citalopram (an SSRI) for two months with minimal improvement in his depressive symptoms; while initial nausea has resolved, he denies suicidal thoughts, has stable vital signs, and an exam consistent with ongoing depression. The next step in management involves considering the efficacy of switching antidepressants after this initial trial has not been effective.",
+      "pattern": "C",
+      "notes": "Patient status and the resulting clinical conclusion on management."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "According to treatment guidelines for major depressive disorder, if there is minimal improvement after an adequate trial period (usually 6-8 weeks), it is reasonable to consider switching to another antidepressant in the same class or a different class.",
+      "pattern": "B",
+      "notes": "Causal chain linking guidelines to the action of switching."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Adding mirtazapine is typically considered if there is a partial response rather than minimal improvement, and might be more appropriate after trying a different monotherapy first.",
+      "pattern": "A",
+      "notes": "Enumeration of properties/usage of mirtazapine."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Electroconvulsive therapy is reserved for severe depression or cases involving suicidality or significant functional impairment, which is not present in this 36-year-old male.",
+      "pattern": "D",
+      "notes": "Standalone fact applied to patient."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Amitriptyline is a tricyclic antidepressant (TCA) that is effective but has a higher side effect profile and potential for toxicity, and is generally not first-line for younger patients without severe depression.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of amitriptyline."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "Paroxetine is another SSRI similar in action to citalopram, and switching to it might not offer significant benefit over the first SSRI.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of paroxetine."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "Phenelzine is a monoamine oxidase inhibitor (MAOI) that is effective but has significant dietary restrictions and side effect burdens, and is typically reserved for treatment-resistant cases after several failed trials.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of phenelzine."
+    },
+    {
+      "source_claims": [
+        17,
+        18
+      ],
+      "output": "Studies indicate that switching to another SSRI or a different class can be effective in cases of initial SSRI nonresponse, and trials have found benefits in switching antidepressants after early nonresponse.",
+      "pattern": "A",
+      "notes": "Similar facts about switching efficacy."
+    },
+    {
+      "source_claims": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "output": "Given this 36-year-old male's minimal improvement after an adequate trial of citalopram, switching to another SSRI or a different class is reasonable. While switching to paroxetine (another SSRI) might not offer significant new benefits, it is a reasonable next step given the patient's stable presentation and lack of severe symptoms, and switching to a different class or another SSRI like paroxetine provides a mechanism that could be beneficial.",
+      "pattern": "C",
+      "notes": "Supporting premises for the chosen management step."
+    },
+    {
+      "source_claims": [
+        23
+      ],
+      "output": "The most appropriate next step in management for this 36-year-old male is (D) Switch to paroxetine.",
+      "pattern": "D",
+      "notes": "Final diagnosis/answer."
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "entry_id": 3,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can I take nyquil and benedryl at the same time?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3032,
+    "output_tokens": 3568,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1343,
+      "output_tokens": 1584,
+      "cached_input_tokens": 0,
+      "cost": 0.00026205
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1689,
+      "output_tokens": 1984,
+      "cached_input_tokens": 0,
+      "cost": 0.00032843
+    }
+  ],
+  "shared_context": {
+    "topic": "interaction between Nyquil and Benadryl",
+    "drug_a": "Nyquil",
+    "drug_b": "Benadryl"
+  },
+  "sentences": [
+    "No, it is not recommended to take Nyquil and Benadryl at the same time",
+    "Nyquil is an over-the-counter (OTC) medication that contains a combination of dextromethorphan, doxylamine, and acetaminophen, while Benadryl is an antihistamine that contains diphenhydramine",
+    "Taking these medications together may increase the risk of drowsiness, dizziness, and other side effects",
+    "Doxylamine, an active ingredient in Nyquil, can also interact with diphenhydramine, leading to an increased risk of anticholinergic side effects, such as dry mouth, blurred vision, and constipation",
+    "Additionally, combining these medications may also increase the risk of sedation and impaired cognitive function",
+    "It is essential to follow the recommended dosage instructions for both medications and consult with a healthcare professional or pharmacist before taking them together",
+    "If you experience any adverse effects or have concerns, seek medical attention immediately"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "It is not recommended to take Nyquil and Benadryl at the same time.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Nyquil is an over-the-counter medication that contains dextromethorphan, doxylamine, and acetaminophen.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Benadryl is an antihistamine that contains diphenhydramine.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Taking Nyquil and Benadryl together may increase the risk of drowsiness.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Taking Nyquil and Benadryl together may increase the risk of dizziness.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Taking Nyquil and Benadryl together may increase the risk of other side effects.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Doxylamine can interact with diphenhydramine.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The interaction between doxylamine and diphenhydramine leads to an increased risk of anticholinergic side effects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Anticholinergic side effects include dry mouth.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Anticholinergic side effects include blurred vision.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Anticholinergic side effects include constipation.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Combining Nyquil and Benadryl may increase the risk of sedation.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Combining Nyquil and Benadryl may increase the risk of impaired cognitive function.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 14,
+      "text": "You should follow the recommended dosage instructions for both medications.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 15,
+      "text": "You should consult with a healthcare professional or pharmacist before taking Nyquil and Benadryl together.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 16,
+      "text": "If you experience adverse effects or have concerns, seek medical attention immediately.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        4,
+        5,
+        6,
+        12,
+        13
+      ],
+      "output": "It is not recommended to take Nyquil and Benadryl together because doing so may increase the risk of drowsiness, dizziness, other side effects, sedation, and impaired cognitive function.",
+      "pattern": "C",
+      "notes": "Recommendation supported by a list of side‑effect risks."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Nyquil is an over‑the‑counter medication that contains dextromethorphan, doxylamine, and acetaminophen.",
+      "pattern": "D",
+      "notes": "Standalone definition of Nyquil."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Benadryl is an antihistamine that contains diphenhydramine.",
+      "pattern": "D",
+      "notes": "Standalone definition of Benadryl."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "Doxylamine from Nyquil can interact with diphenhydramine in Benadryl, leading to anticholinergic side effects such as dry mouth, blurred vision, and constipation.",
+      "pattern": "B",
+      "notes": "Causal chain linking interaction to specific side‑effects."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Follow the recommended dosage instructions for both medications.",
+      "pattern": "D",
+      "notes": "Standalone dosage advice."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Consult with a healthcare professional or pharmacist before taking Nyquil and Benadryl together.",
+      "pattern": "D",
+      "notes": "Standalone professional‑consultation advice."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "If you experience adverse effects or have concerns, seek medical attention immediately.",
+      "pattern": "D",
+      "notes": "Standalone emergency‑care guidance."
+    }
+  ]
+}

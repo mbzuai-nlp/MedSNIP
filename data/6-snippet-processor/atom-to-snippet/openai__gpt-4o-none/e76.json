@@ -1,0 +1,233 @@
+{
+  "entry_id": 76,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 72-year-old man presents to his primary care physician for a general checkup. He states that he has been a bit more fatigued lately but believes it is secondary to poor sleep at his new house. The patient is otherwise healthy and takes no medications. His temperature is 98.0°F (36.7°C), blood pressure is 141/90 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 98% on room air. Physical exam is notable only for minor pallor but is otherwise unremarkable. Basic laboratory studies are ordered as seen below.\n\nHemoglobin: 10 g/dL\nHematocrit: 30%\nLeukocyte count: 67,500/mm^3\nPlatelet count: 119,000/mm^3\n\nSerum:\nNa: 141 mEq/L\nCl: 103 mEq/L\nK: 4.0 Eq/L\nHCO3-: 24 mEq/L\nBUN: 22 mg/dL\nGlucose: 109 mg/dL\nCreatinine: 1.2 mg/dL\nCa: 10.0 mg/dL\n\nWhich of the following is the most likely diagnosis? (A) Acute lymphoblastic leukemia (B) Acute myelogenous leukemia (C) Chronic lymphocytic leukemia (D) Chronic myelogenous leukemia (E) Hairy cell leukemia",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 4686,
+    "output_tokens": 1434,
+    "cached_input_tokens": 1920
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1989,
+      "output_tokens": 723,
+      "cached_input_tokens": 0,
+      "cost": 0.0122025
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2697,
+      "output_tokens": 711,
+      "cached_input_tokens": 1920,
+      "cost": 0.0114525
+    }
+  ],
+  "shared_context": {
+    "age": 72,
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "vitals": "BP 141/90 mmHg, pulse 82/min, respirations 16/min, oxygen saturation 98%",
+    "exam_findings": "minor pallor, otherwise unremarkable",
+    "correct_answer": "Chronic myelogenous leukemia (CML)"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for the patient, we will analyze the laboratory results and physical exam findings",
+    "The patient's hemoglobin and hematocrit levels are low, which indicates anemia",
+    "The leukocyte count is elevated at 67,500/mm^3, which is a sign of leukocytosis",
+    "The differential diagnosis for anemia, leukocytosis, and thrombocytosis (elevated platelet count) includes various types of leukemia",
+    "Acute lymphoblastic leukemia (ALL) often presents with a high leukocyte count and anemia, but it is typically associated with a left shift in the differential count, indicating a predominance of immature cells",
+    "Acute myelogenous leukemia (AML) also presents with a high leukocyte count, but it often has a higher proportion of immature cells in the differential count compared to ALL",
+    "Chronic lymphocytic leukemia (CLI is not the correct spelling; the correct term is CLL) is associated with a high leukocyte count, but typically, the lymphocyte count is predominantly mature, and other cell types are usually present in smaller amounts",
+    "Chronic myelogenous leukemia (CML) often presents with a high leukocyte count and a left shift, similar to ALL, but it is typically associated with the Philadelphia chromosome (t(9;22) translocation)",
+    "However, the patient's age and laboratory findings do not support CML, which more commonly affects younger patients",
+    "Hairy cell leukemia presents with pancytopenia (low counts of all blood cell types), splenomegaly, and often, a high leukocyte count with a predominance of hairy cells",
+    "Considering these points, the most likely diagnosis for the patient is CML due to his age, laboratory results, and the presence of a left shift in the differential count",
+    "However, it is worth noting that further diagnostic studies such as bone marrow biopsy and cytogenetic analysis would be necessary to confirm the diagnosis",
+    "The Philadelphia chromosome (t(9;22) translocation) is often seen in CML, which can be detected by cytogenetic analysis",
+    "(B) Acute myelogenous leukemia"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "To determine the most likely diagnosis for the patient, we will analyze the laboratory results and physical exam findings.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's hemoglobin and hematocrit levels are low, which indicates anemia.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The leukocyte count is elevated to 67,500/mm^3, which is a sign of leukocytosis.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The differential diagnosis for anemia, leukocytosis, and thrombocytosis includes various types of leukemia.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Acute lymphoblastic leukemia (ALL) often presents with a high leukocyte count and anemia, but it is typically associated with a left shift in the differential count.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Acute myelogenous leukemia (AML) presents with a high leukocyte count and often has a higher proportion of immature cells in the differential count compared to ALL.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Chronic lymphocytic leukemia (CLL) is associated with a high leukocyte count, but typically, the lymphocyte count is predominantly mature.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Chronic myelogenous leukemia (CML) often presents with a high leukocyte count and a left shift, similar to ALL, and is typically associated with the Philadelphia chromosome.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient's age and laboratory findings do not support CML, which more commonly affects younger patients.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Hairy cell leukemia presents with pancytopenia, splenomegaly, and often a high leukocyte count with a predominance of hairy cells.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The most likely diagnosis for the patient is CML due to his age, laboratory results, and the presence of a left shift in the differential count.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Further diagnostic studies such as bone marrow biopsy and cytogenetic analysis would be necessary to confirm the diagnosis.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The Philadelphia chromosome (t(9;22) translocation) is often seen in CML and can be detected by cytogenetic analysis.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "(B) Acute myelogenous leukemia.",
+      "source_sentences": [
+        13
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "To determine the most likely diagnosis for this 72-year-old male with fatigue and minor pallor, we will analyze the laboratory results and physical exam findings.",
+      "pattern": "D",
+      "notes": "Introductory statement setting up the analysis."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "The patient's hemoglobin is 10 g/dL and hematocrit is 30%, which indicates anemia, and the leukocyte count is elevated to 67,500/mm^3, which is a sign of leukocytosis.",
+      "pattern": "A",
+      "notes": "Enumeration of lab findings related to anemia and leukocytosis."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The differential diagnosis for anemia, leukocytosis, and thrombocytosis includes various types of leukemia.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis statement."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "output": "Acute lymphoblastic leukemia (ALL) often presents with a high leukocyte count and anemia, but it is typically associated with a left shift in the differential count. Acute myelogenous leukemia (AML) presents with a high leukocyte count and often has a higher proportion of immature cells in the differential count compared to ALL. Chronic lymphocytic leukemia (CLL) is associated with a high leukocyte count, but typically, the lymphocyte count is predominantly mature. Chronic myelogenous leukemia (CML) often presents with a high leukocyte count and a left shift, similar to ALL, and is typically associated with the Philadelphia chromosome. Hairy cell leukemia presents with pancytopenia, splenomegaly, and often a high leukocyte count with a predominance of hairy cells.",
+      "pattern": "A",
+      "notes": "Enumeration of characteristics of different types of leukemia."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "The most likely diagnosis for this 72-year-old male is chronic myelogenous leukemia (CML) due to his age, laboratory results, and the presence of a left shift in the differential count.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Further diagnostic studies such as bone marrow biopsy and cytogenetic analysis would be necessary to confirm the diagnosis. The Philadelphia chromosome (t(9;22) translocation) is often seen in CML and can be detected by cytogenetic analysis.",
+      "pattern": "B",
+      "notes": "Conditional chain for confirming diagnosis."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "The patient's age and laboratory findings do not support chronic myelogenous leukemia (CML), which more commonly affects younger patients.",
+      "pattern": "D",
+      "notes": "Standalone consideration of age in differential."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Acute myelogenous leukemia.",
+      "pattern": "E",
+      "notes": "Topic shift indicating another possible diagnosis."
+    }
+  ]
+}

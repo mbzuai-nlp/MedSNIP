@@ -1,0 +1,130 @@
+{
+  "entry_id": 261,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 37-year-old woman presents to the emergency department in cardiac arrest. She was found to have altered mental status at home, and during transport to the hospital, she became pulseless. Cardiopulmonary resuscitation is ongoing and 2 intravenous lines are placed. The patient is obese, and her only medication is an oral contraceptive pill. She recently underwent Achilles tendon repair. She otherwise is known to smoke cigarettes on occasion. Physical exam is notable for a critically ill patient with chest compressions ongoing. The monitor shows pulseless electrical activity. Her right lower extremity is in a post-operative splint. The patient regains her pulse after several rounds of CPR and epinephrine. A bedside echocardiograph is notable for a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle. Which of the following is the most likely diagnosis? (A) Cardiogenic shock (B) Hemorrhagic shock (C) Neurogenic shock (D) Obstructive shock (E) Septic shock",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2636,
+    "output_tokens": 2071,
+    "cached_input_tokens": 0,
+    "cost": 0.00036902
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2636,
+      "output_tokens": 2071,
+      "cached_input_tokens": 0,
+      "cost": 0.00036902
+    }
+  ],
+  "shared_context": {
+    "age": "37",
+    "sex": "female",
+    "chief_complaint": "cardiac arrest/ pulseless electrical activity",
+    "medical_history": "obesity; oral contraceptive pill; recent Achilles tendon repair; altered mental status preceding arrest; occasional smoker",
+    "medications": "oral contraceptive pill",
+    "vitals": "not documented prior to arrest",
+    "exam_findings": "active chest compressions; pulseless electrical activity rhythm; right lower extremity in post-operative splint; dilated hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle",
+    "treatment_history": "CPR ongoing; 2 intravenous lines; epinephrine; pulse regained after several rounds of CPR",
+    "correct_answer": "Obstructive shock"
+  },
+  "sentences": [
+    "The patient is a 37-year-old woman in cardiac arrest with a known history of altered mental status preceding her pulseless state",
+    "CPR is ongoing, and she has two intravenous lines placed",
+    "She is noted to be obese and takes an oral contraceptive pill",
+    "She recently underwent Achilles tendon repair and is an occasional smoker",
+    "The physical exam shows a critically ill patient with active chest compressions",
+    "The monitor reveals pulseless electrical activity (PEA)",
+    "After several rounds of CPR and epinephrine, she regains a pulse",
+    "Bedside echocardiogram reveals a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle",
+    "Cardiogenic Shock: Typically involves left ventricular dysfunction and would not present with the described right ventricle findings",
+    "Hemorrhagic Shock: Involves significant blood loss and would not necessarily present with right ventricular dilation and hypokinesis",
+    "Neurogenic Shock: Characterized by hypotension and bradycardia due to spinal cord injury, which does not match the echocardiographic findings",
+    "Obstructive Shock: Often caused by conditions such as pulmonary embolism, which can lead to right ventricular dilation and hypokinesis",
+    "Septic Shock: Involves systemic infection leading to vasodilation and does not typically result in isolated right ventricular findings",
+    "The dilated and hypokinetic right ventricle with septal bowing suggests increased right ventricular pressure, likely due to obstruction",
+    "A common cause of obstructive shock is a massive pulmonary embolism, especially given the patient's risk factors (recent surgery, obesity, oral contraceptive use, and smoking)",
+    "Given the echocardiographic findings and the patient’s risk factors, the most likely diagnosis is",
+    "(D) Obstructive shock"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "The 37-year-old female in cardiac arrest who is obese, takes an oral contraceptive pill, recently underwent Achilles tendon repair, and had altered mental status preceding the pulseless event had active chest compressions, a pulseless electrical activity rhythm, and a dilated hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle.",
+      "pattern": "A",
+      "notes": "Enumerates multiple properties of the same patient."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Cardiogenic shock typically involves left ventricular dysfunction and would not present with the described right ventricle findings.",
+      "pattern": "D",
+      "notes": "Standalone fact about cardiogenic shock."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Hemorrhagic shock involves significant blood loss and would not necessarily present with right ventricular dilation and hypokinesis.",
+      "pattern": "D",
+      "notes": "Standalone fact about hemorrhagic shock."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Neurogenic shock is characterized by hypotension and bradycardia due to spinal cord injury, which does not match the echocardiographic findings.",
+      "pattern": "D",
+      "notes": "Standalone fact about neurogenic shock."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Obstructive shock is often caused by conditions such as pulmonary embolism, which can lead to right ventricular dilation and hypokinesis.",
+      "pattern": "D",
+      "notes": "Standalone fact about obstructive shock."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Septic shock involves systemic infection leading to vasodilation and does not typically result in isolated right ventricular findings.",
+      "pattern": "D",
+      "notes": "Standalone fact about septic shock."
+    },
+    {
+      "source_sentences": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "output": "The dilated and hypokinetic right ventricle with septal bowing suggests increased right ventricular pressure, likely due to obstruction such as a massive pulmonary embolism, especially given the patient’s risk factors of recent surgery, obesity, oral contraceptive use and smoking; therefore the most likely diagnosis is obstructive shock.",
+      "pattern": "C",
+      "notes": "Conclusion supported by causal premises."
+    }
+  ]
+}

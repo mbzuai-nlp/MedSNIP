@@ -1,0 +1,69 @@
+{
+  "entry_id": 242,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is Augmentin the same thing as Amoxcicilin?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1696,
+    "output_tokens": 1356,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1696,
+      "output_tokens": 1356,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "whether Augmentin is the same as amoxicillin",
+    "drug_a": "Augmentin",
+    "drug_b": "amoxicillin"
+  },
+  "sentences": [
+    "No, Augmentin is not the same thing as amoxicillin",
+    "Augmentin is a combination antibiotic that contains amoxicillin and clavulanic acid",
+    "Amoxicillin is a penicillin-type antibiotic that can treat a variety of bacterial infections",
+    "Clavulanic acid, a beta-lactamase inhibitor, is added to Augmentin to overcome bacterial resistance by inhibiting the enzyme beta-lactamase produced by certain bacteria, which would otherwise inactivate amoxicillin"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Augmentin is not the same thing as amoxicillin.",
+      "pattern": "D",
+      "notes": "Standalone comparison fact that directly answers the query."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Augmentin is a combination antibiotic that contains amoxicillin and clavulanic acid.",
+      "pattern": "D",
+      "notes": "Standalone composition fact about Augmentin."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Amoxicillin is a penicillin-type antibiotic that can treat a variety of bacterial infections.",
+      "pattern": "D",
+      "notes": "Standalone fact about amoxicillin's class and use."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Clavulanic acid, a beta-lactamase inhibitor, is added to Augmentin to overcome bacterial resistance by inhibiting beta-lactamase produced by certain bacteria, which would otherwise inactivate amoxicillin.",
+      "pattern": "B",
+      "notes": "Single-sentence causal chain linking clavulanic acid's role to overcoming resistance."
+    }
+  ]
+}

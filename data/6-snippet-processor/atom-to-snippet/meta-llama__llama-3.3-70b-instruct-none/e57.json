@@ -1,0 +1,228 @@
+{
+  "entry_id": 57,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "what causes ringworm ?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2772,
+    "output_tokens": 874,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1190,
+      "output_tokens": 515,
+      "cached_input_tokens": 0,
+      "cost": 0.0002838
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1582,
+      "output_tokens": 359,
+      "cached_input_tokens": 0,
+      "cost": 0.00027308
+    }
+  ],
+  "shared_context": {
+    "topic": "ringworm",
+    "condition": "dermatophytosis"
+  },
+  "sentences": [
+    "Ringworm, also known as dermatophytosis, is a common fungal infection of the skin",
+    "It is caused by dermatophytes, which are a group of fungi that include species from the genera Trichophyton, Microsporum, and Epidermophyton",
+    "These fungi thrive in warm, moist environments and can infect the skin, hair, and nails",
+    "Transmission occurs through direct contact with an infected person or animal, or indirectly through contact with contaminated objects such as towels, clothing, or surfaces"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Ringworm is a common fungal infection of the skin.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Ringworm is also known as dermatophytosis.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Dermatophytes cause ringworm.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Trichophyton is a genus of fungi that can cause ringworm.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Microsporum is a genus of fungi that can cause ringworm.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Epidermophyton is a genus of fungi that can cause ringworm.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Dermatophytes thrive in warm, moist environments.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Dermatophytes can infect the skin.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Dermatophytes can infect the hair.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Dermatophytes can infect the nails.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Ringworm can be transmitted through direct contact with an infected person.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Ringworm can be transmitted through direct contact with an infected animal.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Ringworm can be transmitted indirectly through contact with contaminated objects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Towels can be contaminated objects that transmit ringworm.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Clothing can be contaminated objects that transmit ringworm.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Surfaces can be contaminated objects that transmit ringworm.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Ringworm, also known as dermatophytosis, is a common fungal infection of the skin.",
+      "pattern": "C",
+      "notes": "Definition + alternate name."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Dermatophytes cause ringworm.",
+      "pattern": "D",
+      "notes": "Standalone causative agent."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6
+      ],
+      "output": "Trichophyton, Microsporum, and Epidermophyton are genera of fungi that can cause ringworm.",
+      "pattern": "A",
+      "notes": "Enumeration of causative fungi genera."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Dermatophytes thrive in warm, moist environments.",
+      "pattern": "D",
+      "notes": "Standalone environmental factor."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10
+      ],
+      "output": "Dermatophytes can infect the skin, hair, and nails.",
+      "pattern": "A",
+      "notes": "Enumeration of infection sites."
+    },
+    {
+      "source_claims": [
+        11,
+        12,
+        13
+      ],
+      "output": "Ringworm can be transmitted through direct contact with an infected person or animal, or indirectly through contact with contaminated objects.",
+      "pattern": "A",
+      "notes": "Enumeration of transmission methods."
+    },
+    {
+      "source_claims": [
+        14,
+        15,
+        16
+      ],
+      "output": "Contaminated objects that can transmit ringworm include towels, clothing, and surfaces.",
+      "pattern": "A",
+      "notes": "Enumeration of contaminated objects."
+    }
+  ]
+}

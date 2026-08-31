@@ -1,0 +1,246 @@
+{
+  "entry_id": 60,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "what causes ringworm ?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2902,
+    "output_tokens": 942,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1319,
+      "output_tokens": 528,
+      "cached_input_tokens": 0,
+      "cost": 0.00030086
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1583,
+      "output_tokens": 414,
+      "cached_input_tokens": 0,
+      "cost": 0.00029078
+    }
+  ],
+  "shared_context": {
+    "topic": "ringworm causes",
+    "condition": "ringworm (tinea)"
+  },
+  "sentences": [
+    "Ringworm, also known as tinea, is caused by a group of mold-like fungi called dermatophytes that thrive on the keratin found in the outer layer of skin, hair, and nails",
+    "Despite its name, ringworm is not caused by a worm",
+    "The infection can affect various parts of the body, including the beard (tinea barbae), body (tinea corporis), feet (tinea pedis, also known as athlete's foot), groin area (tinea cruris, also known as jock itch), and scalp (tinea capitis)",
+    "Factors that increase the likelihood of developing ringworm include frequent wetness (such as from sweating), minor injuries to the skin, scalp, or nails, and poor hygiene",
+    "The fungi thrive in warm, moist environments, making such conditions conducive to their growth and multiplication",
+    "Ringworm is contagious and can be transmitted via direct skin-to-skin contact or through contact with contaminated objects such as combs, unwashed clothing, and shower or pool surfaces",
+    "It can also be caught from pets that carry the fungus, with cats being common carriers"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Ringworm is caused by a group of mold-like fungi called dermatophytes.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Dermatophytes thrive on the keratin found in the outer layer of skin, hair, and nails.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Ringworm is not caused by a worm.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The infection can affect the beard.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The infection can affect the body.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The infection can affect the feet.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The infection can affect the groin area.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The infection can affect the scalp.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Frequent wetness increases the likelihood of developing ringworm.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Minor injuries to the skin, scalp, or nails increase the likelihood of developing ringworm.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Poor hygiene increases the likelihood of developing ringworm.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Dermatophytes thrive in warm, moist environments.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Ringworm is contagious.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Ringworm can be transmitted via direct skin-to-skin contact.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Ringworm can be transmitted through contact with contaminated objects.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Pets can carry the ringworm fungus.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Cats are common carriers of the ringworm fungus.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Ringworm is caused by a group of mold-like fungi called dermatophytes.",
+      "pattern": "D",
+      "notes": "Standalone cause."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Dermatophytes thrive on the keratin found in the outer layer of skin, hair, and nails.",
+      "pattern": "D",
+      "notes": "Standalone fact about dermatophytes."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Ringworm is not caused by a worm.",
+      "pattern": "D",
+      "notes": "Standalone clarification."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "Ringworm can affect various parts of the body, including the beard, body, feet, groin area, and scalp.",
+      "pattern": "A",
+      "notes": "Enumeration of affected areas."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11
+      ],
+      "output": "The likelihood of developing ringworm is increased by frequent wetness, minor injuries to the skin, scalp, or nails, and poor hygiene.",
+      "pattern": "A",
+      "notes": "Enumeration of risk factors."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Dermatophytes thrive in warm, moist environments.",
+      "pattern": "D",
+      "notes": "Standalone fact about dermatophyte environment."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "Ringworm is contagious and can be transmitted through direct skin-to-skin contact or contact with contaminated objects.",
+      "pattern": "A",
+      "notes": "Enumeration of transmission methods."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "Pets, especially cats, can carry the ringworm fungus.",
+      "pattern": "A",
+      "notes": "Related facts about pet carriers."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "entry_id": 27,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to his primary care physician with a 6-month history of increasing lower back pain. He first felt the pain while lifting boxes at work but thought that he had just strained a muscle. The pain appears to be worse in the mornings and after rest. Exercise and physical activity appear to temporarily make the pain better. He has taken acetaminophen and ibuprofen for the pain. He has no significant medical history and takes no medications. His temperature is 98.6°F (37.0°C), blood pressure is 115/70 mmHg, pulse is 70/min, and respirations are 12/min. On physical exam, he is found to have limited flexion and extension of his spine as well as tenderness to palpation over the insertion of his patellar tendons bilaterally. Results from laboratory tests are shown below:\n\nSerum:\nErythrocyte sedimentation rate (ESR): 61 mm/hr\nC-reactive protein (CRP): 36 mg/L (normal <10 mg/L)\n\nWhich of the following is the most accurate test for this patient's condition? (A) Bone scan (B) Computed tomography (C) Magnetic resonance imaging (D) Radiograph (E) Ultrasound",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2615,
+    "output_tokens": 656,
+    "cached_input_tokens": 0,
+    "cost": 0.00047142
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2615,
+      "output_tokens": 656,
+      "cached_input_tokens": 0,
+      "cost": 0.00047142
+    }
+  ],
+  "shared_context": {
+    "age": "26",
+    "sex": "male",
+    "chief_complaint": "6-month history of increasing lower back pain",
+    "medical_history": "no significant medical history",
+    "medications": "none",
+    "vitals": "temperature 98.6°F (37.0°C), blood pressure 115/70 mmHg, pulse 70/min, respirations 12/min",
+    "exam_findings": "limited flexion and extension of spine, tenderness to palpation over patellar tendon insertions bilaterally",
+    "lab_results": "Erythrocyte sedimentation rate (ESR) 61 mm/hr, C-reactive protein (CRP) 36 mg/L"
+  },
+  "sentences": [
+    "To determine the most accurate test for this patient's condition, let's analyze the provided information step-by-step",
+    "The patient's symptoms of increasing lower back pain that worsens in the mornings and after rest, and improves with exercise and physical activity, are characteristic of inflammatory back pain",
+    "However, the elevation in ESR and CRP levels (64 times and 3.6 times their normal values, respectively) also suggests an underlying inflammatory process",
+    "Given the presence of limited flexion and extension of the spine as well as tenderness to palpation over the insertion of the patellar tendons bilaterally, this is suggestive of spondyloarthritis (SpA), particularly ankylosing spondylitis",
+    "In spondyloarthritis, plain radiographs (X-rays) can show changes in the spine and sacroiliac joints, but they may not be visible in the early stages of the disease",
+    "Bone scans are not generally used for diagnosing spondyloarthritis; they are more often used for detecting bone metastasis or osteomyelitis",
+    "Computed tomography (CT) scans can provide more detailed images than X-rays and can help identify sacroiliitis and spinal changes in more detail, but MRI provides the most sensitive detection of early changes and is the preferred imaging modality for diagnosing spondyloarthritis",
+    "Ultrasound is not typically used for initial imaging of spondyloarthritis",
+    "Given the information, the most accurate test for this patient's condition is Magnetic Resonance Imaging (MRI) since it provides the most sensitive detection of early changes in spondyloarthritis",
+    "Final Answer: C"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "A 26-year-old man presents with symptoms of increasing lower back pain that worsens in the mornings and after rest, and improves with exercise and physical activity, characteristic of inflammatory back pain.",
+      "pattern": "D",
+      "notes": "Standalone symptom description."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The elevation in ESR (61 mm/hr) and CRP levels (36 mg/L) in this 26-year-old man also suggests an underlying inflammatory process.",
+      "pattern": "D",
+      "notes": "Standalone lab result interpretation."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The presence of limited flexion and extension of the spine as well as tenderness to palpation over the insertion of the patellar tendons bilaterally in this 26-year-old man is suggestive of spondyloarthritis (SpA), particularly ankylosing spondylitis.",
+      "pattern": "D",
+      "notes": "Standalone physical exam finding interpretation."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "In spondyloarthritis, plain radiographs (X-rays) can show changes in the spine and sacroiliac joints, but may not be visible in early stages. Bone scans are not generally used for diagnosing spondyloarthritis. Computed tomography (CT) scans can provide more detailed images than X-rays, but MRI provides the most sensitive detection of early changes. Ultrasound is not typically used for initial imaging of spondyloarthritis.",
+      "pattern": "A",
+      "notes": "Enumerating properties and characteristics of diagnostic tests for one condition (spondyloarthritis)."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Given the information, the most accurate test for this 26-year-old man's condition is Magnetic Resonance Imaging (MRI), as it provides the most sensitive detection of early changes in spondyloarthritis.",
+      "pattern": "C",
+      "notes": "Conclusion based on previous premises about the best diagnostic test for spondyloarthritis."
+    }
+  ]
+}

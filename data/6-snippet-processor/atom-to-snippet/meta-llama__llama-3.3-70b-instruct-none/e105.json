@@ -1,0 +1,198 @@
+{
+  "entry_id": 105,
+  "batch_id": 11,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 46-year-old man presents with his wife to his primary care provider for depression and strange movements. His wife reports that her husband has not been himself for the last 2 months. Whereas he was previously outgoing and “the life of the party,” the patient is now irritable and withdrawn. He is a partner at an accounting firm, but his colleagues are threatening to fire him if he continues to perform poorly at work. The patient cannot explain the recent changes to his mood and tearfully admits he fears there is something seriously wrong with him. His wife says that he is getting worse. The patient’s medical history is significant for hypertension, for which he takes lisinopril. His family history is unknown as he was adopted. The patient met his mother once and never knew his father but was told he died in his 50s. He drinks a few glasses of wine per week and has never smoked. His temperature is 98.6°F (37°C), blood pressure is 141/87 mmHg, pulse is 81/min, and respirations are 12/min. On physical exam, the patient has a flat affect with a facial grimace and sudden jerky movements of his upper extremities. Which of the following is most likely to be seen on further workup? (A) Alpha-synuclein aggregates on brain biopsy (B) Dorsal striatum atrophy on head CT (C) Frontotemporal atrophy on head CT (D) Neurofibrillary tangles on brain biopsy (E) Positive 14-3-3 CSF assay",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4811,
+    "output_tokens": 1205,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2008,
+      "output_tokens": 728,
+      "cached_input_tokens": 0,
+      "cost": 0.00043376
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2803,
+      "output_tokens": 477,
+      "cached_input_tokens": 0,
+      "cost": 0.00043294
+    }
+  ],
+  "shared_context": {
+    "age": 46,
+    "sex": "male",
+    "chief_complaint": "depression and strange movements",
+    "medical_history": "hypertension",
+    "medications": "lisinopril",
+    "family_history": "unknown, adopted",
+    "social_history": "occasional alcohol use, non-smoker",
+    "vitals": "temperature 98.6°F, blood pressure 141/87 mmHg, pulse 81/min, respirations 12/min",
+    "exam_findings": "flat affect, facial grimace, sudden jerky movements of upper extremities"
+  },
+  "sentences": [
+    "To approach this question, let's break down the symptoms presented by the 46-year-old man and analyze them in the context of the provided options",
+    "Depression and strange movements: These symptoms are non-specific and can be associated with various neurological and psychiatric conditions, including Huntington's disease (HD), which is characterized by chorea (jerky, involuntary movements), psychiatric symptoms, and a family history of the disease",
+    "Changes in mood: The patient's change from being outgoing to being irritable and withdrawn could suggest a variety of conditions, but given his young age and the presence of strange movements, we should consider HD",
+    "Job performance issues: This could be related to his psychiatric symptoms or the motor disturbances of HD",
+    "Medical and family history: The patient's lack of information about his family history makes it difficult to identify a genetic predisposition, but we can infer that his risk for HD is unknown given his age and lack of known family history",
+    "Physical examination findings: The patient's flat affect with a facial grimace and sudden jerky movements of his upper extremities are consistent with chorea, a hallmark symptom of HD",
+    "Alpha-synuclein aggregates on brain biopsy: This is characteristic of Parkinson's disease, not HD",
+    "Dorsal striatum atrophy on head CT: This would be consistent with HD, as the disease is associated with atrophy of the caudate nucleus, which is part of the dorsal striatum",
+    "Frontotemporal atrophy on head CT: This would be consistent with frontotemporal dementia, not HD",
+    "Neurofibrillary tangles on brain biopsy: This would be consistent with Alzheimer's disease, not HD",
+    "Positive 14-3-3 CSF assay: This can be seen in a variety of conditions and is not specific to HD",
+    "Given the patient's age, symptoms, and findings, the most likely diagnosis is Huntington's disease",
+    "The best option to support this diagnosis is dorsal striatum atrophy on head CT, as it is directly associated with the pathophysiology of HD"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's symptoms of depression and strange movements are non-specific and can be associated with various neurological and psychiatric conditions, including Huntington's disease.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's change from being outgoing to being irritable and withdrawn could suggest a variety of conditions, but given his young age and the presence of strange movements, we should consider Huntington's disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's job performance issues could be related to his psychiatric symptoms or the motor disturbances of Huntington's disease.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's lack of information about his family history makes it difficult to identify a genetic predisposition, but we can infer that his risk for Huntington's disease is unknown given his age and lack of known family history.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's physical examination findings of flat affect with a facial grimace and sudden jerky movements of his upper extremities are consistent with chorea, a hallmark symptom of Huntington's disease.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Alpha-synuclein aggregates on brain biopsy are characteristic of Parkinson's disease, not Huntington's disease.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Dorsal striatum atrophy on head CT would be consistent with Huntington's disease, as the disease is associated with atrophy of the caudate nucleus, which is part of the dorsal striatum.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Frontotemporal atrophy on head CT would be consistent with frontotemporal dementia, not Huntington's disease.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Neurofibrillary tangles on brain biopsy would be consistent with Alzheimer's disease, not Huntington's disease.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "A positive 14-3-3 CSF assay can be seen in a variety of conditions and is not specific to Huntington's disease.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Given the patient's age, symptoms, and findings, the most likely diagnosis is Huntington's disease.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The best option to support the diagnosis of Huntington's disease is dorsal striatum atrophy on head CT, as it is directly associated with the pathophysiology of the disease.",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "A 46-year-old man presents with depression and strange movements, symptoms that are non-specific but can be associated with various conditions, including Huntington's disease, particularly given his young age, change from being outgoing to irritable and withdrawn, and job performance issues related to psychiatric symptoms or motor disturbances.",
+      "pattern": "A",
+      "notes": "Introduction of symptoms and possible conditions."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The patient's lack of information about his family history, due to being adopted, makes it difficult to identify a genetic predisposition, but his risk for Huntington's disease is unknown given his age and lack of known family history.",
+      "pattern": "D",
+      "notes": "Standalone fact about family history limitations."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The patient's physical examination findings of flat affect with a facial grimace and sudden jerky movements of his upper extremities are consistent with chorea, a hallmark symptom of Huntington's disease.",
+      "pattern": "D",
+      "notes": "Clinical finding with direct implication."
+    },
+    {
+      "source_claims": [
+        6,
+        8,
+        9,
+        10
+      ],
+      "output": "Alpha-synuclein aggregates on brain biopsy, frontotemporal atrophy on head CT, neurofibrillary tangles on brain biopsy, and a positive 14-3-3 CSF assay are not consistent with Huntington's disease but rather with other conditions like Parkinson's disease, frontotemporal dementia, and Alzheimer's disease, respectively.",
+      "pattern": "A",
+      "notes": "Enumeration of non-consistent conditions."
+    },
+    {
+      "source_claims": [
+        7,
+        11,
+        12
+      ],
+      "output": "Dorsal striatum atrophy on head CT would be consistent with Huntington's disease, given the disease's association with atrophy of the caudate nucleus, part of the dorsal striatum. This, combined with the patient's age, symptoms, and findings, makes Huntington's disease the most likely diagnosis, with dorsal striatum atrophy on head CT being the best option to support this diagnosis.",
+      "pattern": "A",
+      "notes": "Conclusion supported by pathological correlation."
+    }
+  ]
+}

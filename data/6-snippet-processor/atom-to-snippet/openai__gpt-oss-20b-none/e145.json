@@ -1,0 +1,226 @@
+{
+  "entry_id": 145,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 44-year-old homeless man presents to the emergency department after being stabbed multiple times in the abdomen. The patient is intoxicated and is unable to offer further history. His temperature is 97.5°F (36.4°C), blood pressure is 92/52 mmHg, pulse is 145/min, respirations are 33/min, and oxygen saturation is 90% on room air. He is intubated to protect his airway, given 2 units of packed red blood cells, and sent to the operating room for an exploratory laparotomy. The patient is subsequently admitted to the intensive care unit. He is extubated the next day and appears well. His vitals are within normal limits. Physical exam reveals sparse hair that is falling out throughout the patient’s body. He has a rash by the corners of his mouth. The patient has multiple loose bowel movements and on day 6 the patient’s surgical wound does not appear to be healing. It is held together only by the sutures with minimal underlying healing. Which of the following is most likely deficient in this patient? (A) Riboflavin (B) Thiamine (C) Vitamin C (D) Vitamin D (E) Zinc",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4676,
+    "output_tokens": 6444,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1937,
+      "output_tokens": 3736,
+      "cached_input_tokens": 0,
+      "cost": 0.00058115
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2739,
+      "output_tokens": 2708,
+      "cached_input_tokens": 0,
+      "cost": 0.00046129
+    }
+  ],
+  "shared_context": {
+    "patient_age": 44,
+    "patient_sex": "male",
+    "chief_complaint": "multiple stab wounds to the abdomen",
+    "medical_history": "homeless, intoxicated (alcohol)",
+    "medications": "none",
+    "vitals": {
+      "temp": "97.5°F",
+      "bp": "92/52 mmHg",
+      "pulse": "145/min",
+      "respirations": "33/min",
+      "oxygen_saturation": "90% on room air"
+    },
+    "exam_findings": [
+      "sparse hair loss across the body",
+      "rash at the corners of the mouth (angular cheilitis)",
+      "multiple loose bowel movements",
+      "surgical wound not healing after 6 days"
+    ],
+    "treatment_history": [
+      "intubated for airway protection",
+      "2 units packed red blood cells",
+      "exploratory laparotomy",
+      "ICU admission",
+      "extubated next day"
+    ],
+    "correct_answer": "zinc"
+  },
+  "sentences": [
+    "To address this question, let's analyze the patient's symptoms step by step and relate them to potential deficiencies",
+    "The patient has multiple loose bowel movements: This could be indicative of various gastrointestinal issues, but when considered in conjunction with other symptoms, it might point to malabsorption of nutrients",
+    "The patient has a rash by the corners of his mouth: This is a classic symptom of ariboflavinosis, also known as riboflavin deficiency",
+    "The patient's surgical wound is not healing as expected: Impaired wound healing can be caused by a variety of factors, including nutrient deficiencies",
+    "In this case, it is necessary to consider the potential role of deficiencies in other nutrients that are crucial for wound healing, such as vitamins and minerals",
+    "The patient is experiencing hair loss: While this symptom can be caused by various factors, including stress, it may also be related to nutritional deficiencies, particularly those affecting the skin and hair, such as zinc deficiency",
+    "Given the combination of these symptoms (loose bowel movements, rash, impaired wound healing, and hair loss), it is essential to consider a nutrient that affects multiple systems and can be associated with malabsorption",
+    "Considering the symptoms presented by the patient, the most likely deficient nutrient is zinc",
+    "Zinc is crucial for wound healing, immune function, and protein synthesis",
+    "Deficiencies in zinc can lead to impaired wound healing, hair loss, and skin disorders, including ariboflavinosis-like symptoms that can mimic the rash described in this patient",
+    "Furthermore, zinc deficiency can lead to malabsorption, which fits with the patient's loose bowel movements",
+    "Zinc deficiency is often associated with poor wound healing, which is evident from the patient's surgical wound not healing as expected even after 6 days",
+    "Therefore, the most likely deficient nutrient in this patient is zinc",
+    "Answer: (E) Zinc"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient is being evaluated for potential nutrient deficiencies.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient has multiple loose bowel movements.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Multiple loose bowel movements may indicate malabsorption of nutrients when considered with other symptoms.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient has a rash by the corners of his mouth, a classic sign of riboflavin deficiency.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient’s surgical wound is not healing as expected, which may be due to nutrient deficiencies.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Nutrient deficiencies such as vitamins and minerals can impact wound healing.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient is experiencing hair loss, which may be related to zinc deficiency.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Given the combination of loose bowel movements, rash, impaired wound healing, and hair loss, a nutrient affecting multiple systems and associated with malabsorption should be considered.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Zinc is the most likely deficient nutrient based on the patient’s symptoms.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Zinc is essential for wound healing, immune function, and protein synthesis.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Zinc deficiency can cause impaired wound healing, hair loss, and skin disorders, including ariboflavinosis‑like rash.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Zinc deficiency can also lead to malabsorption, which explains the patient’s loose bowel movements.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The patient’s poor wound healing after six days is consistent with zinc deficiency.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Therefore, zinc deficiency is the most likely nutrient deficiency for this patient.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Answer: (E) Zinc.",
+      "source_sentences": [
+        13
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "output": "The 44‑year‑old homeless male is being evaluated for potential nutrient deficiencies and exhibits multiple loose bowel movements, a rash at the corners of his mouth (a classic sign of riboflavin deficiency), impaired surgical wound healing, and hair loss.",
+      "pattern": "A",
+      "notes": "Enumeration of patient symptoms and evaluation context."
+    },
+    {
+      "source_claims": [
+        3,
+        6,
+        10,
+        11,
+        12,
+        13
+      ],
+      "output": "In this patient, loose bowel movements suggest malabsorption of nutrients. Zinc is essential for wound healing, immune function, and protein synthesis, and zinc deficiency can cause impaired wound healing, hair loss, skin disorders resembling a riboflavin‑like rash, and malabsorption leading to loose bowel movements. The poor wound healing after six days is consistent with zinc deficiency.",
+      "pattern": "B",
+      "notes": "Causal chain connecting symptoms to zinc deficiency."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        14,
+        15
+      ],
+      "output": "Given the combination of loose bowel movements, rash, impaired wound healing, and hair loss—a scenario involving multiple systems and malabsorption—a nutrient that affects several systems must be considered. Zinc is the most likely deficient nutrient based on this patient’s presentation, therefore zinc deficiency is the most likely nutrient deficiency, and the correct answer is (E) Zinc.",
+      "pattern": "C",
+      "notes": "Conclusion and supporting premises merged into a single diagnostic recommendation."
+    }
+  ]
+}

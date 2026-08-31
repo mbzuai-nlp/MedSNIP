@@ -1,0 +1,164 @@
+{
+  "entry_id": 199,
+  "batch_id": 20,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can a nausea prescription be taken at the same time as Dramamine?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2880,
+    "output_tokens": 680,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1309,
+      "output_tokens": 376,
+      "cached_input_tokens": 0,
+      "cost": 4.122e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1571,
+      "output_tokens": 304,
+      "cached_input_tokens": 0,
+      "cost": 4.358e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "taking a nausea prescription with Dramamine",
+    "drug_a": "nausea prescription",
+    "drug_b": "Dramamine (dimenhydrinate)",
+    "condition": "nausea"
+  },
+  "sentences": [
+    "Dramamine, also known as dimenhydrinate, is an antihistamine used to treat nausea, vomiting, and dizziness caused by motion sickness",
+    "When considering taking a nausea prescription with Dramamine, it is essential to consult with a healthcare provider to ensure safe and effective treatment",
+    "Combining a nausea prescription with Dramamine may be safe in some cases, but it depends on the specific medication and its interactions",
+    "Certain medications, such as antihistamines, can interact with other medications, including prescription medications, and may increase the risk of side effects",
+    "To minimize potential interactions, it is crucial to inform your healthcare provider about all medications you are currently taking, including over-the-counter medications like Dramamine",
+    "Your healthcare provider can assess the potential risks and benefits of combining the medications and adjust your treatment plan accordingly",
+    "In general, it is recommended to consult with a healthcare provider before taking any new medication, especially when combining it with other medications",
+    "They can provide personalized guidance and help you make informed decisions about your treatment"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "It is essential to consult with a healthcare provider when considering taking a nausea prescription with Dramamine.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Combining a nausea prescription with Dramamine may be safe in some cases.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The safety of combining a nausea prescription with Dramamine depends on the specific medication and its interactions.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Certain medications, such as antihistamines, can interact with other medications and may increase the risk of side effects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "It is crucial to inform your healthcare provider about all medications you are currently taking.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Your healthcare provider can assess the potential risks and benefits of combining the medications.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Your healthcare provider can adjust your treatment plan accordingly.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "It is recommended to consult with a healthcare provider before taking any new medication.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "They can provide personalized guidance and help you make informed decisions about your treatment.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "It is essential to consult with a healthcare provider when considering taking a nausea prescription with Dramamine, as combining them may be safe in some cases.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The safety of combining a nausea prescription with Dramamine depends on the specific medication and its interactions.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Certain medications, such as antihistamines, can interact with other medications and may increase the risk of side effects.",
+      "pattern": "D",
+      "notes": "Different drug; kept atomic."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "It is crucial to inform your healthcare provider about all medications you are currently taking, so they can assess the potential risks and benefits of combining the medications and adjust your treatment plan accordingly.",
+      "pattern": "A",
+      "notes": "Enumeration of actions to take."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "It is recommended to consult with a healthcare provider before taking any new medication, as they can provide personalized guidance and help you make informed decisions about your treatment.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    }
+  ]
+}

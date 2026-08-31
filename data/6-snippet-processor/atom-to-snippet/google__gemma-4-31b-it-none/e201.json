@@ -1,0 +1,223 @@
+{
+  "entry_id": 201,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3042,
+    "output_tokens": 949,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1358,
+      "output_tokens": 534,
+      "cached_input_tokens": 0,
+      "cost": 0.00037946
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1684,
+      "output_tokens": 415,
+      "cached_input_tokens": 0,
+      "cost": 0.00037662
+    }
+  ],
+  "shared_context": {
+    "topic": "poison ivy contagiousness",
+    "condition": "poison ivy exposure",
+    "symptom": "allergic reaction"
+  },
+  "sentences": [
+    "Poison ivy (Toxicodendron radicans) is a plant that contains an oil called urushiol, which causes an allergic reaction in most people",
+    "The urushiol oil is responsible for the characteristic rash, blisters, and itching associated with poison ivy exposure",
+    "The urushiol oil is not contagious between people, meaning it cannot be spread from person to person through direct contact or other means",
+    "However, it can be transferred to other surfaces, such as clothing, tools, or pets, and then cause a reaction when someone comes into contact with those contaminated items",
+    "It's worth noting that people who have not previously been exposed to urushiol may develop an allergic reaction after exposure, while those who have been previously exposed may not react at all or may experience a milder reaction",
+    "This is because the body builds up a tolerance to the urushiol oil over time"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Poison ivy (Toxicodendron radicans) is a plant that contains an oil called urushiol.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Urushiol causes an allergic reaction in most people.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Urushiol oil is responsible for the characteristic rash associated with poison ivy exposure.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Urushiol oil is responsible for the blisters associated with poison ivy exposure.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Urushiol oil is responsible for the itching associated with poison ivy exposure.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Urushiol oil is not contagious between people.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Urushiol oil cannot be spread from person to person through direct contact or other means.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Urushiol oil can be transferred to clothing.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Urushiol oil can be transferred to tools.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Urushiol oil can be transferred to pets.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Urushiol oil on contaminated items can cause a reaction when someone comes into contact with them.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "People who have not previously been exposed to urushiol may develop an allergic reaction after exposure.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 13,
+      "text": "People who have been previously exposed to urushiol may not react at all.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 14,
+      "text": "People who have been previously exposed to urushiol may experience a milder reaction.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The body builds up a tolerance to urushiol oil over time.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Poison ivy (Toxicodendron radicans) is a plant that contains an oil called urushiol, which causes an allergic reaction in most people.",
+      "pattern": "B",
+      "notes": "Causal link between the plant oil and the reaction."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "Urushiol oil is responsible for the characteristic rash, blisters, and itching associated with poison ivy exposure.",
+      "pattern": "A",
+      "notes": "Enumeration of symptoms caused by the oil."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Urushiol oil is not contagious between people and cannot be spread from person to person through direct contact or other means.",
+      "pattern": "A",
+      "notes": "Enumeration of properties regarding non-contagiousness."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10
+      ],
+      "output": "Urushiol oil can be transferred to clothing, tools, and pets.",
+      "pattern": "A",
+      "notes": "Enumeration of items the oil can transfer to."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Urushiol oil on contaminated items can cause a reaction when someone comes into contact with them.",
+      "pattern": "D",
+      "notes": "Standalone fact about indirect exposure."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "People who have not previously been exposed to urushiol may develop an allergic reaction after exposure.",
+      "pattern": "D",
+      "notes": "Standalone fact about initial exposure."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "The body builds up a tolerance to urushiol oil over time, meaning people who have been previously exposed may experience a milder reaction or may not react at all.",
+      "pattern": "C",
+      "notes": "Conclusion about tolerance supported by premises of reaction types."
+    }
+  ]
+}

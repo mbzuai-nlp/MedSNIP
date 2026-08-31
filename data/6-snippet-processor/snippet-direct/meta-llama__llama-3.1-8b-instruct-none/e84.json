@@ -1,0 +1,80 @@
+{
+  "entry_id": 84,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Do fissures and hemmroids heal on their own?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1872,
+    "output_tokens": 267,
+    "cached_input_tokens": 0,
+    "cost": 4.812e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1872,
+      "output_tokens": 267,
+      "cached_input_tokens": 0,
+      "cost": 4.812e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "healing outcomes for fissures and hemorrhoids",
+    "condition_a": "anal fissures",
+    "condition_b": "hemorrhoids"
+  },
+  "sentences": [
+    "Anal fissures and hemorrhoids have different healing outcomes depending on the severity and treatment methods employed",
+    "Acute Anal Fissures: These can often heal on their own with conservative management, which includes dietary modification (high-fiber diet), adequate hydration, and stool softeners to reduce strain during defecation",
+    "Chronic Anal Fissures: These are less likely to heal without medical intervention",
+    "Chronic fissures may require treatments such as topical nitrates, calcium channel blockers, or surgical options like lateral internal sphincterotomy, which has a high success rate for healing chronic fissures",
+    "Internal Hemorrhoids: Mild cases can resolve on their own with conservative measures like high-fiber diet, increased fluid intake, and over-the-counter treatments (e.g., topical agents, sitz baths)",
+    "Severe cases (grade III and IV) often require procedural interventions such as rubber band ligation, sclerotherapy, or surgical hemorrhoidectomy",
+    "External Hemorrhoids: These can also often resolve on their own, especially if they are not thrombosed",
+    "Conservative measures similar to those for internal hemorrhoids are recommended",
+    "Thrombosed external hemorrhoids can be very painful and may require medical procedures for relief"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2
+      ],
+      "output": "Anal fissures can often heal on their own with conservative management, but chronic fissures may require medical intervention.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises; the healing outcome depends on the severity and treatment method."
+    },
+    {
+      "source_sentences": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Hemorrhoids can resolve on their own with conservative measures, but severe cases may require procedural interventions or surgical options.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises; the healing outcome depends on the severity and treatment method."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Thrombosed external hemorrhoids can be very painful and may require medical procedures for relief.",
+      "pattern": "D",
+      "notes": "Standalone fact about a specific type of hemorrhoid."
+    }
+  ]
+}

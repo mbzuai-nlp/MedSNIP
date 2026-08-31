@@ -1,0 +1,398 @@
+{
+  "entry_id": 73,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 72-year-old man presents to his primary care physician for a general checkup. He states that he has been a bit more fatigued lately but believes it is secondary to poor sleep at his new house. The patient is otherwise healthy and takes no medications. His temperature is 98.0°F (36.7°C), blood pressure is 141/90 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 98% on room air. Physical exam is notable only for minor pallor but is otherwise unremarkable. Basic laboratory studies are ordered as seen below.\n\nHemoglobin: 10 g/dL\nHematocrit: 30%\nLeukocyte count: 67,500/mm^3\nPlatelet count: 119,000/mm^3\n\nSerum:\nNa: 141 mEq/L\nCl: 103 mEq/L\nK: 4.0 Eq/L\nHCO3-: 24 mEq/L\nBUN: 22 mg/dL\nGlucose: 109 mg/dL\nCreatinine: 1.2 mg/dL\nCa: 10.0 mg/dL\n\nWhich of the following is the most likely diagnosis? (A) Acute lymphoblastic leukemia (B) Acute myelogenous leukemia (C) Chronic lymphocytic leukemia (D) Chronic myelogenous leukemia (E) Hairy cell leukemia",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5305,
+    "output_tokens": 2256,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2270,
+      "output_tokens": 1164,
+      "cached_input_tokens": 0,
+      "cost": 0.00059948
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 3035,
+      "output_tokens": 1092,
+      "cached_input_tokens": 0,
+      "cost": 0.00065294
+    }
+  ],
+  "shared_context": {
+    "age": 72,
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "medical_history": "otherwise healthy",
+    "medications": "none",
+    "vitals": {
+      "temperature": "98.0°F (36.7°C)",
+      "blood_pressure": "141/90 mmHg",
+      "pulse": "82/min",
+      "respirations": "16/min",
+      "oxygen_saturation": "98% on room air"
+    },
+    "exam_findings": "minor pallor",
+    "lab_results": {
+      "hemoglobin": "10 g/dL",
+      "hematocrit": "30%",
+      "leukocyte_count": "67,500/mm^3",
+      "platelet_count": "119,000/mm^3"
+    }
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for this 72-year-old man with fatigue and abnormal blood test results, we need to analyze the clinical and laboratory findings step-by-step and compare them against the characteristics of each potential diagnosis",
+    "Clinical Presentation: The patient is an elderly man (aged 72) with recent-onset fatigue and minor pallor but otherwise unremarkable physical exam",
+    "Vital Signs: His vital signs are relatively normal, except for a mildly elevated blood pressure of 141/90 mmHg, which is less relevant to the primary concern",
+    "Hemoglobin: 10 g/dL (low, indicating anemia)",
+    "Hematocrit: 30% (low, consistent with anemia)",
+    "Leukocyte count: 67,500/mm^3 (markedly elevated, suggestive of a leukemic process)",
+    "Platelet count: 119,000/mm^3 (mild thrombocytopenia)",
+    "Serum chemistry: Essentially within normal limits except for mildly elevated BUN (22 mg/dL) and creatinine (1.2 mg/dL)",
+    "Acute Lymphoblastic Leukemia (ALL): Typically occurs in children and young adults, characterized by rapid onset and severe constitutional symptoms",
+    "Acute Myelogenous Leukemia (AML): Common in older adults, often presents with symptoms like fatigue, bleeding, and infection due to bone marrow failure",
+    "Blood smear usually shows blasts",
+    "Chronic Lymphocytic Leukemia (CLL): Most common in older adults, indolent progression, often asymptomatic apart from incidental findings or mild symptoms like fatigue and lymphocytosis",
+    "Chronic Myelogenous Leukemia (CML): Present in older adults, characterized by marked leukocytosis (often >50,000/mm^3), splenomegaly, and presence of the Philadelphia chromosome (BCR-ABL fusion gene)",
+    "Hairy Cell Leukemia: Rare, usually presents with pancytopenia and splenomegaly, not typically with markedly elevated leukocyte counts",
+    "The leukocyte count is significantly elevated (67,500/mm^3), which is highly suggestive of a chronic leukemia rather than an acute one, as acute leukemias usually present with blasts and not such a high leukocyte count in peripheral blood",
+    "ALL and AML: Less likely due to the patient's age and the chronic nature of his symptoms",
+    "Additionally, acute leukemias usually present with a high number of blasts on the blood smear, which is not indicated here",
+    "CLL: Fits with the patient's age and chronic symptoms but rarely reaches such a high leukocyte count",
+    "CLL typically presents with a lymphocyte predominance on blood smear",
+    "CML: Fits well with the patient's age, significant leukocytosis, and relatively mild symptoms",
+    "CML often presents with elevated granulocytes (neutrophils, basophils, eosinophils) and can be confirmed by detecting the Philadelphia chromosome",
+    "Hairy Cell Leukemia: The patient does not exhibit typical findings such as pancytopenia or significant splenomegaly and is not consistent with the markedly elevated leukocyte count",
+    "Considering all the above points, the most likely diagnosis for this patient is Chronic Myelogenous Leukemia (CML)",
+    "Final Answer: (D) Chronic myelogenous leukemia"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient is an elderly man with recent-onset fatigue and minor pallor but otherwise unremarkable physical exam.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "His vital signs are relatively normal, except for a mildly elevated blood pressure of 141/90 mmHg.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient has a low hemoglobin level of 10 g/dL, indicating anemia.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient has a low hematocrit of 30%, consistent with anemia.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient has a markedly elevated leukocyte count of 67,500/mm^3, suggestive of a leukemic process.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient has a mild thrombocytopenia with a platelet count of 119,000/mm^3.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient's serum chemistry is essentially within normal limits except for mildly elevated BUN and creatinine.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Acute Lymphoblastic Leukemia (ALL) typically occurs in children and young adults with rapid onset and severe constitutional symptoms.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Acute Myelogenous Leukemia (AML) is common in older adults and often presents with symptoms like fatigue, bleeding, and infection due to bone marrow failure.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "A blood smear usually shows blasts in cases of AML.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Chronic Lymphocytic Leukemia (CLL) is most common in older adults, with indolent progression, and is often asymptomatic apart from incidental findings or mild symptoms.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Chronic Myelogenous Leukemia (CML) presents in older adults, characterized by marked leukocytosis, splenomegaly, and presence of the Philadelphia chromosome.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Hairy Cell Leukemia is rare and usually presents with pancytopenia and splenomegaly, not typically with markedly elevated leukocyte counts.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The patient's significantly elevated leukocyte count is highly suggestive of a chronic leukemia rather than an acute one.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "ALL and AML are less likely due to the patient's age and the chronic nature of his symptoms.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Acute leukemias usually present with a high number of blasts on the blood smear, which is not indicated here.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 17,
+      "text": "CLL fits with the patient's age and chronic symptoms but rarely reaches such a high leukocyte count.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "text": "CLL typically presents with a lymphocyte predominance on blood smear.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 19,
+      "text": "CML fits well with the patient's age, significant leukocytosis, and relatively mild symptoms.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 20,
+      "text": "CML often presents with elevated granulocytes and can be confirmed by detecting the Philadelphia chromosome.",
+      "source_sentences": [
+        20
+      ]
+    },
+    {
+      "index": 21,
+      "text": "Hairy Cell Leukemia does not fit the patient's presentation, as it typically includes pancytopenia or significant splenomegaly and not a markedly elevated leukocyte count.",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 22,
+      "text": "Considering all the above points, the most likely diagnosis for this patient is Chronic Myelogenous Leukemia (CML).",
+      "source_sentences": [
+        22
+      ]
+    },
+    {
+      "index": 23,
+      "text": "The final answer is (D) Chronic myelogenous leukemia.",
+      "source_sentences": [
+        23
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A 72-year-old man presents with fatigue and minor pallor but an otherwise unremarkable physical exam.",
+      "pattern": "D",
+      "notes": "Introductory sentence."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "His vital signs are relatively normal, except for a mildly elevated blood pressure of 141/90 mmHg.",
+      "pattern": "D",
+      "notes": "Vital sign report."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "The patient has a low hemoglobin level of 10 g/dL and a low hematocrit of 30%, both indicating anemia.",
+      "pattern": "A",
+      "notes": "Lab results indicating anemia."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The patient has a markedly elevated leukocyte count of 67,500/mm^3, suggestive of a leukemic process.",
+      "pattern": "D",
+      "notes": "Lab result indicating potential leukemia."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "The patient also has a mild thrombocytopenia with a platelet count of 119,000/mm^3.",
+      "pattern": "D",
+      "notes": "Lab result indicating mild thrombocytopenia."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The patient's serum chemistry is essentially within normal limits except for mildly elevated BUN and creatinine.",
+      "pattern": "D",
+      "notes": "Additional lab results."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Acute Lymphoblastic Leukemia (ALL) typically occurs in children and young adults with rapid onset and severe constitutional symptoms.",
+      "pattern": "D",
+      "notes": "Disease characteristics."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Acute Myelogenous Leukemia (AML) is common in older adults and often presents with symptoms like fatigue, bleeding, and infection due to bone marrow failure, and usually shows blasts on a blood smear.",
+      "pattern": "A",
+      "notes": "Disease characteristics with diagnostic method."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Chronic Lymphocytic Leukemia (CLL) is most common in older adults, with indolent progression, and is often asymptomatic apart from incidental findings or mild symptoms.",
+      "pattern": "D",
+      "notes": "Disease characteristics."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Chronic Myelogenous Leukemia (CML) presents in older adults, characterized by marked leukocytosis, splenomegaly, and presence of the Philadelphia chromosome.",
+      "pattern": "D",
+      "notes": "Disease characteristics."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Hairy Cell Leukemia is rare and usually presents with pancytopenia and splenomegaly, not typically with markedly elevated leukocyte counts.",
+      "pattern": "D",
+      "notes": "Disease characteristics."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "The patient's significantly elevated leukocyte count is highly suggestive of a chronic leukemia rather than an acute one.",
+      "pattern": "D",
+      "notes": "Interpretation of lab results."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "ALL and AML are less likely due to the patient's age and the chronic nature of his symptoms, and acute leukemias usually present with a high number of blasts on the blood smear, which is not indicated here.",
+      "pattern": "A",
+      "notes": "Differential diagnosis."
+    },
+    {
+      "source_claims": [
+        17,
+        18
+      ],
+      "output": "CLL fits with the patient's age and chronic symptoms but rarely reaches such a high leukocyte count, and typically presents with a lymphocyte predominance on blood smear.",
+      "pattern": "A",
+      "notes": "Disease characteristics and typical presentation."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "CML fits well with the patient's age, significant leukocytosis, and relatively mild symptoms, and often presents with elevated granulocytes, which can be confirmed by detecting the Philadelphia chromosome.",
+      "pattern": "A",
+      "notes": "Disease characteristics and diagnostic confirmation."
+    },
+    {
+      "source_claims": [
+        21
+      ],
+      "output": "Hairy Cell Leukemia does not fit the patient's presentation, as it typically includes pancytopenia or significant splenomegaly and not a markedly elevated leukocyte count.",
+      "pattern": "D",
+      "notes": "Disease not fitting the patient's presentation."
+    },
+    {
+      "source_claims": [
+        22
+      ],
+      "output": "Considering all the above points, the most likely diagnosis for this patient is Chronic Myelogenous Leukemia (CML).",
+      "pattern": "C",
+      "notes": "Conclusion of diagnosis based on evidence."
+    },
+    {
+      "source_claims": [
+        23
+      ],
+      "output": "The final answer is (D) Chronic myelogenous leukemia.",
+      "pattern": "C",
+      "notes": "Final choice selection based on prior conclusion."
+    }
+  ]
+}

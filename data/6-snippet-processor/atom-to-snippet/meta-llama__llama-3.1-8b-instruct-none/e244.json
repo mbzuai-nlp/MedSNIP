@@ -1,0 +1,245 @@
+{
+  "entry_id": 244,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is Augmentin the same thing as Amoxcicilin?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2955,
+    "output_tokens": 1039,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1318,
+      "output_tokens": 538,
+      "cached_input_tokens": 0,
+      "cost": 4.788e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1637,
+      "output_tokens": 501,
+      "cached_input_tokens": 0,
+      "cost": 5.278e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "Augmentin vs Amoxicillin",
+    "drug_a": "Augmentin",
+    "drug_b": "Amoxicillin"
+  },
+  "sentences": [
+    "Augmentin and amoxicillin are related but not exactly the same thing",
+    "Amoxicillin is a type of antibiotic, whereas Augmentin is a brand name for a specific antibiotic combination product that contains amoxicillin and clavulanic acid",
+    "Clavulanic acid is a β-lactamase inhibitor that helps to increase the effectiveness of amoxicillin against certain types of bacteria",
+    "Augmentin is available in various forms, including standard, extended-release (Augmentin XR), and high-dose formulations (Augmentin ES-600)",
+    "The standard dosage for Augmentin varies depending on the infection and the patient's age, but it typically involves taking one or two tablets every 8 hours",
+    "While amoxicillin is often used as a first-line treatment for infections, Augmentin may be prescribed if the infection is caused by bacteria that are resistant to amoxicillin or other antibiotics",
+    "In summary, Augmentin is a specific antibiotic product that contains amoxicillin and clavulanic acid, making it different from amoxicillin alone"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Augmentin and amoxicillin are related but not exactly the same thing.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Amoxicillin is a type of antibiotic.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Augmentin is a brand name for a specific antibiotic combination product.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Augmentin contains amoxicillin and clavulanic acid.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Clavulanic acid is a β-lactamase inhibitor.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Clavulanic acid helps increase the effectiveness of amoxicillin.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Augmentin is available in various forms.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Augmentin XR is an extended-release formulation.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Augmentin ES-600 is a high-dose formulation.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The standard dosage for Augmentin varies depending on the infection and the patient's age.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The typical dosage for Augmentin is one or two tablets every 8 hours.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Amoxicillin is often used as a first-line treatment for infections.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Augmentin may be prescribed if the infection is caused by bacteria that are resistant to amoxicillin or other antibiotics.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Augmentin is a specific antibiotic product that contains amoxicillin and clavulanic acid.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Augmentin is different from amoxicillin alone.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        4,
+        14
+      ],
+      "output": "Augmentin is a brand name for a specific antibiotic combination product that contains amoxicillin and clavulanic acid, and it is related but not exactly the same as amoxicillin alone.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Amoxicillin is a type of antibiotic.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Augmentin contains clavulanic acid.",
+      "pattern": "D",
+      "notes": "Different fact about Augmentin."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Clavulanic acid is a β-lactamase inhibitor that helps increase the effectiveness of amoxicillin.",
+      "pattern": "A",
+      "notes": "Enumeration of properties."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Augmentin is available in various forms.",
+      "pattern": "D",
+      "notes": "Different fact about Augmentin."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Augmentin has various formulations, including extended-release and high-dose versions.",
+      "pattern": "A",
+      "notes": "Enumeration of properties."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "The standard dosage for Augmentin varies depending on the infection and the patient's age, and the typical dosage is one or two tablets every 8 hours.",
+      "pattern": "A",
+      "notes": "Enumeration of properties."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Amoxicillin is often used as a first-line treatment for infections.",
+      "pattern": "D",
+      "notes": "Different fact about amoxicillin."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Augmentin may be prescribed if the infection is caused by bacteria that are resistant to amoxicillin or other antibiotics.",
+      "pattern": "D",
+      "notes": "Different fact about Augmentin."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Augmentin is different from amoxicillin alone.",
+      "pattern": "D",
+      "notes": "Different fact about Augmentin."
+    }
+  ]
+}

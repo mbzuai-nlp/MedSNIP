@@ -1,0 +1,165 @@
+{
+  "entry_id": 57,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "what causes ringworm ?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2672,
+    "output_tokens": 580,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1190,
+      "output_tokens": 297,
+      "cached_input_tokens": 0,
+      "cost": 3.568e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1482,
+      "output_tokens": 283,
+      "cached_input_tokens": 0,
+      "cost": 4.096e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "ringworm",
+    "condition": "fungal infection of the skin"
+  },
+  "sentences": [
+    "Ringworm, also known as dermatophytosis, is a common fungal infection of the skin",
+    "It is caused by dermatophytes, which are a group of fungi that include species from the genera Trichophyton, Microsporum, and Epidermophyton",
+    "These fungi thrive in warm, moist environments and can infect the skin, hair, and nails",
+    "Transmission occurs through direct contact with an infected person or animal, or indirectly through contact with contaminated objects such as towels, clothing, or surfaces"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Ringworm is a common fungal infection of the skin.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Ringworm is caused by dermatophytes.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Dermatophytes include species from the genera Trichophyton, Microsporum, and Epidermophyton.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "These fungi thrive in warm, moist environments.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "These fungi can infect the skin.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "These fungi can infect the hair.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "These fungi can infect the nails.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Transmission occurs through direct contact with an infected person or animal.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Transmission occurs through indirect contact with contaminated objects.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Ringworm is a common fungal infection of the skin.",
+      "pattern": "D",
+      "notes": "Definition."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Ringworm is caused by dermatophytes.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The dermatophytes responsible for ringworm include species from the genera Trichophyton, Microsporum, and Epidermophyton.",
+      "pattern": "D",
+      "notes": "Enumeration of species."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Ringworm-causing fungi thrive in warm, moist environments and can infect the skin.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of one subject."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Ringworm-causing fungi can also infect the hair and nails.",
+      "pattern": "A",
+      "notes": "Enumeration of additional properties of one subject."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Ringworm is transmitted through direct or indirect contact with infected individuals or contaminated objects.",
+      "pattern": "B",
+      "notes": "Causal chain."
+    }
+  ]
+}

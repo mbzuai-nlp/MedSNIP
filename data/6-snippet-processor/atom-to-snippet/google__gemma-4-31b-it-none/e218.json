@@ -1,0 +1,516 @@
+{
+  "entry_id": 218,
+  "batch_id": 22,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 33-year-old woman presents to the emergency department with muscle spasms. She has noticed \"twitching\" in both her upper and lower extremities over the past 3 days that have interfered with her training for a marathon. She has felt more fatigued over the past month. She has no significant medical history. She takes no medication other than whey protein supplements, a multivitamin, and fish oil. Her temperature is 98.5°F (36.9°C), blood pressure is 103/71 mmHg, pulse is 105/min, respirations are 11/min, and oxygen saturation is 100% on room air. Physical exam reveals a thin woman with thinning hair. She appears pale and her mucous membranes are dry. Her neurological and cardiac exams are unremarkable. Laboratory studies are ordered as seen below. Hemoglobin: 10 g/dL Hematocrit: 30% Leukocyte count: 6,100/mm^3 with normal differential Platelet count: 187,500/mm^3 Serum: Na+: 130 mEq/L Cl-: 100 mEq/L K+: 2.3 mEq/L HCO3-: 28 mEq/L BUN: 40 mg/dL Glucose: 79 mg/dL Creatinine: 0.9 mg/dL Ca2+: 8.2 mg/dL Mg2+: 1.8 mg/dL Thyroid stimulating hormone (TSH): 4.0 mIU/L Free T4: 0.4 ng/dL (normal: 0.7-1.53 ng/dL) The patient is given 4 liters of lactated ringer solution and 40 mEq of potassium. Her repeat whole blood potassium 3 hours later is 2.4 mEq/L, and her repeat BUN is 20 mEq/L. Another 40 mEq of potassium is administered. Another repeat whole blood potassium is 2.5 mEq/L. The patient’s muscle spasms persist. Which of the following is the most likely underlying etiology for this patient’s chief concern? (A) Hypocalcemia (B) Hypomagnesemia (C) Hyponatremia (D) Hypothyroidism (E) Hypovolemia",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 6377,
+    "output_tokens": 2958,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2646,
+      "output_tokens": 1768,
+      "cached_input_tokens": 0,
+      "cost": 0.00101582
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 3731,
+      "output_tokens": 1190,
+      "cached_input_tokens": 0,
+      "cost": 0.00093723
+    }
+  ],
+  "shared_context": {
+    "age": 33,
+    "sex": "female",
+    "chief_complaint": "muscle spasms and twitching",
+    "medical_history": "none",
+    "medications": "whey protein, multivitamin, fish oil",
+    "vitals": {
+      "temperature": "98.5°F",
+      "blood_pressure": "103/71 mmHg",
+      "pulse": "105/min",
+      "respirations": "11/min",
+      "oxygen_saturation": "100%"
+    },
+    "exam_findings": "thin woman, thinning hair, pale, dry mucous membranes, neurological and cardiac exams unremarkable",
+    "treatment_history": "4L lactated ringer solution and 80 mEq potassium supplementation",
+    "correct_answer": "(D) Hypothyroidism"
+  },
+  "sentences": [
+    "To determine the most likely underlying etiology for this patient's chief concern, we need to analyze the patient's clinical presentation and laboratory findings systematically",
+    "Presentation and Symptoms: The patient is a 33-year-old woman presenting with muscle spasms and twitching in her extremities, fatigue, thinning hair, and dry mucous membranes",
+    "She also has a history of intensive physical activity (marathon training)",
+    "Temperature: 98.5°F (36.9°C) - Normal",
+    "Blood pressure: 103/71 mmHg - Lower end of normal, suggesting possible mild hypovolemia",
+    "Pulse: 105/min - Elevated, which could be a response to dehydration or stress",
+    "Respirations: 11/min - Normal",
+    "Oxygen saturation: 100% on room air - Normal",
+    "Thin woman with thinning hair and pale appearance",
+    "Dry mucous membranes",
+    "Unremarkable neurological and cardiac exams",
+    "Hemoglobin: 10 g/dL (Low)",
+    "Hematocrit: 30% (Low)",
+    "Leukocyte count: 6,100/mm^3 with normal differential (Normal)",
+    "Platelet count: 187,500/mm^3 (Normal)",
+    "Na+: 130 mEq/L (Low)",
+    "Cl-: 100 mEq/L (Normal)",
+    "K+: 2.3 mEq/L (Low, critical)",
+    "HCO3-: 28 mEq/L (Normal)",
+    "BUN: 40 mg/dL initially, decreased to 20 mg/dL after fluid administration (Elevated initially, normalized)",
+    "Glucose: 79 mg/dL (Normal)",
+    "Creatinine: 0.9 mg/dL (Normal)",
+    "Ca2+: 8.2 mg/dL (Slightly low)",
+    "Mg2+: 1.8 mg/dL (Normal)",
+    "TSH: 4.0 mIU/L (Normal)",
+    "Free T4: 0.4 ng/dL (Low)",
+    "Persistent hypokalemia despite potassium supplementation (2.3 mEq/L initially, 2.4 mEq/L, and 2.5 mEq/L after treatment)",
+    "Normal magnesium levels (Mg2+: 1.8 mEq/L)",
+    "Hyponatremia (Na+: 130 mEq/L)",
+    "Hypothyroidism (Low Free T4 with normal TSH)",
+    "Hypocalcemia (A): This patient's calcium level is slightly low but not critically low to explain the muscle spasms or twitching prominently",
+    "Hypomagnesemia (B): The patient's magnesium level is normal, ruling out hypomagnesemia as a cause",
+    "Hyponatremia (C): The patient is mildly hyponatremic, but this alone is less likely to explain the persistent hypokalemia and muscle spasms",
+    "Hypothyroidism (D): The patient has low Free T4, indicating hypothyroidism",
+    "Hypothyroidism can lead to electrolyte imbalances, including persistent hypokalemia",
+    "Hypovolemia (E): Initial signs of hypovolemia (elevated BUN, low BP) improved with fluid administration, but hypokalemia persisted",
+    "Given the persistent hypokalemia despite treatment and the underlying thyroid dysfunction, the most likely underlying etiology for the patient’s muscle spasms is Hypothyroidism",
+    "Hypothyroidism can lead to secondary electrolyte disturbances, including persistent hypokalemia",
+    "Final Answer: (D) Hypothyroidism"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "To determine the most likely underlying etiology for this patient's chief concern, the patient's clinical presentation and laboratory findings must be analyzed systematically.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient is a 33-year-old woman presenting with muscle spasms, twitching in her extremities, fatigue, thinning hair, and dry mucous membranes.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient has a history of intensive physical activity (marathon training).",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's temperature is 98.5°F (36.9°C), which is normal.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's blood pressure is 103/71 mmHg, which is at the lower end of normal and suggests possible mild hypovolemia.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient's pulse is 105/min, which is elevated and could be a response to dehydration or stress.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient's respirations are 11/min, which is normal.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's oxygen saturation is 100% on room air, which is normal.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient is a thin woman with thinning hair and a pale appearance.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The patient has dry mucous membranes.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The patient's neurological and cardiac exams are unremarkable.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The patient's hemoglobin is 10 g/dL, which is low.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The patient's hematocrit is 30%, which is low.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The patient's leukocyte count is 6,100/mm^3 with normal differential, which is normal.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The patient's platelet count is 187,500/mm^3, which is normal.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 16,
+      "text": "The patient's sodium level is 130 mEq/L, which is low.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 17,
+      "text": "The patient's chloride level is 100 mEq/L, which is normal.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 18,
+      "text": "The patient's potassium level is 2.3 mEq/L, which is critically low.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 19,
+      "text": "The patient's bicarbonate level is 28 mEq/L, which is normal.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 20,
+      "text": "The patient's BUN was initially 40 mg/dL (elevated) and decreased to 20 mg/dL (normalized) after fluid administration.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 21,
+      "text": "The patient's glucose is 79 mg/dL, which is normal.",
+      "source_sentences": [
+        20
+      ]
+    },
+    {
+      "index": 22,
+      "text": "The patient's creatinine is 0.9 mg/dL, which is normal.",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 23,
+      "text": "The patient's calcium level is 8.2 mg/dL, which is slightly low.",
+      "source_sentences": [
+        22
+      ]
+    },
+    {
+      "index": 24,
+      "text": "The patient's magnesium level is 1.8 mg/dL, which is normal.",
+      "source_sentences": [
+        23
+      ]
+    },
+    {
+      "index": 25,
+      "text": "The patient's TSH is 4.0 mIU/L, which is normal.",
+      "source_sentences": [
+        24
+      ]
+    },
+    {
+      "index": 26,
+      "text": "The patient's Free T4 is 0.4 ng/dL, which is low.",
+      "source_sentences": [
+        25
+      ]
+    },
+    {
+      "index": 27,
+      "text": "The patient has persistent hypokalemia despite potassium supplementation, with levels of 2.3 mEq/L initially, then 2.4 mEq/L, and then 2.5 mEq/L.",
+      "source_sentences": [
+        26
+      ]
+    },
+    {
+      "index": 28,
+      "text": "The patient's magnesium levels are normal (Mg2+: 1.8 mEq/L).",
+      "source_sentences": [
+        27
+      ]
+    },
+    {
+      "index": 29,
+      "text": "The patient has hyponatremia (Na+: 130 mEq/L).",
+      "source_sentences": [
+        28
+      ]
+    },
+    {
+      "index": 30,
+      "text": "The patient has hypothyroidism, indicated by low Free T4 with normal TSH.",
+      "source_sentences": [
+        29
+      ]
+    },
+    {
+      "index": 31,
+      "text": "Hypocalcemia is unlikely to be the cause because the patient's calcium level is slightly low but not critically low enough to explain the muscle spasms or twitching prominently.",
+      "source_sentences": [
+        30
+      ]
+    },
+    {
+      "index": 32,
+      "text": "Hypomagnesemia is ruled out as a cause because the patient's magnesium level is normal.",
+      "source_sentences": [
+        31
+      ]
+    },
+    {
+      "index": 33,
+      "text": "Hyponatremia is less likely to explain the persistent hypokalemia and muscle spasms despite the patient being mildly hyponatremic.",
+      "source_sentences": [
+        32
+      ]
+    },
+    {
+      "index": 34,
+      "text": "The patient has hypothyroidism, indicated by low Free T4.",
+      "source_sentences": [
+        33
+      ]
+    },
+    {
+      "index": 35,
+      "text": "Hypothyroidism can lead to electrolyte imbalances, including persistent hypokalemia.",
+      "source_sentences": [
+        34
+      ]
+    },
+    {
+      "index": 36,
+      "text": "Initial signs of hypovolemia (elevated BUN, low BP) improved with fluid administration, but hypokalemia persisted.",
+      "source_sentences": [
+        35
+      ]
+    },
+    {
+      "index": 37,
+      "text": "Given the persistent hypokalemia despite treatment and underlying thyroid dysfunction, the most likely underlying etiology for the patient’s muscle spasms is hypothyroidism.",
+      "source_sentences": [
+        36
+      ]
+    },
+    {
+      "index": 38,
+      "text": "Hypothyroidism can lead to secondary electrolyte disturbances, including persistent hypokalemia.",
+      "source_sentences": [
+        37
+      ]
+    },
+    {
+      "index": 39,
+      "text": "The final answer is (D) Hypothyroidism.",
+      "source_sentences": [
+        38
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "To determine the most likely underlying etiology for this 33-year-old woman's muscle spasms and twitching, her clinical presentation and laboratory findings must be analyzed systematically.",
+      "pattern": "D",
+      "notes": "Introduction/Approach statement."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        9,
+        10
+      ],
+      "output": "The patient is a 33-year-old woman training for a marathon who presents with muscle spasms, twitching in her extremities, fatigue, thinning hair, dry mucous membranes, and a pale appearance.",
+      "pattern": "A",
+      "notes": "Grouping of physical presentation and history."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "The patient's vitals show a normal temperature (98.5°F), respirations (11/min), and oxygen saturation (100%); however, her blood pressure is 103/71 mmHg, which is at the lower end of normal and suggests possible mild hypovolemia, and her pulse is elevated at 105/min, which could be a response to dehydration or stress.",
+      "pattern": "A",
+      "notes": "Grouping of vital signs."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "The 33-year-old woman's neurological and cardiac exams are unremarkable.",
+      "pattern": "D",
+      "notes": "Standalone exam finding."
+    },
+    {
+      "source_claims": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "output": "Laboratory studies show a low hemoglobin (10 g/dL) and hematocrit (30%), while the leukocyte count (6,100/mm³) and platelet count (187,500/mm³) are normal.",
+      "pattern": "A",
+      "notes": "Grouping of CBC results."
+    },
+    {
+      "source_claims": [
+        16,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24
+      ],
+      "output": "Serum labs reveal hyponatremia (Na+: 130 mEq/L) and critically low potassium (K+: 2.3 mEq/L), while chloride (100 mEq/L), bicarbonate (28 mEq/L), glucose (79 mg/dL), and creatinine (0.9 mg/dL) are normal; calcium is slightly low (8.2 mg/dL) and magnesium is normal (1.8 mg/dL).",
+      "pattern": "A",
+      "notes": "Grouping of basic metabolic panel."
+    },
+    {
+      "source_claims": [
+        20,
+        36
+      ],
+      "output": "Initial signs of hypovolemia, including an elevated BUN of 40 mg/dL and low blood pressure, improved with fluid administration as the BUN decreased to 20 mg/dL, but the patient's hypokalemia persisted.",
+      "pattern": "B",
+      "notes": "Causal chain regarding hypovolemia treatment."
+    },
+    {
+      "source_claims": [
+        25,
+        26
+      ],
+      "output": "The patient's thyroid studies show a normal TSH (4.0 mIU/L) and a low Free T4 (0.4 ng/dL).",
+      "pattern": "A",
+      "notes": "Grouping of thyroid labs."
+    },
+    {
+      "source_claims": [
+        27,
+        28,
+        29
+      ],
+      "output": "In this 33-year-old woman, the magnesium levels are normal (1.8 mEq/L) and sodium is low (130 mEq/L), while hypokalemia persists despite potassium supplementation (levels moving from 2.3 to 2.4 and then 2.5 mEq/L).",
+      "pattern": "A",
+      "notes": "Grouping of electrolyte status summary."
+    },
+    {
+      "source_claims": [
+        30,
+        34
+      ],
+      "output": "The patient has hypothyroidism, indicated by low Free T4 with normal TSH.",
+      "pattern": "D",
+      "notes": "Direct diagnostic conclusion from labs."
+    },
+    {
+      "source_claims": [
+        31
+      ],
+      "output": "Hypocalcemia is unlikely to be the cause of the 33-year-old woman's muscle spasms or twitching because her calcium level is only slightly low, not critically low enough to explain these symptoms.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premise."
+    },
+    {
+      "source_claims": [
+        32
+      ],
+      "output": "Hypomagnesemia is ruled out as a cause because the patient's magnesium level is normal.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premise."
+    },
+    {
+      "source_claims": [
+        33
+      ],
+      "output": "Hyponatremia is less likely to explain the persistent hypokalemia and muscle spasms despite the patient being mildly hyponatremic.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premise."
+    },
+    {
+      "source_claims": [
+        35,
+        38
+      ],
+      "output": "Hypothyroidism can lead to secondary electrolyte imbalances, including persistent hypokalemia.",
+      "pattern": "D",
+      "notes": "Medical fact/mechanism."
+    },
+    {
+      "source_claims": [
+        37,
+        39
+      ],
+      "output": "Given the persistent hypokalemia despite treatment and underlying thyroid dysfunction, the most likely underlying etiology for this patient's muscle spasms is (D) Hypothyroidism.",
+      "pattern": "C",
+      "notes": "Final diagnosis based on synthesis of premises."
+    }
+  ]
+}

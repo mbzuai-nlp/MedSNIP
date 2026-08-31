@@ -1,0 +1,137 @@
+{
+  "entry_id": 269,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old man presents to urgent care for weakness and weight loss. For the past several months, he has felt progressively weaker and has lost 25 pounds with intermittent abdominal pain. The patient has not seen a physician in 30 years and recalls being current on most of his vaccinations. A few years ago, he went to the emergency department due to abdominal pain and was found to have increased liver enzymes due to excessive alcohol use and incidental gallstones. The patient has a 50 pack-year smoking history. His temperature is 99.5°F (37.5°C), blood pressure is 161/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 95% on room air. Physical exam reveals an emaciated man. The patient has a negative Murphy sign and his abdomen is non-tender. Cardiopulmonary exam is within normal limits. Which of the following is the most appropriate next step in management? (A) CT scan of the abdomen and pelvis (B) CT scan of the chest (C) HIDA scan (D) Right upper quadrant ultrasound (E) Smoking cessation advice and primary care follow up",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2849,
+    "output_tokens": 837,
+    "cached_input_tokens": 0,
+    "cost": 0.00068843
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2849,
+      "output_tokens": 837,
+      "cached_input_tokens": 0,
+      "cost": 0.00068843
+    }
+  ],
+  "shared_context": {
+    ",age": "55",
+    "sex": "male",
+    "chief_complaint": "weakness and weight loss",
+    "medical_history": "50 pack-year smoking history, alcohol use (prior liver enzyme elevation), incidental gallstones",
+    "vitals": "temp 99.5F, BP 161/108, pulse 90, RR 17, O2 sat 95%",
+    "exam_findings": "emaciated, negative Murphy sign, non-tender abdomen",
+    "treatment_history": "no physician visits in 30 years"
+  },
+  "sentences": [
+    "To answer the provided question, we need to assess the patient's presenting symptoms and consider the most appropriate next step in management",
+    "The key details are",
+    "Patient History: A 55-year-old man with a 50 pack-year smoking history, high blood pressure, elevated temperature, and weight loss",
+    "Symptoms: Progressive weakness, weight loss of 25 pounds, and intermittent abdominal pain",
+    "Physical Exam: The patient appears emaciated, has a negative Murphy sign, and a non-tender abdomen",
+    "Rationale: Given the significant weight loss and history of abdominal pain, a CT scan of the abdomen and pelvis can help identify potential causes such as malignancies, liver disease, or other abdominal pathologies",
+    "Authority: This is an appropriate diagnostic imaging step often taken for patients presenting with significant weight loss and abdominal symptoms",
+    "Rationale: While a CT scan of the chest can identify lung pathologies, which might be relevant given the patient's extensive smoking history, the primary symptoms are abdominal-related rather than respiratory",
+    "Authority: Less prioritized unless clinical findings suggest thoracic involvement",
+    "Rationale: A HIDA scan is used to evaluate gallbladder function but is less likely to be the initial choice without strong indications of acute cholecystitis, especially given the negative Murphy sign and non-tender abdomen",
+    "Authority: Low priority based on examination findings",
+    "Rationale: While useful for evaluating gallbladder and liver pathology, the broader imaging provided by a CT scan might be more informative given the patient's systemic symptoms of weight loss and weakness",
+    "Authority: Considered but less comprehensive for overall evaluation",
+    "(E) Smoking cessation advice and primary care follow up",
+    "Rationale: While important for long-term health, this does not address the acute symptoms of weight loss and abdominal pain",
+    "Authority: Important but secondary step",
+    "Given the patient's significant weight loss, history of alcohol use, intermittent abdominal pain, and a long period without medical care, the most appropriate next step in management would be a CT scan of the abdomen and pelvis to comprehensively assess for potential underlying causes",
+    "(A) CT scan of the abdomen and pelvis"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "To answer the provided question, the presenting symptoms of this 55-year-old man must be assessed to consider the most appropriate next step in management.",
+      "pattern": "D",
+      "notes": "Introductory procedural text."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4
+      ],
+      "output": "This 55-year-old man has a 50 pack-year smoking history, high blood pressure (161/108 mmHg), elevated temperature (99.5F), weight loss of 25 pounds, progressive weakness, and intermittent abdominal pain; physical exam reveals he is emaciated with a negative Murphy sign and a non-tender abdomen.",
+      "pattern": "A",
+      "notes": "Enumeration of patient's history, symptoms, and exam findings."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "Given the significant weight loss and history of abdominal pain in this 55-year-old man, a CT scan of the abdomen and pelvis is an appropriate diagnostic imaging step to identify potential causes such as malignancies, liver disease, or other abdominal pathologies.",
+      "pattern": "C",
+      "notes": "Recommendation for CT abdomen/pelvis with supporting rationale."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "While a CT scan of the chest can identify lung pathologies relevant to this 55-year-old man's extensive smoking history, it is less prioritized because the primary symptoms are abdominal-related rather than respiratory.",
+      "pattern": "C",
+      "notes": "Reasoning for deprioritizing CT chest."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "A HIDA scan is a low priority for this 55-year-old man because it is used to evaluate gallbladder function and is less likely to be the initial choice without strong indications of acute cholecystitis, especially given his negative Murphy sign and non-tender abdomen.",
+      "pattern": "C",
+      "notes": "Reasoning for deprioritizing HIDA scan."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "While right upper quadrant ultrasound is useful for evaluating gallbladder and liver pathology, a CT scan would be more informative for this 55-year-old man given his systemic symptoms of weight loss and weakness.",
+      "pattern": "C",
+      "notes": "Comparison of ultrasound vs CT scan."
+    },
+    {
+      "source_sentences": [
+        13,
+        14,
+        15
+      ],
+      "output": "Smoking cessation advice and primary care follow-up are important for long-term health but are secondary steps that do not address the acute symptoms of weight loss and abdominal pain in this 55-year-old man.",
+      "pattern": "C",
+      "notes": "Reasoning for deprioritizing smoking cessation/primary care."
+    },
+    {
+      "source_sentences": [
+        16,
+        17
+      ],
+      "output": "Given the 55-year-old man's significant weight loss, history of alcohol use, intermittent abdominal pain, and long period without medical care, the most appropriate next step in management is (A) CT scan of the abdomen and pelvis to comprehensively assess for potential underlying causes.",
+      "pattern": "C",
+      "notes": "Final conclusion based on aggregated premises."
+    }
+  ]
+}

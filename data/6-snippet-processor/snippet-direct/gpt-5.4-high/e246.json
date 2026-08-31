@@ -1,0 +1,88 @@
+{
+  "entry_id": 246,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is there anti nausea medication that can be taken to allow fluids to stay down?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1783,
+    "output_tokens": 2688,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1783,
+      "output_tokens": 2688,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "anti-nausea medication to help keep fluids down",
+    "symptom": "nausea and vomiting"
+  },
+  "sentences": [
+    "There are several anti-nausea medications that can help alleviate nausea and vomiting, making it easier to keep fluids down",
+    "Metoclopramide is a commonly used medication for this purpose",
+    "It works by blocking dopamine receptors in the brain, which helps to reduce nausea and vomiting",
+    "Another option is ondansetron, a serotonin 5-HT3 receptor antagonist that is effective in preventing nausea and vomiting caused by chemotherapy, radiation therapy, and surgery",
+    "Ondansetron is often used in combination with other medications, such as dexamethasone, to enhance its anti-nausea effects",
+    "Other medications like promethazine and prochlorperazine can also be used to treat nausea and vomiting, although they may have more sedative effects",
+    "It's essential to consult a healthcare professional to determine the best medication for your specific needs and to discuss any potential side effects or interactions with other medications"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Several anti-nausea medications can help alleviate nausea and vomiting, making it easier to keep fluids down.",
+      "pattern": "D",
+      "notes": "Standalone general fact answering the question directly."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "Metoclopramide is a commonly used medication for nausea and vomiting. Metoclopramide works by blocking dopamine receptors in the brain, which helps reduce nausea and vomiting.",
+      "pattern": "B",
+      "notes": "Merged because the second sentence explains how the medication named in the first sentence works."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Ondansetron is a serotonin 5-HT3 receptor antagonist that is effective in preventing nausea and vomiting caused by chemotherapy, radiation therapy, and surgery.",
+      "pattern": "D",
+      "notes": "Standalone fact about ondansetron and its common uses."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Ondansetron is often used in combination with other medications, such as dexamethasone, to enhance its anti-nausea effects.",
+      "pattern": "F",
+      "notes": "Kept separate from the prior ondansetron sentence because this is a distinct checkable fact about combination therapy."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Promethazine and prochlorperazine can also be used to treat nausea and vomiting, although they may have more sedative effects.",
+      "pattern": "A",
+      "notes": "Single sentence enumerates multiple medications with a shared use and shared caveat."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "A healthcare professional should be consulted to determine the best anti-nausea medication for a person's specific needs and to discuss potential side effects or interactions with other medications.",
+      "pattern": "C",
+      "notes": "Recommendation is presented together with the supporting reasons for seeking professional guidance."
+    }
+  ]
+}

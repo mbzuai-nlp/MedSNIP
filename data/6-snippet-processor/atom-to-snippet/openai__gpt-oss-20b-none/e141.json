@@ -1,0 +1,262 @@
+{
+  "entry_id": 141,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 32-year-old man presents to the emergency department for evaluation of headache. His symptoms started last night and have persisted. He occasionally has migraine headaches, but he has not had a headache like this in the past. He reports associated nausea, vomiting, fevers, and neck pain. He has a medical history of asthma. His temperature is 100.4°F (38.0°C), blood pressure is 110/60 mmHg, pulse is 95/min, respirations are 17/min, and oxygen saturation is 98% on room air. On physical exam, he appears uncomfortable. Neurologic exam reveals no focal deficits. There is pain with passive neck flexion. No edema or rashes are noted. Lungs are clear to auscultation bilaterally. Lumbar puncture is performed and CSF results are obtained as shown below. Cerebrospinal fluid (CSF): Cell count: 175/mm^3 RBCs: 0/mm^3 Cl-: 119 mEq/L Glucose: 49 mg/dL Pressure: 150 mmH2O Total protein: 55 mg/dL Based on these results, which of the following is the most appropriate treatment regimen for this patient? (A) Acyclovir (B) Amphotericin and 5-flucytosine (C) Ceftriaxone and vancomycin (D) Ceftriaxone, vancomycin and steroids (E) Supportive care and monitoring",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4757,
+    "output_tokens": 3550,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1950,
+      "output_tokens": 1944,
+      "cached_input_tokens": 0,
+      "cost": 0.00033066
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2807,
+      "output_tokens": 1606,
+      "cached_input_tokens": 0,
+      "cost": 0.00030905
+    }
+  ],
+  "shared_context": {
+    "patient_age": 32,
+    "patient_sex": "male",
+    "chief_complaint": "headache",
+    "medical_history": "asthma",
+    "symptoms": "nausea, vomiting, fever, neck pain",
+    "exam_findings": "no focal deficits, pain on passive neck flexion",
+    "vitals": {
+      "temperature": "100.4°F",
+      "blood_pressure": "110/60 mmHg",
+      "pulse": 95,
+      "respirations": 17,
+      "oxygen_saturation": 98
+    },
+    "csf_results": {
+      "cell_count": 175,
+      "red_blood_cells": 0,
+      "chloride": 119,
+      "glucose": 49,
+      "protein": 55,
+      "pressure": 150
+    },
+    "treatment_history": "none",
+    "correct_answer": "C"
+  },
+  "sentences": [
+    "To determine the best treatment regimen for this patient, let's analyze the cerebrospinal fluid (CSF) results and clinical presentation",
+    "The CSF cell count is elevated at 175/mm^3, indicating the presence of inflammation or infection in the central nervous system (CNS)",
+    "The absence of red blood cells (RBCs) in the CSF makes subarachnoid hemorrhage less likely",
+    "The high chloride level (119 mEq/L) is a characteristic finding in bacterial meningitis",
+    "The low glucose level (49 mg/dL) suggests bacterial or fungal infection in the CNS, as glucose is typically consumed by pathogens",
+    "The elevated protein level (55 mg/dL) is indicative of inflammation and/or infection in the CNS",
+    "The raised intracranial pressure (150 mmH2O) may be a result of inflammation and/or infection in the CNS",
+    "Given the clinical presentation and CSF results, the patient likely has bacterial meningitis, with features suggestive of meningococcal meningitis, including fever, headache, nausea, vomiting, and high CSF chloride levels",
+    "Option C (Ceftriaxone and vancomycin) is the most appropriate treatment regimen for this patient",
+    "Ceftriaxone is a third-generation cephalosporin effective against Streptococcus pneumoniae and Neisseria meningitidis, common causes of bacterial meningitis",
+    "Vancomycin is added to cover for resistant S. pneumoniae and other gram-positive organisms",
+    "Supportive care, including fluid management and management of raised intracranial pressure, is also essential",
+    "Final Answer: C"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Analysis of the CSF results and clinical presentation is required to determine the best treatment regimen.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The CSF cell count of 175/mm^3 indicates inflammation or infection in the CNS.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Absence of RBCs in the CSF makes subarachnoid hemorrhage less likely.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "High CSF chloride level of 119 mEq/L is characteristic of bacterial meningitis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Low CSF glucose level of 49 mg/dL suggests bacterial or fungal infection of the CNS.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Elevated CSF protein level of 55 mg/dL indicates inflammation or infection in the CNS.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Raised intracranial pressure of 150 mmH2O may result from inflammation or infection in the CNS.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Clinical presentation and CSF results suggest bacterial meningitis, most likely meningococcal meningitis, based on fever, headache, nausea, vomiting, and high CSF chloride.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Option C (Ceftriaxone and vancomycin) is the most appropriate treatment regimen for this patient.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Ceftriaxone, a third‑generation cephalosporin, is effective against Streptococcus pneumoniae and Neisseria meningitidis.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Vancomycin is added to cover resistant Streptococcus pneumoniae and other gram‑positive organisms.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Supportive care, including fluid management and management of raised intracranial pressure, is essential.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The correct answer is option C (Ceftriaxone and vancomycin).",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Analysis of the 32‑year‑old male’s CSF results and clinical presentation is required to determine the best treatment regimen.",
+      "pattern": "D",
+      "notes": "Standalone procedural statement."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The CSF cell count of 175/mm³ indicates inflammation or infection in the central nervous system of this 32‑year‑old male.",
+      "pattern": "D",
+      "notes": "Declarative finding."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Absence of red blood cells in the CSF makes subarachnoid hemorrhage less likely in this 32‑year‑old male.",
+      "pattern": "D",
+      "notes": "Exclusion of a diagnosis."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "A high CSF chloride level of 119 mEq/L is characteristic of bacterial meningitis in this patient.",
+      "pattern": "D",
+      "notes": "Characteristic laboratory feature."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The low CSF glucose level of 49 mg/dL suggests a bacterial or fungal infection of the CNS in this patient.",
+      "pattern": "D",
+      "notes": "Suggestive laboratory finding."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "An elevated CSF protein level of 55 mg/dL indicates inflammation or infection in this 32‑year‑old male.",
+      "pattern": "D",
+      "notes": "Additional supporting lab finding."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Raised intracranial pressure of 150 mm H₂O may result from inflammation or infection in the CNS of this patient.",
+      "pattern": "D",
+      "notes": "Physiologic consequence."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The clinical presentation and CSF results suggest bacterial meningitis, most likely meningococcal meningitis, given the fever, headache, nausea, vomiting, and high CSF chloride in this 32‑year‑old male.",
+      "pattern": "D",
+      "notes": "Differential diagnosis."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Ceftriaxone, a third‑generation cephalosporin, is effective against Streptococcus pneumoniae and Neisseria meningitidis, while vancomycin is added to cover resistant Streptococcus pneumoniae and other gram‑positive organisms in this patient.",
+      "pattern": "A",
+      "notes": "Enumeration of drug properties."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Supportive care, including fluid management and management of raised intracranial pressure, is essential for this patient.",
+      "pattern": "D",
+      "notes": "Adjunctive treatment."
+    },
+    {
+      "source_claims": [
+        9,
+        13
+      ],
+      "output": "For this 32‑year‑old male with bacterial meningitis, the most appropriate treatment regimen is ceftriaxone and vancomycin.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise."
+    }
+  ]
+}

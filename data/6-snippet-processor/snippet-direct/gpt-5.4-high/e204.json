@@ -1,0 +1,73 @@
+{
+  "entry_id": 204,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1712,
+    "output_tokens": 1903,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1712,
+      "output_tokens": 1903,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "poison ivy contagion",
+    "condition": "poison ivy",
+    "symptom": "rash"
+  },
+  "sentences": [
+    "No, poison ivy is not contagious between people",
+    "The rash resulting from poison ivy is caused by an allergic reaction to urushiol oil, which is found in the plant's leaves, stems, and roots",
+    "This oil can stick to skin, clothes, tools, and other surfaces",
+    "The rash itself cannot be spread from person to person",
+    "However, contact with urushiol oil from an affected person's skin, clothing, or other contaminated objects can cause a reaction in another person",
+    "Therefore, it is the urushiol oil that is responsible for spreading the reaction and not the rash itself"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Poison ivy is not contagious between people.",
+      "pattern": "D",
+      "notes": "Standalone direct answer to the contagion question."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "A poison ivy rash is caused by an allergic reaction to urushiol oil, which is found in poison ivy leaves, stems, and roots.",
+      "pattern": "D",
+      "notes": "Standalone explanatory fact about the cause of the rash."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Urushiol oil can stick to skin, clothes, tools, and other surfaces.",
+      "pattern": "D",
+      "notes": "Standalone fact about where urushiol oil can persist."
+    },
+    {
+      "source_sentences": [
+        3,
+        4,
+        5
+      ],
+      "output": "The poison ivy rash itself cannot be spread from person to person, but contact with urushiol oil from an affected person's skin, clothing, or other contaminated objects can cause a reaction in another person; urushiol oil, not the rash itself, is responsible for spread.",
+      "pattern": "B",
+      "notes": "Explicit reasoning chain: the rash is not spread, whereas contact with urushiol oil can cause another person's reaction; the conclusion follows with 'Therefore.'"
+    }
+  ]
+}

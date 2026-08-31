@@ -1,0 +1,123 @@
+{
+  "entry_id": 240,
+  "batch_id": 24,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "If this is just muscle strain, how many days should I expect the pain to go away?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2829,
+    "output_tokens": 1616,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1296,
+      "output_tokens": 752,
+      "cached_input_tokens": 0,
+      "cost": 0.00014416
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1533,
+      "output_tokens": 864,
+      "cached_input_tokens": 0,
+      "cost": 0.00016695
+    }
+  ],
+  "shared_context": {
+    "topic": "muscle strain pain duration",
+    "condition": "muscle strain",
+    "symptom": "pain"
+  },
+  "sentences": [
+    "Muscle strain, also known as pulled muscle, typically causes pain that can resolve within a few days to several weeks, depending on the severity of the strain",
+    "Mild muscle strains: Pain usually improves within a few days to a week",
+    "Moderate muscle strains: Pain may last for several weeks, often 2 to 3 weeks",
+    "Severe muscle strains: Pain and dysfunction can last for several months and may require rehabilitation",
+    "General healing process: The healing time for muscle strains can vary based on the individual's overall health, the specific muscle involved, and adherence to recommended treatment protocols",
+    "Common treatment: Rest, ice, compression, and elevation (RICE) and over-the-counter pain medications are commonly used to manage muscle strain symptoms"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Muscle strain pain can resolve within a few days to several weeks, depending on the severity of the strain.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Mild muscle strains usually improve within a few days to a week.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Moderate muscle strains may last for several weeks, often 2 to 3 weeks.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Severe muscle strains can last for several months and may require rehabilitation.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The healing time for muscle strains can vary based on the individual's overall health, the specific muscle involved, and adherence to recommended treatment protocols.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Common treatment for muscle strain includes rest, ice, compression, elevation (RICE) and over-the-counter pain medications.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "Muscle strain pain typically resolves within a few days to several weeks depending on severity: mild strains improve within a few days to a week, moderate strains last about 2 to 3 weeks, and severe strains can last months and often require rehabilitation.",
+      "pattern": "A",
+      "notes": "Enumeration of duration categories for the same medical condition."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The healing time for muscle strains can vary based on the person's overall health, the specific muscle involved, and how well they follow recommended treatment protocols.",
+      "pattern": "D",
+      "notes": "Standalone factor affecting recovery duration."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Common treatment for muscle strain includes rest, ice, compression, elevation (RICE), and over-the-counter pain medications.",
+      "pattern": "D",
+      "notes": "Self-contained statement about recommended care."
+    }
+  ]
+}

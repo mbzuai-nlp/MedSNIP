@@ -1,0 +1,185 @@
+{
+  "entry_id": 183,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 45-year-old man presents to a physician due to difficulty swallowing and slurred speech. For the past 3 months, the patient has been coughing when he drinks liquids. His speech also sounds different according to his wife. The patient has no significant medical history. His temperature is 98.6°F (37.0°C), blood pressure is 110/80 mmHg, pulse is 60/min, and respirations are 12/min. On physical exam, he is unable to fully extend his tongue, and there are fasciculations on his tongue. When tapping the mandible at the chin while the mouth is held open, there is pronounced upward movement of the lower jaw. Sensory exam reveals no deficits. Which of the following therapies is most likely to improve survival for this patient's disease process? (A) Baclofen (B) Dextromethorphan and quinidine (C) Edaravone (D) Riluzole (E) Tizanidine",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 4203,
+    "output_tokens": 966,
+    "cached_input_tokens": 1920
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1742,
+      "output_tokens": 514,
+      "cached_input_tokens": 0,
+      "cost": 0.009495
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2461,
+      "output_tokens": 452,
+      "cached_input_tokens": 1920,
+      "cost": 0.0082725
+    }
+  ],
+  "shared_context": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "difficulty swallowing and slurred speech",
+    "medical_history": "no significant medical history",
+    "vitals": "temperature 98.6°F, blood pressure 110/80 mmHg, pulse 60/min, respirations 12/min",
+    "exam_findings": "unable to fully extend tongue, fasciculations on tongue, pronounced upward movement of lower jaw",
+    "correct_answer": "Riluzole"
+  },
+  "sentences": [
+    "To determine the best answer, let's analyze the patient's symptoms and physical exam findings",
+    "The patient's difficulty swallowing (dysphagia) and slurred speech may indicate a neuromuscular disorder",
+    "The patient's past coughing when drinking liquids and slurred speech suggest that the patient may have a disorder of the central or peripheral nervous system, as these symptoms can lead to aspiration",
+    "The patient has no significant medical history, which makes it less likely that the symptoms are due to a secondary cause, such as a medication side effect or another medical condition",
+    "The lack of fever, normal blood pressure, and normal pulse and respirations make an infectious or acute inflammatory cause less likely",
+    "The physical exam findings of inability to fully extend the tongue, fasciculations on the tongue, and pronounced upward movement of the lower jaw when tapping the mandible suggest a disorder of the lower motor neuron",
+    "The sensory exam reveals no deficits, which further supports a lower motor neuron disorder",
+    "Based on these findings, the most likely diagnosis is amyotrophic lateral sclerosis (ALS), a motor neuron disease characterized by the progressive degeneration of both upper and lower motor neurons",
+    "Given the diagnosis of ALS, the best therapy for improving survival would be Riluzole, which is the only FDA-approved medication forALS and has been shown to prolong survival by an average of 2-3 months",
+    "(D) Riluzole"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's symptoms and physical exam findings need to be analyzed to determine the best answer.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's difficulty swallowing and slurred speech may indicate a neuromuscular disorder.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's past coughing when drinking liquids and slurred speech suggest a disorder of the central or peripheral nervous system.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient has no significant medical history, which makes it less likely that the symptoms are due to a secondary cause.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The lack of fever, normal blood pressure, and normal pulse and respirations make an infectious or acute inflammatory cause less likely.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The physical exam findings suggest a disorder of the lower motor neuron.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The sensory exam reveals no deficits, which further supports a lower motor neuron disorder.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The most likely diagnosis is amyotrophic lateral sclerosis (ALS).",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Given the diagnosis of ALS, Riluzole is the best therapy for improving survival.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Riluzole is the only FDA-approved medication for ALS and has been shown to prolong survival by an average of 2-3 months.",
+      "source_sentences": [
+        8,
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The patient's symptoms and physical exam findings need to be analyzed to determine the best therapy to improve survival.",
+      "pattern": "D",
+      "notes": "Introductory analysis needed."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "The 45-year-old male's difficulty swallowing, slurred speech, past coughing when drinking liquids, and speech changes suggest a neuromuscular disorder, potentially involving the central or peripheral nervous system.",
+      "pattern": "B",
+      "notes": "Causal link between symptoms and disorder type."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "This 45-year-old male has no significant medical history, which makes a secondary cause less likely, and his vitals (normal temperature, blood pressure, pulse, and respirations) make an infectious or acute inflammatory cause less likely.",
+      "pattern": "A",
+      "notes": "Symptoms considered in context of history and vitals."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "The physical exam findings of tongue fasciculations and inability to fully extend the tongue suggest a disorder of the lower motor neuron, supported by the absence of sensory deficits.",
+      "pattern": "A",
+      "notes": "Exam findings aligned with type of neuron disorder."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The most likely diagnosis for this 45-year-old male is amyotrophic lateral sclerosis (ALS).",
+      "pattern": "D",
+      "notes": "Standalone statement of diagnosis."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "For ALS, Riluzole is the best therapy for improving survival, as it is the only FDA-approved medication for ALS and has been shown to prolong survival by an average of 2-3 months.",
+      "pattern": "C",
+      "notes": "Conclusion about treatment tied to supporting information."
+    }
+  ]
+}

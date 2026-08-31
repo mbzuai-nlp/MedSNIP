@@ -1,0 +1,157 @@
+{
+  "entry_id": 76,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 72-year-old man presents to his primary care physician for a general checkup. He states that he has been a bit more fatigued lately but believes it is secondary to poor sleep at his new house. The patient is otherwise healthy and takes no medications. His temperature is 98.0°F (36.7°C), blood pressure is 141/90 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 98% on room air. Physical exam is notable only for minor pallor but is otherwise unremarkable. Basic laboratory studies are ordered as seen below.\n\nHemoglobin: 10 g/dL\nHematocrit: 30%\nLeukocyte count: 67,500/mm^3\nPlatelet count: 119,000/mm^3\n\nSerum:\nNa: 141 mEq/L\nCl: 103 mEq/L\nK: 4.0 Eq/L\nHCO3-: 24 mEq/L\nBUN: 22 mg/dL\nGlucose: 109 mg/dL\nCreatinine: 1.2 mg/dL\nCa: 10.0 mg/dL\n\nWhich of the following is the most likely diagnosis? (A) Acute lymphoblastic leukemia (B) Acute myelogenous leukemia (C) Chronic lymphocytic leukemia (D) Chronic myelogenous leukemia (E) Hairy cell leukemia",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2716,
+    "output_tokens": 1060,
+    "cached_input_tokens": 2560,
+    "cost": 0.01419
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2716,
+      "output_tokens": 1060,
+      "cached_input_tokens": 2560,
+      "cost": 0.01419
+    }
+  ],
+  "shared_context": {
+    "age": "72",
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "medications": "none",
+    "vitals": "T 98.0°F, BP 141/90, P 82, R 16, O2 98% RA",
+    "exam_findings": "minor pallor, otherwise unremarkable",
+    "lab_results": {
+      "hb": "10 g/dL",
+      "hct": "30%",
+      "wbc": "67,500/mm^3",
+      "platelets": "119,000/mm^3",
+      "na": "141 mEq/L",
+      "cl": "103 mEq/L",
+      "k": "4.0 mEq/L",
+      "hco3": "24 mEq/L",
+      "bun": "22 mg/dL",
+      "glucose": "109 mg/dL",
+      "creatinine": "1.2 mg/dL",
+      "ca": "10.0 mg/dL"
+    },
+    "correct_answer": "Chronic myelogenous leukemia (D)"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for the patient, we will analyze the laboratory results and physical exam findings",
+    "The patient's hemoglobin and hematocrit levels are low, which indicates anemia",
+    "The leukocyte count is elevated at 67,500/mm^3, which is a sign of leukocytosis",
+    "The differential diagnosis for anemia, leukocytosis, and thrombocytosis (elevated platelet count) includes various types of leukemia",
+    "Acute lymphoblastic leukemia (ALL) often presents with a high leukocyte count and anemia, but it is typically associated with a left shift in the differential count, indicating a predominance of immature cells",
+    "Acute myelogenous leukemia (AML) also presents with a high leukocyte count, but it often has a higher proportion of immature cells in the differential count compared to ALL",
+    "Chronic lymphocytic leukemia (CLI is not the correct spelling; the correct term is CLL) is associated with a high leukocyte count, but typically, the lymphocyte count is predominantly mature, and other cell types are usually present in smaller amounts",
+    "Chronic myelogenous leukemia (CML) often presents with a high leukocyte count and a left shift, similar to ALL, but it is typically associated with the Philadelphia chromosome (t(9;22) translocation)",
+    "However, the patient's age and laboratory findings do not support CML, which more commonly affects younger patients",
+    "Hairy cell leukemia presents with pancytopenia (low counts of all blood cell types), splenomegaly, and often, a high leukocyte count with a predominance of hairy cells",
+    "Considering these points, the most likely diagnosis for the patient is CML due to his age, laboratory results, and the presence of a left shift in the differential count",
+    "However, it is worth noting that further diagnostic studies such as bone marrow biopsy and cytogenetic analysis would be necessary to confirm the diagnosis",
+    "The Philadelphia chromosome (t(9;22) translocation) is often seen in CML, which can be detected by cytogenetic analysis",
+    "(B) Acute myelogenous leukemia"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely diagnosis for this 72-year-old male with fatigue, we will analyze his laboratory results and physical exam findings.",
+      "pattern": "C",
+      "notes": "Introduction clarifies intent to base diagnosis on specific findings."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "This 72-year-old male's hemoglobin (10 g/dL) and hematocrit (30%) levels are low, indicating anemia.",
+      "pattern": "D",
+      "notes": "Standalone fact about lab results and their implication."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The leukocyte count is elevated at 67,500/mm^3, a sign of leukocytosis in this 72-year-old male.",
+      "pattern": "D",
+      "notes": "Clear standalone lab interpretation."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The differential diagnosis for anemia, leukocytosis, and thrombocytosis includes various types of leukemia.",
+      "pattern": "D",
+      "notes": "Definition-like, links symptoms to potential conditions."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Acute lymphoblastic leukemia (ALL) and acute myelogenous leukemia (AML) both present with high leukocyte counts and anemia. ALL is associated with a left shift indicating immature cells. AML commonly has a high proportion of immature cells compared to ALL. Chronic lymphocytic leukemia (CLL) also shows a high leukocyte count primarily of mature lymphocytes, while chronic myelogenous leukemia (CML) presents with a high leukocyte count and left shift and is associated with the Philadelphia chromosome (t(9;22) translocation).",
+      "pattern": "A",
+      "notes": "Enumerating characteristics of different types of leukemia."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "This 72-year-old male's age and laboratory findings do not support a diagnosis of chronic myelogenous leukemia (CML), which more commonly affects younger patients.",
+      "pattern": "B",
+      "notes": "Linked sentences based on age and lab findings reducing likelihood of CML."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Hairy cell leukemia presents with pancytopenia, splenomegaly, and often a high leukocyte count with a predominance of hairy cells, which do not match this patient's presentation.",
+      "pattern": "D",
+      "notes": "Describing another potential diagnosis to rule out."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Considering the points, the most likely diagnosis for this 72-year-old male is chronic myelogenous leukemia (CML) due to the age, laboratory results, and presumable left shift in the differential count.",
+      "pattern": "C",
+      "notes": "Conclusive diagnosis citing support from previous points."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "Further diagnostic studies such as bone marrow biopsy and cytogenetic analysis, which can detect the Philadelphia chromosome (t(9;22) translocation), would be necessary to confirm chronic myelogenous leukemia (CML).",
+      "pattern": "C",
+      "notes": "Conclusion with reasoning and next diagnostic steps needed for confirmation."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "(B) Acute myelogenous leukemia is not the correct diagnosis for this 72-year-old male.",
+      "pattern": "E",
+      "notes": "Clarifies incorrect options."
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "entry_id": 184,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 45-year-old man presents to a physician due to difficulty swallowing and slurred speech. For the past 3 months, the patient has been coughing when he drinks liquids. His speech also sounds different according to his wife. The patient has no significant medical history. His temperature is 98.6°F (37.0°C), blood pressure is 110/80 mmHg, pulse is 60/min, and respirations are 12/min. On physical exam, he is unable to fully extend his tongue, and there are fasciculations on his tongue. When tapping the mandible at the chin while the mouth is held open, there is pronounced upward movement of the lower jaw. Sensory exam reveals no deficits. Which of the following therapies is most likely to improve survival for this patient's disease process? (A) Baclofen (B) Dextromethorphan and quinidine (C) Edaravone (D) Riluzole (E) Tizanidine",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4787,
+    "output_tokens": 1469,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1945,
+      "output_tokens": 793,
+      "cached_input_tokens": 0,
+      "cost": 0.00055419
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2842,
+      "output_tokens": 676,
+      "cached_input_tokens": 0,
+      "cost": 0.00062634
+    }
+  ],
+  "shared_context": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "difficulty swallowing and slurred speech",
+    "medical_history": "none significant",
+    "vitals": "T 98.6°F, BP 110/80 mmHg, P 60/min, R 12/min",
+    "exam_findings": "unable to fully extend tongue, tongue fasciculations, pronounced upward movement of lower jaw upon mandibular tapping, no sensory deficits",
+    "correct_answer": "Riluzole"
+  },
+  "sentences": [
+    "To address this question, let's analyze the patient's symptoms and potential diagnoses",
+    "The patient is experiencing difficulty swallowing, slurred speech, and a change in the sound of his speech, along with a history of coughing when drinking liquids",
+    "These symptoms, combined with the physical examination findings of an inability to fully extend the tongue, fasciculations on the tongue, and a pronounced upward movement of the lower jaw upon mandibular tapping, suggest a condition known as amyotrophic lateral sclerosis (ALS)",
+    "ALS is a progressive neurodegenerative disease that affects the nerve cells responsible for controlling voluntary muscle movement",
+    "The symptoms and physical findings in this patient are consistent with a classic presentation of ALS",
+    "Baclofen: A muscle relaxant and antispastic agent, often used in the treatment of spasticity associated with multiple sclerosis and spinal cord injuries",
+    "While it may provide some relief from muscle spasms, it is not the primary treatment for ALS",
+    "Dextromethorphan and quinidine: A combination used in treating pseudobulbar paralsyed responses in ALS patients",
+    "It may provide some symptomatic relief but does not slow progression of the disease",
+    "Edaravone: A free radical scavenger, which has shown some efficacy in slowing the progression of ALS in certain patients",
+    "However, its use is not universally accepted and is often used off-label",
+    "Riluzole: A glutamate release inhibitor, which has been shown to slow the progression of ALS by about 3 months in clinical trials",
+    "It is the only medication approved for the treatment of ALS in the USA",
+    "Tizanidine: A muscle relaxant used for muscle spasms, particularly in conditions such as multiple sclerosis or spinal cord injuries",
+    "Considering the options provided, the most likely therapy to improve survival for this patient's disease process is Riluzole, as it has been shown to slow the progression of ALS in clinical trials"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient is experiencing difficulty swallowing, slurred speech, and a change in the sound of his speech, along with a history of coughing when drinking liquids.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The symptoms (difficulty swallowing, slurred speech, coughing when drinking liquids) and physical examination findings (inability to fully extend the tongue, fasciculations on the tongue, and a pronounced upward movement of the lower jaw upon mandibular tapping) suggest amyotrophic lateral sclerosis (ALS).",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "ALS is a progressive neurodegenerative disease that affects the nerve cells responsible for controlling voluntary muscle movement.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The symptoms and physical findings in this patient are consistent with a classic presentation of ALS.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Baclofen is a muscle relaxant and antispastic agent often used in the treatment of spasticity associated with multiple sclerosis and spinal cord injuries.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Baclofen may provide some relief from muscle spasms but is not the primary treatment for ALS.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Dextromethorphan and quinidine is a combination used in treating pseudobulbar paralyzed responses in ALS patients.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Dextromethorphan and quinidine may provide some symptomatic relief but does not slow progression of the disease.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Edaravone is a free radical scavenger which has shown some efficacy in slowing the progression of ALS in certain patients.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The use of Edaravone is not universally accepted and is often used off-label.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Riluzole is a glutamate release inhibitor which has been shown to slow the progression of ALS by about 3 months in clinical trials.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Riluzole is the only medication approved for the treatment of ALS in the USA.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Tizanidine is a muscle relaxant used for muscle spasms, particularly in conditions such as multiple sclerosis or spinal cord injuries.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The most likely therapy to improve survival for this patient's disease process is Riluzole, as it has been shown to slow the progression of ALS in clinical trials.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The patient's symptoms and potential diagnoses are analyzed to address the question.",
+      "source_sentences": [
+        0
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This 45-year-old man is experiencing difficulty swallowing, slurred speech, and a change in the sound of his speech, along with a history of coughing when drinking liquids.",
+      "pattern": "D",
+      "notes": "Standalone summary of symptoms."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "The symptoms (difficulty swallowing, slurred speech, coughing when drinking liquids) and physical examination findings (inability to fully extend the tongue, fasciculations on the tongue, and a pronounced upward movement of the lower jaw upon mandibular tapping) in this 45-year-old man suggest amyotrophic lateral sclerosis (ALS), a progressive neurodegenerative disease that affects the nerve cells responsible for controlling voluntary muscle movement.",
+      "pattern": "C",
+      "notes": "Diagnosis combined with supporting evidence and definition."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Baclofen is a muscle relaxant and antispastic agent often used in the treatment of spasticity associated with multiple sclerosis and spinal cord injuries; while it may provide some relief from muscle spasms, it is not the primary treatment for ALS.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Baclofen."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Dextromethorphan and quinidine is a combination used in treating pseudobulbar paralyzed responses in ALS patients; it may provide some symptomatic relief but does not slow progression of the disease.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Dextromethorphan/quinidine."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Edaravone is a free radical scavenger which has shown some efficacy in slowing the progression of ALS in certain patients, although its use is not universally accepted and is often used off-label.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Edaravone."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Riluzole is a glutamate release inhibitor and the only medication approved for the treatment of ALS in the USA, having been shown to slow the progression of ALS by about 3 months in clinical trials.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Riluzole."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Tizanidine is a muscle relaxant used for muscle spasms, particularly in conditions such as multiple sclerosis or spinal cord injuries.",
+      "pattern": "D",
+      "notes": "Standalone definition."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "For this 45-year-old man with suspected ALS, the most likely therapy to improve survival is Riluzole, as it has been shown to slow the progression of ALS in clinical trials.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premise."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "The 45-year-old patient's symptoms and potential diagnoses are analyzed to address the question.",
+      "pattern": "D",
+      "notes": "Standalone procedural statement."
+    }
+  ]
+}

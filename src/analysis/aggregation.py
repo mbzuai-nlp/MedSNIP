@@ -14,7 +14,6 @@ Aggregation rules implemented:
 
 Output:
   data/!-analysis/aggregation_summary.json — per-(dataset, mode, model, rule) F1 + bootstrap CIs
-  data/!-analysis/aggregation_summary.md   — human-readable table
 
 Usage:
     python -m src.analysis.aggregation
@@ -30,7 +29,6 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[2]
 OUT_DIR = ROOT / "data" / "!-analysis"
 OUT_JSON = OUT_DIR / "aggregation_summary.json"
-OUT_MD = OUT_DIR / "aggregation_summary.md"
 
 
 # ───────────────────────────────────────────────────────── aggregation rules ──
@@ -288,39 +286,7 @@ def main():
 
     OUT_JSON.write_text(json.dumps(results, indent=2))
 
-    # Markdown table
-    md = ["# Aggregation rule comparison (snippet vs atom-aggregated)\n"]
-    md.append("Tests robustness of the snippet > atom claim under different atom→claim aggregation rules.\n")
-    md.append("`gap` = snippet F1_F − atom F1_F under the rule. Bootstrap 95% CI in brackets.\n")
-    md.append("`P(>0)` = bootstrap probability that snippet > atom (the granularity claim).\n\n")
-
-    def fmt_run(label, run, indent=""):
-        md.append(f"{indent}**{label}**: snippet F1_F={run['snippet']['F1_F']} "
-                  f"(n={run['n_common']})\n\n")
-        md.append(f"{indent}| rule | atom F1_F | atom F1_T | atom macro | "
-                  f"gap | 95% CI | P(snippet>atom) |\n")
-        md.append(f"{indent}|---|---:|---:|---:|---:|---|---:|\n")
-        for rname, r in run["rules"].items():
-            g = r["gap_vs_snippet"]
-            md.append(f"{indent}| `{rname}` | {r['F1_F']} | {r['F1_T']} | {r['macro']} | "
-                      f"{g['mean_gap']:+.4f} | [{g['ci_lo']:+.4f}, {g['ci_hi']:+.4f}] | "
-                      f"{g['P_pos']:.3f} |\n")
-        md.append("\n")
-
-    for split in ("train", "dev", "test"):
-        for mode in ("full-context", "claim-only"):
-            for model in ("gpt-5.4-high", "gpt-4o-none"):
-                run = results["medsnip-bench"].get(split, {}).get(mode, {}).get(model)
-                if run: fmt_run(f"MedSNIP-Bench {split} · {mode} · {model}", run)
-
-    if results["healthfc"]:
-        fmt_run("HealthFC · claim-only · gpt-5.4-high", results["healthfc"]["gpt-5.4-high"])
-    if results["medhallu"]:
-        fmt_run("MedHallu · claim-only · gpt-5.4-high", results["medhallu"]["gpt-5.4-high"])
-
-    OUT_MD.write_text("".join(md))
     print(f"wrote {OUT_JSON}")
-    print(f"wrote {OUT_MD}")
 
     # Compact console summary
     print("\nHEADLINE — P(snippet > atom) by rule:")

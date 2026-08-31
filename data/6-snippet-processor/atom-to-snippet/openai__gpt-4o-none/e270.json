@@ -1,0 +1,151 @@
+{
+  "entry_id": 270,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old man presents to urgent care for weakness and weight loss. For the past several months, he has felt progressively weaker and has lost 25 pounds with intermittent abdominal pain. The patient has not seen a physician in 30 years and recalls being current on most of his vaccinations. A few years ago, he went to the emergency department due to abdominal pain and was found to have increased liver enzymes due to excessive alcohol use and incidental gallstones. The patient has a 50 pack-year smoking history. His temperature is 99.5°F (37.5°C), blood pressure is 161/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 95% on room air. Physical exam reveals an emaciated man. The patient has a negative Murphy sign and his abdomen is non-tender. Cardiopulmonary exam is within normal limits. Which of the following is the most appropriate next step in management? (A) CT scan of the abdomen and pelvis (B) CT scan of the chest (C) HIDA scan (D) Right upper quadrant ultrasound (E) Smoking cessation advice and primary care follow up",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 4420,
+    "output_tokens": 1054,
+    "cached_input_tokens": 3712
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1795,
+      "output_tokens": 584,
+      "cached_input_tokens": 1664,
+      "cost": 0.0082475
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2625,
+      "output_tokens": 470,
+      "cached_input_tokens": 2048,
+      "cost": 0.0087025
+    }
+  ],
+  "shared_context": {
+    "age": 55,
+    "sex": "male",
+    "chief_complaint": "weakness and weight loss",
+    "medical_history": "excessive alcohol use, gallstones, 50 pack-year smoking history",
+    "vitals": "temperature 99.5°F, blood pressure 161/108 mmHg, pulse 90/min, respirations 17/min, oxygen saturation 95%",
+    "exam_findings": "emaciated, negative Murphy sign, abdomen non-tender, cardiopulmonary exam normal",
+    "treatment_history": "was current on vaccinations but has not seen a physician in 30 years",
+    "correct_answer": "CT scan of the abdomen and pelvis"
+  },
+  "sentences": [
+    "Given the patient's presentation with progressive weakness, weight loss, and intermittent abdominal pain, along with a history of excessive alcohol use and gallstones, a CT scan of the abdomen and pelvis is the most appropriate next step in management",
+    "This is because the patient's symptoms are suggestive of a gastrointestinal or abdominal pathology, such as pancreatic cancer or gallbladder disease, which can be better evaluated with a CT scan than with other imaging modalities (3)",
+    "A CT scan of the abdomen and pelvis can help identify any masses or abnormalities in the liver, pancreas, or other abdominal organs that may be causing the patient's symptoms (1)",
+    "A CT scan of the chest (option B) may be useful if there is a suspicion of lung cancer or other thoracic pathology, but it is not the most appropriate next step in this case (4)",
+    "A HIDA scan (option C) is used to evaluate gallbladder function and may be helpful if the patient's symptoms suggest gallbladder disease, but it is not as comprehensive as a CT scan for evaluating the entire abdomen and pelvis (2)",
+    "A right upper quadrant ultrasound (option D) may be useful for evaluating the gallbladder and liver, but it is not as sensitive as a CT scan for detecting malignancies or other abnormalities in the abdomen and pelvis (5)",
+    "Smoking cessation advice and primary care follow-up (option E) are important, but they do not address the patient's acute symptoms and are not the most appropriate next step in management (6)"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Given the patient's presentation with progressive weakness, weight loss, and intermittent abdominal pain, along with a history of excessive alcohol use and gallstones, a CT scan of the abdomen and pelvis is the most appropriate next step in management.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's symptoms are suggestive of a gastrointestinal or abdominal pathology, such as pancreatic cancer or gallbladder disease, which can be better evaluated with a CT scan than with other imaging modalities.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A CT scan of the abdomen and pelvis can help identify any masses or abnormalities in the liver, pancreas, or other abdominal organs that may be causing the patient's symptoms.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "A CT scan of the chest (option B) may be useful if there is a suspicion of lung cancer or other thoracic pathology, but it is not the most appropriate next step in this case.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "A HIDA scan (option C) is used to evaluate gallbladder function and may be helpful if the patient's symptoms suggest gallbladder disease, but it is not as comprehensive as a CT scan for evaluating the entire abdomen and pelvis.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A right upper quadrant ultrasound (option D) may be useful for evaluating the gallbladder and liver, but it is not as sensitive as a CT scan for detecting malignancies or other abnormalities in the abdomen and pelvis.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Smoking cessation advice and primary care follow-up (option E) are important, but they do not address the patient's acute symptoms and are not the most appropriate next step in management.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "For this 55-year-old male presenting with progressive weakness, weight loss, and intermittent abdominal pain with a history of excessive alcohol use and gallstones, a CT scan of the abdomen and pelvis is the most appropriate next step. It can help identify gastrointestinal or abdominal pathologies such as pancreatic cancer or gallbladder disease by detecting masses or abnormalities in the liver, pancreas, or other abdominal organs.",
+      "pattern": "C",
+      "notes": "Recommendation based on clinical presentation and supporting reasoning."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "A CT scan of the chest may be useful if there is a suspicion of lung cancer or other thoracic pathology, but it is not the most appropriate next step for this 55-year-old male in this case.",
+      "pattern": "D",
+      "notes": "Standalone claim about lung evaluation."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "A HIDA scan is used to evaluate gallbladder function and may be helpful if the patient's symptoms suggest gallbladder disease, but it is not as comprehensive as a CT scan for evaluating the entire abdomen and pelvis in this 55-year-old male.",
+      "pattern": "D",
+      "notes": "Standalone claim about HIDA scan utility."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "A right upper quadrant ultrasound may be useful for evaluating the gallbladder and liver, but it is not as sensitive as a CT scan for detecting malignancies or other abnormalities in the abdomen and pelvis of this 55-year-old male.",
+      "pattern": "D",
+      "notes": "Standalone claim about ultrasound utility."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Smoking cessation advice and primary care follow-up are important for this 55-year-old male, but they do not address the acute symptoms of weakness, weight loss, and abdominal pain and are not the most appropriate next step in management.",
+      "pattern": "D",
+      "notes": "Standalone claim about smoking cessation and follow-up."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "entry_id": 129,
+  "batch_id": 13,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "If the side effects of the Prozac become too much is there a wean down period I would have to go through or would I be able to stop it immediately?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1877,
+    "output_tokens": 2230,
+    "cached_input_tokens": 0,
+    "cost": 0.00036851
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1877,
+      "output_tokens": 2230,
+      "cached_input_tokens": 0,
+      "cost": 0.00036851
+    }
+  ],
+  "shared_context": {
+    "topic": "discontinuation of Prozac (fluoxetine)",
+    "drug_a": "Prozac",
+    "symptom": "side effects"
+  },
+  "sentences": [
+    "When discontinuing fluoxetine (Prozac), a gradual tapering of the dose is generally recommended to minimize the risk of withdrawal symptoms",
+    "The American Psychiatric Association recommends a gradual tapering of the dose over a period of 2-4 weeks",
+    "This allows the body to adjust to the decrease in medication levels and reduces the risk of withdrawal symptoms, such as dizziness, headaches, and irritability",
+    "The exact tapering schedule may vary depending on the individual's response to the medication and the severity of their symptoms",
+    "A healthcare provider may recommend a specific tapering schedule, which may involve reducing the dose by 10-20% every 1-2 weeks",
+    "It is essential to work closely with a healthcare provider to determine the best tapering schedule for your specific situation",
+    "Abruptly stopping fluoxetine can lead to withdrawal symptoms, including dizziness, headaches, irritability, and flu-like symptoms",
+    "In severe cases, withdrawal from fluoxetine can lead to more serious symptoms, such as seizures and serotonin syndrome"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "output": "When discontinuing fluoxetine, a gradual tapering of the dose over 2‑4 weeks is generally recommended to minimize withdrawal symptoms such as dizziness, headaches, and irritability, allowing the body to adjust to decreased medication levels.",
+      "pattern": "B",
+      "notes": "Recommendation (gradual taper) linked to reason (reduced withdrawal); causal chain across sentences."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "A healthcare provider may recommend a specific tapering schedule that involves reducing the dose by 10‑20% every 1‑2 weeks.",
+      "pattern": "D",
+      "notes": "Standalone recommendation about taper details."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "It is essential to work closely with a healthcare provider to determine the best tapering schedule for your specific situation.",
+      "pattern": "D",
+      "notes": "Standalone instruction regarding provider collaboration."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Abruptly stopping fluoxetine can cause withdrawal symptoms, including dizziness, headaches, irritability, and flu‑like symptoms; severe withdrawal may lead to seizures and serotonin syndrome.",
+      "pattern": "B",
+      "notes": "Causal chain linking abrupt cessation to withdrawal and severe complications."
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "entry_id": 199,
+  "batch_id": 20,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can a nausea prescription be taken at the same time as Dramamine?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2897,
+    "output_tokens": 905,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1301,
+      "output_tokens": 464,
+      "cached_input_tokens": 0,
+      "cost": 0.0078925
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1596,
+      "output_tokens": 441,
+      "cached_input_tokens": 0,
+      "cost": 0.0084
+    }
+  ],
+  "shared_context": {
+    "drug_a": "nausea prescription",
+    "drug_b": "Dramamine (dimenhydrinate)",
+    "condition": "motion sickness"
+  },
+  "sentences": [
+    "Dramamine, also known as dimenhydrinate, is an antihistamine used to treat nausea, vomiting, and dizziness caused by motion sickness",
+    "When considering taking a nausea prescription with Dramamine, it is essential to consult with a healthcare provider to ensure safe and effective treatment",
+    "Combining a nausea prescription with Dramamine may be safe in some cases, but it depends on the specific medication and its interactions",
+    "Certain medications, such as antihistamines, can interact with other medications, including prescription medications, and may increase the risk of side effects",
+    "To minimize potential interactions, it is crucial to inform your healthcare provider about all medications you are currently taking, including over-the-counter medications like Dramamine",
+    "Your healthcare provider can assess the potential risks and benefits of combining the medications and adjust your treatment plan accordingly",
+    "In general, it is recommended to consult with a healthcare provider before taking any new medication, especially when combining it with other medications",
+    "They can provide personalized guidance and help you make informed decisions about your treatment"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Dramamine, also known as dimenhydrinate, is an antihistamine used to treat nausea, vomiting, and dizziness caused by motion sickness.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "When considering taking a nausea prescription with Dramamine, it is essential to consult with a healthcare provider to ensure safe and effective treatment.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Combining a nausea prescription with Dramamine may be safe in some cases.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Whether combining a nausea prescription with Dramamine is safe depends on the specific medication and its interactions.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Certain medications, such as antihistamines, can interact with other medications, including prescription medications, and may increase the risk of side effects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "To minimize potential interactions, it is crucial to inform your healthcare provider about all medications you are currently taking, including over-the-counter medications like Dramamine.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Your healthcare provider can assess the potential risks and benefits of combining the medications and adjust your treatment plan accordingly.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "In general, it is recommended to consult with a healthcare provider before taking any new medication.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "It is especially recommended to consult with a healthcare provider when combining a new medication with other medications.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Healthcare providers can provide personalized guidance and help you make informed decisions about your treatment.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Dramamine, also known as dimenhydrinate, is an antihistamine used to treat nausea, vomiting, and dizziness caused by motion sickness.",
+      "pattern": "D",
+      "notes": "Standalone definition and usage of Dramamine."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "When considering taking a nausea prescription with Dramamine, it is essential to consult with a healthcare provider to ensure safe and effective treatment. Combining a nausea prescription with Dramamine may be safe in some cases, but this depends on the specific medication and its interactions. Certain medications, such as antihistamines, can interact with other medications, including prescription medications, and may increase the risk of side effects.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises about consulting a healthcare provider and potential interactions."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        9
+      ],
+      "output": "To minimize potential interactions, it is crucial to inform your healthcare provider about all medications you are currently taking, including over-the-counter medications like Dramamine. Your healthcare provider can assess the potential risks and benefits of combining the medications and adjust your treatment plan accordingly. It is especially recommended to consult with a healthcare provider when combining a new medication with other medications.",
+      "pattern": "B",
+      "notes": "Causal chain emphasizing the role of healthcare provider in minimizing risks and adjusting treatment."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "In general, it is recommended to consult with a healthcare provider before taking any new medication.",
+      "pattern": "D",
+      "notes": "General recommendation; stands alone."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Healthcare providers can provide personalized guidance and help you make informed decisions about your treatment.",
+      "pattern": "D",
+      "notes": "General fact about healthcare providers; stands alone."
+    }
+  ]
+}

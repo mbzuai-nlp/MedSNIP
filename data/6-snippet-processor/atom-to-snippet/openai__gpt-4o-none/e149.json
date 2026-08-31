@@ -1,0 +1,229 @@
+{
+  "entry_id": 149,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 24-year-old man with epilepsy refractory to valproic acid, phenytoin, and levetiracetam undergoes magnetic resonance imaging of his brain while monitored by anesthetic care. He wakes up screaming in pain due to an electrocardiogram lead having caused a significant thermal burn circumferentially around his left leg. He is admitted to the medical intensive care unit for continuous electroencephalogram monitoring while on a midazolam infusion for seizure suppression and supportive care for his burn. Overnight, the nurse continued to increase the patient's midazolam infusion rate, but she also noticed that his left toes were cold to the touch with significant edema. His temperature is now 100°F (37.8°C), blood pressure is 110/75 mmHg, pulse is 80/min, respirations are 10/min and oxygen saturation is 95% on 2 liters nasal cannula. No dorsalis pedis or posterior tibial pulses are detected on the left lower extremity. A delta pressure of 25 mmHg is obtained in the left leg. What is the most appropriate next step in management? (A) Amputation (B) Escharotomy (C) Fasciotomy (D) Intravenous fluid infusion based on Parkland formula (E) Transfer to burn center",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 4576,
+    "output_tokens": 1297,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1904,
+      "output_tokens": 726,
+      "cached_input_tokens": 0,
+      "cost": 0.01202
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2672,
+      "output_tokens": 571,
+      "cached_input_tokens": 0,
+      "cost": 0.01239
+    }
+  ],
+  "shared_context": {
+    "age": 24,
+    "sex": "male",
+    "medical_history": "epilepsy refractory to valproic acid, phenytoin, levetiracetam",
+    "treatment_history": "midazolam infusion for seizure suppression",
+    "exam_findings": "cold left toes, significant edema, no dorsalis pedis or posterior tibial pulses on the left lower extremity",
+    "vitals": "temperature 100°F (37.8°C), blood pressure 110/75 mmHg, pulse 80/min, respirations 10/min, oxygen saturation 95% on 2L nasal cannula",
+    "correct_answer": "C) Fasciotomy",
+    "chief_complaint": "thermal burn from ECG lead"
+  },
+  "sentences": [
+    "To address this clinical scenario, let's break it down step-by-step",
+    "Assess the patient's condition: The patient has refractory epilepsy requiring continuous electroencephalogram (EEG) monitoring and midazolam infusion (1) for seizure suppression",
+    "The patient also has a significant thermal burn circumferentially around the left leg due to an electrocardiogram (ECG) lead",
+    "Recognize potential complications: The patient's cold left toes with significant edema, normal temperature, and the absence of dorsalis pedis and posterior tibial pulses suggest potential compartment syndrome",
+    "The delta pressure of 25 mmHg in the left leg further supports this suspicion",
+    "Prioritize compartment syndrome management: Given the high suspicion of compartment syndrome, immediate action is required to prevent further damage to the affected limb",
+    "A) Amputation: This would be a last resort, usually considered when the limb is already non-viable due to severe trauma or prolonged ischemia",
+    "Not the best initial step in this case",
+    "B) Escharotomy: This is an incision through eschar (burn eschar) to relieve pressure and promote healing",
+    "However, it does not address the potential compartment syndrome",
+    "C) Fasciotomy: This surgical procedure involves making an incision in the fascia (the layer of tissue covering a muscle) to relieve pressure and restore blood flow to the affected area",
+    "Given the high suspicion of compartment syndrome, this is the most appropriate next step",
+    "D) Intravenous fluid infusion based on Parkland formula: While fluid resuscitation is important for burn care, it does not address the potential compartment syndrome directly",
+    "E) Transfer to a burn center: This would be a secondary step to ensure optimal care for the burn and associated complications, but it does not address the immediate need for compartment syndrome management",
+    "Final answer: C) Fasciotomy"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient has refractory epilepsy requiring continuous EEG monitoring and midazolam infusion for seizure suppression.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient also has a significant thermal burn circumferentially around the left leg due to an electrocardiogram (ECG) lead.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's cold left toes with significant edema, normal temperature, and absence of dorsalis pedis and posterior tibial pulses suggest potential compartment syndrome.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The delta pressure of 25 mmHg in the left leg further supports suspicion of compartment syndrome.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Immediate action is required to prevent further damage to the affected limb due to high suspicion of compartment syndrome.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Amputation would be a last resort, usually considered when the limb is non-viable due to severe trauma or prolonged ischemia.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Amputation is not the best initial step in this case.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Escharotomy is an incision through eschar (burn eschar) to relieve pressure and promote healing.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Escharotomy does not address the potential compartment syndrome.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Fasciotomy involves making an incision in the fascia to relieve pressure and restore blood flow to the affected area.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Given the high suspicion of compartment syndrome, fasciotomy is the most appropriate next step.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Intravenous fluid infusion based on Parkland formula is important for burn care but does not directly address compartment syndrome.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Transfer to a burn center would be a secondary step to ensure optimal care but does not address immediate compartment syndrome management.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Final answer: C) Fasciotomy.",
+      "source_sentences": [
+        14
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The 24-year-old male patient has refractory epilepsy requiring continuous EEG monitoring and midazolam infusion for seizure suppression. He also has a significant thermal burn circumferentially around the left leg due to an electrocardiogram (ECG) lead.",
+      "pattern": "A",
+      "notes": "Both claims relate to the patient's current medical situation."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        11,
+        14
+      ],
+      "output": "The patient's cold left toes with significant edema, normal temperature, and absence of dorsalis pedis and posterior tibial pulses, along with a delta pressure of 25 mmHg in the left leg, suggest potential compartment syndrome. Immediate action is required to prevent further damage due to high suspicion of compartment syndrome, making fasciotomy the most appropriate next step. Final answer: C) Fasciotomy.",
+      "pattern": "A",
+      "notes": "One-subject enumeration and logical reasoning leading to a conclusion."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Amputation would be a last resort, usually considered when the limb is non-viable due to severe trauma or prolonged ischemia, and is not the best initial step in this case.",
+      "pattern": "C",
+      "notes": "Conclusion about amputation with reasoning."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Escharotomy is an incision through eschar (burn eschar) to relieve pressure and promote healing, but does not address the potential compartment syndrome in this patient.",
+      "pattern": "C",
+      "notes": "Explanation and reasoning not to choose escharotomy."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Fasciotomy involves making an incision in the fascia to relieve pressure and restore blood flow to the affected area.",
+      "pattern": "D",
+      "notes": "Standalone definition of fasciotomy."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Intravenous fluid infusion based on Parkland formula is important for burn care but does not directly address compartment syndrome.",
+      "pattern": "C",
+      "notes": "Conclusion about fluid infusion with reasoning."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Transfer to a burn center would be a secondary step to ensure optimal care but does not address immediate compartment syndrome management.",
+      "pattern": "C",
+      "notes": "Conclusion about transfer with reasoning."
+    }
+  ]
+}

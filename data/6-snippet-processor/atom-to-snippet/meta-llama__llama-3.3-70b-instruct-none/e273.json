@@ -1,0 +1,216 @@
+{
+  "entry_id": 273,
+  "batch_id": 28,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 60-year-old woman presents to the emergency department with back pain after gardening. Her pain is 7/10 in severity, non-radiating, and not relieved by rest. She has never experienced this pain in the past and denies fever, night sweats, unintentional weight loss, and bowel or bladder incontinence. She has hypertension for which she takes hydrochlorothiazide and had a recent asthma flare requiring a prednisone taper. She does not drink alcohol or smoke. Her temperature is 98.6°F (37.0°C), blood pressure is 120/80 mmHg, pulse is 90/min, and respirations are 18/min. Physical exam reveals an uncomfortable middle-aged woman in no acute distress. There is no tenderness to palpation of the spinous processes. Flexion of the hip with the knee extended while the patient is supine does not elicit any pain, nor does forced dorsiflexion of the foot at terminal hip extension. She has 5/5 strength to hip flexion, extension, abduction, and adduction; knee flexion and extension; and ankle dorsiflexion and plantarflexion bilaterally. Bilateral patellar and Achilles reflexes are 2+. Serum laboratory results are as follows: Hemoglobin: 12.0 g/dL Creatinine: 1.1 mg/dL Ca2+: 10.6 mg/dL Which of the following is the most likely diagnosis? (A) Herniated disc (B) Lumbosacral strain (C) Multiple myeloma (D) Spondylolisthesis (E) Vertebral compression fracture",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4808,
+    "output_tokens": 1219,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2046,
+      "output_tokens": 672,
+      "cached_input_tokens": 0,
+      "cost": 0.00041964
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2762,
+      "output_tokens": 547,
+      "cached_input_tokens": 0,
+      "cost": 0.00045124
+    }
+  ],
+  "shared_context": {
+    "age": 60,
+    "sex": "female",
+    "chief_complaint": "back pain",
+    "medical_history": "hypertension, asthma",
+    "medications": "hydrochlorothiazide, prednisone",
+    "vitals": "temperature: 98.6°F, blood pressure: 120/80 mmHg, pulse: 90/min, respirations: 18/min",
+    "exam_findings": "no tenderness to palpation of the spinous processes, 5/5 strength to hip flexion, extension, abduction, and adduction; knee flexion and extension; and ankle dorsiflexion and plantarflexion bilaterally"
+  },
+  "sentences": [
+    "Given the patient's presentation, we will evaluate the provided options one by one to identify the most likely diagnosis",
+    "Option A: Herniated disc",
+    "A herniated disc typically presents with radiating pain, numbness, or tingling in the lower extremities, especially with activities that exacerbate the pain, such as bending, lifting, or prolonged sitting",
+    "The patient's pain is non-radiating and not relieved by rest, making this option less likely",
+    "Option B: Lumbosacral strain",
+    "Lumbosacral strain is often caused by overuse or sudden injury, typically presenting with muscle spasms, stiffness, and pain in the lower back",
+    "The patient's presentation does not entirely match this scenario, as she does not have muscle spasms or stiffness",
+    "However, lumbosacral strain should still be considered given her recent gardening activity",
+    "Option C: Multiple myeloma",
+    "Elevated calcium levels (Ca2+: 10.6 mg/dL) can be associated with multiple myeloma, a type of plasma cell neoplasm",
+    "However, the absence of systemic symptoms such as anemia (Hemoglobin: 12.0 g/dL, which is within the normal range), weight loss, or bone pain makes this diagnosis less likely",
+    "Option D: Spondylolisthesis",
+    "Spondylolisthesis is a condition where a vertebral body slips out of place, often causing back pain and stiffness",
+    "The patient's physical exam does not reveal tenderness to palpation of the spinous processes or pain with specific movements (e.g., flexion with the knee extended), making this option less likely",
+    "Option E: Vertebral compression fracture",
+    "The patient's back pain, which is not relieved by rest and not radiating, suggests a possible vertebral compression fracture",
+    "The elevated calcium levels (Ca2+: 10.6 mg/dL) further support this diagnosis, as hypercalcemia can be associated with osteoporosis, which increases the risk of vertebral compression fractures",
+    "E) Vertebral compression fracture"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's presentation will be evaluated to identify the most likely diagnosis.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "A herniated disc typically presents with radiating pain, numbness, or tingling in the lower extremities.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's pain is non-radiating and not relieved by rest, making a herniated disc less likely.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Lumbosacral strain is often caused by overuse or sudden injury, presenting with muscle spasms, stiffness, and pain in the lower back.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's presentation does not entirely match lumbosacral strain, but it should still be considered given her recent gardening activity.",
+      "source_sentences": [
+        6,
+        7
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Elevated calcium levels can be associated with multiple myeloma, a type of plasma cell neoplasm.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The absence of systemic symptoms such as anemia, weight loss, or bone pain makes multiple myeloma less likely.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Spondylolisthesis is a condition where a vertebral body slips out of place, often causing back pain and stiffness.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient's physical exam does not reveal tenderness to palpation of the spinous processes or pain with specific movements, making spondylolisthesis less likely.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The patient's back pain, which is not relieved by rest and not radiating, suggests a possible vertebral compression fracture.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The elevated calcium levels further support the diagnosis of vertebral compression fracture, as hypercalcemia can be associated with osteoporosis.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Vertebral compression fracture is the most likely diagnosis.",
+      "source_sentences": [
+        17
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This 60-year-old woman's presentation will be evaluated to identify the most likely diagnosis for her back pain.",
+      "pattern": "D",
+      "notes": "Introduction to diagnostic consideration."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "A herniated disc typically presents with radiating pain, numbness, or tingling in the lower extremities; however, this patient's pain is non-radiating and not relieved by rest, making a herniated disc less likely.",
+      "pattern": "A",
+      "notes": "Differential diagnosis for one condition."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Lumbosacral strain is often caused by overuse or sudden injury, presenting with muscle spasms, stiffness, and pain in the lower back; although the patient's presentation does not entirely match, it should be considered given her recent gardening activity.",
+      "pattern": "A",
+      "notes": "Detailed consideration of another potential diagnosis."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Elevated calcium levels can be associated with multiple myeloma, a type of plasma cell neoplasm; however, the absence of systemic symptoms such as anemia, weight loss, or bone pain makes multiple myeloma less likely in this case.",
+      "pattern": "A",
+      "notes": "Evaluation of multiple myeloma as a potential diagnosis."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Spondylolisthesis is a condition where a vertebral body slips out of place, often causing back pain and stiffness; however, the patient's physical exam does not reveal tenderness to palpation of the spinous processes or pain with specific movements, making spondylolisthesis less likely.",
+      "pattern": "A",
+      "notes": "Assessment of spondylolisthesis as a diagnostic option."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "The patient's back pain, which is not relieved by rest and not radiating, suggests a possible vertebral compression fracture; the elevated calcium levels further support this diagnosis, as hypercalcemia can be associated with osteoporosis.",
+      "pattern": "A",
+      "notes": "Supporting evidence for vertebral compression fracture."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Given the patient's presentation and laboratory findings, vertebral compression fracture is the most likely diagnosis.",
+      "pattern": "C",
+      "notes": "Conclusion based on previous considerations."
+    }
+  ]
+}

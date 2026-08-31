@@ -1,0 +1,151 @@
+{
+  "entry_id": 199,
+  "batch_id": 20,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can a nausea prescription be taken at the same time as Dramamine?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2996,
+    "output_tokens": 2923,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1353,
+      "output_tokens": 1146,
+      "cached_input_tokens": 0,
+      "cost": 0.00020103
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1643,
+      "output_tokens": 1777,
+      "cached_input_tokens": 0,
+      "cost": 0.00029807
+    }
+  ],
+  "shared_context": {
+    "topic": "co-administration of Dramamine with a nausea prescription",
+    "drug_a": "Dramamine",
+    "drug_b": "nausea prescription",
+    "condition": "nausea"
+  },
+  "sentences": [
+    "Dramamine, also known as dimenhydrinate, is an antihistamine used to treat nausea, vomiting, and dizziness caused by motion sickness",
+    "When considering taking a nausea prescription with Dramamine, it is essential to consult with a healthcare provider to ensure safe and effective treatment",
+    "Combining a nausea prescription with Dramamine may be safe in some cases, but it depends on the specific medication and its interactions",
+    "Certain medications, such as antihistamines, can interact with other medications, including prescription medications, and may increase the risk of side effects",
+    "To minimize potential interactions, it is crucial to inform your healthcare provider about all medications you are currently taking, including over-the-counter medications like Dramamine",
+    "Your healthcare provider can assess the potential risks and benefits of combining the medications and adjust your treatment plan accordingly",
+    "In general, it is recommended to consult with a healthcare provider before taking any new medication, especially when combining it with other medications",
+    "They can provide personalized guidance and help you make informed decisions about your treatment"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Dramamine (dimenhydrinate) is an antihistamine used to treat nausea",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Dramamine (dimenhydrinate) is an antihistamine used to treat vomiting",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Dramamine (dimenhydrinate) is an antihistamine used to treat dizziness caused by motion sickness",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Before taking a nausea prescription with Dramamine, you should consult a healthcare provider to ensure safe and effective treatment",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Combining a nausea prescription with Dramamine may be safe in some cases",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Certain medications such as antihistamines can interact with other medications, including prescription medications, and may increase the risk of side effects",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Inform your healthcare provider about all medications you are currently taking, including over-the-counter medications like Dramamine, to minimize potential interactions",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Your healthcare provider can assess the potential risks and benefits of combining the medications and adjust your treatment plan accordingly",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "It is recommended to consult a healthcare provider before taking any new medication, especially when combining it with other medications",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "They can provide personalized guidance and help you make informed decisions about your treatment",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Dramamine (dimenhydrinate) is an antihistamine used to treat nausea, vomiting, and dizziness caused by motion sickness.",
+      "pattern": "A",
+      "notes": "Enumeration of therapeutic uses of the same drug."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "Before taking a nausea prescription with Dramamine you should consult a healthcare provider to ensure safe and effective treatment; while combining the two may be safe in some cases, certain medications such as antihistamines can interact with other prescription drugs and increase side‑effect risk, so informing your provider about all medications you are taking enables them to assess the risks and benefits and adjust your treatment plan.",
+      "pattern": "C",
+      "notes": "Recommendation (conclusion) supported by premises describing safety considerations and interaction risks."
+    }
+  ]
+}

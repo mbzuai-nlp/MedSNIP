@@ -1,0 +1,122 @@
+{
+  "entry_id": 268,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 36-year-old man presents to the office for follow up after initiating antidepressant therapy. Two months ago, he was started on citalopram after several weeks of depressed mood, loss of interest in activities, depressed appetite, and inability to sleep. Today, he reports minimal improvement in his symptoms. He had some nausea after starting the medication, but this has resolved. He denies thoughts of suicide or self-harm. His temperature is 98.6°F (37.0°C), pulse is 80/min, blood pressure is 120/80 mmHg, respirations are 22/min, and oxygen saturation is 97% on room air. Exam reveals a depressed, tired appearing man. Which of the following is the most appropriate next step in management? (A) Add mirtazapine (B) Electroconvulsive therapy (C) Switch to amitriptyline (D) Switch to paroxetine (E) Switch to phenelzine",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2573,
+    "output_tokens": 821,
+    "cached_input_tokens": 0,
+    "cost": 8.43e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2573,
+      "output_tokens": 821,
+      "cached_input_tokens": 0,
+      "cost": 8.43e-05
+    }
+  ],
+  "shared_context": {
+    "age": "36",
+    "sex": "male",
+    "chief_complaint": "minimal improvement in depressive symptoms after 2 months on citalopram",
+    "medical_history": "depressed mood, loss of interest in activities, depressed appetite, inability to sleep",
+    "medications": "citalopram",
+    "vitals": "temperature 98.6°F (37.0°C), pulse 80/min, blood pressure 120/80 mmHg, respirations 22/min, oxygen saturation 97% on room air",
+    "exam_findings": "depressed, tired appearing man",
+    "correct_answer": "Switch to nortriptyline"
+  },
+  "sentences": [
+    "Given the patient's minimal response to citalopram after two months, the most appropriate next step in management is to switch to a different antidepressant, as the patient has shown some side effects, but not an adequate response to the initial medication",
+    "Studies have shown that switching to a different antidepressant after inadequate response to an initial treatment can be beneficial",
+    "Switching to a different antidepressant is a reasonable next step because the patient has not experienced a full response to citalopram, and the side effects have been manageable",
+    "Amitriptyline (C) is a tricyclic antidepressant (TCA) and may be considered as a second-line treatment, but it carries a higher risk of side effects, particularly anticholinergic effects",
+    "Mirtazapine (A) may be considered as an adjunct to citalopram, but the patient has shown some improvement in nausea as a side effect, and adding another medication may increase the risk of adverse effects",
+    "Electroconvulsive therapy (B) may be considered if the patient's symptoms are severe or if there is a high risk of suicide, but this is not the case in this scenario",
+    "Switching to paroxetine (D) is not indicated since it is an SSRI and the patient has already been treated with citalopram, which is also an SSRI",
+    "Phenelzine (E) is a monoamine oxidase inhibitor (MAOI) and requires a strict dietary restriction and lifestyle modification, making it a less practical choice",
+    "The most appropriate next step in management is to switch to a different antidepressant, such as nortriptyline, which has been shown to be effective in patients with inadequate response to an initial treatment",
+    "Answer: C) Switch to nortriptyline"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Given the patient's minimal response to citalopram after two months, the most appropriate next step in management is to switch to a different antidepressant, as the patient has shown some side effects, but not an adequate response to the initial medication.",
+      "pattern": "C",
+      "notes": "Concluding differential diagnosis with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3
+      ],
+      "output": "Studies have shown that switching to a different antidepressant after inadequate response to an initial treatment can be beneficial. Switching to a different antidepressant is a reasonable next step because the patient has not experienced a full response to citalopram, and the side effects have been manageable. Amitriptyline is a tricyclic antidepressant (TCA) and may be considered as a second-line treatment, but it carries a higher risk of side effects, particularly anticholinergic effects.",
+      "pattern": "A",
+      "notes": "All properties of one subject (antidepressant switching) including reasoning and a caution."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Mirtazapine may be considered as an adjunct to citalopram, but the patient has shown some improvement in nausea as a side effect, and adding another medication may increase the risk of adverse effects.",
+      "pattern": "D",
+      "notes": "Standalone caution about adding another medication."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Electroconvulsive therapy may be considered if the patient's symptoms are severe or if there is a high risk of suicide, but this is not the case in this scenario.",
+      "pattern": "D",
+      "notes": "Standalone differential consideration."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Switching to paroxetine is not indicated since it is an SSRI and the patient has already been treated with citalopram, which is also an SSRI.",
+      "pattern": "D",
+      "notes": "Standalone contraindication for paroxetine."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Phenelzine is a monoamine oxidase inhibitor (MAOI) and requires a strict dietary restriction and lifestyle modification, making it a less practical choice.",
+      "pattern": "D",
+      "notes": "Standalone contraindication for phenelzine."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "The most appropriate next step in management is to switch to a different antidepressant, such as nortriptyline, which has been shown to be effective in patients with inadequate response to an initial treatment.",
+      "pattern": "C",
+      "notes": "Final answer with alternative medication inlined."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Answer: Switch to nortriptyline.",
+      "pattern": "C",
+      "notes": "Final answer."
+    }
+  ]
+}

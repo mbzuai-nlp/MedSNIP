@@ -1,0 +1,159 @@
+{
+  "entry_id": 211,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2822,
+    "output_tokens": 572,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1264,
+      "output_tokens": 341,
+      "cached_input_tokens": 0,
+      "cost": 0.0002939
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1558,
+      "output_tokens": 231,
+      "cached_input_tokens": 0,
+      "cost": 0.00029032
+    }
+  ],
+  "shared_context": {
+    "topic": "corneal abrasion",
+    "symptom": "discharge from the eye"
+  },
+  "sentences": [
+    "A corneal abrasion typically does not cause significant discharge from the eye",
+    "The primary symptoms of a corneal abrasion include pain, a sensation of a foreign body in the eye, tearing, redness, and sensitivity to light",
+    "While mild discharge can occur due to increased tearing, it is not a prominent feature",
+    "If there is significant discharge, it may indicate a secondary infection or another underlying condition, such as conjunctivitis"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A corneal abrasion typically does not cause significant discharge from the eye",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Pain is a primary symptom of a corneal abrasion",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A sensation of a foreign body in the eye is a primary symptom of a corneal abrasion",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Tearing is a primary symptom of a corneal abrasion",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Redness is a primary symptom of a corneal abrasion",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Sensitivity to light is a primary symptom of a corneal abrasion",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Mild discharge can occur in a corneal abrasion due to increased tearing",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Mild discharge is not a prominent feature of a corneal abrasion",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Significant discharge in a corneal abrasion may indicate a secondary infection",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Significant discharge in a corneal abrasion may indicate another underlying condition, such as conjunctivitis",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A corneal abrasion typically does not cause significant discharge from the eye.",
+      "pattern": "D",
+      "notes": "Standalone fact answering the query."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "Primary symptoms of a corneal abrasion include pain, a sensation of a foreign body in the eye, tearing, redness, and sensitivity to light.",
+      "pattern": "A",
+      "notes": "Enumeration of primary symptoms for the same subject."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Mild discharge is not a prominent feature of a corneal abrasion, although it can occur due to increased tearing.",
+      "pattern": "B",
+      "notes": "Causal link between tearing and mild discharge."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Significant discharge in a corneal abrasion may indicate a secondary infection or another underlying condition, such as conjunctivitis.",
+      "pattern": "A",
+      "notes": "Enumeration of potential causes for significant discharge."
+    }
+  ]
+}

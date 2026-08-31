@@ -1,0 +1,141 @@
+{
+  "entry_id": 148,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 44-year-old homeless man presents to the emergency department after being stabbed multiple times in the abdomen. The patient is intoxicated and is unable to offer further history. His temperature is 97.5°F (36.4°C), blood pressure is 92/52 mmHg, pulse is 145/min, respirations are 33/min, and oxygen saturation is 90% on room air. He is intubated to protect his airway, given 2 units of packed red blood cells, and sent to the operating room for an exploratory laparotomy. The patient is subsequently admitted to the intensive care unit. He is extubated the next day and appears well. His vitals are within normal limits. Physical exam reveals sparse hair that is falling out throughout the patient’s body. He has a rash by the corners of his mouth. The patient has multiple loose bowel movements and on day 6 the patient’s surgical wound does not appear to be healing. It is held together only by the sutures with minimal underlying healing. Which of the following is most likely deficient in this patient? (A) Riboflavin (B) Thiamine (C) Vitamin C (D) Vitamin D (E) Zinc",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2896,
+    "output_tokens": 807,
+    "cached_input_tokens": 0,
+    "cost": 0.00068314
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2896,
+      "output_tokens": 807,
+      "cached_input_tokens": 0,
+      "cost": 0.00068314
+    }
+  ],
+  "shared_context": {
+    "age": "44",
+    "sex": "male",
+    "chief_complaint": "multiple stab wounds to the abdomen",
+    "medical_history": "homelessness, intoxication",
+    "vitals": "BP 92/52 mmHg, pulse 145/min, resp 33/min, O2 sat 90% RA",
+    "exam_findings": "sparse hair falling out, rash by the corners of the mouth, multiple loose bowel movements, surgical wound failing to heal on day 6",
+    "treatment_history": "intubation, 2 units PRBCs, exploratory laparotomy"
+  },
+  "sentences": [
+    "To solve this question, we must follow a step-by-step approach to identify the most likely deficient nutrient in the patient",
+    "Assess the patient's symptoms: The patient presents with sparse hair, falling out, a rash by the corners of his mouth, multiple loose bowel movements, and a surgical wound that is not healing",
+    "These symptoms can be indicative of various nutritional deficiencies, but we need to consider the context of the patient's condition",
+    "Consider the patient's situation: The patient is a 44-year-old homeless man who was stabbed multiple times in the abdomen",
+    "He is intoxicated, which may imply poor nutrition and possibly an alcohol use disorder",
+    "Homelessness can also lead to poor nutrition due to limited access to food",
+    "Analyze the symptoms: The symptoms of sparse hair, falling out, and a rash by the corners of the mouth are classic signs of nutritional deficiency",
+    "The rash is often associated with ariboflavinosis (riboflavin deficiency), but it can also be a sign of other deficiencies",
+    "Multiple loose bowel movements and poor wound healing can be indicative of a variety of deficiencies, including those in vitamins and minerals",
+    "Eliminate less likely options: Vitamin D deficiency can lead to poor wound healing and muscle weakness, but it is not as directly linked to the symptoms described",
+    "Thiamine deficiency (beriberi) can cause nerve damage and muscle weakness, but it is not typically associated with the symptoms described",
+    "Identify the most likely deficiency: Considering the patient's symptoms and context, the most likely deficiency is riboflavin (vitamin B2) deficiency",
+    "Riboflavin is essential for energy production, nerve function, and growth",
+    "A deficiency can cause ariboflavinosis, characterized by a sore throat, cracked and red lips, a smooth red tongue, and a mouth and lip rash (angular stomatitis)",
+    "It can also lead to hair loss and poor wound healing",
+    "Riboflavin deficiency can cause ariboflavinosis, characterized by a sore throat, cracked and red lips, a smooth red tongue, and a mouth and lip rash (angular stomatitis)",
+    "A deficiency in riboflavin can also lead to hair loss",
+    "Poor wound healing is a symptom associated with riboflavin deficiency",
+    "The described symptoms are consistent with a deficiency in riboflavin (vitamin B2)",
+    "(A) Riboflavin"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2
+      ],
+      "output": "In a 44-year-old homeless man with sparse hair, hair loss, a rash by the corners of the mouth, loose bowel movements, and a surgical wound that is not healing, these symptoms can be indicative of various nutritional deficiencies.",
+      "pattern": "C",
+      "notes": "Combining the premise of the patient's symptoms with the goal of identifying a deficiency."
+    },
+    {
+      "source_sentences": [
+        3,
+        4,
+        5
+      ],
+      "output": "The patient is a 44-year-old homeless man who is intoxicated, which may imply poor nutrition and possibly an alcohol use disorder, and homelessness can also lead to poor nutrition due to limited access to food.",
+      "pattern": "A",
+      "notes": "Enumerating risk factors for poor nutrition based on the subject's social history."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        8
+      ],
+      "output": "Sparse hair, hair loss, and a rash by the corners of the mouth are classic signs of nutritional deficiency; the rash is often associated with ariboflavinosis (riboflavin deficiency) but can be a sign of others, while loose bowel movements and poor wound healing can indicate various vitamin and mineral deficiencies.",
+      "pattern": "A",
+      "notes": "Enumerating the interpretation of the patient's specific symptoms."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Vitamin D deficiency can lead to poor wound healing and muscle weakness, but it is not as directly linked to the symptoms described in this 44-year-old patient.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of an option."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Thiamine deficiency (beriberi) can cause nerve damage and muscle weakness, but it is not typically associated with the symptoms described in this 44-year-old patient.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of an option."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Considering the symptoms and context of this 44-year-old homeless man, the most likely deficiency is riboflavin (vitamin B2) deficiency.",
+      "pattern": "C",
+      "notes": "Conclusion based on preceding reasoning."
+    },
+    {
+      "source_sentences": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "output": "Riboflavin is essential for energy production, nerve function, and growth; a deficiency can cause ariboflavinosis, characterized by a sore throat, cracked and red lips, a smooth red tongue, a mouth and lip rash (angular stomatitis), hair loss, and poor wound healing.",
+      "pattern": "A",
+      "notes": "Merging all properties and deficiency manifestations of riboflavin; removes repetitive sentences 15-17."
+    },
+    {
+      "source_sentences": [
+        18,
+        19
+      ],
+      "output": "The described symptoms in this 44-year-old man are consistent with a deficiency in riboflavin (vitamin B2); therefore, the correct answer is (A) Riboflavin.",
+      "pattern": "C",
+      "notes": "Final diagnosis and option selection."
+    }
+  ]
+}

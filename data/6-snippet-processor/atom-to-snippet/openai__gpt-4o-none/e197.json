@@ -1,0 +1,146 @@
+{
+  "entry_id": 197,
+  "batch_id": 20,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can a nausea prescription be taken at the same time as Dramamine?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2922,
+    "output_tokens": 799,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1321,
+      "output_tokens": 433,
+      "cached_input_tokens": 0,
+      "cost": 0.0076325
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1601,
+      "output_tokens": 366,
+      "cached_input_tokens": 0,
+      "cost": 0.0076625
+    }
+  ],
+  "shared_context": {
+    "drug_a": "nausea prescription",
+    "drug_b": "Dramamine (dimenhydrinate)",
+    "condition": "nausea"
+  },
+  "sentences": [
+    "Based on the provided documents, it is not clear whether Dramamine (dimenhydrinate) is a suitable antiemetic medication for nausea",
+    "However, considering the use of metoclopramide, diphenhydramine (Dramamine), and valium for controlling delayed emesis , it is likely that Dramamine can be used for nausea, but it is essential to consult a medical professional for personalized advice",
+    "With regards to administering a nausea prescription at the same time as Dramamine, there is limited information available",
+    "However, in the study by Zeng et al. , a regimen of combined use of a single dose of ondansetron and dexamethasone was compared with the routine treatment regimen using metoclopramide, diphenhydramine, and valium",
+    "This suggests that metoclopramide and diphenhydramine can be used simultaneously, but it is crucial to consider potential interactions and consult a medical professional to ensure safe and effective treatment",
+    "Given the complexity of nausea management, it is recommended to consult a medical professional for personalized guidance on the concurrent use of medications"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "It is not clear whether Dramamine (dimenhydrinate) is a suitable antiemetic medication for nausea.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Considering the use of metoclopramide, diphenhydramine (Dramamine), and valium for controlling delayed emesis, it is likely that Dramamine can be used for nausea.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "It is essential to consult a medical professional for personalized advice on using Dramamine for nausea.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "There is limited information available regarding administering a nausea prescription at the same time as Dramamine.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "In a study by Zeng et al., a regimen of combined use of a single dose of ondansetron and dexamethasone was compared with the routine treatment regimen using metoclopramide, diphenhydramine, and valium.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "This suggests that metoclopramide and diphenhydramine can be used simultaneously.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "It is crucial to consider potential interactions and consult a medical professional to ensure safe and effective treatment when using metoclopramide and diphenhydramine simultaneously.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Given the complexity of nausea management, it is recommended to consult a medical professional for personalized guidance on the concurrent use of medications.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "While it is not clear whether Dramamine (dimenhydrinate) is a suitable antiemetic for nausea, considering its use with other antiemetics in managing delayed emesis, it might be suitable. However, it is essential to consult a medical professional for personalized advice on using Dramamine for nausea.",
+      "pattern": "C",
+      "notes": "Conclusion about Dramamine's use supported by reasoning and professional advice recommendation."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "There is limited information available about administering a nausea prescription at the same time as Dramamine. A study by Zeng et al. examined the combined use of ondansetron and dexamethasone with a regimen including metoclopramide, diphenhydramine, and valium.",
+      "pattern": "C",
+      "notes": "Limited information claim supported by study example."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "The study suggests that metoclopramide and diphenhydramine can be used simultaneously, but it's crucial to consider potential interactions and consult a medical professional to ensure safety.",
+      "pattern": "B",
+      "notes": "Causal chain of using drugs together and need for professional consultation."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Given the complexity of nausea management, consulting a medical professional for personalized guidance on the concurrent use of medications is recommended.",
+      "pattern": "D",
+      "notes": "Standalone recommendation for consultation due to complexity."
+    }
+  ]
+}

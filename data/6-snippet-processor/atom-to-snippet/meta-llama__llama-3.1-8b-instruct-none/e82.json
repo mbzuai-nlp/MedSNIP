@@ -1,0 +1,163 @@
+{
+  "entry_id": 82,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Do fissures and hemmroids heal on their own?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2870,
+    "output_tokens": 592,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1365,
+      "output_tokens": 298,
+      "cached_input_tokens": 0,
+      "cost": 3.922e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1505,
+      "output_tokens": 294,
+      "cached_input_tokens": 0,
+      "cost": 4.186e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "fissures and hemorrhoids healing",
+    "condition_a": "fissures",
+    "condition_b": "hemorrhoids"
+  },
+  "sentences": [
+    "Fissures and hemorrhoids are two distinct conditions that can cause anal pain and discomfort",
+    "Fissures are small tears in the lining of the anus, typically caused by constipation, diarrhea, or childbirth",
+    "They can be painful and may bleed, but most fissures can heal on their own with proper treatment and care",
+    "Treatment for fissures usually involves increasing fiber intake, staying hydrated, and applying topical creams or ointments to promote healing",
+    "In some cases, surgical intervention may be necessary if the fissure does not heal with conservative management",
+    "Hemorrhoids, on the other hand, are swollen veins in the rectum or anus, often caused by increased pressure during pregnancy, straining during bowel movements, or a low-fiber diet",
+    "Hemorrhoids can be internal or external and may cause bleeding, itching, or pain",
+    "While some hemorrhoids can resolve on their own with self-care measures, such as increasing fiber intake and applying topical creams, more severe cases may require medical treatment, including rubber band ligation, sclerotherapy, or hemorrhoidectomy",
+    "In general, both fissures and hemorrhoids can be managed with conservative measures, but the effectiveness of these measures may vary depending on the individual case",
+    "It is essential to consult a healthcare professional for proper diagnosis and treatment"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Most fissures can heal on their own with proper treatment and care.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Fissures can be painful and may bleed.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Fissures can be treated by increasing fiber intake.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Fissures can be treated by applying topical creams or ointments to promote healing.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Hemorrhoids can resolve on their own with self-care measures.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Hemorrhoids can be managed with conservative measures.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 7,
+      "text": "More severe cases of hemorrhoids may require medical treatment.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "It is essential to consult a healthcare professional for proper diagnosis and treatment.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Most fissures can heal on their own with proper treatment and care.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Fissures can be painful and may bleed.",
+      "pattern": "D",
+      "notes": "Different fact about fissures; kept atomic."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Fissures can be treated by increasing fiber intake.",
+      "pattern": "D",
+      "notes": "Different fact about fissures treatment; kept atomic."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Fissures can be treated by applying topical creams or ointments to promote healing.",
+      "pattern": "D",
+      "notes": "Different fact about fissures treatment; kept atomic."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "Hemorrhoids can resolve on their own with self-care measures, be managed with conservative measures, and in more severe cases may require medical treatment, and it is essential to consult a healthcare professional for proper diagnosis and treatment.",
+      "pattern": "A",
+      "notes": "Enumeration of facts about hemorrhoids treatment."
+    },
+    {
+      "source_claims": [],
+      "output": "",
+      "pattern": "",
+      "notes": ""
+    }
+  ]
+}

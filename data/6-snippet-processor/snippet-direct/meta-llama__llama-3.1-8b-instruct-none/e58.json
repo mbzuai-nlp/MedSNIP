@@ -1,0 +1,89 @@
+{
+  "entry_id": 58,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "what causes ringworm ?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1802,
+    "output_tokens": 422,
+    "cached_input_tokens": 0,
+    "cost": 5.292e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1802,
+      "output_tokens": 422,
+      "cached_input_tokens": 0,
+      "cost": 5.292e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "causes of ringworm",
+    "condition": "ringworm"
+  },
+  "sentences": [
+    "Ringworm, also known as Tinea, is a skin infection caused by a type of fungi called dermatophytes",
+    "These fungi thrive in warm, moist areas and feed on keratin, the material found in the outer layer of skin, hair, and nails",
+    "The disease can be caused by various types of dermatophytes, including Trichophyton, Microsporum, and Epidermophyton",
+    "Dermatophytes are parasitic fungi that can be found on the skin, hair, and nails of humans and animals",
+    "They can infect the skin, causing symptoms such as itching, redness, and scaling",
+    "The fungi can also be spread through person-to-person contact, contaminated items, and contact with infected animals",
+    "The risk of acquiring ringworm is higher in individuals who live in crowded, humid conditions, have poor hygiene, and engage in activities that involve direct contact with infected individuals or contaminated items"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Ringworm is a skin infection caused by a type of fungi called dermatophytes.",
+      "pattern": "D",
+      "notes": "Standalone fact about the causative agent."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The dermatophytes thrive in warm, moist areas and feed on keratin, the material found in the outer layer of skin, hair, and nails.",
+      "pattern": "D",
+      "notes": "Standalone fact about the fungi's environment and nutrition."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The disease can be caused by various types of dermatophytes, including Trichophyton, Microsporum, and Epidermophyton.",
+      "pattern": "D",
+      "notes": "Standalone fact about the types of dermatophytes."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Dermatophytes are parasitic fungi that can be found on the skin, hair, and nails of humans and animals.",
+      "pattern": "D",
+      "notes": "Standalone fact about the dermatophytes' characteristics."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6
+      ],
+      "output": "The fungi can infect the skin, causing symptoms such as itching, redness, and scaling, and can be spread through person-to-person contact, contaminated items, and contact with infected animals, with a higher risk in individuals who live in crowded, humid conditions, have poor hygiene, and engage in activities that involve direct contact with infected individuals or contaminated items.",
+      "pattern": "C",
+      "notes": "Conclusion + premises; merged because each piece needs the other for verifiability."
+    }
+  ]
+}

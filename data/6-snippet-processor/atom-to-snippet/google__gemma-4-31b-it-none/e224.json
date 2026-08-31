@@ -1,0 +1,297 @@
+{
+  "entry_id": 224,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 27-year-old man presents for an appointment to establish care. He recently was released from prison. He has felt very fatigued and has had a cough. He has lost roughly 15 pounds over the past 3 weeks. He attributes this to intravenous drug use in prison. His temperature is 99.5°F (37.5°C), blood pressure is 127/68 mmHg, pulse is 100/min, respirations are 18/min, and oxygen saturation is 98% on room air. QuantiFERON gold testing is positive. The patient is started on appropriate treatment. Which of the following is the most likely indication to discontinue this patient's treatment? (A) Elevated liver enzymes (B) Hyperuricemia (C) Optic neuritis (D) Peripheral neuropathy (E) Red body excretions",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4766,
+    "output_tokens": 1533,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1948,
+      "output_tokens": 876,
+      "cached_input_tokens": 0,
+      "cost": 0.00058612
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2818,
+      "output_tokens": 657,
+      "cached_input_tokens": 0,
+      "cost": 0.000616
+    }
+  ],
+  "shared_context": {
+    ":": "Tuberculosis (TB)",
+    "age": 27,
+    "sex": "male",
+    "chief_complaint": "fatigue, cough, weight loss",
+    "medical_history": "intravenous drug use, recently released from prison",
+    "vitals": "T 99.5°F, BP 127/68 mmHg, P 100/min, R 18/min, SpO2 98% on room air",
+    "exam_findings": "QuantiFERON gold positive",
+    "treatment_history": "started on appropriate treatment",
+    "correct_answer": "(C) Optic neuritis"
+  },
+  "sentences": [
+    "To determine the most appropriate answer to the question, we'll analyze each option step-by-step",
+    "Step 1: Understanding the Clinical Scenario",
+    "The patient has been diagnosed with tuberculosis (TB) based on a positive QuantiFERON gold test",
+    "He is being started on appropriate treatment for TB",
+    "Step 2: Recognizing Common Anti-Tuberculosis Medications and Side Effects",
+    "The standard initial treatment for active TB typically includes a combination of isoniazid, rifampin, pyrazinamide, and ethambutol",
+    "We will consider the side effects of these medications to determine which one would warrant discontinuation of treatment",
+    "(A) Elevated liver enzymes: Isoniazid, rifampin, and pyrazinamide are known to cause hepatotoxicity",
+    "While elevated liver enzymes are a serious side effect, they do not typically necessitate the immediate discontinuation of all TB medications, but rather dose adjustment or closer monitoring",
+    "(B) Hyperuricemia: Pyrazinamide can cause hyperuricemia",
+    "However, hyperuricemia alone usually does not require discontinuation of treatment unless it leads to symptomatic gout",
+    "(C) Optic neuritis: Ethambutol can cause optic neuritis, which can lead to vision loss",
+    "This is a serious side effect and would typically prompt discontinuation of ethambutol to prevent permanent damage",
+    "(D) Peripheral neuropathy: Isoniazid can cause peripheral neuropathy",
+    "This side effect can often be managed with pyridoxine (Vitamin B6) supplementation rather than discontinuing treatment",
+    "(E) Red body excretions: Rifampin can cause red-orange discoloration of body fluids like urine, sweat, and tears",
+    "This is a benign side effect and does not require discontinuation of treatment",
+    "Step 4: Determining the Most Likely Indication for Discontinuation",
+    "Among the options provided, optic neuritis (C) is the most severe and warrants immediate discontinuation of the offending drug (ethambutol) to prevent permanent vision loss",
+    "(C) Optic neuritis"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The response will analyze each option step-by-step to determine the most appropriate answer.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The clinical scenario is being analyzed.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient has been diagnosed with tuberculosis (TB) based on a positive QuantiFERON gold test.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient is being started on appropriate treatment for TB.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Common anti-tuberculosis medications and side effects are being recognized.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Standard initial treatment for active TB typically includes a combination of isoniazid, rifampin, pyrazinamide, and ethambutol.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The side effects of these medications are considered to determine which would warrant discontinuation of treatment.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Isoniazid, rifampin, and pyrazinamide are known to cause hepatotoxicity, which can lead to elevated liver enzymes.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Elevated liver enzymes typically necessitate dose adjustment or closer monitoring rather than immediate discontinuation of all TB medications.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Pyrazinamide can cause hyperuricemia.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Hyperuricemia alone usually does not require discontinuation of treatment unless it leads to symptomatic gout.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Ethambutol can cause optic neuritis, which can lead to vision loss.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Optic neuritis is a serious side effect that would typically prompt discontinuation of ethambutol to prevent permanent damage.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Isoniazid can cause peripheral neuropathy.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Peripheral neuropathy can often be managed with pyridoxine (Vitamin B6) supplementation rather than discontinuing treatment.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Rifampin can cause red-orange discoloration of body fluids like urine, sweat, and tears.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Red-orange discoloration of body fluids is a benign side effect and does not require discontinuation of treatment.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 18,
+      "text": "The most likely indication for discontinuation is being determined.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Among the options provided, optic neuritis is the most severe and warrants immediate discontinuation of ethambutol to prevent permanent vision loss.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 20,
+      "text": "The most likely indication to discontinue treatment is optic neuritis.",
+      "source_sentences": [
+        19
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        5,
+        7,
+        18
+      ],
+      "output": "The clinical scenario and the provided options will be analyzed by recognizing common anti-tuberculosis medications and their side effects to determine which would warrant discontinuation of treatment.",
+      "pattern": "D",
+      "notes": "Procedural/meta-commentary statements merged into one context."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "This 27-year-old male with a history of intravenous drug use and a positive QuantiFERON gold test has been diagnosed with tuberculosis (TB) and is being started on appropriate treatment.",
+      "pattern": "B",
+      "notes": "Causal link between diagnosis and treatment start."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Standard initial treatment for active TB typically includes a combination of isoniazid, rifampin, pyrazinamide, and ethambutol.",
+      "pattern": "D",
+      "notes": "Standalone medical fact."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Isoniazid, rifampin, and pyrazinamide are known to cause hepatotoxicity, which can lead to elevated liver enzymes; however, elevated liver enzymes typically necessitate dose adjustment or closer monitoring rather than immediate discontinuation of all TB medications.",
+      "pattern": "B",
+      "notes": "Causal chain regarding liver enzymes and treatment response."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Pyrazinamide can cause hyperuricemia, but hyperuricemia alone usually does not require discontinuation of treatment unless it leads to symptomatic gout.",
+      "pattern": "B",
+      "notes": "Causal chain regarding hyperuricemia and treatment response."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Ethambutol can cause optic neuritis, which can lead to vision loss; this is a serious side effect that would typically prompt discontinuation of ethambutol to prevent permanent damage.",
+      "pattern": "B",
+      "notes": "Causal chain regarding optic neuritis and treatment response."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Isoniazid can cause peripheral neuropathy, which can often be managed with pyridoxine (Vitamin B6) supplementation rather than discontinuing treatment.",
+      "pattern": "B",
+      "notes": "Causal chain regarding peripheral neuropathy and treatment response."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "Rifampin can cause red-orange discoloration of body fluids like urine, sweat, and tears, which is a benign side effect and does not require discontinuation of treatment.",
+      "pattern": "B",
+      "notes": "Causal chain regarding discoloration and treatment response."
+    },
+    {
+      "source_claims": [
+        19,
+        20
+      ],
+      "output": "Among the options provided for this 27-year-old male, optic neuritis is the most severe side effect and warrants immediate discontinuation of ethambutol to prevent permanent vision loss, making it the most likely indication to discontinue treatment.",
+      "pattern": "C",
+      "notes": "Conclusion supported by the premise of severity."
+    }
+  ]
+}

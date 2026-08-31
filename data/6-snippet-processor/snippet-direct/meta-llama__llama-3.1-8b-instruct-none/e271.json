@@ -1,0 +1,105 @@
+{
+  "entry_id": 271,
+  "batch_id": 28,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old man presents to urgent care for weakness and weight loss. For the past several months, he has felt progressively weaker and has lost 25 pounds with intermittent abdominal pain. The patient has not seen a physician in 30 years and recalls being current on most of his vaccinations. A few years ago, he went to the emergency department due to abdominal pain and was found to have increased liver enzymes due to excessive alcohol use and incidental gallstones. The patient has a 50 pack-year smoking history. His temperature is 99.5°F (37.5°C), blood pressure is 161/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 95% on room air. Physical exam reveals an emaciated man. The patient has a negative Murphy sign and his abdomen is non-tender. Cardiopulmonary exam is within normal limits. Which of the following is the most appropriate next step in management? (A) CT scan of the abdomen and pelvis (B) CT scan of the chest (C) HIDA scan (D) Right upper quadrant ultrasound (E) Smoking cessation advice and primary care follow up",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2511,
+    "output_tokens": 619,
+    "cached_input_tokens": 0,
+    "cost": 7.498e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2511,
+      "output_tokens": 619,
+      "cached_input_tokens": 0,
+      "cost": 7.498e-05
+    }
+  ],
+  "shared_context": {
+    "age": "55",
+    "sex": "male",
+    "chief_complaint": "progressive weakness and weight loss over several months",
+    "medical_history": "30-year history of not seeing a physician; excessive alcohol use; incidental gallstones; 50 pack-year smoking history",
+    "vitals": "BP 161/108 mmHg, pulse 90/min, respirations 17/min, O2 95% on room air",
+    "exam_findings": "emaciated man; negative Murphy sign; non-tender abdomen; cardiopulmonary exam within normal limits",
+    "correct_answer": "CT scan of the abdomen and pelvis"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in management, let's break down the patient's presentation and history",
+    "The patient presents with progressive weakness and weight loss over several months, which could be indicative of a variety of conditions, including malignancy, chronic diseases, or nutritional deficiencies",
+    "His past history of excessive alcohol use and incidental gallstones suggests possible liver disease, which is a significant consideration given his current presentation",
+    "The patient's smoking history of 50 pack-years is a significant risk factor for several cancers, including lung, liver, and pancreatic cancer",
+    "The patient's emaciated appearance, weight loss, and weakness are concerning for a possible malignancy, particularly pancreatic cancer, given his abdominal pain and weight loss",
+    "Considering these points, the most appropriate next step in management would likely involve imaging to evaluate for a possible abdominal malignancy",
+    "A CT scan of the abdomen and pelvis is the most appropriate next step as it provides a comprehensive evaluation of the abdominal organs, including the pancreas, liver, and gallbladder, which are all relevant to the patient's history and symptoms",
+    "This would also allow for the assessment of potential liver or pancreatic malignancy, which is a significant concern given the patient's history and presentation",
+    "(A) CT scan of the abdomen and pelvis"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate next step in management, let's break down the patient's presentation and history.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The patient presents with progressive weakness and weight loss over several months, which could be indicative of a variety of conditions, including malignancy, chronic diseases, or nutritional deficiencies.",
+      "pattern": "D",
+      "notes": "Standalone clinical impression; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "The patient's past history of excessive alcohol use and incidental gallstones suggests possible liver disease, which is a significant consideration given his current presentation; his smoking history of 50 pack-years is a significant risk factor for several cancers, including lung, liver, and pancreatic cancer.",
+      "pattern": "A",
+      "notes": "All properties of one subject (patient's history)."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The patient's emaciated appearance, weight loss, and weakness are concerning for a possible malignancy, particularly pancreatic cancer, given his abdominal pain and weight loss.",
+      "pattern": "D",
+      "notes": "Standalone differential characterization."
+    },
+    {
+      "source_sentences": [
+        5,
+        6,
+        7
+      ],
+      "output": "Considering these points, the most appropriate next step in management would likely involve imaging to evaluate for a possible abdominal malignancy; a CT scan of the abdomen and pelvis is the most appropriate next step as it provides a comprehensive evaluation of the abdominal organs, including the pancreas, liver, and gallbladder, which are all relevant to the patient's history and symptoms.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "A CT scan of the abdomen and pelvis is the most appropriate next step.",
+      "pattern": "C",
+      "notes": "Final answer with patient context inlined."
+    }
+  ]
+}

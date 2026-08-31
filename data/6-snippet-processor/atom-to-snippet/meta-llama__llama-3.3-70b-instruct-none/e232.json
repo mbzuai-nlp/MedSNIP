@@ -1,0 +1,337 @@
+{
+  "entry_id": 232,
+  "batch_id": 24,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 35-year-old G0P0000 woman presents to her gynecologist with complaints of irregular menstruation. She has had only 2 periods in the last year. She feels flushed without provocation and is experiencing occasional dyspareunia with post-coital spotting. She has also had more frequent headaches than usual. The patient has a medical history of Hashimoto thyroiditis and takes levothyroxine daily. Her mother has type 1 diabetes mellitus. Her temperature is 98.5°F (36.9°C), pulse is 70/min, blood pressure is 118/76 mmHg, and respirations are 13/min. Cardiopulmonary and abdominal exams are unremarkable. The patient has Tanner 5 breasts and pubic hair. A pelvic exam reveals a normal cervix, an anteverted uterus without tenderness, and no adnexal masses. The following laboratory studies are performed: Serum: Thyroid stimulating hormone (TSH): 28 µIU/mL (9-30 µIU/mL) Cycle day 3 follicle stimulating hormone (FSH): 49 mIU/mL (4.7-21.5 mIU/mL) Cycle day 3 estradiol: 8 pg/mL (27-123 pg/mL) Prolactin: 14 ng/mL (4-23 ng/mL) Testosterone: 42 ng/dL (15-70 ng/dL) Which of the following is the most appropriate next step in management? (A) Brain MRI (B) Combined oral contraceptive (C) Estradiol patch with oral medroxyprogesterone (D) Increase levothyroxine dose (E) Vaginal estradiol gel",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4984,
+    "output_tokens": 1736,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2155,
+      "output_tokens": 824,
+      "cached_input_tokens": 0,
+      "cost": 0.00047918
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2829,
+      "output_tokens": 912,
+      "cached_input_tokens": 0,
+      "cost": 0.00057474
+    }
+  ],
+  "shared_context": {
+    "age": 35,
+    "sex": "female",
+    "gravidity": 0,
+    "parity": 0,
+    "chief_complaint": "irregular menstruation",
+    "medical_history": "Hashimoto thyroiditis, on levothyroxine",
+    "family_history": "mother with type 1 diabetes mellitus",
+    "temperature": 98.5,
+    "pulse": 70,
+    "blood_pressure": "118/76 mmHg"
+  },
+  "sentences": [
+    "To approach this patient's case, let's break down the information provided",
+    "Patient Presentation: A 35-year-old woman presents with irregular menstruation, symptoms potentially suggestive of hyperthyroidism (flushing, hyperhidrosis, and dyspareunia), and other symptoms such as headaches",
+    "Medical History and Family History: The patient has Hashimoto thyroiditis and is on levothyroxine, which suggests she is hypothyroid, not hyperthyroid",
+    "Her mother has type 1 diabetes mellitus, but this is not directly relevant to the patient's current presentation",
+    "Physical Examination: Vital signs are within normal limits, and the patient has Tanner 5 breasts and pubic hair, indicating she is post-menopausal or menopausal",
+    "Laboratory Studies: Elevated TSH (28 µIU/mL) and FSH (49 mIU/mL) with decreased estradiol (8 pg/mL) levels are consistent with menopause",
+    "The prolactin level is within normal limits",
+    "The testosterone level is slightly elevated but not significantly above the normal range",
+    "Given these findings, the patient's symptoms of irregular menstruation and menopausal laboratory values are likely due to menopause",
+    "However, her flushing and headaches could be indicative of thyroid-related symptoms",
+    "Considering her thyroid status, it's essential to note that the patient is already on levothyroxine, which suggests she is hypothyroid",
+    "The high TSH level is likely due to inadequate replacement, not overtreatment",
+    "A (Brain MRI): Not necessary, as there is no indication of neurological or structural abnormalities",
+    "B (Combined oral contraceptive): Not suitable as her solely hormonal issue is menopause-related, and oral contraceptives may not be the best solution",
+    "C (Estradiol patch with oral medroxyprogesterone): This would be an effective treatment for hormone replacement therapy (HRT) to alleviate her menopausal symptoms and help regulate menstrual irregularities",
+    "D (Increase levothyroxine dose): This would be an appropriate adjustment as her high TSH and low FSH levels suggest she may be undertreated for her hypothyroidism",
+    "E (Vaginal estradiol gel): While this could help alleviate local symptoms of vaginal dryness or atrophy, it would not address her overall menopausal symptoms and hormonal imbalance",
+    "Most appropriate next step in management: D) Increase levothyroxine dose",
+    "Given her high TSH level, it is likely she needs an adjustment in her levothyroxine dose to maintain optimal thyroid hormone levels"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A 35-year-old woman presents with irregular menstruation and symptoms potentially suggestive of hyperthyroidism.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient has Hashimoto thyroiditis and is on levothyroxine, indicating she is hypothyroid.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's mother has type 1 diabetes mellitus, but this is not directly relevant to the patient's current presentation.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Vital signs are within normal limits, and the patient has Tanner 5 breasts and pubic hair.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Elevated TSH and FSH with decreased estradiol levels are consistent with menopause.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The prolactin level is within normal limits.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The testosterone level is slightly elevated but not significantly above the normal range.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's symptoms of irregular menstruation and menopausal laboratory values are likely due to menopause.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient's flushing and headaches could be indicative of thyroid-related symptoms.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The patient is already on levothyroxine, which suggests she is hypothyroid.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The high TSH level is likely due to inadequate replacement, not overtreatment.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "A Brain MRI is not necessary, as there is no indication of neurological or structural abnormalities.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Combined oral contraceptive is not suitable as her solely hormonal issue is menopause-related.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Estradiol patch with oral medroxyprogesterone would be an effective treatment for hormone replacement therapy.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Increasing the levothyroxine dose would be an appropriate adjustment as her high TSH and low FSH levels suggest she may be undertreated for her hypothyroidism.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Vaginal estradiol gel could help alleviate local symptoms of vaginal dryness or atrophy, but would not address her overall menopausal symptoms and hormonal imbalance.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 17,
+      "text": "The most appropriate next step in management is to increase the levothyroxine dose.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Given her high TSH level, it is likely she needs an adjustment in her levothyroxine dose to maintain optimal thyroid hormone levels.",
+      "source_sentences": [
+        18
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A 35-year-old woman presents with irregular menstruation and symptoms potentially suggestive of hyperthyroidism, despite being on levothyroxine for Hashimoto thyroiditis.",
+      "pattern": "D",
+      "notes": "Initial presentation"
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The patient has Hashimoto thyroiditis and is on levothyroxine, indicating she is hypothyroid.",
+      "pattern": "D",
+      "notes": "Medical history note"
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The patient's mother has type 1 diabetes mellitus, which is not directly relevant to her current presentation of irregular menstruation.",
+      "pattern": "D",
+      "notes": "Family history note"
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Vital signs are within normal limits for this 35-year-old woman, and she has Tanner 5 breasts and pubic hair.",
+      "pattern": "D",
+      "notes": "Physical exam findings"
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Elevated TSH and FSH with decreased estradiol levels are consistent with menopause in this patient.",
+      "pattern": "D",
+      "notes": "Laboratory findings"
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "The prolactin level is within normal limits for this patient.",
+      "pattern": "D",
+      "notes": "Laboratory finding"
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The testosterone level is slightly elevated but not significantly above the normal range for this patient.",
+      "pattern": "D",
+      "notes": "Laboratory finding"
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The patient's symptoms of irregular menstruation and menopausal laboratory values are likely due to menopause.",
+      "pattern": "D",
+      "notes": "Clinical impression"
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "The patient's flushing and headaches could be indicative of thyroid-related symptoms, given her hypothyroidism.",
+      "pattern": "D",
+      "notes": "Symptom consideration"
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "The patient is already on levothyroxine, which suggests she is hypothyroid, and her symptoms may be related to her thyroid condition.",
+      "pattern": "D",
+      "notes": "Medication context"
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "The high TSH level is likely due to inadequate replacement, not overtreatment, suggesting a need for levothyroxine dose adjustment.",
+      "pattern": "D",
+      "notes": "Thyroid hormone management"
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "A Brain MRI is not necessary, as there is no indication of neurological or structural abnormalities in this patient.",
+      "pattern": "D",
+      "notes": "Diagnostic consideration"
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Combined oral contraceptive is not suitable as her solely hormonal issue is menopause-related, and other options should be considered.",
+      "pattern": "D",
+      "notes": "Treatment consideration"
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Estradiol patch with oral medroxyprogesterone would be an effective treatment for hormone replacement therapy in this menopausal patient.",
+      "pattern": "D",
+      "notes": "Treatment option"
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Increasing the levothyroxine dose would be an appropriate adjustment as her high TSH and low estradiol levels suggest she may be undertreated for her hypothyroidism.",
+      "pattern": "D",
+      "notes": "Thyroid management adjustment"
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Vaginal estradiol gel could help alleviate local symptoms of vaginal dryness or atrophy, but would not address her overall menopausal symptoms and hormonal imbalance.",
+      "pattern": "D",
+      "notes": "Symptom management option"
+    },
+    {
+      "source_claims": [
+        17,
+        18
+      ],
+      "output": "The most appropriate next step in management is to increase the levothyroxine dose, as her high TSH level likely indicates inadequate replacement.",
+      "pattern": "C",
+      "notes": "Final management decision with rationale"
+    }
+  ]
+}

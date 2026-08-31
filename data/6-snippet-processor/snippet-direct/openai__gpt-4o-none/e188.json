@@ -1,0 +1,143 @@
+{
+  "entry_id": 188,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 43-year-old man presents to the emergency department with bright red blood in his stool this morning. He noticed this yesterday as well, but it was much scanter. The patient is otherwise healthy. He was celebrating his birthday last night and admits having \"too much to drink\" and vomited profusely overnight. He currently feels well and is not nauseous. He has no other significant medical history and does not take any medications. His temperature is 99.2°F (37.3°C), blood pressure is 110/75 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 100% on room air. Physical exam reveals a nontender abdomen with normal bowel sounds. Rectal exam reveals grossly bloody stool. Laboratory studies are ordered as shown below.\n\nHemoglobin: 12 g/dL\nHematocrit: 36%\nLeukocyte count: 5,500/mm^3 with normal differential\nPlatelet count: 179,000/mm^3\n\nWhich of the following is the most likely cause of this patient's symptoms? (A) Erosion into a gastric vessel (B) Inflammation and infection of colonic outpouching (C) Malignancy (D) Submucosal esophageal tear (E) Vascular malformation",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2690,
+    "output_tokens": 976,
+    "cached_input_tokens": 2560,
+    "cost": 0.013285
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2690,
+      "output_tokens": 976,
+      "cached_input_tokens": 2560,
+      "cost": 0.013285
+    }
+  ],
+  "shared_context": {
+    "age": "43",
+    "sex": "male",
+    "chief_complaint": "bright red blood in stool",
+    "medical_history": "Anterior nosebleeds as a teenager; vaccinated against COVID in April 2021; HPV (+) since age 23",
+    "vitals": "temperature 99.2°F, BP 110/75 mmHg, pulse 82/min, respirations 16/min, oxygen saturation 100% on room air",
+    "exam_findings": "nontender abdomen with normal bowel sounds; grossly bloody stool on rectal exam",
+    "laboratory_results": "Hemoglobin 12 g/dL, Hematocrit 36%, Leukocyte count 5,500/mm^3, Platelet count 179,000/mm^3",
+    "correct_answer": "Submucosal esophageal tear (D)"
+  },
+  "sentences": [
+    "To approach this patient's symptoms, let's break down the key findings",
+    "Chief Complaint and History: The patient is a 43-year-old man who presents with bright red blood in his stool for two days, which started with a large volume the night before",
+    "He has no other significant medical history, does not take any medications, and has no symptoms of nausea or abdominal pain",
+    "His vital signs are within normal limits, indicating no acute distress or instability",
+    "His abdomen is nontender with normal bowel sounds, which reduces the likelihood of an intra-abdominal source of bleeding",
+    "The rectal exam reveals grossly bloody stool",
+    "Hemoglobin and hematocrit levels are within normal limits, suggesting that there is no significant acute blood loss",
+    "Leukocyte count and differential are normal, which does not indicate an acute infection",
+    "Platelet count is normal, which reduces the likelihood of a bleeding disorder",
+    "Based on these findings, the most likely cause of this patient's symptoms is a submucosal esophageal tear (Mallory-Weiss syndrome)",
+    "This condition typically presents with hematemesis or hematochezia, often after a period of intense or prolonged vomiting, which aligns with the patient's history of vomiting overnight",
+    "It is more common in individuals who consume a large amount of alcohol in a short period, such as on a special occasion like a birthday celebration",
+    "This condition is less likely to cause significant hemodynamic instability or anemia due to its upper GI origin and the patient's normal laboratory values",
+    "Erosion into a gastric vessel is more likely to present with hematemesis rather than hematochezia",
+    "Inflammation and infection of colonic outpouching (diverticulitis) typically presents with abdominal pain, fever, and leukocytosis, which is not present in this case",
+    "Malignancy would likely have a more gradual onset and additional signs and symptoms, such as weight loss or abdominal pain, which are not mentioned",
+    "Vascular malformation could be a possible cause but would likely have been diagnosed earlier in life and would not be the first suspicion given the patient's age and symptoms"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "This 43-year-old man's chief complaint is bright red blood in the stool for two days, first appearing more significantly the night before, indicating gastrointestinal bleeding.",
+      "pattern": "A",
+      "notes": "Merging ensures complete patient presentation."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "This 43-year-old man has no other significant medical history, does not take any medications, and reports no symptoms of nausea or abdominal pain.",
+      "pattern": "D",
+      "notes": "Standalone factual statement about medical history."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "This 43-year-old man's vital signs are within normal limits (BP 110/75 mmHg, pulse 82/min), indicating no acute distress or hemodynamic instability.",
+      "pattern": "D",
+      "notes": "Vital signs indicate stability."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "A nontender abdomen with normal bowel sounds in this 43-year-old male reduces the likelihood of an intra-abdominal source of bleeding.",
+      "pattern": "D",
+      "notes": "Clinical finding interpretation."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Rectal exam in this 43-year-old man reveals grossly bloody stool.",
+      "pattern": "D",
+      "notes": "Specific exam finding."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        8
+      ],
+      "output": "In this 43-year-old man, laboratory values show hemoglobin at 12 g/dL and hematocrit at 36%, both normal, indicating no significant acute blood loss. Normal leukocyte count (5,500/mm^3) and normal differential do not suggest infection, and normal platelet count (179,000/mm^3) reduces the likelihood of a bleeding disorder.",
+      "pattern": "A",
+      "notes": "Lab interpretations of different metrics about the same situation."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Based on the findings, the most likely cause of this 43-year-old man's symptoms is a submucosal esophageal tear (Mallory-Weiss syndrome).",
+      "pattern": "C",
+      "notes": "Conclusion based on previous data."
+    },
+    {
+      "source_sentences": [
+        10,
+        11,
+        12
+      ],
+      "output": "Mallory-Weiss syndrome typically presents with hematemesis or hematochezia after intense vomiting episodes and is more common in individuals who consume large amounts of alcohol. In this 43-year-old male, the recent vomiting and birthday celebration involving heavy alcohol intake align with this presentation, and the condition is less likely to cause significant hemodynamic instability or anemia, correlating with his normal lab values.",
+      "pattern": "B",
+      "notes": "Causal explanation linking patient history to diagnosis."
+    },
+    {
+      "source_sentences": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "output": "Erosion into a gastric vessel typically presents with hematemesis rather than hematochezia. Diverticulitis presents with abdominal pain, fever, and leukocytosis, which are absent here. Malignancy generally presents gradually, with signs like weight loss or pain, which this 43-year-old man does not exhibit. Vascular malformation typically presents earlier in life and would not be a primary suspicion in this 43-year-old man.",
+      "pattern": "A",
+      "notes": "Enumerating other causes with distinct presentations."
+    }
+  ]
+}

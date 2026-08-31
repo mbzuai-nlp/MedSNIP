@@ -1,0 +1,218 @@
+{
+  "entry_id": 98,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Will the antibiotics prevent the lyme disease from progressing?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3083,
+    "output_tokens": 966,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1388,
+      "output_tokens": 537,
+      "cached_input_tokens": 0,
+      "cost": 0.0003845
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1695,
+      "output_tokens": 429,
+      "cached_input_tokens": 0,
+      "cost": 0.00038337
+    }
+  ],
+  "shared_context": {
+    "topic": "antibiotics for Lyme disease",
+    "condition": "Lyme disease",
+    "drug_a": "doxycycline",
+    "drug_b": "amoxicillin"
+  },
+  "sentences": [
+    "Antibiotics are effective in treating Lyme disease, particularly in its early stages",
+    "The primary goal of antibiotic treatment is to eliminate the infection caused by Borrelia burgdorferi, the bacterium responsible for Lyme disease",
+    "In the early stages of Lyme disease, antibiotics such as doxycycline or amoxicillin are commonly prescribed to prevent the progression of the disease",
+    "These antibiotics work by targeting the bacteria and preventing them from reproducing and spreading",
+    "However, if left untreated, Lyme disease can progress to its later stages, which may involve more severe symptoms such as arthritis, neurological problems, and heart issues",
+    "In these cases, treatment may involve longer courses of antibiotics or additional medications to manage symptoms",
+    "It is essential to note that antibiotics are not effective against the late-stage symptoms of Lyme disease, such as arthritis or neurological problems, which are thought to be caused by the body's immune response to the infection rather than the bacteria itself",
+    "In these cases, treatment focuses on managing symptoms and alleviating discomfort"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Antibiotics are effective in treating Lyme disease, particularly in its early stages",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The primary goal of antibiotic treatment is to eliminate the infection caused by Borrelia burgdorferi",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Borrelia burgdorferi is the bacterium responsible for Lyme disease",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "In the early stages of Lyme disease, antibiotics such as doxycycline or amoxicillin are commonly prescribed to prevent the progression of the disease",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "These antibiotics work by targeting the bacteria and preventing them from reproducing and spreading",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "If left untreated, Lyme disease can progress to its later stages",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Later stages of Lyme disease may involve arthritis",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Later stages of Lyme disease may involve neurological problems",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Later stages of Lyme disease may involve heart issues",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "In later stages of Lyme disease, treatment may involve longer courses of antibiotics",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 11,
+      "text": "In later stages of Lyme disease, treatment may involve additional medications to manage symptoms",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Antibiotics are not effective against the late-stage symptoms of Lyme disease, such as arthritis or neurological problems",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Late-stage symptoms of Lyme disease are thought to be caused by the body's immune response to the infection rather than the bacteria itself",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 14,
+      "text": "In cases of late-stage symptoms, treatment focuses on managing symptoms and alleviating discomfort",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Antibiotics are effective in treating Lyme disease, particularly in its early stages.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "The primary goal of antibiotic treatment is to eliminate the infection caused by Borrelia burgdorferi, which is the bacterium responsible for Lyme disease.",
+      "pattern": "B",
+      "notes": "Definition of bacteria linked to treatment goal."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "In the early stages of Lyme disease, antibiotics such as doxycycline or amoxicillin are commonly prescribed to prevent the progression of the disease by targeting the bacteria and preventing them from reproducing and spreading.",
+      "pattern": "B",
+      "notes": "Recommendation linked to its mechanism of action."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "If left untreated, Lyme disease can progress to later stages, which may involve arthritis, neurological problems, and heart issues.",
+      "pattern": "A",
+      "notes": "Enumeration of properties/complications of later stage Lyme disease."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "In later stages of Lyme disease, treatment may involve longer courses of antibiotics and additional medications to manage symptoms.",
+      "pattern": "A",
+      "notes": "Enumeration of treatment options for later stages."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Antibiotics are not effective against late-stage symptoms of Lyme disease, such as arthritis or neurological problems, as these are thought to be caused by the body's immune response to the infection rather than the bacteria itself.",
+      "pattern": "B",
+      "notes": "Ineffectiveness linked to causal reasoning."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "In cases of late-stage symptoms, treatment focuses on managing symptoms and alleviating discomfort.",
+      "pattern": "D",
+      "notes": "Standalone fact about management."
+    }
+  ]
+}

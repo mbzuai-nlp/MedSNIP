@@ -1,0 +1,202 @@
+{
+  "entry_id": 99,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Will the antibiotics prevent the lyme disease from progressing?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2978,
+    "output_tokens": 1094,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1356,
+      "output_tokens": 526,
+      "cached_input_tokens": 0,
+      "cost": 0.00865
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1622,
+      "output_tokens": 568,
+      "cached_input_tokens": 0,
+      "cost": 0.009735
+    }
+  ],
+  "shared_context": {
+    "condition": "Lyme disease",
+    "drug_a": "antibiotics"
+  },
+  "sentences": [
+    "Yes, antibiotics can prevent Lyme disease from progressing if initiated early in the course of the infection",
+    "Early localized Lyme disease, characterized by erythema migrans, typically responds well to oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil",
+    "For early disseminated or late-stage disease, which might involve neurologic or cardiac manifestations, intravenous antibiotics such as ceftriaxone are recommended",
+    "Early localized Lyme disease is best diagnosed by recognizing the characteristic skin lesion, erythema migrans, and it typically responds well to oral antibacterial therapy",
+    "Early disseminated disease, often associated with neurologic findings, may require parenteral therapy",
+    "Late Lyme disease, which may involve arthritis or neurologic complications, often requires more intensive treatment, occasionally involving intravenous antibiotics",
+    "Doxycycline is the oral antibacterial of choice, while amoxicillin and cefuroxime axetil are alternatives that may be preferred in children",
+    "There is no convincing evidence for extending treatment of early Lyme disease beyond 14 days",
+    "For prophylactic treatment after a tick bite, it's generally not recommended due to the relatively low risk of developing Lyme disease, especially if the tick is removed promptly",
+    "However, a single dose of doxycycline can be effective in certain high-risk situations"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Antibiotics can prevent Lyme disease from progressing if initiated early in the course of the infection.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Early localized Lyme disease, characterized by erythema migrans, typically responds well to oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "For early disseminated or late-stage Lyme disease, which might involve neurologic or cardiac manifestations, intravenous antibiotics such as ceftriaxone are recommended.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Early localized Lyme disease is best diagnosed by recognizing the characteristic skin lesion, erythema migrans.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Early localized Lyme disease typically responds well to oral antibacterial therapy.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Early disseminated Lyme disease, often associated with neurologic findings, may require parenteral therapy.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Late Lyme disease, which may involve arthritis or neurologic complications, often requires more intensive treatment, occasionally involving intravenous antibiotics.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Doxycycline is the oral antibacterial of choice for Lyme disease.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Amoxicillin and cefuroxime axetil are alternatives to doxycycline that may be preferred in children.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "There is no convincing evidence for extending treatment of early Lyme disease beyond 14 days.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Prophylactic treatment after a tick bite is generally not recommended due to the relatively low risk of developing Lyme disease, especially if the tick is removed promptly.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 12,
+      "text": "A single dose of doxycycline can be effective in certain high-risk situations.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        5
+      ],
+      "output": "Antibiotics can prevent Lyme disease from progressing if initiated early in the course of the infection. Early localized Lyme disease, characterized by erythema migrans, typically responds well to oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil, and early localized Lyme disease typically responds well to oral antibacterial therapy.",
+      "pattern": "A",
+      "notes": "Enumeration of factors related to early localized Lyme disease and antibiotics."
+    },
+    {
+      "source_claims": [
+        3,
+        7
+      ],
+      "output": "For early disseminated or late-stage Lyme disease, which might involve neurologic or cardiac manifestations, intravenous antibiotics such as ceftriaxone are recommended. Late Lyme disease, which may involve arthritis or neurologic complications, often requires more intensive treatment, occasionally involving intravenous antibiotics.",
+      "pattern": "A",
+      "notes": "Properties of early disseminated and late-stage Lyme disease treatments."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Early localized Lyme disease is best diagnosed by recognizing the characteristic skin lesion, erythema migrans.",
+      "pattern": "D",
+      "notes": "Standalone diagnostic method for early localized Lyme disease."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Early disseminated Lyme disease, often associated with neurologic findings, may require parenteral therapy.",
+      "pattern": "D",
+      "notes": "Standalone treatment approach for early disseminated Lyme disease."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Doxycycline is the oral antibacterial of choice for Lyme disease. Amoxicillin and cefuroxime axetil are alternatives to doxycycline that may be preferred in children.",
+      "pattern": "A",
+      "notes": "Enumeration of antibiotic choices for Lyme disease."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "There is no convincing evidence for extending treatment of early Lyme disease beyond 14 days.",
+      "pattern": "D",
+      "notes": "Standalone recommendation on treatment duration."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Prophylactic treatment after a tick bite is generally not recommended due to the relatively low risk of developing Lyme disease, especially if the tick is removed promptly. A single dose of doxycycline can be effective in certain high-risk situations.",
+      "pattern": "B",
+      "notes": "Causes and exceptions regarding prophylactic treatment after a tick bite."
+    }
+  ]
+}

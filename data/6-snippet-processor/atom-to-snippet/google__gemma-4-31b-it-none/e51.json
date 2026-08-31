@@ -1,0 +1,229 @@
+{
+  "entry_id": 51,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is there a reason why my urine is clear",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3206,
+    "output_tokens": 1098,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1491,
+      "output_tokens": 588,
+      "cached_input_tokens": 0,
+      "cost": 0.00041727
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1715,
+      "output_tokens": 510,
+      "cached_input_tokens": 0,
+      "cost": 0.00041675
+    }
+  ],
+  "shared_context": {
+    "topic": "clear urine",
+    "symptom": "clear urine"
+  },
+  "sentences": [
+    "Clear urine is typically a sign of adequate hydration",
+    "When an individual consumes enough fluids, the concentration of solutes in the urine decreases, resulting in a dilute, clear appearance",
+    "In most cases, this is not a cause for concern and indicates that the body is well-hydrated",
+    "However, there are other possible explanations for consistently clear urine that may require further evaluation",
+    "Diabetes Insipidus: This condition causes the kidneys to excrete excessive amounts of water due to a deficiency in antidiuretic hormone (ADH) or a resistance to its effects",
+    "This leads to producing large quantities of dilute urine despite normal or low fluid intake",
+    "Diuretics: Use of diuretic medications increases the excretion of water and salts from the body, which can result in clear urine",
+    "Diuretics are often prescribed for conditions such as hypertension and edema",
+    "Diabetes Mellitus: Uncontrolled diabetes can lead to high blood glucose levels, which in turn can cause frequent urination and increased fluid intake, leading to clear urine",
+    "Kidney Conditions: Certain kidney disorders can impair the kidney’s ability to concentrate urine, leading to the production of clear urine",
+    "It is important to consider the context and frequency of clear urine",
+    "If it occurs occasionally and is associated with high fluid intake, it is typically not a concern",
+    "However, if clear urine is persistent and not related to fluid intake, or if it is accompanied by other symptoms, it may warrant a medical evaluation to rule out underlying conditions"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Clear urine is typically a sign of adequate hydration",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "When an individual consumes enough fluids, the concentration of solutes in the urine decreases, resulting in a dilute, clear appearance",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Clear urine is usually not a cause for concern and indicates the body is well-hydrated",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "There are other possible explanations for consistently clear urine that may require further evaluation",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Diabetes Insipidus causes the kidneys to excrete excessive amounts of water due to a deficiency in antidiuretic hormone (ADH) or a resistance to its effects",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Diabetes Insipidus leads to producing large quantities of dilute urine despite normal or low fluid intake",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Use of diuretic medications increases the excretion of water and salts from the body, which can result in clear urine",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Diuretics are often prescribed for hypertension",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Diuretics are often prescribed for edema",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Uncontrolled diabetes mellitus can lead to high blood glucose levels, which can cause frequent urination and increased fluid intake, leading to clear urine",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Certain kidney disorders can impair the kidney’s ability to concentrate urine, leading to the production of clear urine",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 12,
+      "text": "It is important to consider the context and frequency of clear urine",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 13,
+      "text": "If clear urine occurs occasionally and is associated with high fluid intake, it is typically not a concern",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Persistent clear urine not related to fluid intake may warrant a medical evaluation to rule out underlying conditions",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Clear urine accompanied by other symptoms may warrant a medical evaluation to rule out underlying conditions",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Clear urine is typically a sign of adequate hydration and is usually not a cause for concern, as consuming enough fluids decreases the concentration of solutes in the urine, resulting in a dilute, clear appearance.",
+      "pattern": "B",
+      "notes": "Causal chain explaining why hydration leads to clear urine and the resulting clinical significance."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "There are other possible explanations for consistently clear urine that may require further evaluation.",
+      "pattern": "D",
+      "notes": "Standalone transition statement."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Diabetes Insipidus causes the kidneys to excrete excessive amounts of water due to a deficiency in antidiuretic hormone (ADH) or a resistance to its effects, leading to the production of large quantities of dilute urine despite normal or low fluid intake.",
+      "pattern": "B",
+      "notes": "Causal chain describing the mechanism and result of Diabetes Insipidus."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "Use of diuretic medications, which are often prescribed for hypertension or edema, increases the excretion of water and salts from the body and can result in clear urine.",
+      "pattern": "A",
+      "notes": "Enumeration of properties/uses of diuretics linked to the symptom."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Uncontrolled diabetes mellitus can lead to high blood glucose levels, which can cause frequent urination and increased fluid intake, leading to clear urine.",
+      "pattern": "B",
+      "notes": "Causal chain linking diabetes mellitus to clear urine."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Certain kidney disorders can impair the kidney’s ability to concentrate urine, leading to the production of clear urine.",
+      "pattern": "B",
+      "notes": "Causal link between kidney disorder and urine appearance."
+    },
+    {
+      "source_claims": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "output": "It is important to consider the context and frequency of clear urine: while occasional clear urine associated with high fluid intake is typically not a concern, persistent clear urine not related to fluid intake or clear urine accompanied by other symptoms may warrant a medical evaluation to rule out underlying conditions.",
+      "pattern": "C",
+      "notes": "Conclusion/Recommendation supported by specific conditional premises."
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "entry_id": 197,
+  "batch_id": 20,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can a nausea prescription be taken at the same time as Dramamine?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3006,
+    "output_tokens": 3102,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1373,
+      "output_tokens": 1350,
+      "cached_input_tokens": 0,
+      "cost": 0.00023019
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1633,
+      "output_tokens": 1752,
+      "cached_input_tokens": 0,
+      "cost": 0.00029427
+    }
+  ],
+  "shared_context": {
+    "topic": "concurrent use of nausea prescription and Dramamine",
+    "drug_a": "nausea prescription",
+    "drug_b": "Dramamine",
+    "condition": "nausea"
+  },
+  "sentences": [
+    "Based on the provided documents, it is not clear whether Dramamine (dimenhydrinate) is a suitable antiemetic medication for nausea",
+    "However, considering the use of metoclopramide, diphenhydramine (Dramamine), and valium for controlling delayed emesis , it is likely that Dramamine can be used for nausea, but it is essential to consult a medical professional for personalized advice",
+    "With regards to administering a nausea prescription at the same time as Dramamine, there is limited information available",
+    "However, in the study by Zeng et al. , a regimen of combined use of a single dose of ondansetron and dexamethasone was compared with the routine treatment regimen using metoclopramide, diphenhydramine, and valium",
+    "This suggests that metoclopramide and diphenhydramine can be used simultaneously, but it is crucial to consider potential interactions and consult a medical professional to ensure safe and effective treatment",
+    "Given the complexity of nausea management, it is recommended to consult a medical professional for personalized guidance on the concurrent use of medications"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "It is not clear whether Dramamine (dimenhydrinate) is a suitable antiemetic medication for nausea.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Metoclopramide, diphenhydramine (Dramamine), and valium are used for controlling delayed emesis.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "It is likely that Dramamine can be used for nausea.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "It is essential to consult a medical professional for personalized advice about nausea treatment.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Limited information is available about administering a nausea prescription at the same time as Dramamine.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The study by Zeng et al. compared a regimen of a single dose of ondansetron and dexamethasone with the routine treatment regimen that includes metoclopramide, diphenhydramine, and valium.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Metoclopramide and diphenhydramine can be used simultaneously.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Potential interactions must be considered and a medical professional should be consulted when using these medications concurrently.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "It is recommended to consult a medical professional for personalized guidance on the concurrent use of medications for nausea management.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "It is not clear whether Dramamine (dimenhydrinate) is a suitable antiemetic medication for nausea.",
+      "pattern": "D",
+      "notes": "Standalone statement about lack of clarity."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Metoclopramide, diphenhydramine (Dramamine), and valium are used for controlling delayed emesis.",
+      "pattern": "A",
+      "notes": "Enumeration of drugs for a specific condition."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "It is likely that Dramamine can be used for nausea.",
+      "pattern": "D",
+      "notes": "A single likelihood claim."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "It is essential to consult a medical professional for personalized advice about nausea treatment.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Limited information is available about administering a nausea prescription at the same time as Dramamine.",
+      "pattern": "D",
+      "notes": "Standalone statement of limited data."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "The study by Zeng et al. compared a regimen of a single dose of ondansetron and dexamethasone with the routine treatment regimen that includes metoclopramide, diphenhydramine, and valium.",
+      "pattern": "D",
+      "notes": "Standalone study comparison fact."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Metoclopramide and diphenhydramine can be used simultaneously.",
+      "pattern": "D",
+      "notes": "Standalone compatibility claim."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Potential interactions must be considered and a medical professional should be consulted when using these medications concurrently.",
+      "pattern": "C",
+      "notes": "Recommendation that follows a causal premise (interactions)."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "It is recommended to consult a medical professional for personalized guidance on the concurrent use of medications for nausea management.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    }
+  ]
+}

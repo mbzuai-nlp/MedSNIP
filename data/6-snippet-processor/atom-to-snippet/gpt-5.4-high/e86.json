@@ -1,0 +1,130 @@
+{
+  "entry_id": 86,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "My cat was just diagnosed with a tapeworm, could that be something I can get from him?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2746,
+    "output_tokens": 3183,
+    "cached_input_tokens": 1152
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1225,
+      "output_tokens": 726,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1521,
+      "output_tokens": 2457,
+      "cached_input_tokens": 1152
+    }
+  ],
+  "shared_context": {
+    "topic": "tapeworm transmission from cats to humans",
+    "condition": "tapeworm infection"
+  },
+  "sentences": [
+    "Yes, it is possible for humans to contract tapeworms from cats, although it is relatively uncommon",
+    "The most common type of tapeworm in cats is Dipylidium caninum, which is transmitted through the ingestion of infected fleas",
+    "Humans, particularly children, can become infected if they accidentally ingest an infected flea",
+    "To reduce the risk of transmission, it is important to maintain good hygiene, such as washing hands thoroughly after handling your cat and ensuring your cat is treated for fleas regularly",
+    "Additionally, keeping your cat's living environment clean and free of fleas can help prevent the spread of tapeworms"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "It is possible for humans to contract tapeworms from cats.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Human contraction of tapeworms from cats is relatively uncommon.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The most common type of tapeworm in cats is Dipylidium caninum.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Dipylidium caninum is transmitted through the ingestion of infected fleas.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Humans, particularly children, can become infected if they accidentally ingest an infected flea.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "To reduce the risk of tapeworm transmission, it is important to maintain good hygiene.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Washing hands thoroughly after handling your cat can reduce the risk of tapeworm transmission.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Ensuring your cat is treated for fleas regularly can reduce the risk of tapeworm transmission.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Keeping your cat's living environment clean and free of fleas can help prevent the spread of tapeworms.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "Humans can contract tapeworms from cats, but this is relatively uncommon; the most common tapeworm in cats is Dipylidium caninum, which is transmitted through ingestion of infected fleas, and humans, particularly children, can become infected if they accidentally ingest an infected flea.",
+      "pattern": "C",
+      "notes": "Conclusion about human risk is bundled with the transmission mechanism that makes the answer medically meaningful."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "To reduce the risk of tapeworm transmission, it is important to maintain good hygiene, wash hands thoroughly after handling the cat, treat the cat for fleas regularly, and keep the cat's living environment clean and free of fleas.",
+      "pattern": "A",
+      "notes": "Enumeration of preventive measures for the same goal."
+    }
+  ]
+}

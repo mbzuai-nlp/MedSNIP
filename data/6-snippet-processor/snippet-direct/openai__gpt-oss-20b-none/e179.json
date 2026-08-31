@@ -1,0 +1,155 @@
+{
+  "entry_id": 179,
+  "batch_id": 18,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to the emergency department with fatigue and dark urine over the past day. He was recently diagnosed with cellulitis of his left leg, for which he was prescribed trimethoprim-sulfamethoxazole. He denies having nausea, vomiting, or diarrhea. He has no significant medical history and does not currently take any medications. His temperature is 98.6°F (37°C), blood pressure is 115/72 mmHg, pulse is 98/min, and respirations are 14/min. Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg. Laboratory workup is performed, and the results are shown below: Serum: Hemoglobin: 7.2 g/dL Total bilirubin: 2.1 mg/dL Direct bilirubin: 0.8 mg/dL Lactate dehydrogenase: 470 U/L Glucose-6-phosphate dehydrogenase: 7 U/gHb (normal: 6-20 U/gHb) Which of the following would most likely be seen on a peripheral blood smear in this patient? (A) Acanthocytes (B) Codocytes (C) Degmacytes (D) Schistocytes (E) Spherocytes",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2716,
+    "output_tokens": 3711,
+    "cached_input_tokens": 0,
+    "cost": 0.00060102
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2716,
+      "output_tokens": 3711,
+      "cached_input_tokens": 0,
+      "cost": 0.00060102
+    }
+  ],
+  "shared_context": {
+    "age": "26",
+    "sex": "male",
+    "chief_complaint": "fatigue and dark urine",
+    "medical_history": "no significant medical history",
+    "medications": "trimethoprim-sulfamethoxazole for cellulitis",
+    "vitals": "temperature 98.6°F, blood pressure 115/72, pulse 98, respirations 14",
+    "exam_findings": "conjunctival icterus, bilateral flank tenderness, erythema of the left leg",
+    "correct_answer": "Degmacytes (bite cells)"
+  },
+  "sentences": [
+    "Let's analyze the presented case step-by-step to determine which peripheral blood smear finding is most likely",
+    "A 26-year-old man with fatigue and dark urine over the past day",
+    "Recent diagnosis of cellulitis treated with trimethoprim-sulfamethoxazole",
+    "Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg",
+    "Laboratory findings: Hemoglobin: 7.2 g/dL, Total bilirubin: 2.1 mg/dL, Direct bilirubin: 0.8 mg/dL, Lactate dehydrogenase (LDH): 470 U/L, Glucose-6-phosphate dehydrogenase (G6PD): 7 U/gHb (normal: 6-20 U/gHb)",
+    "Conjunctival icterus and dark urine suggest hemolysis",
+    "Fatigue and low hemoglobin indicate anemia",
+    "Elevated bilirubin (mainly indirect) and LDH levels also support hemolysis",
+    "G6PD level is at the lower limit of normal which is crucial to consider",
+    "The patient was prescribed trimethoprim-sulfamethoxazole, which is known to trigger hemolysis in patients with G6PD deficiency",
+    "G6PD deficiency is an X-linked recessive disorder that predisposes red blood cells to oxidative damage, leading to hemolytic anemia",
+    "The oxidative stress from the medication (trimethoprim-sulfamethoxazole) triggers hemolysis in patients with this deficiency",
+    "In G6PD deficiency, oxidative damage to red blood cells can lead to the formation of Heinz bodies",
+    "These damaged cells are often partially removed by macrophages in the spleen, resulting in \"bite cells\" or \"degmacytes\" on a peripheral blood smear",
+    "Given the above analysis, the most likely finding on a peripheral blood smear in this patient is degmacytes (bite cells)",
+    "Correct Answer: (C) Degmacytes"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The 26-year-old man's case is being analyzed step-by-step to determine the most likely peripheral blood smear finding.",
+      "pattern": "D",
+      "notes": "Individual introductory statement."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "This 26-year-old man presents with fatigue and dark urine over the past day.",
+      "pattern": "D",
+      "notes": "Standalone patient presentation."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "He was recently diagnosed with cellulitis of his left leg, for which he received trimethoprim‑sulfamethoxazole.",
+      "pattern": "D",
+      "notes": "Treatment history presented independently."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "On examination, the 26-year-old man had conjunctival icterus, bilateral flank tenderness, and erythema of the left leg.",
+      "pattern": "A",
+      "notes": "List of exam findings belonging to one subject."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Laboratory results for the 26-year-old man showed hemoglobin 7.2 g/dL, total bilirubin 2.1 mg/dL, direct bilirubin 0.8 mg/dL, lactate dehydrogenase 470 U/L, and a G6PD level of 7 U/gHb (low normal).",
+      "pattern": "A",
+      "notes": "Enumeration of laboratory values."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Conjunctival icterus and dark urine in this 26-year-old man suggest hemolysis.",
+      "pattern": "D",
+      "notes": "Standalone interpretation."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Fatigue and low hemoglobin in the 26‑year‑old man indicate anemia.",
+      "pattern": "D",
+      "notes": "Standalone inference."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Elevated indirect bilirubin and lactate dehydrogenase levels in the 26‑year‑old man also support hemolysis.",
+      "pattern": "D",
+      "notes": "Standalone laboratory interpretation."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "A G6PD level at the lower limit of normal (7 U/gHb) in this 26‑year‑old man is clinically important.",
+      "pattern": "D",
+      "notes": "Standalone lab remark."
+    },
+    {
+      "source_sentences": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "output": "Trimethoprim‑sulfamethoxazole administration in a patient with G6PD deficiency is a recognized trigger of oxidative hemolysis, leading to Heinz body formation and subsequent macrophage‑mediated removal, which produces bite cells (degmacytes) visible on a peripheral blood smear.",
+      "pattern": "B",
+      "notes": "Causal chain linking medication, G6PD deficiency, oxidative damage, Heinz bodies, and bite cells."
+    },
+    {
+      "source_sentences": [
+        14,
+        15
+      ],
+      "output": "Overall, the most likely peripheral blood smear finding in this 26‑year‑old man is degmacytes (bite cells).",
+      "pattern": "C",
+      "notes": "Conclusion requiring the preceding causal chain."
+    }
+  ]
+}

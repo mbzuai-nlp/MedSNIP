@@ -1,0 +1,248 @@
+{
+  "entry_id": 253,
+  "batch_id": 26,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "do chlamdia often cure itself or does it cause permanent damage",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2993,
+    "output_tokens": 1047,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1357,
+      "output_tokens": 539,
+      "cached_input_tokens": 0,
+      "cost": 4.87e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1636,
+      "output_tokens": 508,
+      "cached_input_tokens": 0,
+      "cost": 5.304e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "chlamydia",
+    "condition": "chlamydia",
+    "symptom": "permanent damage"
+  },
+  "sentences": [
+    "Chlamydia is a bacterial infection caused by Chlamydia trachomatis",
+    "It is a common sexually transmitted infection (STI) that can cause significant morbidity if left untreated",
+    "Chlamydia can sometimes resolve on its own without treatment, but this is rare and often occurs in individuals with mild infections",
+    "Studies have shown that spontaneous resolution rates vary depending on the population and the specific strain of the bacteria",
+    "However, it is essential to note that even if the infection resolves on its own, it can still cause long-term complications, such as pelvic inflammatory disease (PID) in women",
+    "If left untreated, chlamydia can cause permanent damage to the reproductive organs, including the cervix, uterus, and fallopian tubes in women",
+    "In men, untreated chlamydia can cause epididymitis, a painful condition that can lead to infertility",
+    "Additionally, chlamydia can increase the risk of acquiring HIV and other STIs",
+    "Prompt treatment with antibiotics, such as azithromycin or doxycycline, can cure chlamydia and prevent long-term complications",
+    "Regular screening and testing are essential for early detection and treatment of chlamydia, especially in high-risk populations"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlamydia can sometimes resolve on its own without treatment.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 2,
+      "text": "This is rare.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Spontaneous resolution rates vary depending on the population and the specific strain of the bacteria.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Even if the infection resolves on its own, it can still cause long-term complications.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Chlamydia can cause permanent damage to the reproductive organs, including the cervix, uterus, and fallopian tubes in women.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Untreated chlamydia can cause permanent damage to the reproductive organs in women.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "This can include the cervix, uterus, and fallopian tubes.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "In men, untreated chlamydia can cause epididymitis.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Epididymitis can lead to infertility.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Untreated chlamydia can increase the risk of acquiring HIV and other STIs.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Prompt treatment with antibiotics can cure chlamydia.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Antibiotics such as azithromycin or doxycycline can cure chlamydia.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Prompt treatment can prevent long-term complications.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Regular screening and testing are essential for early detection and treatment of chlamydia.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 15,
+      "text": "This is especially important in high-risk populations.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Chlamydia can sometimes resolve on its own without treatment.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "Spontaneous resolution rates vary depending on the population and the specific strain of the bacteria, and this is rare.",
+      "pattern": "B",
+      "notes": "Causal chain with a rare condition."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Even if the infection resolves on its own, it can still cause long-term complications.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Chlamydia can cause permanent damage to the reproductive organs, including the cervix, uterus, and fallopian tubes in women.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Untreated chlamydia can cause permanent damage to the reproductive organs in women, including the cervix, uterus, and fallopian tubes.",
+      "pattern": "A",
+      "notes": "Enumeration of damage."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Untreated chlamydia can cause epididymitis in men, which can lead to infertility.",
+      "pattern": "A",
+      "notes": "Enumeration of damage."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Untreated chlamydia can increase the risk of acquiring HIV and other STIs.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Prompt treatment with antibiotics such as azithromycin or doxycycline can cure chlamydia.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Prompt treatment can prevent long-term complications.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Regular screening and testing are essential for early detection and treatment of chlamydia, especially in high-risk populations.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise."
+    }
+  ]
+}

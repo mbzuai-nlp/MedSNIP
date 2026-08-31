@@ -1,0 +1,232 @@
+{
+  "entry_id": 40,
+  "batch_id": 4,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 23-year-old man presents to the emergency department. He was brought in by police for shouting on a subway. The patient claims that little people were trying to kill him and he was acting within his rights to defend himself. The patient has a medical history of marijuana and IV drug use as well as multiple suicide attempts. He is currently homeless. While in the ED, the patient is combative and refuses a physical exam. He is given IM haloperidol and diphenhydramine. The patient is transferred to the inpatient psychiatric unit and is continued on haloperidol throughout the next week. Though he is no longer aggressive, he is seen making \"armor\" out of paper plates and plastic silverware to defend himself. His temperature is 98.6°F (37°C), blood pressure is 115/71 mmHg, pulse is 72/min, and respirations are 12/min. The patient's treatment history is significant for failure to obtain symptom control with risperidone, haloperidol, and ziprasidone. Which of the following is the most appropriate next step in management? (A) Chlorpromazine (B) Clozapine (C) Fluphenazine (D) Olanzapine (E) Thioridazine",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4910,
+    "output_tokens": 1413,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2006,
+      "output_tokens": 773,
+      "cached_input_tokens": 0,
+      "cost": 0.00055452
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2904,
+      "output_tokens": 640,
+      "cached_input_tokens": 0,
+      "cost": 0.00062072
+    }
+  ],
+  "shared_context": {
+    "age": 23,
+    "sex": "male",
+    "chief_complaint": "psychosis and combative behavior",
+    "medical_history": "marijuana use, IV drug use, multiple suicide attempts, homelessness",
+    "vitals": {
+      "temperature": "98.6°F (37°C)",
+      "blood_pressure": "115/71 mmHg",
+      "pulse": "72/min",
+      "respirations": "12/min"
+    },
+    "treatment_history": "failure of risperidone, haloperidol, and ziprasidone",
+    "correct_answer": "Clozapine"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in the management of a patient with a history of multiple suicide attempts, homelessness, IV drug use, and persistent psychotic symptoms despite treatment with several antipsychotics, we need to evaluate the options provided",
+    "Chlorpromazine - This is a first-generation antipsychotic with significant side effects, particularly sedation and hypotension",
+    "Given the patient's history of non-response to other first-generation antipsychotics (haloperidol, ziprasidone), this may not be the optimal choice",
+    "Clozapine - Clozapine is an atypical antipsychotic known for its efficacy in treatment-resistant schizophrenia",
+    "It is particularly effective for patients who have not responded to other antipsychotics",
+    "However, it requires regular monitoring due to the risk of agranulocytosis and other side effects",
+    "Given the patient's treatment history and persistent psychotic symptoms, clozapine is a strong consideration",
+    "Fluphenazine - Another first-generation antipsychotic, similar to haloperidol and ziprasidone, which the patient has already tried without success",
+    "This option is less likely to be effective given the patient's history of treatment resistance to similar medications",
+    "Olanzapine - An atypical antipsychotic that can be effective in treating schizophrenia and may be considered as it has a different side effect profile compared to the medications the patient has previously tried",
+    "However, since the patient has not tried it yet, it may be a reasonable option but not necessarily the most appropriate next step for treatment-resistant cases",
+    "Thioridazine - Another first-generation antipsychotic, known for its cardiotoxicity and less preferred due to its side effect profile",
+    "Similar to the other first-generation antipsychotics the patient has already tried, it is less likely to be effective",
+    "Given the information and considering the patient's history of non-response to multiple antipsychotics, Clozapine (B) is the most appropriate next step in management for treatment-resistant schizophrenia"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient has a history of multiple suicide attempts, homelessness, IV drug use, and persistent psychotic symptoms despite treatment with several antipsychotics.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Chlorpromazine is a first-generation antipsychotic with significant side effects, particularly sedation and hypotension.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Chlorpromazine may not be the optimal choice given the patient's history of non-response to other first-generation antipsychotics such as haloperidol and ziprasidone.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Clozapine is an atypical antipsychotic known for its efficacy in treatment-resistant schizophrenia.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Clozapine is particularly effective for patients who have not responded to other antipsychotics.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Clozapine requires regular monitoring due to the risk of agranulocytosis and other side effects.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Clozapine is a strong consideration given the patient's treatment history and persistent psychotic symptoms.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Fluphenazine is a first-generation antipsychotic similar to haloperidol and ziprasidone, which the patient has already tried without success.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Fluphenazine is less likely to be effective given the patient's history of treatment resistance to similar medications.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Olanzapine is an atypical antipsychotic that can be effective in treating schizophrenia and may be considered as it has a different side effect profile compared to the medications the patient has previously tried.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Olanzapine may be a reasonable option since the patient has not tried it yet, but it is not necessarily the most appropriate next step for treatment-resistant cases.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Thioridazine is a first-generation antipsychotic known for its cardiotoxicity and is less preferred due to its side effect profile.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Thioridazine is less likely to be effective, similar to the other first-generation antipsychotics the patient has already tried.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Clozapine (B) is the most appropriate next step in management for treatment-resistant schizophrenia given the patient's history of non-response to multiple antipsychotics.",
+      "source_sentences": [
+        13
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The 23-year-old male patient has a history of multiple suicide attempts, homelessness, IV drug use, and persistent psychotic symptoms despite treatment with several antipsychotics.",
+      "pattern": "D",
+      "notes": "Patient summary."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "Chlorpromazine is a first-generation antipsychotic with significant side effects, particularly sedation and hypotension; it may not be the optimal choice given the 23-year-old male's history of non-response to other antipsychotics such as haloperidol and ziprasidone.",
+      "pattern": "A",
+      "notes": "Evaluation of one drug candidate."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Clozapine is an atypical antipsychotic known for its efficacy in treatment-resistant schizophrenia and is particularly effective for patients who have not responded to other antipsychotics, though it requires regular monitoring due to the risk of agranulocytosis and other side effects; therefore, it is a strong consideration given this 23-year-old male's treatment history and persistent psychotic symptoms.",
+      "pattern": "A",
+      "notes": "Enumeration of Clozapine properties and case application."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Fluphenazine is a first-generation antipsychotic similar to haloperidol and ziprasidone, which the 23-year-old male has already tried without success, making it less likely to be effective given his history of treatment resistance.",
+      "pattern": "A",
+      "notes": "Evaluation of one drug candidate."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Olanzapine is an atypical antipsychotic that can be effective in treating schizophrenia and may be considered as it has a different side effect profile compared to the medications this 23-year-old male has previously tried; however, while it may be a reasonable option since he has not tried it yet, it is not necessarily the most appropriate next step for treatment-resistant cases.",
+      "pattern": "A",
+      "notes": "Evaluation of one drug candidate."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Thioridazine is a first-generation antipsychotic known for its cardiotoxicity and is less preferred due to its side effect profile; it is also less likely to be effective, similar to other first-generation antipsychotics this 23-year-old male has already tried.",
+      "pattern": "A",
+      "notes": "Evaluation of one drug candidate."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Clozapine (B) is the most appropriate next step in management for treatment-resistant schizophrenia given this 23-year-old male's history of non-response to multiple antipsychotics including risperidone, haloperidol, and ziprasidone.",
+      "pattern": "C",
+      "notes": "Conclusion based on case history."
+    }
+  ]
+}

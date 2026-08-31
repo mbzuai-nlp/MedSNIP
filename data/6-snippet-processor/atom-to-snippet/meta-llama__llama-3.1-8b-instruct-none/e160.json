@@ -1,0 +1,207 @@
+{
+  "entry_id": 160,
+  "batch_id": 16,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can you provide a short term solution that is designed for insomnia?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2889,
+    "output_tokens": 856,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1302,
+      "output_tokens": 443,
+      "cached_input_tokens": 0,
+      "cost": 4.376e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1587,
+      "output_tokens": 413,
+      "cached_input_tokens": 0,
+      "cost": 4.826e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "short term solution for insomnia",
+    "condition": "insomnia"
+  },
+  "sentences": [
+    "A short-term solution for insomnia can be achieved through a combination of behavioral and lifestyle modifications",
+    "Cognitive behavioral therapy for insomnia (CBT-I) is a non-pharmacological approach that has been shown to be effective in reducing symptoms of insomnia",
+    "CBT-I typically involves a combination of techniques such as sleep restriction, stimulus control, and cognitive restructuring",
+    "In terms of behavioral modifications, establishing a consistent sleep schedule and creating a relaxing bedtime routine can help improve sleep quality",
+    "This can include activities such as reading a book, taking a warm bath, or practicing gentle stretches before bedtime",
+    "Another short-term solution is the use of sleep aids, such as melatonin supplements",
+    "Melatonin is a hormone that regulates sleep-wake cycles, and taking a small dose of melatonin (0.5-1mg) 30 minutes before bedtime may help improve sleep quality",
+    "However, it is essential to consult with a healthcare professional before taking any sleep aids, as they can interact with other medications or have side effects"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A short-term solution for insomnia can be achieved through a combination of behavioral and lifestyle modifications.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Cognitive behavioral therapy for insomnia (CBT-I) is a non-pharmacological approach that is effective in reducing symptoms of insomnia.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "CBT-I typically involves a combination of techniques such as sleep restriction, stimulus control, and cognitive restructuring.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Establishing a consistent sleep schedule can help improve sleep quality.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Creating a relaxing bedtime routine can help improve sleep quality.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Reading a book before bedtime can help improve sleep quality.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Taking a warm bath before bedtime can help improve sleep quality.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Practicing gentle stretches before bedtime can help improve sleep quality.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Taking a small dose of melatonin (0.5-1mg) 30 minutes before bedtime may help improve sleep quality.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Melatonin is a hormone that regulates sleep-wake cycles.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "It is essential to consult with a healthcare professional before taking any sleep aids.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Sleep aids can interact with other medications or have side effects.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A short-term solution for insomnia can be achieved through a combination of behavioral and lifestyle modifications.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Cognitive behavioral therapy for insomnia (CBT-I) is a non-pharmacological approach that is effective in reducing symptoms of insomnia.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "CBT-I typically involves a combination of techniques such as sleep restriction, stimulus control, and cognitive restructuring.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Establishing a consistent sleep schedule can help improve sleep quality.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "Creating a relaxing bedtime routine can include activities such as reading a book, taking a warm bath, and practicing gentle stretches to help improve sleep quality.",
+      "pattern": "A",
+      "notes": "Enumeration of relaxing activities."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Taking a small dose of melatonin (0.5-1mg) 30 minutes before bedtime may help improve sleep quality.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Melatonin is a hormone that regulates sleep-wake cycles.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "It is essential to consult with a healthcare professional before taking any sleep aids, as they can interact with other medications or have side effects.",
+      "pattern": "C",
+      "notes": "Conclusion + premise."
+    }
+  ]
+}

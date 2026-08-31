@@ -1,0 +1,296 @@
+{
+  "entry_id": 186,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 43-year-old man presents to the emergency department with bright red blood in his stool this morning. He noticed this yesterday as well, but it was much scanter. The patient is otherwise healthy. He was celebrating his birthday last night and admits having \"too much to drink\" and vomited profusely overnight. He currently feels well and is not nauseous. He has no other significant medical history and does not take any medications. His temperature is 99.2°F (37.3°C), blood pressure is 110/75 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 100% on room air. Physical exam reveals a nontender abdomen with normal bowel sounds. Rectal exam reveals grossly bloody stool. Laboratory studies are ordered as shown below.\n\nHemoglobin: 12 g/dL\nHematocrit: 36%\nLeukocyte count: 5,500/mm^3 with normal differential\nPlatelet count: 179,000/mm^3\n\nWhich of the following is the most likely cause of this patient's symptoms? (A) Erosion into a gastric vessel (B) Inflammation and infection of colonic outpouching (C) Malignancy (D) Submucosal esophageal tear (E) Vascular malformation",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4878,
+    "output_tokens": 1509,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2128,
+      "output_tokens": 805,
+      "cached_input_tokens": 0,
+      "cost": 0.0004704
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2750,
+      "output_tokens": 704,
+      "cached_input_tokens": 0,
+      "cost": 0.00050028
+    }
+  ],
+  "shared_context": {
+    "patient_age": 43,
+    "patient_sex": "male",
+    "chief_complaint": "bright red blood in stool",
+    "medical_history": "otherwise healthy",
+    "symptom_onset": "yesterday, worsened today",
+    "recent_activities": "heavy alcohol consumption, vomiting",
+    "vitals": "temperature 99.2°F, blood pressure 110/75 mmHg, pulse 82/min, respirations 16/min, oxygen saturation 100% on room air",
+    "lab_results": "hemoglobin 12 g/dL, hematocrit 36%, leukocyte count 5,500/mm^3, platelet count 179,000/mm^3"
+  },
+  "sentences": [
+    "To determine the most likely cause of this patient's symptoms, we need to evaluate his clinical presentation and laboratory findings step-by-step",
+    "Clinical Presentation: The patient has bright red blood in his stool, which began yesterday and was more pronounced today",
+    "Bright red blood per rectum (hematochezia) often indicates bleeding from the lower gastrointestinal (GI) tract, such as the colon, rectum, or anus",
+    "However, it can occasionally be caused by massive upper GI bleeding",
+    "History: The patient mentioned heavy alcohol consumption and vomiting profusely overnight",
+    "This is a critical point as it suggests a possible upper GI etiology",
+    "Temperature: 99.2°F (37.3°C) - within normal range",
+    "Blood pressure: 110/75 mmHg - normal",
+    "Pulse: 82/min - normal",
+    "Respirations: 16/min - normal",
+    "Oxygen saturation: 100% on room air - normal",
+    "Physical exam: nontender abdomen, normal bowel sounds, and grossly bloody stool on rectal exam",
+    "Hemoglobin: 12 g/dL (normal range: 13.8 to 17.2 g/dL for men) - slightly low",
+    "Hematocrit: 36% (normal range: 41% to 50% for men) - slightly low",
+    "Leukocyte count: 5,500/mm^3 with normal differential - normal",
+    "Platelet count: 179,000/mm^3 - normal",
+    "Erosion into a gastric vessel (A): This would typically present with melena (black, tarry stools) or hematemesis (vomiting blood) rather than bright red blood per rectum",
+    "Inflammation and infection of colonic outpouching (B): This refers to diverticulitis, which usually presents with left lower quadrant pain, fever, and leukocytosis",
+    "The patient's clinical picture does not match this scenario",
+    "Malignancy (C): Colorectal cancer can present with rectal bleeding, but the acute onset associated with vomiting suggests a more acute cause",
+    "Submucosal esophageal tear (D): Known as a Mallory-Weiss tear, this condition is commonly associated with forceful vomiting leading to upper GI bleeding",
+    "This fits the patient's history of heavy alcohol use and vomiting",
+    "Vascular malformation (E): Such as angiodysplasia, can cause lower GI bleeding but is less likely given the acute presentation and recent vomiting episode",
+    "Based on the patient's history of heavy alcohol consumption and vomiting, combined with the presence of bright red blood per rectum and a slight decrease in hemoglobin and hematocrit, the most likely diagnosis is a Mallory-Weiss tear (D)"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient has bright red blood in his stool, which began yesterday and was more pronounced today.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Bright red blood per rectum often indicates bleeding from the lower gastrointestinal tract.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "However, bright red blood per rectum can occasionally be caused by massive upper GI bleeding.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's history of heavy alcohol consumption and vomiting suggests a possible upper GI etiology.",
+      "source_sentences": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's temperature, blood pressure, pulse, respirations, and oxygen saturation are within normal ranges.",
+      "source_sentences": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient has a nontender abdomen, normal bowel sounds, and grossly bloody stool on rectal exam.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient's hemoglobin and hematocrit are slightly low.",
+      "source_sentences": [
+        12,
+        13
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's leukocyte count and platelet count are normal.",
+      "source_sentences": [
+        14,
+        15
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Erosion into a gastric vessel would typically present with melena or hematemesis rather than bright red blood per rectum.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Inflammation and infection of colonic outpouching usually presents with left lower quadrant pain, fever, and leukocytosis.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The patient's clinical picture does not match the scenario of inflammation and infection of colonic outpouching.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Malignancy can present with rectal bleeding, but the acute onset associated with vomiting suggests a more acute cause.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Submucosal esophageal tear is commonly associated with forceful vomiting leading to upper GI bleeding.",
+      "source_sentences": [
+        20
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The patient's history of heavy alcohol use and vomiting fits the diagnosis of a submucosal esophageal tear.",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Vascular malformation can cause lower GI bleeding but is less likely given the acute presentation and recent vomiting episode.",
+      "source_sentences": [
+        22
+      ]
+    },
+    {
+      "index": 16,
+      "text": "The most likely diagnosis is a Mallory-Weiss tear due to the patient's history and clinical presentation.",
+      "source_sentences": [
+        23
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A 43-year-old man presents with bright red blood in his stool, which began yesterday and worsened today.",
+      "pattern": "D",
+      "notes": "Initial presentation."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "Bright red blood per rectum often indicates bleeding from the lower gastrointestinal tract, but can occasionally be caused by massive upper GI bleeding.",
+      "pattern": "A",
+      "notes": "Enumerating possible sources of bleeding."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The patient's history of heavy alcohol consumption and vomiting suggests a possible upper GI etiology for his bright red blood in stool.",
+      "pattern": "D",
+      "notes": "Relevant patient history."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The patient's vital signs, including temperature, blood pressure, pulse, respirations, and oxygen saturation, are within normal ranges.",
+      "pattern": "D",
+      "notes": "Stable vital signs."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "The patient has a nontender abdomen, normal bowel sounds, and grossly bloody stool on rectal exam.",
+      "pattern": "D",
+      "notes": "Physical exam findings."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "The patient's hemoglobin and hematocrit are slightly low, while his leukocyte count and platelet count are normal.",
+      "pattern": "A",
+      "notes": "Lab results enumeration."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Erosion into a gastric vessel would typically present with melena or hematemesis rather than bright red blood per rectum.",
+      "pattern": "D",
+      "notes": "Differential diagnosis consideration."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Inflammation and infection of colonic outpouching usually presents with left lower quadrant pain, fever, and leukocytosis, which does not match this patient's clinical picture.",
+      "pattern": "A",
+      "notes": "Differential diagnosis consideration and dismissal."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Malignancy can present with rectal bleeding, but the acute onset associated with vomiting suggests a more acute cause in this case.",
+      "pattern": "D",
+      "notes": "Differential diagnosis consideration."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "Submucosal esophageal tear is commonly associated with forceful vomiting leading to upper GI bleeding, and the patient's history of heavy alcohol use and vomiting fits this diagnosis.",
+      "pattern": "A",
+      "notes": "Specific diagnosis consideration based on patient history."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Vascular malformation can cause lower GI bleeding but is less likely given the acute presentation and recent vomiting episode in this patient.",
+      "pattern": "D",
+      "notes": "Less likely differential diagnosis."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "The most likely diagnosis is a Mallory-Weiss tear due to the patient's history and clinical presentation of bright red blood in stool following heavy alcohol consumption and vomiting.",
+      "pattern": "C",
+      "notes": "Conclusion based on the analysis of the patient's symptoms and history."
+    }
+  ]
+}

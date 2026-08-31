@@ -1,0 +1,60 @@
+{
+  "entry_id": 209,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1727,
+    "output_tokens": 652,
+    "cached_input_tokens": 0,
+    "cost": 0.00014309
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1727,
+      "output_tokens": 652,
+      "cached_input_tokens": 0,
+      "cost": 0.00014309
+    }
+  ],
+  "shared_context": {
+    "topic": "corneal abrasion and discharge",
+    "condition": "discharge"
+  },
+  "sentences": [
+    "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, foreign body sensation, and a gritty feeling, but they do not usually result in discharge from the eye",
+    "The primary symptoms are related to the disruption of the corneal epithelium, leading to a reflex production of tears rather than discharge",
+    "Discharge could indicate a secondary infection or a different underlying condition and should be evaluated further"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "Corneal abrasions do not usually result in discharge from the eye; the disruption of the corneal epithelium causes reflex tear production instead.",
+      "pattern": "B",
+      "notes": "Causal link between symptom description (tear production) and absence of discharge; merged for coherence."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "If discharge occurs after a corneal abrasion, it may indicate a secondary infection or a different underlying condition and should be evaluated further.",
+      "pattern": "D",
+      "notes": "Standalone recommendation about evaluation in case of discharge."
+    }
+  ]
+}

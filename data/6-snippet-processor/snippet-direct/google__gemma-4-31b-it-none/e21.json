@@ -1,0 +1,198 @@
+{
+  "entry_id": 21,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 1-year-old girl is brought to a neurologist due to increasing seizure frequency over the past 2 months. She recently underwent a neurology evaluation which revealed hypsarrhythmia on electroencephalography (EEG) with a mix of slow waves, multifocal spikes, and asynchrony. Her parents have noticed the patient occasionally stiffens and spreads her arms at home. She was born at 38-weeks gestational age without complications. She has no other medical problems. Her medications consist of lamotrigine and valproic acid. Her temperature is 98.3°F (36.8°C), blood pressure is 90/75 mmHg, pulse is 94/min, and respirations are 22/min. Physical exam reveals innumerable hypopigmented macules on the skin and an irregularly shaped, thickened, and elevated plaque on the lower back. Which of the following is most strongly associated with this patient's condition? (A) Cardiac rhabdomyoma (B) Glaucoma (C) Optic glioma (D) Polyostotic fibrous dysplasia (E) Renal cell carcinoma",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2769,
+    "output_tokens": 1083,
+    "cached_input_tokens": 0,
+    "cost": 0.00077151
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2769,
+      "output_tokens": 1083,
+      "cached_input_tokens": 0,
+      "cost": 0.00077151
+    }
+  ],
+  "shared_context": {
+    "age": "1-year-old",
+    "sex": "girl",
+    "chief_complaint": "increasing seizure frequency over the past 2 months",
+    "medical_history": "born at 38-weeks gestational age without complications; no other medical problems",
+    "medications": "lamotrigine, valproic acid",
+    "vitals": "T 98.3°F, BP 90/75 mmHg, P 94/min, R 22/min",
+    "exam_findings": "EEG shows hypsarrhythmia (slow waves, multifocal spikes, asynchrony); occasional stiffening and spreading of arms; innumerable hypopigmented macules; irregularly shaped, thickened, and elevated plaque on lower back",
+    "correct_answer": "Cardiac rhabdomyoma (A)"
+  },
+  "sentences": [
+    "To determine the most strongly associated condition for the patient described, we need to analyze the clinical information provided step-by-step",
+    "The patient has a history of increasing seizure frequency",
+    "The EEG reveals hypsarrhythmia, a pattern characterized by chaotic, high-voltage slow waves and multifocal spikes",
+    "The patient exhibits occasional stiffening and spreading of arms, consistent with infantile spasms (a type of seizure)",
+    "Numerous hypopigmented macules (ash leaf spots)",
+    "An irregularly shaped, thickened, and elevated plaque on the lower back (shagreen patch)",
+    "Currently on lamotrigine and valproic acid, both of which are used to manage epilepsy",
+    "Born at term without complications",
+    "No other medical problems were reported",
+    "Based on these findings, the patient’s condition is most suggestive of Tuberous Sclerosis Complex (TSC), which is characterized by",
+    "Infantile spasms and hypsarrhythmia on EEG",
+    "Skin manifestations such as hypopigmented macules and shagreen patches",
+    "Next, let's evaluate the answer options to determine which condition is most strongly associated with TSC",
+    "Cardiac rhabdomyoma (A): Cardiac rhabdomyomas are benign tumors and are commonly associated with TSC",
+    "Glaucoma (B): Not typically associated with TSC",
+    "Optic glioma (C): More commonly associated with Neurofibromatosis type 1 (NF1)",
+    "Polyostotic fibrous dysplasia (D): Associated with McCune-Albright syndrome",
+    "Renal cell carcinoma (E): Not commonly associated with TSC in early childhood",
+    "Given the clinical evidence of TSC and the associations of the conditions listed, the most strongly associated condition with TSC is Cardiac rhabdomyoma",
+    "Final Answer: (A) Cardiac rhabdomyoma"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most strongly associated condition for this 1-year-old girl, the clinical information must be analyzed step-by-step.",
+      "pattern": "D",
+      "notes": "Introductory sentence."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "This 1-year-old girl has a history of increasing seizure frequency.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The 1-year-old girl's EEG reveals hypsarrhythmia, a pattern characterized by chaotic, high-voltage slow waves and multifocal spikes.",
+      "pattern": "D",
+      "notes": "Standalone definition/finding."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The patient exhibits occasional stiffening and spreading of arms, which is consistent with infantile spasms (a type of seizure).",
+      "pattern": "D",
+      "notes": "Clinical interpretation of a finding."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "This 1-year-old girl has numerous hypopigmented macules, known as ash leaf spots.",
+      "pattern": "D",
+      "notes": "Standalone skin finding."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "This 1-year-old girl has an irregularly shaped, thickened, and elevated plaque on the lower back, known as a shagreen patch.",
+      "pattern": "D",
+      "notes": "Standalone skin finding."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "The patient is currently on lamotrigine and valproic acid, both of which are used to manage epilepsy.",
+      "pattern": "D",
+      "notes": "Standalone medication fact."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "The 1-year-old girl was born at term without complications and had no other reported medical problems.",
+      "pattern": "A",
+      "notes": "Enumeration of birth and medical history properties."
+    },
+    {
+      "source_sentences": [
+        9,
+        10,
+        11
+      ],
+      "output": "Based on the findings of infantile spasms, hypsarrhythmia on EEG, and skin manifestations such as hypopigmented macules and shagreen patches, this 1-year-old girl's condition is most suggestive of Tuberous Sclerosis Complex (TSC).",
+      "pattern": "C",
+      "notes": "Conclusion (TSC) and the supporting clinical premises."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "The answer options must be evaluated to determine which condition is most strongly associated with Tuberous Sclerosis Complex (TSC).",
+      "pattern": "D",
+      "notes": "Transition sentence."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Cardiac rhabdomyomas are benign tumors and are commonly associated with Tuberous Sclerosis Complex (TSC).",
+      "pattern": "D",
+      "notes": "Standalone medical fact."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Glaucoma is not typically associated with Tuberous Sclerosis Complex (TSC).",
+      "pattern": "D",
+      "notes": "Standalone medical fact."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "Optic glioma is more commonly associated with Neurofibromatosis type 1 (NF1) than with Tuberous Sclerosis Complex (TSC).",
+      "pattern": "D",
+      "notes": "Standalone medical fact."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "Polyostotic fibrous dysplasia is associated with McCune-Albright syndrome.",
+      "pattern": "D",
+      "notes": "Standalone medical fact."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "Renal cell carcinoma is not commonly associated with Tuberous Sclerosis Complex (TSC) in early childhood.",
+      "pattern": "D",
+      "notes": "Standalone medical fact."
+    },
+    {
+      "source_sentences": [
+        18,
+        19
+      ],
+      "output": "Given the clinical evidence of Tuberous Sclerosis Complex (TSC) in this 1-year-old girl and the associations of the conditions listed, the most strongly associated condition is Cardiac rhabdomyoma.",
+      "pattern": "C",
+      "notes": "Final recommendation based on preceding evidence."
+    }
+  ]
+}

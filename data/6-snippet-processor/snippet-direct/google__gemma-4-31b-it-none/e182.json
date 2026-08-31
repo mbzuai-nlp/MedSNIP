@@ -1,0 +1,180 @@
+{
+  "entry_id": 182,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 45-year-old man presents to a physician due to difficulty swallowing and slurred speech. For the past 3 months, the patient has been coughing when he drinks liquids. His speech also sounds different according to his wife. The patient has no significant medical history. His temperature is 98.6°F (37.0°C), blood pressure is 110/80 mmHg, pulse is 60/min, and respirations are 12/min. On physical exam, he is unable to fully extend his tongue, and there are fasciculations on his tongue. When tapping the mandible at the chin while the mouth is held open, there is pronounced upward movement of the lower jaw. Sensory exam reveals no deficits. Which of the following therapies is most likely to improve survival for this patient's disease process? (A) Baclofen (B) Dextromethorphan and quinidine (C) Edaravone (D) Riluzole (E) Tizanidine",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2809,
+    "output_tokens": 961,
+    "cached_input_tokens": 0,
+    "cost": 0.00073035
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2809,
+      "output_tokens": 961,
+      "cached_input_tokens": 0,
+      "cost": 0.00073035
+    }
+  ],
+  "shared_context": {
+    "age": "45",
+    "sex": "male",
+    "chief_complaint": "difficulty swallowing and slurred speech",
+    "medical_history": "no significant medical history",
+    "vitals": "temp 98.6F, BP 110/80, pulse 60, RR 12",
+    "exam_findings": "coughing when drinking liquids, unable to fully extend tongue, tongue fasciculations, pronounced upward movement of lower jaw on mandible tap (jaw jerk), no sensory deficits",
+    "correct_answer": "Riluzole (D)"
+  },
+  "sentences": [
+    "To determine the most appropriate therapy to improve survival for this patient's disease process, we need to analyze the clinical presentation and identify the underlying condition",
+    "Difficulty swallowing (dysphagia)",
+    "Slurred speech (dysarthria)",
+    "Coughing when drinking liquids",
+    "Inability to fully extend the tongue",
+    "Fasciculations on the tongue",
+    "Pronounced upward movement of the lower jaw when tapping the mandible (jaw jerk reflex)",
+    "No sensory deficits",
+    "Dysphagia and dysarthria are common symptoms of neurological disorders affecting the cranial nerves or the brainstem",
+    "Tongue fasciculations and difficulty with tongue movements suggest involvement of the lower motor neurons (LMNs)",
+    "Pronounced jaw jerk reflex indicates upper motor neuron (UMN) involvement",
+    "The combination of UMN and LMN signs is characteristic of amyotrophic lateral sclerosis (ALS)",
+    "ALS is a neurodegenerative disorder that affects both UMNs and LMNs, leading to muscle weakness, atrophy, and fasciculations, along with exaggerated reflexes",
+    "The absence of sensory deficits supports the diagnosis of ALS, as this condition typically spares sensory neurons",
+    "Baclofen: This is used primarily for muscle spasticity and may provide symptomatic relief but does not improve survival in ALS",
+    "Dextromethorphan and Quinidine: This combination is used to treat pseudobulbar affect, which is a symptom management strategy; it does not improve survival in ALS",
+    "Edaravone: This drug has been shown to slow the progression of ALS in specific patient populations and may modestly improve survival",
+    "Riluzole: This medication is the standard treatment for ALS and has been shown to extend survival by a few months in patients with ALS",
+    "Tizanidine: This is another antispastic agent used for muscle spasticity and does not improve survival in ALS",
+    "Given the diagnosis of ALS based on the patient’s symptoms and clinical findings, the therapy most likely to improve survival is Riluzole",
+    "Riluzole has been demonstrated to extend survival in patients with ALS",
+    "(D) Riluzole"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate therapy to improve survival for this 45-year-old man's disease process, the clinical presentation and underlying condition must be analyzed.",
+      "pattern": "D",
+      "notes": "Introductory goal statement."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "The clinical presentation of this 45-year-old man includes difficulty swallowing (dysphagia), slurred speech (dysarthria), coughing when drinking liquids, inability to fully extend the tongue, fasciculations on the tongue, a pronounced upward movement of the lower jaw when tapping the mandible (jaw jerk reflex), and no sensory deficits.",
+      "pattern": "A",
+      "notes": "Enumeration of the patient's clinical findings."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Dysphagia and dysarthria are common symptoms of neurological disorders affecting the cranial nerves or the brainstem.",
+      "pattern": "D",
+      "notes": "General medical fact."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Tongue fasciculations and difficulty with tongue movements suggest involvement of the lower motor neurons (LMNs).",
+      "pattern": "D",
+      "notes": "Standalone clinical interpretation."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "A pronounced jaw jerk reflex indicates upper motor neuron (UMN) involvement.",
+      "pattern": "D",
+      "notes": "Standalone clinical interpretation."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "The combination of UMN and LMN signs is characteristic of amyotrophic lateral sclerosis (ALS), a neurodegenerative disorder that affects both UMNs and LMNs, leading to muscle weakness, atrophy, and fasciculations, along with exaggerated reflexes.",
+      "pattern": "B",
+      "notes": "Causal chain linking symptoms to diagnosis and definition of diagnosis."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "The absence of sensory deficits in this 45-year-old man supports the diagnosis of ALS, as this condition typically spares sensory neurons.",
+      "pattern": "B",
+      "notes": "Reasoning connecting exam finding to diagnosis."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Baclofen is used primarily for muscle spasticity and may provide symptomatic relief but does not improve survival in ALS.",
+      "pattern": "D",
+      "notes": "Standalone drug fact."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "The combination of Dextromethorphan and Quinidine is used to treat pseudobulbar affect as a symptom management strategy and does not improve survival in ALS.",
+      "pattern": "D",
+      "notes": "Standalone drug fact."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "Edaravone has been shown to slow the progression of ALS in specific patient populations and may modestly improve survival.",
+      "pattern": "D",
+      "notes": "Standalone drug fact."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "Riluzole is the standard treatment for ALS and has been shown to extend survival by a few months in patients with ALS.",
+      "pattern": "D",
+      "notes": "Standalone drug fact."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Tizanidine is an antispastic agent used for muscle spasticity and does not improve survival in ALS.",
+      "pattern": "D",
+      "notes": "Standalone drug fact."
+    },
+    {
+      "source_sentences": [
+        19,
+        20,
+        21
+      ],
+      "output": "Given the diagnosis of ALS based on the symptoms and clinical findings of this 45-year-old man, the therapy most likely to improve survival is Riluzole (D), as Riluzole has been demonstrated to extend survival in patients with ALS.",
+      "pattern": "C",
+      "notes": "Conclusion linked to supporting premises."
+    }
+  ]
+}

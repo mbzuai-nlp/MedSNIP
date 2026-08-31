@@ -1,0 +1,174 @@
+{
+  "entry_id": 41,
+  "batch_id": 5,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How am I supposed to put ointment on my nipple if it's pierced",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3059,
+    "output_tokens": 3005,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1400,
+      "output_tokens": 923,
+      "cached_input_tokens": 0,
+      "cost": 0.00017122
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1659,
+      "output_tokens": 2082,
+      "cached_input_tokens": 0,
+      "cost": 0.00034125
+    }
+  ],
+  "shared_context": {
+    "topic": "nipple piercing care",
+    "procedure": "orto ointment application"
+  },
+  "sentences": [
+    "When caring for a nipple piercing, it's essential to follow proper hygiene and aftercare techniques to promote healing and minimize the risk of complications",
+    "To apply ointment to a nipple piercing, follow these steps",
+    "Wash your hands thoroughly with soap and warm water before touching the piercing",
+    "Clean the piercing with a saline solution (1/4 teaspoon of sea salt in 8 ounces of warm water) to remove any debris or bacteria",
+    "Pat the area dry with a clean towel",
+    "Apply a small amount of fragrance-free, non-comedogenic ointment (e.g., Bacitracin or Neosporin) directly to the piercing, avoiding the jewelry",
+    "Gently rotate the jewelry to ensure the ointment is evenly distributed",
+    "When choosing an ointment, select one that is fragrance-free and non-comedogenic to minimize the risk of irritation",
+    "Avoid using petroleum-based products, such as Vaseline, as they can slow healing and cause skin irritation",
+    "It's also essential to follow a regular aftercare routine, which may include cleaning the piercing 2-3 times a day and applying ointment as needed",
+    "If you experience any signs of infection, such as redness, swelling, or discharge, seek medical attention immediately"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Proper hygiene and aftercare techniques are essential to promote healing and minimize the risk of complications when caring for a nipple piercing.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Applying ointment to a nipple piercing involves following a set of steps.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Hands must be washed thoroughly with soap and warm water before touching the piercing.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The piercing should be cleaned with a saline solution (1/4 teaspoon sea salt in 8 ounces warm water) to remove debris or bacteria.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The area around the piercing should be patted dry with a clean towel.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A small amount of fragrance‑free, non‑comedogenic ointment (e.g., Bacitracin or Neosporin) should be applied directly to the piercing, avoiding the jewelry.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The jewelry should be gently rotated to ensure the ointment is evenly distributed.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "An ointment that is fragrance‑free and non‑comedogenic should be selected to minimize the risk of irritation.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Petroleum‑based products such as Vaseline should be avoided because they can slow healing and cause skin irritation.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "A regular aftercare routine that includes cleaning the piercing 2–3 times a day and applying ointment as needed is essential.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "If signs of infection such as redness, swelling, or discharge are observed, medical attention should be sought immediately.",
+      "source_sentences": [
+        10
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Applying ointment to a nipple piercing involves following a set of steps: first wash your hands thoroughly with soap and warm water; then clean the piercing with a saline solution (1/4 teaspoon sea salt in 8 ounces warm water) to remove debris or bacteria; pat the area around the piercing dry with a clean towel; apply a small amount of fragrance‑free, non‑comedogenic ointment (such as Bacitracin or Neosporin) directly to the piercing, avoiding the jewelry; finally, gently rotate the jewelry to ensure the ointment is evenly distributed.",
+      "pattern": "A",
+      "notes": "Enumeration of procedural steps for ointment application."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Choose an ointment that is fragrance‑free and non‑comedogenic to minimize irritation, and avoid petroleum‑based products such as Vaseline because they can slow healing and cause skin irritation.",
+      "pattern": "B",
+      "notes": "Causal link explaining the selection and avoidance of certain ointments."
+    },
+    {
+      "source_claims": [
+        1,
+        10
+      ],
+      "output": "A regular aftercare routine that includes cleaning the piercing 2–3 times a day and applying ointment as needed is essential to promote healing and minimize the risk of complications.",
+      "pattern": "C",
+      "notes": "Conclusion supported by general hygiene premise."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "If signs of infection such as redness, swelling, or discharge are observed, medical attention should be sought immediately.",
+      "pattern": "D",
+      "notes": "Standalone recommendation that can be verified independently."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "entry_id": 243,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is Augmentin the same thing as Amoxcicilin?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2779,
+    "output_tokens": 1845,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1249,
+      "output_tokens": 923,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1530,
+      "output_tokens": 922,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "whether Augmentin is the same as amoxicillin",
+    "drug_a": "Augmentin",
+    "drug_b": "Amoxicillin"
+  },
+  "sentences": [
+    "Augmentin and Amoxicillin are related but not exactly the same thing",
+    "Augmentin is a brand name for a combination antibiotic medication that contains amoxicillin and clavulanate",
+    "Amoxicillin, on the other hand, is a generic name for a type of penicillin antibiotic",
+    "The addition of clavulanate in Augmentin is intended to inhibit beta-lactamase enzymes produced by certain bacteria, making the antibiotic more effective against a broader range of bacteria",
+    "In other words, Augmentin is a specific formulation of amoxicillin that includes an additional ingredient, clavulanate, which enhances its antibacterial properties",
+    "Amoxicillin, by itself, is a more general term for a type of antibiotic that may not contain clavulanate"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Augmentin and amoxicillin are related but not exactly the same thing.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Augmentin is a brand name for a combination antibiotic medication that contains amoxicillin and clavulanate.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Amoxicillin is a generic name for a type of penicillin antibiotic.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The clavulanate in Augmentin is intended to inhibit beta-lactamase enzymes produced by certain bacteria.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The addition of clavulanate in Augmentin is intended to make Augmentin more effective against a broader range of bacteria.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Augmentin is a specific formulation of amoxicillin that includes clavulanate.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Clavulanate enhances the antibacterial properties of Augmentin.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Amoxicillin by itself is a more general term for a type of antibiotic that may not contain clavulanate.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        6,
+        8
+      ],
+      "output": "Augmentin and amoxicillin are related but not exactly the same thing: Augmentin is a brand-name combination antibiotic that contains amoxicillin and clavulanate, making it a specific amoxicillin formulation with clavulanate, whereas amoxicillin is the generic name for a penicillin antibiotic and by itself may not contain clavulanate.",
+      "pattern": "C",
+      "notes": "Main conclusion that they are not the same is supported by defining what Augmentin and amoxicillin are."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        7
+      ],
+      "output": "In Augmentin, clavulanate is intended to inhibit beta-lactamase enzymes produced by certain bacteria, which enhances Augmentin's antibacterial properties and helps make it effective against a broader range of bacteria.",
+      "pattern": "B",
+      "notes": "Mechanism-to-effect chain: beta-lactamase inhibition leads to enhanced activity and broader bacterial coverage."
+    }
+  ]
+}

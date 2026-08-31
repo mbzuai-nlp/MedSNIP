@@ -1,0 +1,196 @@
+{
+  "entry_id": 65,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 52-year-old man presents to the emergency department by ambulance for evaluation of hematemesis. His wife states that he began vomiting bright red blood this evening while eating dinner, and has produced about 5 cups total. He has a history of alcohol use disorder and has vomited small streaks of blood in the past, but has never undergone formal medical workup for it. On exam, he has bright red blood in his mouth and pharynx, and also displays a distended abdomen with a fluid wave, jaundice, scattered spider angiomas, and multiple ecchymoses. His temperature is 98.4°F (36.9°C), blood pressure is 98/68 mmHg, pulse is 125/min, and respirations are 22/min. A rapid point-of-care hemoglobin and platelet count is 8.8 g/dL and 80,000/mm^3, respectively. The patient is given 1L of normal saline. Which of the following is the most appropriate initial step in management? (A) Balloon tamponade (B) Ceftriaxone (C) Nadolol (D) Octreotide (E) Platelet transfusion",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2946,
+    "output_tokens": 1145,
+    "cached_input_tokens": 0,
+    "cost": 0.00081808
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2946,
+      "output_tokens": 1145,
+      "cached_input_tokens": 0,
+      "cost": 0.00081808
+    }
+  ],
+  "shared_context": {
+    ".": "...",
+    "age": "52",
+    "sex": "man",
+    "chief_complaint": "hematemesis",
+    "medical_history": "alcohol use disorder",
+    "vitals": "T 98.4°F, BP 98/68 mmHg, pulse 125/min, RR 22/min",
+    "exam_findings": "bright red blood in mouth/pharynx, distended abdomen with fluid wave, jaundice, spider angiomas, ecchymoses",
+    "treatment_history": "1L normal saline",
+    "correct_answer": "Octreotide (D)"
+  },
+  "sentences": [
+    "The patient presents with hematemesis, vomiting bright red blood",
+    "He has a history of alcohol use disorder and physical signs of chronic liver disease (jaundice, spider angiomas, ecchymoses, and a distended abdomen with a fluid wave indicating ascites)",
+    "Vital signs indicate hemodynamic instability with tachycardia (pulse of 125/min) and borderline low blood pressure (98/68 mmHg)",
+    "Lab results show anemia (hemoglobin 8.8 g/dL) and thrombocytopenia (platelet count 80,000/mm^3)",
+    "Hematemesis indicates upper gastrointestinal (GI) bleeding",
+    "Alcohol use disorder is a risk factor for esophageal varices",
+    "Jaundice, spider angiomas, and ascites are signs of chronic liver disease, commonly associated with cirrhosis",
+    "Given the clinical context, the patient likely suffers from variceal bleeding secondary to cirrhosis",
+    "Esophageal varices are a common cause of upper GI bleeding in patients with cirrhosis",
+    "The primary goals in managing acute variceal bleeding are to stabilize the patient, prevent further bleeding, and reduce complications such as infection",
+    "Immediate management includes hemodynamic stabilization and administration of medications to control bleeding and prevent infection",
+    "(A) Balloon tamponade: This is typically reserved for refractory variceal bleeding when endoscopic treatment is not immediately available or has failed",
+    "(B) Ceftriaxone: Antibiotic prophylaxis is recommended in patients with cirrhosis and GI bleeding to prevent spontaneous bacterial peritonitis and other infections",
+    "(C) Nadolol: This non-selective beta-blocker is used for secondary prevention of variceal bleeding, not for acute management",
+    "(D) Octreotide: This somatostatin analog reduces portal hypertension and variceal bleeding by constricting splanchnic blood flow",
+    "(E) Platelet transfusion: This may be indicated in the presence of significant thrombocytopenia, but it is not the immediate first step in management",
+    "Given the scenario, the administration of octreotide (D) is the most appropriate initial step",
+    "Octreotide is effective in controlling acute variceal hemorrhage by reducing portal venous pressure and splanchnic circulation",
+    "Additionally, prophylactic antibiotics like ceftriaxone (B) should be administered to prevent infection but would be the second priority",
+    "Octreotide is recommended as the first-line treatment for acute variceal bleeding",
+    "Antibiotic prophylaxis with ceftriaxone is recommended to prevent infections in cirrhotic patients with GI bleeding",
+    "(D) Octreotide"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "A 52-year-old man presents with hematemesis, vomiting bright red blood.",
+      "pattern": "D",
+      "notes": "Standalone fact regarding presentation."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "This 52-year-old man has a history of alcohol use disorder and physical signs of chronic liver disease, including jaundice, spider angiomas, ecchymoses, and a distended abdomen with a fluid wave indicating ascites.",
+      "pattern": "D",
+      "notes": "Standalone patient history/exam summary."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The 52-year-old man's vital signs indicate hemodynamic instability with tachycardia (pulse of 125/min) and borderline low blood pressure (98/68 mmHg).",
+      "pattern": "D",
+      "notes": "Standalone vital sign interpretation."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Lab results for this 52-year-old man show anemia (hemoglobin 8.8 g/dL) and thrombocytopenia (platelet count 80,000/mm^3).",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Hematemesis indicates upper gastrointestinal (GI) bleeding, and since alcohol use disorder is a risk factor for esophageal varices, and jaundice, spider angiomas, and ascites are signs of chronic liver disease commonly associated with cirrhosis, this patient likely suffers from variceal bleeding secondary to cirrhosis.",
+      "pattern": "B",
+      "notes": "Causal chain linking symptoms and history to a likely diagnosis."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Esophageal varices are a common cause of upper GI bleeding in patients with cirrhosis.",
+      "pattern": "D",
+      "notes": "General medical fact."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "The primary goals in managing acute variceal bleeding are to stabilize the patient, prevent further bleeding, and reduce complications such as infection; immediate management includes hemodynamic stabilization and administration of medications to control bleeding and prevent infection.",
+      "pattern": "A",
+      "notes": "Enumeration of management goals and immediate steps for the same condition."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Balloon tamponade is typically reserved for refractory variceal bleeding when endoscopic treatment is not immediately available or has failed.",
+      "pattern": "D",
+      "notes": "Standalone drug/procedure definition."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Antibiotic prophylaxis, such as ceftriaxone, is recommended in patients with cirrhosis and GI bleeding to prevent spontaneous bacterial peritonitis and other infections.",
+      "pattern": "D",
+      "notes": "Standalone medical recommendation."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Nadolol, a non-selective beta-blocker, is used for secondary prevention of variceal bleeding, not for acute management.",
+      "pattern": "D",
+      "notes": "Standalone drug definition/use case."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Octreotide is a somatostatin analog that reduces portal hypertension and variceal bleeding by constricting splanchnic blood flow.",
+      "pattern": "D",
+      "notes": "Standalone drug mechanism."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "Platelet transfusion may be indicated in the presence of significant thrombocytopenia, but it is not the immediate first step in management.",
+      "pattern": "D",
+      "notes": "Standalone treatment interpretation."
+    },
+    {
+      "source_sentences": [
+        16,
+        17,
+        19
+      ],
+      "output": "Given the scenario of a 52-year-old man with signs of cirrhosis and acute hematemesis, the administration of octreotide is the most appropriate initial step because it is effective in controlling acute variceal hemorrhage by reducing portal venous pressure and splanchnic circulation and is recommended as first-line treatment.",
+      "pattern": "C",
+      "notes": "Conclusion (Octreotide is correct) paired with supporting premises/mechanisms."
+    },
+    {
+      "source_sentences": [
+        18,
+        20
+      ],
+      "output": "Prophylactic antibiotics like ceftriaxone should be administered to prevent infections in cirrhotic patients with GI bleeding, though it would be the second priority in this patient.",
+      "pattern": "A",
+      "notes": "Properties/recommendations regarding antibiotic use in this context."
+    },
+    {
+      "source_sentences": [
+        21
+      ],
+      "output": "The most appropriate initial step in management is (D) Octreotide.",
+      "pattern": "D",
+      "notes": "Final answer selection."
+    }
+  ]
+}

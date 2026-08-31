@@ -1,0 +1,96 @@
+{
+  "entry_id": 163,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is flu test same as influenza test ?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2647,
+    "output_tokens": 2386,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1198,
+      "output_tokens": 724,
+      "cached_input_tokens": 0,
+      "cost": 0.0001373
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1449,
+      "output_tokens": 1662,
+      "cached_input_tokens": 0,
+      "cost": 0.00027615
+    }
+  ],
+  "shared_context": {
+    "topic": "flu test",
+    "condition": "influenza infection"
+  },
+  "sentences": [
+    "Yes, a flu test is the same as an influenza test",
+    "Both terms refer to diagnostic tests used to detect the presence of the influenza virus in a patient",
+    "Influenza, commonly known as the flu, is caused by influenza viruses, and these tests help in identifying the specific virus strain responsible for the infection"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A flu test is the same as an influenza test.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The terms flu test and influenza test refer to diagnostic tests used to detect the presence of the influenza virus in a patient.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Influenza is caused by influenza viruses.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Testing for influenza helps identify the specific virus strain responsible for the infection.",
+      "source_sentences": [
+        2
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        4
+      ],
+      "output": "A flu test is the same as an influenza test; the terms refer to diagnostic tests used to detect the influenza virus in a patient, and such testing helps identify the specific virus strain responsible for the infection.",
+      "pattern": "A",
+      "notes": "Merged equivalence, definition, and utility claims for a coherent, verifiable statement."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Influenza is caused by influenza viruses.",
+      "pattern": "D",
+      "notes": "Standalone fact about influenza etiology."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "entry_id": 221,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 27-year-old man presents for an appointment to establish care. He recently was released from prison. He has felt very fatigued and has had a cough. He has lost roughly 15 pounds over the past 3 weeks. He attributes this to intravenous drug use in prison. His temperature is 99.5°F (37.5°C), blood pressure is 127/68 mmHg, pulse is 100/min, respirations are 18/min, and oxygen saturation is 98% on room air. QuantiFERON gold testing is positive. The patient is started on appropriate treatment. Which of the following is the most likely indication to discontinue this patient's treatment? (A) Elevated liver enzymes (B) Hyperuricemia (C) Optic neuritis (D) Peripheral neuropathy (E) Red body excretions",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2586,
+    "output_tokens": 3126,
+    "cached_input_tokens": 0,
+    "cost": 0.00051522
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2586,
+      "output_tokens": 3126,
+      "cached_input_tokens": 0,
+      "cost": 0.00051522
+    }
+  ],
+  "shared_context": {
+    "age": "27",
+    "sex": "male",
+    "chief_complaint": "fatigue, cough, weight loss",
+    "medical_history": "recent release from prison; intravenous drug use",
+    "vitals": "temp 99.5°F, BP 127/68, pulse 100, RR 18, SpO2 98% RA",
+    "exam_findings": "none provided",
+    "treatment_history": "started on standard 6‑month TB regimen",
+    "correct_answer": "Optic neuritis (C)"
+  },
+  "sentences": [
+    "To determine the most likely indication to discontinue the patient's treatment, we need to understand the underlying condition being treated and potential side effects or contraindications of the treatment",
+    "The patient has tested positive for QuantiFERON gold testing, which indicates an immune response to Mycobacterium tuberculosis (M. tuberculosis) antigen",
+    "This suggests that the patient has latent tuberculosis (TB) or active TB infection",
+    "The patient has been started on treatment for TB, likely a combination of isoniazid (INH), rifampicin, pyrazinamide, and ethambutol for the first 2 months followed by isoniazid and rifampicin for the subsequent 4 months",
+    "Elevated liver enzymes (A) is a common side effect of several anti-TB medications, including isoniazid and pyrazinamide",
+    "If liver enzymes are significantly elevated, treatment may need to be adjusted or discontinued to prevent liver damage",
+    "Hyperuricemia (B) is not a direct indication to discontinue TB treatment",
+    "Optic neuritis (C) is a rare but serious side effect of ethambutol, which can cause visual disturbances",
+    "If the patient develops optic neuritis, treatment with ethambutol should be discontinued",
+    "Peripheral neuropathy (D) is a known side effect of isoniazid, which can cause numbness, tingling, or pain in the hands and feet",
+    "Treatment with pyridoxine (vitamin B6) can help prevent or treat peripheral neuropathy, and treatment is not typically discontinued due to this side effect",
+    "Red body excretions (E) are not a common or recognized side effect of TB treatment",
+    "Based on the information provided, the most likely indication to discontinue the patient's treatment is optic neuritis, a rare but serious side effect of ethambutol"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely indication to discontinue this 27-year-old man's treatment, one must understand the underlying condition and potential side effects or contraindications.",
+      "pattern": "D",
+      "notes": "Standalone explanatory sentence."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3
+      ],
+      "output": "The 27-year-old man tested positive for QuantiFERON gold, indicating exposure to *Mycobacterium tuberculosis* antigen, which suggests latent or active TB infection; consequently he was started on a TB regimen consisting of isoniazid, rifampicin, pyrazinamide, and ethambutol for the first 2 months followed by isoniazid and rifampicin for 4 months.",
+      "pattern": "A",
+      "notes": "Enumeration of the patient's diagnosis and treatment."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Elevated liver enzymes is a common side effect of several anti-TB medications, including isoniazid and pyrazinamide; if hepatic transaminases rise significantly, treatment may need to be adjusted or discontinued to prevent liver damage.",
+      "pattern": "B",
+      "notes": "Causal chain: side effect → discontinuation."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Hyperuricemia is not a direct indication to discontinue TB treatment for this 27-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_sentences": [
+        7,
+        8,
+        12
+      ],
+      "output": "Optic neuritis is a rare but serious side effect of ethambutol that can cause visual disturbances in the 27-year-old man; if optic neuritis develops, ethambutol should be discontinued, which is the most likely indication to stop treatment.",
+      "pattern": "C",
+      "notes": "Premise (optic neuritis) plus conclusion (discontinuation)."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "Peripheral neuropathy is a known side effect of isoniazid that can cause numbness, tingling, or pain in the hands and feet of the 27‑year‑old man; treating with pyridoxine can prevent or manage neuropathy, and therapy is generally not discontinued because of this side effect.",
+      "pattern": "B",
+      "notes": "Causal chain: side effect → management; no discontinuation."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Red body excretions are not a common or recognized side effect of TB treatment for this 27-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    }
+  ]
+}

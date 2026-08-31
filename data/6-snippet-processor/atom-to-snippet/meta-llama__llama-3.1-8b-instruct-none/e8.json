@@ -1,0 +1,128 @@
+{
+  "entry_id": 8,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How long does this years flu usually last?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2728,
+    "output_tokens": 491,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1234,
+      "output_tokens": 258,
+      "cached_input_tokens": 0,
+      "cost": 3.5e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1494,
+      "output_tokens": 233,
+      "cached_input_tokens": 0,
+      "cost": 3.92e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "duration of this year's flu",
+    "condition": "influenza"
+  },
+  "sentences": [
+    "The duration of influenza symptoms can vary depending on several factors, including the individual's overall health, age, and whether they have received the flu vaccine",
+    "Generally, the acute symptoms of influenza, such as fever, chills, muscle aches, and fatigue, typically last about 3 to 7 days in most healthy individuals",
+    "However, some symptoms, like cough and fatigue, can persist for up to two weeks or longer",
+    "Individuals with weakened immune systems, young children, and the elderly may experience a longer duration of symptoms and are at higher risk for complications",
+    "Antiviral medications, if started within the first 48 hours of symptom onset, can reduce the duration of symptoms by about one day"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The acute symptoms of influenza typically last about 3 to 7 days in most healthy individuals.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Some symptoms, like cough and fatigue, can persist for up to two weeks or longer.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Individuals with weakened immune systems may experience a longer duration of symptoms.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Young children and the elderly may experience a longer duration of symptoms.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Individuals with weakened immune systems, young children, and the elderly are at higher risk for complications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Antiviral medications can reduce the duration of symptoms by about one day if started within the first 48 hours of symptom onset.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The acute symptoms of influenza typically last about 3 to 7 days in most healthy individuals, but some symptoms like cough and fatigue can persist for up to two weeks or longer.",
+      "pattern": "A",
+      "notes": "Enumeration of symptom duration."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Individuals with weakened immune systems, young children, and the elderly may experience a longer duration of symptoms.",
+      "pattern": "A",
+      "notes": "Enumeration of groups at higher risk."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Individuals with weakened immune systems, young children, and the elderly are at higher risk for complications.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Antiviral medications can reduce the duration of symptoms by about one day if started within the first 48 hours of symptom onset.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    }
+  ]
+}

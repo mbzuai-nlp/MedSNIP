@@ -1,0 +1,170 @@
+{
+  "entry_id": 202,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2878,
+    "output_tokens": 612,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1286,
+      "output_tokens": 383,
+      "cached_input_tokens": 0,
+      "cost": 0.00031272
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1592,
+      "output_tokens": 229,
+      "cached_input_tokens": 0,
+      "cost": 0.00029398
+    }
+  ],
+  "shared_context": {
+    "topic": "poison ivy contagion",
+    "condition": "contact dermatitis",
+    "symptom": "rash"
+  },
+  "sentences": [
+    "Poison ivy itself is not contagious between people",
+    "The rash caused by poison ivy, known as contact dermatitis, results from an allergic reaction to urushiol, an oil found in the plant",
+    "Poison ivy itself is not contagious between people",
+    "The rash caused by poison ivy is known as contact dermatitis",
+    "The rash results from an allergic reaction to urushiol, an oil found in the plant",
+    "Urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Poison ivy itself is not contagious between people.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The rash caused by poison ivy is known as contact dermatitis.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The rash caused by poison ivy results from an allergic reaction to urushiol.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Urushiol is an oil found in the poison ivy plant.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Poison ivy itself is not contagious between people.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The rash caused by poison ivy is known as contact dermatitis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The rash results from an allergic reaction to urushiol.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Urushiol is an oil found in the plant.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Urushiol can be transferred from one person to another if it remains on the skin.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Urushiol can be transferred from one person to another if it remains on clothing.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Urushiol can be transferred from one person to another if it remains on other surfaces.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        5
+      ],
+      "output": "Poison ivy itself is not contagious between people.",
+      "pattern": "D",
+      "notes": "Standalone fact (duplicated in source)."
+    },
+    {
+      "source_claims": [
+        2,
+        6
+      ],
+      "output": "The rash caused by poison ivy is known as contact dermatitis.",
+      "pattern": "D",
+      "notes": "Standalone definition (duplicated in source)."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        7,
+        8
+      ],
+      "output": "The rash caused by poison ivy results from an allergic reaction to urushiol, which is an oil found in the poison ivy plant.",
+      "pattern": "B",
+      "notes": "Causal chain explaining the source of the rash."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11
+      ],
+      "output": "Urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces.",
+      "pattern": "A",
+      "notes": "Enumeration of properties regarding how urushiol is transferred."
+    }
+  ]
+}

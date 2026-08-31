@@ -1,0 +1,130 @@
+{
+  "entry_id": 134,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2846,
+    "output_tokens": 470,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1298,
+      "output_tokens": 271,
+      "cached_input_tokens": 0,
+      "cost": 0.00027172
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1548,
+      "output_tokens": 199,
+      "cached_input_tokens": 0,
+      "cost": 0.00027686
+    }
+  ],
+  "shared_context": {
+    "topic": "losartan dosing frequency",
+    "drug_a": "losartan"
+  },
+  "sentences": [
+    "The dosing schedule for losartan should be determined by your healthcare provider based on your specific medical condition and response to treatment",
+    "Generally, losartan is taken once daily, but the exact dosage and frequency can vary",
+    "Losartan is typically prescribed to be taken once daily",
+    "The specific dosage and frequency should be individualized based on the patient's condition and response to treatment",
+    "You should follow the dosing instructions provided by your healthcare provider",
+    "If you have any questions or concerns about your medication regimen, consult your healthcare provider for personalized advice"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The dosing schedule for losartan should be determined by a healthcare provider based on the patient's specific medical condition and response to treatment.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Generally, losartan is taken once daily.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The exact dosage and frequency of losartan can vary.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Losartan is typically prescribed to be taken once daily.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The specific dosage and frequency of losartan should be individualized based on the patient's condition and response to treatment.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "You should follow the dosing instructions provided by your healthcare provider for losartan.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "You should consult your healthcare provider for personalized advice if you have questions or concerns about your medication regimen.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        5
+      ],
+      "output": "The dosing schedule, exact dosage, and frequency of losartan should be individualized and determined by a healthcare provider based on the patient's specific medical condition and response to treatment.",
+      "pattern": "A",
+      "notes": "Merging claims describing the factors for individualizing the dosage."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "Generally, losartan is typically prescribed to be taken once daily, although the exact dosage and frequency can vary.",
+      "pattern": "A",
+      "notes": "Enumeration of general dosing properties of losartan."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "You should follow the dosing instructions provided by your healthcare provider for losartan and consult them for personalized advice regarding your medication regimen.",
+      "pattern": "A",
+      "notes": "Grouped instructions for patient adherence to professional medical advice."
+    }
+  ]
+}

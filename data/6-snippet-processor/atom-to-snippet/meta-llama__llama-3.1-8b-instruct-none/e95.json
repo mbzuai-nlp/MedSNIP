@@ -1,0 +1,223 @@
+{
+  "entry_id": 95,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "What is chlorhexidine?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2890,
+    "output_tokens": 912,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1295,
+      "output_tokens": 477,
+      "cached_input_tokens": 0,
+      "cost": 4.498e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1595,
+      "output_tokens": 435,
+      "cached_input_tokens": 0,
+      "cost": 4.93e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "chlorhexidine",
+    "drug_a": "chlorhexidine",
+    "condition": "oral care, skin disinfection, wound cleaning"
+  },
+  "sentences": [
+    "Chlorhexidine is a disinfectant and antiseptic agent",
+    "It is a biguanide compound that is commonly used in various applications, including oral care, skin disinfection, and wound cleaning",
+    "Chlorhexidine is effective against a broad spectrum of microorganisms, including bacteria, viruses, and fungi",
+    "In oral care, chlorhexidine is often used as a mouthwash or gel to reduce plaque, gingivitis, and bad breath",
+    "It works by disrupting the cell membranes of microorganisms, ultimately leading to their death",
+    "Chlorhexidine is also used in skin disinfection and wound cleaning due to its ability to reduce bacterial load and promote wound healing",
+    "Chlorhexidine gluconate is the most commonly used form of chlorhexidine, which is available in various concentrations, including 0.12% and 2% solutions",
+    "The 0.12% solution is commonly used for oral care, while the 2% solution is used for skin disinfection and wound cleaning"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlorhexidine is a disinfectant and antiseptic agent.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "It is a biguanide compound.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "It is commonly used in oral care, skin disinfection, and wound cleaning.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Chlorhexidine is effective against a broad spectrum of microorganisms.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "It is effective against bacteria, viruses, and fungi.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Chlorhexidine works by disrupting the cell membranes of microorganisms.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "It ultimately leads to the death of microorganisms.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Chlorhexidine reduces plaque, gingivitis, and bad breath in oral care.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "It is used to reduce bacterial load and promote wound healing in skin disinfection and wound cleaning.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Chlorhexidine gluconate is the most commonly used form of chlorhexidine.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "It is available in various concentrations, including 0.12% and 2% solutions.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The 0.12% solution is commonly used for oral care.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The 2% solution is used for skin disinfection and wound cleaning.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Chlorhexidine is a disinfectant and antiseptic agent, a biguanide compound.",
+      "pattern": "A",
+      "notes": "Enumeration of properties."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "It is commonly used in oral care, skin disinfection, and wound cleaning.",
+      "pattern": "D",
+      "notes": "Standalone topic statement."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Chlorhexidine is effective against a broad spectrum of microorganisms by disrupting their cell membranes, ultimately leading to their death.",
+      "pattern": "A",
+      "notes": "Enumeration of effects and mechanism."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Chlorhexidine reduces plaque, gingivitis, and bad breath in oral care.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "It is used to reduce bacterial load and promote wound healing in skin disinfection and wound cleaning.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Chlorhexidine gluconate is the most commonly used form of chlorhexidine.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "It is available in various concentrations, including 0.12% and 2% solutions.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "The 0.12% solution is commonly used for oral care.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "The 2% solution is used for skin disinfection and wound cleaning.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    }
+  ]
+}

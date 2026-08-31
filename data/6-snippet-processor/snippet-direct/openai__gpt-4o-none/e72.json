@@ -1,0 +1,164 @@
+{
+  "entry_id": 72,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old man presents to the emergency department with epistaxis for the past hour. He has never had epistaxis before and has been unable to control it with pressure, head elevation, and ice. The patient has a past medical history of atrial fibrillation and is currently taking metoprolol and warfarin. His temperature is 98.5°F (36.9°C), blood pressure is 123/81 mmHg, pulse is 90/min, respirations are 13/min, and oxygen saturation is 97% on room air. Physical exam reveals a comfortable man in no distress. Inspection reveals active bleeding in the anterior nares. There is not a clear, single bleeding vessel. Which of the following is the most appropriate initial step in management? (A) Cauterization with silver nitrate (B) Fresh frozen plasma and intravenous phytonadione (C) Intravenous tranexamic acid (D) Placement of posterior nasal packing (E) Topical oxymetazoline",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2701,
+    "output_tokens": 1109,
+    "cached_input_tokens": 2560,
+    "cost": 0.0146425
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2701,
+      "output_tokens": 1109,
+      "cached_input_tokens": 2560,
+      "cost": 0.0146425
+    }
+  ],
+  "shared_context": {
+    "age": "55",
+    "sex": "male",
+    "chief_complaint": "epistaxis for the past hour, uncontrolled by pressure, head elevation, and ice",
+    "medical_history": "atrial fibrillation",
+    "medications": "metoprolol and warfarin",
+    "vitals": "Temperature 98.5°F (36.9°C), BP 123/81 mmHg, pulse 90/min, respirations 13/min, oxygen saturation 97% on room air",
+    "exam_findings": "active bleeding in the anterior nares, no clear single bleeding vessel",
+    "correct_answer": "Topical oxymetazoline (E)"
+  },
+  "sentences": [
+    "A 55-year-old man with a history of atrial fibrillation",
+    "Current medications include metoprolol and warfarin",
+    "Symptoms include epistaxis (nosebleed) for the past hour, uncontrolled by pressure, head elevation, and ice",
+    "Vital signs are stable: Temperature 98.5°F (36.9°C), BP 123/81 mmHg, pulse 90/min, respirations 13/min, and oxygen saturation 97% on room air",
+    "Physical exam: Active bleeding in the anterior nares, no clear single bleeding vessel",
+    "Patients on warfarin are at increased risk of bleeding, including epistaxis",
+    "Warfarin prolongs the prothrombin time (PT) and can cause excessive bleeding",
+    "Option A: Cauterization with silver nitrate",
+    "Silver nitrate cauterization is effective for localized bleeding when a specific bleeding vessel is identified",
+    "In this case, no clear single bleeding vessel is observed, making this option less suitable initially",
+    "Option B: Fresh frozen plasma and intravenous phytonadione",
+    "Fresh frozen plasma (FFP) and intravenous phytonadione (Vitamin K) are used to reverse warfarin-induced coagulopathy",
+    "This would be appropriate if there was significant or life-threatening bleeding, but in a stable patient with anterior bleeding, this is not the first-line treatment",
+    "Option C: Intravenous tranexamic acid",
+    "Tranexamic acid is an antifibrinolytic agent that can help control bleeding by stabilizing blood clots",
+    "However, it is not typically the first-line treatment for epistaxis",
+    "Option D: Placement of posterior nasal packing",
+    "Posterior nasal packing is used for posterior epistaxis, which is less common and usually more severe",
+    "This patient has anterior bleeding, making this option less appropriate initially",
+    "Option E: Topical oxymetazoline",
+    "Oxymetazoline is a topical decongestant that causes vasoconstriction and can help control anterior nasal bleeding",
+    "It is a recommended first-line treatment for epistaxis and is appropriate for this patient's situation",
+    "Given the patient’s stable condition and the location of bleeding (anterior nares), the most appropriate initial management is the application of a topical vasoconstrictor, such as oxymetazoline",
+    "(E) Topical oxymetazoline"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2
+      ],
+      "output": "A 55-year-old man with a history of atrial fibrillation who is taking metoprolol and warfarin presents with epistaxis for the past hour, which has been uncontrolled by pressure, head elevation, and ice.",
+      "pattern": "A",
+      "notes": "Patient's medical history and presenting complaint are merged as they provide context for the consultation."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The patient's vital signs are stable: Temperature 98.5°F (36.9°C), blood pressure 123/81 mmHg, pulse 90/min, respirations 13/min, and oxygen saturation 97% on room air.",
+      "pattern": "D",
+      "notes": "Vital signs are standalone, providing objective evidence of the patient's stability."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Physical examination reveals active bleeding in the anterior nares with no clear single bleeding vessel in this 55-year-old man.",
+      "pattern": "D",
+      "notes": "Description of exam findings is standalone and specific to this case."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "Patients on warfarin are at increased risk of bleeding, including epistaxis, because warfarin prolongs the prothrombin time (PT) and can cause excessive bleeding.",
+      "pattern": "B",
+      "notes": "There is a causal link between warfarin use and increased bleeding risk due to its effects on PT."
+    },
+    {
+      "source_sentences": [
+        7,
+        8,
+        9
+      ],
+      "output": "Cauterization with silver nitrate is effective for localized bleeding when a specific bleeding vessel is identified. However, in this case, no clear single bleeding vessel is observed, making this option less suitable initially.",
+      "pattern": "C",
+      "notes": "The reasoning for why silver nitrate is not appropriate is directly linked to the clinical presentation."
+    },
+    {
+      "source_sentences": [
+        10,
+        11,
+        12
+      ],
+      "output": "Fresh frozen plasma and intravenous phytonadione (Vitamin K) are used to reverse warfarin-induced coagulopathy. This would be appropriate if there was significant or life-threatening bleeding. However, in a stable patient with anterior bleeding, this is not the first-line treatment.",
+      "pattern": "C",
+      "notes": "Explanation of when FFP and Vitamin K would be appropriate, contrasting with the current case scenario."
+    },
+    {
+      "source_sentences": [
+        13,
+        14,
+        15
+      ],
+      "output": "Tranexamic acid is an antifibrinolytic agent that can help control bleeding by stabilizing blood clots. However, it is not typically the first-line treatment for epistaxis.",
+      "pattern": "C",
+      "notes": "The reasoning for why tranexamic acid is not first-line is linked to its typical use context."
+    },
+    {
+      "source_sentences": [
+        16,
+        17,
+        18
+      ],
+      "output": "Posterior nasal packing is used for posterior epistaxis, which is less common and usually more severe. Since this patient has anterior bleeding, posterior packing is less appropriate initially.",
+      "pattern": "C",
+      "notes": "Explanation of when posterior packing is appropriate with direct relation to the current patient's presentation."
+    },
+    {
+      "source_sentences": [
+        19,
+        20,
+        21
+      ],
+      "output": "Oxymetazoline is a topical decongestant that causes vasoconstriction and can help control anterior nasal bleeding. It is a recommended first-line treatment for epistaxis and is appropriate for this 55-year-old man's situation.",
+      "pattern": "C",
+      "notes": "The explanation of why oxymetazoline is the preferred initial step is based on its action and suitability for this case."
+    },
+    {
+      "source_sentences": [
+        22,
+        23
+      ],
+      "output": "Given the 55-year-old man’s stable condition and the location of bleeding in the anterior nares, the most appropriate initial management is the application of a topical vasoconstrictor, such as oxymetazoline.",
+      "pattern": "B",
+      "notes": "Conclusion and action are only meaningful with contextual premises about bleeding location and patient stability."
+    }
+  ]
+}

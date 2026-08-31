@@ -1,0 +1,193 @@
+{
+  "entry_id": 28,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to his primary care physician with a 6-month history of increasing lower back pain. He first felt the pain while lifting boxes at work but thought that he had just strained a muscle. The pain appears to be worse in the mornings and after rest. Exercise and physical activity appear to temporarily make the pain better. He has taken acetaminophen and ibuprofen for the pain. He has no significant medical history and takes no medications. His temperature is 98.6°F (37.0°C), blood pressure is 115/70 mmHg, pulse is 70/min, and respirations are 12/min. On physical exam, he is found to have limited flexion and extension of his spine as well as tenderness to palpation over the insertion of his patellar tendons bilaterally. Results from laboratory tests are shown below:\n\nSerum:\nErythrocyte sedimentation rate (ESR): 61 mm/hr\nC-reactive protein (CRP): 36 mg/L (normal <10 mg/L)\n\nWhich of the following is the most accurate test for this patient's condition? (A) Bone scan (B) Computed tomography (C) Magnetic resonance imaging (D) Radiograph (E) Ultrasound",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2690,
+    "output_tokens": 1167,
+    "cached_input_tokens": 0,
+    "cost": 0.00010048
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2690,
+      "output_tokens": 1167,
+      "cached_input_tokens": 0,
+      "cost": 0.00010048
+    }
+  ],
+  "shared_context": {
+    "age": "26",
+    "sex": "male",
+    "chief_complaint": "6-month history of increasing lower back pain",
+    "medical_history": "no significant medical history",
+    "medications": "none",
+    "vitals": "temperature 98.6°F (37.0°C), blood pressure 115/70 mmHg, pulse 70/min, respirations 12/min",
+    "exam_findings": "limited flexion and extension of the spine, tenderness to palpation over the insertion of the patellar tendons bilaterally",
+    "correct_answer": "C"
+  },
+  "sentences": [
+    "To determine the most accurate test for this patient's condition, we need to analyze the clinical presentation, physical examination findings, and laboratory results step-by-step",
+    "A 26-year-old man with a 6-month history of increasing lower back pain",
+    "Pain worsens in the mornings and after rest",
+    "Pain is temporarily relieved with exercise and physical activity",
+    "No significant medical history and no ongoing medications",
+    "Morning stiffness and improvement with activity are characteristic symptoms of inflammatory back pain",
+    "Limited flexion and extension of the spine",
+    "Tenderness over the insertion of the patellar tendons bilaterally",
+    "Limited spinal mobility and tenderness at tendon insertion sites are suggestive of enthesitis, commonly seen in spondyloarthropathies",
+    "Elevated ESR (61 mm/hr) and elevated CRP (36 mg/L)",
+    "Elevated ESR and CRP are indicative of an inflammatory process",
+    "The combination of chronic lower back pain, morning stiffness, improvement with activity, enthesitis, and elevated inflammatory markers is highly suggestive of Ankylosing Spondylitis (AS)",
+    "Ankylosing Spondylitis typically presents with chronic back pain that improves with exercise and is associated with enthesitis and elevated inflammatory markers",
+    "To confirm the diagnosis of Ankylosing Spondylitis, imaging studies are crucial",
+    "Radiographs (X-rays) are typically the initial imaging modality to look for changes in the sacroiliac joints",
+    "However, plain radiographs may not detect early changes",
+    "Magnetic Resonance Imaging (MRI) is more sensitive and can detect early inflammatory changes such as bone marrow edema, which are not visible on X-rays",
+    "MRI is the most sensitive imaging modality for detecting early sacroiliitis and other inflammatory changes in Ankylosing Spondylitis",
+    "Based on this analysis, the most accurate test for diagnosing this patient's condition is",
+    "Option C: Magnetic Resonance Imaging (MRI)",
+    "(C) Magnetic resonance imaging"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most accurate test for this patient's condition, we need to analyze the clinical presentation, physical examination findings, and laboratory results step-by-step.",
+      "pattern": "D",
+      "notes": "Standalone clinical approach; no specific context inlined."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "A 26-year-old man with a 6-month history of increasing lower back pain.",
+      "pattern": "D",
+      "notes": "Standalone patient description; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4
+      ],
+      "output": "The patient's pain worsens in the mornings and after rest, is temporarily relieved with exercise and physical activity, and has no significant medical history or ongoing medications.",
+      "pattern": "A",
+      "notes": "All properties of one subject (patient's pain characteristics)."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Morning stiffness and improvement with activity are characteristic symptoms of inflammatory back pain.",
+      "pattern": "D",
+      "notes": "Standalone symptom characterization; no specific context inlined."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Limited flexion and extension of the spine and tenderness over the insertion of the patellar tendons bilaterally suggest enthesitis, commonly seen in spondyloarthropathies.",
+      "pattern": "A",
+      "notes": "All properties of one subject (enthesitis characteristics)."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Elevated ESR (61 mm/hr) and CRP (36 mg/L) are indicative of an inflammatory process.",
+      "pattern": "D",
+      "notes": "Standalone laboratory result characterization; no specific context inlined."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "The combination of chronic lower back pain, morning stiffness, improvement with activity, enthesitis, and elevated inflammatory markers is highly suggestive of Ankylosing Spondylitis (AS).",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no specific context inlined."
+    },
+    {
+      "source_sentences": [
+        10,
+        11
+      ],
+      "output": "Ankylosing Spondylitis typically presents with chronic back pain that improves with exercise and is associated with enthesitis and elevated inflammatory markers.",
+      "pattern": "A",
+      "notes": "All properties of one subject (AS presentation characteristics)."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "To confirm the diagnosis of Ankylosing Spondylitis, imaging studies are crucial.",
+      "pattern": "D",
+      "notes": "Standalone diagnostic approach; no specific context inlined."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Imaging studies are necessary to confirm the diagnosis of Ankylosing Spondylitis.",
+      "pattern": "D",
+      "notes": "Standalone diagnostic necessity; no specific context inlined."
+    },
+    {
+      "source_sentences": [
+        14,
+        15
+      ],
+      "output": "Radiographs (X-rays) are typically the initial imaging modality to look for changes in the sacroiliac joints, but may not detect early changes.",
+      "pattern": "A",
+      "notes": "All properties of one subject (radiograph limitations)."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "Magnetic Resonance Imaging (MRI) is more sensitive and can detect early inflammatory changes such as bone marrow edema, which are not visible on X-rays.",
+      "pattern": "D",
+      "notes": "Standalone MRI sensitivity; no specific context inlined."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "MRI is the most sensitive imaging modality for detecting early sacroiliitis and other inflammatory changes in Ankylosing Spondylitis.",
+      "pattern": "D",
+      "notes": "Standalone MRI sensitivity; no specific context inlined."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Based on this analysis, the most accurate test for diagnosing this patient's condition is",
+      "pattern": "D",
+      "notes": "Standalone conclusion; no specific context inlined."
+    },
+    {
+      "source_sentences": [
+        19,
+        20
+      ],
+      "output": "Option C: Magnetic Resonance Imaging (MRI) is the most accurate test for diagnosing Ankylosing Spondylitis.",
+      "pattern": "C",
+      "notes": "Conclusion with surrounding reasoning; patient context inlined."
+    }
+  ]
+}

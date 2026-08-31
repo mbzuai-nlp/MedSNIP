@@ -1,0 +1,137 @@
+{
+  "entry_id": 204,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2768,
+    "output_tokens": 2075,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1259,
+      "output_tokens": 954,
+      "cached_input_tokens": 0,
+      "cost": 0.00017133
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1509,
+      "output_tokens": 1121,
+      "cached_input_tokens": 0,
+      "cost": 0.00020221
+    }
+  ],
+  "shared_context": {
+    "topic": "poison ivy rash",
+    "condition": "rash"
+  },
+  "sentences": [
+    "No, poison ivy is not contagious between people",
+    "The rash resulting from poison ivy is caused by an allergic reaction to urushiol oil, which is found in the plant's leaves, stems, and roots",
+    "This oil can stick to skin, clothes, tools, and other surfaces",
+    "The rash itself cannot be spread from person to person",
+    "However, contact with urushiol oil from an affected person's skin, clothing, or other contaminated objects can cause a reaction in another person",
+    "Therefore, it is the urushiol oil that is responsible for spreading the reaction and not the rash itself"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Poison ivy is not contagious between people.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The rash from poison ivy is caused by an allergic reaction to urushiol oil.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Urushiol oil is found in the plant's leaves, stems, and roots.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Urushiol oil can stick to skin, clothes, tools, and other surfaces.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The rash itself cannot be spread from person to person.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Contact with urushiol oil from an affected person's skin, clothing, or other contaminated objects can cause a reaction in another person.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Urushiol oil is responsible for spreading the reaction, not the rash itself.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        5
+      ],
+      "output": "Poison ivy rash is not contagious between people, and the rash itself cannot be spread from person to person.",
+      "pattern": "A",
+      "notes": "Both statements assert the non‑contagious nature of the rash; they are kept together as an enumeration of that property."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The rash from poison ivy is caused by an allergic reaction to urushiol oil.",
+      "pattern": "D",
+      "notes": "A standalone definition of the etiology of the rash."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Urushiol oil, found in the plant's leaves, stems and roots, can stick to skin, clothes, tools and other surfaces.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of urushiol oil (location and persistence)."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Contact with urushiol oil from an affected person's skin, clothing or other contaminated objects can cause a reaction in another person, because the oil is responsible for spreading the reaction, not the rash itself.",
+      "pattern": "B",
+      "notes": "Causal chain: oil transfer leads to new reactions while the rash itself does not spread."
+    }
+  ]
+}

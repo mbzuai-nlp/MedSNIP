@@ -1,0 +1,219 @@
+{
+  "entry_id": 161,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is flu test same as influenza test ?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3001,
+    "output_tokens": 1008,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1330,
+      "output_tokens": 582,
+      "cached_input_tokens": 0,
+      "cost": 0.00031924
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1671,
+      "output_tokens": 426,
+      "cached_input_tokens": 0,
+      "cost": 0.00030342
+    }
+  ],
+  "shared_context": {
+    "topic": "flu test vs influenza test",
+    "condition": "influenza virus infection"
+  },
+  "sentences": [
+    "The terms \"flu test\" and \"influenza test\" are often used interchangeably, but they can refer to different types of diagnostic tests for influenza virus infection",
+    "A flu test typically refers to a rapid diagnostic test (RDT) that detects the presence of influenza virus antigens in respiratory specimens, such as nasal swabs or throat swabs",
+    "These tests are usually rapid, point-of-care tests that provide results within 15-30 minutes",
+    "On the other hand, an influenza test can refer to a more comprehensive diagnostic approach that includes various tests, such as",
+    "Rapid antigen detection tests (RADTs)",
+    "Molecular tests, such as reverse transcription polymerase chain reaction (RT-PCR)",
+    "Viral culture",
+    "Serological tests, which detect antibodies against the influenza virus",
+    "These tests can be used to diagnose influenza virus infection, monitor the spread of the virus, and guide treatment decisions",
+    "In summary, while the terms \"flu test\" and \"influenza test\" are often used interchangeably, a flu test typically refers to a rapid diagnostic test, whereas an influenza test can refer to a broader range of diagnostic approaches"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The terms 'flu test' and 'influenza test' are often used interchangeably.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The terms 'flu test' and 'influenza test' can refer to different types of diagnostic tests for influenza virus infection.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A flu test typically refers to a rapid diagnostic test (RDT) that detects the presence of influenza virus antigens in respiratory specimens.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "A flu test typically uses nasal swabs or throat swabs as respiratory specimens.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Rapid diagnostic tests (RDTs) for flu are usually rapid, point-of-care tests.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Rapid diagnostic tests (RDTs) for flu provide results within 15-30 minutes.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "An influenza test can refer to a more comprehensive diagnostic approach.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "An influenza test can include rapid antigen detection tests (RADTs).",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "An influenza test can include molecular tests, such as reverse transcription polymerase chain reaction (RT-PCR).",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "An influenza test can include viral culture.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "An influenza test can include serological tests, which detect antibodies against the influenza virus.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Influenza tests can be used to diagnose influenza virus infection.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Influenza tests can be used to monitor the spread of the virus.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Influenza tests can be used to guide treatment decisions.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 15,
+      "text": "A flu test typically refers to a rapid diagnostic test, whereas an influenza test can refer to a broader range of diagnostic approaches.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The terms 'flu test' and 'influenza test' are often used interchangeably.",
+      "pattern": "D",
+      "notes": "Standalone definition."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The terms 'flu test' and 'influenza test' can refer to different types of diagnostic tests for influenza virus infection.",
+      "pattern": "D",
+      "notes": "Contrasting statement to claim 1; kept atomic for clarity."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "A flu test typically refers to a rapid diagnostic test (RDT) that detects the presence of influenza virus antigens in respiratory specimens, such as nasal swabs or throat swabs, and provides results within 15-30 minutes.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of a flu test."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "An influenza test can refer to a more comprehensive diagnostic approach, including rapid antigen detection tests (RADTs), molecular tests like reverse transcription polymerase chain reaction (RT-PCR), viral culture, and serological tests that detect antibodies against the influenza virus.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of an influenza test."
+    },
+    {
+      "source_claims": [
+        12,
+        13,
+        14
+      ],
+      "output": "Influenza tests can be used to diagnose influenza virus infection, monitor the spread of the virus, and guide treatment decisions.",
+      "pattern": "A",
+      "notes": "Enumeration of uses for influenza tests."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "A flu test typically refers to a rapid diagnostic test, whereas an influenza test can refer to a broader range of diagnostic approaches.",
+      "pattern": "D",
+      "notes": "Standalone comparative statement summarizing the difference between flu and influenza tests."
+    }
+  ]
+}

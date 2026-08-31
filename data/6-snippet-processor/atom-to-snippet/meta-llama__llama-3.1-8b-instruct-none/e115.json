@@ -1,0 +1,346 @@
+{
+  "entry_id": 115,
+  "batch_id": 12,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 40-year-old south asian man presents to a primary care provider with a chronic cough that is worse at night. He has had the cough for several years but it has been getting worse over the last few months. He recently moved to the United States to work in construction. He has lost 10 pounds in the last 3 months along with darker stools which he believes is caused by a Western diet. He denies any difficulty swallowing or feeling of food getting stuck in his throat. He drinks alcohol 1-2 times per week and has never smoked. He denies any family history of cancer. His temperature is 98.6°F (37°C), blood pressure is 114/72 mmHg, pulse is 82/min, and respirations are 12/min. On physical exam, his lungs are clear to auscultation bilaterally without wheezing. His abdomen is soft and non-distended. He has no tenderness to palpation and bowel sounds are present. Which of the following is the most appropriate next step in management? (A) Barium swallow (B) Colonoscopy (C) Helicobacter pylori stool antigen test (D) Trial of lansoprazole (E) Upper endoscopy",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4930,
+    "output_tokens": 1847,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2072,
+      "output_tokens": 965,
+      "cached_input_tokens": 0,
+      "cost": 8.004e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2858,
+      "output_tokens": 882,
+      "cached_input_tokens": 0,
+      "cost": 9.244e-05
+    }
+  ],
+  "shared_context": {
+    "patient_age": 40,
+    "patient_ethnicity": "south asian",
+    "patient_sex": "male",
+    "chief_complaint": "chronic cough",
+    "symptoms": "cough worsens at night, weight loss, darker stools",
+    "medical_history": "recently moved to the US, works in construction, moderate alcohol consumption",
+    "medications": "none",
+    "vitals": "BP 114/72 mmHg, pulse 82/min, respirations 12/min, temperature 98.6°F (37°C)",
+    "exam_findings": "lungs clear to auscultation bilaterally without wheezing, abdomen soft and non-distended",
+    "question_type": "most appropriate next step in management"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in managing a 40-year-old South Asian man presenting with a chronic cough that worsens at night, we need to consider the patient's history, symptoms, and possible conditions",
+    "Chronic Cough: Chronic cough can arise from several conditions, such as asthma, gastroesophageal reflux disease (GERD), infections, or postnasal drip",
+    "Night-time Worsening: Cough that worsens at night is suggestive of GERD, as lying down can exacerbate acid reflux, leading to a cough",
+    "Weight Loss and Dark Stools: The patient has experienced significant weight loss (10 pounds in 3 months) and darker stools",
+    "These symptoms could indicate gastrointestinal bleeding, potentially from an ulcer or malignancy",
+    "Dark stools, or melena, often result from upper gastrointestinal bleeding, which can be due to peptic ulcers, among other causes",
+    "Absence of Dysphagia: The patient denies difficulty swallowing or feeling of food getting stuck, making esophageal motility disorders or strictures less likely",
+    "Lifestyle and Risk Factors: The patient consumes alcohol moderately, has no smoking history, and has no family history of cancer",
+    "His recent move and occupational exposure may not be directly relevant to his symptoms",
+    "A) Barium swallow: Usually used to diagnose esophageal strictures, motility disorders, or structural abnormalities",
+    "Not the first-line diagnostic tool for chronic cough or suspicion of GERD",
+    "B) Colonoscopy: Primarily for lower gastrointestinal evaluation, which is less relevant given the symptomatology indicative of an upper GI issue",
+    "C) Helicobacter pylori stool antigen test: Valuable for diagnosing H. pylori infection, which can cause peptic ulcers and upper GI bleeding",
+    "However, it doesn’t directly address the chronic cough",
+    "D) Trial of lansoprazole: Lansoprazole, a proton pump inhibitor (PPI), is effective for treating GERD",
+    "Given the symptoms suggestive of GERD (chronic cough, worse at night), a PPI trial is diagnostically and therapeutically appropriate",
+    "E) Upper endoscopy: Useful for direct visualization of the upper gastrointestinal tract to diagnose ulcers, malignancies, and sources of bleeding",
+    "It is invasive and typically reserved for patients with alarming symptoms or after initial management steps",
+    "Conclusion: The patient’s symptoms and history strongly suggest GERD, making a trial of lansoprazole the most appropriate initial step in management",
+    "This approach is non-invasive and can provide both diagnostic and therapeutic benefits",
+    "Final Answer: D) Trial of lansoprazole"
+  ],
+  "generated_atoms": [
+    {
+      "index": 2,
+      "text": "Chronic cough can arise from several conditions, such as asthma, gastroesophageal reflux disease (GERD), infections, or postnasal drip.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Cough that worsens at night is suggestive of GERD, as lying down can exacerbate acid reflux, leading to a cough.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient has experienced significant weight loss (10 pounds in 3 months) and darker stools.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "These symptoms could indicate gastrointestinal bleeding, potentially from an ulcer or malignancy.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Dark stools, or melena, often result from upper gastrointestinal bleeding, which can be due to peptic ulcers, among other causes.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient denies difficulty swallowing or feeling of food getting stuck, making esophageal motility disorders or strictures less likely.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient consumes alcohol moderately, has no smoking history, and has no family history of cancer.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "A) Barium swallow: Usually used to diagnose esophageal strictures, motility disorders, or structural abnormalities.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Not the first-line diagnostic tool for chronic cough or suspicion of GERD.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "B) Colonoscopy: Primarily for lower gastrointestinal evaluation, which is less relevant given the symptomatology indicative of an upper GI issue.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "C) Helicobacter pylori stool antigen test: Valuable for diagnosing H. pylori infection, which can cause peptic ulcers and upper GI bleeding.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "However, it doesn’t directly address the chronic cough.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "D) Trial of lansoprazole: Lansoprazole, a proton pump inhibitor (PPI), is effective for treating GERD.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Given the symptoms suggestive of GERD (chronic cough, worse at night), a PPI trial is diagnostically and therapeutically appropriate.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "text": "E) Upper endoscopy: Useful for direct visualization of the upper gastrointestinal tract to diagnose ulcers, malignancies, and sources of bleeding.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 17,
+      "text": "It is invasive and typically reserved for patients with alarming symptoms or after initial management steps.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Conclusion: The patient’s symptoms and history strongly suggest GERD, making a trial of lansoprazole the most appropriate initial step in management.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 19,
+      "text": "This approach is non-invasive and can provide both diagnostic and therapeutic benefits.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Final Answer: D) Trial of lansoprazole",
+      "source_sentences": [
+        20
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Chronic cough can arise from several conditions, such as asthma, GERD, infections, or postnasal drip.",
+      "pattern": "D",
+      "notes": "Definition."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Cough that worsens at night is suggestive of GERD, as lying down can exacerbate acid reflux leading to a cough.",
+      "pattern": "D",
+      "notes": "Clinical reasoning."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "The patient has experienced significant weight loss (10 pounds in 3 months) and darker stools, which could indicate gastrointestinal bleeding, potentially from an ulcer or malignancy.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Dark stools, or melena, often result from upper gastrointestinal bleeding, which can be due to peptic ulcers, among other causes.",
+      "pattern": "D",
+      "notes": "Clinical reasoning."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The patient consumes alcohol moderately, has no smoking history, and has no family history of cancer.",
+      "pattern": "D",
+      "notes": "Patient characteristics."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Barium swallow: Usually used to diagnose esophageal strictures, motility disorders, or structural abnormalities.",
+      "pattern": "D",
+      "notes": "Diagnostic tool description."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Not the first-line diagnostic tool for chronic cough or suspicion of GERD.",
+      "pattern": "D",
+      "notes": "Contrast to the correct answer."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Colonoscopy: Primarily for lower gastrointestinal evaluation, which is less relevant given the symptomatology indicative of an upper GI issue.",
+      "pattern": "D",
+      "notes": "Diagnostic tool description."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "H. pylori stool antigen test: Valuable for diagnosing H. pylori infection, which can cause peptic ulcers and upper GI bleeding.",
+      "pattern": "D",
+      "notes": "Diagnostic tool description."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "However, it doesn’t directly address the chronic cough.",
+      "pattern": "D",
+      "notes": "Contrast to the correct answer."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Trial of lansoprazole: Lansoprazole, a proton pump inhibitor (PPI), is effective for treating GERD.",
+      "pattern": "D",
+      "notes": "Diagnostic and therapeutic approach."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Given the symptoms suggestive of GERD (chronic cough, worse at night), a PPI trial is diagnostically and therapeutically appropriate.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Upper endoscopy: Useful for direct visualization of the upper gastrointestinal tract to diagnose ulcers, malignancies, and sources of bleeding.",
+      "pattern": "D",
+      "notes": "Diagnostic tool description."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "It is invasive and typically reserved for patients with alarming symptoms or after initial management steps.",
+      "pattern": "D",
+      "notes": "Contrast to the correct answer."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "Conclusion: The patient’s symptoms and history strongly suggest GERD, making a trial of lansoprazole the most appropriate initial step in management.",
+      "pattern": "C",
+      "notes": "Final diagnosis and recommendation."
+    },
+    {
+      "source_claims": [
+        19
+      ],
+      "output": "This approach is non-invasive and can provide both diagnostic and therapeutic benefits.",
+      "pattern": "D",
+      "notes": "Benefits of the recommended approach."
+    },
+    {
+      "source_claims": [
+        20
+      ],
+      "output": "Final Answer: D) Trial of lansoprazole",
+      "pattern": "C",
+      "notes": "Final answer with reasoning inlined."
+    }
+  ]
+}

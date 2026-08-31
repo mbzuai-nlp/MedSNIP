@@ -1,0 +1,87 @@
+{
+  "entry_id": 260,
+  "batch_id": 26,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 3-year-old girl is brought to the office for a routine well-child appointment. She was delivered preterm at 35 weeks, and her medical history is significant for several ear infections over the last year. Her older brother has been diagnosed with attention-deficit hyperactivity disorder (ADHD), but the rest of her family history is otherwise unremarkable. The patient has become more withdrawn lately and has sometimes been ignoring her parents when asked to perform tasks at home. This seems to have worsened over the last 8 weeks. Otherwise, the patient is energetic and started preschool 3 months ago. Her temperature is 98.6°F (37°C), blood pressure is 98/62 mmHg, pulse is 97/min, and respirations are 26/min. The patient successfully draws a square and can stand on 1 foot. Her language skills are unchanged from her appointment 6 months ago. Her neurological examination is normal, and she is at the 50th percentile for height and weight. She seems distracted during the interview and responds only intermittently to the physician’s directions. Which of the following is the most appropriate next step in management? (A) Audiometry testing (B) Autism spectrum screening questionnaire (C) Parent and teacher ADHD rating scales (D) Refer to genetic testing (E) Speech and language assessment",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2613,
+    "output_tokens": 1793,
+    "cached_input_tokens": 0,
+    "cost": 0.00032941
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2613,
+      "output_tokens": 1793,
+      "cached_input_tokens": 0,
+      "cost": 0.00032941
+    }
+  ],
+  "shared_context": {
+    "age": "3",
+    "sex": "female",
+    "chief_complaint": "withdrawn behavior, ignores parents when asked to perform tasks, distracted during interview",
+    "medical_history": "preterm birth at 35 weeks; multiple ear infections over the last year",
+    "family_history": "older brother diagnosed with ADHD; rest of family history unremarkable",
+    "vitals": "T 98.6°F, BP 98/62, pulse 97, RR 26",
+    "exam_findings": "draws a square, stands on one foot, language unchanged from 6 months ago, neurological exam normal, height and weight at 50th percentile",
+    "correct_answer": "B Autism spectrum screening questionnaire"
+  },
+  "sentences": [
+    "The patient, a 3-year-old girl, has a history of multiple ear infections over the last year, which may indicate a possible issue with her Eustachian tube function or middle ear development",
+    "This could potentially lead to issues with hearing, which may impact her speech and language development",
+    "The patient's family history of ADHD may increase her risk for attention deficits or behavioral issues",
+    "However, her current behavior of becoming withdrawn and ignoring tasks seems to have worsened over the last 8 weeks, which could be indicative of a change in her developmental trajectory",
+    "The fact that she is energetic and has made recent progress in preschool (started 3 months ago) suggests that her gross motor skills and social interactions are developing normally",
+    "Her language skills are unchanged from 6 months ago, and her neurological examination is normal, which suggests that her language development is not significantly delayed",
+    "Her height and weight are at the 50th percentile, indicating normal growth",
+    "However, she is distracted during the interview and responds only intermittently to the physician's directions, which could indicate attention issues or developmental delays",
+    "Given the patient's history of ear infections and possible attention issues, and the recent worsening of her behavior, the most appropriate next step in management would be to perform an Autism Spectrum Disorder (ASD) screening questionnaire",
+    "Option B) Autism spectrum screening questionnaire is the most appropriate answer because it will allow the physician to gather more information about the patient's social interactions, communication, and behavior, which can help to identify potential ASD"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "The 3-year-old female, who has multiple ear infections over the last year, may have Eustachian tube dysfunction or middle ear problems, which could lead to hearing issues that might affect her speech and language development.",
+      "pattern": "A",
+      "notes": "Merged sentences 0 and 1 because both enumerate possible ear–hearing consequences of the patient's ear infections."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "The 3-year-old female's older brother with ADHD increases her risk for attention or behavioral problems; her recent withdrawal, ignoring tasks, and distraction suggest a change in her developmental trajectory, yet her gross motor skills and social interactions appear normal, her language skills are unchanged from 6 months ago, her neurological exam is normal, and her height and weight are at the 50th percentile.",
+      "pattern": "A",
+      "notes": "Merged sentences 2–7 because they collectively enumerate multiple patient-specific observations and risk factors."
+    },
+    {
+      "source_sentences": [
+        8,
+        9
+      ],
+      "output": "The most appropriate next step in management for this 3-year-old female is to administer an Autism Spectrum Disorder screening questionnaire, which will provide additional information about her social interactions, communication, and behavior to identify potential autism.",
+      "pattern": "C",
+      "notes": "Sentences 8 and 9 form a conclusion with supporting rationale; kept together to preserve logical link."
+    }
+  ]
+}

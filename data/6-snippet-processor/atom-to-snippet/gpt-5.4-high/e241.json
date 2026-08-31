@@ -1,0 +1,154 @@
+{
+  "entry_id": 241,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is Augmentin the same thing as Amoxcicilin?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2717,
+    "output_tokens": 2456,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1207,
+      "output_tokens": 676,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1510,
+      "output_tokens": 1780,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "whether Augmentin is the same as amoxicillin",
+    "drug_a": "Augmentin",
+    "drug_b": "amoxicillin"
+  },
+  "sentences": [
+    "No, Augmentin is not the same thing as amoxicillin",
+    "Augmentin is a combination antibiotic that contains two active ingredients: amoxicillin and clavulanate potassium",
+    "Amoxicillin is a penicillin-type antibiotic that works by stopping the growth of bacteria",
+    "Clavulanate potassium is a beta-lactamase inhibitor that helps prevent certain bacteria from becoming resistant to amoxicillin",
+    "Amoxicillin, on the other hand, is a single antibiotic that belongs to the penicillin class and is used to treat a variety of bacterial infections"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Augmentin is not the same thing as amoxicillin.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Augmentin is a combination antibiotic.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Augmentin contains amoxicillin as an active ingredient.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Augmentin contains clavulanate potassium as an active ingredient.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Amoxicillin is a penicillin-type antibiotic.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Amoxicillin works by stopping the growth of bacteria.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Clavulanate potassium is a beta-lactamase inhibitor.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Clavulanate potassium helps prevent certain bacteria from becoming resistant to amoxicillin.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Amoxicillin is a single antibiotic.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Amoxicillin belongs to the penicillin class.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Amoxicillin is used to treat a variety of bacterial infections.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        9
+      ],
+      "output": "Augmentin is not the same as amoxicillin because Augmentin is a combination antibiotic that contains amoxicillin and clavulanate potassium, whereas amoxicillin is a single antibiotic.",
+      "pattern": "C",
+      "notes": "Conclusion about whether the drugs are the same, paired with the composition-based reasoning that supports it."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        10,
+        11
+      ],
+      "output": "Amoxicillin is a penicillin-type antibiotic in the penicillin class that works by stopping the growth of bacteria and is used to treat a variety of bacterial infections.",
+      "pattern": "A",
+      "notes": "Enumeration of several properties and uses of the same drug, amoxicillin."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Clavulanate potassium is a beta-lactamase inhibitor that helps prevent certain bacteria from becoming resistant to amoxicillin.",
+      "pattern": "A",
+      "notes": "Two related properties of the same ingredient are grouped into one self-contained statement."
+    }
+  ]
+}

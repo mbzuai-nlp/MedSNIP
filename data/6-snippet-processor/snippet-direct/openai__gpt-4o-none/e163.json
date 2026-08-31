@@ -1,0 +1,66 @@
+{
+  "entry_id": 163,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is flu test same as influenza test ?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 1650,
+    "output_tokens": 233,
+    "cached_input_tokens": 0,
+    "cost": 0.006455
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1650,
+      "output_tokens": 233,
+      "cached_input_tokens": 0,
+      "cost": 0.006455
+    }
+  ],
+  "shared_context": {
+    "topic": "flu test and influenza test"
+  },
+  "sentences": [
+    "Yes, a flu test is the same as an influenza test",
+    "Both terms refer to diagnostic tests used to detect the presence of the influenza virus in a patient",
+    "Influenza, commonly known as the flu, is caused by influenza viruses, and these tests help in identifying the specific virus strain responsible for the infection"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "A flu test is the same as an influenza test.",
+      "pattern": "D",
+      "notes": "This sentence is a standalone fact stating the equivalence of terms."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Both 'flu test' and 'influenza test' refer to diagnostic tests used to detect the presence of the influenza virus in a patient.",
+      "pattern": "D",
+      "notes": "This sentence gives a definition of what both terms refer to."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Influenza, commonly known as the flu, is caused by influenza viruses, and these tests help in identifying the specific virus strain responsible for the infection.",
+      "pattern": "C",
+      "notes": "The explanation and purpose of the tests rely on understanding what influenza is; conclusion and premises are linked."
+    }
+  ]
+}

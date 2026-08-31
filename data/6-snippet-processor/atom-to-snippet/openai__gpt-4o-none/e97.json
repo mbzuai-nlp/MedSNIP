@@ -1,0 +1,191 @@
+{
+  "entry_id": 97,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Will the antibiotics prevent the lyme disease from progressing?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2825,
+    "output_tokens": 907,
+    "cached_input_tokens": 1024
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1228,
+      "output_tokens": 501,
+      "cached_input_tokens": 1024,
+      "cost": 0.0068
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1597,
+      "output_tokens": 406,
+      "cached_input_tokens": 0,
+      "cost": 0.0080525
+    }
+  ],
+  "shared_context": {
+    "topic": "antibiotics and Lyme disease progression",
+    "condition": "Lyme disease"
+  },
+  "sentences": [
+    "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection",
+    "Early treatment typically involves oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil",
+    "For early localized or early disseminated Lyme disease, a 10- to 21-day course of antibiotics is generally recommended",
+    "If Lyme disease is treated promptly, most patients recover completely without long-term complications",
+    "However, if the disease is not treated in its early stages, it can progress to more severe forms, including Lyme arthritis, neurological Lyme disease, and Lyme carditis",
+    "In such cases, longer courses of antibiotics or intravenous antibiotics may be required"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Early treatment of Lyme disease typically involves oral antibiotics such as doxycycline.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Early treatment of Lyme disease typically involves oral antibiotics such as amoxicillin.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Early treatment of Lyme disease typically involves oral antibiotics such as cefuroxime axetil.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "A 10- to 21-day course of antibiotics is generally recommended for early localized Lyme disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A 10- to 21-day course of antibiotics is generally recommended for early disseminated Lyme disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "If Lyme disease is treated promptly, most patients recover completely without long-term complications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "If the disease is not treated in its early stages, it can progress to more severe forms, including Lyme arthritis.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "If the disease is not treated in its early stages, it can progress to more severe forms, including neurological Lyme disease.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "If the disease is not treated in its early stages, it can progress to more severe forms, including Lyme carditis.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "In cases where the disease has not been treated early, longer courses of antibiotics may be required.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 12,
+      "text": "In cases where the disease has not been treated early, intravenous antibiotics may be required.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection.",
+      "pattern": "D",
+      "notes": "Standalone claim about effectiveness of timely antibiotics."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "Early treatment of Lyme disease typically involves oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil.",
+      "pattern": "A",
+      "notes": "List of treatment options for early Lyme disease."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "A 10- to 21-day course of antibiotics is generally recommended for early localized and disseminated Lyme disease.",
+      "pattern": "A",
+      "notes": "Combines antibiotic course duration for different stages of early Lyme disease."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "If Lyme disease is treated promptly, most patients recover completely without long-term complications.",
+      "pattern": "D",
+      "notes": "Standalone fact about recovery with prompt treatment."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10
+      ],
+      "output": "If the disease is not treated in its early stages, it can progress to more severe forms, including Lyme arthritis, neurological Lyme disease, and Lyme carditis.",
+      "pattern": "A",
+      "notes": "Enumerates possible severe forms if untreated."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "In cases where Lyme disease has not been treated early, longer courses of antibiotics or intravenous antibiotics may be required.",
+      "pattern": "A",
+      "notes": "Lists treatment methods if early treatment did not occur."
+    }
+  ]
+}

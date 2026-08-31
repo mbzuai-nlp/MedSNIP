@@ -1,0 +1,140 @@
+{
+  "entry_id": 229,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 35-year-old G0P0000 woman presents to her gynecologist with complaints of irregular menstruation. She has had only 2 periods in the last year. She feels flushed without provocation and is experiencing occasional dyspareunia with post-coital spotting. She has also had more frequent headaches than usual. The patient has a medical history of Hashimoto thyroiditis and takes levothyroxine daily. Her mother has type 1 diabetes mellitus. Her temperature is 98.5°F (36.9°C), pulse is 70/min, blood pressure is 118/76 mmHg, and respirations are 13/min. Cardiopulmonary and abdominal exams are unremarkable. The patient has Tanner 5 breasts and pubic hair. A pelvic exam reveals a normal cervix, an anteverted uterus without tenderness, and no adnexal masses. The following laboratory studies are performed: Serum: Thyroid stimulating hormone (TSH): 28 µIU/mL (9-30 µIU/mL) Cycle day 3 follicle stimulating hormone (FSH): 49 mIU/mL (4.7-21.5 mIU/mL) Cycle day 3 estradiol: 8 pg/mL (27-123 pg/mL) Prolactin: 14 ng/mL (4-23 ng/mL) Testosterone: 42 ng/dL (15-70 ng/dL) Which of the following is the most appropriate next step in management? (A) Brain MRI (B) Combined oral contraceptive (C) Estradiol patch with oral medroxyprogesterone (D) Increase levothyroxine dose (E) Vaginal estradiol gel",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2851,
+    "output_tokens": 837,
+    "cached_input_tokens": 0,
+    "cost": 9.05e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2851,
+      "output_tokens": 837,
+      "cached_input_tokens": 0,
+      "cost": 9.05e-05
+    }
+  ],
+  "shared_context": {
+    "age": "35",
+    "sex": "female",
+    "chief_complaint": "irregular menstruation over the last year",
+    "medical_history": "Hashimoto thyroiditis, taking levothyroxine daily; mother has type 1 diabetes mellitus",
+    "vitals": "98.5°F (36.9°C), 70/min, 118/76 mmHg, 13/min",
+    "exam_findings": "normal cervix, anteverted uterus without tenderness, no adnexal masses; Tanner 5 breasts and pubic hair",
+    "correct_answer": "Increase levothyroxine dose"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in management for this patient with irregular menstruation, we need to evaluate the provided clinical information and laboratory results",
+    "TSH levels: The patient's TSH level is 28 µIU/mL, which is elevated, indicating that her hypothyroidism is not well-controlled, despite being treated with levothyroxine",
+    "Cycle day 3 FSH levels: The patient's FSH level is 49 mIU/mL, which is significantly elevated",
+    "Elevated FSH levels on cycle day 3 are suggestive of diminished ovarian reserve or primary ovarian insufficiency (POI)",
+    "Cycle day 3 estradiol levels: The patient's estradiol level is 8 pg/mL, which is low",
+    "Low estradiol in the context of elevated FSH further supports the diagnosis of POI",
+    "Prolactin and testosterone levels: Both prolactin and testosterone levels are within normal ranges, thus not indicative of hyperprolactinemia or androgen excess related to polycystic ovary syndrome (PCOS)",
+    "Given these findings, the patient’s symptoms of irregular menstruation, post-coital spotting, dyspareunia, and flushing are likely related to her poorly controlled hypothyroidism and potentially primary ovarian insufficiency",
+    "The immediate step should be to address and optimize her thyroid function",
+    "Increase levothyroxine dose: The elevated TSH level suggests that her current dose of levothyroxine is inadequate",
+    "Adjusting her levothyroxine dose to better control her hypothyroidism may help alleviate some of her symptoms",
+    "Brain MRI: This would be considered if there was suspicion of a pituitary disorder such as a prolactinoma, but her prolactin level is normal",
+    "Combined oral contraceptive: This might be used to regulate menstrual cycles, but before treating symptomatically, it's crucial to address the underlying cause, which in this case appears to be uncontrolled hypothyroidism",
+    "Estradiol patch with oral medroxyprogesterone: Hormone replacement therapy could be considered for POI, but thyroid optimization is the priority",
+    "Vaginal estradiol gel: This might help with local symptoms of vaginal atrophy but does not address the systemic hormonal imbalance",
+    "Final Answer: (D) Increase levothyroxine dose"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate next step in management for this patient with irregular menstruation, we need to evaluate the provided clinical information and laboratory results.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The patient's TSH level is 28 µIU/mL, which is elevated, indicating that her hypothyroidism is not well-controlled, despite being treated with levothyroxine.",
+      "pattern": "D",
+      "notes": "Standalone TSH level interpretation."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "Elevated FSH levels on cycle day 3 are suggestive of diminished ovarian reserve or primary ovarian insufficiency (POI), supported by low estradiol in the context of elevated FSH.",
+      "pattern": "A",
+      "notes": "All properties of one subject (POI)."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Both prolactin and testosterone levels are within normal ranges, thus not indicative of hyperprolactinemia or androgen excess related to polycystic ovary syndrome (PCOS).",
+      "pattern": "D",
+      "notes": "Standalone hormone level interpretation."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Given these findings, the patient’s symptoms of irregular menstruation, post-coital spotting, dyspareunia, and flushing are likely related to her poorly controlled hypothyroidism and potentially primary ovarian insufficiency.",
+      "pattern": "D",
+      "notes": "Standalone symptom analysis."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "The immediate step should be to address and optimize her thyroid function.",
+      "pattern": "D",
+      "notes": "Standalone thyroid optimization statement."
+    },
+    {
+      "source_sentences": [
+        9,
+        10,
+        11
+      ],
+      "output": "Adjusting her levothyroxine dose to better control her hypothyroidism may help alleviate some of her symptoms; this would be considered if there was suspicion of a pituitary disorder such as a prolactinoma, but her prolactin level is normal.",
+      "pattern": "A",
+      "notes": "All properties of one subject (thyroid optimization)."
+    },
+    {
+      "source_sentences": [
+        12,
+        13,
+        14
+      ],
+      "output": "This might be used to regulate menstrual cycles, but before treating symptomatically, it's crucial to address the underlying cause, which in this case appears to be uncontrolled hypothyroidism; hormone replacement therapy could be considered for POI, but thyroid optimization is the priority.",
+      "pattern": "A",
+      "notes": "All properties of one subject (treatment options)."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "The final answer is to increase the levothyroxine dose.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises inlined."
+    }
+  ]
+}

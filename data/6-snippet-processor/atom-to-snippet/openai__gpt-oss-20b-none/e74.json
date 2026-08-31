@@ -1,0 +1,258 @@
+{
+  "entry_id": 74,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 72-year-old man presents to his primary care physician for a general checkup. He states that he has been a bit more fatigued lately but believes it is secondary to poor sleep at his new house. The patient is otherwise healthy and takes no medications. His temperature is 98.0°F (36.7°C), blood pressure is 141/90 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 98% on room air. Physical exam is notable only for minor pallor but is otherwise unremarkable. Basic laboratory studies are ordered as seen below.\n\nHemoglobin: 10 g/dL\nHematocrit: 30%\nLeukocyte count: 67,500/mm^3\nPlatelet count: 119,000/mm^3\n\nSerum:\nNa: 141 mEq/L\nCl: 103 mEq/L\nK: 4.0 Eq/L\nHCO3-: 24 mEq/L\nBUN: 22 mg/dL\nGlucose: 109 mg/dL\nCreatinine: 1.2 mg/dL\nCa: 10.0 mg/dL\n\nWhich of the following is the most likely diagnosis? (A) Acute lymphoblastic leukemia (B) Acute myelogenous leukemia (C) Chronic lymphocytic leukemia (D) Chronic myelogenous leukemia (E) Hairy cell leukemia",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5056,
+    "output_tokens": 4183,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2071,
+      "output_tokens": 2282,
+      "cached_input_tokens": 0,
+      "cost": 0.00038161
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2985,
+      "output_tokens": 1901,
+      "cached_input_tokens": 0,
+      "cost": 0.00035569
+    }
+  ],
+  "shared_context": {
+    "patient_age": 72,
+    "patient_sex": "male",
+    "chief_complaint": "fatigue, minor pallor",
+    "medical_history": "none",
+    "medications": "none",
+    "vitals": {
+      "temperature": "98.0°F",
+      "blood_pressure": "141/90 mmHg",
+      "pulse": "82/min",
+      "respirations": "16/min",
+      "oxygen_saturation": "98% on room air"
+    },
+    "exam_findings": "minor pallor, otherwise unremarkable",
+    "laboratory_findings": {
+      "hemoglobin": "10 g/dL",
+      "hematocrit": "30%",
+      "white_blood_cells": "67,500/mm^3",
+      "platelets": "119,000/mm^3",
+      "serum": {
+        "Na": "141 mEq/L",
+        "Cl": "103 mEq/L",
+        "K": "4.0 Eq/L",
+        "HCO3-": "24 mEq/L",
+        "BUN": "22 mg/dL",
+        "glucose": "109 mg/dL",
+        "creatinine": "1.2 mg/dL",
+        "Ca": "10.0 mg/dL"
+      }
+    },
+    "question_type": "most likely diagnosis"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for this 72-year-old man, we need to analyze his clinical presentation and laboratory results step-by-step",
+    "The patient is 72 years old and presents with fatigue and minor pallor but otherwise feels healthy",
+    "Fatigue and pallor can be indicative of anemia or a hematologic disorder",
+    "*Reference*: Patients with chronic lymphocytic leukemia (CLL) typically present with symptoms like fatigue and pallor as a result of anemia or other blood count abnormalities",
+    "Minor pallor is noted, but there are no other significant findings",
+    "Absence of lymphadenopathy, hepatosplenomegaly, or other organomegaly which are common in CLL and other leukemias",
+    "Hemoglobin: 10 g/dL (Low)",
+    "Hematocrit: 30% (Low)",
+    "Leukocyte count: 67,500/mm^3 (High)",
+    "Platelet count: 119,000/mm^3 (Low normal to low)",
+    "*Reference*: A high leukocyte count combined with anemia and thrombocytopenia can be indicative of leukemia",
+    "(A) Acute lymphoblastic leukemia (ALL) and (B) Acute myelogenous leukemia (AML): These are less likely because acute leukemias often present with more severe symptoms, rapid onset, and higher blast counts in blood and bone marrow",
+    "(D) Chronic myelogenous leukemia (CML): CML typically presents with marked leukocytosis (often >100,000/mm^3), and may show symptoms related to splenomegaly which is not seen here",
+    "(E) Hairy cell leukemia (HCL): HCL usually presents with pancytopenia and splenomegaly; the patient’s leukocyte count is significantly higher than expected in HCL",
+    "CLL is common in elderly patients and often presents with high leukocyte counts, anemia, and sometimes thrombocytopenia",
+    "The patient’s age, fatigue, minor pallor, and laboratory findings match well with CLL presentation",
+    "Given the patient's age, clinical presentation, and specific blood count abnormalities, the most likely diagnosis is Chronic lymphocytic leukemia (C)",
+    "Answer: (C) Chronic lymphocytic leukemia"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Diagnosis requires analyzing a 72-year-old man's clinical presentation and laboratory results.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient is 72 years old and presents with fatigue and minor pallor but otherwise feels healthy.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Fatigue and pallor can indicate anemia or a hematologic disorder.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Patients with chronic lymphocytic leukemia typically present with fatigue and pallor due to anemia or blood count abnormalities.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Minor pallor is noted, but there are no other significant findings.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Absence of lymphadenopathy, hepatosplenomegaly, or organomegaly, which are common in CLL and other leukemias.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Hemoglobin is low at 10 g/dL.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Hematocrit is low at 30%.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Leukocyte count is high at 67,500/mm^3.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Platelet count is low normal to low at 119,000/mm^3.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "A high leukocyte count combined with anemia and thrombocytopenia can indicate leukemia.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Acute lymphoblastic leukemia and acute myelogenous leukemia are less likely because they usually present with more severe symptoms, rapid onset, and higher blast counts in blood and marrow.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Chronic myelogenous leukemia typically presents with marked leukocytosis >100,000/mm^3 and may show splenomegaly, which is not seen here.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Hairy cell leukemia usually presents with pancytopenia and splenomegaly, and the patient's leukocyte count is significantly higher than expected in HCL.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Chronic lymphocytic leukemia is common in elderly patients and often presents with high leukocyte counts, anemia, and sometimes thrombocytopenia.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 16,
+      "text": "The patient's age, fatigue, minor pallor, and laboratory findings match well with chronic lymphocytic leukemia presentation.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Given the patient's age, clinical presentation, and specific blood count abnormalities, the most likely diagnosis is chronic lymphocytic leukemia.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Answer: Chronic lymphocytic leukemia.",
+      "source_sentences": [
+        17
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The diagnosis of this 72-year-old male requires analyzing his clinical presentation and laboratory results.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "The 72-year-old male presents with fatigue and minor pallor but otherwise feels healthy. His hemoglobin is 10 g/dL and hematocrit 30 %, indicating anemia. He has a leukocyte count of 67,500/mm³ and a platelet count of 119,000/mm³, demonstrating marked leukocytosis and borderline thrombocytopenia. No lymphadenopathy, hepatosplenomegaly, or organomegaly are noted, and metabolic labs are otherwise normal.",
+      "pattern": "A",
+      "notes": "Enumeration of all observable patient characteristics and laboratory findings."
+    },
+    {
+      "source_claims": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "output": "Acute lymphoblastic leukemia and acute myelogenous leukemia are less likely because this patient lacks the severe symptoms, rapid onset, and high blast counts typical of those diseases. Chronic myelogenous leukemia is unlikely, as the leukocyte count is below 100,000/mm³ and there is no splenomegaly. Hairy cell leukemia is also unlikely because this patient’s leukocyte count is far higher than expected for HCL and he does not have pancytopenia or splenomegaly. In contrast, chronic lymphocytic leukemia is common in elderly adults and often presents with high leukocyte counts, anemia, and occasionally thrombocytopenia – all of which this 72‑year‑old male exhibits. Therefore, the most likely diagnosis is chronic lymphocytic leukemia.",
+      "pattern": "C",
+      "notes": "Conclusion supported by differential reasoning."
+    }
+  ]
+}

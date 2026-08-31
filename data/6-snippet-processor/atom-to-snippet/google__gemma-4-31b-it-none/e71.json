@@ -1,0 +1,240 @@
+{
+  "entry_id": 71,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old man presents to the emergency department with epistaxis for the past hour. He has never had epistaxis before and has been unable to control it with pressure, head elevation, and ice. The patient has a past medical history of atrial fibrillation and is currently taking metoprolol and warfarin. His temperature is 98.5°F (36.9°C), blood pressure is 123/81 mmHg, pulse is 90/min, respirations are 13/min, and oxygen saturation is 97% on room air. Physical exam reveals a comfortable man in no distress. Inspection reveals active bleeding in the anterior nares. There is not a clear, single bleeding vessel. Which of the following is the most appropriate initial step in management? (A) Cauterization with silver nitrate (B) Fresh frozen plasma and intravenous phytonadione (C) Intravenous tranexamic acid (D) Placement of posterior nasal packing (E) Topical oxymetazoline",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4661,
+    "output_tokens": 1350,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1854,
+      "output_tokens": 701,
+      "cached_input_tokens": 0,
+      "cost": 0.0005074
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2807,
+      "output_tokens": 649,
+      "cached_input_tokens": 0,
+      "cost": 0.00061153
+    }
+  ],
+  "shared_context": {
+    "age": "55",
+    "sex": "male",
+    "chief_complaint": "epistaxis",
+    "medical_history": "atrial fibrillation",
+    "medications": [
+      "metoprolol",
+      "warfarin"
+    ],
+    "vitals": {
+      "temperature": "98.5°F (36.9°C)",
+      "blood_pressure": "123/81 mmHg",
+      "pulse": "90/min",
+      "respirations": "13/min",
+      "oxygen_saturation": "97% on room air"
+    },
+    "exam_findings": "active bleeding in the anterior nares, no clear single bleeding vessel",
+    "treatment_history": "pressure, head elevation, and ice (unsuccessful)"
+  },
+  "sentences": [
+    "To determine the most appropriate initial step in management for this patient, we need to consider his history of atrial fibrillation and current anticoagulation therapy with warfarin",
+    "Warfarin increases the risk of bleeding, and this patient has an active nosebleed that cannot be controlled with pressure, head elevation, and ice",
+    "First, let's assess his anticoagulation status",
+    "The patient's INR is not provided, but his presentation suggests that he may be on the higher end of the therapeutic range, given his history of atrial fibrillation and current anticoagulation therapy",
+    "In patients on warfarin, the initial management should focus on stabilizing the patient and addressing the bleeding",
+    "The most appropriate initial step is to administer fresh frozen plasma and intravenous phytonadione (vitamin K) to reverse the anticoagulation effect of warfarin",
+    "This is because warfarin exerts its anticoagulant effect by inhibiting the production of vitamin K-dependent clotting factors, and administering phytonadione can help restore the normal coagulation pathway",
+    "Option A, cauterization with silver nitrate, may not be effective given the patient's active bleeding and potential coagulopathy",
+    "Option C, intravenous tranexamic acid, may also not be the best initial step, as it may not address the underlying coagulopathy caused by warfarin",
+    "Option D, placement of posterior nasal packing, may not be necessary given the anterior location of the bleeding",
+    "Option E, topical oxymetazoline, may be used to reduce nasal mucosal blood flow, but it does not address the underlying coagulopathy"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "To determine the most appropriate initial step in management for this patient, his history of atrial fibrillation and current anticoagulation therapy with warfarin must be considered.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Warfarin increases the risk of bleeding.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient has an active nosebleed that cannot be controlled with pressure, head elevation, and ice.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's anticoagulation status should be assessed.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's presentation suggests he may be on the higher end of the therapeutic range, given his history of atrial fibrillation and current anticoagulation therapy, although his INR is not provided.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "In patients on warfarin, initial management should focus on stabilizing the patient and addressing the bleeding.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The most appropriate initial step is to administer fresh frozen plasma and intravenous phytonadione (vitamin K) to reverse the anticoagulation effect of warfarin.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Warfarin exerts its anticoagulant effect by inhibiting the production of vitamin K-dependent clotting factors.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Administering phytonadione can help restore the normal coagulation pathway.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Cauterization with silver nitrate (Option A) may not be effective given the patient's active bleeding and potential coagulopathy.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Intravenous tranexamic acid (Option C) may not be the best initial step, as it may not address the underlying coagulopathy caused by warfarin.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Placement of posterior nasal packing (Option D) may not be necessary given the anterior location of the bleeding.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Topical oxymetazoline (Option E) may be used to reduce nasal mucosal blood flow, but it does not address the underlying coagulopathy.",
+      "source_sentences": [
+        10
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "To determine the most appropriate initial step in management for this 55-year-old male, his history of atrial fibrillation and current anticoagulation therapy with warfarin must be considered, as warfarin increases the risk of bleeding.",
+      "pattern": "B",
+      "notes": "Causal link between medication and risk factor."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "This 55-year-old male has an active nosebleed in the anterior nares that cannot be controlled with pressure, head elevation, and ice.",
+      "pattern": "D",
+      "notes": "Standalone clinical fact."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "The 55-year-old male's anticoagulation status should be assessed; given his history of atrial fibrillation and current anticoagulation therapy, his presentation suggests he may be on the higher end of the therapeutic range, although his INR is not provided.",
+      "pattern": "C",
+      "notes": "Recommendation supported by clinical premise."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "In patients on warfarin, initial management should focus on stabilizing the patient and addressing the bleeding.",
+      "pattern": "D",
+      "notes": "Standalone medical principle."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "The most appropriate initial step for this 55-year-old male is to administer fresh frozen plasma and intravenous phytonadione (vitamin K) to reverse the anticoagulant effect of warfarin, which exerts its effect by inhibiting the production of vitamin K-dependent clotting factors; administering phytonadione helps restore the normal coagulation pathway.",
+      "pattern": "B",
+      "notes": "Recommendation followed by the mechanism and justification."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Cauterization with silver nitrate (Option A) may not be effective for this 55-year-old male given his active bleeding and potential coagulopathy from warfarin.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of an option."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Intravenous tranexamic acid (Option C) may not be the best initial step for this 55-year-old male, as it may not address the underlying coagulopathy caused by warfarin.",
+      "pattern": "B",
+      "notes": "Causal link explaining why the option is inappropriate."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Placement of posterior nasal packing (Option D) may not be necessary given that this 55-year-old male's bleeding is located in the anterior nares.",
+      "pattern": "B",
+      "notes": "Causal link between anatomy and management choice."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Topical oxymetazoline (Option E) may be used to reduce nasal mucosal blood flow, but it does not address the underlying coagulopathy in this 55-year-old male.",
+      "pattern": "B",
+      "notes": "Causal link regarding effectiveness."
+    }
+  ]
+}

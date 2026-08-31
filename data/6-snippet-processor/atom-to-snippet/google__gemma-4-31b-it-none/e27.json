@@ -1,0 +1,208 @@
+{
+  "entry_id": 27,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to his primary care physician with a 6-month history of increasing lower back pain. He first felt the pain while lifting boxes at work but thought that he had just strained a muscle. The pain appears to be worse in the mornings and after rest. Exercise and physical activity appear to temporarily make the pain better. He has taken acetaminophen and ibuprofen for the pain. He has no significant medical history and takes no medications. His temperature is 98.6°F (37.0°C), blood pressure is 115/70 mmHg, pulse is 70/min, and respirations are 12/min. On physical exam, he is found to have limited flexion and extension of his spine as well as tenderness to palpation over the insertion of his patellar tendons bilaterally. Results from laboratory tests are shown below:\n\nSerum:\nErythrocyte sedimentation rate (ESR): 61 mm/hr\nC-reactive protein (CRP): 36 mg/L (normal <10 mg/L)\n\nWhich of the following is the most accurate test for this patient's condition? (A) Bone scan (B) Computed tomography (C) Magnetic resonance imaging (D) Radiograph (E) Ultrasound",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4729,
+    "output_tokens": 1181,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1921,
+      "output_tokens": 635,
+      "cached_input_tokens": 0,
+      "cost": 0.00049103
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2808,
+      "output_tokens": 546,
+      "cached_input_tokens": 0,
+      "cost": 0.00057252
+    }
+  ],
+  "shared_context": {
+    "age": 26,
+    "sex": "male",
+    "chief_complaint": "increasing lower back pain",
+    "medical_history": "no significant medical history",
+    "medications": "acetaminophen, ibuprofen",
+    "vitals": "T 98.6°F, BP 115/70 mmHg, P 70/min, R 12/min",
+    "exam_findings": "limited flexion and extension of spine, bilateral patellar tendon insertion tenderness",
+    "laboratory_tests": "ESR 61 mm/hr, CRP 36 mg/L",
+    "correct_answer": "Magnetic resonance imaging"
+  },
+  "sentences": [
+    "To determine the most accurate test for this patient's condition, let's analyze the provided information step-by-step",
+    "The patient's symptoms of increasing lower back pain that worsens in the mornings and after rest, and improves with exercise and physical activity, are characteristic of inflammatory back pain",
+    "However, the elevation in ESR and CRP levels (64 times and 3.6 times their normal values, respectively) also suggests an underlying inflammatory process",
+    "Given the presence of limited flexion and extension of the spine as well as tenderness to palpation over the insertion of the patellar tendons bilaterally, this is suggestive of spondyloarthritis (SpA), particularly ankylosing spondylitis",
+    "In spondyloarthritis, plain radiographs (X-rays) can show changes in the spine and sacroiliac joints, but they may not be visible in the early stages of the disease",
+    "Bone scans are not generally used for diagnosing spondyloarthritis; they are more often used for detecting bone metastasis or osteomyelitis",
+    "Computed tomography (CT) scans can provide more detailed images than X-rays and can help identify sacroiliitis and spinal changes in more detail, but MRI provides the most sensitive detection of early changes and is the preferred imaging modality for diagnosing spondyloarthritis",
+    "Ultrasound is not typically used for initial imaging of spondyloarthritis",
+    "Given the information, the most accurate test for this patient's condition is Magnetic Resonance Imaging (MRI) since it provides the most sensitive detection of early changes in spondyloarthritis",
+    "Final Answer: C"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "To determine the most accurate test for this patient's condition, the provided information will be analyzed step-by-step.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's symptoms of increasing lower back pain that worsens in the mornings and after rest, and improves with exercise and physical activity, are characteristic of inflammatory back pain.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The elevation in ESR and CRP levels suggests an underlying inflammatory process.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The presence of limited flexion and extension of the spine and tenderness to palpation over the insertion of the patellar tendons bilaterally is suggestive of spondyloarthritis (SpA), particularly ankylosing spondylitis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "In spondyloarthritis, plain radiographs (X-rays) can show changes in the spine and sacroiliac joints, but they may not be visible in the early stages of the disease.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Bone scans are not generally used for diagnosing spondyloarthritis; they are more often used for detecting bone metastasis or osteomyelitis.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Computed tomography (CT) scans can provide more detailed images than X-rays and can help identify sacroiliitis and spinal changes in more detail.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "MRI provides the most sensitive detection of early changes and is the preferred imaging modality for diagnosing spondyloarthritis.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Ultrasound is not typically used for initial imaging of spondyloarthritis.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The most accurate test for this patient's condition is Magnetic Resonance Imaging (MRI) since it provides the most sensitive detection of early changes in spondyloarthritis.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The final answer is C.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "To determine the most accurate test for this 26-year-old male's condition, the provided information will be analyzed step-by-step.",
+      "pattern": "D",
+      "notes": "Procedural statement."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "In this 26-year-old male, the symptoms of increasing lower back pain that worsens in the mornings and after rest and improves with exercise, combined with elevated ESR (61 mm/hr) and CRP (36 mg/L), and exam findings of limited spinal flexion/extension and bilateral patellar tendon tenderness, are characteristic of inflammatory back pain and suggestive of spondyloarthritis (SpA), particularly ankylosing spondylitis.",
+      "pattern": "C",
+      "notes": "Conclusion of diagnosis based on symptoms, labs, and exam."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "In spondyloarthritis, plain radiographs (X-rays) can show changes in the spine and sacroiliac joints, but they may not be visible in the early stages of the disease.",
+      "pattern": "D",
+      "notes": "Standalone fact about X-rays."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Bone scans are not generally used for diagnosing spondyloarthritis; they are more often used for detecting bone metastasis or osteomyelitis.",
+      "pattern": "D",
+      "notes": "Standalone fact about bone scans."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Computed tomography (CT) scans can provide more detailed images than X-rays and can help identify sacroiliitis and spinal changes in more detail.",
+      "pattern": "D",
+      "notes": "Standalone fact about CT."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "MRI provides the most sensitive detection of early changes and is the preferred imaging modality for diagnosing spondyloarthritis.",
+      "pattern": "D",
+      "notes": "Standalone fact about MRI."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Ultrasound is not typically used for initial imaging of spondyloarthritis.",
+      "pattern": "D",
+      "notes": "Standalone fact about ultrasound."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "The most accurate test for this 26-year-old male's condition is Magnetic Resonance Imaging (MRI), as it provides the most sensitive detection of early changes in spondyloarthritis; therefore, the final answer is C.",
+      "pattern": "B",
+      "notes": "Conclusion and rationale combined."
+    }
+  ]
+}

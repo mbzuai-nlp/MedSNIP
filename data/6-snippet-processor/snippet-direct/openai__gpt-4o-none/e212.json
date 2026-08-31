@@ -1,0 +1,67 @@
+{
+  "entry_id": 212,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 1655,
+    "output_tokens": 244,
+    "cached_input_tokens": 1536,
+    "cost": 0.0046575
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1655,
+      "output_tokens": 244,
+      "cached_input_tokens": 1536,
+      "cost": 0.0046575
+    }
+  ],
+  "shared_context": {
+    "condition": "corneal abrasion",
+    "symptom": "discharge from the eye"
+  },
+  "sentences": [
+    "Corneal abrasions can cause a reflex production of tears, which may result in a watery discharge from the eye",
+    "This is a common symptom of corneal abrasions, but it may not always be present",
+    "In some cases, the discharge may be minimal or absent, especially in the early stages of the injury"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Corneal abrasions can cause a reflex production of tears, which may result in a watery discharge from the eye.",
+      "pattern": "B",
+      "notes": "Causal relationship between corneal abrasions and watery discharge due to reflex tearing."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "A watery discharge is a common symptom of corneal abrasions, but it may not always be present.",
+      "pattern": "C",
+      "notes": "Statement of typical symptom with subsequent conditional statement that it may not always occur."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "In some cases of corneal abrasion, the discharge may be minimal or absent, especially in the early stages of the injury.",
+      "pattern": "D",
+      "notes": "Standalone fact about the variability of discharge symptom over the course of the injury."
+    }
+  ]
+}

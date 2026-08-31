@@ -1,0 +1,77 @@
+{
+  "entry_id": 131,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "If the side effects of the Prozac become too much is there a wean down period I would have to go through or would I be able to stop it immediately?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1752,
+    "output_tokens": 318,
+    "cached_input_tokens": 0,
+    "cost": 4.776e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1752,
+      "output_tokens": 318,
+      "cached_input_tokens": 0,
+      "cost": 4.776e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "stopping Prozac (fluoxetine)",
+    "drug_a": "Prozac (fluoxetine)",
+    "condition": "side effects too much"
+  },
+  "sentences": [
+    "If the side effects of Prozac (fluoxetine) become too much, it is generally recommended to wean down the medication rather than stopping it abruptly",
+    "Abrupt discontinuation of Prozac can lead to withdrawal symptoms, which may include dizziness, headache, nausea, and irritability",
+    "The weaning process typically involves gradually reducing the dose over a period of time, which should be done under the guidance of a healthcare provider",
+    "The specific tapering schedule can vary depending on the individual’s current dose, duration of use, and response to the medication"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "It is generally recommended to wean down Prozac (fluoxetine) rather than stopping it abruptly.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise; merged because weaning is essential for safety."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Abrupt discontinuation of Prozac (fluoxetine) can lead to withdrawal symptoms, which may include dizziness, headache, nausea, and irritability.",
+      "pattern": "D",
+      "notes": "Standalone fact about withdrawal symptoms."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The weaning process typically involves gradually reducing the dose over a period of time, which should be done under the guidance of a healthcare provider.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise; merged because weaning requires a healthcare provider."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The specific tapering schedule can vary depending on the individual’s current dose, duration of use, and response to the medication.",
+      "pattern": "D",
+      "notes": "Standalone fact about variable tapering schedule."
+    }
+  ]
+}

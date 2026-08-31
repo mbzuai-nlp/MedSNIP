@@ -1,0 +1,448 @@
+{
+  "entry_id": 236,
+  "batch_id": 24,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 45-year-old African American woman presents to her primary care physician for not feeling well. She states she has had a cough for the past week. She also has abdominal pain and trouble focusing that has been worsening and has lost 5 pounds recently. Her gastroesophageal reflux disease (GERD) has been poorly controlled recently. The patient is a non-smoker and has a history of GERD for which she takes antacids. Her temperature is 98.6°F (37°C), blood pressure is 115/71 mmHg, pulse is 72/min, and respirations are 12/min. A physical exam is within normal limits. Laboratory studies are ordered and are below:\n\nSerum:\nNa+: 139 mEq/L\nK+: 4.1 mEq/L\nCl-: 101 mEq/L\nHCO3-: 24 mEq/L\nUrea nitrogen: 12 mg/dL\nGlucose: 70 mg/dL\nCreatinine: 0.9 mg/dL\nCa2+: 12.5 mg/dL\nAlkaline phosphatase: 150 U/L\nPhosphorus: 2.0 mg/dL\n\nUrine:\nColor: amber\nNitrites: negative\nSodium: 5 mmol/24 hours\nRed blood cells: 0/hpf\n\nWhich of the following is the most likely explanation of this patient's current presentation? (A) Antacid overuse (B) Increased 1,25-dihydroxyvitamin D (C) Increased parathyroid hormone (D) Malignancy (E) Viral illness",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5532,
+    "output_tokens": 5875,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2396,
+      "output_tokens": 3828,
+      "cached_input_tokens": 0,
+      "cost": 0.0006078
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 3136,
+      "output_tokens": 2047,
+      "cached_input_tokens": 0,
+      "cost": 0.00038066
+    }
+  ],
+  "shared_context": {
+    "patient_age": 45,
+    "patient_sex": "female",
+    "chief_complaint": "cough, abdominal pain, trouble focusing, weight loss",
+    "medical_history": "GERD",
+    "medications": "antacids",
+    "vitals": "normal temperature, BP, pulse, respirations",
+    "exam_findings": "normal physical examination",
+    "labs": {
+      "serum_calcium": 12.5,
+      "serum_alkaline_phosphatase": 150,
+      "serum_phosphorus": 2.0,
+      "urine_sodium": 5
+    },
+    "correct_answer": "Increased parathyroid hormone (primary hyperparathyroidism)"
+  },
+  "sentences": [
+    "To address the clinical inquiry presented, a step-by-step analysis of the patient's symptoms, laboratory results, and potential underlying causes is necessary",
+    "Step 1: Review of Symptoms and History",
+    "A 45-year-old African American woman",
+    "Symptoms: Cough (1 week), abdominal pain, trouble focusing, weight loss (5 pounds), poorly controlled GERD",
+    "Medications: Antacids for GERD",
+    "Vital Signs: Normal temperature, blood pressure, pulse, and respirations",
+    "Physical Exam: Normal",
+    "The patient's symptoms are non-specific but suggest a systemic process, given the combination of gastrointestinal, respiratory, and cognitive complaints alongside weight loss",
+    "Step 2: Review of Laboratory Results",
+    "Serum Sodium: 139 mEq/L (normal)",
+    "Serum Potassium: 4.1 mEq/L (normal)",
+    "Serum Chloride: 101 mEq/L (normal)",
+    "Serum Bicarbonate: 24 mEq/L (normal)",
+    "Serum Urea Nitrogen: 12 mg/dL (normal)",
+    "Serum Glucose: 70 mg/dL (normal)",
+    "Serum Creatinine: 0.9 mg/dL (normal)",
+    "Serum Calcium: 12.5 mg/dL (elevated; normal range: 8.5-10.2 mg/dL)",
+    "Serum Alkaline Phosphatase: 150 U/L (elevated; normal range: 44-147 U/L)",
+    "Serum Phosphorus: 2.0 mg/dL (low; normal range: 2.5-4.5 mg/dL)",
+    "Urine Nitrites: Negative",
+    "Urine Sodium: 5 mmol/24 hours (low; normal range: 40-220 mmol/24 hours)",
+    "Urine RBCs: 0/hpf",
+    "Hypercalcemia (elevated serum calcium)",
+    "Elevated alkaline phosphatase",
+    "Hypophosphatemia (low serum phosphorus)",
+    "Low urine sodium",
+    "To identify the most likely cause, consider the following options based on the laboratory and clinical findings",
+    "(A) Antacid overuse: Chronic antacid use can cause electrolyte imbalances, but it is less likely to cause significant hypercalcemia and hypophosphatemia",
+    "(B) Increased 1,25-dihydroxyvitamin D: This typically leads to hypercalcemia and hypophosphatemia due to increased intestinal absorption of calcium and phosphorus",
+    "It could be a consideration, but it's less common without a more specific context like granulomatous diseases or lymphoma",
+    "(C) Increased parathyroid hormone (PTH): Primary hyperparathyroidism is a common cause of hypercalcemia and hypophosphatemia",
+    "It is consistent with the patient's lab results of elevated calcium, low phosphorus, and elevated alkaline phosphatase",
+    "(D) Malignancy: Certain cancers (e.g., multiple myeloma, lung cancer) can cause hypercalcemia, often through bone metastasis or paraneoplastic syndrome",
+    "However, malignancy causing such lab findings alongside the specific symptoms is less likely unless more specific signs of cancer are present",
+    "(E) Viral illness: Viral infections are generally not associated with hypercalcemia or significant electrolyte disturbances",
+    "The combination of hypercalcemia, hypophosphatemia, and elevated alkaline phosphatase, along with the patient’s symptoms, strongly suggests increased parathyroid hormone as the most likely explanation",
+    "Final Answer: (C) Increased parathyroid hormone"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A step-by-step analysis is needed to evaluate the patient's symptoms, laboratory results, and possible underlying causes.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The first step is to review the patient's symptoms and medical history.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient is a 45-year-old African American woman.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient reports a one-week cough, abdominal pain, trouble focusing, and recent weight loss of 5 pounds, with poorly controlled GERD.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient takes antacids to treat GERD.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient's vital signs are normal.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient's physical examination is normal.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's symptoms are non-specific but suggest a systemic process involving gastrointestinal, respiratory, and neurological systems alongside weight loss.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The next step is to review laboratory results.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Serum sodium is 139 mEq/L (normal).",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Serum potassium is 4.1 mEq/L (normal).",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Serum chloride is 101 mEq/L (normal).",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Serum bicarbonate is 24 mEq/L (normal).",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Serum urea nitrogen is 12 mg/dL (normal).",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Serum glucose is 70 mg/dL (normal).",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Serum creatinine is 0.9 mg/dL (normal).",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Serum calcium is 12.5 mg/dL, which is elevated.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Serum alkaline phosphatase is 150 U/L, which is elevated.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Serum phosphorus is 2.0 mg/dL, which is low.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Urine nitrites are negative.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 21,
+      "text": "Urine sodium excretion is 5 mmol/24 hours, which is low.",
+      "source_sentences": [
+        20
+      ]
+    },
+    {
+      "index": 22,
+      "text": "Urine red blood cells are 0/hpf.",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 23,
+      "text": "There is hypercalcemia due to elevated serum calcium.",
+      "source_sentences": [
+        22
+      ]
+    },
+    {
+      "index": 24,
+      "text": "There is elevated alkaline phosphatase.",
+      "source_sentences": [
+        23
+      ]
+    },
+    {
+      "index": 25,
+      "text": "There is hypophosphatemia due to low serum phosphorus.",
+      "source_sentences": [
+        24
+      ]
+    },
+    {
+      "index": 26,
+      "text": "There is low urinary sodium excretion.",
+      "source_sentences": [
+        25
+      ]
+    },
+    {
+      "index": 27,
+      "text": "To identify the most likely cause, the following options are considered based on lab and clinical findings.",
+      "source_sentences": [
+        26
+      ]
+    },
+    {
+      "index": 28,
+      "text": "Antacid overuse can cause electrolyte imbalances but is unlikely to cause significant hypercalcemia and hypophosphatemia.",
+      "source_sentences": [
+        27
+      ]
+    },
+    {
+      "index": 29,
+      "text": "Increased 1,25-dihydroxyvitamin D typically leads to hypercalcemia and hypophosphatemia due to increased intestinal absorption of calcium and phosphorus.",
+      "source_sentences": [
+        28
+      ]
+    },
+    {
+      "index": 30,
+      "text": "It is less common without a specific context such as granulomatous disease or lymphoma.",
+      "source_sentences": [
+        29
+      ]
+    },
+    {
+      "index": 31,
+      "text": "Increased parathyroid hormone, as seen in primary hyperparathyroidism, is a common cause of hypercalcemia and hypophosphatemia.",
+      "source_sentences": [
+        30
+      ]
+    },
+    {
+      "index": 32,
+      "text": "These findings are consistent with the patient's labs of elevated calcium, low phosphorus, and elevated alkaline phosphatase.",
+      "source_sentences": [
+        31
+      ]
+    },
+    {
+      "index": 33,
+      "text": "Malignancy can cause hypercalcemia, often via bone metastasis or paraneoplastic syndrome.",
+      "source_sentences": [
+        32
+      ]
+    },
+    {
+      "index": 34,
+      "text": "Thus malignancy is less likely in this patient absent specific signs of cancer.",
+      "source_sentences": [
+        33
+      ]
+    },
+    {
+      "index": 35,
+      "text": "Viral illness generally does not cause hypercalcemia or significant electrolyte disturbances.",
+      "source_sentences": [
+        34
+      ]
+    },
+    {
+      "index": 36,
+      "text": "The combination of hypercalcemia, hypophosphatemia, elevated alkaline phosphatase, and the patient's symptoms strongly suggests increased parathyroid hormone as the most likely explanation.",
+      "source_sentences": [
+        35
+      ]
+    },
+    {
+      "index": 37,
+      "text": "The most likely explanation is increased parathyroid hormone.",
+      "source_sentences": [
+        36
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "The patient is a 45-year-old African American woman who presents with a one‑week cough, abdominal pain, decreased focus, and a 5‑pound weight loss. She has poorly controlled GERD and takes antacids. Her vital signs are normal and the physical examination is unremarkable, indicating a non‑specific systemic symptom complex.",
+      "pattern": "A",
+      "notes": "Enumeration of patient presentation and context."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "output": "Laboratory evaluation shows a serum calcium of 12.5 mg/dL (elevated), serum alkaline phosphatase of 150 U/L (elevated), serum phosphorus of 2.0 mg/dL (low), and low urinary sodium excretion of 5 mmol/24 h. Serum electrolytes, renal function, glucose, and basic metabolic panel are within normal limits. These findings indicate hypercalcemia, hypophosphatemia, and transaminitis consistent with bone turnover or endocrine causes.",
+      "pattern": "A",
+      "notes": "Enumeration of laboratory results and their primary interpretations."
+    },
+    {
+      "source_claims": [
+        27,
+        28
+      ],
+      "output": "Antacid overuse can cause electrolyte imbalances, but it is unlikely to produce the marked hypercalcemia, hypophosphatemia, and elevated alkaline phosphatase seen in this patient.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of antacid overuse."
+    },
+    {
+      "source_claims": [
+        29,
+        30
+      ],
+      "output": "Increased 1,25‑dihydroxyvitamin D leads to hypercalcemia and hyperphosphatemia through enhanced intestinal absorption, a pattern not observed here because serum phosphorus is low.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of vitamin D excess."
+    },
+    {
+      "source_claims": [
+        31,
+        32
+      ],
+      "output": "Increased parathyroid hormone, as seen in primary hyperparathyroidism, commonly causes hypercalcemia, hypophosphatemia, and raised alkaline phosphatase, matching this patient’s laboratory profile.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of PTH elevation."
+    },
+    {
+      "source_claims": [
+        33,
+        34
+      ],
+      "output": "Malignancy can cause hypercalcemia via bone metastasis or paraneoplastic mechanisms, but this patient lacks other cancer‑related signs, making it a less likely cause.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of malignancy."
+    },
+    {
+      "source_claims": [
+        35
+      ],
+      "output": "Viral illness typically does not produce hypercalcemia or significant electrolyte disturbances, making it an unlikely explanation for this patient’s lab abnormalities.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of viral illness."
+    },
+    {
+      "source_claims": [
+        36,
+        37
+      ],
+      "output": "The combination of hypercalcemia, hypophosphatemia, and elevated alkaline phosphatase in this 45‑year‑old African American woman with worsening gastrointestinal and neurological symptoms most strongly suggests increased parathyroid hormone—that is, primary hyperparathyroidism— as the most likely explanation.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises."
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "entry_id": 162,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is flu test same as influenza test ?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2693,
+    "output_tokens": 1793,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1189,
+      "output_tokens": 1058,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1504,
+      "output_tokens": 735,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "equivalence of flu test and influenza test",
+    "condition": "influenza"
+  },
+  "sentences": [
+    "No, a \"flu test\" and an \"influenza test\" refer to the same diagnostic procedure",
+    "Both terms are commonly used interchangeably to describe tests that detect the presence of influenza viruses in patients exhibiting symptoms of influenza-like illness",
+    "Influenza tests, often referred to as rapid influenza diagnostic tests (RIDTs), rapid antigen tests, or molecular assays, are designed to identify influenza A and B viral infections",
+    "These tests are crucial for prompt diagnosis and appropriate management of the illness, especially during the influenza season"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A flu test and an influenza test refer to the same diagnostic procedure.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The terms \"flu test\" and \"influenza test\" are commonly used interchangeably.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Flu tests detect the presence of influenza viruses in patients exhibiting symptoms of influenza-like illness.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Influenza tests are often referred to as rapid influenza diagnostic tests (RIDTs).",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Influenza tests are often referred to as rapid antigen tests.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Influenza tests are often referred to as molecular assays.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Influenza tests are designed to identify influenza A viral infections.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Influenza tests are designed to identify influenza B viral infections.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Influenza tests are crucial for prompt diagnosis of the illness, especially during influenza season.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Influenza tests are crucial for appropriate management of the illness, especially during influenza season.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "A flu test and an influenza test refer to the same diagnostic procedure, and the terms are commonly used interchangeably.",
+      "pattern": "C",
+      "notes": "Core equivalence conclusion with supporting wording about interchangeable terminology."
+    },
+    {
+      "source_claims": [
+        3,
+        7,
+        8
+      ],
+      "output": "Flu or influenza tests detect influenza viruses in patients with influenza-like illness, including influenza A and influenza B infections.",
+      "pattern": "A",
+      "notes": "Enumeration of what the same test detects."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6
+      ],
+      "output": "Influenza tests are often referred to as rapid influenza diagnostic tests (RIDTs), rapid antigen tests, or molecular assays.",
+      "pattern": "A",
+      "notes": "List of names or categories applied to the same subject."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Influenza tests are crucial for prompt diagnosis and appropriate management of the illness, especially during influenza season.",
+      "pattern": "A",
+      "notes": "Enumeration of clinical roles of influenza testing."
+    }
+  ]
+}

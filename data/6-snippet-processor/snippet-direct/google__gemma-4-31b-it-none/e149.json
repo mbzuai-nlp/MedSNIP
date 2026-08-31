@@ -1,0 +1,147 @@
+{
+  "entry_id": 149,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 24-year-old man with epilepsy refractory to valproic acid, phenytoin, and levetiracetam undergoes magnetic resonance imaging of his brain while monitored by anesthetic care. He wakes up screaming in pain due to an electrocardiogram lead having caused a significant thermal burn circumferentially around his left leg. He is admitted to the medical intensive care unit for continuous electroencephalogram monitoring while on a midazolam infusion for seizure suppression and supportive care for his burn. Overnight, the nurse continued to increase the patient's midazolam infusion rate, but she also noticed that his left toes were cold to the touch with significant edema. His temperature is now 100°F (37.8°C), blood pressure is 110/75 mmHg, pulse is 80/min, respirations are 10/min and oxygen saturation is 95% on 2 liters nasal cannula. No dorsalis pedis or posterior tibial pulses are detected on the left lower extremity. A delta pressure of 25 mmHg is obtained in the left leg. What is the most appropriate next step in management? (A) Amputation (B) Escharotomy (C) Fasciotomy (D) Intravenous fluid infusion based on Parkland formula (E) Transfer to burn center",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2787,
+    "output_tokens": 904,
+    "cached_input_tokens": 0,
+    "cost": 0.00070583
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2787,
+      "output_tokens": 904,
+      "cached_input_tokens": 0,
+      "cost": 0.00070583
+    }
+  ],
+  "shared_context": {
+    ":": "not provided",
+    "age": "24",
+    "sex": "man",
+    "chief_complaint": "thermal burn to left leg and potential compartment syndrome",
+    "medical_history": "epilepsy refractory to valproic acid, phenytoin, and levetiracetam",
+    "medications": "midazolam infusion",
+    "vitals": "Temp 100°F, BP 110/75 mmHg, Pulse 80/min, RR 10/min, O2 sat 95% on 2L NC",
+    "exam_findings": "cold left toes, significant edema, absent dorsalis pedis and posterior tibial pulses on left lower extremity; delta pressure 25 mmHg in left leg",
+    "treatment_history": "circumferential thermal burn from ECG lead during MRI"
+  },
+  "sentences": [
+    "To address this clinical scenario, let's break it down step-by-step",
+    "Assess the patient's condition: The patient has refractory epilepsy requiring continuous electroencephalogram (EEG) monitoring and midazolam infusion (1) for seizure suppression",
+    "The patient also has a significant thermal burn circumferentially around the left leg due to an electrocardiogram (ECG) lead",
+    "Recognize potential complications: The patient's cold left toes with significant edema, normal temperature, and the absence of dorsalis pedis and posterior tibial pulses suggest potential compartment syndrome",
+    "The delta pressure of 25 mmHg in the left leg further supports this suspicion",
+    "Prioritize compartment syndrome management: Given the high suspicion of compartment syndrome, immediate action is required to prevent further damage to the affected limb",
+    "A) Amputation: This would be a last resort, usually considered when the limb is already non-viable due to severe trauma or prolonged ischemia",
+    "Not the best initial step in this case",
+    "B) Escharotomy: This is an incision through eschar (burn eschar) to relieve pressure and promote healing",
+    "However, it does not address the potential compartment syndrome",
+    "C) Fasciotomy: This surgical procedure involves making an incision in the fascia (the layer of tissue covering a muscle) to relieve pressure and restore blood flow to the affected area",
+    "Given the high suspicion of compartment syndrome, this is the most appropriate next step",
+    "D) Intravenous fluid infusion based on Parkland formula: While fluid resuscitation is important for burn care, it does not address the potential compartment syndrome directly",
+    "E) Transfer to a burn center: This would be a secondary step to ensure optimal care for the burn and associated complications, but it does not address the immediate need for compartment syndrome management",
+    "Final answer: C) Fasciotomy"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "This analysis addresses the clinical scenario of a 24-year-old man with a circumferential burn and potential compartment syndrome.",
+      "pattern": "D",
+      "notes": "Introductory sentence."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "The 24-year-old man has refractory epilepsy requiring continuous electroencephalogram (EEG) monitoring and midazolam infusion for seizure suppression, and he has a significant thermal burn circumferentially around the left leg due to an electrocardiogram (ECG) lead.",
+      "pattern": "A",
+      "notes": "Enumeration of patient's current conditions."
+    },
+    {
+      "source_sentences": [
+        3,
+        4
+      ],
+      "output": "In this 24-year-old man, cold left toes with significant edema and the absence of dorsalis pedis and posterior tibial pulses, combined with a delta pressure of 25 mmHg in the left leg, suggest potential compartment syndrome.",
+      "pattern": "B",
+      "notes": "Causal chain: findings lead to the suspicion of compartment syndrome."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Given the high suspicion of compartment syndrome in this 24-year-old man, immediate action is required to prevent further damage to the affected limb.",
+      "pattern": "D",
+      "notes": "Standalone priority statement."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Amputation is a last resort considered when the limb is already non-viable due to severe trauma or prolonged ischemia, and is not the best initial step for this 24-year-old man.",
+      "pattern": "C",
+      "notes": "Conclusion (not best step) and its supporting premise (definition of amputation use)."
+    },
+    {
+      "source_sentences": [
+        8,
+        9
+      ],
+      "output": "Escharotomy is an incision through burn eschar to relieve pressure and promote healing, but it does not address the potential compartment syndrome in this 24-year-old man.",
+      "pattern": "C",
+      "notes": "Conclusion (does not address CS) and supporting premise (definition of escharotomy)."
+    },
+    {
+      "source_sentences": [
+        10,
+        11
+      ],
+      "output": "Fasciotomy is a surgical procedure involving an incision in the fascia to relieve pressure and restore blood flow; given the high suspicion of compartment syndrome in this 24-year-old man, this is the most appropriate next step.",
+      "pattern": "C",
+      "notes": "Conclusion (most appropriate step) and its supporting premise (definition of fasciotomy)."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "While intravenous fluid infusion based on the Parkland formula is important for burn care, it does not address the potential compartment syndrome directly in this 24-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of an option."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Transferring this 24-year-old man to a burn center is a secondary step for optimal care but does not address the immediate need for compartment syndrome management.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of an option."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "The most appropriate next step in management for this 24-year-old man is fasciotomy.",
+      "pattern": "D",
+      "notes": "Final diagnosis/recommendation."
+    }
+  ]
+}

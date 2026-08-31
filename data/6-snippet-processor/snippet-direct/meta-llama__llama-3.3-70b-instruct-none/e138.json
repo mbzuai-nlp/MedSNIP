@@ -1,0 +1,111 @@
+{
+  "entry_id": 138,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Whats menigitis?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1881,
+    "output_tokens": 616,
+    "cached_input_tokens": 0,
+    "cost": 0.00038522
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1881,
+      "output_tokens": 616,
+      "cached_input_tokens": 0,
+      "cost": 0.00038522
+    }
+  ],
+  "shared_context": {
+    "topic": "meningitis",
+    "condition": "meningitis"
+  },
+  "sentences": [
+    "Meningitis is an inflammation of the protective membranes covering the brain and spinal cord, known as the meninges",
+    "This condition can be caused by various infectious agents, including bacteria, viruses, fungi, and parasites, as well as non-infectious causes such as certain medications and autoimmune diseases",
+    "Bacterial meningitis is often more severe and can lead to serious complications or death if not treated promptly",
+    "Common bacterial pathogens include Streptococcus pneumoniae, Neisseria meningitidis, and Haemophilus influenzae type b (Hib)",
+    "Viral meningitis is generally less severe and often resolves without specific treatment",
+    "Common viral causes include enteroviruses, herpes simplex virus, and varicella-zoster virus",
+    "Symptoms of meningitis can include sudden onset of fever, headache, stiff neck, nausea, vomiting, increased sensitivity to light (photophobia), and altered mental status",
+    "Diagnosis typically involves clinical evaluation, lumbar puncture to analyze cerebrospinal fluid (CSF), and laboratory tests to identify the causative agent",
+    "Treatment depends on the underlying cause",
+    "Bacterial meningitis requires prompt antibiotic therapy, while viral meningitis may only require supportive care",
+    "Vaccination is available for some types of bacterial meningitis and is an effective preventive measure"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "Meningitis is an inflammation of the protective membranes covering the brain and spinal cord, known as the meninges, and can be caused by various infectious agents, including bacteria, viruses, fungi, and parasites, as well as non-infectious causes such as certain medications and autoimmune diseases.",
+      "pattern": "C",
+      "notes": "Definition and causes of meningitis; conclusion (definition) is only meaningful with its premise (causes)."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Bacterial meningitis is often more severe and can lead to serious complications or death if not treated promptly, with common bacterial pathogens including Streptococcus pneumoniae, Neisseria meningitidis, and Haemophilus influenzae type b (Hib).",
+      "pattern": "B",
+      "notes": "Causal chain; severity of bacterial meningitis + its common causes are connected."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Viral meningitis is generally less severe and often resolves without specific treatment, with common viral causes including enteroviruses, herpes simplex virus, and varicella-zoster virus.",
+      "pattern": "B",
+      "notes": "Causal chain; characteristics of viral meningitis + its common causes are connected."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Symptoms of meningitis can include sudden onset of fever, headache, stiff neck, nausea, vomiting, increased sensitivity to light (photophobia), and altered mental status.",
+      "pattern": "D",
+      "notes": "Standalone list of symptoms."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Diagnosis of meningitis typically involves clinical evaluation, lumbar puncture to analyze cerebrospinal fluid (CSF), and laboratory tests to identify the causative agent.",
+      "pattern": "D",
+      "notes": "Standalone diagnostic approach."
+    },
+    {
+      "source_sentences": [
+        8,
+        9
+      ],
+      "output": "Treatment of meningitis depends on the underlying cause, with bacterial meningitis requiring prompt antibiotic therapy, while viral meningitis may only require supportive care.",
+      "pattern": "C",
+      "notes": "Conclusion (treatment depends on cause) is only meaningful with its premise (specific treatments for bacterial and viral)."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Vaccination is available for some types of bacterial meningitis and is an effective preventive measure.",
+      "pattern": "D",
+      "notes": "Standalone fact about vaccination as a preventive measure."
+    }
+  ]
+}

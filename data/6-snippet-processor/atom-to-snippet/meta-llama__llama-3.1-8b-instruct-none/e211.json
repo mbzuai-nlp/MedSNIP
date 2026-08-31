@@ -1,0 +1,90 @@
+{
+  "entry_id": 211,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2621,
+    "output_tokens": 258,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1186,
+      "output_tokens": 146,
+      "cached_input_tokens": 0,
+      "cost": 2.956e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1435,
+      "output_tokens": 112,
+      "cached_input_tokens": 0,
+      "cost": 3.318e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "corneal abrasion symptoms",
+    "condition": "corneal abrasion",
+    "symptom": "discharge from the eye"
+  },
+  "sentences": [
+    "A corneal abrasion typically does not cause significant discharge from the eye",
+    "The primary symptoms of a corneal abrasion include pain, a sensation of a foreign body in the eye, tearing, redness, and sensitivity to light",
+    "While mild discharge can occur due to increased tearing, it is not a prominent feature",
+    "If there is significant discharge, it may indicate a secondary infection or another underlying condition, such as conjunctivitis"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A corneal abrasion typically does not cause significant discharge from the eye.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Mild discharge can occur due to increased tearing.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Significant discharge may indicate a secondary infection or another underlying condition.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "A corneal abrasion typically does not cause significant discharge from the eye, but mild discharge can occur due to increased tearing.",
+      "pattern": "A",
+      "notes": "Enumeration of discharge types."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Significant discharge may indicate a secondary infection or another underlying condition.",
+      "pattern": "D",
+      "notes": "Standalone fact about discharge indication."
+    }
+  ]
+}

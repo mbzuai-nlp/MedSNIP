@@ -1,0 +1,172 @@
+{
+  "entry_id": 200,
+  "batch_id": 20,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can a nausea prescription be taken at the same time as Dramamine?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3065,
+    "output_tokens": 3134,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1373,
+      "output_tokens": 1443,
+      "cached_input_tokens": 0,
+      "cost": 0.00024321
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1692,
+      "output_tokens": 1691,
+      "cached_input_tokens": 0,
+      "cost": 0.0002875
+    }
+  ],
+  "shared_context": {
+    "topic": "concurrent use of nausea prescription and Dramamine",
+    "drug_a": "Dramamine (dimenhydrinate)",
+    "drug_b": "nausea prescription",
+    "condition": "nausea and vomiting"
+  },
+  "sentences": [
+    "Concurrent administration of Dramamine (dimenhydrinate) with other antiemetic medications can be considered, but caution is necessary due to potential interactions and overlapping side effects",
+    "Dramamine is an antihistamine used to prevent and treat nausea, vomiting, and dizziness caused by motion sickness",
+    "Combining it with other antiemetics, especially those with sedative effects or similar mechanisms, can lead to increased sedation or other side effects",
+    "When considering concurrent administration with other antiemetics, it is crucial to evaluate the patient's overall medication regimen and health condition, and it is advisable to consult a healthcare professional to avoid adverse effects",
+    "For example, serotonin antagonists like ondansetron and granisetron are commonly used for chemotherapy-induced nausea and vomiting (CINV) and postoperative nausea and vomiting (PONV)",
+    "These medications have different mechanisms of action compared to antihistamines and can be combined under medical supervision",
+    "However, combining multiple medications that affect the central nervous system can increase the risk of side effects like drowsiness, dry mouth, and confusion",
+    "Thus, careful consideration and possible dose adjustments may be needed"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Concurrent administration of Dramamine with other antiemetic medications can be considered, but caution is necessary due to potential interactions and overlapping side effects.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Dramamine is an antihistamine used to prevent and treat nausea, vomiting, and dizziness caused by motion sickness.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Combining Dramamine with other antiemetics, especially those with sedative effects or similar mechanisms, can lead to increased sedation or other side effects.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "When considering concurrent administration with other antiemetics, it is crucial to evaluate the patient's overall medication regimen and health condition, and it is advisable to consult a healthcare professional to avoid adverse effects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Serotonin antagonists like ondansetron and granisetron are commonly used for chemotherapy‑induced nausea and vomiting (CINV) and postoperative nausea and vomiting (PONV).",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "These medications have different mechanisms of action compared to antihistamines and can be combined under medical supervision.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Combining multiple medications that affect the central nervous system can increase the risk of side effects like drowsiness.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Combining multiple medications that affect the central nervous system can increase the risk of side effects like dry mouth.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Combining multiple medications that affect the central nervous system can increase the risk of side effects like confusion.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Careful consideration and possible dose adjustments may be needed.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Dramamine is an antihistamine used to prevent and treat nausea, vomiting, and dizziness caused by motion sickness.",
+      "pattern": "D",
+      "notes": "Standalone fact about the drug."
+    },
+    {
+      "source_claims": [
+        1,
+        3,
+        4,
+        10
+      ],
+      "output": "Concurrent administration of Dramamine with other antiemetic medications can be considered, but caution is necessary due to potential interactions and overlapping side effects; combining Dramamine with other antiemetics, especially those with sedative effects or similar mechanisms, can lead to increased sedation or other side effects; when considering concurrent administration, it is crucial to evaluate the patient's overall medication regimen and health condition, and to consult a healthcare professional to avoid adverse effects; careful consideration and possible dose adjustments may be needed.",
+      "pattern": "C",
+      "notes": "Recommendation along with supporting causal risk premises."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Serotonin antagonists like ondansetron and granisetron are commonly used for chemotherapy‑induced nausea and vomiting (CINV) and postoperative nausea and vomiting (PONV).",
+      "pattern": "D",
+      "notes": "Standalone factual statement about drug use."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "These medications have different mechanisms of action compared to antihistamines and can be combined under medical supervision.",
+      "pattern": "C",
+      "notes": "Recommendation with supporting premise."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "Combining multiple medications that affect the central nervous system can increase the risk of side effects such as drowsiness, dry mouth, and confusion.",
+      "pattern": "A",
+      "notes": "Enumeration of side effects for the same subject."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "entry_id": 20,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "What is the most safe amount of Advil to take at one time",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1901,
+    "output_tokens": 460,
+    "cached_input_tokens": 0,
+    "cost": 0.0003373
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1901,
+      "output_tokens": 460,
+      "cached_input_tokens": 0,
+      "cost": 0.0003373
+    }
+  ],
+  "shared_context": {
+    "topic": "safe amount of Advil to take at one time",
+    "drug_a": "Advil (ibuprofen)"
+  },
+  "sentences": [
+    "The recommended maximum daily dose of ibuprofen (Advil) is 400-800 mg every 4-6 hours as needed, not to exceed 2400 mg in 24 hours (1)",
+    "However, the safe amount of Advil to take at one time varies depending on individual factors, such as age, weight, and medical conditions",
+    "For healthy adults, the recommended maximum dose of ibuprofen is 400 mg every 6 hours as needed, not to exceed 1200 mg in 24 hours (2)",
+    "However, some studies suggest that taking more than 200 mg of ibuprofen at one time may increase the risk of gastrointestinal side effects (3)",
+    "A study published in the Journal of the American Pharmacists Association found that taking 600 mg of ibuprofen at one time was associated with a higher risk of gastrointestinal side effects compared to taking 200 mg at one time (4)",
+    "Another study published in the International Journal of Clinical Pharmacology and Therapeutics found that taking 400 mg of ibuprofen at one time resulted in faster absorption and higher peak plasma concentrations compared to taking 200 mg at one time (5)",
+    "In general, it is recommended to start with the lowest effective dose and gradually increase as needed",
+    "It is also important to follow the recommended dosing schedule and not exceed the maximum daily dose"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The recommended maximum daily dose of ibuprofen (Advil) is 400-800 mg every 4-6 hours as needed, not to exceed 2400 mg in 24 hours.",
+      "pattern": "D",
+      "notes": "Standalone fact about maximum daily dose."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The safe amount of Advil to take at one time varies depending on individual factors, such as age, weight, and medical conditions.",
+      "pattern": "D",
+      "notes": "Standalone fact about variability in safe dosing."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "For healthy adults, the recommended maximum dose of ibuprofen is 400 mg every 6 hours as needed, not to exceed 1200 mg in 24 hours.",
+      "pattern": "D",
+      "notes": "Standalone fact about recommended dose for healthy adults."
+    },
+    {
+      "source_sentences": [
+        3,
+        4,
+        5
+      ],
+      "output": "Taking more than 200 mg of ibuprofen at one time may increase the risk of gastrointestinal side effects, as studies have shown that 600 mg at one time has a higher risk compared to 200 mg, and 400 mg results in faster absorption and higher peak plasma concentrations.",
+      "pattern": "B",
+      "notes": "Causal chain of studies about dose-related side effects; merged for verifiability."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "It is recommended to start with the lowest effective dose of Advil and gradually increase as needed, following the recommended dosing schedule and not exceeding the maximum daily dose.",
+      "pattern": "C",
+      "notes": "Conclusion (general recommendation) + supporting premise (importance of following dosing schedule); merged for coherence."
+    }
+  ]
+}

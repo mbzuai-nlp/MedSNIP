@@ -1,0 +1,104 @@
+{
+  "entry_id": 238,
+  "batch_id": 24,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "If this is just muscle strain, how many days should I expect the pain to go away?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2589,
+    "output_tokens": 374,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1157,
+      "output_tokens": 208,
+      "cached_input_tokens": 0,
+      "cost": 0.0049725
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1432,
+      "output_tokens": 166,
+      "cached_input_tokens": 0,
+      "cost": 0.00524
+    }
+  ],
+  "shared_context": {
+    "condition": "muscle strain",
+    "symptom": "pain"
+  },
+  "sentences": [
+    "For a typical muscle strain, the pain usually begins to improve within a few days to a week",
+    "Most minor muscle strains heal within 2 to 3 weeks",
+    "However, the exact duration can vary depending on the severity of the strain, the specific muscle involved, and the individual's overall health and activity level"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "For a typical muscle strain, the pain usually begins to improve within a few days to a week.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Most minor muscle strains heal within 2 to 3 weeks.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The exact duration of healing can vary depending on the severity of the strain.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The exact duration of healing can vary depending on the specific muscle involved.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The exact duration of healing can vary depending on the individual's overall health and activity level.",
+      "source_sentences": [
+        2
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "For a typical muscle strain, the pain usually begins to improve within a few days to a week. Most minor muscle strains heal within 2 to 3 weeks.",
+      "pattern": "C",
+      "notes": "Timeframe for improvement and healing are related; conclusion on healing time is supported by timeframe."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "The exact duration of healing can vary depending on the severity of the strain, the specific muscle involved, and the individual's overall health and activity level.",
+      "pattern": "A",
+      "notes": "Enumeration of factors affecting healing duration."
+    }
+  ]
+}

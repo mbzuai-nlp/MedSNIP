@@ -1,0 +1,131 @@
+{
+  "entry_id": 245,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is there anti nausea medication that can be taken to allow fluids to stay down?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2047,
+    "output_tokens": 725,
+    "cached_input_tokens": 0,
+    "cost": 6.994e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2047,
+      "output_tokens": 725,
+      "cached_input_tokens": 0,
+      "cost": 6.994e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "anti-nausea medication to prevent nausea and vomiting",
+    "condition": "postoperative nausea and vomiting (PONV)"
+  },
+  "sentences": [
+    "Yes, there are several anti-nausea medications that can help prevent nausea and vomiting, making it easier for fluids to stay down",
+    "According to various studies, the following medications have been shown to be effective in reducing the incidence of postoperative nausea and vomiting (PONV)",
+    "Ondansetron: A serotonin 5-HT3 receptor antagonist that has been shown to be effective in reducing PONV",
+    "Metoclopramide: A dopamine antagonist that has antiemetic and prokinetic properties, which can help prevent nausea and vomiting",
+    "Domperidone: A dopamine antagonist that has antiemetic and prokinetic properties, which can help prevent nausea and vomiting",
+    "Prochlorperazine: A phenothiazine derivative with antiemetic properties, which can help prevent nausea and vomiting",
+    "Promethazine: A phenothiazine derivative with antiemetic properties, which can help prevent nausea and vomiting",
+    "It's essential to note that these medications should be used under the guidance of a healthcare professional, and their effectiveness may vary depending on the individual patient and the specific situation",
+    "Additionally, the choice of medication should be based on the patient's medical history, current medications, and any allergies or sensitivities they may have",
+    "It's also worth mentioning that preoperative fasting guidelines have been liberalized in some studies, allowing patients to drink clear fluids up to 2 hours before surgery without increasing the risk of complications",
+    "This can help patients stay hydrated and reduce the risk of dehydration and other complications associated with prolonged fasting",
+    "In terms of oral fluid restriction, studies have shown that restricting oral fluids postoperatively does not decrease the incidence of vomiting but can help identify patients who will vomit soon after surgery",
+    "In summary, anti-nausea medications can be effective in reducing the incidence of PONV and making it easier for fluids to stay down",
+    "However, the choice of medication should be based on individual patient factors, and preoperative and postoperative fluid management should be guided by evidence-based guidelines"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Yes, there are several anti-nausea medications that can help prevent nausea and vomiting, making it easier for fluids to stay down.",
+      "pattern": "D",
+      "notes": "Standalone fact about anti-nausea medications."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The following medications have been shown to be effective in reducing the incidence of postoperative nausea and vomiting (PONV): Ondansetron, Metoclopramide, Domperidone, Prochlorperazine, and Promethazine.",
+      "pattern": "A",
+      "notes": "Enumeration of medications effective for PONV; one subject (medications)."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "Ondansetron, Metoclopramide, Domperidone, Prochlorperazine, and Promethazine are effective anti-nausea medications that can help reduce the incidence of PONV.",
+      "pattern": "B",
+      "notes": "Causal chain; medications are connected by their effectiveness in reducing PONV."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "These medications should be used under the guidance of a healthcare professional, and their effectiveness may vary depending on the individual patient and the specific situation.",
+      "pattern": "D",
+      "notes": "Standalone fact about medication use and effectiveness."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "The choice of medication should be based on the patient's medical history, current medications, and any allergies or sensitivities they may have.",
+      "pattern": "D",
+      "notes": "Standalone fact about choosing medication based on patient factors."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "Preoperative fasting guidelines have been liberalized in some studies, allowing patients to drink clear fluids up to 2 hours before surgery without increasing the risk of complications.",
+      "pattern": "C",
+      "notes": "Conditional rule + instruction; merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Restricting oral fluids postoperatively does not decrease the incidence of vomiting but can help identify patients who will vomit soon after surgery.",
+      "pattern": "D",
+      "notes": "Standalone fact about oral fluid restriction."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Anti-nausea medications can be effective in reducing the incidence of PONV and making it easier for fluids to stay down.",
+      "pattern": "D",
+      "notes": "Standalone fact about anti-nausea medication effectiveness."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "The choice of medication should be based on individual patient factors, and preoperative and postoperative fluid management should be guided by evidence-based guidelines.",
+      "pattern": "D",
+      "notes": "Standalone fact about choosing medication and fluid management."
+    }
+  ]
+}

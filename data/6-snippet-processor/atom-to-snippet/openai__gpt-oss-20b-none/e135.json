@@ -1,0 +1,160 @@
+{
+  "entry_id": 135,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2947,
+    "output_tokens": 3189,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1338,
+      "output_tokens": 1333,
+      "cached_input_tokens": 0,
+      "cost": 0.00022676
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1609,
+      "output_tokens": 1856,
+      "cached_input_tokens": 0,
+      "cost": 0.00030811
+    }
+  ],
+  "shared_context": {
+    "topic": "losartan dosing schedule",
+    "drug_a": "losartan",
+    "condition": "hypertension"
+  },
+  "sentences": [
+    "It is generally recommended to take losartan as prescribed by your healthcare provider",
+    "Losartan is typically administered once daily, but the specific regimen may vary depending on your condition and response to treatment",
+    "Some studies suggest that single daily doses of losartan may not provide 24-hour blood pressure control in all patients, and in such cases, splitting the dose to be taken twice daily might be considered to maintain more consistent blood pressure levels throughout the day",
+    "However, this adjustment should only be made under the guidance of your healthcare provider",
+    "One study comparing the efficacy of a single-dose formulation of losartan with an extended-release formulation found that the extended-release formulation provided better 24-hour blood pressure control, suggesting that splitting doses may not always be necessary if an appropriate formulation is used",
+    "Therefore, it is important to follow your doctor's recommendations regarding dosage and timing of losartan administration to ensure optimal control of your blood pressure and to minimize the risk of adverse effects"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The recommended approach for taking losartan is to follow the prescription from your healthcare provider.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Losartan is typically administered once daily, but the specific regimen may vary depending on your condition and response to treatment.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Single daily doses of losartan may not provide 24‑hour blood pressure control in all patients.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "In cases where single daily doses do not provide adequate control, splitting the dose to be taken twice daily may be considered to maintain more consistent blood pressure levels.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Any adjustment to split the dose should only be made under the guidance of your healthcare provider.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A study comparing a single‑dose formulation of losartan with an extended‑release formulation found that the extended‑release formulation provided better 24‑hour blood pressure control.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The same study suggested that splitting doses may not always be necessary if an appropriate extended‑release formulation is used.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Following your doctor's recommendations regarding dosage and timing of losartan administration ensures optimal control of blood pressure and minimizes the risk of adverse effects.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The recommended approach for taking losartan is to follow the prescription from your healthcare provider.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Losartan is typically administered once daily, but the specific regimen may vary depending on your condition and response to treatment.",
+      "pattern": "D",
+      "notes": "Standalone fact about typical dosing."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "If single daily doses of losartan may not provide 24‑hour blood pressure control, the dose can be split to be taken twice daily to maintain more consistent blood pressure levels.",
+      "pattern": "B",
+      "notes": "Conditional chain linking single-dose limitation to split-dose recommendation."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Any adjustment to split the dose should only be made under the guidance of your healthcare provider.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "A study comparing a single‑dose formulation of losartan with an extended‑release formulation found that the extended‑release formulation provided better 24‑hour blood pressure control, and that splitting doses may not always be necessary if an appropriate extended‑release formulation is used.",
+      "pattern": "A",
+      "notes": "Enumeration of study findings regarding extended‑release versus splitting."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Following your doctor's recommendations regarding dosage and timing of losartan administration ensures optimal control of blood pressure and minimizes the risk of adverse effects.",
+      "pattern": "D",
+      "notes": "Standalone recommendation with outcome."
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "entry_id": 93,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "What is chlorhexidine?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3011,
+    "output_tokens": 3766,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1329,
+      "output_tokens": 1486,
+      "cached_input_tokens": 0,
+      "cost": 0.00024791
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1682,
+      "output_tokens": 2280,
+      "cached_input_tokens": 0,
+      "cost": 0.00036966
+    }
+  ],
+  "shared_context": {
+    "topic": "chlorhexidine",
+    "drug_a": "chlorhexidine"
+  },
+  "sentences": [
+    "Chlorhexidine is a disinfectant and antiseptic that is used for skin disinfection before surgery, to sterilize surgical instruments, and for various other medical and dental applications",
+    "It is effective against a range of microorganisms, but does not inactivate spores",
+    "Chlorhexidine is available in different formulations, including liquid and powder forms, and can be used to disinfect both the skin of patients and the hands of healthcare providers",
+    "Chlorhexidine has been used since the 1950s and has a broad spectrum of antiseptic activity",
+    "It is effective in preventing healthcare-associated infections (HAIs) and has been used in various applications, including skin cleansing, skin decolonization, preoperative showering and bathing, vascular catheter site preparation, and oral decontamination",
+    "Chlorhexidine has been reported to have a low risk of causing side effects such as skin irritation, teeth discoloration, and allergic reactions, similar to other topical antiseptics"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlorhexidine is a disinfectant.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Chlorhexidine is an antiseptic.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Chlorhexidine is used for skin disinfection before surgery.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Chlorhexidine is used to sterilize surgical instruments.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Chlorhexidine is used for various other medical and dental applications.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Chlorhexidine is effective against a range of microorganisms.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Chlorhexidine does not inactivate spores.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Chlorhexidine is available in liquid formulations.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Chlorhexidine is available in powder formulations.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Chlorhexidine can be used to disinfect the skin of patients.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Chlorhexidine can be used to disinfect the hands of healthcare providers.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Chlorhexidine has been used since the 1950s.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Chlorhexidine has a broad spectrum of antiseptic activity.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Chlorhexidine is effective in preventing healthcare‑associated infections (HAIs).",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Chlorhexidine has been used for skin cleansing.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Chlorhexidine has been used for skin decolonization.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Chlorhexidine has been used for preoperative showering and bathing.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Chlorhexidine has been used for vascular catheter site preparation.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Chlorhexidine has been used for oral decontamination.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Chlorhexidine has a low risk of causing skin irritation.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 21,
+      "text": "Chlorhexidine has a low risk of causing teeth discoloration.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 22,
+      "text": "Chlorhexidine has a low risk of causing allergic reactions.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        6,
+        13
+      ],
+      "output": "Chlorhexidine is a disinfectant and an antiseptic that is effective against a range of microorganisms and has broad‑spectrum antiseptic activity.",
+      "pattern": "A",
+      "notes": "Enumeration of core properties."
+    },
+    {
+      "source_claims": [
+        3,
+        10,
+        15,
+        16,
+        17,
+        11,
+        14
+      ],
+      "output": "Chlorhexidine, used for skin disinfection before surgery, skin cleansing, skin decolonization, preoperative showering, and hand disinfection, is effective in preventing healthcare‑associated infections.",
+      "pattern": "C",
+      "notes": "Conclusion (effectiveness) supported by usage premises."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Chlorhexidine is used to sterilize surgical instruments.",
+      "pattern": "D",
+      "notes": "Standalone fact about a specific use."
+    },
+    {
+      "source_claims": [
+        5,
+        18,
+        19
+      ],
+      "output": "Chlorhexidine is used for various other medical and dental applications, including vascular catheter site preparation and oral decontamination.",
+      "pattern": "A",
+      "notes": "Enumeration of additional applications."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Chlorhexidine is available in both liquid and powder formulations.",
+      "pattern": "A",
+      "notes": "Enumeration of formulations."
+    },
+    {
+      "source_claims": [
+        20,
+        21,
+        22
+      ],
+      "output": "Chlorhexidine has a low risk of causing skin irritation, teeth discoloration, and allergic reactions.",
+      "pattern": "A",
+      "notes": "Enumeration of safety profile factors."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Chlorhexidine has been used since the 1950s.",
+      "pattern": "D",
+      "notes": "Standalone historical fact."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Chlorhexidine does not inactivate spores.",
+      "pattern": "D",
+      "notes": "Standalone efficacy limitation."
+    }
+  ]
+}

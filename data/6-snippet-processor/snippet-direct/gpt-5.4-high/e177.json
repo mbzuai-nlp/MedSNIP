@@ -1,0 +1,159 @@
+{
+  "entry_id": 177,
+  "batch_id": 18,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to the emergency department with fatigue and dark urine over the past day. He was recently diagnosed with cellulitis of his left leg, for which he was prescribed trimethoprim-sulfamethoxazole. He denies having nausea, vomiting, or diarrhea. He has no significant medical history and does not currently take any medications. His temperature is 98.6°F (37°C), blood pressure is 115/72 mmHg, pulse is 98/min, and respirations are 14/min. Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg. Laboratory workup is performed, and the results are shown below: Serum: Hemoglobin: 7.2 g/dL Total bilirubin: 2.1 mg/dL Direct bilirubin: 0.8 mg/dL Lactate dehydrogenase: 470 U/L Glucose-6-phosphate dehydrogenase: 7 U/gHb (normal: 6-20 U/gHb) Which of the following would most likely be seen on a peripheral blood smear in this patient? (A) Acanthocytes (B) Codocytes (C) Degmacytes (D) Schistocytes (E) Spherocytes",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2760,
+    "output_tokens": 3832,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2760,
+      "output_tokens": 3832,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "26",
+    "sex": "male",
+    "chief_complaint": "fatigue and dark urine for 1 day",
+    "medical_history": "recent left leg cellulitis; no significant past medical history",
+    "medications": "trimethoprim-sulfamethoxazole for cellulitis; no other current medications",
+    "vitals": "T 98.6 F, BP 115/72 mmHg, pulse 98/min, respirations 14/min",
+    "exam_findings": "conjunctival icterus, bilateral flank tenderness, erythema of the left leg",
+    "treatment_history": "recently prescribed trimethoprim-sulfamethoxazole",
+    "correct_answer": "C) Degmacytes"
+  },
+  "sentences": [
+    "To determine the correct answer for the multiple-choice question, we need to analyze the clinical presentation, laboratory results, and pathophysiology of the patient's condition",
+    "Fatigue and dark urine: These symptoms suggest hemolysis (the breakdown of red blood cells)",
+    "Recent trimethoprim-sulfamethoxazole prescription: This antibiotic can trigger hemolysis in patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency",
+    "Physical Exam: Conjunctival icterus (yellowing of the eyes due to elevated bilirubin from hemolysis) and bilateral flank tenderness (possibly indicating hemoglobinuria or renal involvement from hemolysis)",
+    "Laboratory Results",
+    "Hemoglobin: 7.2 g/dL: Low, indicating anemia from hemolysis",
+    "Total bilirubin: 2.1 mg/dL (with indirect bilirubin predominance): Elevated, consistent with hemolysis",
+    "Lactate dehydrogenase (LDH): 470 U/L: Elevated, a marker of cell turnover and hemolysis",
+    "G6PD: 7 U/gHb: Within the normal range, but G6PD levels can be normal during an acute hemolytic episode due to the destruction of older, more enzyme-deficient cells, leaving younger cells with relatively higher G6PD activity",
+    "To determine the specific type of cells seen on a peripheral blood smear, we must understand the typical findings associated with different conditions",
+    "Acanthocytes: Associated with liver disease or abetalipoproteinemia",
+    "Codocytes (target cells): Seen in thalassemias, liver disease, and hemoglobinopathies",
+    "Degmacytes (bite cells): Formed when macrophages \"bite\" out a portion of the red cell containing denatured hemoglobin (Heinz bodies), commonly seen in G6PD deficiency",
+    "Schistocytes: Fragmented cells seen in microangiopathic hemolytic anemias like DIC, TTP, or HUS",
+    "Spherocytes: Seen in hereditary spherocytosis and autoimmune hemolytic anemia",
+    "Given the patient's clinical presentation and the likely diagnosis of G6PD deficiency-induced hemolysis, the peripheral blood smear will most likely show degmacytes (bite cells)",
+    "This results from the oxidative damage caused by the drug, leading to the removal of denatured hemoglobin by the spleen",
+    "(C) Degmacytes"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Evaluation of this 26-year-old man with fatigue, dark urine, anemia, and recent trimethoprim-sulfamethoxazole exposure should integrate the clinical presentation, laboratory results, and underlying pathophysiology.",
+      "pattern": "E",
+      "notes": "Introductory framing sentence kept separate; no clear A/B/C merge cue."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "In this 26-year-old man, fatigue and dark urine suggest hemolysis.",
+      "pattern": "D",
+      "notes": "Standalone clinical interpretation."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "In this 26-year-old man recently prescribed trimethoprim-sulfamethoxazole for cellulitis, trimethoprim-sulfamethoxazole can trigger hemolysis in patients with glucose-6-phosphate dehydrogenase deficiency.",
+      "pattern": "D",
+      "notes": "Standalone drug-associated fact."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "In this 26-year-old man, conjunctival icterus supports bilirubin elevation from hemolysis, and bilateral flank tenderness may indicate hemoglobinuria or renal involvement from hemolysis.",
+      "pattern": "D",
+      "notes": "Self-contained interpretation of examination findings."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "The laboratory results in this 26-year-old man support hemolysis: hemoglobin 7.2 g/dL indicates anemia, total bilirubin 2.1 mg/dL with indirect predominance is elevated, lactate dehydrogenase 470 U/L is elevated, and a glucose-6-phosphate dehydrogenase level of 7 U/gHb can be falsely normal during an acute hemolytic episode because older, more enzyme-deficient red cells are destroyed first, leaving younger cells with relatively higher enzyme activity.",
+      "pattern": "A",
+      "notes": "Enumeration of related laboratory findings for the same patient."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "To identify the expected peripheral smear finding in this 26-year-old man, the answer choices should be compared with the smear findings typical of different hematologic conditions.",
+      "pattern": "E",
+      "notes": "Bridge sentence introducing a new option-by-option review."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "For this 26-year-old man, acanthocytes are classically associated with liver disease or abetalipoproteinemia.",
+      "pattern": "F",
+      "notes": "Standalone fact about one answer choice; same overall topic but distinct checkable claim."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "For this 26-year-old man, codocytes (target cells) are classically seen in thalassemias, liver disease, and hemoglobinopathies.",
+      "pattern": "F",
+      "notes": "Standalone fact about a different answer choice."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "For this 26-year-old man, degmacytes (bite cells) form when splenic macrophages remove the portion of a red blood cell containing denatured hemoglobin (Heinz bodies), and degmacytes are commonly seen in glucose-6-phosphate dehydrogenase deficiency.",
+      "pattern": "D",
+      "notes": "Self-contained morphology and disease association."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "For this 26-year-old man, schistocytes are fragmented red cells seen in microangiopathic hemolytic anemias such as disseminated intravascular coagulation, thrombotic thrombocytopenic purpura, and hemolytic uremic syndrome.",
+      "pattern": "F",
+      "notes": "Standalone fact about a different answer choice."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "For this 26-year-old man, spherocytes are seen in hereditary spherocytosis and autoimmune hemolytic anemia.",
+      "pattern": "F",
+      "notes": "Standalone fact about a different answer choice."
+    },
+    {
+      "source_sentences": [
+        15,
+        16,
+        17
+      ],
+      "output": "In this 26-year-old man with likely glucose-6-phosphate dehydrogenase deficiency-related hemolysis after trimethoprim-sulfamethoxazole exposure, the peripheral smear most likely shows degmacytes (bite cells) because oxidative drug-induced damage leads to denatured hemoglobin being removed by the spleen; the correct answer is choice C.",
+      "pattern": "C",
+      "notes": "Conclusion merged with its supporting mechanism and final answer label."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "entry_id": 209,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1703,
+    "output_tokens": 241,
+    "cached_input_tokens": 0,
+    "cost": 4.37e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1703,
+      "output_tokens": 241,
+      "cached_input_tokens": 0,
+      "cost": 4.37e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "corneal abrasion symptoms",
+    "condition": "corneal abrasion"
+  },
+  "sentences": [
+    "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, foreign body sensation, and a gritty feeling, but they do not usually result in discharge from the eye",
+    "The primary symptoms are related to the disruption of the corneal epithelium, leading to a reflex production of tears rather than discharge",
+    "Discharge could indicate a secondary infection or a different underlying condition and should be evaluated further"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, foreign body sensation, and a gritty feeling, but they do not usually result in discharge from the eye.",
+      "pattern": "D",
+      "notes": "Standalone fact about typical symptoms."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The primary symptoms of a corneal abrasion are related to the disruption of the corneal epithelium, leading to a reflex production of tears rather than discharge.",
+      "pattern": "C",
+      "notes": "Conclusion about symptoms + supporting premise."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Discharge could indicate a secondary infection or a different underlying condition and should be evaluated further.",
+      "pattern": "D",
+      "notes": "Standalone warning about potential complications."
+    }
+  ]
+}

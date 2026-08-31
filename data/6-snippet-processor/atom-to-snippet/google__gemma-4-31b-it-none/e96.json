@@ -1,0 +1,173 @@
+{
+  "entry_id": 96,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "What is chlorhexidine?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2799,
+    "output_tokens": 585,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1252,
+      "output_tokens": 341,
+      "cached_input_tokens": 0,
+      "cost": 0.00029234
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1547,
+      "output_tokens": 244,
+      "cached_input_tokens": 0,
+      "cost": 0.00029383
+    }
+  ],
+  "shared_context": {
+    "topic": "chlorhexidine"
+  },
+  "sentences": [
+    "Chlorhexidine is an antiseptic and disinfectant used for skin disinfection before surgery and to sterilize surgical instruments",
+    "It is effective against a wide range of bacteria, viruses, and fungi",
+    "Chlorhexidine is available in various formulations, including solutions, gels, and impregnated dressings",
+    "It is commonly used in healthcare settings for hand hygiene and to prevent infections in central venous catheters"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlorhexidine is an antiseptic and disinfectant.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Chlorhexidine is used for skin disinfection before surgery.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Chlorhexidine is used to sterilize surgical instruments.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Chlorhexidine is effective against a wide range of bacteria.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Chlorhexidine is effective against a wide range of viruses.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Chlorhexidine is effective against a wide range of fungi.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Chlorhexidine is available in solutions.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Chlorhexidine is available in gels.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Chlorhexidine is available in impregnated dressings.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Chlorhexidine is commonly used in healthcare settings for hand hygiene.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Chlorhexidine is commonly used in healthcare settings to prevent infections in central venous catheters.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Chlorhexidine is an antiseptic and disinfectant.",
+      "pattern": "D",
+      "notes": "Standalone definition."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "Chlorhexidine is used for skin disinfection before surgery and to sterilize surgical instruments.",
+      "pattern": "A",
+      "notes": "Enumeration of surgical use cases."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6
+      ],
+      "output": "Chlorhexidine is effective against a wide range of bacteria, viruses, and fungi.",
+      "pattern": "A",
+      "notes": "Enumeration of antimicrobial spectrum."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "Chlorhexidine is available in solutions, gels, and impregnated dressings.",
+      "pattern": "A",
+      "notes": "Enumeration of available forms."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "In healthcare settings, chlorhexidine is commonly used for hand hygiene and to prevent infections in central venous catheters.",
+      "pattern": "A",
+      "notes": "Enumeration of healthcare applications."
+    }
+  ]
+}

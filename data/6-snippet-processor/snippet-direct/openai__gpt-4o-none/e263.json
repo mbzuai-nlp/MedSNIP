@@ -1,0 +1,134 @@
+{
+  "entry_id": 263,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 37-year-old woman presents to the emergency department in cardiac arrest. She was found to have altered mental status at home, and during transport to the hospital, she became pulseless. Cardiopulmonary resuscitation is ongoing and 2 intravenous lines are placed. The patient is obese, and her only medication is an oral contraceptive pill. She recently underwent Achilles tendon repair. She otherwise is known to smoke cigarettes on occasion. Physical exam is notable for a critically ill patient with chest compressions ongoing. The monitor shows pulseless electrical activity. Her right lower extremity is in a post-operative splint. The patient regains her pulse after several rounds of CPR and epinephrine. A bedside echocardiograph is notable for a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle. Which of the following is the most likely diagnosis? (A) Cardiogenic shock (B) Hemorrhagic shock (C) Neurogenic shock (D) Obstructive shock (E) Septic shock",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2650,
+    "output_tokens": 794,
+    "cached_input_tokens": 2432,
+    "cost": 0.011525
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2650,
+      "output_tokens": 794,
+      "cached_input_tokens": 2432,
+      "cost": 0.011525
+    }
+  ],
+  "shared_context": {
+    "age": "37",
+    "sex": "female",
+    "chief_complaint": "cardiac arrest with pulseless electrical activity",
+    "medical_history": "obesity, occasional cigarette use, recent Achilles tendon repair",
+    "medications": "oral contraceptive pill",
+    "exam_findings": "dilated and hypokinetic right ventricle, septal bowing into hyperkinetic left ventricle",
+    "treatment_history": "CPR and epinephrine",
+    "correct_answer": "Obstructive shock (D)"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for the patient, let's break down the key information provided",
+    "The patient presents with altered mental status, becomes pulseless, and experiences cardiopulmonary resuscitation",
+    "The patient is obese and has a history of smoking but no other significant medical history",
+    "The patient had an Achilles tendon repair surgery recently",
+    "The physical exam shows a critically ill patient with chest compressions, and the monitor shows pulseless electrical activity",
+    "The patient regains her pulse after several rounds of CPR and epinephrine",
+    "The bedside echocardiogram shows a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle",
+    "Considering these points, the key findings are the patient's initial presentation with cardiac arrest, the regaining of pulse after CPR and epinephrine, and the echocardiographic findings of a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle",
+    "Cardiogenic shock often presents with depressed left ventricular function, but the given echocardiographic findings of a dilated and hypokinetic right ventricle are unusual",
+    "Hemorrhagic shock can be considered given the patient's recent surgery, but there is no clear indication of significant blood loss",
+    "Neurogenic shock is less likely as there is no mention of a spinal cord injury or other neurological cause",
+    "Septic shock can be ruled out because there are no signs of infection",
+    "Obstructive shock, caused by a significant obstruction of blood flow, could explain the patient's initial presentation and the echocardiographic findings, which may indicate right ventricular failure secondary to left ventricular volume overload due to an obstruction",
+    "The right lower extremity being in a post-operative splint may be the key to this diagnosis, as it may indicate a possible inferior vena cava obstruction, which could lead to the described echocardiographic findings",
+    "Based on these points, the most likely diagnosis is obstructive shock, likely due to an inferior vena cava obstruction secondary to the post-operative splint causing a right ventricular outflow obstruction",
+    "Final Answer: (D)"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "The 37-year-old woman presented with altered mental status and became pulseless, requiring cardiopulmonary resuscitation.",
+      "pattern": "C",
+      "notes": "Introduction and initial presentation are necessary together to understand the case setup."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "This 37-year-old obese female smokes occasionally and recently had Achilles tendon repair surgery. Her only medication is an oral contraceptive pill.",
+      "pattern": "A",
+      "notes": "Listing of patient's relevant medical history and demographics."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "During the physical exam, the patient was critically ill with ongoing chest compressions, and the monitor displayed pulseless electrical activity. She regained her pulse after several rounds of CPR and epinephrine.",
+      "pattern": "B",
+      "notes": "Causal sequence of events from examination findings to recovery of pulse."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Bedside echocardiography showed a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle.",
+      "pattern": "D",
+      "notes": "Standalone imaging findings."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Key findings for this 37-year-old woman include her initial cardiac arrest presentation, pulse regaining post-CPR and echocardiography findings of a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle.",
+      "pattern": "C",
+      "notes": "Summary of significant findings; context required for diagnosis reasoning."
+    },
+    {
+      "source_sentences": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "Diagnoses like cardiogenic shock, hemorrhagic shock, neurogenic shock, and septic shock are less likely due to unaligned echocardiographic findings or lack of supporting signs such as left ventricular depression, significant blood loss, spinal cord injury, or infection.",
+      "pattern": "A",
+      "notes": "Enumeration of reasons for ruling out alternative diagnoses."
+    },
+    {
+      "source_sentences": [
+        12,
+        13
+      ],
+      "output": "Obstructive shock could explain the 37-year-old woman's initial presentation and echocardiographic findings, possibly due to an inferior vena cava obstruction related to the post-operative splint causing right ventricular failure.",
+      "pattern": "B",
+      "notes": "Causal explanation for most likely diagnosis based on imaging findings and postoperative condition."
+    },
+    {
+      "source_sentences": [
+        14,
+        15
+      ],
+      "output": "The most likely diagnosis for this 37-year-old woman is obstructive shock, likely secondary to an inferior vena cava obstruction due to the post-operative splint.",
+      "pattern": "C",
+      "notes": "Conclusion requires previous context to support the diagnosis."
+    }
+  ]
+}

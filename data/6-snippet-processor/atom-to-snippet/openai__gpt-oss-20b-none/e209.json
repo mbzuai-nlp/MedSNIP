@@ -1,0 +1,144 @@
+{
+  "entry_id": 209,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2757,
+    "output_tokens": 2697,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1223,
+      "output_tokens": 1184,
+      "cached_input_tokens": 0,
+      "cost": 0.00020245
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1534,
+      "output_tokens": 1513,
+      "cached_input_tokens": 0,
+      "cost": 0.00025784
+    }
+  ],
+  "shared_context": {
+    "topic": "discharge from eye due to corneal abrasion",
+    "condition": "corneal abrasion",
+    "symptom": "discharge"
+  },
+  "sentences": [
+    "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, foreign body sensation, and a gritty feeling, but they do not usually result in discharge from the eye",
+    "The primary symptoms are related to the disruption of the corneal epithelium, leading to a reflex production of tears rather than discharge",
+    "Discharge could indicate a secondary infection or a different underlying condition and should be evaluated further"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Corneal abrasions typically cause pain.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Corneal abrasions typically cause tearing.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Corneal abrasions typically cause photophobia.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Corneal abrasions typically cause foreign body sensation.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Corneal abrasions typically cause a gritty feeling.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Corneal abrasions do not usually result in discharge from the eye.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The primary symptoms of a corneal abrasion are related to the disruption of the corneal epithelium.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Corneal abrasion leads to reflex production of tears rather than discharge.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Discharge could indicate a secondary infection or a different underlying condition and should be evaluated further.",
+      "source_sentences": [
+        2
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "Typical symptoms of a corneal abrasion include pain, tearing, photophobia, foreign body sensation, and gritty feeling.",
+      "pattern": "A",
+      "notes": "Enumeration of consistent symptoms of the same condition."
+    },
+    {
+      "source_claims": [
+        6,
+        8,
+        9
+      ],
+      "output": "Corneal abrasions do not usually result in discharge from the eye; the injury leads to reflex production of tears rather than discharge, and if discharge occurs it could indicate a secondary infection or a different underlying condition that should be evaluated further.",
+      "pattern": "B",
+      "notes": "Causal chain linking the absence of discharge to tear production and providing a clinical recommendation."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The primary symptoms of a corneal abrasion are related to the disruption of the corneal epithelium.",
+      "pattern": "D",
+      "notes": "Standalone explanatory statement about symptom origin."
+    }
+  ]
+}

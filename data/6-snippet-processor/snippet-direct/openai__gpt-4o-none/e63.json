@@ -1,0 +1,102 @@
+{
+  "entry_id": 63,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old male bodybuilder presents to the emergency department with weakness of his right arm. The patient states he has experienced these symptoms for a few weeks; however, today his hand felt so weak he dropped his cup of tea. The patient has a medical history of diabetes. He drinks 2-7 alcoholic drinks per day and has smoked 2 packs of cigarettes per day since he was 25. The patient uses anabolic steroids. He has lost 17 pounds since he last came to the emergency department 1 month ago. His temperature is 99.5°F (37.5°C), blood pressure is 177/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 98% on room air. Physical exam reveals decreased sensation in the right arm and 2/5 strength in the right arm and 5/5 strength in in the left arm. The patient states that he is experiencing a dull aching and burning pain in his right arm during the exam. Symptoms are not changed with changes in head and neck position. Which of the following is the most likely diagnosis? (A) Apical lung tumor (B) Brachial plexopathy (C) Cerebral infarction (D) Scalenus anticus syndrome (E) Subclavian steal syndrome",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2569,
+    "output_tokens": 661,
+    "cached_input_tokens": 1920,
+    "cost": 0.0106325
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2569,
+      "output_tokens": 661,
+      "cached_input_tokens": 1920,
+      "cost": 0.0106325
+    }
+  ],
+  "shared_context": {
+    "age": "55",
+    "sex": "male",
+    "chief_complaint": "right arm weakness over a few weeks; dropped a cup of tea today",
+    "medical_history": "diabetes; bodybuilder using anabolic steroids; 2 packs/day smoking since age 25; 2-7 alcoholic drinks/day; 17 lb weight loss over the last month",
+    "vitals": "BP 177/108, pulse 90, RR 17, O2 98% RA",
+    "exam_findings": "decreased sensation in right arm, 2/5 strength right arm, 5/5 left arm; symptoms unchanged with head/neck position",
+    "correct_answer": "Brachial plexopathy (B)"
+  },
+  "sentences": [
+    "To approach this question, let's break down the key points from the patient's presentation and history",
+    "Symptoms have been progressive over a few weeks: This indicates a subacute presentation, which differentiates it from acute conditions such as infarction",
+    "Decreased sensation in the right arm and 2/5 strength: This suggests a problem with the nervous system, specifically the peripheral nerves or nerve roots",
+    "Decreased strength with preservation of sensation: This is typical of a nerve root lesion, as sensation is often preserved in radiculopathy",
+    "Pain is dull aching and burning, not positional: This type of pain is more commonly associated with nerve root lesions, as it is not exacerbated by certain positions of the head or neck",
+    "History of anabolic steroid use: This is a risk factor for myopathies and neuropathies, including diabetic neuropathy and amyotrophic lateral sclerosis (ALS)",
+    "Smoking history: Smoking increases the risk of various conditions, including peripheral artery disease (PAD), which can cause brachial plexopathy",
+    "Hypertension: While not directly related to the presenting symptoms, hypertension is a risk factor for various conditions, including intracranial aneurysms and stroke",
+    "Considering these points, the most likely diagnosis is brachial plexopathy, likely due to a combination of factors including smoking and substance abuse with anabolic steroids",
+    "The symptoms and physical exam findings are consistent with a nerve root lesion, which is more characteristic of brachial plexopathy than the other options",
+    "Option (B) Brachial plexopathy is the most appropriate answer"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "In a 55-year-old male with right arm weakness over a few weeks, the symptoms' progressive nature indicates a subacute presentation, which differentiates it from acute conditions such as infarction.",
+      "pattern": "A",
+      "notes": "The first sentence sets up the reasoning flow; the second sentence addresses how timing guides differential."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Decreased sensation in the right arm and 2/5 strength in a 55-year-old male suggest a problem with the nervous system, specifically the peripheral nerves or nerve roots, as decreased strength with preservation of sensation is typical of a nerve root lesion.",
+      "pattern": "B",
+      "notes": "These two sentences together clarify signs indicating nerve root involvement."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The dull aching and burning non-positional pain in this 55-year-old male's right arm is more commonly associated with nerve root lesions.",
+      "pattern": "D",
+      "notes": "Standalone interpretation of pain characteristics."
+    },
+    {
+      "source_sentences": [
+        5,
+        6,
+        7
+      ],
+      "output": "In this 55-year-old male, history of anabolic steroid use is a risk factor for myopathies and neuropathies including diabetic neuropathy and amyotrophic lateral sclerosis (ALS); smoking increases the risk of conditions like peripheral artery disease (PAD) which can cause brachial plexopathy; hypertension, though not directly related, is a risk factor for conditions such as intracranial aneurysms and stroke.",
+      "pattern": "B",
+      "notes": "Interconnected role of risk factors on potential diagnoses. Causal relationships spread across sentences."
+    },
+    {
+      "source_sentences": [
+        8,
+        9,
+        10
+      ],
+      "output": "Considering these points, including the symptoms and physical exam findings, the most likely diagnosis for this 55-year-old male is brachial plexopathy, which is more characteristic of a nerve root lesion and likely due to a combination of smoking and substance abuse with anabolic steroids.",
+      "pattern": "C",
+      "notes": "Final diagnosis supported by reasoning from prior sentences."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "entry_id": 167,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is pepto peptobismol?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2594,
+    "output_tokens": 448,
+    "cached_input_tokens": 1152
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1140,
+      "output_tokens": 291,
+      "cached_input_tokens": 0,
+      "cost": 0.00576
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1454,
+      "output_tokens": 157,
+      "cached_input_tokens": 1152,
+      "cost": 0.003765
+    }
+  ],
+  "shared_context": {
+    "topic": "Pepto-Bismol identity",
+    "drug_a": "Pepto-Bismol"
+  },
+  "sentences": [
+    "Pepto-Bismol is a brand name for a medication that contains the active ingredient bismuth subsalicylate",
+    "It is commonly used to treat temporary discomforts of the stomach and gastrointestinal tract, such as nausea, heartburn, indigestion, upset stomach, and diarrhea"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Pepto-Bismol is a brand name for a medication.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Pepto-Bismol contains the active ingredient bismuth subsalicylate.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Pepto-Bismol is commonly used to treat temporary discomforts of the stomach and gastrointestinal tract.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Pepto-Bismol can treat nausea.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Pepto-Bismol can treat heartburn.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Pepto-Bismol can treat indigestion.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Pepto-Bismol can treat upset stomach.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Pepto-Bismol can treat diarrhea.",
+      "source_sentences": [
+        1
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Pepto-Bismol is a brand name for a medication that contains the active ingredient bismuth subsalicylate.",
+      "pattern": "C",
+      "notes": "Conclusion and its reasoning."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "Pepto-Bismol is commonly used to treat temporary discomforts of the stomach and gastrointestinal tract including nausea, heartburn, indigestion, upset stomach, and diarrhea.",
+      "pattern": "A",
+      "notes": "Enumeration of treated symptoms."
+    }
+  ]
+}

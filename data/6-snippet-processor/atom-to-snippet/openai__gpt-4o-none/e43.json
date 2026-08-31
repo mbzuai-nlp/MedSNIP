@@ -1,0 +1,179 @@
+{
+  "entry_id": 43,
+  "batch_id": 5,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How am I supposed to put ointment on my nipple if it's pierced",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2812,
+    "output_tokens": 801,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1282,
+      "output_tokens": 394,
+      "cached_input_tokens": 0,
+      "cost": 0.007145
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1530,
+      "output_tokens": 407,
+      "cached_input_tokens": 0,
+      "cost": 0.007895
+    }
+  ],
+  "shared_context": {
+    "topic": "applying ointment on a pierced nipple",
+    "symptom": "infection"
+  },
+  "sentences": [
+    "If you have a pierced nipple, applying ointment can be a bit more challenging",
+    "However, it is essential to continue taking care of your nipple to prevent infection and promote healing",
+    "Here are some tips",
+    "Gently clean the piercing area with saline solution before applying ointment",
+    "Dry the area thoroughly before applying the ointment",
+    "Use a clean and sterile applicator or cotton swab to apply a small amount of ointment directly to the piercing",
+    "Gently rotate the piercing to prevent the ointment from accumulating in one area, which can cause irritation",
+    "Avoid tight clothing that may irritate the piercing or ointment",
+    "Follow the instructions of your piercer or healthcare provider regarding ointment use and frequency of application",
+    "It is also crucial to note that if you experience any signs of infection, such as redness, swelling, or discharge, you should consult your piercer or healthcare provider immediately"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "If you have a pierced nipple, applying ointment can be more challenging.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "It is essential to continue taking care of your nipple to prevent infection and promote healing.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Gently clean the piercing area with saline solution before applying ointment.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Dry the area thoroughly before applying the ointment.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Use a clean and sterile applicator or cotton swab to apply a small amount of ointment directly to the piercing.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Gently rotate the piercing to prevent the ointment from accumulating in one area.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Accumulating ointment in one area can cause irritation.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Avoid tight clothing that may irritate the piercing or ointment.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Follow the instructions of your piercer or healthcare provider regarding ointment use and frequency of application.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "If you experience any signs of infection, such as redness, swelling, or discharge, consult your piercer or healthcare provider immediately.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "If you have a pierced nipple, applying ointment can be more challenging, but it is essential to continue taking care of your nipple to prevent infection and promote healing.",
+      "pattern": "B",
+      "notes": "Causal chain: challenge in application due to piercing, yet necessity for care."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "Gently clean the piercing area with saline solution, dry the area thoroughly, and use a clean, sterile applicator or cotton swab to apply a small amount of ointment directly to the piercing. Gently rotate the piercing to prevent ointment accumulation.",
+      "pattern": "A",
+      "notes": "Steps of application grouped as a sequence."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Accumulating ointment in one area can cause irritation.",
+      "pattern": "D",
+      "notes": "Standalone caution about excess ointment."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Avoid tight clothing that may irritate the piercing or ointment.",
+      "pattern": "D",
+      "notes": "Focused care advice without causal link."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Follow the instructions of your piercer or healthcare provider regarding ointment use and frequency of application.",
+      "pattern": "D",
+      "notes": "General adherence advice."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "If you experience any signs of infection, such as redness, swelling, or discharge, consult your piercer or healthcare provider immediately.",
+      "pattern": "D",
+      "notes": "Specific advisory for infection signs is standalone actionable advice."
+    }
+  ]
+}

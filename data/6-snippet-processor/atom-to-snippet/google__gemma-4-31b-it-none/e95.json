@@ -1,0 +1,276 @@
+{
+  "entry_id": 95,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "What is chlorhexidine?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3088,
+    "output_tokens": 1162,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1378,
+      "output_tokens": 643,
+      "cached_input_tokens": 0,
+      "cost": 0.00042348
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1710,
+      "output_tokens": 519,
+      "cached_input_tokens": 0,
+      "cost": 0.00041952
+    }
+  ],
+  "shared_context": {
+    "topic": "chlorhexidine"
+  },
+  "sentences": [
+    "Chlorhexidine is a disinfectant and antiseptic agent",
+    "It is a biguanide compound that is commonly used in various applications, including oral care, skin disinfection, and wound cleaning",
+    "Chlorhexidine is effective against a broad spectrum of microorganisms, including bacteria, viruses, and fungi",
+    "In oral care, chlorhexidine is often used as a mouthwash or gel to reduce plaque, gingivitis, and bad breath",
+    "It works by disrupting the cell membranes of microorganisms, ultimately leading to their death",
+    "Chlorhexidine is also used in skin disinfection and wound cleaning due to its ability to reduce bacterial load and promote wound healing",
+    "Chlorhexidine gluconate is the most commonly used form of chlorhexidine, which is available in various concentrations, including 0.12% and 2% solutions",
+    "The 0.12% solution is commonly used for oral care, while the 2% solution is used for skin disinfection and wound cleaning"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlorhexidine is a disinfectant agent",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Chlorhexidine is an antiseptic agent",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Chlorhexidine is a biguanide compound",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Chlorhexidine is commonly used in oral care",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Chlorhexidine is commonly used in skin disinfection",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Chlorhexidine is commonly used in wound cleaning",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Chlorhexidine is effective against bacteria",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Chlorhexidine is effective against viruses",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Chlorhexidine is effective against fungi",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "In oral care, chlorhexidine is often used as a mouthwash or gel to reduce plaque",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 11,
+      "text": "In oral care, chlorhexidine is often used as a mouthwash or gel to reduce gingivitis",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "In oral care, chlorhexidine is often used as a mouthwash or gel to reduce bad breath",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Chlorhexidine works by disrupting the cell membranes of microorganisms, leading to their death",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Chlorhexidine is used in skin disinfection and wound cleaning because it can reduce bacterial load",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Chlorhexidine is used in skin disinfection and wound cleaning because it can promote wound healing",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Chlorhexidine gluconate is the most commonly used form of chlorhexidine",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Chlorhexidine gluconate is available in various concentrations, including 0.12% and 2% solutions",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 18,
+      "text": "The 0.12% chlorhexidine solution is commonly used for oral care",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 19,
+      "text": "The 2% chlorhexidine solution is used for skin disinfection and wound cleaning",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Chlorhexidine is a disinfectant, an antiseptic, and a biguanide compound.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of the same subject."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6
+      ],
+      "output": "Chlorhexidine is commonly used in oral care, skin disinfection, and wound cleaning.",
+      "pattern": "A",
+      "notes": "Enumeration of common uses."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "Chlorhexidine is effective against bacteria, viruses, and fungi.",
+      "pattern": "A",
+      "notes": "Enumeration of efficacy targets."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "In oral care, chlorhexidine is often used as a mouthwash or gel to reduce plaque, gingivitis, and bad breath.",
+      "pattern": "A",
+      "notes": "Enumeration of goals for oral care use."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Chlorhexidine works by disrupting the cell membranes of microorganisms, leading to their death.",
+      "pattern": "D",
+      "notes": "Standalone mechanism of action."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Chlorhexidine is used in skin disinfection and wound cleaning because it can reduce bacterial load and promote wound healing.",
+      "pattern": "B",
+      "notes": "Causal link between use and benefit."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Chlorhexidine gluconate is the most commonly used form of chlorhexidine.",
+      "pattern": "D",
+      "notes": "Standalone fact about form."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Chlorhexidine gluconate is available in various concentrations, including 0.12% and 2% solutions.",
+      "pattern": "D",
+      "notes": "Standalone fact about concentrations."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "The 0.12% chlorhexidine solution is commonly used for oral care.",
+      "pattern": "D",
+      "notes": "Standalone lab/concentration interpretation."
+    },
+    {
+      "source_claims": [
+        19
+      ],
+      "output": "The 2% chlorhexidine solution is used for skin disinfection and wound cleaning.",
+      "pattern": "D",
+      "notes": "Standalone lab/concentration interpretation."
+    }
+  ]
+}

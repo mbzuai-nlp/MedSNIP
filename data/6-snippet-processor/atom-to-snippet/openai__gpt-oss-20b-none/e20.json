@@ -1,0 +1,147 @@
+{
+  "entry_id": 20,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "What is the most safe amount of Advil to take at one time",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3049,
+    "output_tokens": 2056,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1418,
+      "output_tokens": 773,
+      "cached_input_tokens": 0,
+      "cost": 0.00015076
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1631,
+      "output_tokens": 1283,
+      "cached_input_tokens": 0,
+      "cost": 0.00022855
+    }
+  ],
+  "shared_context": {
+    "topic": "most safe amount of Advil to take at one time",
+    "drug_a": "Advil (ibuprofen)"
+  },
+  "sentences": [
+    "The recommended maximum daily dose of ibuprofen (Advil) is 400-800 mg every 4-6 hours as needed, not to exceed 2400 mg in 24 hours (1)",
+    "However, the safe amount of Advil to take at one time varies depending on individual factors, such as age, weight, and medical conditions",
+    "For healthy adults, the recommended maximum dose of ibuprofen is 400 mg every 6 hours as needed, not to exceed 1200 mg in 24 hours (2)",
+    "However, some studies suggest that taking more than 200 mg of ibuprofen at one time may increase the risk of gastrointestinal side effects (3)",
+    "A study published in the Journal of the American Pharmacists Association found that taking 600 mg of ibuprofen at one time was associated with a higher risk of gastrointestinal side effects compared to taking 200 mg at one time (4)",
+    "Another study published in the International Journal of Clinical Pharmacology and Therapeutics found that taking 400 mg of ibuprofen at one time resulted in faster absorption and higher peak plasma concentrations compared to taking 200 mg at one time (5)",
+    "In general, it is recommended to start with the lowest effective dose and gradually increase as needed",
+    "It is also important to follow the recommended dosing schedule and not exceed the maximum daily dose"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The recommended maximum daily dose of ibuprofen (Advil) is 400-800 mg every 4-6 hours as needed, not to exceed 2400 mg in 24 hours.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The safe amount of Advil to take at one time varies depending on individual factors such as age, weight, and medical conditions.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "For healthy adults, the recommended maximum dose of ibuprofen is 400 mg every 6 hours as needed, not to exceed 1200 mg in 24 hours.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Taking more than 200 mg of ibuprofen at one time may increase the risk of gastrointestinal side effects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Taking 600 mg of ibuprofen at one time was associated with a higher risk of gastrointestinal side effects compared to taking 200 mg at one time.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Taking 400 mg of ibuprofen at one time resulted in faster absorption and higher peak plasma concentrations compared to taking 200 mg at one time.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "It is recommended to start with the lowest effective dose and gradually increase as needed.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "It is important to follow the recommended dosing schedule and not exceed the maximum daily dose.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        3
+      ],
+      "output": "The recommended maximum daily dose of ibuprofen is 400–800 mg every 4–6 hours as needed, not to exceed 2400 mg per 24 hours; for healthy adults the recommended maximum dose is 400 mg every 6 hours as needed, not to exceed 1200 mg per 24 hours.",
+      "pattern": "A",
+      "notes": "Enumeration of dosing schedules for general and healthy adult populations."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The safe amount of Advil to take at one time varies depending on individual factors such as age, weight, and medical conditions.",
+      "pattern": "D",
+      "notes": "Standalone descriptive claim."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6
+      ],
+      "output": "Taking more than 200 mg of ibuprofen at one time may increase the risk of gastrointestinal side effects; a 600 mg dose was associated with a higher risk of gastrointestinal side effects compared to a 200 mg dose, while a 400 mg dose results in faster absorption and higher peak plasma concentrations than a 200 mg dose.",
+      "pattern": "A",
+      "notes": "Enumeration of the effects of different single‑dose amounts."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "It is recommended to start with the lowest effective dose and gradually increase as needed, and to follow the recommended dosing schedule without exceeding the maximum daily dose.",
+      "pattern": "A",
+      "notes": "Multiple related recommendations presented together."
+    }
+  ]
+}

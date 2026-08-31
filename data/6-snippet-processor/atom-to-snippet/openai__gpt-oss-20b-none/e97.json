@@ -1,0 +1,132 @@
+{
+  "entry_id": 97,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Will the antibiotics prevent the lyme disease from progressing?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2856,
+    "output_tokens": 2783,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1280,
+      "output_tokens": 1504,
+      "cached_input_tokens": 0,
+      "cost": 0.00024896
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1576,
+      "output_tokens": 1279,
+      "cached_input_tokens": 0,
+      "cost": 0.00022634
+    }
+  ],
+  "shared_context": {
+    "topic": "antibiotics preventing progression of Lyme disease",
+    "drug_a": "antibiotics",
+    "condition": "Lyme disease"
+  },
+  "sentences": [
+    "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection",
+    "Early treatment typically involves oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil",
+    "For early localized or early disseminated Lyme disease, a 10- to 21-day course of antibiotics is generally recommended",
+    "If Lyme disease is treated promptly, most patients recover completely without long-term complications",
+    "However, if the disease is not treated in its early stages, it can progress to more severe forms, including Lyme arthritis, neurological Lyme disease, and Lyme carditis",
+    "In such cases, longer courses of antibiotics or intravenous antibiotics may be required"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Early treatment typically involves oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "For early localized or early disseminated Lyme disease, a 10- to 21-day course of antibiotics is generally recommended",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "If Lyme disease is treated promptly, most patients recover completely without long-term complications",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "If Lyme disease is not treated in its early stages, it can progress to Lyme arthritis",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "If Lyme disease is not treated in its early stages, it can progress to neurological Lyme disease",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "If Lyme disease is not treated in its early stages, it can progress to Lyme carditis",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "In such cases, longer courses of antibiotics or intravenous antibiotics may be required",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "Antibiotics are effective at preventing the progression of Lyme disease when given early. Early treatment usually involves a 10‑ to 21‑day course of oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil, and patients who receive prompt therapy typically recover completely without long‑term complications.",
+      "pattern": "C",
+      "notes": "Recommendation (claim 1) supported by premises about typical antibiotics (claim 2), recommended duration (claim 3), and clinical outcome (claim 4)."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "If Lyme disease is not treated in its early stages, it can progress to Lyme arthritis, Lyme carditis, or neurological Lyme disease; in such cases, longer courses of antibiotics or intravenous antibiotics may be required.",
+      "pattern": "B",
+      "notes": "Conditional chain: lack of early treatment → progression to specific diseases → need for extended or IV therapy."
+    }
+  ]
+}

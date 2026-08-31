@@ -1,0 +1,185 @@
+{
+  "entry_id": 247,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is there anti nausea medication that can be taken to allow fluids to stay down?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2914,
+    "output_tokens": 896,
+    "cached_input_tokens": 1152
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1317,
+      "output_tokens": 478,
+      "cached_input_tokens": 0,
+      "cost": 0.0080725
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1597,
+      "output_tokens": 418,
+      "cached_input_tokens": 1152,
+      "cost": 0.0067325
+    }
+  ],
+  "shared_context": {
+    "condition": "nausea",
+    "symptom": "keeping fluids down"
+  },
+  "sentences": [
+    "Yes, there are several anti-nausea medications available that can help patients keep fluids down",
+    "Common pharmacological treatments include",
+    "Ondansetron: This is a serotonin 5-HT3 receptor antagonist widely used to prevent nausea and vomiting caused by surgery, chemotherapy, or gastroenteritis",
+    "A single oral dose of ondansetron has been shown to reduce the risk of recurrent vomiting, the need for intravenous fluids, and hospital admissions in children with acute gastroenteritis",
+    "Domperidone: Another effective antiemetic, domperidone, works as a dopamine antagonist and is often used off-label to manage nausea and vomiting, including cases related to gastroparesis and gastrointestinal disorders",
+    "Metoclopramide: This drug increases gastrointestinal motility and is effective in treating nausea and vomiting",
+    "It acts as a dopamine antagonist and can be particularly useful in patients with delayed gastric emptying",
+    "Prochlorperazine: Often used to control severe nausea and vomiting, prochlorperazine is a dopamine antagonist that can be administered orally, rectally, or parenterally"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "There are several anti-nausea medications available that can help patients keep fluids down.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Ondansetron is a serotonin 5-HT3 receptor antagonist widely used to prevent nausea and vomiting caused by surgery, chemotherapy, or gastroenteritis.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A single oral dose of ondansetron has been shown to reduce the risk of recurrent vomiting in children with acute gastroenteritis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "A single oral dose of ondansetron reduces the need for intravenous fluids in children with acute gastroenteritis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "A single oral dose of ondansetron reduces hospital admissions in children with acute gastroenteritis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Domperidone is an effective antiemetic that works as a dopamine antagonist.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Domperidone is often used off-label to manage nausea and vomiting related to gastroparesis and gastrointestinal disorders.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Metoclopramide increases gastrointestinal motility and is effective in treating nausea and vomiting.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Metoclopramide acts as a dopamine antagonist and can be particularly useful in patients with delayed gastric emptying.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Prochlorperazine is often used to control severe nausea and vomiting.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Prochlorperazine is a dopamine antagonist that can be administered orally, rectally, or parenterally.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "There are several anti-nausea medications available that can help patients keep fluids down.",
+      "pattern": "D",
+      "notes": "General statement about availability of suitable medications."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Ondansetron is a serotonin 5-HT3 receptor antagonist widely used to prevent nausea and vomiting caused by surgery, chemotherapy, or gastroenteritis.",
+      "pattern": "D",
+      "notes": "Standalone fact about ondansetron."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "A single oral dose of ondansetron has been shown to reduce the risk of recurrent vomiting, reduce the need for intravenous fluids, and reduce hospital admissions in children with acute gastroenteritis.",
+      "pattern": "A",
+      "notes": "Enumeration of ondansetron's effects in specific context."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Domperidone is an effective antiemetic that works as a dopamine antagonist and is often used off-label to manage nausea and vomiting related to gastroparesis and gastrointestinal disorders.",
+      "pattern": "A",
+      "notes": "Properties and uses of domperidone."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Metoclopramide increases gastrointestinal motility and acts as a dopamine antagonist. It is effective in treating nausea and vomiting and can be particularly useful in patients with delayed gastric emptying.",
+      "pattern": "A",
+      "notes": "Description of metoclopramide's mechanism and uses."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Prochlorperazine is often used to control severe nausea and vomiting and is a dopamine antagonist that can be administered orally, rectally, or parenterally.",
+      "pattern": "A",
+      "notes": "Uses and administration methods of prochlorperazine."
+    }
+  ]
+}

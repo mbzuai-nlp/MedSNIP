@@ -1,0 +1,317 @@
+{
+  "entry_id": 147,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 44-year-old homeless man presents to the emergency department after being stabbed multiple times in the abdomen. The patient is intoxicated and is unable to offer further history. His temperature is 97.5°F (36.4°C), blood pressure is 92/52 mmHg, pulse is 145/min, respirations are 33/min, and oxygen saturation is 90% on room air. He is intubated to protect his airway, given 2 units of packed red blood cells, and sent to the operating room for an exploratory laparotomy. The patient is subsequently admitted to the intensive care unit. He is extubated the next day and appears well. His vitals are within normal limits. Physical exam reveals sparse hair that is falling out throughout the patient’s body. He has a rash by the corners of his mouth. The patient has multiple loose bowel movements and on day 6 the patient’s surgical wound does not appear to be healing. It is held together only by the sutures with minimal underlying healing. Which of the following is most likely deficient in this patient? (A) Riboflavin (B) Thiamine (C) Vitamin C (D) Vitamin D (E) Zinc",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 4747,
+    "output_tokens": 1784,
+    "cached_input_tokens": 1920
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1973,
+      "output_tokens": 989,
+      "cached_input_tokens": 0,
+      "cost": 0.0148225
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2774,
+      "output_tokens": 795,
+      "cached_input_tokens": 1920,
+      "cost": 0.012485
+    }
+  ],
+  "shared_context": {
+    "age": 44,
+    "sex": "male",
+    "condition": "intoxicated, homeless, multiple stab wounds in the abdomen, suspected vitamin deficiency post-surgery",
+    "vitals_initial": "temperature 97.5°F, blood pressure 92/52 mmHg, pulse 145/min, respirations 33/min, oxygen saturation 90% on room air",
+    "vitals_followup": "stabilized",
+    "key_findings": "sparse hair, rash at the corners of the mouth, multiple loose bowel movements, poor wound healing",
+    "treatment": "intubation, 2 units of packed red blood cells, exploratory laparotomy, extubation"
+  },
+  "sentences": [
+    "To address the clinical query, we'll follow a step-by-step approach to identify the most likely deficiency in the patient",
+    "A 44-year-old homeless man presents with multiple stab wounds in the abdomen",
+    "Vital signs indicate hypovolemic shock: low blood pressure (92/52 mmHg), high pulse (145/min), and high respirations (33/min)",
+    "The patient is intoxicated, suggesting potential chronic alcohol use",
+    "Intubation for airway protection",
+    "Administration of 2 units of packed red blood cells",
+    "Exploratory laparotomy performed",
+    "Extubated the next day with normalized vital signs",
+    "Sparse, falling hair",
+    "Rash at the corners of the mouth",
+    "Multiple loose bowel movements",
+    "Poor wound healing by day 6 post-surgery",
+    "Sparse Hair and Rash: These symptoms suggest possible nutrient deficiencies",
+    "Loose Bowel Movements: This can be a sign of malabsorption or another underlying condition affecting nutrient absorption",
+    "Poor Wound Healing: Indicates a possible deficiency in nutrients essential for tissue repair",
+    "Riboflavin (Vitamin B2) Deficiency: Can cause sore throat, redness and swelling of the lining of the mouth and throat, cracks or sores on the outsides of the lips (cheilitis) and at the corners of the mouth (angular stomatitis)",
+    "Thiamine (Vitamin B1) Deficiency: Commonly associated with chronic alcohol use",
+    "Symptoms include beriberi, Wernicke-Korsakoff syndrome, but not typically hair loss or poor wound healing",
+    "Vitamin C Deficiency: Known as scurvy, presents with poor wound healing, perifollicular hemorrhages, and gingival disease",
+    "Hair loss and rash (especially around the mouth) can also be present",
+    "Vitamin D Deficiency: Mainly affects bone health, causing rickets or osteomalacia, and is less associated with hair loss or wound healing directly",
+    "Zinc Deficiency: Symptoms include alopecia (hair loss), dermatitis (especially around body orifices), diarrhea, and impaired wound healing",
+    "The combination of alopecia, rash at the corners of the mouth, diarrhea, and poor wound healing is most consistent with Zinc deficiency",
+    "(E) Zinc"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A 44-year-old homeless man presents with multiple stab wounds in the abdomen.",
+      "source_sentences": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Vital signs indicate hypovolemic shock: low blood pressure (92/52 mmHg), high pulse (145/min), and high respirations (33/min).",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient is intoxicated, suggesting potential chronic alcohol use.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient was intubated to protect his airway.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient received 2 units of packed red blood cells.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "An exploratory laparotomy was performed on the patient.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient was extubated the next day with normalized vital signs.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient has sparse, falling hair.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient has a rash at the corners of his mouth.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The patient has multiple loose bowel movements.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The patient's surgical wound does not appear to be healing well by day 6 post-surgery.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Sparse hair and rash suggest possible nutrient deficiencies.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Loose bowel movements can be a sign of malabsorption or another condition affecting nutrient absorption.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Poor wound healing indicates a possible deficiency in nutrients essential for tissue repair.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Riboflavin (Vitamin B2) deficiency can cause sore throat, redness and swelling of the mouth, cracks or sores on the lips and at the corners of the mouth.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Thiamine (Vitamin B1) deficiency is commonly associated with chronic alcohol use.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Thiamine deficiency symptoms include beriberi and Wernicke-Korsakoff syndrome, but not typically hair loss or poor wound healing.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Vitamin C deficiency, known as scurvy, presents with poor wound healing, perifollicular hemorrhages, gingival disease, and may include hair loss.",
+      "source_sentences": [
+        18,
+        19
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Vitamin D deficiency mainly affects bone health, causing rickets or osteomalacia, and is less associated with hair loss or wound healing directly.",
+      "source_sentences": [
+        20
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Zinc deficiency symptoms include alopecia (hair loss), dermatitis, diarrhea, and impaired wound healing.",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 21,
+      "text": "The combination of alopecia, rash at the corners of the mouth, diarrhea, and poor wound healing is most consistent with zinc deficiency.",
+      "source_sentences": [
+        22
+      ]
+    },
+    {
+      "index": 22,
+      "text": "The most likely deficiency in this patient is zinc.",
+      "source_sentences": [
+        23
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "A 44-year-old homeless man presented with multiple stab wounds to the abdomen and was in hypovolemic shock with vitals showing a blood pressure of 92/52 mmHg, a pulse of 145/min, and respirations of 33/min. The patient was intoxicated, suggesting potential chronic alcohol use. To protect his airway, he was intubated and given 2 units of packed red blood cells before an exploratory laparotomy. He was extubated the next day with normalized vital signs.",
+      "pattern": "A",
+      "notes": "Enumeration of initial clinical findings and treatment in the emergency setting."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "Following surgery, the patient exhibited poor wound healing by day 6, sparse hair that was falling out throughout his body, a rash at the corners of his mouth, and multiple loose bowel movements.",
+      "pattern": "A",
+      "notes": "Enumeration of post-surgical clinical findings."
+    },
+    {
+      "source_claims": [
+        12,
+        13,
+        14
+      ],
+      "output": "The sparse hair and rash suggest possible nutrient deficiencies, loose bowel movements may indicate malabsorption, and poor wound healing signifies a potential deficiency in nutrients essential for tissue repair.",
+      "pattern": "B",
+      "notes": "Logical chain connecting key symptoms to nutrient deficiencies."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Riboflavin (Vitamin B2) deficiency can cause sore throat, redness and swelling of the mouth, and cracks or sores on the lips and at the corners of the mouth.",
+      "pattern": "D",
+      "notes": "Standalone description of riboflavin deficiency symptoms."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "Thiamine (Vitamin B1) deficiency is commonly associated with chronic alcohol use, but its symptoms, including beriberi and Wernicke-Korsakoff syndrome, do not typically include hair loss or poor wound healing.",
+      "pattern": "A",
+      "notes": "Discussion of thiamine deficiency symptoms and relevance to case."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "Vitamin C deficiency, known as scurvy, presents with poor wound healing, perifollicular hemorrhages, gingival disease, and may include hair loss.",
+      "pattern": "D",
+      "notes": "Standalone description of Vitamin C deficiency symptoms."
+    },
+    {
+      "source_claims": [
+        19
+      ],
+      "output": "Vitamin D deficiency mainly affects bone health, causing rickets or osteomalacia, and is less associated with hair loss or wound healing directly.",
+      "pattern": "D",
+      "notes": "Standalone description of Vitamin D deficiency symptoms."
+    },
+    {
+      "source_claims": [
+        20,
+        21
+      ],
+      "output": "Zinc deficiency symptoms include alopecia (hair loss), dermatitis, diarrhea, and impaired wound healing. The combination of alopecia, a rash at the corners of the mouth, diarrhea, and poor wound healing is most consistent with zinc deficiency.",
+      "pattern": "A",
+      "notes": "Linking zinc deficiency symptoms directly to case findings."
+    },
+    {
+      "source_claims": [
+        22
+      ],
+      "output": "Based on the clinical findings, the most likely deficiency in this 44-year-old male is zinc.",
+      "pattern": "C",
+      "notes": "Conclusion based on overall symptoms and context."
+    }
+  ]
+}

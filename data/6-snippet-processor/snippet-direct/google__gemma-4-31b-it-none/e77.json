@@ -1,0 +1,185 @@
+{
+  "entry_id": 77,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 17-year-old high school student was in shop class when he accidentally sawed off a portion of his right index finger. The teacher applied dressings and pressure to the patient's injured digit and immediately transported the patient to the emergency department. He arrived within 20 minutes of the accident. The patient has a medical history of asthma and his only medication is albuterol. His temperature is 98.0°F (36.6°C), blood pressure is 120/70 mmHg, pulse is 105/min, and respirations are 17/min. Exam was significant for pulsatile bleeding from a clean-cut wound on his right second finger. Radiography of the hand revealed a complete amputation of the right finger from the distal interphalangeal joint. The wound was cleaned, compression applied, analgesics administered, and the hand surgeons were notified. The teacher states that he left the amputated finger in the classroom, but the principal would be transporting it to the hospital. Which of the following is the correct method for transporting the amputated finger? (A) Rinse the finger in normal saline, wrap the finger in moist gauze, put in a plastic bag, and place the bag in ice water (B) Rinse the finger with hydrogen peroxide, wrap the finger in moist gauze, and place on ice (C) Submerge the finger in ice water (D) Wrap the finger in moist gauze and place in a plastic bag (E) Wrap the finger in moist gauze and place on ice",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2943,
+    "output_tokens": 1030,
+    "cached_input_tokens": 0,
+    "cost": 0.00077399
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2943,
+      "output_tokens": 1030,
+      "cached_input_tokens": 0,
+      "cost": 0.00077399
+    }
+  ],
+  "shared_context": {
+    "age": "17",
+    "sex": "male",
+    "chief_complaint": "complete amputation of the right index finger from the distal interphalangeal joint",
+    "medical_history": "asthma",
+    "medications": "albuterol",
+    "vitals": "T 98.0°F, BP 120/70 mmHg, P 105/min, R 17/min",
+    "exam_findings": "pulsatile bleeding from a clean-cut wound on right second finger",
+    "correct_answer": "A"
+  },
+  "sentences": [
+    "To determine the correct method for transporting the amputated finger, we must consider the optimal conditions for preserving the tissue until it can be potentially reattached",
+    "The primary goal is to minimize tissue damage and maintain viability",
+    "The amputated part should be rinsed with saline to remove debris and reduce the risk of contamination",
+    "This is preferable to using hydrogen peroxide, which can be cytotoxic and potentially damage tissues",
+    "Wrapping the finger in moist (normal saline-soaked) gauze helps keep the tissues hydrated, preventing desiccation, which is crucial for tissue preservation",
+    "The finger should then be placed in a plastic bag",
+    "This step is essential to prevent direct contact with ice or ice water, which could cause frostbite or further tissue damage",
+    "The bag containing the finger should be placed in ice water",
+    "The goal is to cool the amputated part to slow down metabolic processes and reduce cellular damage without freezing the tissue",
+    "Direct contact with ice (submerging in ice water or placing directly on ice) could result in frostbite and further tissue damage",
+    "Evaluating the Options",
+    "Option A: Rinse the finger in normal saline, wrap the finger in moist gauze, put in a plastic bag, and place the bag in ice water",
+    "This option follows the recommended steps for preserving an amputated part",
+    "Option B: Rinse the finger with hydrogen peroxide, wrap the finger in moist gauze, and place on ice",
+    "Using hydrogen peroxide is not recommended due to its cytotoxic effects",
+    "Placing directly on ice can cause frostbite",
+    "Option C: Submerge the finger in ice water",
+    "Direct submersion in ice water is not advised as it can cause frostbite",
+    "Option D: Wrap the finger in moist gauze and place in a plastic bag",
+    "While this helps with hydration and protection, it lacks cooling, which is necessary to slow down tissue metabolism",
+    "Option E: Wrap the finger in moist gauze and place on ice",
+    "Direct contact with ice is not recommended due to the risk of frostbite",
+    "After evaluating all the options, Option A is the most appropriate method for transporting the amputated finger",
+    "(A) Rinse the finger in normal saline, wrap the finger in moist gauze, put in a plastic bag, and place the bag in ice water"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "To determine the correct method for transporting the amputated finger of a 17-year-old male, the optimal conditions for preserving tissue must be considered to minimize tissue damage and maintain viability.",
+      "pattern": "C",
+      "notes": "Conclusion/goal is meaningless without the premise of preserving tissue."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "The amputated finger should be rinsed with saline to remove debris and reduce contamination, which is preferable to using hydrogen peroxide because hydrogen peroxide can be cytotoxic and potentially damage tissues.",
+      "pattern": "B",
+      "notes": "Causal link regarding the preference of saline over peroxide."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Wrapping the amputated finger in moist (normal saline-soaked) gauze helps keep the tissues hydrated and prevents desiccation, which is crucial for tissue preservation.",
+      "pattern": "D",
+      "notes": "Standalone fact about gauze."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "The amputated finger should be placed in a plastic bag to prevent direct contact with ice or ice water, which could cause frostbite or further tissue damage.",
+      "pattern": "B",
+      "notes": "Causal link explaining why the bag is necessary."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "The bag containing the amputated finger should be placed in ice water to cool the part, slowing down metabolic processes and reducing cellular damage without freezing the tissue.",
+      "pattern": "B",
+      "notes": "Causal link explaining the goal of cooling via ice water."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Direct contact with ice, such as submerging the finger in ice water or placing it directly on ice, could result in frostbite and further tissue damage.",
+      "pattern": "D",
+      "notes": "Standalone fact about frostbite risks."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Evaluation of the options is performed.",
+      "pattern": "E",
+      "notes": "Topic shift to option analysis."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "Option A (Rinse the finger in normal saline, wrap the finger in moist gauze, put in a plastic bag, and place the bag in ice water) follows the recommended steps for preserving an amputated part.",
+      "pattern": "C",
+      "notes": "Conclusion (option A) supported by the premise (follows recommendations)."
+    },
+    {
+      "source_sentences": [
+        13,
+        14,
+        15
+      ],
+      "output": "Option B (Rinse the finger with hydrogen peroxide, wrap the finger in moist gauze, and place on ice) is incorrect because hydrogen peroxide has cytotoxic effects and placing the finger directly on ice can cause frostbite.",
+      "pattern": "B",
+      "notes": "Causal chain explaining why Option B is wrong."
+    },
+    {
+      "source_sentences": [
+        16,
+        17
+      ],
+      "output": "Option C (Submerge the finger in ice water) is not advised as direct submersion can cause frostbite.",
+      "pattern": "B",
+      "notes": "Causal link explaining why Option C is wrong."
+    },
+    {
+      "source_sentences": [
+        18,
+        19
+      ],
+      "output": "Option D (Wrap the finger in moist gauze and place in a plastic bag) helps with hydration and protection, but it is insufficient because it lacks cooling, which is necessary to slow down tissue metabolism.",
+      "pattern": "B",
+      "notes": "Causal link explaining the deficiency of Option D."
+    },
+    {
+      "source_sentences": [
+        20,
+        21
+      ],
+      "output": "Option E (Wrap the finger in moist gauze and place on ice) is not recommended due to the risk of frostbite from direct contact with ice.",
+      "pattern": "B",
+      "notes": "Causal link explaining why Option E is wrong."
+    },
+    {
+      "source_sentences": [
+        22,
+        23
+      ],
+      "output": "After evaluating all options, the most appropriate method for transporting the amputated finger of the 17-year-old male is (A): Rinse the finger in normal saline, wrap the finger in moist gauze, put in a plastic bag, and place the bag in ice water.",
+      "pattern": "C",
+      "notes": "Final conclusion and selection."
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "entry_id": 66,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 52-year-old man presents to the emergency department by ambulance for evaluation of hematemesis. His wife states that he began vomiting bright red blood this evening while eating dinner, and has produced about 5 cups total. He has a history of alcohol use disorder and has vomited small streaks of blood in the past, but has never undergone formal medical workup for it. On exam, he has bright red blood in his mouth and pharynx, and also displays a distended abdomen with a fluid wave, jaundice, scattered spider angiomas, and multiple ecchymoses. His temperature is 98.4°F (36.9°C), blood pressure is 98/68 mmHg, pulse is 125/min, and respirations are 22/min. A rapid point-of-care hemoglobin and platelet count is 8.8 g/dL and 80,000/mm^3, respectively. The patient is given 1L of normal saline. Which of the following is the most appropriate initial step in management? (A) Balloon tamponade (B) Ceftriaxone (C) Nadolol (D) Octreotide (E) Platelet transfusion",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4662,
+    "output_tokens": 1458,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2010,
+      "output_tokens": 730,
+      "cached_input_tokens": 0,
+      "cost": 0.0004346
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2652,
+      "output_tokens": 728,
+      "cached_input_tokens": 0,
+      "cost": 0.00049816
+    }
+  ],
+  "shared_context": {
+    "patient_age": 52,
+    "patient_sex": "male",
+    "chief_complaint": "hematemesis",
+    "medical_history": "alcohol use disorder",
+    "exam_findings": "jaundice, spider angiomas, ecchymoses, distended abdomen with fluid wave",
+    "vital_signs": "temperature 98.4°F, blood pressure 98/68 mmHg, pulse 125/min, respirations 22/min",
+    "lab_results": "hemoglobin 8.8 g/dL, platelet count 80,000/mm^3"
+  },
+  "sentences": [
+    "To determine the most appropriate initial step in management for the patient, let's break down the information provided and analyze it step by step",
+    "Initial Assessment: The patient presents with hematemesis (vomiting bright red blood), a history of alcohol use disorder, and signs of possible liver disease (jaundice, spider angiomas, ecchymoses)",
+    "Vital Signs: The patient's blood pressure is 98/68 mmHg, which is low, indicating hypotension",
+    "The heart rate is 125/min, which is tachycardic",
+    "Laboratory Results: The patient has a low hemoglobin of 8.8 g/dL and a low platelet count of 80,000/mm^3",
+    "Initial Management: The patient is given 1L of normal saline",
+    "Considering the patient's presentation and initial management, the primary concern is the need to stabilize the patient and address the cause of the bleeding",
+    "Balloon Tamponade: This is a procedure used to treat bleeding esophageal varices, which are a complication of liver disease",
+    "However, there is no indication that the patient has esophageal varices (no mention of a dilated esophagus or abdominal swelling due to ascites)",
+    "Ceftriaxone: This antibiotic is used to treat bacterial infections",
+    "While the patient has signs of possible liver disease, there is no indication of a bacterial infection",
+    "Nadolol: This is a beta-blocker used to manage bleeding varices",
+    "However, there is no indication that the patient has esophageal varices",
+    "Octreotide: This medication is used to treat bleeding varices and acute variceal hemorrhage",
+    "Given the patient's signs of possible liver disease and history of alcohol use disorder, this is a possible cause of the bleeding",
+    "Octreotide can help reduce blood flow to the gastrointestinal tract and potentially stop the bleeding",
+    "Platelet Transfusion: The patient's platelet count is 80,000/mm^3, which is low, but the primary concern is the immediate risk of severe bleeding, not just a low platelet count",
+    "Conclusion: Considering the patient's presentation and possible liver disease, the most appropriate initial step in management is to try to stop the bleeding",
+    "Among the options provided, Octreotide (D) is the most likely to be effective in this situation"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient presents with hematemesis, a history of alcohol use disorder, and signs of possible liver disease.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's blood pressure is low, indicating hypotension.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's heart rate is tachycardic.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient has a low hemoglobin and a low platelet count.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient is given 1L of normal saline as initial management.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The primary concern is the need to stabilize the patient and address the cause of the bleeding.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Balloon tamponade is a procedure used to treat bleeding esophageal varices.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "There is no indication that the patient has esophageal varices.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Ceftriaxone is an antibiotic used to treat bacterial infections.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "There is no indication of a bacterial infection in the patient.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Nadolol is a beta-blocker used to manage bleeding varices.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "There is no indication that the patient has esophageal varices, making Nadolol not the first choice.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Octreotide is used to treat bleeding varices and acute variceal hemorrhage.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Octreotide can help reduce blood flow to the gastrointestinal tract and potentially stop the bleeding.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The patient's low platelet count is a concern, but the primary concern is the immediate risk of severe bleeding.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 16,
+      "text": "The most appropriate initial step in management is to try to stop the bleeding.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Octreotide is the most likely to be effective in this situation.",
+      "source_sentences": [
+        18
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A 52-year-old man presents with hematemesis, a history of alcohol use disorder, and signs of possible liver disease, including jaundice, spider angiomas, and ecchymoses.",
+      "pattern": "D",
+      "notes": "Initial presentation."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "The patient is hypotensive with a blood pressure of 98/68 mmHg, tachycardic with a pulse of 125/min, and has a low hemoglobin of 8.8 g/dL and a low platelet count of 80,000/mm^3, indicating significant blood loss.",
+      "pattern": "A",
+      "notes": "Vital signs and lab results indicating severity of condition."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The patient is given 1L of normal saline as initial management to address hypotension.",
+      "pattern": "D",
+      "notes": "Initial stabilization step."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "The primary concern is the need to stabilize the patient and address the cause of the bleeding.",
+      "pattern": "D",
+      "notes": "Management priority."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Balloon tamponade is a procedure used to treat bleeding esophageal varices, but there is no indication that this patient has esophageal varices.",
+      "pattern": "A",
+      "notes": "Evaluation of treatment option."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Ceftriaxone is an antibiotic used to treat bacterial infections, but there is no indication of a bacterial infection in this patient.",
+      "pattern": "A",
+      "notes": "Evaluation of treatment option."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Nadolol is a beta-blocker used to manage bleeding varices, but there is no indication that this patient has esophageal varices, making Nadolol not the first choice.",
+      "pattern": "A",
+      "notes": "Evaluation of treatment option."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "Octreotide is used to treat bleeding varices and acute variceal hemorrhage, and can help reduce blood flow to the gastrointestinal tract and potentially stop the bleeding.",
+      "pattern": "A",
+      "notes": "Rationale for treatment choice."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "Although the patient's low platelet count is a concern, the primary concern is the immediate risk of severe bleeding, and thus the most appropriate initial step in management is to try to stop the bleeding.",
+      "pattern": "B",
+      "notes": "Prioritization of management steps."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Given the need to immediately address the bleeding, Octreotide is the most likely to be effective in this situation.",
+      "pattern": "C",
+      "notes": "Conclusion based on previous reasoning."
+    }
+  ]
+}

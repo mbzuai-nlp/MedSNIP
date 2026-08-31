@@ -1,0 +1,86 @@
+{
+  "entry_id": 270,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old man presents to urgent care for weakness and weight loss. For the past several months, he has felt progressively weaker and has lost 25 pounds with intermittent abdominal pain. The patient has not seen a physician in 30 years and recalls being current on most of his vaccinations. A few years ago, he went to the emergency department due to abdominal pain and was found to have increased liver enzymes due to excessive alcohol use and incidental gallstones. The patient has a 50 pack-year smoking history. His temperature is 99.5°F (37.5°C), blood pressure is 161/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 95% on room air. Physical exam reveals an emaciated man. The patient has a negative Murphy sign and his abdomen is non-tender. Cardiopulmonary exam is within normal limits. Which of the following is the most appropriate next step in management? (A) CT scan of the abdomen and pelvis (B) CT scan of the chest (C) HIDA scan (D) Right upper quadrant ultrasound (E) Smoking cessation advice and primary care follow up",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2523,
+    "output_tokens": 1629,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2523,
+      "output_tokens": 1629,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "55",
+    "sex": "male",
+    "chief_complaint": "progressive weakness, 25-lb weight loss, and intermittent abdominal pain for several months",
+    "medical_history": "excessive alcohol use with prior elevated liver enzymes; incidental gallstones; 50 pack-year smoking history; has not seen a physician in 30 years",
+    "vitals": "T 99.5 F, BP 161/108 mmHg, pulse 90/min, respirations 17/min, oxygen saturation 95% on room air",
+    "exam_findings": "emaciated; abdomen non-tender; negative Murphy sign; cardiopulmonary exam normal",
+    "correct_answer": "CT scan of the abdomen and pelvis (A)"
+  },
+  "sentences": [
+    "Given the patient's presentation with progressive weakness, weight loss, and intermittent abdominal pain, along with a history of excessive alcohol use and gallstones, a CT scan of the abdomen and pelvis is the most appropriate next step in management",
+    "This is because the patient's symptoms are suggestive of a gastrointestinal or abdominal pathology, such as pancreatic cancer or gallbladder disease, which can be better evaluated with a CT scan than with other imaging modalities (3)",
+    "A CT scan of the abdomen and pelvis can help identify any masses or abnormalities in the liver, pancreas, or other abdominal organs that may be causing the patient's symptoms (1)",
+    "A CT scan of the chest (option B) may be useful if there is a suspicion of lung cancer or other thoracic pathology, but it is not the most appropriate next step in this case (4)",
+    "A HIDA scan (option C) is used to evaluate gallbladder function and may be helpful if the patient's symptoms suggest gallbladder disease, but it is not as comprehensive as a CT scan for evaluating the entire abdomen and pelvis (2)",
+    "A right upper quadrant ultrasound (option D) may be useful for evaluating the gallbladder and liver, but it is not as sensitive as a CT scan for detecting malignancies or other abnormalities in the abdomen and pelvis (5)",
+    "Smoking cessation advice and primary care follow-up (option E) are important, but they do not address the patient's acute symptoms and are not the most appropriate next step in management (6)"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2
+      ],
+      "output": "For this 55-year-old man with progressive weakness, 25-lb weight loss, intermittent abdominal pain, prior excessive alcohol use with elevated liver enzymes, and incidental gallstones, the most appropriate next step is a CT scan of the abdomen and pelvis because the presentation suggests gastrointestinal or other intra-abdominal pathology such as pancreatic cancer or gallbladder disease, and CT can identify masses or abnormalities in the liver, pancreas, and other abdominal organs.",
+      "pattern": "C",
+      "notes": "Recommendation in sentence 0 is only fully verifiable with the explicit supporting rationale in sentences 1-2."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "In this 55-year-old man with a 50 pack-year smoking history, a CT scan of the chest may be useful if lung cancer or other thoracic pathology is suspected, but it is not the most appropriate next step in management for the current presentation.",
+      "pattern": "F",
+      "notes": "Same management topic as the main answer, but a distinct checkable fact about an alternative option."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "In this 55-year-old man with intermittent abdominal pain and a history of gallstones, a HIDA scan evaluates gallbladder function and may help if gallbladder disease is suspected, but it is less comprehensive than CT for evaluating the entire abdomen and pelvis.",
+      "pattern": "F",
+      "notes": "Separate evaluable statement about a different imaging modality."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "In this 55-year-old man with weight loss, abdominal pain, and prior gallstones, a right upper quadrant ultrasound may help evaluate the gallbladder and liver, but it is less sensitive than a CT scan for detecting malignancy or other abnormalities in the abdomen and pelvis.",
+      "pattern": "F",
+      "notes": "Separate evaluable statement about another alternative test."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "For this 55-year-old man with progressive weakness, weight loss, and abdominal pain, smoking cessation advice and primary care follow-up are important but do not address the current symptoms and are not the most appropriate next step in management.",
+      "pattern": "F",
+      "notes": "Separate management claim about a non-imaging alternative."
+    }
+  ]
+}

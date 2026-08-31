@@ -1,0 +1,174 @@
+{
+  "entry_id": 6,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How long does this years flu usually last?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2814,
+    "output_tokens": 735,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1257,
+      "output_tokens": 385,
+      "cached_input_tokens": 0,
+      "cost": 4.054e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1557,
+      "output_tokens": 350,
+      "cached_input_tokens": 0,
+      "cost": 4.514e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "duration of this year's flu",
+    "condition": "influenza (flu)"
+  },
+  "sentences": [
+    "The duration of influenza (flu) can vary depending on several factors, including the individual's age, overall health, and the specific strain of the virus",
+    "Generally, the flu typically lasts around 1-2 weeks, but it can range from 5-14 days",
+    "Symptoms can start to improve within 3-4 days after the onset of illness, but it may take up to 2 weeks for a person to fully recover",
+    "However, some people, especially older adults and young children, may experience prolonged illness or complications that can last longer",
+    "It's essential to note that antiviral medications, such as oseltamivir (Tamiflu) and zanamivir (Relenza), can help shorten the duration and severity of the flu when started within 48 hours of symptom onset"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The flu typically lasts around 1-2 weeks.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The flu can range from 5-14 days.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Symptoms can start to improve within 3-4 days after the onset of illness.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "It may take up to 2 weeks for a person to fully recover.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Some people may experience prolonged illness or complications that can last longer.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Older adults and young children may experience prolonged illness or complications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Antiviral medications, such as oseltamivir (Tamiflu) and zanamivir (Relenza), can help shorten the duration and severity of the flu.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Antiviral medications can help shorten the duration of the flu.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Antiviral medications can help shorten the severity of the flu.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Antiviral medications must be started within 48 hours of symptom onset to be effective.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The flu typically lasts around 1-2 weeks, but can range from 5-14 days.",
+      "pattern": "A",
+      "notes": "Enumeration of duration ranges."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Symptoms can start to improve within 3-4 days after the onset of illness, and it may take up to 2 weeks for a person to fully recover.",
+      "pattern": "A",
+      "notes": "Enumeration of improvement and recovery timelines."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Some people may experience prolonged illness or complications that can last longer, particularly older adults and young children.",
+      "pattern": "A",
+      "notes": "Enumeration of high-risk groups."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Antiviral medications, such as oseltamivir (Tamiflu) and zanamivir (Relenza), can help shorten the duration and severity of the flu.",
+      "pattern": "D",
+      "notes": "Standalone fact about antiviral medications."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Antiviral medications can help shorten both the duration and severity of the flu.",
+      "pattern": "B",
+      "notes": "Causal chain."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Antiviral medications must be started within 48 hours of symptom onset to be effective.",
+      "pattern": "D",
+      "notes": "Standalone fact about antiviral medication timing."
+    }
+  ]
+}

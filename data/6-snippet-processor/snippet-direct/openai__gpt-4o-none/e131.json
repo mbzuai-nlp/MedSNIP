@@ -1,0 +1,69 @@
+{
+  "entry_id": 131,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "If the side effects of the Prozac become too much is there a wean down period I would have to go through or would I be able to stop it immediately?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 1726,
+    "output_tokens": 287,
+    "cached_input_tokens": 1536,
+    "cost": 0.005265
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1726,
+      "output_tokens": 287,
+      "cached_input_tokens": 1536,
+      "cost": 0.005265
+    }
+  ],
+  "shared_context": {
+    "topic": "weaning off Prozac",
+    "drug_a": "Prozac (fluoxetine)"
+  },
+  "sentences": [
+    "If the side effects of Prozac (fluoxetine) become too much, it is generally recommended to wean down the medication rather than stopping it abruptly",
+    "Abrupt discontinuation of Prozac can lead to withdrawal symptoms, which may include dizziness, headache, nausea, and irritability",
+    "The weaning process typically involves gradually reducing the dose over a period of time, which should be done under the guidance of a healthcare provider",
+    "The specific tapering schedule can vary depending on the individual’s current dose, duration of use, and response to the medication"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "If the side effects of Prozac (fluoxetine) become too much, it is generally recommended to wean down the medication rather than stopping it abruptly.",
+      "pattern": "C",
+      "notes": "Recommendation linked to a specific condition; complete with 'because' from next sentence."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Abrupt discontinuation of Prozac can lead to withdrawal symptoms, which may include dizziness, headache, nausea, and irritability.",
+      "pattern": "B",
+      "notes": "Explains why tapering is preferred; a causal link is implied."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "The weaning process typically involves gradually reducing the dose over a period of time, which should be done under the guidance of a healthcare provider. The specific tapering schedule can vary depending on the individual's current dose, duration of use, and response to the medication.",
+      "pattern": "A",
+      "notes": "Descriptions of the weaning process are merged; they enumerate procedural details."
+    }
+  ]
+}

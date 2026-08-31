@@ -1,0 +1,211 @@
+{
+  "entry_id": 52,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is there a reason why my urine is clear",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2929,
+    "output_tokens": 802,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1366,
+      "output_tokens": 440,
+      "cached_input_tokens": 0,
+      "cost": 0.0002774
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1563,
+      "output_tokens": 362,
+      "cached_input_tokens": 0,
+      "cost": 0.00027214
+    }
+  ],
+  "shared_context": {
+    "topic": "clear urine color",
+    "condition": "urine color"
+  },
+  "sentences": [
+    "A clear urine color is a normal finding in many cases",
+    "Urine color can vary depending on several factors, including hydration level, diet, and underlying medical conditions",
+    "Here are some possible reasons why your urine may appear clear",
+    "Adequate hydration: Drinking enough fluids helps dilute the concentration of waste products in the urine, making it appear clearer",
+    "Diet: Consuming a diet rich in water-diluted foods, such as fruits and vegetables, can also lead to clear urine",
+    "Proper kidney function: In most cases, a clear urine color indicates normal kidney function, as the kidneys are able to effectively filter waste products from the blood",
+    "Lack of infection or inflammation: Clear urine can indicate the absence of a urinary tract infection (UTI) or inflammation, which can cause urine to appear cloudy or have a strong odor",
+    "However, it is essential to note that clear urine can also be a sign of underlying conditions such as",
+    "Diabetes: People with diabetes may have clear urine due to the body's inability to reabsorb glucose in the kidneys, leading to excessive glucose excretion",
+    "Kidney disease: Certain kidney diseases, such as minimal change disease, can cause clear urine",
+    "To determine the underlying cause of your clear urine, it is best to consult a healthcare professional for a thorough evaluation and diagnosis"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A clear urine color is a normal finding in many cases.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Urine color can vary depending on hydration level.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Urine color can vary depending on diet.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Urine color can vary depending on underlying medical conditions.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Adequate hydration can make urine appear clearer.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A diet rich in water-diluted foods can lead to clear urine.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Proper kidney function can indicate a clear urine color.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Normal kidney function allows the kidneys to effectively filter waste products from the blood.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Clear urine can indicate the absence of a urinary tract infection (UTI).",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Clear urine can indicate the absence of inflammation.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Diabetes can cause clear urine due to the body's inability to reabsorb glucose in the kidneys.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Certain kidney diseases, such as minimal change disease, can cause clear urine.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 13,
+      "text": "A healthcare professional should be consulted for a thorough evaluation and diagnosis of clear urine.",
+      "source_sentences": [
+        10
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A clear urine color is a normal finding in many cases.",
+      "pattern": "D",
+      "notes": "Standalone fact"
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "Urine color can vary depending on hydration level, diet, and underlying medical conditions.",
+      "pattern": "A",
+      "notes": "Enumeration of factors affecting urine color"
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Adequate hydration and a diet rich in water-diluted foods can make urine appear clearer.",
+      "pattern": "A",
+      "notes": "Related factors contributing to clear urine"
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Proper kidney function, which allows the kidneys to effectively filter waste products from the blood, can indicate a clear urine color.",
+      "pattern": "C",
+      "notes": "Cause and effect relationship"
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Clear urine can indicate the absence of a urinary tract infection (UTI) and the absence of inflammation.",
+      "pattern": "A",
+      "notes": "Related indications of clear urine"
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Certain conditions, such as diabetes and kidney diseases like minimal change disease, can cause clear urine.",
+      "pattern": "A",
+      "notes": "Enumeration of medical conditions related to clear urine"
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "A healthcare professional should be consulted for a thorough evaluation and diagnosis of clear urine.",
+      "pattern": "D",
+      "notes": "Standalone recommendation"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "entry_id": 228,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 77-year-old man presents to the emergency department with a complaint of sudden onset weakness in his right upper extremity. At home, the patient thought he was simply dehydrated, but he rapidly began to have trouble speaking. When his wife noted this she brought him into the hospital. On arrival to the emergency department, the patient is not responding to verbal stimuli and only withdraws his left upper extremity and lower extremity to pain. His past medical history is notable for hypertension and atrial fibrillation treated with metoprolol, apixaban, and lisinopril. His temperature is 99.0°F (37.2°C), blood pressure is 170/100 mmHg, pulse is 95/min, and respirations are 16/min. The patient has a seizure and subsequently demonstrates agonal breathing. He no longer responds to painful stimuli. A fingerstick blood glucose is 122 mg/dL. Which of the following is the most likely etiology of this patient's symptoms? (A) Epidural hematoma (B) Intracerebral hemorrhage (C) Ischemic stroke (D) Subarachnoid hemorrhage (E) Subdural hematoma",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4688,
+    "output_tokens": 1519,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1934,
+      "output_tokens": 773,
+      "cached_input_tokens": 0,
+      "cost": 6.96e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2754,
+      "output_tokens": 746,
+      "cached_input_tokens": 0,
+      "cost": 8.492e-05
+    }
+  ],
+  "shared_context": {
+    "patient_age": 77,
+    "patient_sex": "male",
+    "presenting_complaint": "sudden onset weakness in right upper extremity",
+    "key_history": "hypertension, atrial fibrillation, dehydration",
+    "exam": "decreased responsiveness, agonal breathing, seizure",
+    "vitals": "BP 170/100 mmHg, pulse 95/min, temp 99.0°F (37.2°C)",
+    "medications": "metoprolol, apixaban, lisinopril",
+    "question_type": "most likely etiology"
+  },
+  "sentences": [
+    "To determine the most likely etiology of the patient's symptoms, let's break down the key information provided",
+    "Sudden onset weakness in one upper extremity and subsequent loss of responsiveness: This indicates a possible neurological event affecting motor function and potentially consciousness",
+    "History of hypertension and atrial fibrillation: Atrial fibrillation is a risk factor for ischemic stroke due to the potential for clot formation, while hypertension is a risk factor for both ischemic and hemorrhagic strokes",
+    "Rise in blood pressure and heart rate: Elevated blood pressure in the context of neurological deterioration may indicate a hypertensive emergency, which is often seen in ischemic stroke or intracerebral hemorrhage",
+    "High fingerstick blood glucose (122 mg/dL): Although not significantly elevated, this may indicate some degree of metabolic stress or underlying diabetes mellitus, but it's unlikely to be the primary cause of the patient's neurological symptoms",
+    "Seizure and agonal breathing: These signs can be seen in various severe neurological injuries, including intracerebral hemorrhage, subarachnoid hemorrhage, epidural hematoma, and ischemic stroke",
+    "Epidural hematoma: Typically presents with a history of trauma and a lucid interval, which is not present in this case",
+    "Intracerebral hemorrhage: More common in patients with hypertension and can present with sudden onset of neurological deficits",
+    "The patient's history of hypertension and sudden rise in blood pressure support this option",
+    "Ischemic stroke: Atrial fibrillation is a significant risk factor for ischemic stroke",
+    "However, the patient's rapid decline in consciousness suggests a more catastrophic event",
+    "Subarachnoid hemorrhage: Often associated with a \"thunderclap headache\" and typically not seen in isolation without a history of trauma or aneurysm",
+    "Subdural hematoma: Like epidural hematoma, it's typically associated with trauma and would not explain the absence of a history of trauma",
+    "Based on the information provided, the most likely etiology is an intracerebral hemorrhage"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Sudden onset weakness in one upper extremity and subsequent loss of responsiveness: This indicates a possible neurological event affecting motor function and potentially consciousness.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "History of hypertension and atrial fibrillation: Atrial fibrillation is a risk factor for ischemic stroke due to the potential for clot formation, while hypertension is a risk factor for both ischemic and hemorrhagic strokes.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Rise in blood pressure and heart rate: Elevated blood pressure in the context of neurological deterioration may indicate a hypertensive emergency, which is often seen in ischemic stroke or intracerebral hemorrhage.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "High fingerstick blood glucose (122 mg/dL): Although not significantly elevated, this may indicate some degree of metabolic stress or underlying diabetes mellitus, but it's unlikely to be the primary cause of the patient's neurological symptoms.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Seizure and agonal breathing: These signs can be seen in various severe neurological injuries, including intracerebral hemorrhage, subarachnoid hemorrhage, epidural hematoma, and ischemic stroke.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Epidural hematoma: Typically presents with a history of trauma and a lucid interval, which is not present in this case.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Intracerebral hemorrhage: More common in patients with hypertension and can present with sudden onset of neurological deficits.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's history of hypertension and sudden rise in blood pressure support this option.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Ischemic stroke: Atrial fibrillation is a significant risk factor for ischemic stroke.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "However, the patient's rapid decline in consciousness suggests a more catastrophic event.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Subarachnoid hemorrhage: Often associated with a 'thunderclap headache' and typically not seen in isolation without a history of trauma or aneurysm.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Subdural hematoma: Like epidural hematoma, it's typically associated with trauma and would not explain the absence of a history of trauma.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Based on the information provided, the most likely etiology is an intracerebral hemorrhage.",
+      "source_sentences": [
+        13
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The 77-year-old man's sudden onset weakness in one upper extremity and subsequent loss of responsiveness indicates a possible neurological event affecting motor function and consciousness.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The patient's history of hypertension and atrial fibrillation raises the risk for ischemic stroke due to the potential for clot formation, while hypertension is a risk factor for both ischemic and hemorrhagic strokes.",
+      "pattern": "D",
+      "notes": "Risk factor discussion."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Elevated blood pressure in the context of neurological deterioration may indicate a hypertensive emergency, which is often seen in ischemic stroke or intracerebral hemorrhage.",
+      "pattern": "D",
+      "notes": "Clinical impression."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Although not significantly elevated, the patient's high fingerstick blood glucose (122 mg/dL) may indicate some degree of metabolic stress or underlying diabetes mellitus, but it's unlikely to be the primary cause of the patient's neurological symptoms.",
+      "pattern": "D",
+      "notes": "Standalone risk-factor."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The patient's seizure and agonal breathing can be seen in various severe neurological injuries, including intracerebral hemorrhage, subarachnoid hemorrhage, epidural hematoma, and ischemic stroke.",
+      "pattern": "D",
+      "notes": "Clinical impression."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Epidural hematoma typically presents with a history of trauma and a lucid interval, which is not present in this case.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Intracerebral hemorrhage is more common in patients with hypertension and can present with sudden onset of neurological deficits.",
+      "pattern": "D",
+      "notes": "Risk factor discussion."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The patient's history of hypertension and sudden rise in blood pressure support intracerebral hemorrhage as a possible diagnosis.",
+      "pattern": "D",
+      "notes": "Risk factor discussion."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Atrial fibrillation is a significant risk factor for ischemic stroke.",
+      "pattern": "D",
+      "notes": "Risk factor discussion."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "However, the patient's rapid decline in consciousness suggests a more catastrophic event.",
+      "pattern": "D",
+      "notes": "Clinical impression."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Subarachnoid hemorrhage often associated with a 'thunderclap headache' and typically not seen in isolation without a history of trauma or aneurysm.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Subdural hematoma like epidural hematoma is typically associated with trauma and would not explain the absence of a history of trauma.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Based on the information provided, the most likely etiology is an intracerebral hemorrhage.",
+      "pattern": "C",
+      "notes": "Final answer with reasoning inlined."
+    }
+  ]
+}

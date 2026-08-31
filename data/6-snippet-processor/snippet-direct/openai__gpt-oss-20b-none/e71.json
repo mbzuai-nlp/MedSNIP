@@ -1,0 +1,116 @@
+{
+  "entry_id": 71,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old man presents to the emergency department with epistaxis for the past hour. He has never had epistaxis before and has been unable to control it with pressure, head elevation, and ice. The patient has a past medical history of atrial fibrillation and is currently taking metoprolol and warfarin. His temperature is 98.5°F (36.9°C), blood pressure is 123/81 mmHg, pulse is 90/min, respirations are 13/min, and oxygen saturation is 97% on room air. Physical exam reveals a comfortable man in no distress. Inspection reveals active bleeding in the anterior nares. There is not a clear, single bleeding vessel. Which of the following is the most appropriate initial step in management? (A) Cauterization with silver nitrate (B) Fresh frozen plasma and intravenous phytonadione (C) Intravenous tranexamic acid (D) Placement of posterior nasal packing (E) Topical oxymetazoline",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2578,
+    "output_tokens": 3414,
+    "cached_input_tokens": 0,
+    "cost": 0.0005553
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2578,
+      "output_tokens": 3414,
+      "cached_input_tokens": 0,
+      "cost": 0.0005553
+    }
+  ],
+  "shared_context": {
+    "age": "55",
+    "sex": "male",
+    "chief_complaint": "epistaxis >1 hour",
+    "medical_history": "atrial fibrillation; taking metoprolol and warfarin",
+    "vitals": "BP 123/81, pulse 90, RR 13, O2 97% RA",
+    "exam_findings": "active anterior nasal bleeding",
+    "correct_answer": "Fresh frozen plasma and intravenous phytonadione"
+  },
+  "sentences": [
+    "To determine the most appropriate initial step in management for this patient, we need to consider his history of atrial fibrillation and current anticoagulation therapy with warfarin",
+    "Warfarin increases the risk of bleeding, and this patient has an active nosebleed that cannot be controlled with pressure, head elevation, and ice",
+    "First, let's assess his anticoagulation status",
+    "The patient's INR is not provided, but his presentation suggests that he may be on the higher end of the therapeutic range, given his history of atrial fibrillation and current anticoagulation therapy",
+    "In patients on warfarin, the initial management should focus on stabilizing the patient and addressing the bleeding",
+    "The most appropriate initial step is to administer fresh frozen plasma and intravenous phytonadione (vitamin K) to reverse the anticoagulation effect of warfarin",
+    "This is because warfarin exerts its anticoagulant effect by inhibiting the production of vitamin K-dependent clotting factors, and administering phytonadione can help restore the normal coagulation pathway",
+    "Option A, cauterization with silver nitrate, may not be effective given the patient's active bleeding and potential coagulopathy",
+    "Option C, intravenous tranexamic acid, may also not be the best initial step, as it may not address the underlying coagulopathy caused by warfarin",
+    "Option D, placement of posterior nasal packing, may not be necessary given the anterior location of the bleeding",
+    "Option E, topical oxymetazoline, may be used to reduce nasal mucosal blood flow, but it does not address the underlying coagulopathy"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "The 55-year-old male with atrial fibrillation who is currently taking warfarin has increased risk of bleeding, and his active epistaxis cannot be controlled with pressure, head elevation, or ice.",
+      "pattern": "A",
+      "notes": "Both sentences enumerate properties of warfarin in this subject."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "To determine anticoagulation status, the 55-year-old male's INR is not shown but may be at the higher end of the therapeutic range given his atrial fibrillation and warfarin therapy.",
+      "pattern": "A",
+      "notes": "Combines the procedural step with the inferred INR status."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6
+      ],
+      "output": "In patients on warfarin, initial management focuses on stabilizing and addressing bleeding; the most appropriate initial step for the 55-year-old male is to administer fresh frozen plasma and intravenous phytonadione to reverse warfarin, because warfarin inhibits vitamin K-dependent clotting factors and vitamin K restores coagulation.",
+      "pattern": "C",
+      "notes": "Conclusion (administer FFP+vit K) supported by premises in 4‑6."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Option A, cauterization with silver nitrate, may not be effective for this 55-year-old male's active bleeding and possible coagulopathy.",
+      "pattern": "D",
+      "notes": "Standalone assessment of consider‑her option."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Option C, intravenous tranexamic acid, may not be the best initial step for this 55-year-old male, because it does not target the underlying warfarin-induced coagulopathy.",
+      "pattern": "D",
+      "notes": "Independent consideration of Option C."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Option D, placement of posterior nasal packing, may not be necessary for this 55-year-old male's anterior bleeding.",
+      "pattern": "D",
+      "notes": "Independent assessment of Option D."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Option E, topical oxymetazoline, may be used to reduce nasal mucosal blood flow in this 55-year-old male, but it does not address the underlying warfarin-induced coagulopathy.",
+      "pattern": "D",
+      "notes": "Independent discussion of Option E."
+    }
+  ]
+}

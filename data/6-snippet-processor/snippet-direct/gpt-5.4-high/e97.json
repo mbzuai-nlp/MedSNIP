@@ -1,0 +1,80 @@
+{
+  "entry_id": 97,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Will the antibiotics prevent the lyme disease from progressing?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1733,
+    "output_tokens": 919,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1733,
+      "output_tokens": 919,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "whether antibiotics prevent Lyme disease from progressing",
+    "drug_a": "antibiotics",
+    "condition": "Lyme disease"
+  },
+  "sentences": [
+    "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection",
+    "Early treatment typically involves oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil",
+    "For early localized or early disseminated Lyme disease, a 10- to 21-day course of antibiotics is generally recommended",
+    "If Lyme disease is treated promptly, most patients recover completely without long-term complications",
+    "However, if the disease is not treated in its early stages, it can progress to more severe forms, including Lyme arthritis, neurological Lyme disease, and Lyme carditis",
+    "In such cases, longer courses of antibiotics or intravenous antibiotics may be required"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection.",
+      "pattern": "D",
+      "notes": "Standalone fact that directly answers the question with an explicit condition."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Early treatment of Lyme disease typically involves oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil.",
+      "pattern": "D",
+      "notes": "Standalone treatment fact listing commonly used oral antibiotics."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "For early localized or early disseminated Lyme disease, a 10- to 21-day course of antibiotics is generally recommended.",
+      "pattern": "D",
+      "notes": "Standalone recommendation about antibiotic treatment duration."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "If Lyme disease is treated promptly, most patients recover completely without long-term complications.",
+      "pattern": "D",
+      "notes": "Standalone prognosis statement contingent on prompt treatment."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "If Lyme disease is not treated in its early stages, Lyme disease can progress to more severe forms, including Lyme arthritis, neurological Lyme disease, and Lyme carditis, and longer courses of antibiotics or intravenous antibiotics may be required.",
+      "pattern": "B",
+      "notes": "Merged because sentence 5 depends on sentence 4 through the explicit conditional reference 'In such cases.'"
+    }
+  ]
+}

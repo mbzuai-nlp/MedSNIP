@@ -1,0 +1,156 @@
+{
+  "entry_id": 261,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 37-year-old woman presents to the emergency department in cardiac arrest. She was found to have altered mental status at home, and during transport to the hospital, she became pulseless. Cardiopulmonary resuscitation is ongoing and 2 intravenous lines are placed. The patient is obese, and her only medication is an oral contraceptive pill. She recently underwent Achilles tendon repair. She otherwise is known to smoke cigarettes on occasion. Physical exam is notable for a critically ill patient with chest compressions ongoing. The monitor shows pulseless electrical activity. Her right lower extremity is in a post-operative splint. The patient regains her pulse after several rounds of CPR and epinephrine. A bedside echocardiograph is notable for a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle. Which of the following is the most likely diagnosis? (A) Cardiogenic shock (B) Hemorrhagic shock (C) Neurogenic shock (D) Obstructive shock (E) Septic shock",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2585,
+    "output_tokens": 4663,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2585,
+      "output_tokens": 4663,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "37",
+    "sex": "female",
+    "chief_complaint": "cardiac arrest after altered mental status",
+    "medical_history": "obesity; recent Achilles tendon repair; occasional cigarette smoking",
+    "medications": "oral contraceptive pill",
+    "exam_findings": "pulseless electrical activity; critically ill during active chest compressions; right lower extremity in a postoperative splint; bedside echocardiogram with a dilated hypokinetic right ventricle and septal bowing into a hyperkinetic left ventricle",
+    "treatment_history": "ongoing CPR; two intravenous lines placed; epinephrine; return of spontaneous circulation after several rounds of CPR",
+    "correct_answer": "Obstructive shock (D)"
+  },
+  "sentences": [
+    "The patient is a 37-year-old woman in cardiac arrest with a known history of altered mental status preceding her pulseless state",
+    "CPR is ongoing, and she has two intravenous lines placed",
+    "She is noted to be obese and takes an oral contraceptive pill",
+    "She recently underwent Achilles tendon repair and is an occasional smoker",
+    "The physical exam shows a critically ill patient with active chest compressions",
+    "The monitor reveals pulseless electrical activity (PEA)",
+    "After several rounds of CPR and epinephrine, she regains a pulse",
+    "Bedside echocardiogram reveals a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle",
+    "Cardiogenic Shock: Typically involves left ventricular dysfunction and would not present with the described right ventricle findings",
+    "Hemorrhagic Shock: Involves significant blood loss and would not necessarily present with right ventricular dilation and hypokinesis",
+    "Neurogenic Shock: Characterized by hypotension and bradycardia due to spinal cord injury, which does not match the echocardiographic findings",
+    "Obstructive Shock: Often caused by conditions such as pulmonary embolism, which can lead to right ventricular dilation and hypokinesis",
+    "Septic Shock: Involves systemic infection leading to vasodilation and does not typically result in isolated right ventricular findings",
+    "The dilated and hypokinetic right ventricle with septal bowing suggests increased right ventricular pressure, likely due to obstruction",
+    "A common cause of obstructive shock is a massive pulmonary embolism, especially given the patient's risk factors (recent surgery, obesity, oral contraceptive use, and smoking)",
+    "Given the echocardiographic findings and the patient’s risk factors, the most likely diagnosis is",
+    "(D) Obstructive shock"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "A 37-year-old woman developed cardiac arrest after altered mental status preceded the pulseless event.",
+      "pattern": "D",
+      "notes": "Standalone case summary fact."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "CPR is ongoing in this 37-year-old woman, and two intravenous lines have been placed.",
+      "pattern": "D",
+      "notes": "Standalone resuscitation detail."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "This 37-year-old woman is obese, takes an oral contraceptive pill, recently underwent Achilles tendon repair, and smokes occasionally.",
+      "pattern": "A",
+      "notes": "Two sentences enumerate the same patient's thromboembolic risk factors."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Physical examination shows a critically ill 37-year-old woman undergoing active chest compressions.",
+      "pattern": "D",
+      "notes": "Standalone exam statement."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "The cardiac monitor shows pulseless electrical activity in this 37-year-old woman.",
+      "pattern": "D",
+      "notes": "Standalone rhythm finding."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "After several rounds of CPR and epinephrine, this 37-year-old woman regains a pulse.",
+      "pattern": "D",
+      "notes": "Standalone treatment response."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Bedside echocardiography in this 37-year-old woman shows a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle.",
+      "pattern": "D",
+      "notes": "Standalone imaging finding."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Cardiogenic shock typically involves left ventricular dysfunction and would not be expected to produce the 37-year-old woman's bedside echocardiographic finding of right ventricular dilation and hypokinesis.",
+      "pattern": "F",
+      "notes": "One distinct differential-elimination fact among several shock types."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Hemorrhagic shock involves major blood loss and would not necessarily explain the 37-year-old woman's right ventricular dilation and hypokinesis on bedside echocardiography.",
+      "pattern": "F",
+      "notes": "Separate checkable differential-elimination fact."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Neurogenic shock is characterized by hypotension and bradycardia due to spinal cord injury and does not match the 37-year-old woman's echocardiographic findings.",
+      "pattern": "F",
+      "notes": "Separate differential statement that stands on its own."
+    },
+    {
+      "source_sentences": [
+        11,
+        13,
+        14,
+        15,
+        16
+      ],
+      "output": "Obstructive shock, often caused by pulmonary embolism, can produce right ventricular dilation and hypokinesis; in this 37-year-old woman with recent Achilles tendon repair, obesity, oral contraceptive use, and occasional smoking, the echocardiographic finding of a dilated, hypokinetic right ventricle with septal bowing suggests increased right ventricular pressure from obstruction, making obstructive shock the most likely diagnosis.",
+      "pattern": "C",
+      "notes": "Final diagnosis is merged with the supporting echocardiographic interpretation and risk-factor reasoning."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Septic shock causes infection-related vasodilation and does not typically produce isolated right ventricular findings like those seen in this 37-year-old woman.",
+      "pattern": "F",
+      "notes": "Separate differential-elimination fact."
+    }
+  ]
+}

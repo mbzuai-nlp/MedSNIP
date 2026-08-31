@@ -1,0 +1,63 @@
+{
+  "entry_id": 87,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "My cat was just diagnosed with a tapeworm, could that be something I can get from him?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1737,
+    "output_tokens": 1550,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1737,
+      "output_tokens": 1550,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "human risk of getting tapeworm from a cat",
+    "condition": "tapeworm infection"
+  },
+  "sentences": [
+    "Yes, it is possible for humans to contract a tapeworm infection from their pets, although it is relatively rare",
+    "The most common tapeworm in dogs and cats is *Dipylidium caninum*",
+    "Humans can become infected if they accidentally ingest an infected flea that contains the larval tapeworm",
+    "This typically happens when infants or young children come into close contact with pets and may accidentally swallow a flea while playing or cuddling with the animal",
+    "To prevent infection, ensure your pet is regularly treated for fleas and practice good hygiene, such as washing hands after handling pets and avoiding close contact with pets' bedding or areas where fleas might be present"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Humans can contract a tapeworm infection from pets, but this is relatively rare.",
+      "pattern": "D",
+      "notes": "Standalone zoonotic-risk statement."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3
+      ],
+      "output": "The most common tapeworm in dogs and cats is Dipylidium caninum, and humans can become infected by accidentally ingesting an infected flea that contains the larval tapeworm; this typically occurs when infants or young children are in close contact with pets and accidentally swallow a flea while playing or cuddling with the animal.",
+      "pattern": "B",
+      "notes": "Transmission mechanism and typical exposure scenario form a causal chain; sentence 1 identifies the tapeworm being discussed."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "To help prevent tapeworm infection from pets, pets should be treated regularly for fleas, hands should be washed after handling pets, and close contact with pets' bedding or areas where fleas might be present should be avoided.",
+      "pattern": "A",
+      "notes": "Enumeration of preventive measures for the same topic."
+    }
+  ]
+}

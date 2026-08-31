@@ -1,0 +1,71 @@
+{
+  "entry_id": 87,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "My cat was just diagnosed with a tapeworm, could that be something I can get from him?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1788,
+    "output_tokens": 939,
+    "cached_input_tokens": 0,
+    "cost": 0.0001851
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1788,
+      "output_tokens": 939,
+      "cached_input_tokens": 0,
+      "cost": 0.0001851
+    }
+  ],
+  "shared_context": {
+    "topic": "tapeworm infection from pets",
+    "condition": "tapeworm infection"
+  },
+  "sentences": [
+    "Yes, it is possible for humans to contract a tapeworm infection from their pets, although it is relatively rare",
+    "The most common tapeworm in dogs and cats is *Dipylidium caninum*",
+    "Humans can become infected if they accidentally ingest an infected flea that contains the larval tapeworm",
+    "This typically happens when infants or young children come into close contact with pets and may accidentally swallow a flea while playing or cuddling with the animal",
+    "To prevent infection, ensure your pet is regularly treated for fleas and practice good hygiene, such as washing hands after handling pets and avoiding close contact with pets' bedding or areas where fleas might be present"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Humans can contract tapeworm infection from pets, although it is relatively rare.",
+      "pattern": "D",
+      "notes": "Standalone fact about zoonotic possibility."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The most common tapeworm in dogs and cats is Dipylidium caninum.",
+      "pattern": "D",
+      "notes": "Standalone species identification."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4
+      ],
+      "output": "Humans can become infected if they ingest an infected flea carrying larval Dipylidium caninum. This typically occurs when infants or young children closely interact with pets and accidentally swallow a flea. To prevent infection, pets should be regularly treated for fleas and owners should practice good hygiene such as washing hands after handling pets and avoiding close contact with pets' bedding or areas where fleas might be present.",
+      "pattern": "C",
+      "notes": "Conclusion (prevention recommendation) with necessary premises about flea transmission."
+    }
+  ]
+}

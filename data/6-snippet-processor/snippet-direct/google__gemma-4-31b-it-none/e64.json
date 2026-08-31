@@ -1,0 +1,142 @@
+{
+  "entry_id": 64,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old male bodybuilder presents to the emergency department with weakness of his right arm. The patient states he has experienced these symptoms for a few weeks; however, today his hand felt so weak he dropped his cup of tea. The patient has a medical history of diabetes. He drinks 2-7 alcoholic drinks per day and has smoked 2 packs of cigarettes per day since he was 25. The patient uses anabolic steroids. He has lost 17 pounds since he last came to the emergency department 1 month ago. His temperature is 99.5°F (37.5°C), blood pressure is 177/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 98% on room air. Physical exam reveals decreased sensation in the right arm and 2/5 strength in the right arm and 5/5 strength in in the left arm. The patient states that he is experiencing a dull aching and burning pain in his right arm during the exam. Symptoms are not changed with changes in head and neck position. Which of the following is the most likely diagnosis? (A) Apical lung tumor (B) Brachial plexopathy (C) Cerebral infarction (D) Scalenus anticus syndrome (E) Subclavian steal syndrome",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2919,
+    "output_tokens": 949,
+    "cached_input_tokens": 0,
+    "cost": 0.00074009
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2919,
+      "output_tokens": 949,
+      "cached_input_tokens": 0,
+      "cost": 0.00074009
+    }
+  ],
+  "shared_context": {
+    ".age": "55",
+    "sex": "male",
+    "chief_complaint": "weakness of right arm",
+    "medical_history": "diabetes, anabolic steroid use, smoking (2 packs/day since age 25)",
+    "vitals": "T 99.5°F, BP 177/108 mmHg, P 90/min, RR 17/min, SpO2 98%",
+    "exam_findings": "decreased sensation right arm, 2/5 strength right arm, 5/5 strength left arm, dull aching/burning right arm pain, symptoms unchanged with head/neck position",
+    "treatment_history": "lost 17 lbs in the last month",
+    "correct_answer": "Brachial plexopathy (B)"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for this patient, let's analyze the symptoms and medical history presented",
+    "The patient is a 55-year-old male bodybuilder with a history of diabetes, who uses anabolic steroids, and has a significant smoking history (2 packs per day since age 25)",
+    "He presents with weakness of his right arm, which has been progressive over a few weeks, and today felt severe enough to cause him to drop his cup of tea",
+    "He also reports a dull aching and burning pain in his right arm during the physical exam",
+    "The physical exam reveals decreased sensation in the right arm and 2/5 strength in the right arm, but 5/5 strength in the left arm",
+    "The symptoms are not changed with changes in head and neck position",
+    "Given the progressive nature of the symptoms, the physical exam findings, and the patient's medical history, the most likely diagnosis is Brachial Plexopathy (B)",
+    "Brachial plexopathy is a condition in which the brachial plexus, a network of nerves that supply the arm, is damaged",
+    "This can result in weakness, numbness, and pain in the arm, which is consistent with the patient's symptoms",
+    "Other options are less likely based on the information provided",
+    "A) Apical lung tumor: This would typically present with symptoms such as cough, hemoptysis, and weight loss, which are not mentioned in the patient's history",
+    "C) Cerebral infarction: This would typically present with sudden onset of symptoms, such as hemiparesis, aphasia, and visual field defects, which are not consistent with this patient's presentation",
+    "D) Scalenus anticus syndrome: This is a condition in which the scalenus anterior muscle compresses the brachial plexus, leading to pain and weakness in the arm",
+    "However, the symptoms of scalenus anticus syndrome are typically relieved by changes in head and neck position, which is not the case in this patient",
+    "E) Subclavian steal syndrome: This is a condition in which the subclavian artery is narrowed or blocked, leading to decreased blood flow to the arm",
+    "While this could potentially cause weakness and pain in the arm, it would typically present with other symptoms such as arm fatigue and Raynaud's phenomenon, which are not mentioned in the patient's history"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The diagnosis for this 55-year-old male bodybuilder with right arm weakness must be determined by analyzing his symptoms and medical history.",
+      "pattern": "D",
+      "notes": "Introductory statement; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "The patient is a 55-year-old male bodybuilder with diabetes, anabolic steroid use, and a smoking history (2 packs per day since age 25), who presents with right arm weakness progressive over a few weeks (severe enough to drop a cup today), dull aching and burning pain in the right arm, decreased sensation in the right arm, 2/5 strength in the right arm (compared to 5/5 in the left), and symptoms that are not changed with changes in head and neck position.",
+      "pattern": "A",
+      "output_notes": "Enumeration of patient properties and presentation.",
+      "notes": "Enumeration of patient history and clinical findings."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Given the progressive nature of the symptoms, the physical exam findings, and the medical history of this 55-year-old male, the most likely diagnosis is Brachial Plexopathy (B).",
+      "pattern": "C",
+      "notes": "Conclusion based on premises."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "Brachial plexopathy is a condition in which the brachial plexus, a network of nerves that supply the arm, is damaged, which can result in weakness, numbness, and pain in the arm consistent with this patient's symptoms.",
+      "pattern": "B",
+      "notes": "Causal chain linking the definition to the symptoms."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Other diagnostic options for this 55-year-old male are less likely based on the provided information.",
+      "pattern": "D",
+      "notes": "Standalone transition statement."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "An apical lung tumor would typically present with symptoms such as cough, hemoptysis, and weight loss, which are not mentioned in this patient's history.",
+      "pattern": "D",
+      "notes": "Standalone checkable fact about a differential."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "A cerebral infarction would typically present with sudden onset of symptoms, such as hemiparesis, aphasia, and visual field defects, which are not consistent with this 55-year-old patient's presentation.",
+      "pattern": "D",
+      "notes": "Standalone checkable fact about a differential."
+    },
+    {
+      "source_sentences": [
+        12,
+        13
+      ],
+      "output": "Scalenus anticus syndrome is a condition in which the scalenus anterior muscle compresses the brachial plexus, leading to pain and weakness in the arm, but symptoms are typically relieved by changes in head and neck position, which is not the case in this patient.",
+      "pattern": "B",
+      "notes": "Logical chain connecting the condition's nature to the patient's lack of response to positioning."
+    },
+    {
+      "source_sentences": [
+        14,
+        15
+      ],
+      "output": "Subclavian steal syndrome is a condition in which the subclavian artery is narrowed or blocked, leading to decreased blood flow to the arm; while this could cause weakness and pain, it typically presents with arm fatigue and Raynaud's phenomenon, which are not mentioned in this patient's history.",
+      "pattern": "B",
+      "notes": "Causal link between pathology and typical symptoms versus the patient."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "entry_id": 178,
+  "batch_id": 18,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to the emergency department with fatigue and dark urine over the past day. He was recently diagnosed with cellulitis of his left leg, for which he was prescribed trimethoprim-sulfamethoxazole. He denies having nausea, vomiting, or diarrhea. He has no significant medical history and does not currently take any medications. His temperature is 98.6°F (37°C), blood pressure is 115/72 mmHg, pulse is 98/min, and respirations are 14/min. Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg. Laboratory workup is performed, and the results are shown below: Serum: Hemoglobin: 7.2 g/dL Total bilirubin: 2.1 mg/dL Direct bilirubin: 0.8 mg/dL Lactate dehydrogenase: 470 U/L Glucose-6-phosphate dehydrogenase: 7 U/gHb (normal: 6-20 U/gHb) Which of the following would most likely be seen on a peripheral blood smear in this patient? (A) Acanthocytes (B) Codocytes (C) Degmacytes (D) Schistocytes (E) Spherocytes",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4677,
+    "output_tokens": 1081,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1867,
+      "output_tokens": 635,
+      "cached_input_tokens": 0,
+      "cost": 0.00048401
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2810,
+      "output_tokens": 446,
+      "cached_input_tokens": 0,
+      "cost": 0.00053478
+    }
+  ],
+  "shared_context": {
+    ":": "n/a",
+    "age": 26,
+    "sex": "male",
+    "chief_complaint": "fatigue and dark urine",
+    "medical_history": "cellulitis of left leg",
+    "medications": "trimethoprim-sulfamethoxazole",
+    "vitals": "T 98.6F, BP 115/72, P 98, R 14",
+    "exam_findings": "conjunctival icterus, bilateral flank tenderness, erythema of left leg",
+    "labs": "Hb 7.2 g/dL, Total Bilirubin 2.1 mg/dL, Direct Bilirubin 0.8 mg/dL, LDH 470 U/L, G6PD 7 U/gHb",
+    "correct_answer": "Spherocytes"
+  },
+  "sentences": [
+    "To determine the correct answer, we must consider the patient's symptoms and laboratory results",
+    "The patient presents with fatigue, dark urine, and conjunctival icterus, which suggest hemolytic anemia",
+    "The laboratory results show elevated lactate dehydrogenase (LDH) levels, which is consistent with hemolysis",
+    "The direct bilirubin level is also elevated, which indicates that the jaundice is due to direct (conjugated) bilirubin, which is produced when hemoglobin is broken down",
+    "The patient's hemoglobin level is also low, at 7.2 g/dL, further supporting the diagnosis of hemolytic anemia",
+    "The patient's recent diagnosis of cellulitis and treatment with trimethoprim-sulfamethoxazole are relevant",
+    "Trimethoprim-sulfamethoxazole can cause hemolysis in patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency",
+    "The patient's G6PD level is elevated at 7 U/gHb, which suggests that he has G6PD deficiency",
+    "Considering the patient's symptoms and laboratory results, the most likely finding on a peripheral blood smear would be spherocytes",
+    "Spherocytes are erythrocytes that have lost their biconcave disk shape and appear as smooth, round cells",
+    "They are a common finding in hemolytic anemia caused by G6PD deficiency"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's symptoms and laboratory results must be considered to determine the correct answer.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's presentation of fatigue, dark urine, and conjunctival icterus suggests hemolytic anemia.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's elevated lactate dehydrogenase (LDH) levels are consistent with hemolysis.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The elevated direct bilirubin level indicates jaundice is due to direct (conjugated) bilirubin, which is produced when hemoglobin is broken down.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's low hemoglobin level of 7.2 g/dL supports the diagnosis of hemolytic anemia.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient's recent diagnosis of cellulitis and treatment with trimethoprim-sulfamethoxazole are relevant.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Trimethoprim-sulfamethoxazole can cause hemolysis in patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's G6PD level of 7 U/gHb suggests that he has G6PD deficiency.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Given the patient's symptoms and laboratory results, the most likely finding on a peripheral blood smear would be spherocytes.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Spherocytes are erythrocytes that have lost their biconcave disk shape and appear as smooth, round cells.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Spherocytes are a common finding in hemolytic anemia caused by G6PD deficiency.",
+      "source_sentences": [
+        10
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The 26-year-old male patient's symptoms and laboratory results must be considered to determine the correct answer.",
+      "pattern": "D",
+      "notes": "Introductory statement."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        5
+      ],
+      "output": "The 26-year-old male's presentation of fatigue, dark urine, conjunctival icterus, low hemoglobin level of 7.2 g/dL, and elevated lactate dehydrogenase (LDH) levels suggest hemolytic anemia.",
+      "pattern": "A",
+      "notes": "Enumeration of clinical and lab findings supporting one subject (hemolytic anemia)."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The 26-year-old male's elevated direct bilirubin level indicates jaundice is due to direct (conjugated) bilirubin, which is produced when hemoglobin is broken down.",
+      "pattern": "B",
+      "notes": "Causal chain explaining bilirubin results."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "The patient's recent treatment with trimethoprim-sulfamethoxazole for cellulitis is relevant because trimethoprim-sulfamethoxazole can cause hemolysis in patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency, and this 26-year-old male's G6PD level of 7 U/gHb suggests he has G6PD deficiency.",
+      "pattern": "B",
+      "notes": "Causal chain linking drug, deficiency, and lab result."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11
+      ],
+      "output": "Given the 26-year-old male's symptoms and laboratory results, the most likely finding on a peripheral blood smear would be spherocytes; spherocytes are erythrocytes that have lost their biconcave disk shape and appear as smooth, round cells, and they are a common finding in hemolytic anemia caused by G6PD deficiency.",
+      "pattern": "C",
+      "notes": "Conclusion (Spherocytes) combined with supporting definitions and reasoning."
+    }
+  ]
+}

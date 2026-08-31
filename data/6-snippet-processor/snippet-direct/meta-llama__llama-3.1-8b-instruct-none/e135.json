@@ -1,0 +1,94 @@
+{
+  "entry_id": 135,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1823,
+    "output_tokens": 440,
+    "cached_input_tokens": 0,
+    "cost": 5.406e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1823,
+      "output_tokens": 440,
+      "cached_input_tokens": 0,
+      "cost": 5.406e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "losartan dosage and timing",
+    "drug_a": "losartan"
+  },
+  "sentences": [
+    "It is generally recommended to take losartan as prescribed by your healthcare provider",
+    "Losartan is typically administered once daily, but the specific regimen may vary depending on your condition and response to treatment",
+    "Some studies suggest that single daily doses of losartan may not provide 24-hour blood pressure control in all patients, and in such cases, splitting the dose to be taken twice daily might be considered to maintain more consistent blood pressure levels throughout the day",
+    "However, this adjustment should only be made under the guidance of your healthcare provider",
+    "One study comparing the efficacy of a single-dose formulation of losartan with an extended-release formulation found that the extended-release formulation provided better 24-hour blood pressure control, suggesting that splitting doses may not always be necessary if an appropriate formulation is used",
+    "Therefore, it is important to follow your doctor's recommendations regarding dosage and timing of losartan administration to ensure optimal control of your blood pressure and to minimize the risk of adverse effects"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "It is generally recommended to take losartan as prescribed by your healthcare provider.",
+      "pattern": "D",
+      "notes": "Standalone prescription fact."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Losartan is typically administered once daily, but the specific regimen may vary depending on your condition and response to treatment.",
+      "pattern": "D",
+      "notes": "Standalone dosing fact; note variation possible."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Some studies suggest that single daily doses of losartan may not provide 24-hour blood pressure control in all patients, and in such cases, splitting the dose to be taken twice daily might be considered.",
+      "pattern": "C",
+      "notes": "Conditional rule + instruction; merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "This adjustment should only be made under the guidance of your healthcare provider.",
+      "pattern": "B",
+      "notes": "Causal link between adjustment and healthcare provider guidance."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "An extended-release formulation of losartan provided better 24-hour blood pressure control, suggesting that splitting doses may not always be necessary.",
+      "pattern": "D",
+      "notes": "Standalone efficacy fact; note variation possible."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "It is important to follow your doctor's recommendations regarding dosage and timing of losartan administration to ensure optimal control of your blood pressure and to minimize the risk of adverse effects.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise; merged because each piece needs the other for verifiability."
+    }
+  ]
+}

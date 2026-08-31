@@ -1,0 +1,320 @@
+{
+  "entry_id": 274,
+  "batch_id": 28,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 60-year-old woman presents to the emergency department with back pain after gardening. Her pain is 7/10 in severity, non-radiating, and not relieved by rest. She has never experienced this pain in the past and denies fever, night sweats, unintentional weight loss, and bowel or bladder incontinence. She has hypertension for which she takes hydrochlorothiazide and had a recent asthma flare requiring a prednisone taper. She does not drink alcohol or smoke. Her temperature is 98.6°F (37.0°C), blood pressure is 120/80 mmHg, pulse is 90/min, and respirations are 18/min. Physical exam reveals an uncomfortable middle-aged woman in no acute distress. There is no tenderness to palpation of the spinous processes. Flexion of the hip with the knee extended while the patient is supine does not elicit any pain, nor does forced dorsiflexion of the foot at terminal hip extension. She has 5/5 strength to hip flexion, extension, abduction, and adduction; knee flexion and extension; and ankle dorsiflexion and plantarflexion bilaterally. Bilateral patellar and Achilles reflexes are 2+. Serum laboratory results are as follows: Hemoglobin: 12.0 g/dL Creatinine: 1.1 mg/dL Ca2+: 10.6 mg/dL Which of the following is the most likely diagnosis? (A) Herniated disc (B) Lumbosacral strain (C) Multiple myeloma (D) Spondylolisthesis (E) Vertebral compression fracture",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2945,
+    "output_tokens": 1882,
+    "cached_input_tokens": 0,
+    "cost": 0.00013418
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2945,
+      "output_tokens": 1882,
+      "cached_input_tokens": 0,
+      "cost": 0.00013418
+    }
+  ],
+  "shared_context": {
+    "age": "60",
+    "sex": "female",
+    "chief_complaint": "back pain after gardening",
+    "medical_history": "hypertension (on hydrochlorothiazide), recent asthma flare (on prednisone taper)",
+    "vitals": "Temperature 98.6°F (37.0°C), BP 120/80 mmHg, pulse 90/min, respirations 18/min",
+    "exam_findings": "uncomfortable but in no acute distress, no tenderness over spinous processes, negative straight leg raise test, full strength in lower extremities, bilateral patellar and Achilles reflexes normal",
+    "correct_answer": "Multiple myeloma (C)"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis, we need to analyze the patient's clinical presentation, physical exam findings, and laboratory results step-by-step",
+    "A 60-year-old woman with back pain after gardening",
+    "Pain is 7/10 in severity, non-radiating, and not relieved by rest",
+    "No history of similar pain, fever, night sweats, unintentional weight loss, or bowel/bladder incontinence",
+    "Medical history includes hypertension (on hydrochlorothiazide) and a recent asthma flare (on prednisone taper)",
+    "She does not drink alcohol or smoke",
+    "Vital signs: Temperature 98.6°F (37.0°C), BP 120/80 mmHg, pulse 90/min, respirations 18/min",
+    "Uncomfortable but in no acute distress",
+    "No tenderness over spinous processes",
+    "Negative straight leg raise test",
+    "Full strength in lower extremities",
+    "Bilateral patellar and Achilles reflexes are normal",
+    "Hemoglobin: 12.0 g/dL (normal)",
+    "Creatinine: 1.1 mg/dL (normal)",
+    "Calcium: 10.6 mg/dL (elevated)",
+    "Typically presents with radicular pain (pain radiating to the legs)",
+    "Positive straight leg raise test would suggest herniation",
+    "This patient's pain is non-radiating and straight leg raise is negative, making herniated disc less likely",
+    "Commonly presents with localized back pain without neurological deficits",
+    "Pain often worsens with movement and improves with rest",
+    "The patient’s pain is not relieved by rest, making this less likely",
+    "Common in patients over 60 years old",
+    "Presents with bone pain (often in the back), hypercalcemia, normocytic anemia, and renal insufficiency",
+    "Patient has hypercalcemia (Ca2+: 10.6 mg/dL), which raises suspicion for multiple myeloma",
+    "Characterized by forward slippage of a vertebra, causing lower back pain",
+    "Often presents with localized pain and may have palpable step-off",
+    "No step-off or other characteristic findings were noted on examination",
+    "Common in older adults, especially those with osteoporosis",
+    "Presents with acute pain, often after minor trauma",
+    "Pain typically localized and worsens with movement",
+    "No tenderness to palpation over the spinous processes and absence of acute distress makes this less likely",
+    "Given the patient's age, elevated calcium levels, and presentation of new-onset back pain not relieved by rest, the most likely diagnosis is Multiple Myeloma",
+    "This condition needs further confirmation with additional tests such as serum and urine protein electrophoresis, skeletal survey, and bone marrow biopsy",
+    "(C) Multiple myeloma"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely diagnosis, we need to analyze the patient's clinical presentation, physical exam findings, and laboratory results step-by-step.",
+      "pattern": "D",
+      "notes": "Standalone introduction; no context needed."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "A 60-year-old woman presents with back pain after gardening.",
+      "pattern": "D",
+      "notes": "Standalone patient description; no context needed."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "The patient's pain is 7/10 in severity, non-radiating, and not relieved by rest, with no history of similar pain, fever, night sweats, unintentional weight loss, or bowel/bladder incontinence.",
+      "pattern": "A",
+      "notes": "All properties of one subject (patient's pain)."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Her medical history includes hypertension (on hydrochlorothiazide) and a recent asthma flare (on prednisone taper).",
+      "pattern": "D",
+      "notes": "Standalone medical history; no context needed."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "She does not drink alcohol or smoke.",
+      "pattern": "D",
+      "notes": "Standalone habit information; no context needed."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Her vital signs are Temperature 98.6°F (37.0°C), BP 120/80 mmHg, pulse 90/min, respirations 18/min.",
+      "pattern": "D",
+      "notes": "Standalone vital sign report; no context needed."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "The patient is uncomfortable but in no acute distress.",
+      "pattern": "D",
+      "notes": "Standalone physical exam finding; no context needed."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "There is no tenderness over the spinous processes.",
+      "pattern": "D",
+      "notes": "Standalone physical exam finding; no context needed."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "The straight leg raise test is negative.",
+      "pattern": "D",
+      "notes": "Standalone physical exam finding; no context needed."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "She has full strength in her lower extremities.",
+      "pattern": "D",
+      "notes": "Standalone physical exam finding; no context needed."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Bilateral patellar and Achilles reflexes are normal.",
+      "pattern": "D",
+      "notes": "Standalone physical exam finding; no context needed."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Her hemoglobin is 12.0 g/dL (normal), creatinine is 1.1 mg/dL (normal), and calcium is 10.6 mg/dL (elevated).",
+      "pattern": "D",
+      "notes": "Standalone laboratory result; no context needed."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Herniated disc typically presents with radicular pain (pain radiating to the legs).",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "A positive straight leg raise test would suggest herniation.",
+      "pattern": "D",
+      "notes": "Standalone physical exam finding; no context needed."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "This patient's pain is non-radiating and the straight leg raise test is negative, making herniated disc less likely.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "Commonly presents with localized back pain without neurological deficits.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "The patient's pain is not relieved by rest, making this less likely.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Common in patients over 60 years old.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        19
+      ],
+      "output": "Presents with bone pain (often in the back), hypercalcemia, normocytic anemia, and renal insufficiency.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        20
+      ],
+      "output": "The patient has hypercalcemia (Ca2+: 10.6 mg/dL), which raises suspicion for multiple myeloma.",
+      "pattern": "D",
+      "notes": "Standalone laboratory result; no context needed."
+    },
+    {
+      "source_sentences": [
+        21
+      ],
+      "output": "Characterized by forward slippage of a vertebra, causing lower back pain.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        22
+      ],
+      "output": "Often presents with localized pain and may have palpable step-off.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        23
+      ],
+      "output": "No step-off or other characteristic findings were noted on examination.",
+      "pattern": "D",
+      "notes": "Standalone physical exam finding; no context needed."
+    },
+    {
+      "source_sentences": [
+        24
+      ],
+      "output": "Common in older adults, especially those with osteoporosis.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        25
+      ],
+      "output": "Presents with acute pain, often after minor trauma.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        26
+      ],
+      "output": "The pain typically localized and worsens with movement.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        27
+      ],
+      "output": "No tenderness to palpation over the spinous processes and absence of acute distress makes this less likely.",
+      "pattern": "D",
+      "notes": "Standalone physical exam finding; no context needed."
+    },
+    {
+      "source_sentences": [
+        28
+      ],
+      "output": "Given the patient's age, elevated calcium levels, and presentation of new-onset back pain not relieved by rest, the most likely diagnosis is Multiple Myeloma.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises."
+    },
+    {
+      "source_sentences": [
+        29
+      ],
+      "output": "This condition needs further confirmation with additional tests such as serum and urine protein electrophoresis, skeletal survey, and bone marrow biopsy.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; no context needed."
+    },
+    {
+      "source_sentences": [
+        30
+      ],
+      "output": "The correct answer is (C) Multiple myeloma.",
+      "pattern": "D",
+      "notes": "Standalone answer; no context needed."
+    }
+  ]
+}

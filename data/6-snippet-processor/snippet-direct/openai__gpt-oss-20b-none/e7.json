@@ -1,0 +1,70 @@
+{
+  "entry_id": 7,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "How long does this years flu usually last?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1782,
+    "output_tokens": 1470,
+    "cached_input_tokens": 0,
+    "cost": 0.00025926
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1782,
+      "output_tokens": 1470,
+      "cached_input_tokens": 0,
+      "cost": 0.00025926
+    }
+  ],
+  "shared_context": {
+    "topic": "duration of flu season"
+  },
+  "sentences": [
+    "Influenza activity typically lasts for about 3 to 5 weeks in a specific location, with a gradual increase in cases reaching its peak, followed by a decline in 3 weeks",
+    "However, global influenza activity can persist for several months",
+    "According to the World Health Organization (WHO), the flu season can last for about 5 to 6 months, with activity levels varying from season to season",
+    "It's worth noting that the duration of flu season can be influenced by various factors, including the specific strain of the virus, weather patterns, and human behavior",
+    "In general, influenza activity tends to follow a cyclical pattern, with outbreaks occurring more frequently during the colder months of the year"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2
+      ],
+      "output": "Influenza activity typically lasts 3 to 5 weeks at a specific location; global influenza activity can persist for several months; the WHO reports that flu season can last 5 to 6 months, with activity levels varying between seasons.",
+      "pattern": "A",
+      "notes": "Enumerates multiple duration claims about the same subject (flu season duration)."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The duration of flu season can be affected by factors such as the virus strain, weather patterns, and human behavior.",
+      "pattern": "B",
+      "notes": "Shows causal influence on duration; requires the preceding duration claim for full context."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Influenza activity tends to follow a cyclical pattern, with outbreaks occurring more frequently during the colder months of the year.",
+      "pattern": "D",
+      "notes": "Standalone descriptive fact."
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "entry_id": 206,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Whats good for muscular pain",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3070,
+    "output_tokens": 1067,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1421,
+      "output_tokens": 530,
+      "cached_input_tokens": 0,
+      "cost": 4.962e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1649,
+      "output_tokens": 537,
+      "cached_input_tokens": 0,
+      "cost": 5.446e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "muscular pain management",
+    "condition": "muscular pain"
+  },
+  "sentences": [
+    "For managing muscular pain, several approaches can be effective, depending on the severity and underlying cause of the pain",
+    "Rest and Immobilization: Allowing the affected muscle to rest can prevent further injury and promote healing",
+    "This is particularly important in the initial stages following an injury",
+    "Ice and Heat Therapy: Applying ice packs to the affected area for the first 24-48 hours can help reduce inflammation and numb the pain",
+    "After this period, heat therapy can be beneficial to relax and loosen tissues and to stimulate blood flow to the area",
+    "Over-the-Counter Pain Relievers: Nonsteroidal anti-inflammatory drugs (NSAIDs) such as ibuprofen or naproxen can help reduce inflammation and alleviate pain",
+    "Acetaminophen is another option for pain relief, though it does not have anti-inflammatory properties",
+    "Physical Therapy and Exercise: Engaging in physical therapy can help strengthen the muscles around the affected area, improve flexibility, and prevent future injuries",
+    "Gentle stretching and strengthening exercises can also be beneficial",
+    "Topical Analgesics: Creams, gels, or patches containing ingredients like menthol, capsaicin, or lidocaine can provide localized pain relief",
+    "Massage Therapy: Professional massage can help reduce muscle tension, improve circulation, and promote relaxation, which can alleviate pain",
+    "Hydration and Nutrition: Ensuring adequate hydration and a balanced diet rich in essential nutrients can support muscle health and recovery",
+    "Alternative Therapies: Techniques such as acupuncture, chiropractic care, and yoga may provide relief for some individuals, though evidence supporting their efficacy varies"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Rest and immobilization can prevent further injury and promote healing.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Rest and immobilization are particularly important in the initial stages following an injury.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Applying ice packs to the affected area for the first 24-48 hours can help reduce inflammation and numb the pain.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Heat therapy can be beneficial to relax and loosen tissues and to stimulate blood flow to the area after the initial 24-48 hours.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Over-the-counter pain relievers, such as ibuprofen or naproxen, can help reduce inflammation and alleviate pain.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Acetaminophen is an option for pain relief, though it does not have anti-inflammatory properties.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Physical therapy can help strengthen the muscles around the affected area, improve flexibility, and prevent future injuries.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Gentle stretching and strengthening exercises can be beneficial for muscular pain.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Topical analgesics, such as creams or patches containing ingredients like menthol, capsaicin, or lidocaine, can provide localized pain relief.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Massage therapy can help reduce muscle tension, improve circulation, and promote relaxation, which can alleviate pain.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Adequate hydration is essential for muscle health and recovery.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "A balanced diet rich in essential nutrients can support muscle health and recovery.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Alternative therapies, such as acupuncture, chiropractic care, and yoga, may provide relief for some individuals.",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Rest and immobilization are crucial in the initial stages following an injury, and can prevent further injury and promote healing.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Applying ice packs to the affected area for the first 24-48 hours can help reduce inflammation and numb the pain.",
+      "pattern": "D",
+      "notes": "Standalone treatment."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Heat therapy can be beneficial to relax and loosen tissues and to stimulate blood flow to the area after the initial 24-48 hours.",
+      "pattern": "D",
+      "notes": "Standalone treatment."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Over-the-counter pain relievers, such as ibuprofen or naproxen, can help reduce inflammation and alleviate pain, while acetaminophen is an option for pain relief.",
+      "pattern": "A",
+      "notes": "Enumeration of pain relievers."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Physical therapy can help strengthen the muscles around the affected area, improve flexibility, and prevent future injuries.",
+      "pattern": "D",
+      "notes": "Standalone treatment."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Gentle stretching and strengthening exercises can be beneficial for muscular pain.",
+      "pattern": "D",
+      "notes": "Standalone treatment."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Topical analgesics, such as creams or patches containing ingredients like menthol, capsaicin, or lidocaine, can provide localized pain relief.",
+      "pattern": "D",
+      "notes": "Standalone treatment."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Massage therapy can help reduce muscle tension, improve circulation, and promote relaxation, which can alleviate pain.",
+      "pattern": "D",
+      "notes": "Standalone treatment."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Adequate hydration and a balanced diet rich in essential nutrients are essential for muscle health and recovery.",
+      "pattern": "A",
+      "notes": "Enumeration of general health practices."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Alternative therapies, such as acupuncture, chiropractic care, and yoga, may provide relief for some individuals.",
+      "pattern": "D",
+      "notes": "Standalone alternative treatment."
+    }
+  ]
+}

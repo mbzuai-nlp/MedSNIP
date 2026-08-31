@@ -1,0 +1,59 @@
+{
+  "entry_id": 163,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is flu test same as influenza test ?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1677,
+    "output_tokens": 191,
+    "cached_input_tokens": 0,
+    "cost": 4.118e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1677,
+      "output_tokens": 191,
+      "cached_input_tokens": 0,
+      "cost": 4.118e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "flu test vs influenza test"
+  },
+  "sentences": [
+    "Yes, a flu test is the same as an influenza test",
+    "Both terms refer to diagnostic tests used to detect the presence of the influenza virus in a patient",
+    "Influenza, commonly known as the flu, is caused by influenza viruses, and these tests help in identifying the specific virus strain responsible for the infection"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "A flu test and an influenza test are the same, referring to diagnostic tests used to detect the presence of the influenza virus in a patient.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of the same subject (flu/influenza tests); one subject, multiple features."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Influenza, commonly known as the flu, is caused by influenza viruses, and these tests help in identifying the specific virus strain responsible for the infection.",
+      "pattern": "D",
+      "notes": "Standalone fact about the cause of flu/influenza and the purpose of the tests."
+    }
+  ]
+}

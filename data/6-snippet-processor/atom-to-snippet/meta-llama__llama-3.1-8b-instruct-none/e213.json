@@ -1,0 +1,157 @@
+{
+  "entry_id": 213,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "is there any specific brand you recommend for the omeprazole?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2841,
+    "output_tokens": 618,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1305,
+      "output_tokens": 343,
+      "cached_input_tokens": 0,
+      "cost": 3.982e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1536,
+      "output_tokens": 275,
+      "cached_input_tokens": 0,
+      "cost": 4.172e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "omeprazole brand recommendation",
+    "drug_a": "omeprazole"
+  },
+  "sentences": [
+    "There are several brands of omeprazole available, and the choice of brand can depend on factors such as cost, availability, and patient preference",
+    "Omeprazole is available both as a prescription medication and over-the-counter (OTC)",
+    "Commonly recommended brands include",
+    "Prilosec: This is a well-known OTC brand of omeprazole",
+    "It is widely available and often recommended for its efficacy and safety profile",
+    "Losec: This is another brand name for omeprazole, commonly used in various countries and available by prescription",
+    "Generic Omeprazole: Generic versions of omeprazole are also available and are typically less expensive than brand-name versions",
+    "They are considered equally effective and safe as the branded versions",
+    "When choosing a brand, it is important to consider the patient's insurance coverage, as some insurance plans may prefer certain brands over others",
+    "Additionally, patient adherence to the medication regimen can be influenced by the cost and availability of the medication"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Omeprazole is available both as a prescription medication and over-the-counter (OTC).",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Commonly recommended brands include Prilosec.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Prilosec is a well-known OTC brand of omeprazole.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Prilosec is widely available and often recommended for its efficacy and safety profile.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Losec is another brand name for omeprazole.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Generic Omeprazole versions are available and are typically less expensive than brand-name versions.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Generic Omeprazole versions are considered equally effective and safe as the branded versions.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Patient's insurance coverage should be considered when choosing a brand.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Patient adherence to the medication regimen can be influenced by the cost and availability of the medication.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "Omeprazole is available both as a prescription medication and over-the-counter (OTC), and commonly recommended brands include Prilosec, which is a well-known OTC brand of omeprazole.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of omeprazole."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Losec is another brand name for omeprazole.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Generic Omeprazole versions are available and are typically less expensive than brand-name versions, and are considered equally effective and safe as the branded versions.",
+      "pattern": "B",
+      "notes": "Causal chain (equivalence of generic and branded versions)."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Patient's insurance coverage should be considered when choosing a brand, and patient adherence to the medication regimen can be influenced by the cost and availability of the medication.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises (considering insurance coverage and patient adherence)."
+    }
+  ]
+}

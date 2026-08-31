@@ -1,0 +1,146 @@
+{
+  "entry_id": 243,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is Augmentin the same thing as Amoxcicilin?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2937,
+    "output_tokens": 596,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1341,
+      "output_tokens": 343,
+      "cached_input_tokens": 0,
+      "cost": 0.00030467
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1596,
+      "output_tokens": 253,
+      "cached_input_tokens": 0,
+      "cost": 0.00030362
+    }
+  ],
+  "shared_context": {
+    "topic": "comparison of Augmentin and Amoxicillin",
+    "drug_a": "Augmentin",
+    "drug_b": "Amoxicillin"
+  },
+  "sentences": [
+    "Augmentin and Amoxicillin are related but not exactly the same thing",
+    "Augmentin is a brand name for a combination antibiotic medication that contains amoxicillin and clavulanate",
+    "Amoxicillin, on the other hand, is a generic name for a type of penicillin antibiotic",
+    "The addition of clavulanate in Augmentin is intended to inhibit beta-lactamase enzymes produced by certain bacteria, making the antibiotic more effective against a broader range of bacteria",
+    "In other words, Augmentin is a specific formulation of amoxicillin that includes an additional ingredient, clavulanate, which enhances its antibacterial properties",
+    "Amoxicillin, by itself, is a more general term for a type of antibiotic that may not contain clavulanate"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Augmentin and Amoxicillin are related but not exactly the same thing",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Augmentin is a brand name for a combination antibiotic medication that contains amoxicillin and clavulanate",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Amoxicillin is a generic name for a type of penicillin antibiotic",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The addition of clavulanate in Augmentin is intended to inhibit beta-lactamase enzymes produced by certain bacteria",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The addition of clavulanate makes Augmentin more effective against a broader range of bacteria",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Augmentin is a specific formulation of amoxicillin that includes an additional ingredient, clavulanate",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Clavulanate enhances the antibacterial properties of amoxicillin in Augmentin",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Amoxicillin is a general term for a type of antibiotic that may not contain clavulanate",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Augmentin and Amoxicillin are related but not exactly the same thing.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2,
+        6
+      ],
+      "output": "Augmentin is a brand name for a specific combination antibiotic medication that contains amoxicillin and clavulanate.",
+      "pattern": "A",
+      "notes": "Merging redundant descriptions of Augmentin's composition."
+    },
+    {
+      "source_claims": [
+        3,
+        8
+      ],
+      "output": "Amoxicillin is a generic name for a type of penicillin antibiotic that may not contain clavulanate.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Amoxicillin."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        7
+      ],
+      "output": "The addition of clavulanate in Augmentin is intended to inhibit beta-lactamase enzymes produced by certain bacteria, which enhances the antibacterial properties of amoxicillin and makes Augmentin more effective against a broader range of bacteria.",
+      "pattern": "B",
+      "notes": "Causal chain explaining why clavulanate is added and its resulting effect."
+    }
+  ]
+}

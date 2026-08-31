@@ -1,0 +1,209 @@
+{
+  "entry_id": 225,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 77-year-old man presents to the emergency department with a complaint of sudden onset weakness in his right upper extremity. At home, the patient thought he was simply dehydrated, but he rapidly began to have trouble speaking. When his wife noted this she brought him into the hospital. On arrival to the emergency department, the patient is not responding to verbal stimuli and only withdraws his left upper extremity and lower extremity to pain. His past medical history is notable for hypertension and atrial fibrillation treated with metoprolol, apixaban, and lisinopril. His temperature is 99.0°F (37.2°C), blood pressure is 170/100 mmHg, pulse is 95/min, and respirations are 16/min. The patient has a seizure and subsequently demonstrates agonal breathing. He no longer responds to painful stimuli. A fingerstick blood glucose is 122 mg/dL. Which of the following is the most likely etiology of this patient's symptoms? (A) Epidural hematoma (B) Intracerebral hemorrhage (C) Ischemic stroke (D) Subarachnoid hemorrhage (E) Subdural hematoma",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2851,
+    "output_tokens": 1359,
+    "cached_input_tokens": 0,
+    "cost": 0.00011138
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2851,
+      "output_tokens": 1359,
+      "cached_input_tokens": 0,
+      "cost": 0.00011138
+    }
+  ],
+  "shared_context": {
+    "age": "77",
+    "sex": "male",
+    "chief_complaint": "sudden onset weakness in right upper extremity",
+    "medical_history": "hypertension; atrial fibrillation treated with metoprolol, apixaban, and lisinopril",
+    "vitals": "BP 170/100 mmHg, pulse 95/min, respirations 16/min",
+    "exam_findings": "sudden onset weakness in right upper extremity, difficulty speaking, seizures, agonal breathing, non-responsiveness to painful stimuli",
+    "correct_answer": "Intracerebral hemorrhage (B)"
+  },
+  "sentences": [
+    "To determine the most likely etiology of the patient's symptoms, we need to evaluate the clinical presentation and the likely pathophysiological mechanisms",
+    "Here, we will consider each option carefully based on the given scenario and available clinical data",
+    "The patient is a 77-year-old man presenting with sudden onset of right upper extremity weakness and subsequent difficulty speaking",
+    "He becomes unresponsive at the emergency department, and his condition deteriorates to agonal breathing and non-responsiveness to painful stimuli",
+    "Past medical history includes hypertension and atrial fibrillation, which are notable risk factors for cerebrovascular events",
+    "Vital signs: BP 170/100 mmHg, pulse 95/min, respirations 16/min",
+    "Fingerstick blood glucose: 122 mg/dL (within normal range)",
+    "Neurological signs: Not responding to verbal stimuli, withdraws left upper and lower extremities to pain, has a seizure, and later shows agonal breathing",
+    "Option A: Epidural Hematoma",
+    "Epidural hematomas typically result from trauma and are associated with a lucid interval followed by rapid deterioration",
+    "This patient has no history of head trauma or lucid interval, making this less likely",
+    "Option B: Intracerebral Hemorrhage",
+    "Intracerebral hemorrhage can present with sudden neurological deficits, seizures, and rapid deterioration, especially in hypertensive patients",
+    "However, the absence of a history of severe headache or other focal neurological signs prior to the onset suggests other possibilities might be more likely",
+    "Option C: Ischemic Stroke",
+    "Ischemic stroke is very likely given the patient's sudden onset of symptoms",
+    "Hypertension and atrial fibrillation significantly increase the risk of ischemic stroke due to thrombosis or embolism",
+    "Neurological deterioration with seizures can occur but is less common without early ischemic changes on imaging",
+    "Option D: Subarachnoid Hemorrhage",
+    "Subarachnoid hemorrhage (SAH) typically presents with a sudden, severe headache (\"thunderclap headache\"), which this patient does not report",
+    "The patient's clinical picture is not classic for SAH but the deterioration could be consistent with a severe case",
+    "Option E: Subdural Hematoma",
+    "Subdural hematomas often result from head trauma and present with a gradual onset of symptoms as the hematoma expands",
+    "There is no history of trauma in this case, making this less likely",
+    "Given the patient's history of hypertension and atrial fibrillation, sudden neurological deficit, and rapid clinical deterioration, the most likely diagnosis is Intracerebral Hemorrhage",
+    "While ischemic stroke is also a strong consideration, the rapid progression and seizure point more towards a hemorrhagic event",
+    "(B) Intracerebral hemorrhage"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "To determine the most likely etiology of the patient's symptoms, we need to evaluate the clinical presentation and the likely pathophysiological mechanisms.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement; no new information."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "A 77-year-old man presents with sudden onset of right upper extremity weakness and subsequent difficulty speaking, becoming unresponsive at the emergency department, and deteriorating to agonal breathing and non-responsiveness to painful stimuli.",
+      "pattern": "D",
+      "notes": "Standalone clinical summary; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Past medical history includes hypertension and atrial fibrillation, which are notable risk factors for cerebrovascular events.",
+      "pattern": "D",
+      "notes": "Standalone risk-factor statement; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Vital signs: BP 170/100 mmHg, pulse 95/min, respirations 16/min.",
+      "pattern": "D",
+      "notes": "Standalone vital signs; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Fingerstick blood glucose: 122 mg/dL (within normal range).",
+      "pattern": "D",
+      "notes": "Standalone lab result; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Neurological signs: Not responding to verbal stimuli, withdraws left upper and lower extremities to pain, has a seizure, and later shows agonal breathing.",
+      "pattern": "D",
+      "notes": "Standalone clinical summary; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Option A: Epidural Hematoma.",
+      "pattern": "E",
+      "notes": "Start of differential diagnosis; no new information."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "Epidural hematomas typically result from trauma and are associated with a lucid interval followed by rapid deterioration, but this patient has no history of head trauma or lucid interval, making this less likely.",
+      "pattern": "B",
+      "notes": "Properties of one subject (epidural hematoma); logical link between sentences."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Option B: Intracerebral Hemorrhage.",
+      "pattern": "E",
+      "notes": "Start of differential diagnosis; no new information."
+    },
+    {
+      "source_sentences": [
+        12,
+        13
+      ],
+      "output": "Intracerebral hemorrhage can present with sudden neurological deficits, seizures, and rapid deterioration, especially in hypertensive patients, but the absence of a history of severe headache or other focal neurological signs prior to the onset suggests other possibilities might be more likely.",
+      "pattern": "B",
+      "notes": "Properties of one subject (intracerebral hemorrhage); logical link between sentences."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Ischemic stroke is very likely given the patient's sudden onset of symptoms.",
+      "pattern": "D",
+      "notes": "Standalone differential characterization; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        15,
+        16,
+        17
+      ],
+      "output": "Ischemic stroke is very likely given the patient's sudden onset of symptoms, hypertension and atrial fibrillation significantly increase the risk of ischemic stroke due to thrombosis or embolism, and neurological deterioration with seizures can occur but is less common without early ischemic changes on imaging.",
+      "pattern": "A",
+      "notes": "All properties of one subject (ischemic stroke)."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Subarachnoid hemorrhage (SAH) typically presents with a sudden, severe headache ('thunderclap headache'), which this patient does not report.",
+      "pattern": "D",
+      "notes": "Standalone differential characterization; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        19,
+        20
+      ],
+      "output": "Subarachnoid hemorrhage typically presents with a sudden, severe headache, but the patient's clinical picture is not classic for SAH, and the deterioration could be consistent with a severe case.",
+      "pattern": "B",
+      "notes": "Properties of one subject (subarachnoid hemorrhage); logical link between sentences."
+    },
+    {
+      "source_sentences": [
+        21
+      ],
+      "output": "Subdural hematomas often result from head trauma and present with a gradual onset of symptoms as the hematoma expands, but there is no history of trauma in this case, making this less likely.",
+      "pattern": "B",
+      "notes": "Properties of one subject (subdural hematoma); logical link between sentences."
+    },
+    {
+      "source_sentences": [
+        24,
+        25,
+        26
+      ],
+      "output": "Given the patient's history of hypertension and atrial fibrillation, sudden neurological deficit, and rapid clinical deterioration, the most likely diagnosis is Intracerebral Hemorrhage, while ischemic stroke is also a strong consideration, the rapid progression and seizure point more towards a hemorrhagic event.",
+      "pattern": "C",
+      "notes": "Conclusion with surrounding reasoning; patient details inlined."
+    }
+  ]
+}

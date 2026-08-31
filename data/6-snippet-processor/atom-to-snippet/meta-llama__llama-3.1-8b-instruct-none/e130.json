@@ -1,0 +1,186 @@
+{
+  "entry_id": 130,
+  "batch_id": 13,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "If the side effects of the Prozac become too much is there a wean down period I would have to go through or would I be able to stop it immediately?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3004,
+    "output_tokens": 752,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1426,
+      "output_tokens": 362,
+      "cached_input_tokens": 0,
+      "cost": 4.3e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1578,
+      "output_tokens": 390,
+      "cached_input_tokens": 0,
+      "cost": 4.716e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "stopping Prozac (fluoxetine)",
+    "drug_a": "Prozac (fluoxetine)",
+    "condition": "withdrawal symptoms"
+  },
+  "sentences": [
+    "When considering discontinuing Prozac (fluoxetine), a selective serotonin reuptake inhibitor (SSRI), it is essential to do so under the guidance of a healthcare professional",
+    "Abruptly stopping Prozac can lead to withdrawal symptoms, including dizziness, headache, nausea, fatigue, and irritability",
+    "A gradual tapering of the dose is often recommended to minimize the risk of withdrawal symptoms",
+    "The optimal tapering schedule for Prozac is not well established, but a commonly recommended approach is to reduce the dose by 20-30% every 2-4 weeks",
+    "This can be repeated until the dose is discontinued",
+    "However, the duration and rate of tapering may need to be adjusted based on individual factors, such as the dosage and duration of treatment, and the presence of withdrawal symptoms",
+    "Some studies suggest that a slower tapering schedule, over a period of several weeks or months, may be more effective in reducing the risk of withdrawal symptoms",
+    "A study published in the Journal of Clinical Psychopharmacology found that patients who tapered off fluoxetine over a period of 6-12 weeks experienced fewer withdrawal symptoms compared to those who tapered off the medication more quickly",
+    "In contrast, stopping Prozac suddenly can lead to more severe withdrawal symptoms, including seizures and serotonin syndrome, a potentially life-threatening condition",
+    "Therefore, it is essential to work closely with a healthcare professional to develop a tapering plan that minimizes the risk of withdrawal symptoms and ensures a safe discontinuation of the medication"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Abruptly stopping Prozac can lead to withdrawal symptoms.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Withdrawal symptoms include dizziness, headache, nausea, fatigue, and irritability.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A gradual tapering of the dose is often recommended to minimize the risk of withdrawal symptoms.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The optimal tapering schedule for Prozac is not well established.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "A commonly recommended approach is to reduce the dose by 20-30% every 2-4 weeks.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The duration and rate of tapering may need to be adjusted based on individual factors.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Stopping Prozac suddenly can lead to more severe withdrawal symptoms.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Seizures and serotonin syndrome, a potentially life-threatening condition, are among the severe withdrawal symptoms.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "It is essential to work closely with a healthcare professional to develop a tapering plan.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Abruptly stopping Prozac can lead to withdrawal symptoms including dizziness, headache, nausea, fatigue, and irritability.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "A gradual tapering of the dose is often recommended to minimize the risk of withdrawal symptoms.",
+      "pattern": "D",
+      "notes": "Standalone advice."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The optimal tapering schedule for Prozac is not well established.",
+      "pattern": "D",
+      "notes": "Different fact about tapering."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "A commonly recommended approach is to reduce the dose by 20-30% every 2-4 weeks.",
+      "pattern": "D",
+      "notes": "Specific tapering recommendation."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "The duration and rate of tapering may need to be adjusted based on individual factors.",
+      "pattern": "D",
+      "notes": "Important consideration for tapering plan."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Stopping Prozac suddenly can lead to more severe withdrawal symptoms.",
+      "pattern": "C",
+      "notes": "Warning about abrupt discontinuation."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Seizures and serotonin syndrome, a potentially life-threatening condition, are among the severe withdrawal symptoms.",
+      "pattern": "C",
+      "notes": "Specific risk of severe withdrawal symptoms."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "It is essential to work closely with a healthcare professional to develop a tapering plan.",
+      "pattern": "C",
+      "notes": "Important advice for tapering plan."
+    }
+  ]
+}

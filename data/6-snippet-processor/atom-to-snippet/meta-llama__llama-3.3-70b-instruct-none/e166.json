@@ -1,0 +1,169 @@
+{
+  "entry_id": 166,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is pepto peptobismol?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2884,
+    "output_tokens": 728,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1307,
+      "output_tokens": 405,
+      "cached_input_tokens": 0,
+      "cost": 0.0002603
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1577,
+      "output_tokens": 323,
+      "cached_input_tokens": 0,
+      "cost": 0.00026106
+    }
+  ],
+  "shared_context": {
+    "topic": "Pepto-Bismol",
+    "drug_a": "Pepto-Bismol",
+    "condition": "diarrhea and indigestion"
+  },
+  "sentences": [
+    "No, Pepto-Bismol is not a peptoid",
+    "Peptoids, or poly-N-substituted glycines, are a class of biochemicals known to replicate the behavior of biological molecules",
+    "Pepto-Bismol, on the other hand, is a medication used to treat diarrhea and indigestion, which contains bismuth subsalicylate as its active ingredient",
+    "The name \"Pepto-Bismol\" was originally derived from \"Pepto\" (from the word \"pepsin,\" an enzyme involved in protein digestion) and \"Bismol\" (from \"bismuth,\" a chemical element used in the medication), which does not imply its chemical nature as a peptoid",
+    "However, Peptobismol is not a recognized term, and it seems to be a combination of \"pepto\" (referring to peptidic structures) and \"bismol\" (from Bismol)",
+    "This could be a hypothetical or made-up term, not associated with a known substance or medication"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Pepto-Bismol is not a peptoid.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Peptoids are a class of biochemicals that replicate the behavior of biological molecules.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Pepto-Bismol is a medication used to treat diarrhea and indigestion.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Pepto-Bismol contains bismuth subsalicylate as its active ingredient.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The name 'Pepto-Bismol' was derived from 'pepsin' and 'bismuth'.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The name 'Pepto-Bismol' does not imply its chemical nature as a peptoid.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Peptobismol is not a recognized term.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Peptobismol seems to be a combination of 'pepto' and 'bismol'.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Peptobismol could be a hypothetical or made-up term.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Peptobismol is not associated with a known substance or medication.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        6
+      ],
+      "output": "Pepto-Bismol is not a peptoid, and its name does not imply its chemical nature as a peptoid.",
+      "pattern": "C",
+      "notes": "Claim + explanation for clarity."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Peptoids are a class of biochemicals that replicate the behavior of biological molecules.",
+      "pattern": "D",
+      "notes": "Standalone definition."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Pepto-Bismol is a medication used to treat diarrhea and indigestion, and it contains bismuth subsalicylate as its active ingredient.",
+      "pattern": "C",
+      "notes": "Medication purpose + composition."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The name 'Pepto-Bismol' was derived from 'pepsin' and 'bismuth'.",
+      "pattern": "D",
+      "notes": "Standalone etymology."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "Peptobismol is not a recognized term, but it seems to be a combination of 'pepto' and 'bismol', possibly a hypothetical or made-up term not associated with a known substance or medication.",
+      "pattern": "A",
+      "notes": "Enumeration of characteristics of the unrecognized term 'Peptobismol'."
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "entry_id": 100,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Will the antibiotics prevent the lyme disease from progressing?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2994,
+    "output_tokens": 1150,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1373,
+      "output_tokens": 543,
+      "cached_input_tokens": 0,
+      "cost": 0.0088625
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1621,
+      "output_tokens": 607,
+      "cached_input_tokens": 0,
+      "cost": 0.0101225
+    }
+  ],
+  "shared_context": {
+    "condition": "Lyme disease",
+    "drug_a": "antibiotics"
+  },
+  "sentences": [
+    "The effectiveness of antibiotics in preventing the progression of Lyme disease is a topic of ongoing debate",
+    "However, based on the available evidence, antibiotics are effective in treating the early stages of Lyme disease and can prevent the progression of the disease to its later stages",
+    "In the early stages of Lyme disease, oral antibiotics such as doxycycline are effective in treating the infection and preventing the development of late Lyme disease",
+    "For patients with early disseminated disease, including those with neurologic findings, parenteral therapy with antibiotics such as ceftriaxone may be necessary",
+    "Treatment of late Lyme disease can be challenging, and some patients may require multiple courses of antibiotics or the addition of anti-inflammatory agents",
+    "However, even with treatment, some patients may experience persistent or recurrent symptoms, which can be attributed to various factors, including chronic inflammation, autoimmunity, or fibromyalgia",
+    "The Centers for Disease Control and Prevention (CDC) recommend treating Lyme disease with antibiotics for a duration of 14 days for early disease and up to 4 weeks for late disease",
+    "However, some studies suggest that shorter courses of antibiotics may be effective in preventing the progression of the disease",
+    "In conclusion, antibiotics are effective in treating the early stages of Lyme disease and can prevent the progression of the disease to its later stages",
+    "However, the optimal treatment duration and regimen remain a topic of ongoing research and debate"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The effectiveness of antibiotics in preventing the progression of Lyme disease is a topic of ongoing debate.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Antibiotics are effective in treating the early stages of Lyme disease and can prevent the progression of the disease to its later stages.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "In the early stages of Lyme disease, oral antibiotics such as doxycycline are effective in treating the infection and preventing the development of late Lyme disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "For patients with early disseminated Lyme disease, parenteral therapy with antibiotics such as ceftriaxone may be necessary.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Treatment of late Lyme disease can be challenging.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Some patients with late Lyme disease may require multiple courses of antibiotics or the addition of anti-inflammatory agents.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Even with treatment, some patients may experience persistent or recurrent symptoms due to various factors.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Persistent or recurrent symptoms can be attributed to factors including chronic inflammation, autoimmunity, or fibromyalgia.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The CDC recommends treating Lyme disease with antibiotics for a duration of 14 days for early disease.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The CDC recommends treating Lyme disease with antibiotics for up to 4 weeks for late disease.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Some studies suggest that shorter courses of antibiotics may be effective in preventing the progression of Lyme disease.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Antibiotics are effective in treating the early stages of Lyme disease and can prevent progression to later stages.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The optimal treatment duration and regimen for Lyme disease remain a topic of ongoing research and debate.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The effectiveness of antibiotics in preventing the progression of Lyme disease is a topic of ongoing debate.",
+      "pattern": "D",
+      "notes": "Standalone fact about the debate on antibiotic effectiveness."
+    },
+    {
+      "source_claims": [
+        2,
+        12
+      ],
+      "output": "Antibiotics are effective in treating the early stages of Lyme disease and can prevent the progression of the disease to its later stages.",
+      "pattern": "A",
+      "notes": "Merged because both claims discuss antibiotic effectiveness in early Lyme disease."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "In the early stages of Lyme disease, oral antibiotics such as doxycycline are effective in treating the infection and preventing the development of late Lyme disease.",
+      "pattern": "D",
+      "notes": "Standalone detail about specific antibiotic treatment in early stages."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "For patients with early disseminated Lyme disease, parenteral therapy with antibiotics such as ceftriaxone may be necessary.",
+      "pattern": "D",
+      "notes": "Standalone fact about a specific treatment for early disseminated Lyme disease."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Treatment of late Lyme disease can be challenging, and some patients may require multiple courses of antibiotics or the addition of anti-inflammatory agents.",
+      "pattern": "B",
+      "notes": "Causal relationship between challenge in treatment and the need for multiple treatments."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Even with treatment, some patients may experience persistent or recurrent symptoms due to factors including chronic inflammation, autoimmunity, or fibromyalgia.",
+      "pattern": "B",
+      "notes": "Causal relationship between treatment and persistent symptoms with factors listed."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "The CDC recommends treating Lyme disease with antibiotics for a duration of 14 days for early disease and up to 4 weeks for late disease.",
+      "pattern": "A",
+      "notes": "Merged because both recommendations are about CDC guidelines for antibiotic duration."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Some studies suggest that shorter courses of antibiotics may be effective in preventing the progression of Lyme disease.",
+      "pattern": "D",
+      "notes": "Standalone claim about research on antibiotic course duration."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "The optimal treatment duration and regimen for Lyme disease remain a topic of ongoing research and debate.",
+      "pattern": "D",
+      "notes": "Standalone fact about continued research and debate."
+    }
+  ]
+}

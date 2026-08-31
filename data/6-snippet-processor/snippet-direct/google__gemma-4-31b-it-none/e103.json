@@ -1,0 +1,183 @@
+{
+  "entry_id": 103,
+  "batch_id": 11,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old woman presents to a primary care physician with persistent nausea and abdominal discomfort. She has experienced these symptoms daily for the past 3 months. She feels bloated and has episodic loose and watery stools. She has a history of hypertension and hyperlipidemia for which she takes amlodipine and atorvastatin. She immigrated from Vietnam 6 months ago. Her temperature is 98.6°F (37.0°C), blood pressure is 110/60 mmHg, pulse is 70/min, and respirations are 18/min. Physical exam reveals a thin-appearing woman in no acute distress. Her mucous membranes are moist. Cardiac and lung examinations are unremarkable. Laboratory results are as follows: Leukocyte count: 13,000/mm^3 Segmented neutrophils: 54% Bands: 2% Eosinophils: 6% Basophils: 0.4% Lymphocytes: 30% Monocytes: 5% A vitamin D level is 26 ng/mL (reference: >= 30 ng/mL). Which of the following is the most appropriate test in making the diagnosis? (A) Bowel wall biopsy (B) CT scan of the abdomen (C) Lower endoscopy (D) Stool ova and parasite assay (E) Stool toxin assay",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2874,
+    "output_tokens": 1590,
+    "cached_input_tokens": 0,
+    "cost": 0.00097782
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2874,
+      "output_tokens": 1590,
+      "cached_input_tokens": 0,
+      "cost": 0.00097782
+    }
+  ],
+  "shared_context": {
+    "age": "55",
+    "sex": "female",
+    "chief_complaint": "persistent nausea and abdominal discomfort",
+    "medical_history": "hypertension, hyperlipidemia, immigrated from Vietnam 6 months ago",
+    "medications": "amlodipine, atorvastatin",
+    "vitals": "T 98.6°F, BP 110/60 mmHg, pulse 70/min, RR 18/min",
+    "exam_findings": "thin-appearing, no acute distress, moist mucous membranes, unremarkable cardiac and lung exams",
+    "lab_findings": "WBC 13,000/mm³, eosinophils 6%, vitamin D 26 ng/mL",
+    "correct_answer": "Stool ova and parasite assay (D)"
+  },
+  "sentences": [
+    "To determine the most appropriate test for diagnosing the 55-year-old woman’s symptoms, we need to analyze the clinical presentation and laboratory findings step by step",
+    "Persistent nausea and abdominal discomfort for 3 months",
+    "Bloating and episodic loose, watery stools",
+    "History of hypertension and hyperlipidemia, treated with amlodipine and atorvastatin",
+    "Recently immigrated from Vietnam 6 months ago",
+    "Normal vital signs: Temperature 98.6°F (37.0°C), blood pressure 110/60 mmHg, pulse 70/min, respirations 18/min",
+    "Thin-appearing woman in no acute distress with moist mucous membranes",
+    "Unremarkable cardiac and lung examinations",
+    "Leukocyte count elevated at 13,000/mm³",
+    "Eosinophilia present with eosinophils at 6% (normal range: 0.5%-1%)",
+    "Vitamin D level is slightly low at 26 ng/mL (reference: >= 30 ng/mL), but this is not immediately suggestive of the cause of her symptoms",
+    "The combination of gastrointestinal symptoms (nausea, abdominal discomfort, bloating, loose stools) and eosinophilia can point towards a parasitic infection, especially considering her recent immigration from Vietnam, an area where parasitic infections are more common",
+    "Eosinophilia is often associated with parasitic infections, particularly helminths",
+    "(A) Bowel wall biopsy: This is invasive and typically reserved for diagnosing conditions like inflammatory bowel disease or malignancies, not primary for parasitic infections",
+    "(B) CT scan of the abdomen: Useful for anatomical abnormalities but not specific for parasitic infections",
+    "(C) Lower endoscopy: Used for direct visualization of the bowel for inflammatory or neoplastic processes, less useful for diagnosing parasitic infections",
+    "(D) Stool ova and parasite assay: Directly detects parasitic infections, which fits her clinical presentation and laboratory findings",
+    "(E) Stool toxin assay: Used mainly for detecting bacterial toxins like Clostridium difficile, not typically indicated for parasitic infection",
+    "(D) Stool ova and parasite assay"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate test for diagnosing this 55-year-old woman's symptoms, her clinical presentation and laboratory findings must be analyzed.",
+      "pattern": "D",
+      "notes": "Introductory statement."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "This 55-year-old woman has experienced persistent nausea, abdominal discomfort, bloating, and episodic loose, watery stools daily for the past 3 months.",
+      "pattern": "A",
+      "notes": "Enumeration of patient's GI symptoms."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The patient has a history of hypertension and hyperlipidemia, treated with amlodipine and atorvastatin.",
+      "pattern": "D",
+      "notes": "Standalone medical history."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The patient immigrated from Vietnam 6 months ago.",
+      "pattern": "D",
+      "notes": "Standalone demographic fact."
+    },
+    {
+      "source_sentences": [
+        5,
+        6,
+        7
+      ],
+      "output": "The patient's physical examination shows normal vital signs (T 98.6°F, BP 110/60 mmHg, pulse 70/min, RR 18/min), a thin appearance in no acute distress with moist mucous membranes, and unremarkable cardiac and lung examinations.",
+      "pattern": "A",
+      "notes": "Enumeration of physical exam findings."
+    },
+    {
+      "source_sentences": [
+        8,
+        9
+      ],
+      "output": "Laboratory results for this 55-year-old woman show an elevated leukocyte count of 13,000/mm³ and eosinophilia with eosinophils at 6% (normal range: 0.5%-1%).",
+      "pattern": "A",
+      "notes": "Enumeration of lab abnormalities."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "The patient's vitamin D level is slightly low at 26 ng/mL (reference: >= 30 ng/mL), but this is not immediately suggestive of the cause of her symptoms.",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "The combination of gastrointestinal symptoms (nausea, abdominal discomfort, bloating, loose stools) and eosinophilia in this 55-year-old woman who immigrated from Vietnam points towards a parasitic infection, as eosinophilia is often associated with parasitic infections, particularly helminths.",
+      "pattern": "B",
+      "notes": "Causal chain linking symptoms/labs to the suspected diagnosis."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Bowel wall biopsy is invasive and typically reserved for diagnosing conditions like inflammatory bowel disease or malignancies, rather than being primary for parasitic infections.",
+      "pattern": "D",
+      "notes": "Standalone test evaluation."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "CT scan of the abdomen is useful for anatomical abnormalities but not specific for parasitic infections.",
+      "pattern": "D",
+      "notes": "Standalone test evaluation."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "Lower endoscopy is used for direct visualization of the bowel for inflammatory or neoplastic processes and is less useful for diagnosing parasitic infections.",
+      "pattern": "D",
+      "notes": "Standalone test evaluation."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "In a 55-year-old woman with GI symptoms and eosinophilia, a stool ova and parasite assay is the most appropriate test as it directly detects parasitic infections.",
+      "pattern": "C",
+      "notes": "Conclusion based on clinical presentation."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "Stool toxin assay is used mainly for detecting bacterial toxins like Clostridium difficile and is not typically indicated for parasitic infection.",
+      "pattern": "D",
+      "notes": "Standalone test evaluation."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "The most appropriate test for this patient is a stool ova and parasite assay.",
+      "pattern": "C",
+      "notes": "Final conclusion."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "entry_id": 1,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can I take nyquil and benedryl at the same time?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2705,
+    "output_tokens": 654,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1185,
+      "output_tokens": 370,
+      "cached_input_tokens": 0,
+      "cost": 0.0066625
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1520,
+      "output_tokens": 284,
+      "cached_input_tokens": 0,
+      "cost": 0.00664
+    }
+  ],
+  "shared_context": {
+    "topic": "taking NyQuil and Benadryl at the same time",
+    "drug_a": "NyQuil",
+    "drug_b": "Benadryl"
+  },
+  "sentences": [
+    "It is not recommended to take NyQuil and Benadryl at the same time",
+    "Both medications contain antihistamines: NyQuil usually contains doxylamine, and Benadryl contains diphenhydramine",
+    "Taking them together can increase the risk of side effects such as severe drowsiness, dizziness, confusion, and impaired coordination",
+    "Moreover, combining these medications can also potentially lead to an overdose of antihistamines, which can be dangerous"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "It is not recommended to take NyQuil and Benadryl at the same time.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "NyQuil usually contains the antihistamine doxylamine.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Benadryl contains the antihistamine diphenhydramine.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Taking NyQuil and Benadryl together can increase the risk of severe drowsiness.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Taking NyQuil and Benadryl together can increase the risk of dizziness.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Taking NyQuil and Benadryl together can increase the risk of confusion.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Taking NyQuil and Benadryl together can increase the risk of impaired coordination.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Combining NyQuil and Benadryl can potentially lead to an overdose of antihistamines.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "An overdose of antihistamines can be dangerous.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "It is not recommended to take NyQuil and Benadryl at the same time.",
+      "pattern": "D",
+      "notes": "Standalone recommendation statement."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "NyQuil usually contains the antihistamine doxylamine, and Benadryl contains the antihistamine diphenhydramine.",
+      "pattern": "A",
+      "notes": "Enumeration of ingredients; both are antihistamines."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Taking NyQuil and Benadryl together can increase the risk of severe drowsiness, dizziness, confusion, and impaired coordination.",
+      "pattern": "A",
+      "notes": "Enumeration of potential side effects from combination."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Combining NyQuil and Benadryl can potentially lead to an overdose of antihistamines, and an overdose of antihistamines can be dangerous.",
+      "pattern": "B",
+      "notes": "Causal chain showing the risk and consequence of an overdose."
+    }
+  ]
+}

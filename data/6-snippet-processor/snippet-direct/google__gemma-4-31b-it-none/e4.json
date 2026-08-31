@@ -1,0 +1,79 @@
+{
+  "entry_id": 4,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Can I take nyquil and benedryl at the same time?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1866,
+    "output_tokens": 304,
+    "cached_input_tokens": 0,
+    "cost": 0.0003581
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1866,
+      "output_tokens": 304,
+      "cached_input_tokens": 0,
+      "cost": 0.0003581
+    }
+  ],
+  "shared_context": {
+    "drug_a": "NyQuil",
+    "drug_b": "Benadryl",
+    "topic": "combining NyQuil and Benadryl"
+  },
+  "sentences": [
+    "Taking NyQuil and Benadryl at the same time is generally not recommended due to the risk of increased side effects and potential for overdose",
+    "Both medications contain antihistamines, which can lead to excessive sedation, dizziness, and impaired coordination when taken together",
+    "NyQuil typically contains doxylamine, an antihistamine, while Benadryl contains diphenhydramine, another antihistamine",
+    "Combining these can enhance the sedative effects and increase the risk of side effects such as dry mouth, urinary retention, and confusion, especially in older adults",
+    "If you are considering taking both medications, it is important to consult with a healthcare provider to ensure it is safe based on your individual health conditions and other medications you may be taking"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "Taking NyQuil and Benadryl at the same time is generally not recommended because both medications contain antihistamines, which can lead to excessive sedation, dizziness, and impaired coordination.",
+      "pattern": "B",
+      "notes": "The recommendation in sentence 0 is linked to the pharmacological reason in sentence 1 via the risk of side effects."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "NyQuil typically contains the antihistamine doxylamine, while Benadryl contains the antihistamine diphenhydramine.",
+      "pattern": "D",
+      "notes": "Standalone fact identifying specific active ingredients."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Combining NyQuil and Benadryl can enhance sedative effects and increase the risk of side effects such as dry mouth, urinary retention, and confusion, particularly in older adults.",
+      "pattern": "D",
+      "notes": "Standalone fact regarding specific side effects of the combination."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Individuals considering taking both NyQuil and Benadryl should consult a healthcare provider to ensure safety based on their individual health conditions and other medications.",
+      "pattern": "D",
+      "notes": "Standalone medical recommendation."
+    }
+  ]
+}

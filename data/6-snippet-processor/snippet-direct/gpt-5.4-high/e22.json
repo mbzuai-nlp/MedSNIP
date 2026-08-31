@@ -1,0 +1,126 @@
+{
+  "entry_id": 22,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 1-year-old girl is brought to a neurologist due to increasing seizure frequency over the past 2 months. She recently underwent a neurology evaluation which revealed hypsarrhythmia on electroencephalography (EEG) with a mix of slow waves, multifocal spikes, and asynchrony. Her parents have noticed the patient occasionally stiffens and spreads her arms at home. She was born at 38-weeks gestational age without complications. She has no other medical problems. Her medications consist of lamotrigine and valproic acid. Her temperature is 98.3°F (36.8°C), blood pressure is 90/75 mmHg, pulse is 94/min, and respirations are 22/min. Physical exam reveals innumerable hypopigmented macules on the skin and an irregularly shaped, thickened, and elevated plaque on the lower back. Which of the following is most strongly associated with this patient's condition? (A) Cardiac rhabdomyoma (B) Glaucoma (C) Optic glioma (D) Polyostotic fibrous dysplasia (E) Renal cell carcinoma",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2627,
+    "output_tokens": 4029,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2627,
+      "output_tokens": 4029,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "1 year",
+    "sex": "female",
+    "chief_complaint": "increasing seizure frequency for 2 months with episodes of stiffening and spreading the arms",
+    "medical_history": "born at 38 weeks without complications; no other medical problems",
+    "medications": "lamotrigine; valproic acid",
+    "vitals": "T 98.3°F (36.8°C), BP 90/75 mmHg, pulse 94/min, respirations 22/min",
+    "exam_findings": "hypsarrhythmia on EEG with slow waves, multifocal spikes, and asynchrony; innumerable hypopigmented macules; irregularly shaped, thickened, elevated plaque on the lower back",
+    "correct_answer": "Cardiac rhabdomyoma (A)"
+  },
+  "sentences": [
+    "To determine the correct answer, let's analyze the given information step-by-step",
+    "Clinical presentation: The patient, a 1-year-old girl, has a history of increasing seizure frequency over the past 2 months",
+    "Her recent neurology evaluation revealed hypsarrhythmia on EEG with a mix of slow waves, multifocal spikes, and asynchrony",
+    "This presentation is characteristic of infantile spasms, also known as West syndrome, which is often associated with a poor developmental prognosis",
+    "Hypsarrhythmia on EEG is a hallmark of infantile spasms, characterized by high-amplitude, disorganized, and chaotic brain activity",
+    "Additional clinical findings: The patient's parents have noticed she occasionally stiffens and spreads her arms at home",
+    "This physical behavior is indicative of infantile spasms, which manifest as brief, involuntary muscle contractions, often involving the arms",
+    "Medical history: The patient was born at 38-weeks gestational age without complications",
+    "She has no other medical problems and is currently taking lamotrigine and valproic acid",
+    "These medications are antiepileptic drugs and are being used to manage the patient's seizures",
+    "There is no indication that they are contributing to her current condition",
+    "Physical examination findings: Innumerable hypopigmented macules on the skin and an irregularly shaped, thickened, and elevated plaque on the lower back were noted",
+    "The skin findings are suggestive of tuberous sclerosis complex (TSC), a genetic disorder characterized by the growth of non-cancerous tumors in various organs, including the skin, brain, and other areas",
+    "Tuberous sclerosis complex is associated with a range of neurological manifestations, including seizures, intellectual disability, and autism spectrum disorders",
+    "Associations with Tuberous sclerosis complex: Tuberous sclerosis complex has been associated with cardiac rhabdomyoma, which is a type of benign heart tumor",
+    "A) Cardiac rhabdomyoma"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "This 1-year-old girl has had increasing seizure frequency over the past 2 months.",
+      "pattern": "D",
+      "notes": "Sentence 0 is a non-substantive lead-in, so it is merged with the standalone clinical-presentation fact in sentence 1."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4
+      ],
+      "output": "In this 1-year-old girl, hypsarrhythmia on EEG with slow waves, multifocal spikes, and asynchrony is a hallmark high-amplitude, disorganized, chaotic pattern characteristic of infantile spasms (West syndrome), which is often associated with a poor developmental prognosis.",
+      "pattern": "C",
+      "notes": "The diagnostic conclusion of infantile spasms depends on the EEG premise and hallmark explanation."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "In this 1-year-old girl, episodes of stiffening and spreading the arms are indicative of infantile spasms, which manifest as brief involuntary muscle contractions often involving the arms.",
+      "pattern": "C",
+      "notes": "The interpretation of the observed behavior is only meaningful with the supporting description of infantile spasms."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "This 1-year-old girl was born at 38 weeks gestational age without complications.",
+      "pattern": "D",
+      "notes": "Standalone birth-history fact."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "This 1-year-old girl has no other medical problems and is currently taking lamotrigine and valproic acid.",
+      "pattern": "D",
+      "notes": "Standalone medical-history and medication fact."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "In this 1-year-old girl with seizures, lamotrigine and valproic acid are antiepileptic drugs being used to manage the seizures, and there is no indication that these medications are contributing to the current condition.",
+      "pattern": "C",
+      "notes": "The conclusion that the medications are not causative is presented together with the premise that they are antiseizure treatments."
+    },
+    {
+      "source_sentences": [
+        11,
+        12,
+        13
+      ],
+      "output": "In this 1-year-old girl, innumerable hypopigmented macules and an irregularly shaped, thickened, elevated plaque on the lower back are suggestive of tuberous sclerosis complex, a genetic disorder characterized by non-cancerous tumors in organs including the skin and brain; tuberous sclerosis complex is associated with seizures, intellectual disability, and autism spectrum disorders.",
+      "pattern": "C",
+      "notes": "The diagnostic interpretation of the skin findings and the relevant disease features belong together."
+    },
+    {
+      "source_sentences": [
+        14,
+        15
+      ],
+      "output": "In this 1-year-old girl with infantile spasms and skin findings suggestive of tuberous sclerosis complex, the most strongly associated condition is cardiac rhabdomyoma, a benign heart tumor.",
+      "pattern": "C",
+      "notes": "The selected answer is merged with the supporting association to preserve why the answer is correct."
+    }
+  ]
+}

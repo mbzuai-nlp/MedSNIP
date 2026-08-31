@@ -1,0 +1,160 @@
+{
+  "entry_id": 134,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2699,
+    "output_tokens": 645,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1201,
+      "output_tokens": 345,
+      "cached_input_tokens": 0,
+      "cost": 0.0064525
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1498,
+      "output_tokens": 300,
+      "cached_input_tokens": 0,
+      "cost": 0.006745
+    }
+  ],
+  "shared_context": {
+    "drug_a": "losartan",
+    "topic": "dosing schedule"
+  },
+  "sentences": [
+    "The dosing schedule for losartan should be determined by your healthcare provider based on your specific medical condition and response to treatment",
+    "Generally, losartan is taken once daily, but the exact dosage and frequency can vary",
+    "Losartan is typically prescribed to be taken once daily",
+    "The specific dosage and frequency should be individualized based on the patient's condition and response to treatment",
+    "You should follow the dosing instructions provided by your healthcare provider",
+    "If you have any questions or concerns about your medication regimen, consult your healthcare provider for personalized advice"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The dosing schedule for losartan should be determined by your healthcare provider based on your specific medical condition.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The dosing schedule for losartan should be determined by your healthcare provider based on your response to treatment.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Generally, losartan is taken once daily.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The exact dosage and frequency of losartan can vary.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Losartan is typically prescribed to be taken once daily.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The specific dosage and frequency of losartan should be individualized based on the patient's condition.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The specific dosage and frequency of losartan should be individualized based on the patient's response to treatment.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "You should follow the dosing instructions provided by your healthcare provider.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "If you have any questions or concerns about your medication regimen, consult your healthcare provider for personalized advice.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The dosing schedule for losartan should be determined by your healthcare provider based on your specific medical condition and response to treatment.",
+      "pattern": "A",
+      "notes": "Enumeration of factors for dosing determination."
+    },
+    {
+      "source_claims": [
+        3,
+        5
+      ],
+      "output": "Generally, losartan is taken once daily, and it is typically prescribed this way.",
+      "pattern": "A",
+      "notes": "Two consistent claims about typical administration."
+    },
+    {
+      "source_claims": [
+        4,
+        6,
+        7
+      ],
+      "output": "The exact dosage and frequency of losartan can vary and should be individualized based on the patient's condition and response to treatment.",
+      "pattern": "B",
+      "notes": "Factors causing variability in dosage."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "You should follow the dosing instructions provided by your healthcare provider.",
+      "pattern": "D",
+      "notes": "Stand-alone directive about following instructions."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "If you have any questions or concerns about your medication regimen, consult your healthcare provider for personalized advice.",
+      "pattern": "D",
+      "notes": "Stand-alone advice."
+    }
+  ]
+}

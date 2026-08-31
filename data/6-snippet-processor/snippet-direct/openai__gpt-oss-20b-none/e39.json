@@ -1,0 +1,184 @@
+{
+  "entry_id": 39,
+  "batch_id": 4,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 23-year-old man presents to the emergency department. He was brought in by police for shouting on a subway. The patient claims that little people were trying to kill him and he was acting within his rights to defend himself. The patient has a medical history of marijuana and IV drug use as well as multiple suicide attempts. He is currently homeless. While in the ED, the patient is combative and refuses a physical exam. He is given IM haloperidol and diphenhydramine. The patient is transferred to the inpatient psychiatric unit and is continued on haloperidol throughout the next week. Though he is no longer aggressive, he is seen making \"armor\" out of paper plates and plastic silverware to defend himself. His temperature is 98.6°F (37°C), blood pressure is 115/71 mmHg, pulse is 72/min, and respirations are 12/min. The patient's treatment history is significant for failure to obtain symptom control with risperidone, haloperidol, and ziprasidone. Which of the following is the most appropriate next step in management? (A) Chlorpromazine (B) Clozapine (C) Fluphenazine (D) Olanzapine (E) Thioridazine",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2734,
+    "output_tokens": 4158,
+    "cached_input_tokens": 0,
+    "cost": 0.00066414
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2734,
+      "output_tokens": 4158,
+      "cached_input_tokens": 0,
+      "cost": 0.00066414
+    }
+  ],
+  "shared_context": {
+    "age": "23",
+    "sex": "male",
+    "chief_complaint": "paranoid delusions and aggression",
+    "medical_history": "marijuana and IV drug use; multiple suicide attempts; homelessness",
+    "medications": "haloperidol (current); prior risperidone, ziprasidone",
+    "vitals": "T 98.6°F; BP 115/71; pulse 72; RR 12",
+    "exam_findings": "none beyond aggression; vital signs normal",
+    "treatment_history": "failure of risperidone, haloperidol, and ziprasidone to control symptoms",
+    "correct_answer": "Clozapine"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in management for this patient, we need to go through the following steps",
+    "Symptoms: The patient is experiencing paranoid delusions (believes \"little people\" are trying to kill him) and has a history of combative behavior",
+    "Previous Treatments: He has been treated with risperidone, haloperidol, and ziprasidone without adequate symptom control",
+    "Medical History: Significant for marijuana and IV drug use, multiple suicide attempts, and homelessness",
+    "Current Medications: He is currently on haloperidol",
+    "The patient exhibits psychotic symptoms that suggest a diagnosis of schizophrenia or a related psychotic disorder",
+    "Given his history of non-response to multiple antipsychotics, the patient is likely experiencing treatment-resistant schizophrenia",
+    "Vital Signs: Normal (Temperature: 98.6°F, BP: 115/71 mmHg, Pulse: 72/min, Respirations: 12/min)",
+    "No acute distress or significant abnormalities that would necessitate immediate medical intervention other than addressing his psychiatric condition",
+    "Chlorpromazine: First-generation antipsychotic, but similar in pharmacologic profile to drugs already tried (haloperidol, risperidone) and unlikely to be effective given previous treatment history",
+    "Clozapine: Second-generation antipsychotic specifically indicated for treatment-resistant schizophrenia",
+    "Fluphenazine: Another first-generation antipsychotic, similar to haloperidol in terms of efficacy and side effects, not a likely candidate for improving symptom control given past drug history",
+    "Olanzapine: Second-generation antipsychotic, different from those tried previously, but typically not the first choice for treatment-resistant cases when clozapine is an option",
+    "Thioridazine: First-generation antipsychotic with significant side effect profile (e.g., QT prolongation), unlikely to be chosen over other available options",
+    "Given the patient's lack of response to multiple antipsychotics, the most appropriate next step in management is to try clozapine, the only antipsychotic proven to be effective in treatment-resistant schizophrenia",
+    "(B) Clozapine"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate next step in management for this 23-year-old male, the medical team needs to go through the following steps.",
+      "pattern": "D",
+      "notes": "General procedural statement; self-contained."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The 23-year-old male has paranoid delusions wherein he believes 'little people' are trying to kill him and displays combative behavior.",
+      "pattern": "D",
+      "notes": "Self-contained depiction of symptoms."
+    },
+    {
+      "source_sentences": [
+        2,
+        6
+      ],
+      "output": "The 23-year-old male has failed to achieve symptom control with risperidone, haloperidol, and ziprasidone; given this lack of response, he is likely experiencing treatment-resistant schizophrenia.",
+      "pattern": "B",
+      "notes": "Explicit causal link via 'given'; merges past treatment failure and inference."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "His medical history is significant for marijuana and intravenous drug use, multiple suicide attempts, and homelessness.",
+      "pattern": "D",
+      "notes": "Standalone medical history."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "He is currently taking haloperidol.",
+      "pattern": "D",
+      "notes": "Current medication statement."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "These psychotic symptoms are consistent with a diagnosis of schizophrenia or a related psychotic disorder.",
+      "pattern": "D",
+      "notes": "Diagnosis inference."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Physiologic vital signs are normal: temperature 37°C, blood pressure 115/71 mmHg, pulse 72/min, respirations 12/min.",
+      "pattern": "D",
+      "notes": "Vital signs record."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "There is no acute medical distress that requires intervention other than addressing his psychiatric condition.",
+      "pattern": "D",
+      "notes": "Assessment of medical necessity."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Chlorpromazine is a first‑generation antipsychotic; it has a pharmacologic profile similar to haloperidol and risperidone and is unlikely to be effective given his prior treatment history.",
+      "pattern": "D",
+      "notes": "Description of chlorpromazine."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Clozapine is a second‑generation antipsychotic that is specifically indicated for treatment‑resistant schizophrenia.",
+      "pattern": "D",
+      "notes": "Definition of clozapine."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Fluphenazine, another first‑generation antipsychotic, has efficacy and side‑effect characteristics similar to haloperidol and is not likely to improve control in this patient.",
+      "pattern": "D",
+      "notes": "Description of fluphenazine."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Olanzapine, a second‑generation antipsychotic distinct from those tried previously, is generally not the first choice for treatment‑resistant cases when clozapine is an option.",
+      "pattern": "D",
+      "notes": "Description of olanzapine."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Thioridazine is a first‑generation antipsychotic with a significant side‑effect profile, including QT‑prolongation, and would not be chosen over other more suitable options.",
+      "pattern": "D",
+      "notes": "Description of thioridazine."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Given the patient’s lack of response to multiple antipsychotics, the most appropriate next step is to initiate clozapine, the only antipsychotic proven to be effective in treatment‑resistant schizophrenia.",
+      "pattern": "C",
+      "notes": "Conclusion requiring earlier premises."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "Answer: Clozapine (B).",
+      "pattern": "D",
+      "notes": "Explicit answer statement."
+    }
+  ]
+}

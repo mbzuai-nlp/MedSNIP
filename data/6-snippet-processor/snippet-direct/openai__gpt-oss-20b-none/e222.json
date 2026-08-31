@@ -1,0 +1,138 @@
+{
+  "entry_id": 222,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 27-year-old man presents for an appointment to establish care. He recently was released from prison. He has felt very fatigued and has had a cough. He has lost roughly 15 pounds over the past 3 weeks. He attributes this to intravenous drug use in prison. His temperature is 99.5°F (37.5°C), blood pressure is 127/68 mmHg, pulse is 100/min, respirations are 18/min, and oxygen saturation is 98% on room air. QuantiFERON gold testing is positive. The patient is started on appropriate treatment. Which of the following is the most likely indication to discontinue this patient's treatment? (A) Elevated liver enzymes (B) Hyperuricemia (C) Optic neuritis (D) Peripheral neuropathy (E) Red body excretions",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2583,
+    "output_tokens": 2753,
+    "cached_input_tokens": 0,
+    "cost": 0.00046291
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2583,
+      "output_tokens": 2753,
+      "cached_input_tokens": 0,
+      "cost": 0.00046291
+    }
+  ],
+  "shared_context": {
+    "age": "27",
+    "sex": "male",
+    "chief_complaint": "fatigue, cough, weight loss",
+    "medical_history": "recent release from prison; intravenous drug use; latent tuberculosis (positive QuantiFERON Gold)",
+    "vitals": "T 99.5°F, BP 127/68 mmHg, pulse 100/min, respirations 18/min, O2 98% on room air",
+    "treatment_history": "started on appropriate therapy for latent tuberculosis (e.g., isoniazid, rifampin)",
+    "correct_answer": "Peripheral neuropathy"
+  },
+  "sentences": [
+    "To answer this question, we'll go through the patient's symptoms and treatment, and evaluate each option to determine the most likely indication to discontinue treatment",
+    "The patient is a 27-year-old man who has recently been released from prison and is presenting with symptoms of fatigue, cough, and weight loss",
+    "He attributes his weight loss to intravenous drug use in prison",
+    "He has a positive QuantiFERON gold test, indicating latent tuberculosis (TB)",
+    "The patient is started on appropriate treatment for latent TB",
+    "A) Elevated liver enzymes: Elevated liver enzymes can be a side effect of many medications, including those used to treat TB",
+    "However, they are not a contraindication for treatment, and the treatment can usually be adjusted to minimize liver enzyme elevation",
+    "B) Hyperuricemia: Hyperuricemia (high levels of uric acid in the blood) can be a side effect of certain medications used to treat TB, such as rifampicin",
+    "However, it is not typically an indication to discontinue treatment",
+    "C) Optic neuritis: Optic neuritis is an inflammation of the optic nerve and can be a side effect of some medications used to treat TB, such as isoniazid",
+    "However, it is a rare side effect and not typically an indication to discontinue treatment",
+    "D) Peripheral neuropathy: Peripheral neuropathy is a well-known side effect of isoniazid, a medication commonly used to treat latent TB",
+    "It can occur at any time during treatment, and if it occurs, the treatment is often discontinued",
+    "E) Red body excretions: Red body excretions are not a known side effect of TB treatment",
+    "Based on the information provided, the most likely indication to discontinue this patient's treatment is peripheral neuropathy, due to the common association with isoniazid"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The provider plans to review the 27‑year‑old male’s symptoms and treatment options to determine the most likely indication to discontinue latent TB therapy.",
+      "pattern": "D",
+      "notes": "Standalone planning statement; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3
+      ],
+      "output": "The 27‑year‑old male, recently released from prison, presents with fatigue, cough, weight loss, and reports intravenous drug use as a possible cause.",
+      "pattern": "A",
+      "notes": "Enumeration of patient symptoms and history."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The 27‑year‑old male is started on appropriate therapy for latent tuberculosis.",
+      "pattern": "D",
+      "notes": "Single factual statement."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "Elevated liver enzymes can occur as a side effect of many drugs used to treat latent TB; however, they are not a contraindication for treatment and can usually be managed by adjusting doses in the 27‑year‑old male.",
+      "pattern": "A",
+      "notes": "All properties of the same subject (elevated liver enzymes)."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "Hyperuricemia may result from rifampicin use, but it is not typically an indication to discontinue treatment in the 27‑year‑old male.",
+      "pattern": "A",
+      "notes": "All properties of the same subject (hyperuricemia)."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "Optic neuritis is a rare inflammation of the optic nerve that can occur as a side effect of isoniazid; it is generally not considered an indication to discontinue therapy in the 27‑year‑old male.",
+      "pattern": "A",
+      "notes": "All properties of the same subject (optic neuritis)."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "Peripheral neuropathy is a well‑known side effect of isoniazid; if it develops during therapy, the treatment is often discontinued in the 27‑year‑old male.",
+      "pattern": "A",
+      "notes": "All properties of the same subject (peripheral neuropathy)."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Red body excretions are not a recognized side effect of TB treatment.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "The most likely indication to discontinue this patient's latent tuberculosis treatment is peripheral neuropathy, due to its common association with isoniazid.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premise."
+    }
+  ]
+}

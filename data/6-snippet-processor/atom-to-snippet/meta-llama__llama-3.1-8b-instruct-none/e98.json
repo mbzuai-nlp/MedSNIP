@@ -1,0 +1,146 @@
+{
+  "entry_id": 98,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Will the antibiotics prevent the lyme disease from progressing?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2791,
+    "output_tokens": 518,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1304,
+      "output_tokens": 269,
+      "cached_input_tokens": 0,
+      "cost": 3.684e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1487,
+      "output_tokens": 249,
+      "cached_input_tokens": 0,
+      "cost": 3.97e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "preventing Lyme disease progression with antibiotics",
+    "condition": "Lyme disease"
+  },
+  "sentences": [
+    "Antibiotics are effective in treating Lyme disease, particularly in its early stages",
+    "The primary goal of antibiotic treatment is to eliminate the infection caused by Borrelia burgdorferi, the bacterium responsible for Lyme disease",
+    "In the early stages of Lyme disease, antibiotics such as doxycycline or amoxicillin are commonly prescribed to prevent the progression of the disease",
+    "These antibiotics work by targeting the bacteria and preventing them from reproducing and spreading",
+    "However, if left untreated, Lyme disease can progress to its later stages, which may involve more severe symptoms such as arthritis, neurological problems, and heart issues",
+    "In these cases, treatment may involve longer courses of antibiotics or additional medications to manage symptoms",
+    "It is essential to note that antibiotics are not effective against the late-stage symptoms of Lyme disease, such as arthritis or neurological problems, which are thought to be caused by the body's immune response to the infection rather than the bacteria itself",
+    "In these cases, treatment focuses on managing symptoms and alleviating discomfort"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Antibiotics are effective in treating Lyme disease.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Antibiotics can eliminate the infection caused by Borrelia burgdorferi.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Antibiotics can prevent the bacteria from reproducing and spreading.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Antibiotics can prevent the progression of Lyme disease in its early stages.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Antibiotics such as doxycycline or amoxicillin are commonly prescribed to treat Lyme disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Antibiotics are not effective against late-stage symptoms of Lyme disease.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Treatment for late-stage Lyme disease focuses on managing symptoms.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Antibiotics are effective in treating Lyme disease by eliminating the infection caused by Borrelia burgdorferi and preventing the bacteria from reproducing and spreading.",
+      "pattern": "A",
+      "notes": "Enumeration of antibiotic effects."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Antibiotics can prevent the progression of Lyme disease in its early stages.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Antibiotics such as doxycycline or amoxicillin are commonly prescribed to treat Lyme disease.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Antibiotics are not effective against late-stage symptoms of Lyme disease.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Treatment for late-stage Lyme disease focuses on managing symptoms.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    }
+  ]
+}

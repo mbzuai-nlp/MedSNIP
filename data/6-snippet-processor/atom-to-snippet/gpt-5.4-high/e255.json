@@ -1,0 +1,185 @@
+{
+  "entry_id": 255,
+  "batch_id": 26,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "do chlamdia often cure itself or does it cause permanent damage",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2919,
+    "output_tokens": 5181,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1275,
+      "output_tokens": 1185,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1644,
+      "output_tokens": 3996,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "whether chlamydia cures itself or causes permanent damage",
+    "condition": "Chlamydia trachomatis infection"
+  },
+  "sentences": [
+    "Chlamydia trachomatis infections may not always cure themselves, and if left untreated, they can cause permanent damage",
+    "The bacteria can persist in the host epithelial cells, leading to chronic infection, and the host's immune response may not be able to eliminate the infection",
+    "In some cases, the infection can lead to serious complications, such as pelvic inflammatory disease, tubal factor infertility, and ectopic pregnancy",
+    "The bacteria's ability to evade the host's immune system and survive in a persistent, non-replicative state contributes to its ability to cause long-term damage",
+    "However, studies have shown that Chlamydia trachomatis can be treated with antibiotics, and prompt treatment can help prevent long-term damage and complications",
+    "A study published in the journal Clinical and Vaccine Immunology found that early treatment with antibiotics can help restore fertility in women with Chlamydia-induced pelvic inflammatory disease"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlamydia trachomatis infections may not always cure themselves.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "If left untreated, Chlamydia trachomatis infections can cause permanent damage.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Chlamydia trachomatis can persist in host epithelial cells.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Persistence of Chlamydia trachomatis in host epithelial cells can lead to chronic infection.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The host immune response may not be able to eliminate Chlamydia trachomatis infection.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "In some cases, Chlamydia trachomatis infection can lead to pelvic inflammatory disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "In some cases, Chlamydia trachomatis infection can lead to tubal factor infertility.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "In some cases, Chlamydia trachomatis infection can lead to ectopic pregnancy.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Chlamydia trachomatis can evade the host's immune system.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Chlamydia trachomatis can survive in a persistent, non-replicative state.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Chlamydia trachomatis's ability to evade the host's immune system and survive in a persistent, non-replicative state contributes to its ability to cause long-term damage.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Chlamydia trachomatis can be treated with antibiotics.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Prompt treatment of Chlamydia trachomatis infection can help prevent long-term damage and complications.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Early treatment with antibiotics can help restore fertility in women with Chlamydia-induced pelvic inflammatory disease.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "output": "Chlamydia trachomatis infection may not resolve on its own because the organism can evade the host immune system, persist in host epithelial cells, and survive in a persistent, non-replicative state; the host immune response may not eliminate it, which can lead to chronic infection and contribute to long-term damage.",
+      "pattern": "B",
+      "notes": "Causal chain explaining why chlamydia may not self-cure and how persistence contributes to chronic infection and long-term harm."
+    },
+    {
+      "source_claims": [
+        2,
+        6,
+        7,
+        8
+      ],
+      "output": "If left untreated, Chlamydia trachomatis infection can cause permanent damage, including pelvic inflammatory disease, tubal factor infertility, and ectopic pregnancy.",
+      "pattern": "A",
+      "notes": "General statement about permanent damage paired with an enumeration of specific complications of the same infection."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Chlamydia trachomatis infection can be treated with antibiotics.",
+      "pattern": "D",
+      "notes": "Standalone treatment fact."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "Prompt treatment of Chlamydia trachomatis infection can help prevent long-term damage and complications, and early treatment with antibiotics can help restore fertility in women with Chlamydia-induced pelvic inflammatory disease.",
+      "pattern": "A",
+      "notes": "Enumeration of benefits associated with early treatment."
+    }
+  ]
+}

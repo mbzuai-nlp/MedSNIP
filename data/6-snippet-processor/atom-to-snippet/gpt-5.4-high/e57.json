@@ -1,0 +1,200 @@
+{
+  "entry_id": 57,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "what causes ringworm ?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2734,
+    "output_tokens": 2298,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1186,
+      "output_tokens": 1115,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1548,
+      "output_tokens": 1183,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "causes of ringworm",
+    "condition": "ringworm",
+    "symptom": "skin fungal infection"
+  },
+  "sentences": [
+    "Ringworm, also known as dermatophytosis, is a common fungal infection of the skin",
+    "It is caused by dermatophytes, which are a group of fungi that include species from the genera Trichophyton, Microsporum, and Epidermophyton",
+    "These fungi thrive in warm, moist environments and can infect the skin, hair, and nails",
+    "Transmission occurs through direct contact with an infected person or animal, or indirectly through contact with contaminated objects such as towels, clothing, or surfaces"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Ringworm is also known as dermatophytosis.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Ringworm is a common fungal infection of the skin.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Ringworm is caused by dermatophytes.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Dermatophytes are a group of fungi.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Dermatophytes include species from the genus Trichophyton.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Dermatophytes include species from the genus Microsporum.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Dermatophytes include species from the genus Epidermophyton.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Dermatophytes thrive in warm, moist environments.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Dermatophytes can infect the skin.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Dermatophytes can infect the hair.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Dermatophytes can infect the nails.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Ringworm can be transmitted through direct contact with an infected person.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Ringworm can be transmitted through direct contact with an infected animal.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Ringworm can be transmitted indirectly through contact with contaminated towels.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Ringworm can be transmitted indirectly through contact with contaminated clothing.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Ringworm can be transmitted indirectly through contact with contaminated surfaces.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "Ringworm, also known as dermatophytosis, is a common fungal infection of the skin caused by dermatophytes, which are a group of fungi.",
+      "pattern": "B",
+      "notes": "Cause statement is merged with the supporting definitional context about dermatophytes."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Dermatophytes include species from the genera Trichophyton, Microsporum, and Epidermophyton.",
+      "pattern": "A",
+      "notes": "Enumeration of members of the same fungal group."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "Dermatophytes thrive in warm, moist environments and can infect the skin, hair, and nails.",
+      "pattern": "A",
+      "notes": "Multiple properties of the same organism are listed together."
+    },
+    {
+      "source_claims": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "output": "Ringworm can be transmitted through direct contact with an infected person or animal, or indirectly through contaminated towels, clothing, or surfaces.",
+      "pattern": "A",
+      "notes": "Enumeration of transmission routes for the same condition."
+    }
+  ]
+}

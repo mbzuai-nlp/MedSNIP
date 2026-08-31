@@ -1,0 +1,158 @@
+{
+  "entry_id": 24,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 1-year-old girl is brought to a neurologist due to increasing seizure frequency over the past 2 months. She recently underwent a neurology evaluation which revealed hypsarrhythmia on electroencephalography (EEG) with a mix of slow waves, multifocal spikes, and asynchrony. Her parents have noticed the patient occasionally stiffens and spreads her arms at home. She was born at 38-weeks gestational age without complications. She has no other medical problems. Her medications consist of lamotrigine and valproic acid. Her temperature is 98.3°F (36.8°C), blood pressure is 90/75 mmHg, pulse is 94/min, and respirations are 22/min. Physical exam reveals innumerable hypopigmented macules on the skin and an irregularly shaped, thickened, and elevated plaque on the lower back. Which of the following is most strongly associated with this patient's condition? (A) Cardiac rhabdomyoma (B) Glaucoma (C) Optic glioma (D) Polyostotic fibrous dysplasia (E) Renal cell carcinoma",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2717,
+    "output_tokens": 993,
+    "cached_input_tokens": 0,
+    "cost": 9.406e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2717,
+      "output_tokens": 993,
+      "cached_input_tokens": 0,
+      "cost": 9.406e-05
+    }
+  ],
+  "shared_context": {
+    "age": "1",
+    "sex": "female",
+    "chief_complaint": "increasing seizure frequency over the past 2 months",
+    "medical_history": "no other medical problems; born at 38-weeks gestational age without complications",
+    "vitals": "temperature 98.3°F (36.8°C), blood pressure 90/75 mmHg, pulse 94/min, respirations 22/min",
+    "exam_findings": "innumerable hypopigmented macules on the skin and an irregularly shaped, thickened, and elevated plaque on the lower back",
+    "correct_answer": "A"
+  },
+  "sentences": [
+    "The patient is a 1-year-old girl with increasing seizure frequency over the past 2 months",
+    "EEG findings revealed hypsarrhythmia, which is a characteristic pattern seen in infantile spasms (West syndrome)",
+    "The patient exhibits episodes where she stiffens and spreads her arms, consistent with infantile spasms",
+    "Physical examination reveals numerous hypopigmented macules and an irregularly shaped, thickened, and elevated plaque on the lower back",
+    "The combination of hypopigmented macules and an elevated plaque on the back suggests a diagnosis of Tuberous Sclerosis Complex (TSC)",
+    "TSC is a genetic disorder that causes benign tumors to form in many different organs, primarily the brain, skin, kidneys, heart, eyes, and lungs",
+    "Skin Manifestations: Hypopigmented macules (ash-leaf spots) and Shagreen patches (thickened, elevated plaques)",
+    "Neurological Manifestations: Infantile spasms and hypsarrhythmia on EEG",
+    "Cardiac Manifestations: Presence of cardiac rhabdomyomas, which are benign tumors of the heart and commonly associated with TSC",
+    "Cardiac rhabdomyoma (Option A): Strongly associated with TSC",
+    "Cardiac rhabdomyomas are often found in TSC patients and can be detected at any age, often during infancy",
+    "Glaucoma (Option B): Associated with other conditions, not typically linked to TSC",
+    "Optic glioma (Option C): More commonly associated with Neurofibromatosis type 1 (NF1)",
+    "Polyostotic fibrous dysplasia (Option D): Associated with McCune-Albright syndrome",
+    "Renal cell carcinoma (Option E): Not typically linked to TSC, though TSC patients are at risk for renal angiomyolipomas and renal cell carcinoma in adulthood",
+    "The clinical presentation of infantile spasms, hypsarrhythmia, hypopigmented macules, and Shagreen patch is most consistent with Tuberous Sclerosis Complex",
+    "Cardiac rhabdomyomas are commonly found in TSC patients and serve as a strong association with this condition",
+    "(A) Cardiac rhabdomyoma"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "A 1-year-old girl is experiencing increasing seizure frequency over the past 2 months.",
+      "pattern": "D",
+      "notes": "Standalone clinical presentation; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "EEG findings revealed hypsarrhythmia, which is a characteristic pattern seen in infantile spasms (West syndrome).",
+      "pattern": "D",
+      "notes": "Standalone diagnostic finding; EEG details inlined."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The patient exhibits episodes where she stiffens and spreads her arms, consistent with infantile spasms.",
+      "pattern": "D",
+      "notes": "Standalone clinical observation; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Physical examination reveals numerous hypopigmented macules and an irregularly shaped, thickened, and elevated plaque on the lower back.",
+      "pattern": "D",
+      "notes": "Standalone physical exam findings; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The combination of hypopigmented macules and an elevated plaque on the back suggests a diagnosis of Tuberous Sclerosis Complex (TSC).",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Tuberous Sclerosis Complex (TSC) is a genetic disorder that causes benign tumors to form in many different organs, primarily the brain, skin, kidneys, heart, eyes, and lungs.",
+      "pattern": "D",
+      "notes": "Standalone disease description; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "TSC is characterized by skin manifestations (hypopigmented macules and Shagreen patches) and neurological manifestations (infantile spasms and hypsarrhythmia on EEG).",
+      "pattern": "A",
+      "notes": "All properties of one subject (TSC)."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "TSC is characterized by cardiac manifestations (presence of cardiac rhabdomyomas, which are benign tumors of the heart and commonly associated with TSC).",
+      "pattern": "A",
+      "notes": "All properties of one subject (TSC)."
+    },
+    {
+      "source_sentences": [
+        8,
+        9,
+        10
+      ],
+      "output": "Cardiac rhabdomyomas are often found in TSC patients and can be detected at any age, often during infancy. They are strongly associated with TSC.",
+      "pattern": "A",
+      "notes": "All properties of one subject (cardiac rhabdomyomas)."
+    },
+    {
+      "source_sentences": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "output": "Glaucoma (Option B), Optic glioma (Option C), Polyostotic fibrous dysplasia (Option D), and Renal cell carcinoma (Option E) are not strongly associated with TSC or are associated with other conditions.",
+      "pattern": "A",
+      "notes": "All properties of one subject (differential diagnoses)."
+    },
+    {
+      "source_sentences": [
+        15,
+        16,
+        17
+      ],
+      "output": "The clinical presentation of infantile spasms, hypsarrhythmia, hypopigmented macules, and Shagreen patch is most consistent with Tuberous Sclerosis Complex. Cardiac rhabdomyomas are commonly found in TSC patients and serve as a strong association with this condition.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises; patient details inlined."
+    }
+  ]
+}

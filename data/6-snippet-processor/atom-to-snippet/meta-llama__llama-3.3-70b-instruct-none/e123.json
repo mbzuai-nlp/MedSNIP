@@ -1,0 +1,176 @@
+{
+  "entry_id": 123,
+  "batch_id": 13,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How is PID treated?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2982,
+    "output_tokens": 920,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1327,
+      "output_tokens": 502,
+      "cached_input_tokens": 0,
+      "cost": 0.00029334
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1655,
+      "output_tokens": 418,
+      "cached_input_tokens": 0,
+      "cost": 0.00029926
+    }
+  ],
+  "shared_context": {
+    "topic": "PID treatment",
+    "condition": "Pelvic inflammatory disease (PID)"
+  },
+  "sentences": [
+    "Pelvic inflammatory disease (PID) is treated with a combination of antibiotics to cover the most likely pathogens, including Neisseria gonorrhoeae, Chlamydia trachomatis, anaerobes, Gram-negative facultative bacteria, and streptococci",
+    "The treatment regimen typically includes a combination of a cephalosporin and doxycycline, with or without metronidazole",
+    "For outpatient treatment, a common regimen is ceftriaxone 250 mg intramuscularly in a single dose, plus doxycycline 100 mg orally twice a day for 14 days, with or without metronidazole 500 mg orally twice a day for 14 days",
+    "For inpatient treatment, one option is cefotetan 2 g intravenously every 12 hours or cefoxitin 2 g intravenously every 6 hours, plus doxycycline 100 mg orally or intravenously every 12 hours",
+    "Patients should be re-evaluated within 48-72 hours to ensure clinical improvement",
+    "Sexual partners should also be treated to prevent reinfection"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "PID is treated with a combination of antibiotics to cover the most likely pathogens.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The pathogens likely causing PID include Neisseria gonorrhoeae.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The pathogens likely causing PID include Chlamydia trachomatis.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The pathogens likely causing PID include anaerobes.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The pathogens likely causing PID include Gram-negative facultative bacteria.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The pathogens likely causing PID include streptococci.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The treatment regimen for PID typically includes a combination of a cephalosporin and doxycycline, with or without metronidazole.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "A common outpatient treatment regimen for PID is ceftriaxone 250 mg intramuscularly in a single dose, plus doxycycline 100 mg orally twice a day for 14 days, with or without metronidazole 500 mg orally twice a day for 14 days.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "An inpatient treatment option for PID is cefotetan 2 g intravenously every 12 hours or cefoxitin 2 g intravenously every 6 hours, plus doxycycline 100 mg orally or intravenously every 12 hours.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Patients with PID should be re-evaluated within 48-72 hours to ensure clinical improvement.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Sexual partners of PID patients should also be treated to prevent reinfection.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "PID is treated with a combination of antibiotics to cover the most likely pathogens, which include Neisseria gonorrhoeae, Chlamydia trachomatis, anaerobes, Gram-negative facultative bacteria, and streptococci.",
+      "pattern": "A",
+      "notes": "Enumeration of pathogens and introduction to treatment approach."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The treatment regimen for PID typically includes a combination of a cephalosporin and doxycycline, with or without metronidazole.",
+      "pattern": "D",
+      "notes": "General treatment regimen description."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "A common outpatient treatment regimen for PID is ceftriaxone 250 mg intramuscularly in a single dose, plus doxycycline 100 mg orally twice a day for 14 days, with or without metronidazole 500 mg orally twice a day for 14 days.",
+      "pattern": "D",
+      "notes": "Specific outpatient treatment details."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "An inpatient treatment option for PID is cefotetan 2 g intravenously every 12 hours or cefoxitin 2 g intravenously every 6 hours, plus doxycycline 100 mg orally or intravenously every 12 hours.",
+      "pattern": "D",
+      "notes": "Specific inpatient treatment details."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Patients with PID should be re-evaluated within 48-72 hours to ensure clinical improvement, and their sexual partners should also be treated to prevent reinfection.",
+      "pattern": "B",
+      "notes": "Causal chain of necessary follow-up and prevention actions."
+    }
+  ]
+}

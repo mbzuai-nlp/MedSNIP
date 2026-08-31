@@ -1,0 +1,154 @@
+{
+  "entry_id": 12,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "So what does the non reactive mean for the hep a igm",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2907,
+    "output_tokens": 2592,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1290,
+      "output_tokens": 1436,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1617,
+      "output_tokens": 1156,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "meaning of a non-reactive hepatitis A IgM result",
+    "test": "hepatitis A IgM (anti-HAV IgM)",
+    "condition": "acute hepatitis A infection"
+  },
+  "sentences": [
+    "A non-reactive result for the hepatitis A IgM (anti-HAV IgM) test indicates that the individual does not have an acute infection with hepatitis A virus (HAV)",
+    "The IgM antibodies are typically present during the acute phase of hepatitis A infection and usually appear shortly after the onset of symptoms, peaking within the first few weeks, and declining over the next few months",
+    "A non-reactive hepatitis A IgM result suggests that the person either has never been infected with HAV or that any previous infection has resolved to the point where the IgM antibodies are no longer detectable",
+    "In cases where hepatitis A is strongly suspected but initial anti-HAV IgM results are non-reactive, retesting may be considered, especially if the clinical presentation is consistent with hepatitis A",
+    "This is because anti-HAV IgM may not be detectable at very early stages of infection, and repeating the test after some time can help confirm the diagnosis if the initial test was conducted too early"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A non-reactive result for the hepatitis A IgM (anti-HAV IgM) test indicates that the individual does not have an acute hepatitis A virus infection.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Hepatitis A IgM antibodies are typically present during the acute phase of hepatitis A infection.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Hepatitis A IgM antibodies usually appear shortly after the onset of symptoms.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Hepatitis A IgM antibodies peak within the first few weeks.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Hepatitis A IgM antibodies decline over the next few months.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A non-reactive hepatitis A IgM result suggests that the person has never been infected with hepatitis A virus.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "A non-reactive hepatitis A IgM result suggests that a previous hepatitis A virus infection has resolved to the point that IgM antibodies are no longer detectable.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "If hepatitis A is strongly suspected but initial anti-HAV IgM results are non-reactive, retesting may be considered.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Retesting may be considered especially if the clinical presentation is consistent with hepatitis A.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Anti-HAV IgM may not be detectable at very early stages of infection.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Repeating the anti-HAV IgM test after some time can help confirm the diagnosis if the initial test was conducted too early.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        6,
+        7
+      ],
+      "output": "A non-reactive hepatitis A IgM result indicates that the individual does not have an acute hepatitis A infection and may suggest either that the person has never been infected with hepatitis A virus or that a previous hepatitis A virus infection has resolved to the point that IgM antibodies are no longer detectable.",
+      "pattern": "A",
+      "notes": "Enumeration of possible meanings of the same test result."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "Hepatitis A IgM antibodies are typically present during the acute phase of hepatitis A infection, usually appear shortly after the onset of symptoms, peak within the first few weeks, and decline over the next few months.",
+      "pattern": "A",
+      "notes": "Multiple temporal properties of hepatitis A IgM antibodies are listed for the same subject."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "If hepatitis A is strongly suspected despite a non-reactive initial anti-HAV IgM result, especially when the clinical presentation is consistent with hepatitis A, retesting after some time may be considered because anti-HAV IgM may not be detectable at very early stages of infection and repeating the test can help confirm the diagnosis.",
+      "pattern": "C",
+      "notes": "Recommendation to retest is only fully meaningful with the supporting rationale about early false-negative timing."
+    }
+  ]
+}

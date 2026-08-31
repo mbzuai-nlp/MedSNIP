@@ -1,0 +1,87 @@
+{
+  "entry_id": 10,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "So what does the non reactive mean for the hep a igm",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2628,
+    "output_tokens": 327,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1161,
+      "output_tokens": 177,
+      "cached_input_tokens": 0,
+      "cost": 0.00017274
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1467,
+      "output_tokens": 150,
+      "cached_input_tokens": 0,
+      "cost": 0.0001947
+    }
+  ],
+  "shared_context": {
+    "topic": "Hepatitis A IgM antibody test result",
+    "condition": "Hepatitis A"
+  },
+  "sentences": [
+    "A non-reactive result for the Hepatitis A IgM antibody test indicates that there is no detectable level of IgM antibodies against the Hepatitis A virus in the blood sample",
+    "This typically means that the individual has not been recently infected with the Hepatitis A virus, as IgM antibodies are usually present during an acute or recent infection"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A non-reactive Hepatitis A IgM antibody test result indicates that there is no detectable level of IgM antibodies against the Hepatitis A virus in the blood sample.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The individual has not been recently infected with the Hepatitis A virus if the Hepatitis A IgM antibody test result is non-reactive.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "IgM antibodies are usually present during an acute or recent Hepatitis A infection.",
+      "source_sentences": [
+        1
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        3
+      ],
+      "output": "A non-reactive Hepatitis A IgM antibody test result indicates that there is no detectable level of IgM antibodies against the Hepatitis A virus in the blood sample, which are usually present during an acute or recent Hepatitis A infection.",
+      "pattern": "C",
+      "notes": "Definition + underlying principle."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The individual has not been recently infected with the Hepatitis A virus if the Hepatitis A IgM antibody test result is non-reactive.",
+      "pattern": "D",
+      "notes": "Standalone implication of test result."
+    }
+  ]
+}

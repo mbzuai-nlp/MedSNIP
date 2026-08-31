@@ -1,0 +1,170 @@
+{
+  "entry_id": 171,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Should I take a lower dose of my sertraline while taking the zofran?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3026,
+    "output_tokens": 746,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1355,
+      "output_tokens": 441,
+      "cached_input_tokens": 0,
+      "cost": 0.00034373
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1671,
+      "output_tokens": 305,
+      "cached_input_tokens": 0,
+      "cost": 0.00033313
+    }
+  ],
+  "shared_context": {
+    "drug_a": "sertraline",
+    "drug_b": "ondansetron (Zofran)"
+  },
+  "sentences": [
+    "No, there is no need to adjust your dose of sertraline while taking ondansetron (Zofran)",
+    "The two medications do not have a significant interaction that would necessitate a dose adjustment of sertraline",
+    "However, it is always important to inform your healthcare provider of all medications you are currently taking to ensure safe and effective use of all your prescribed drugs",
+    "Here are the key points and their respective references",
+    "Sertraline and ondansetron do not have a significant interaction that requires dose adjustment",
+    "This statement is based on the general pharmacological profiles of the two drugs and the lack of documented significant interactions",
+    "Always inform your healthcare provider about all the medications you are taking to ensure safe use",
+    "This is a general medical guideline to avoid potential drug interactions and side effects"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "There is no need to adjust the dose of sertraline while taking ondansetron (Zofran).",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Sertraline and ondansetron do not have a significant interaction that would necessitate a dose adjustment of sertraline.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "It is important to inform your healthcare provider of all medications you are currently taking to ensure safe and effective use of all your prescribed drugs.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The following are key points and their respective references.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Sertraline and ondansetron do not have a significant interaction that requires dose adjustment.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The statement that sertraline and ondansetron do not have a significant interaction is based on the general pharmacological profiles of the two drugs.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The statement that sertraline and ondansetron do not have a significant interaction is based on the lack of documented significant interactions.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Always inform your healthcare provider about all the medications you are taking to ensure safe use.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Informing your healthcare provider about all medications you are taking is a general medical guideline to avoid potential drug interactions.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Informing your healthcare provider about all medications you are taking is a general medical guideline to avoid potential side effects.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "There is no need to adjust the dose of sertraline while taking ondansetron (Zofran) as they do not have a significant interaction that would necessitate a dose adjustment.",
+      "pattern": "C",
+      "notes": "Recommendation combined with its supporting premise."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "It is important to inform your healthcare provider of all medications you are currently taking to ensure safe and effective use of all your prescribed drugs.",
+      "pattern": "D",
+      "notes": "Standalone medical advice."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The following are key points and their respective references.",
+      "pattern": "D",
+      "notes": "Structural sentence/standalone statement."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Sertraline and ondansetron do not have a significant interaction that requires dose adjustment, based on their general pharmacological profiles and a lack of documented significant interactions.",
+      "pattern": "C",
+      "notes": "Conclusion supported by reasoning/premises."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10
+      ],
+      "output": "Always inform your healthcare provider about all medications you are taking, as this is a general medical guideline to avoid potential drug interactions and side effects.",
+      "pattern": "B",
+      "notes": "Recommendation linked to the causal reasons why it is a guideline."
+    }
+  ]
+}

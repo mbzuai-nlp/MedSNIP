@@ -1,0 +1,168 @@
+{
+  "entry_id": 7,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How long does this years flu usually last?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2843,
+    "output_tokens": 2795,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1278,
+      "output_tokens": 1128,
+      "cached_input_tokens": 0,
+      "cost": 0.00019626
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1565,
+      "output_tokens": 1667,
+      "cached_input_tokens": 0,
+      "cost": 0.00028033
+    }
+  ],
+  "shared_context": {
+    "topic": "duration of flu season",
+    "condition": "influenza"
+  },
+  "sentences": [
+    "Influenza activity typically lasts for about 3 to 5 weeks in a specific location, with a gradual increase in cases reaching its peak, followed by a decline in 3 weeks",
+    "However, global influenza activity can persist for several months",
+    "According to the World Health Organization (WHO), the flu season can last for about 5 to 6 months, with activity levels varying from season to season",
+    "It's worth noting that the duration of flu season can be influenced by various factors, including the specific strain of the virus, weather patterns, and human behavior",
+    "In general, influenza activity tends to follow a cyclical pattern, with outbreaks occurring more frequently during the colder months of the year"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Influenza activity typically lasts about 3 to 5 weeks in a specific location.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "During that period, influenza activity gradually increases in cases until it reaches its peak.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "After reaching its peak, influenza activity declines over a span of about 3 weeks.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Global influenza activity can persist for several months.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "According to the World Health Organization (WHO), the flu season can last about 5 to 6 months.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "WHO reports that activity levels vary from season to season.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The duration of flu season can be influenced by the specific strain of the virus.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The duration of flu season can be influenced by weather patterns.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The duration of flu season can be influenced by human behavior.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Influenza activity tends to follow a cyclical pattern.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Outbreaks occur more frequently during the colder months of the year.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Influenza activity typically lasts about 3 to 5 weeks in a specific location, during which cases gradually increase to a peak and then decline over approximately 3 weeks.",
+      "pattern": "A",
+      "notes": "Enumeration of local influenza activity duration and its rise/decline dynamics."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6
+      ],
+      "output": "Global influenza activity can persist for several months; the World Health Organization reports that the flu season can last about 5 to 6 months and that activity levels vary from season to season.",
+      "pattern": "A",
+      "notes": "Enumeration of WHO‑reported global season length and seasonal variability."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "The duration of flu season can be influenced by the specific strain of the virus, weather patterns, and human behavior.",
+      "pattern": "A",
+      "notes": "Enumeration of factors affecting flu season duration."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Influenza activity tends to follow a cyclical pattern, with outbreaks occurring more frequently during colder months of the year.",
+      "pattern": "A",
+      "notes": "Enumeration of seasonal cycle and cold‑month outbreak frequency."
+    }
+  ]
+}

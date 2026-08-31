@@ -1,0 +1,120 @@
+{
+  "entry_id": 9,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "So what does the non reactive mean for the hep a igm",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2739,
+    "output_tokens": 402,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1269,
+      "output_tokens": 212,
+      "cached_input_tokens": 0,
+      "cost": 3.386e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1470,
+      "output_tokens": 190,
+      "cached_input_tokens": 0,
+      "cost": 3.7e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "non-reactive result for Hepatitis A IgM",
+    "condition": "Hepatitis A infection"
+  },
+  "sentences": [
+    "A non-reactive result for the Hepatitis A IgM (Immunoglobulin M) antibody test indicates that the individual does not have a recent or current Hepatitis A infection",
+    "IgM antibodies are typically produced in response to a recent infection, and their presence usually indicates an acute or recent infection",
+    "A non-reactive result suggests that the individual may have been vaccinated against Hepatitis A, has a past infection that is no longer active, or has never been infected with the virus",
+    "It is essential to note that a non-reactive result does not necessarily rule out a past infection, as IgM antibodies may not be detectable after a certain period",
+    "To confirm the status of Hepatitis A immunity, a Hepatitis A IgG (Immunoglobulin G) antibody test may be performed, which can detect antibodies that provide long-term immunity"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A non-reactive result for Hepatitis A IgM indicates no recent or current infection.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "A non-reactive result suggests the individual may have been vaccinated or has a past infection.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A non-reactive result does not rule out a past infection.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "IgM antibodies may not be detectable after a certain period.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "A Hepatitis A IgG antibody test can detect long-term immunity.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "A non-reactive result for Hepatitis A IgM means no recent or current infection, which may indicate past vaccination or infection.",
+      "pattern": "C",
+      "notes": "Conclusion + premises."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "A non-reactive result does not rule out a past infection.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "IgM antibodies may not be detectable after a certain period.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "A Hepatitis A IgG antibody test can detect long-term immunity.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    }
+  ]
+}

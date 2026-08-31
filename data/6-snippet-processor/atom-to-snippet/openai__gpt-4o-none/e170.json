@@ -1,0 +1,194 @@
+{
+  "entry_id": 170,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Should I take a lower dose of my sertraline while taking the zofran?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2978,
+    "output_tokens": 999,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1355,
+      "output_tokens": 502,
+      "cached_input_tokens": 0,
+      "cost": 0.0084075
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1623,
+      "output_tokens": 497,
+      "cached_input_tokens": 0,
+      "cost": 0.0090275
+    }
+  ],
+  "shared_context": {
+    "drug_a": "sertraline",
+    "drug_b": "zofran"
+  },
+  "sentences": [
+    "Interactions between sertraline and zofran are not well-documented in the provided references",
+    "However, it is known that both medications are used to treat different conditions and may interact with each other due to their pharmacological properties",
+    "Zofran (ondansetron) is an antiemetic medication primarily used to prevent nausea and vomiting caused by chemotherapy, radiation therapy, and surgery",
+    "Sertraline, on the other hand, is an SSRI used to treat depression, anxiety disorders, and other conditions",
+    "It is essential to consult a healthcare professional for personalized guidance on dosing adjustments",
+    "They will consider your individual medical history, the specific medications you're taking, and the potential interactions between sertraline and zofran",
+    "However, the provided information suggests that you should inform your doctor about any medications you are taking or plan to take, including prescription and nonprescription medications, vitamins, nutritional supplements, and herbal products",
+    "This includes antidepressants, certain medications for other conditions, and other substances that may interact with sertraline",
+    "In general, it's recommended to start with the lowest effective dose of sertraline and gradually increase as needed and under the guidance of a healthcare provider",
+    "Dose adjustments may be necessary to minimize side effects and maximize efficacy"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Interactions between sertraline and zofran are not well-documented in the provided references.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "It is known that sertraline and zofran are used to treat different conditions.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Sertraline and zofran may interact with each other due to their pharmacological properties.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Zofran (ondansetron) is an antiemetic medication primarily used to prevent nausea and vomiting caused by chemotherapy, radiation therapy, and surgery.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Sertraline is an SSRI used to treat depression, anxiety disorders, and other conditions.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "It is essential to consult a healthcare professional for personalized guidance on dosing adjustments of sertraline while taking zofran.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Healthcare professionals will consider your individual medical history and specific medications you're taking when advising on sertraline and zofran.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The provided information suggests you should inform your doctor about any medications you are taking or plan to take, including prescription and nonprescription medications, vitamins, nutritional supplements, and herbal products.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "You should inform your doctor about antidepressants, certain medications for other conditions, and other substances that may interact with sertraline.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 10,
+      "text": "It's recommended to start with the lowest effective dose of sertraline and gradually increase as needed and under the guidance of a healthcare provider.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Dose adjustments of sertraline may be necessary to minimize side effects and maximize efficacy.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        3
+      ],
+      "output": "Interactions between sertraline and zofran are not well-documented, but they may interact with each other due to their pharmacological properties.",
+      "pattern": "B",
+      "notes": "Causal chain: lack of documentation and possible interaction."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Zofran (ondansetron) is an antiemetic medication primarily used to prevent nausea and vomiting caused by chemotherapy, radiation therapy, and surgery.",
+      "pattern": "D",
+      "notes": "Standalone factual definition."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Sertraline is an SSRI used to treat depression, anxiety disorders, and other conditions.",
+      "pattern": "D",
+      "notes": "Standalone factual definition."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "It is known that sertraline and zofran are used to treat different conditions.",
+      "pattern": "D",
+      "notes": "Standalone fact about different uses."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "It is essential to consult a healthcare professional for personalized guidance on dosing adjustments of sertraline while taking zofran, as professionals will consider your individual medical history and specific medications.",
+      "pattern": "C",
+      "notes": "Guidance recommendation supported by reasoning."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "You should inform your doctor about any medications you are taking or plan to take, including prescription and nonprescription medications, vitamins, nutritional supplements, herbal products, antidepressants, and other substances that may interact with sertraline.",
+      "pattern": "A",
+      "notes": "List of substances to inform the doctor about merged."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "It's recommended to start with the lowest effective dose of sertraline and gradually increase as needed and under the guidance of a healthcare provider. Dose adjustments may be necessary to minimize side effects and maximize efficacy.",
+      "pattern": "B",
+      "notes": "Recommendation and explanation of dose adjustments."
+    }
+  ]
+}

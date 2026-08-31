@@ -1,0 +1,237 @@
+{
+  "entry_id": 8,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How long does this years flu usually last?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3012,
+    "output_tokens": 982,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1325,
+      "output_tokens": 570,
+      "cached_input_tokens": 0,
+      "cost": 0.00038885
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1687,
+      "output_tokens": 412,
+      "cached_input_tokens": 0,
+      "cost": 0.00037587
+    }
+  ],
+  "shared_context": {
+    "topic": "duration of influenza symptoms",
+    "condition": "flu"
+  },
+  "sentences": [
+    "The duration of influenza symptoms can vary depending on several factors, including the individual's overall health, age, and whether they have received the flu vaccine",
+    "Generally, the acute symptoms of influenza, such as fever, chills, muscle aches, and fatigue, typically last about 3 to 7 days in most healthy individuals",
+    "However, some symptoms, like cough and fatigue, can persist for up to two weeks or longer",
+    "Individuals with weakened immune systems, young children, and the elderly may experience a longer duration of symptoms and are at higher risk for complications",
+    "Antiviral medications, if started within the first 48 hours of symptom onset, can reduce the duration of symptoms by about one day"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The duration of influenza symptoms can vary depending on several factors.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Factors influencing influenza symptom duration include the individual's overall health.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Factors influencing influenza symptom duration include the individual's age.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Factors influencing influenza symptom duration include whether the individual has received the flu vaccine.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Fever typically lasts about 3 to 7 days in most healthy individuals.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Chills typically last about 3 to 7 days in most healthy individuals.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Muscle aches typically last about 3 to 7 days in most healthy individuals.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Fatigue typically lasts about 3 to 7 days in most healthy individuals.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Cough can persist for up to two weeks or longer.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Fatigue can persist for up to two weeks or longer.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Individuals with weakened immune systems may experience a longer duration of symptoms.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Individuals with weakened immune systems are at higher risk for complications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Young children may experience a longer duration of symptoms.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Young children are at higher risk for complications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The elderly may experience a longer duration of symptoms.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 16,
+      "text": "The elderly are at higher risk for complications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Antiviral medications can reduce the duration of symptoms by about one day if started within the first 48 hours of symptom onset.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "The duration of influenza symptoms can vary depending on several factors, including the individual's overall health, age, and whether they have received the flu vaccine.",
+      "pattern": "A",
+      "notes": "Enumeration of factors influencing symptom duration."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "In most healthy individuals, fever, chills, muscle aches, and fatigue typically last about 3 to 7 days.",
+      "pattern": "A",
+      "notes": "Enumeration of symptoms with a shared duration."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Cough and fatigue can persist for up to two weeks or longer.",
+      "pattern": "A",
+      "notes": "Enumeration of symptoms with a shared persistent duration."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Individuals with weakened immune systems may experience a longer duration of symptoms and are at higher risk for complications.",
+      "pattern": "A",
+      "notes": "Enumeration of properties for a specific patient group."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "Young children may experience a longer duration of symptoms and are at higher risk for complications.",
+      "pattern": "A",
+      "notes": "Enumeration of properties for a specific patient group."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "The elderly may experience a longer duration of symptoms and are at higher risk for complications.",
+      "pattern": "A",
+      "notes": "Enumeration of properties for a specific patient group."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Antiviral medications can reduce the duration of symptoms by about one day if started within the first 48 hours of symptom onset.",
+      "pattern": "D",
+      "notes": "Standalone fact regarding treatment efficacy."
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "entry_id": 37,
+  "batch_id": 4,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 23-year-old man presents to the emergency department. He was brought in by police for shouting on a subway. The patient claims that little people were trying to kill him and he was acting within his rights to defend himself. The patient has a medical history of marijuana and IV drug use as well as multiple suicide attempts. He is currently homeless. While in the ED, the patient is combative and refuses a physical exam. He is given IM haloperidol and diphenhydramine. The patient is transferred to the inpatient psychiatric unit and is continued on haloperidol throughout the next week. Though he is no longer aggressive, he is seen making \"armor\" out of paper plates and plastic silverware to defend himself. His temperature is 98.6°F (37°C), blood pressure is 115/71 mmHg, pulse is 72/min, and respirations are 12/min. The patient's treatment history is significant for failure to obtain symptom control with risperidone, haloperidol, and ziprasidone. Which of the following is the most appropriate next step in management? (A) Chlorpromazine (B) Clozapine (C) Fluphenazine (D) Olanzapine (E) Thioridazine",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 4419,
+    "output_tokens": 1050,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1811,
+      "output_tokens": 571,
+      "cached_input_tokens": 0,
+      "cost": 0.0102375
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2608,
+      "output_tokens": 479,
+      "cached_input_tokens": 0,
+      "cost": 0.01131
+    }
+  ],
+  "shared_context": {
+    "age": 23,
+    "sex": "male",
+    "chief_complaint": "shouting on subway",
+    "medical_history": "marijuana and IV drug use, multiple suicide attempts",
+    "medications": "failed treatment with risperidone, haloperidol, ziprasidone",
+    "treatment_history": "given IM haloperidol and diphenhydramine",
+    "vitals": "temperature 98.6°F, blood pressure 115/71 mmHg, pulse 72/min, respirations 12/min",
+    "correct_answer": "Clozapine"
+  },
+  "sentences": [
+    "Given the patient's history of failed treatment with multiple antipsychotics (risperidone, haloperidol, and ziprasidone) and his current aggressive behavior, which is likely secondary to his schizophrenia or a psychotic disorder, the most appropriate next step in management is to consider an alternative antipsychotic medication",
+    "Clozapine is a second-generation antipsychotic that is often used in treatment-resistant schizophrenia and has a lower risk of extrapyramidal side effects, which is consistent with the patient's behavior of making \"armor\" out of paper plates and plastic silverware",
+    "Clozapine is generally reserved for patients who have failed to respond to at least two previous adequate trials of antipsychotic medications, including at least one conventional antipsychotic and one second-generation antipsychotic (R Dossey )",
+    "Clozapine is also known for its potential to cause agranulocytosis, a potentially life-threatening condition that requires regular monitoring of white blood cell count",
+    "Clozapine is initiated at a dose of 12.5-25 mg twice daily, with gradual titration to a therapeutic dose, typically in the range of 300-450 mg per day",
+    "Initiation of clozapine requires a trial of 2 weeks, during which the patient is monitored for agranulocytosis and other potential side effects",
+    "Therefore, the most appropriate next step in management is to initiate clozapine, making option B the correct answer"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Given the patient's history of failed treatment with multiple antipsychotics and his current aggressive behavior, which is likely secondary to schizophrenia or a psychotic disorder, the most appropriate next step in management is to consider an alternative antipsychotic medication.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Clozapine is a second-generation antipsychotic that is often used in treatment-resistant schizophrenia and has a lower risk of extrapyramidal side effects.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The behavior of making 'armor' out of paper plates and plastic silverware is consistent with the patient's psychiatric symptoms.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Clozapine is generally reserved for patients who have failed to respond to at least two previous adequate trials of antipsychotic medications, including at least one conventional antipsychotic and one second-generation antipsychotic.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Clozapine is known for its potential to cause agranulocytosis, a potentially life-threatening condition that requires regular monitoring of white blood cell count.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Clozapine is initiated at a dose of 12.5-25 mg twice daily, with gradual titration to a therapeutic dose, typically in the range of 300-450 mg per day.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Initiation of clozapine requires a trial of 2 weeks, during which the patient is monitored for agranulocytosis and other potential side effects.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The most appropriate next step in management is to initiate clozapine.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Given the 23-year-old male's history of failed treatment with risperidone, haloperidol, and ziprasidone, and his current aggressive behavior likely due to schizophrenia or a psychotic disorder, the most appropriate next step in management is to consider an alternative antipsychotic medication.",
+      "pattern": "C",
+      "notes": "Conclusion with integrated rationale for treatment change."
+    },
+    {
+      "source_claims": [
+        2,
+        4,
+        5
+      ],
+      "output": "Clozapine is a second-generation antipsychotic used in treatment-resistant schizophrenia with a lower risk of extrapyramidal side effects. It is generally reserved for patients who failed to respond to at least two previous antipsychotic trials, including one conventional and one second-generation antipsychotic. Clozapine requires regular monitoring for agranulocytosis due to its potential to cause this life-threatening condition.",
+      "pattern": "A",
+      "notes": "One-subject enumeration of clozapine properties."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The behavior of this 23-year-old male making 'armor' out of paper plates and plastic silverware is consistent with his psychiatric symptoms.",
+      "pattern": "D",
+      "notes": "Standalone fact about patient behavior as psychiatric symptom."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Clozapine is initiated at a dose of 12.5-25 mg twice daily, with gradual titration to a therapeutic dose of 300-450 mg per day. Initiation requires a 2-week trial with monitoring for agranulocytosis and other side effects.",
+      "pattern": "A",
+      "notes": "Clozapine dosing and initiation protocol as one subject."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "For this 23-year-old male who failed previous antipsychotic treatments, the most appropriate next step in management is to initiate clozapine.",
+      "pattern": "C",
+      "notes": "Final treatment decision with context-specific rationale."
+    }
+  ]
+}

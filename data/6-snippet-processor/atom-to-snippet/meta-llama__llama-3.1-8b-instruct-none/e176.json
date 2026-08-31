@@ -1,0 +1,247 @@
+{
+  "entry_id": 176,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Would you recommend something a bit stronger than meloxicam?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3129,
+    "output_tokens": 1173,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1431,
+      "output_tokens": 570,
+      "cached_input_tokens": 0,
+      "cost": 5.142e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1698,
+      "output_tokens": 603,
+      "cached_input_tokens": 0,
+      "cost": 5.808e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "medication options for treating osteoarthritis and rheumatoid arthritis",
+    "drug_a": "meloxicam",
+    "condition": "osteoaarthritis and rheumatoid arthritis"
+  },
+  "sentences": [
+    "Based on the information provided, meloxicam is a commonly used nonsteroidal anti-inflammatory drug (NSAID) for treating osteoarthritis and rheumatoid arthritis",
+    "While it has a relatively low risk of gastrointestinal and cardiovascular complications, it may not provide sufficient relief for all patients",
+    "If you're looking for something stronger, there are several options available, but it's essential to consider the potential risks and benefits of each medication",
+    "Considering the rapid increase in COX-2 inhibitors prescribing after their introduction and the subsequent decrease after rofecoxib withdrawal, it's worth noting that highly selective COX-2 inhibitors may be a better option for high-risk patients, but their use is associated with an increased risk of severe cardiovascular events",
+    "A more selective option within the NSAID class is meloxicam, which has a moderate selectivity for COX-2",
+    "Although it has a lower risk of gastrointestinal complications compared to non-selective NSAIDs, it may still pose a risk of cardiovascular events",
+    "A more potent option than meloxicam is often sought for patients with severe pain or inflammation",
+    "However, caution should be exercised when considering stronger medications due to their increased side effect profile",
+    "Stronger NSAIDs, such as diclofenac, may be a viable option for those who have not responded to meloxicam",
+    "Nonetheless, the decision to use a stronger medication should be made after careful consideration of the potential benefits and risks, as well as the patient's individual needs and medical history",
+    "It's also crucial to monitor patients closely and adjust their treatment plan accordingly to minimize the risk of adverse effects"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Meloxicam is a commonly used nonsteroidal anti-inflammatory drug (NSAID) for treating osteoarthritis and rheumatoid arthritis.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Meloxicam has a relatively low risk of gastrointestinal and cardiovascular complications.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Meloxicam may not provide sufficient relief for all patients.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "There are several options available for patients seeking something stronger than meloxicam.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "It's essential to consider the potential risks and benefits of each medication when looking for something stronger.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Highly selective COX-2 inhibitors may be a better option for high-risk patients, but their use is associated with an increased risk of severe cardiovascular events.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Meloxicam has a moderate selectivity for COX-2, making it a more selective option within the NSAID class.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Meloxicam may pose a risk of cardiovascular events, despite having a lower risk of gastrointestinal complications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "A more potent option than meloxicam is often sought for patients with severe pain or inflammation.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Caution should be exercised when considering stronger medications due to their increased side effect profile.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Stronger NSAIDs, such as diclofenac, may be a viable option for those who have not responded to meloxicam.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The decision to use a stronger medication should be made after careful consideration of the potential benefits and risks.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 13,
+      "text": "It's crucial to monitor patients closely and adjust their treatment plan accordingly to minimize the risk of adverse effects.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Meloxicam is a commonly used nonsteroidal anti-inflammatory drug (NSAID) for treating osteoarthritis and rheumatoid arthritis.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Meloxicam has a relatively low risk of gastrointestinal and cardiovascular complications.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Meloxicam may not provide sufficient relief for all patients.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "When seeking something stronger than meloxicam, it's essential to consider the potential risks and benefits of each medication.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Highly selective COX-2 inhibitors may be a better option for high-risk patients, but their use is associated with an increased risk of severe cardiovascular events.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Meloxicam has a moderate selectivity for COX-2, making it a more selective option within the NSAID class.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Meloxicam may pose a risk of cardiovascular events, despite having a lower risk of gastrointestinal complications.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "A more potent option than meloxicam is often sought for patients with severe pain or inflammation.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Caution should be exercised when considering stronger medications due to their increased side effect profile.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Stronger NSAIDs, such as diclofenac, may be a viable option for those who have not responded to meloxicam.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "The decision to use a stronger medication should be made after careful consideration of the potential benefits and risks.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "It's crucial to monitor patients closely and adjust their treatment plan accordingly to minimize the risk of adverse effects.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "entry_id": 166,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is pepto peptobismol?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2805,
+    "output_tokens": 541,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1307,
+      "output_tokens": 277,
+      "cached_input_tokens": 0,
+      "cost": 3.722e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1498,
+      "output_tokens": 264,
+      "cached_input_tokens": 0,
+      "cost": 4.052e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "Pepto-Bismol",
+    "condition": "diarrhea and indigestion"
+  },
+  "sentences": [
+    "No, Pepto-Bismol is not a peptoid",
+    "Peptoids, or poly-N-substituted glycines, are a class of biochemicals known to replicate the behavior of biological molecules",
+    "Pepto-Bismol, on the other hand, is a medication used to treat diarrhea and indigestion, which contains bismuth subsalicylate as its active ingredient",
+    "The name \"Pepto-Bismol\" was originally derived from \"Pepto\" (from the word \"pepsin,\" an enzyme involved in protein digestion) and \"Bismol\" (from \"bismuth,\" a chemical element used in the medication), which does not imply its chemical nature as a peptoid",
+    "However, Peptobismol is not a recognized term, and it seems to be a combination of \"pepto\" (referring to peptidic structures) and \"bismol\" (from Bismol)",
+    "This could be a hypothetical or made-up term, not associated with a known substance or medication"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Pepto-Bismol is not a peptoid.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Peptoids are a class of biochemicals.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Pepto-Bismol contains bismuth subsalicylate as its active ingredient.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The name 'Pepto-Bismol' was originally derived from 'Pepto' and 'Bismol'.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The name 'Pepto-Bismol' does not imply its chemical nature as a peptoid.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Peptobismol is not a recognized term.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Peptobismol is a hypothetical or made-up term.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Pepto-Bismol is not a peptoid, and peptoids are a class of biochemicals.",
+      "pattern": "C",
+      "notes": "Conclusion + premise."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Pepto-Bismol contains bismuth subsalicylate as its active ingredient.",
+      "pattern": "D",
+      "notes": "Standalone composition."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The name 'Pepto-Bismol' was originally derived from 'Pepto' and 'Bismol'.",
+      "pattern": "D",
+      "notes": "Standalone etymology."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The name 'Pepto-Bismol' does not imply its chemical nature as a peptoid.",
+      "pattern": "D",
+      "notes": "Standalone refutation."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Peptobismol is not a recognized term; it is hypothetical or made-up.",
+      "pattern": "A",
+      "notes": "Enumeration of peptobismol facts."
+    }
+  ]
+}

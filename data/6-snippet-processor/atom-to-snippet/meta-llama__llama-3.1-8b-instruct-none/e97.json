@@ -1,0 +1,199 @@
+{
+  "entry_id": 97,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Will the antibiotics prevent the lyme disease from progressing?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2837,
+    "output_tokens": 839,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1237,
+      "output_tokens": 463,
+      "cached_input_tokens": 0,
+      "cost": 4.326e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1600,
+      "output_tokens": 376,
+      "cached_input_tokens": 0,
+      "cost": 4.704e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "preventing Lyme disease progression",
+    "condition": "Lyme disease",
+    "drug_a": "antibiotics"
+  },
+  "sentences": [
+    "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection",
+    "Early treatment typically involves oral antibiotics such as doxycycline, amoxicillin, or cefuroxime axetil",
+    "For early localized or early disseminated Lyme disease, a 10- to 21-day course of antibiotics is generally recommended",
+    "If Lyme disease is treated promptly, most patients recover completely without long-term complications",
+    "However, if the disease is not treated in its early stages, it can progress to more severe forms, including Lyme arthritis, neurological Lyme disease, and Lyme carditis",
+    "In such cases, longer courses of antibiotics or intravenous antibiotics may be required"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Antibiotics are effective in preventing the progression of Lyme disease.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Early treatment typically involves oral antibiotics.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The recommended treatment for early localized or early disseminated Lyme disease is a 10- to 21-day course of antibiotics.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Prompt treatment of Lyme disease typically results in complete recovery without long-term complications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Prompt treatment of Lyme disease typically results in complete recovery.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "If Lyme disease is not treated in its early stages, it can progress to more severe forms.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Lyme disease can progress to Lyme arthritis if not treated in its early stages.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Lyme disease can progress to neurological Lyme disease if not treated in its early stages.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Lyme disease can progress to Lyme carditis if not treated in its early stages.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Longer courses of antibiotics may be required if Lyme disease is not treated in its early stages.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Intravenous antibiotics may be required if Lyme disease is not treated in its early stages.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Antibiotics are effective in preventing the progression of Lyme disease.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Antibiotics are effective in preventing the progression of Lyme disease if administered early in the course of the infection.",
+      "pattern": "D",
+      "notes": "Different condition (early treatment)"
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Early treatment typically involves oral antibiotics.",
+      "pattern": "D",
+      "notes": "Different treatment option (Pattern E topic shift)"
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The recommended treatment for early localized or early disseminated Lyme disease is a 10- to 21-day course of antibiotics.",
+      "pattern": "D",
+      "notes": "Different treatment recommendation (Pattern E topic shift)"
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Prompt treatment of Lyme disease typically results in complete recovery without long-term complications, and complete recovery.",
+      "pattern": "A",
+      "notes": "Enumeration of treatment outcomes."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "If Lyme disease is not treated in its early stages, it can progress to more severe forms, including Lyme arthritis, neurological Lyme disease, and Lyme carditis.",
+      "pattern": "A",
+      "notes": "Enumeration of potential complications."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Longer courses of antibiotics may be required if Lyme disease is not treated in its early stages, and intravenous antibiotics may be required.",
+      "pattern": "A",
+      "notes": "Enumeration of treatment requirements."
+    }
+  ]
+}

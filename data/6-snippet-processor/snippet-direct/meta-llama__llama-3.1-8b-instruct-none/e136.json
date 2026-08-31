@@ -1,0 +1,113 @@
+{
+  "entry_id": 136,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1913,
+    "output_tokens": 570,
+    "cached_input_tokens": 0,
+    "cost": 6.106e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1913,
+      "output_tokens": 570,
+      "cached_input_tokens": 0,
+      "cost": 6.106e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "losartan administration timing",
+    "drug_a": "losartan",
+    "condition": "hypertension"
+  },
+  "sentences": [
+    "The bioavailability of losartan can be affected by the administration time",
+    "According to the study by Huangfu et al. , the administration time of losartan and indapamide can affect the reduction of blood pressure and the rate of decline of blood pressure in the night",
+    "The study suggests that taking losartan and indapamide together in the night may have advantages over taking them at separate times",
+    "However, the study on the new formulation of losartan, Losartan Cronos, a bilayer tablet containing 50 mg of Losartan immediate release (IR) and 50 mg extended release (ER), suggests that this formulation maintains its antihypertensive effect for 24 hours, regardless of the administration time",
+    "It is essential to note that the pharmacokinetics of losartan can be affected by various factors, including food intake, and the presence of other medications",
+    "A study on the bioequivalence of two losartan tablets in fasting conditions suggests that losartan can be taken with or without food, but the bioavailability may be affected by the presence of food",
+    "To answer the question, taking two losartan pills at once or at separate times is not recommended without consulting a healthcare professional",
+    "Losartan should be taken as directed by the healthcare provider, and the timing of administration may vary depending on the individual patient's needs and medical conditions"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The bioavailability of losartan can be affected by the administration time.",
+      "pattern": "D",
+      "notes": "Standalone fact about losartan bioavailability."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Taking losartan and indapamide together in the night may have advantages over taking them at separate times.",
+      "pattern": "A",
+      "notes": "Enumeration of administration timing options; one subject (losartan + indapamide)."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Taking losartan and indapamide together in the night may have advantages over taking them at separate times.",
+      "pattern": "A",
+      "notes": "Same subject as sentence 2; no new information, but kept for context."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The new formulation of losartan, Losartan Cronos, maintains its antihypertensive effect for 24 hours, regardless of the administration time.",
+      "pattern": "D",
+      "notes": "Standalone fact about Losartan Cronos efficacy."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The pharmacokinetics of losartan can be affected by various factors, including food intake, and the presence of other medications.",
+      "pattern": "D",
+      "notes": "Standalone fact about losartan pharmacokinetics."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Taking losartan with or without food may affect bioavailability.",
+      "pattern": "D",
+      "notes": "Standalone fact about losartan bioavailability and food."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Taking two losartan pills at once or at separate times is not recommended without consulting a healthcare professional.",
+      "pattern": "C",
+      "notes": "Conclusion that needs surrounding premise (recommended by whom); merged for context."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Losartan should be taken as directed by the healthcare provider, and the timing of administration may vary depending on the individual patient's needs and medical conditions.",
+      "pattern": "C",
+      "notes": "Conclusion that needs surrounding premise (direction by whom); merged for context."
+    }
+  ]
+}

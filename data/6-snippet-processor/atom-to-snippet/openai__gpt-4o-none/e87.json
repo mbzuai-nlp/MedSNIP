@@ -1,0 +1,145 @@
+{
+  "entry_id": 87,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "My cat was just diagnosed with a tapeworm, could that be something I can get from him?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2754,
+    "output_tokens": 645,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1232,
+      "output_tokens": 348,
+      "cached_input_tokens": 0,
+      "cost": 0.00656
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1522,
+      "output_tokens": 297,
+      "cached_input_tokens": 0,
+      "cost": 0.006775
+    }
+  ],
+  "shared_context": {
+    "topic": "tapeworm transmission from cats to humans",
+    "condition": "tapeworm infection",
+    "symptom": "contracting a tapeworm infection"
+  },
+  "sentences": [
+    "Yes, it is possible for humans to contract a tapeworm infection from their pets, although it is relatively rare",
+    "The most common tapeworm in dogs and cats is *Dipylidium caninum*",
+    "Humans can become infected if they accidentally ingest an infected flea that contains the larval tapeworm",
+    "This typically happens when infants or young children come into close contact with pets and may accidentally swallow a flea while playing or cuddling with the animal",
+    "To prevent infection, ensure your pet is regularly treated for fleas and practice good hygiene, such as washing hands after handling pets and avoiding close contact with pets' bedding or areas where fleas might be present"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "It is possible for humans to contract a tapeworm infection from their pets.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Contracting a tapeworm infection from pets is relatively rare.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The most common tapeworm in dogs and cats is Dipylidium caninum.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Humans can become infected with a tapeworm if they accidentally ingest an infected flea that contains the larval tapeworm.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Infants or young children may accidentally swallow a flea while playing or cuddling with pets, leading to infection.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "To prevent infection, ensure your pet is regularly treated for fleas.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "To prevent infection, practice good hygiene such as washing hands after handling pets.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "To prevent infection, avoid close contact with pets' bedding or areas where fleas might be present.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "It is possible for humans to contract a tapeworm infection from their pets, but it is relatively rare.",
+      "pattern": "C",
+      "notes": "Conclusion about possibility and its likelihood."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The most common tapeworm in dogs and cats is Dipylidium caninum.",
+      "pattern": "D",
+      "notes": "Standalone fact about common tapeworm species."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Humans can become infected with a tapeworm if they accidentally ingest an infected flea containing the larval tapeworm. Infants or young children may accidentally swallow a flea while playing or cuddling with pets, leading to infection.",
+      "pattern": "B",
+      "notes": "Causal chain describing how infection occurs."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "To prevent infection, ensure your pet is regularly treated for fleas, practice good hygiene such as washing hands after handling pets, and avoid close contact with pets' bedding or areas where fleas might be present.",
+      "pattern": "A",
+      "notes": "Enumeration of preventive measures."
+    }
+  ]
+}

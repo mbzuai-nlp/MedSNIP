@@ -1,0 +1,159 @@
+{
+  "entry_id": 264,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 37-year-old woman presents to the emergency department in cardiac arrest. She was found to have altered mental status at home, and during transport to the hospital, she became pulseless. Cardiopulmonary resuscitation is ongoing and 2 intravenous lines are placed. The patient is obese, and her only medication is an oral contraceptive pill. She recently underwent Achilles tendon repair. She otherwise is known to smoke cigarettes on occasion. Physical exam is notable for a critically ill patient with chest compressions ongoing. The monitor shows pulseless electrical activity. Her right lower extremity is in a post-operative splint. The patient regains her pulse after several rounds of CPR and epinephrine. A bedside echocardiograph is notable for a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle. Which of the following is the most likely diagnosis? (A) Cardiogenic shock (B) Hemorrhagic shock (C) Neurogenic shock (D) Obstructive shock (E) Septic shock",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2842,
+    "output_tokens": 1038,
+    "cached_input_tokens": 0,
+    "cost": 0.0007639
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2842,
+      "output_tokens": 1038,
+      "cached_input_tokens": 0,
+      "cost": 0.0007639
+    }
+  ],
+  "shared_context": {
+    "age": "37",
+    "sex": "female",
+    "chief_complaint": "cardiac arrest with pulseless electrical activity (PEA)",
+    "medical_history": "obesity, occasional cigarette smoking, recent Achilles tendon repair",
+    "medications": "oral contraceptive pill",
+    "exam_findings": "critically ill, right lower extremity in post-operative splint, bedside echocardiograph shows dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle",
+    "treatment_history": "CPR and epinephrine; regained pulse",
+    "correct_answer": "Obstructive shock (D)"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis in this case, we need to carefully analyze the patient's clinical presentation and the findings from her physical exam and bedside echocardiography",
+    "The patient is obese and on oral contraceptive pills",
+    "She has a history of recent Achilles tendon repair and occasional cigarette smoking",
+    "These factors increase her risk for venous thromboembolism (VTE) due to immobility, hormonal therapy, and smoking",
+    "She presented with altered mental status and became pulseless during transport",
+    "Cardiopulmonary resuscitation (CPR) was ongoing, and she had pulseless electrical activity (PEA) on the monitor",
+    "The patient regained a pulse after several rounds of CPR and epinephrine",
+    "The notable findings include a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle on bedside echocardiography",
+    "A dilated and hypokinetic right ventricle with septal bowing strongly suggests right ventricular strain or failure",
+    "This pattern is commonly associated with a massive pulmonary embolism (PE), causing an acute increase in right ventricular afterload due to obstruction of the pulmonary arteries",
+    "Cardiogenic Shock: Typically presents with left ventricular failure and signs such as pulmonary edema, which are not indicated here",
+    "Hemorrhagic Shock: Characterized by signs of blood loss (e.g., hypotension, tachycardia, pallor), which are not supported by the data",
+    "Neurogenic Shock: Presents with hypotension and bradycardia due to loss of sympathetic tone, which does not match the patient’s presentation",
+    "Obstructive Shock: This occurs when there is a physical obstruction to blood flow, commonly seen in cases like tension pneumothorax, cardiac tamponade, or massive PE",
+    "The echocardiographic findings and patient's clinical risk factors (recent surgery, immobilization, oral contraceptive use, and smoking) point towards a massive PE as the cause",
+    "Septic Shock: Generally presents with signs of infection, fever, and warm extremities due to vasodilation, which are not present in this case",
+    "Based on the clinical presentation, echocardiographic findings, and patient's risk factors, the most likely diagnosis is Obstructive Shock due to a massive pulmonary embolism",
+    "The most likely diagnosis for this 37-year-old woman in cardiac arrest with a dilated and hypokinetic right ventricle and septal bowing is Obstructive Shock (D) due to a massive pulmonary embolism"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely diagnosis for this 37-year-old woman in cardiac arrest, her clinical presentation, physical exam, and bedside echocardiography must be analyzed.",
+      "pattern": "D",
+      "notes": "Introductory sentence; no medical claim to verify other than the process."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3
+      ],
+      "output": "This 37-year-old woman is obese, takes oral contraceptive pills, has a history of recent Achilles tendon repair, and smokes cigarettes on occasion; these factors increase her risk for venous thromboembolism (VTE) due to immobility, hormonal therapy, and smoking.",
+      "pattern": "B",
+      "notes": "Merge risk factors with the causal link to VTE risk (Pattern B)."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6
+      ],
+      "output": "The 37-year-old woman presented with altered mental status, became pulseless during transport with pulseless electrical activity (PEA) on the monitor, and regained a pulse after several rounds of CPR and epinephrine.",
+      "pattern": "A",
+      "notes": "Enumeration of the patient's clinical course events."
+    },
+    {
+      "source_sentences": [
+        7,
+        8,
+        9
+      ],
+      "output": "Bedside echocardiography showing a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle strongly suggests right ventricular strain or failure, a pattern commonly associated with a massive pulmonary embolism (PE) causing an acute increase in right ventricular afterload due to obstruction of the pulmonary arteries.",
+      "pattern": "B",
+      "notes": "Causal chain from imaging finding to physiological interpretation to diagnosis (Pattern B)."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Cardiogenic shock typically presents with left ventricular failure and signs such as pulmonary edema, which are not indicated in this 37-year-old woman.",
+      "pattern": "D",
+      "notes": "Standalone differential analysis."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Hemorrhagic shock is characterized by signs of blood loss (e.g., hypotension, tachycardia, pallor), which are not supported by the data for this 37-year-old woman.",
+      "pattern": "D",
+      "notes": "Standalone differential analysis."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Neurogenic shock presents with hypotension and bradycardia due to loss of sympathetic tone, which does not match this 37-year-old woman's presentation.",
+      "pattern": "D",
+      "notes": "Standalone differential analysis."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Obstructive shock occurs when there is a physical obstruction to blood flow, commonly seen in cases like tension pneumothorax, cardiac tamponade, or massive PE.",
+      "pattern": "D",
+      "notes": "Standalone definition of a medical condition."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "The echocardiographic findings and clinical risk factors for this 37-year-old woman (recent surgery, immobilization, oral contraceptive use, and smoking) point towards a massive PE as the cause.",
+      "pattern": "C",
+      "notes": "Conclusion based on specific premises (Pattern C)."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "Septic shock generally presents with signs of infection, fever, and warm extremities due to vasodilation, which are not present in this 37-year-old woman.",
+      "pattern": "D",
+      "notes": "Standalone differential analysis."
+    },
+    {
+      "source_sentences": [
+        16,
+        17
+      ],
+      "output": "Based on the clinical presentation, echocardiographic findings (dilated and hypokinetic right ventricle and septal bowing), and risk factors, the most likely diagnosis for this 37-year-old woman is Obstructive Shock (D) due to a massive pulmonary embolism.",
+      "pattern": "C",
+      "notes": "Conclusion and final diagnosis merge (Pattern C)."
+    }
+  ]
+}

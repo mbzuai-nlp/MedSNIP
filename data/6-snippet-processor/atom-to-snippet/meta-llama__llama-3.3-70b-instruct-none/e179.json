@@ -1,0 +1,252 @@
+{
+  "entry_id": 179,
+  "batch_id": 18,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to the emergency department with fatigue and dark urine over the past day. He was recently diagnosed with cellulitis of his left leg, for which he was prescribed trimethoprim-sulfamethoxazole. He denies having nausea, vomiting, or diarrhea. He has no significant medical history and does not currently take any medications. His temperature is 98.6°F (37°C), blood pressure is 115/72 mmHg, pulse is 98/min, and respirations are 14/min. Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg. Laboratory workup is performed, and the results are shown below: Serum: Hemoglobin: 7.2 g/dL Total bilirubin: 2.1 mg/dL Direct bilirubin: 0.8 mg/dL Lactate dehydrogenase: 470 U/L Glucose-6-phosphate dehydrogenase: 7 U/gHb (normal: 6-20 U/gHb) Which of the following would most likely be seen on a peripheral blood smear in this patient? (A) Acanthocytes (B) Codocytes (C) Degmacytes (D) Schistocytes (E) Spherocytes",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4745,
+    "output_tokens": 1473,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1962,
+      "output_tokens": 812,
+      "cached_input_tokens": 0,
+      "cost": 0.00045604
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2783,
+      "output_tokens": 661,
+      "cached_input_tokens": 0,
+      "cost": 0.00048982
+    }
+  ],
+  "shared_context": {
+    "age": 26,
+    "sex": "male",
+    "chief_complaint": "fatigue and dark urine",
+    "medical_history": "recent cellulitis diagnosis",
+    "medications": "trimethoprim-sulfamethoxazole",
+    "lab_results": "low hemoglobin, elevated bilirubin and lactate dehydrogenase, low glucose-6-phosphate dehydrogenase",
+    "physical_exam": "conjunctival icterus, bilateral flank tenderness, erythema of the left leg",
+    "question_type": "most likely peripheral blood smear finding"
+  },
+  "sentences": [
+    "Let's analyze the presented case step-by-step to determine which peripheral blood smear finding is most likely",
+    "A 26-year-old man with fatigue and dark urine over the past day",
+    "Recent diagnosis of cellulitis treated with trimethoprim-sulfamethoxazole",
+    "Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg",
+    "Laboratory findings: Hemoglobin: 7.2 g/dL, Total bilirubin: 2.1 mg/dL, Direct bilirubin: 0.8 mg/dL, Lactate dehydrogenase (LDH): 470 U/L, Glucose-6-phosphate dehydrogenase (G6PD): 7 U/gHb (normal: 6-20 U/gHb)",
+    "Conjunctival icterus and dark urine suggest hemolysis",
+    "Fatigue and low hemoglobin indicate anemia",
+    "Elevated bilirubin (mainly indirect) and LDH levels also support hemolysis",
+    "G6PD level is at the lower limit of normal which is crucial to consider",
+    "The patient was prescribed trimethoprim-sulfamethoxazole, which is known to trigger hemolysis in patients with G6PD deficiency",
+    "G6PD deficiency is an X-linked recessive disorder that predisposes red blood cells to oxidative damage, leading to hemolytic anemia",
+    "The oxidative stress from the medication (trimethoprim-sulfamethoxazole) triggers hemolysis in patients with this deficiency",
+    "In G6PD deficiency, oxidative damage to red blood cells can lead to the formation of Heinz bodies",
+    "These damaged cells are often partially removed by macrophages in the spleen, resulting in \"bite cells\" or \"degmacytes\" on a peripheral blood smear",
+    "Given the above analysis, the most likely finding on a peripheral blood smear in this patient is degmacytes (bite cells)",
+    "Correct Answer: (C) Degmacytes"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A 26-year-old man presents with fatigue and dark urine over the past day.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient was recently diagnosed with cellulitis and treated with trimethoprim-sulfamethoxazole.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Laboratory findings indicate hemoglobin of 7.2 g/dL, total bilirubin of 2.1 mg/dL, direct bilirubin of 0.8 mg/dL, lactate dehydrogenase of 470 U/L, and glucose-6-phosphate dehydrogenase of 7 U/gHb.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Conjunctival icterus and dark urine suggest hemolysis.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Fatigue and low hemoglobin indicate anemia.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Elevated bilirubin and lactate dehydrogenase levels support hemolysis.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's glucose-6-phosphate dehydrogenase level is at the lower limit of normal.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Trimethoprim-sulfamethoxazole can trigger hemolysis in patients with glucose-6-phosphate dehydrogenase deficiency.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Glucose-6-phosphate dehydrogenase deficiency is an X-linked recessive disorder that predisposes red blood cells to oxidative damage, leading to hemolytic anemia.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Oxidative stress from trimethoprim-sulfamethoxazole triggers hemolysis in patients with glucose-6-phosphate dehydrogenase deficiency.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "In glucose-6-phosphate dehydrogenase deficiency, oxidative damage to red blood cells can lead to the formation of Heinz bodies.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Damaged red blood cells are often partially removed by macrophages in the spleen, resulting in 'bite cells' or 'degmacytes' on a peripheral blood smear.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The most likely finding on a peripheral blood smear in this patient is degmacytes (bite cells).",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The correct answer is (C) Degmacytes.",
+      "source_sentences": [
+        15
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A 26-year-old man presents with fatigue and dark urine over the past day.",
+      "pattern": "D",
+      "notes": "Introduction to patient's presentation."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The patient was recently diagnosed with cellulitis and treated with trimethoprim-sulfamethoxazole.",
+      "pattern": "D",
+      "notes": "Patient's recent medical history and treatment."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg.",
+      "pattern": "D",
+      "notes": "Key findings from physical examination."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Laboratory findings indicate hemoglobin of 7.2 g/dL, total bilirubin of 2.1 mg/dL, direct bilirubin of 0.8 mg/dL, lactate dehydrogenase of 470 U/L, and glucose-6-phosphate dehydrogenase of 7 U/gHb.",
+      "pattern": "D",
+      "notes": "Laboratory results relevant to diagnosis."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Conjunctival icterus and dark urine suggest hemolysis, supported by fatigue and low hemoglobin indicating anemia, and elevated bilirubin and lactate dehydrogenase levels.",
+      "pattern": "A",
+      "notes": "Clinical and laboratory evidence of hemolysis."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The patient's glucose-6-phosphate dehydrogenase level is at the lower limit of normal.",
+      "pattern": "D",
+      "notes": "Specific laboratory finding relevant to diagnosis."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11
+      ],
+      "output": "Trimethoprim-sulfamethoxazole can trigger hemolysis in patients with glucose-6-phosphate dehydrogenase deficiency, an X-linked recessive disorder that predisposes red blood cells to oxidative damage, leading to hemolytic anemia triggered by oxidative stress from the medication.",
+      "pattern": "A",
+      "notes": "Mechanism of hemolysis in the context of medication and enzyme deficiency."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "In glucose-6-phosphate dehydrogenase deficiency, oxidative damage to red blood cells can lead to the formation of Heinz bodies, and damaged red blood cells are often partially removed by macrophages in the spleen, resulting in 'bite cells' or 'degmacytes' on a peripheral blood smear.",
+      "pattern": "A",
+      "notes": "Pathophysiological explanation leading to specific blood smear findings."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "The most likely finding on a peripheral blood smear in this patient is degmacytes (bite cells), which is the correct answer.",
+      "pattern": "C",
+      "notes": "Conclusion based on preceding reasoning and evidence."
+    }
+  ]
+}

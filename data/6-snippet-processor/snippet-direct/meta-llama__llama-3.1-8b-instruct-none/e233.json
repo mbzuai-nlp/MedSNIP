@@ -1,0 +1,145 @@
+{
+  "entry_id": 233,
+  "batch_id": 24,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 45-year-old African American woman presents to her primary care physician for not feeling well. She states she has had a cough for the past week. She also has abdominal pain and trouble focusing that has been worsening and has lost 5 pounds recently. Her gastroesophageal reflux disease (GERD) has been poorly controlled recently. The patient is a non-smoker and has a history of GERD for which she takes antacids. Her temperature is 98.6°F (37°C), blood pressure is 115/71 mmHg, pulse is 72/min, and respirations are 12/min. A physical exam is within normal limits. Laboratory studies are ordered and are below:\n\nSerum:\nNa+: 139 mEq/L\nK+: 4.1 mEq/L\nCl-: 101 mEq/L\nHCO3-: 24 mEq/L\nUrea nitrogen: 12 mg/dL\nGlucose: 70 mg/dL\nCreatinine: 0.9 mg/dL\nCa2+: 12.5 mg/dL\nAlkaline phosphatase: 150 U/L\nPhosphorus: 2.0 mg/dL\n\nUrine:\nColor: amber\nNitrites: negative\nSodium: 5 mmol/24 hours\nRed blood cells: 0/hpf\n\nWhich of the following is the most likely explanation of this patient's current presentation? (A) Antacid overuse (B) Increased 1,25-dihydroxyvitamin D (C) Increased parathyroid hormone (D) Malignancy (E) Viral illness",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2772,
+    "output_tokens": 897,
+    "cached_input_tokens": 0,
+    "cost": 9.132e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2772,
+      "output_tokens": 897,
+      "cached_input_tokens": 0,
+      "cost": 9.132e-05
+    }
+  ],
+  "shared_context": {
+    "age": "45",
+    "sex": "female",
+    "chief_complaint": "cough for the past week; abdominal pain; trouble focusing; 5-pound weight loss; poorly controlled GERD",
+    "medical_history": "GERD, poorly controlled; non-smoker",
+    "vitals": "temperature 98.6°F (37°C), blood pressure 115/71 mmHg, pulse 72/min, respirations 12/min",
+    "exam_findings": "physical exam within normal limits",
+    "correct_answer": "D"
+  },
+  "sentences": [
+    "To approach this patient's presentation, we must first identify the key findings and potential underlying causes",
+    "The patient has a cough for the past week, abdominal pain, trouble focusing, and has lost 5 pounds recently, despite poorly controlled GERD",
+    "The laboratory studies reveal a normal potassium level, slightly low calcium level, and elevated alkaline phosphatase",
+    "Normal potassium level: A normal potassium level makes hypokalemia and hypokalemic metabolic alkalosis less likely",
+    "Slightly low calcium level: A calcium level of 12.5 mg/dL is slightly below the normal range",
+    "This could be due to several factors, including hypoparathyroidism, vitamin D deficiency, or malignancy",
+    "Elevated alkaline phosphatase: An elevated alkaline phosphatase level can be seen in a variety of conditions, including bone disorders, liver disease, and malignancy",
+    "Considering the patient's presentation and lab results, we must consider the potential diagnoses provided in the options",
+    "(A) Antacid overuse: Antacid overuse can lead to hypokalemia and hypochloremic metabolic alkalosis, which is not consistent with the patient's presentation",
+    "(B) Increased 1,25-dihydroxyvitamin D: Elevated 1,25-dihydroxyvitamin D can cause hypercalcemia, not hypocalcemia",
+    "(C) Increased parathyroid hormone (PTH): Hyperparathyroidism would typically cause hypercalcemia, not hypocalcemia",
+    "(D) Malignancy: Malignancy can cause a variety of electrolyte imbalances, including hypocalcemia",
+    "The patient's recent weight loss, poorly controlled GERD, and slightly low calcium level make malignancy a possible explanation",
+    "(E) Viral illness: Viral illnesses can cause a variety of electrolyte imbalances, but hypocalcemia is not typically one of them",
+    "Considering the options, the most likely explanation for the patient's current presentation is D) Malignancy"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To approach this patient's presentation, we must first identify the key findings and potential underlying causes.",
+      "pattern": "D",
+      "notes": "Standalone introductory sentence."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The patient has a cough for the past week, abdominal pain, trouble focusing, and has lost 5 pounds recently, despite poorly controlled GERD.",
+      "pattern": "D",
+      "notes": "Standalone clinical summary; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4
+      ],
+      "output": "The laboratory studies reveal a normal potassium level, slightly low calcium level, and elevated alkaline phosphatase. A normal potassium level makes hypokalemia and hypokalemic metabolic alkalosis less likely. A calcium level of 12.5 mg/dL is slightly below the normal range.",
+      "pattern": "A",
+      "notes": "All properties of one subject (laboratory results)."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "This could be due to several factors, including hypoparathyroidism, vitamin D deficiency, or malignancy. An elevated alkaline phosphatase level can be seen in a variety of conditions, including bone disorders, liver disease, and malignancy.",
+      "pattern": "A",
+      "notes": "All properties of one subject (potential underlying causes)."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Considering the patient's presentation and lab results, we must consider the potential diagnoses provided in the options.",
+      "pattern": "D",
+      "notes": "Standalone sentence considering the patient's presentation and lab results."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Antacid overuse can lead to hypokalemia and hypochloremic metabolic alkalosis, which is not consistent with the patient's presentation.",
+      "pattern": "D",
+      "notes": "Standalone differential characterization; option (A) antacid overuse."
+    },
+    {
+      "source_sentences": [
+        9,
+        10,
+        11
+      ],
+      "output": "Elevated 1,25-dihydroxyvitamin D can cause hypercalcemia, not hypocalcemia. Hyperparathyroidism would typically cause hypercalcemia, not hypocalcemia. Malignancy can cause a variety of electrolyte imbalances, including hypocalcemia.",
+      "pattern": "A",
+      "notes": "All properties of one subject (differential diagnoses)."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "The patient's recent weight loss, poorly controlled GERD, and slightly low calcium level make malignancy a possible explanation.",
+      "pattern": "D",
+      "notes": "Standalone sentence considering the patient's recent weight loss and lab results."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Viral illnesses can cause a variety of electrolyte imbalances, but hypocalcemia is not typically one of them.",
+      "pattern": "D",
+      "notes": "Standalone differential characterization; option (E) viral illness."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Considering the options, the most likely explanation for the patient's current presentation is D) Malignancy.",
+      "pattern": "C",
+      "notes": "Final answer with patient context inlined."
+    }
+  ]
+}

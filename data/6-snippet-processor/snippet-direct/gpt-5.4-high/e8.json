@@ -1,0 +1,71 @@
+{
+  "entry_id": 8,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "How long does this years flu usually last?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1732,
+    "output_tokens": 884,
+    "cached_input_tokens": 1408
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1732,
+      "output_tokens": 884,
+      "cached_input_tokens": 1408
+    }
+  ],
+  "shared_context": {
+    "topic": "duration of influenza symptoms",
+    "condition": "influenza",
+    "symptom": "flu symptoms"
+  },
+  "sentences": [
+    "The duration of influenza symptoms can vary depending on several factors, including the individual's overall health, age, and whether they have received the flu vaccine",
+    "Generally, the acute symptoms of influenza, such as fever, chills, muscle aches, and fatigue, typically last about 3 to 7 days in most healthy individuals",
+    "However, some symptoms, like cough and fatigue, can persist for up to two weeks or longer",
+    "Individuals with weakened immune systems, young children, and the elderly may experience a longer duration of symptoms and are at higher risk for complications",
+    "Antiviral medications, if started within the first 48 hours of symptom onset, can reduce the duration of symptoms by about one day"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The duration of influenza symptoms can vary depending on several factors, including the individual's overall health, age, and whether the individual has received the flu vaccine.",
+      "pattern": "A",
+      "notes": "Enumeration of factors affecting one subject: influenza symptom duration."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "In most healthy individuals, the acute symptoms of influenza, such as fever, chills, muscle aches, and fatigue, typically last about 3 to 7 days, but some symptoms, such as cough and fatigue, can persist for up to two weeks or longer.",
+      "pattern": "A",
+      "notes": "Two consecutive sentences enumerate durations for different influenza symptoms under the same topic."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Individuals with weakened immune systems, young children, and the elderly may experience a longer duration of influenza symptoms and are at higher risk for complications.",
+      "pattern": "A",
+      "notes": "One sentence lists multiple properties of the same higher-risk groups."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Antiviral medications, if started within the first 48 hours of influenza symptom onset, can reduce the duration of symptoms by about one day.",
+      "pattern": "B",
+      "notes": "Conditional treatment effect: benefit depends on starting antiviral medication within 48 hours."
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "entry_id": 42,
+  "batch_id": 5,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How am I supposed to put ointment on my nipple if it's pierced",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3019,
+    "output_tokens": 935,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1411,
+      "output_tokens": 490,
+      "cached_input_tokens": 0,
+      "cost": 4.782e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1608,
+      "output_tokens": 445,
+      "cached_input_tokens": 0,
+      "cost": 4.996e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "applying ointment to a pierced nipple",
+    "condition": "pierced nipple"
+  },
+  "sentences": [
+    "If you have a pierced nipple and need to apply ointment, follow these steps",
+    "Clean the Area: Ensure the area around your nipple and the piercing is clean before application",
+    "Use mild soap and water or a saline solution to gently clean the area",
+    "Avoid harsh soaps or alcohol-based products as they can irritate the skin and piercing site",
+    "Remove Jewelry: If possible, remove the jewelry from the piercing to allow better access to the affected area",
+    "Be sure to clean the jewelry thoroughly before reinserting it",
+    "Apply the Ointment: Use a clean fingertip or a cotton swab to apply the ointment directly to the nipple and the piercing site",
+    "Be gentle to avoid causing any additional irritation or injury",
+    "If the ointment is thick, warming it slightly between your fingers may make it easier to apply",
+    "Reinsert Jewelry: After applying the ointment, reinsert the clean jewelry into the piercing",
+    "Make sure it moves freely to avoid trapping the ointment and causing blockages",
+    "Monitor for Reactions: Keep an eye on the area for any signs of adverse reactions, such as increased redness, swelling, or discharge",
+    "If you notice any of these symptoms, discontinue use of the ointment and consult a healthcare professional",
+    "Continued Care: Continue to clean the area regularly and reapply the ointment as directed by your healthcare provider",
+    "Ensure that the area remains clean and dry to promote healing"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Clean the area around the nipple and piercing before applying ointment.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Use mild soap and water or a saline solution to clean the area.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Avoid using harsh soaps or alcohol-based products on the area.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Remove the jewelry from the piercing to allow better access to the area.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Clean the jewelry before reinserting it.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Apply the ointment directly to the nipple and piercing site using a clean fingertip or cotton swab.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Be gentle when applying the ointment to avoid additional irritation or injury.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Warming the ointment slightly may make it easier to apply.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Reinsert the jewelry after applying the ointment.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Make sure the jewelry moves freely to avoid trapping the ointment.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Monitor the area for signs of adverse reactions.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Discontinue use of the ointment and consult a healthcare professional if you notice any adverse reactions.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Continue to clean the area regularly and reapply the ointment as directed.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Keep the area clean and dry to promote healing.",
+      "source_sentences": [
+        14
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "To apply ointment to a pierced nipple, clean the area with mild soap and water or a saline solution.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Avoid using harsh soaps or alcohol-based products on the area.",
+      "pattern": "D",
+      "notes": "Standalone warning."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Remove the jewelry from the piercing and clean it before reinserting it.",
+      "pattern": "B",
+      "notes": "Causal chain."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "Apply the ointment directly to the nipple and piercing site using a clean fingertip or cotton swab, being gentle to avoid additional irritation or injury, and consider warming the ointment slightly.",
+      "pattern": "A",
+      "notes": "Enumeration of application steps."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Reinsert the jewelry after applying the ointment.",
+      "pattern": "D",
+      "notes": "Standalone step."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Make sure the jewelry moves freely to avoid trapping the ointment.",
+      "pattern": "D",
+      "notes": "Standalone warning."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Monitor the area for signs of adverse reactions, and discontinue use of the ointment and consult a healthcare professional if you notice any adverse reactions.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Continue to clean the area regularly and reapply the ointment as directed.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Keep the area clean and dry to promote healing.",
+      "pattern": "D",
+      "notes": "Standalone advice."
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "entry_id": 31,
+  "batch_id": 4,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 71-year-old man arrives to the emergency room appearing cyanotic and having weak, shallow respirations. He is brought in by his home care nurse, who reports that the patient has a history of myasthenia gravis and frequent urinary tract infections. The patient was in his normal state of health until 5 days ago when he developed a urinary tract infection. He was receiving gentamicin infusions for his infections. This morning, he experienced poor grip strength and progressive difficulty breathing. The patient’s medications include pyridostigmine and aspirin, both of which he takes as prescribed. His temperature is 99.0°F (37.2°C), blood pressure is 128/78 mmHg, pulse is 92/min, and respirations are 28/min with an oxygen saturation of 86% O2 on room air. The patient has gray-blue skin, hypophonia, weak upper extremities, and normal leg strength. An arterial blood gas is drawn with results as shown below:\n\nPO2: 55 mmHg\nPCO2: 60 mmHg\npH: 7.30\n\nThe patient is intubated. Which of the following is the most appropriate next step in management? (A) Atropine (B) Edrophonium (C) Neostigmine (D) Plasmapheresis (E) Thymectomy",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4853,
+    "output_tokens": 1365,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2120,
+      "output_tokens": 709,
+      "cached_input_tokens": 0,
+      "cost": 0.00043888
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2733,
+      "output_tokens": 656,
+      "cached_input_tokens": 0,
+      "cost": 0.00048322
+    }
+  ],
+  "shared_context": {
+    "age": 71,
+    "sex": "male",
+    "chief_complaint": "weak, shallow respirations, cyanosis",
+    "medical_history": "myasthenia gravis, frequent urinary tract infections",
+    "medications": "pyridostigmine, aspirin, gentamicin",
+    "vitals": "temperature 99.0°F, blood pressure 128/78 mmHg, pulse 92/min, respirations 28/min, oxygen saturation 86% on room air"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in management for this patient, we must first understand the underlying condition and its implications",
+    "The patient's symptoms of poor grip strength, progressive difficulty breathing, cyanosis, and gray-blue skin suggest a neuromuscular junction disorder, which is consistent with a myasthenic crisis",
+    "This is a medical emergency that requires prompt treatment",
+    "The patient's history of myasthenia gravis and recent urinary tract infection treated with gentamicin, a potential neuromuscular blocking agent, further supports this diagnosis",
+    "The arterial blood gas results show respiratory acidosis with a pH of 7.30, indicating a need for immediate intervention to secure the patient's airway and improve respiratory function",
+    "The patient's hypoxemia (low oxygen saturation) and tachypnea (rapid breathing rate) suggest respiratory failure, which is a common complication of myasthenia gravis exacerbations",
+    "Given this context, we need to consider the treatment options",
+    "Option A, atropine, is not the most appropriate choice because it can actually worsen myasthenia gravis symptoms by drying up respiratory secretions and further impairing muscle function",
+    "Option B, edrophonium, is a cholinesterase inhibitor that can temporarily improve muscle strength in patients with myasthenia gravis",
+    "However, it is typically used diagnostically to confirm the presence of myasthenia gravis",
+    "While it may provide temporary symptom relief, it is not the most effective choice for managing a myasthenic crisis",
+    "Option C, neostigmine, is a cholinesterase inhibitor that can help improve muscle strength and function in patients with myasthenia gravis",
+    "It is often used to treat myasthenic crisis",
+    "However, its effectiveness may be limited by its mode of administration and potential side effects",
+    "Option D, plasmapheresis (plasma exchange therapy), is a treatment that can remove antibodies against the acetylcholine receptor, potentially improving muscle strength and function",
+    "It is often used in severe cases of myasthenia gravis or when other treatments are ineffective",
+    "Option E, thymectomy, is a surgical procedure that involves removing the thymus gland, which is sometimes involved in myasthenia gravis",
+    "While it can be an effective long-term treatment for myasthenia gravis, it is not typically used in the acute management of a myasthenic crisis",
+    "Considering the patient's condition and the above options, plasmapheresis (D) is the most appropriate next step in management",
+    "It can help reduce the severity of the myasthenic crisis and improve the patient's respiratory function"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's symptoms suggest a neuromuscular junction disorder, consistent with a myasthenic crisis.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Myasthenic crisis is a medical emergency that requires prompt treatment.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's history of myasthenia gravis and recent urinary tract infection treated with gentamicin supports the diagnosis of myasthenic crisis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The arterial blood gas results show respiratory acidosis, indicating a need for immediate intervention to secure the patient's airway and improve respiratory function.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's hypoxemia and tachypnea suggest respiratory failure, a common complication of myasthenia gravis exacerbations.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Atropine can worsen myasthenia gravis symptoms by drying up respiratory secretions and further impairing muscle function.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Edrophonium is a cholinesterase inhibitor that can temporarily improve muscle strength in patients with myasthenia gravis, but is typically used diagnostically.",
+      "source_sentences": [
+        8,
+        9
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Neostigmine is a cholinesterase inhibitor that can help improve muscle strength and function in patients with myasthenia gravis, but its effectiveness may be limited.",
+      "source_sentences": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Plasmapheresis can remove antibodies against the acetylcholine receptor, potentially improving muscle strength and function, and is often used in severe cases of myasthenia gravis.",
+      "source_sentences": [
+        14,
+        15
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Thymectomy is a surgical procedure that involves removing the thymus gland, and while it can be an effective long-term treatment for myasthenia gravis, it is not typically used in the acute management of a myasthenic crisis.",
+      "source_sentences": [
+        16,
+        17
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Plasmapheresis is the most appropriate next step in management for this patient.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Plasmapheresis can help reduce the severity of the myasthenic crisis and improve the patient's respiratory function.",
+      "source_sentences": [
+        19
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This 71-year-old man's symptoms suggest a neuromuscular junction disorder, consistent with a myasthenic crisis.",
+      "pattern": "D",
+      "notes": "Initial diagnostic impression."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Myasthenic crisis is a medical emergency that requires prompt treatment.",
+      "pattern": "D",
+      "notes": "General medical fact."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The patient's history of myasthenia gravis and recent urinary tract infection treated with gentamicin supports the diagnosis of myasthenic crisis.",
+      "pattern": "D",
+      "notes": "Case-specific diagnosis support."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "The arterial blood gas results show respiratory acidosis, indicating a need for immediate intervention to secure the patient's airway and improve respiratory function; the patient's hypoxemia and tachypnea suggest respiratory failure, a common complication of myasthenia gravis exacerbations.",
+      "pattern": "A",
+      "notes": "Physiologic findings + implications."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Atropine can worsen myasthenia gravis symptoms by drying up respiratory secretions and further impairing muscle function.",
+      "pattern": "D",
+      "notes": "Medication contraindication."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Edrophonium is a cholinesterase inhibitor that can temporarily improve muscle strength in patients with myasthenia gravis, but is typically used diagnostically.",
+      "pattern": "D",
+      "notes": "Medication role."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Neostigmine is a cholinesterase inhibitor that can help improve muscle strength and function in patients with myasthenia gravis, but its effectiveness may be limited.",
+      "pattern": "D",
+      "notes": "Medication role and limitation."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Plasmapheresis can remove antibodies against the acetylcholine receptor, potentially improving muscle strength and function, and is often used in severe cases of myasthenia gravis.",
+      "pattern": "D",
+      "notes": "Treatment mechanism and use case."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Thymectomy is a surgical procedure that involves removing the thymus gland, and while it can be an effective long-term treatment for myasthenia gravis, it is not typically used in the acute management of a myasthenic crisis.",
+      "pattern": "D",
+      "notes": "Treatment role and timing."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "For this patient with a myasthenic crisis, plasmapheresis is the most appropriate next step in management, as it can help reduce the severity of the crisis and improve the patient's respiratory function.",
+      "pattern": "C",
+      "notes": "Treatment recommendation with rationale."
+    }
+  ]
+}

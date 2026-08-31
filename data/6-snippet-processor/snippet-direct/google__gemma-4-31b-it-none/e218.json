@@ -1,0 +1,361 @@
+{
+  "entry_id": 218,
+  "batch_id": 22,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 33-year-old woman presents to the emergency department with muscle spasms. She has noticed \"twitching\" in both her upper and lower extremities over the past 3 days that have interfered with her training for a marathon. She has felt more fatigued over the past month. She has no significant medical history. She takes no medication other than whey protein supplements, a multivitamin, and fish oil. Her temperature is 98.5°F (36.9°C), blood pressure is 103/71 mmHg, pulse is 105/min, respirations are 11/min, and oxygen saturation is 100% on room air. Physical exam reveals a thin woman with thinning hair. She appears pale and her mucous membranes are dry. Her neurological and cardiac exams are unremarkable. Laboratory studies are ordered as seen below. Hemoglobin: 10 g/dL Hematocrit: 30% Leukocyte count: 6,100/mm^3 with normal differential Platelet count: 187,500/mm^3 Serum: Na+: 130 mEq/L Cl-: 100 mEq/L K+: 2.3 mEq/L HCO3-: 28 mEq/L BUN: 40 mg/dL Glucose: 79 mg/dL Creatinine: 0.9 mg/dL Ca2+: 8.2 mg/dL Mg2+: 1.8 mg/dL Thyroid stimulating hormone (TSH): 4.0 mIU/L Free T4: 0.4 ng/dL (normal: 0.7-1.53 ng/dL) The patient is given 4 liters of lactated ringer solution and 40 mEq of potassium. Her repeat whole blood potassium 3 hours later is 2.4 mEq/L, and her repeat BUN is 20 mEq/L. Another 40 mEq of potassium is administered. Another repeat whole blood potassium is 2.5 mEq/L. The patient’s muscle spasms persist. Which of the following is the most likely underlying etiology for this patient’s chief concern? (A) Hypocalcemia (B) Hypomagnesemia (C) Hyponatremia (D) Hypothyroidism (E) Hypovolemia",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3452,
+    "output_tokens": 2091,
+    "cached_input_tokens": 0,
+    "cost": 0.00124334
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 3452,
+      "output_tokens": 2091,
+      "cached_input_tokens": 0,
+      "cost": 0.00124334
+    }
+  ],
+  "shared_context": {
+    "age": "33",
+    "sex": "female",
+    "chief_complaint": "muscle spasms and twitching",
+    "medical_history": "no significant history; marathon training; takes whey protein, multivitamin, fish oil",
+    "vitals": {
+      "temperature": "98.5°F",
+      "blood_pressure": "103/71 mmHg",
+      "pulse": "105/min",
+      "respirations": "11/min",
+      "oxygen_saturation": "100% RA"
+    },
+    "exam_findings": "thin woman, thinning hair, pale, dry mucous membranes, unremarkable neurological and cardiac exams",
+    "treatment_history": "4L lactated ringer and 80mEq potassium total; K+ improved minimally from 2.3 to 2.5 mEq/L; BUN decreased from 40 to 20 mg/dL",
+    "correct_answer": "Hypothyroidism (D)"
+  },
+  "sentences": [
+    "To determine the most likely underlying etiology for this patient's chief concern, we need to analyze the patient's clinical presentation and laboratory findings systematically",
+    "Presentation and Symptoms: The patient is a 33-year-old woman presenting with muscle spasms and twitching in her extremities, fatigue, thinning hair, and dry mucous membranes",
+    "She also has a history of intensive physical activity (marathon training)",
+    "Temperature: 98.5°F (36.9°C) - Normal",
+    "Blood pressure: 103/71 mmHg - Lower end of normal, suggesting possible mild hypovolemia",
+    "Pulse: 105/min - Elevated, which could be a response to dehydration or stress",
+    "Respirations: 11/min - Normal",
+    "Oxygen saturation: 100% on room air - Normal",
+    "Thin woman with thinning hair and pale appearance",
+    "Dry mucous membranes",
+    "Unremarkable neurological and cardiac exams",
+    "Hemoglobin: 10 g/dL (Low)",
+    "Hematocrit: 30% (Low)",
+    "Leukocyte count: 6,100/mm^3 with normal differential (Normal)",
+    "Platelet count: 187,500/mm^3 (Normal)",
+    "Na+: 130 mEq/L (Low)",
+    "Cl-: 100 mEq/L (Normal)",
+    "K+: 2.3 mEq/L (Low, critical)",
+    "HCO3-: 28 mEq/L (Normal)",
+    "BUN: 40 mg/dL initially, decreased to 20 mg/dL after fluid administration (Elevated initially, normalized)",
+    "Glucose: 79 mg/dL (Normal)",
+    "Creatinine: 0.9 mg/dL (Normal)",
+    "Ca2+: 8.2 mg/dL (Slightly low)",
+    "Mg2+: 1.8 mg/dL (Normal)",
+    "TSH: 4.0 mIU/L (Normal)",
+    "Free T4: 0.4 ng/dL (Low)",
+    "Persistent hypokalemia despite potassium supplementation (2.3 mEq/L initially, 2.4 mEq/L, and 2.5 mEq/L after treatment)",
+    "Normal magnesium levels (Mg2+: 1.8 mEq/L)",
+    "Hyponatremia (Na+: 130 mEq/L)",
+    "Hypothyroidism (Low Free T4 with normal TSH)",
+    "Hypocalcemia (A): This patient's calcium level is slightly low but not critically low to explain the muscle spasms or twitching prominently",
+    "Hypomagnesemia (B): The patient's magnesium level is normal, ruling out hypomagnesemia as a cause",
+    "Hyponatremia (C): The patient is mildly hyponatremic, but this alone is less likely to explain the persistent hypokalemia and muscle spasms",
+    "Hypothyroidism (D): The patient has low Free T4, indicating hypothyroidism",
+    "Hypothyroidism can lead to electrolyte imbalances, including persistent hypokalemia",
+    "Hypovolemia (E): Initial signs of hypovolemia (elevated BUN, low BP) improved with fluid administration, but hypokalemia persisted",
+    "Given the persistent hypokalemia despite treatment and the underlying thyroid dysfunction, the most likely underlying etiology for the patient’s muscle spasms is Hypothyroidism",
+    "Hypothyroidism can lead to secondary electrolyte disturbances, including persistent hypokalemia",
+    "Final Answer: (D) Hypothyroidism"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely underlying etiology for the 33-year-old woman's muscle spasms, the clinical presentation and laboratory findings must be analyzed systematically.",
+      "pattern": "D",
+      "notes": "Introductory statement."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "The patient is a 33-year-old woman presenting with muscle spasms and twitching in her extremities, fatigue, thinning hair, and dry mucous membranes, with a history of intensive physical activity (marathon training).",
+      "pattern": "A",
+      "notes": "Enumeration of patient's presentation and history."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The 33-year-old woman's temperature is 98.5°F (36.9°C), which is normal.",
+      "pattern": "D",
+      "notes": "Standalone vital."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The patient's blood pressure is 103/71 mmHg, which is on the lower end of normal, suggesting possible mild hypovolemia.",
+      "pattern": "B",
+      "notes": "Causal link between BP and clinical state."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "The patient's pulse is 105/min, which is elevated and could be a response to dehydration or stress.",
+      "pattern": "B",
+      "notes": "Causal link between pulse and clinical state."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "The 33-year-old woman's respirations are 11/min, which is normal.",
+      "pattern": "D",
+      "notes": "Standalone vital."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "The patient's oxygen saturation is 100% on room air, which is normal.",
+      "pattern": "D",
+      "notes": "Standalone vital."
+    },
+    {
+      "source_sentences": [
+        8,
+        9,
+        10
+      ],
+      "output": "Physical exam of the 33-year-old woman reveals a thin woman with thinning hair, a pale appearance, and dry mucous membranes, though neurological and cardiac exams are unremarkable.",
+      "pattern": "A",
+      "notes": "Enumeration of physical exam findings."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "The patient's hemoglobin is 10 g/dL and hematocrit is 30%, both of which are low.",
+      "pattern": "A",
+      "notes": "Enumeration of related blood indices."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "The patient's leukocyte count is 6,100/mm^3 with a normal differential.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "The patient's platelet count is 187,500/mm^3, which is normal.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "The patient's sodium (Na+) is 130 mEq/L, which is low.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "The patient's chloride (Cl-) is 100 mEq/L, which is normal.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "The patient's potassium (K+) is 2.3 mEq/L, which is critically low.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "The patient's bicarbonate (HCO3-) is 28 mEq/L, which is normal.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        19
+      ],
+      "output": "The patient's BUN was initially 40 mg/dL (elevated) and decreased to 20 mg/dL (normalized) after fluid administration.",
+      "pattern": "D",
+      "notes": "Standalone lab trend."
+    },
+    {
+      "source_sentences": [
+        20
+      ],
+      "output": "The patient's glucose is 79 mg/dL, which is normal.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        21
+      ],
+      "output": "The patient's creatinine is 0.9 mg/dL, which is normal.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        22
+      ],
+      "output": "The patient's calcium (Ca2+) is 8.2 mg/dL, which is slightly low.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        23
+      ],
+      "output": "The patient's magnesium (Mg2+) is 1.8 mg/dL, which is normal.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        24
+      ],
+      "output": "The patient's thyroid stimulating hormone (TSH) is 4.0 mIU/L, which is normal.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        25
+      ],
+      "output": "The patient's Free T4 is 0.4 ng/dL, which is low.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        26
+      ],
+      "output": "This 33-year-old woman exhibits persistent hypokalemia despite potassium supplementation, with levels moving from 2.3 mEq/L to 2.4 mEq/L and 2.5 mEq/L after treatment.",
+      "pattern": "D",
+      "notes": "Standalone clinical observation."
+    },
+    {
+      "source_sentences": [
+        27
+      ],
+      "output": "The patient's magnesium levels are normal (Mg2+: 1.8 mEq/L).",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        28
+      ],
+      "output": "The patient has hyponatremia (Na+: 130 mEq/L).",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_sentences": [
+        29
+      ],
+      "output": "The patient has hypothyroidism, indicated by low Free T4 with normal TSH.",
+      "pattern": "B",
+      "notes": "Causal link between lab and diagnosis."
+    },
+    {
+      "source_sentences": [
+        30
+      ],
+      "output": "Hypocalcemia is unlikely to be the primary cause as this patient's calcium level is slightly low but not critically low enough to explain the muscle spasms or twitching prominently.",
+      "pattern": "C",
+      "notes": "Conclusion based on premise."
+    },
+    {
+      "source_sentences": [
+        31
+      ],
+      "output": "Hypomagnesemia is ruled out as the patient's magnesium level is normal.",
+      "pattern": "C",
+      "notes": "Conclusion based on premise."
+    },
+    {
+      "source_sentences": [
+        32
+      ],
+      "output": "While the patient is mildly hyponatremic, hyponatremia alone is less likely to explain the persistent hypokalemia and muscle spasms.",
+      "pattern": "C",
+      "notes": "Conclusion based on premise."
+    },
+    {
+      "source_sentences": [
+        33,
+        34
+      ],
+      "output": "The patient has hypothyroidism, indicated by low Free T4, which can lead to electrolyte imbalances including persistent hypokalemia.",
+      "pattern": "B",
+      "notes": "Causal chain from diagnosis to symptom."
+    },
+    {
+      "source_sentences": [
+        35
+      ],
+      "output": "Initial signs of hypovolemia in this patient (elevated BUN, low BP) improved with fluid administration, but the hypokalemia persisted.",
+      "pattern": "C",
+      "notes": "Reasoning to rule out a diagnosis."
+    },
+    {
+      "source_sentences": [
+        36,
+        37
+      ],
+      "output": "Given the persistent hypokalemia despite treatment and the underlying thyroid dysfunction, the most likely underlying etiology for this 33-year-old woman's muscle spasms is hypothyroidism, as hypothyroidism can lead to secondary electrolyte disturbances including persistent hypokalemia.",
+      "pattern": "C",
+      "notes": "Conclusion supported by clinical reasoning."
+    },
+    {
+      "source_sentences": [
+        38
+      ],
+      "output": "The final answer is (D) Hypothyroidism.",
+      "pattern": "D",
+      "notes": "Standalone conclusion."
+    }
+  ]
+}

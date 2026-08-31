@@ -1,0 +1,80 @@
+{
+  "entry_id": 134,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1757,
+    "output_tokens": 1618,
+    "cached_input_tokens": 0,
+    "cost": 0.00027923
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1757,
+      "output_tokens": 1618,
+      "cached_input_tokens": 0,
+      "cost": 0.00027923
+    }
+  ],
+  "shared_context": {
+    "topic": "losartan dosing schedule",
+    "drug_a": "losartan"
+  },
+  "sentences": [
+    "The dosing schedule for losartan should be determined by your healthcare provider based on your specific medical condition and response to treatment",
+    "Generally, losartan is taken once daily, but the exact dosage and frequency can vary",
+    "Losartan is typically prescribed to be taken once daily",
+    "The specific dosage and frequency should be individualized based on the patient's condition and response to treatment",
+    "You should follow the dosing instructions provided by your healthcare provider",
+    "If you have any questions or concerns about your medication regimen, consult your healthcare provider for personalized advice"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        3
+      ],
+      "output": "The dosing schedule for losartan should be individualized by the healthcare provider based on the patient’s medical condition and response to treatment.",
+      "pattern": "A",
+      "notes": "Both sentences enumerate aspects of individualized dosing for the same subject."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "Losartan is typically taken once daily, but the exact dosage and frequency can vary.",
+      "pattern": "A",
+      "notes": "Sentence 1 and 2 enumerate dosing frequency and variability for the same drug."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Follow the dosing instructions provided by the healthcare provider.",
+      "pattern": "D",
+      "notes": "Standalone practical instruction."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "If you have any questions or concerns about your medication regimen, consult your healthcare provider for personalized advice.",
+      "pattern": "D",
+      "notes": "Standalone guidance for patient action."
+    }
+  ]
+}

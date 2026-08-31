@@ -1,0 +1,282 @@
+{
+  "entry_id": 117,
+  "batch_id": 12,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 16-year-old girl who recently immigrated to the United States from Bolivia presents to her primary care physician with a chief complaint of inattentiveness in school. The patient's teacher describes her as occasionally \"daydreaming\" for periods of time during where the patient does not respond or participate in school activities. Nothing has helped the patient change her behavior, including parent-teacher conferences or punishment. The patient has no other concerns. The only other concern that the patient's mother has is that, upon awakening, she notices that sometimes the patient's arm will jerk back and forth. The patient states she is not doing this intentionally. The patient has an unknown medical history and is currently not on any medications. She is not sexually active and does not intend to become pregnant in the near future. Her temperature is 98.6°F (37°C), blood pressure is 112/74 mmHg, pulse is 63/min, and respirations are 11/min. On physical exam, you note a young, healthy girl whose neurological exam is within normal limits. Which of the following is the most appropriate initial treatment? (A) Carbamazepine (B) Cognitive behavioral therapy (C) Ethosuximide (D) Lamotrigine (E) Valproic acid",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4772,
+    "output_tokens": 1449,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1939,
+      "output_tokens": 739,
+      "cached_input_tokens": 0,
+      "cost": 0.00053289
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2833,
+      "output_tokens": 710,
+      "cached_input_tokens": 0,
+      "cost": 0.00063809
+    }
+  ],
+  "shared_context": {
+    "age": 16,
+    "sex": "female",
+    "chief_complaint": "inattentiveness in school",
+    "medical_history": "unknown",
+    "medications": "none",
+    "vitals": "T 98.6F, BP 112/74, P 63, R 11",
+    "exam_findings": "neurological exam within normal limits",
+    "treatment_history": "behavioral interventions unsuccessful",
+    "correct_answer": "Valproic acid"
+  },
+  "sentences": [
+    "The patient, a 16-year-old girl, presents with inattentiveness in school, described as \"daydreaming\"",
+    "The episodes involve non-responsiveness or lack of participation in activities, which are not improved by behavioral interventions",
+    "The patient's mother also reports occasional arm jerking movements upon awakening",
+    "The patient has an unknown medical history and is not on any medications",
+    "No other significant concerns or relevant history noted",
+    "Physical examination reveals a healthy girl with a normal neurological exam",
+    "The described episodes of inattentiveness or \"daydreaming\" are characteristic of absence seizures",
+    "The arm jerking movements upon awakening suggest myoclonic jerks, which can be part of juvenile myoclonic epilepsy (JME)",
+    "Carbamazepine: Typically used for focal and generalized tonic-clonic seizures, but can exacerbate absence seizures and myoclonic seizures",
+    "Cognitive behavioral therapy: Not suitable for seizure management; more appropriate for psychological or behavioral issues",
+    "Ethosuximide: Effective specifically for absence seizures",
+    "However, it does not treat myoclonic jerks",
+    "Lamotrigine: Effective for a broad range of seizure types, including absence and myoclonic seizures",
+    "Valproic acid: Effective for multiple seizure types, including absence seizures, myoclonic seizures, and generalized tonic-clonic seizures",
+    "Considering the efficacy across multiple seizure types (absence and myoclonic jerks) presented by the patient, Valproic acid is the most appropriate initial treatment",
+    "(E) Valproic acid"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient, a 16-year-old girl, presents with inattentiveness in school, described as \"daydreaming\".",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The episodes involve non-responsiveness or lack of participation in activities, which are not improved by behavioral interventions.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's mother reports occasional arm jerking movements upon awakening.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient has an unknown medical history and is not on any medications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "No other significant concerns or relevant history were noted.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Physical examination reveals a healthy girl with a normal neurological exam.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The described episodes of inattentiveness or \"daydreaming\" are characteristic of absence seizures.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The arm jerking movements upon awakening suggest myoclonic jerks, which can be part of juvenile myoclonic epilepsy (JME).",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Carbamazepine is typically used for focal and generalized tonic-clonic seizures, but can exacerbate absence seizures and myoclonic seizures.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Cognitive behavioral therapy is not suitable for seizure management and is more appropriate for psychological or behavioral issues.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Ethosuximide is effective specifically for absence seizures.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Ethosuximide does not treat myoclonic jerks.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Lamotrigine is effective for a broad range of seizure types, including absence and myoclonic seizures.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Valproic acid is effective for multiple seizure types, including absence seizures, myoclonic seizures, and generalized tonic-clonic seizures.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Considering the efficacy across multiple seizure types (absence and myoclonic jerks) presented by the patient, Valproic acid is the most appropriate initial treatment.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 16,
+      "text": "The correct answer is (E) Valproic acid.",
+      "source_sentences": [
+        15
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The patient, a 16-year-old girl, presents with inattentiveness in school described as \"daydreaming,\" characterized by episodes of non-responsiveness or lack of participation that are not improved by behavioral interventions.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of the chief complaint."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The mother of this 16-year-old girl reports occasional arm jerking movements upon awakening.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "The patient has an unknown medical history, is not on any medications, and has no other significant concerns or relevant history.",
+      "pattern": "A",
+      "notes": "Enumeration of medical history properties."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Physical examination of the 16-year-old girl reveals a healthy girl with a normal neurological exam.",
+      "pattern": "D",
+      "notes": "Standalone exam finding."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The described episodes of inattentiveness or \"daydreaming\" in this 16-year-old girl are characteristic of absence seizures.",
+      "pattern": "D",
+      "notes": "Clinical interpretation of a specific symptom."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The arm jerking movements upon awakening in this 16-year-old girl suggest myoclonic jerks, which can be part of juvenile myoclonic epilepsy (JME).",
+      "pattern": "D",
+      "notes": "Clinical interpretation of a specific symptom."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Carbamazepine is typically used for focal and generalized tonic-clonic seizures, but can exacerbate absence seizures and myoclonic seizures.",
+      "pattern": "D",
+      "notes": "Standalone drug fact."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Cognitive behavioral therapy is not suitable for seizure management and is more appropriate for psychological or behavioral issues.",
+      "pattern": "D",
+      "notes": "Standalone treatment fact."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Ethosuximide is effective specifically for absence seizures, but it does not treat myoclonic jerks.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Ethosuximide."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Lamotrigine is effective for a broad range of seizure types, including absence and myoclonic seizures.",
+      "pattern": "D",
+      "notes": "Standalone drug fact."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Valproic acid is effective for multiple seizure types, including absence seizures, myoclonic seizures, and generalized tonic-clonic seizures.",
+      "pattern": "D",
+      "notes": "Standalone drug fact."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "Considering the efficacy across multiple seizure types (absence and myoclonic jerks) presented by this 16-year-old girl, Valproic acid is the most appropriate initial treatment, making (E) the correct answer.",
+      "pattern": "C",
+      "notes": "Conclusion based on supporting premises."
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "entry_id": 58,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "what causes ringworm ?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3036,
+    "output_tokens": 1004,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1361,
+      "output_tokens": 599,
+      "cached_input_tokens": 0,
+      "cost": 0.00040455
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1675,
+      "output_tokens": 405,
+      "cached_input_tokens": 0,
+      "cost": 0.00037165
+    }
+  ],
+  "shared_context": {
+    "topic": "causes of ringworm",
+    "condition": "ringworm (Tinea)"
+  },
+  "sentences": [
+    "Ringworm, also known as Tinea, is a skin infection caused by a type of fungi called dermatophytes",
+    "These fungi thrive in warm, moist areas and feed on keratin, the material found in the outer layer of skin, hair, and nails",
+    "The disease can be caused by various types of dermatophytes, including Trichophyton, Microsporum, and Epidermophyton",
+    "Dermatophytes are parasitic fungi that can be found on the skin, hair, and nails of humans and animals",
+    "They can infect the skin, causing symptoms such as itching, redness, and scaling",
+    "The fungi can also be spread through person-to-person contact, contaminated items, and contact with infected animals",
+    "The risk of acquiring ringworm is higher in individuals who live in crowded, humid conditions, have poor hygiene, and engage in activities that involve direct contact with infected individuals or contaminated items"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Ringworm, also known as Tinea, is a skin infection caused by a type of fungi called dermatophytes",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Dermatophytes thrive in warm, moist areas",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Dermatophytes feed on keratin",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Keratin is the material found in the outer layer of skin, hair, and nails",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Ringworm can be caused by Trichophyton",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Ringworm can be caused by Microsporum",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Ringworm can be caused by Epidermophyton",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Dermatophytes are parasitic fungi that can be found on the skin, hair, and nails of humans and animals",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Dermatophytes can infect the skin",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Dermatophytes can cause itching",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Dermatophytes can cause redness",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Dermatophytes can cause scaling",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Ringworm fungi can be spread through person-to-person contact",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Ringworm fungi can be spread through contaminated items",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Ringworm fungi can be spread through contact with infected animals",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 16,
+      "text": "The risk of acquiring ringworm is higher in individuals who live in crowded, humid conditions",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 17,
+      "text": "The risk of acquiring ringworm is higher in individuals who have poor hygiene",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 18,
+      "text": "The risk of acquiring ringworm is higher in individuals who engage in activities that involve direct contact with infected individuals or contaminated items",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Ringworm, also known as Tinea, is a skin infection caused by a type of fungi called dermatophytes.",
+      "pattern": "D",
+      "notes": "Standalone definition."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "Dermatophytes feed on keratin, which is the material found in the outer layer of skin, hair, and nails, and they thrive in warm, moist areas.",
+      "pattern": "B",
+      "notes": "Causal/conditional chain explaining why they thrive and what they feed on."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Ringworm can be caused by fungi of the genera Trichophyton, Microsporum, and Epidermophyton.",
+      "pattern": "A",
+      "notes": "Enumeration of specific fungal causes."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "Dermatophytes are parasitic fungi found on the skin, hair, and nails of humans and animals that can infect the skin and cause itching, redness, and scaling.",
+      "pattern": "A",
+      "notes": "Enumeration of properties and effects of dermatophytes."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "Ringworm fungi can be spread through person-to-person contact, through contaminated items, or through contact with infected animals.",
+      "pattern": "A",
+      "notes": "Enumeration of transmission methods."
+    },
+    {
+      "source_claims": [
+        16,
+        17,
+        18
+      ],
+      "output": "The risk of acquiring ringworm is higher in individuals who live in crowded, humid conditions, have poor hygiene, or engage in activities involving direct contact with infected individuals or contaminated items.",
+      "pattern": "A",
+      "notes": "Enumeration of risk factors."
+    }
+  ]
+}

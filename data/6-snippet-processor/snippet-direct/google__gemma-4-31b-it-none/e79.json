@@ -1,0 +1,106 @@
+{
+  "entry_id": 79,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 17-year-old high school student was in shop class when he accidentally sawed off a portion of his right index finger. The teacher applied dressings and pressure to the patient's injured digit and immediately transported the patient to the emergency department. He arrived within 20 minutes of the accident. The patient has a medical history of asthma and his only medication is albuterol. His temperature is 98.0°F (36.6°C), blood pressure is 120/70 mmHg, pulse is 105/min, and respirations are 17/min. Exam was significant for pulsatile bleeding from a clean-cut wound on his right second finger. Radiography of the hand revealed a complete amputation of the right finger from the distal interphalangeal joint. The wound was cleaned, compression applied, analgesics administered, and the hand surgeons were notified. The teacher states that he left the amputated finger in the classroom, but the principal would be transporting it to the hospital. Which of the following is the correct method for transporting the amputated finger? (A) Rinse the finger in normal saline, wrap the finger in moist gauze, put in a plastic bag, and place the bag in ice water (B) Rinse the finger with hydrogen peroxide, wrap the finger in moist gauze, and place on ice (C) Submerge the finger in ice water (D) Wrap the finger in moist gauze and place in a plastic bag (E) Wrap the finger in moist gauze and place on ice",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2902,
+    "output_tokens": 847,
+    "cached_input_tokens": 0,
+    "cost": 0.00069912
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2902,
+      "output_tokens": 847,
+      "cached_input_tokens": 0,
+      "cost": 0.00069912
+    }
+  ],
+  "shared_context": {
+    ": ": "",
+    "age": "17",
+    "sex": "male",
+    "chief_complaint": "amputation of right index finger from the distal interphalangeal joint",
+    "medical_history": "asthma",
+    "medications": "albuterol",
+    "vitals": "T 98.0°F, BP 120/70 mmHg, P 105/min, R 17/min",
+    "exam_findings": "pulsatile bleeding from a clean-cut wound on right second finger; radiography confirmed complete amputation of the right finger from the distal interphalangeal joint",
+    "treatment_history": "dressings and pressure applied by teacher; wound cleaned, compression applied, and analgesics administered in ED"
+  },
+  "sentences": [
+    "To answer this question, we need to evaluate the options based on medical knowledge",
+    "Step 1: Understand the importance of preserving the amputated finger",
+    "The amputated finger should be handled and transported in a way that preserves its viability for potential reattachment, if possible",
+    "This involves maintaining its oxygen supply, preventing further injury, and minimizing bacterial contamination",
+    "Step 2: Evaluate option A - Rinse the finger in normal saline, wrap the finger in moist gauze, put in a plastic bag, and place the bag in ice water",
+    "Rinsing the finger with normal saline can help remove bacteria and debris from the wound",
+    "Wrapping the finger in moist gauze keeps it moist, which is essential for maintaining the viability of the amputated tissue",
+    "Placing the finger in a plastic bag prevents contamination and leak of ice water, making it a viable option",
+    "Step 3: Evaluate option B - Rinse the finger with hydrogen peroxide, wrap the finger in moist gauze, and place on ice",
+    "Hydrogen peroxide is not recommended for wound cleaning as it can damage tissues and delay healing",
+    "This makes option B an incorrect choice",
+    "Step 4: Evaluate option C - Submerge the finger in ice water",
+    "Submerging the finger in ice water is not recommended as it can lead to thermal shock, causing tissue damage and reducing the finger's viability for reattachment",
+    "Step 5: Evaluate option D - Wrap the finger in moist gauze and place in a plastic bag",
+    "Wrapping the finger in moist gauze is essential, but placing it in a plastic bag without ice can lead to bacterial growth and tissue damage due to temperature increase",
+    "Step 6: Evaluate option E - Wrap the finger in moist gauze and place on ice",
+    "Placing the finger directly on ice can cause thermal shock, making option E an incorrect choice",
+    "Step 7: Choose the best option",
+    "Based on the analysis, the best method for transporting the amputated finger is option A - Rinse the finger in normal saline, wrap the finger in moist gauze, put in a plastic bag, and place the bag in ice water"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "To determine the correct transport method for a 17-year-old male's amputated right index finger, the options must be evaluated based on medical knowledge and the importance of preserving the digit.",
+      "pattern": "D",
+      "notes": "Introductory framing; treated as standalone logic."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "The amputated finger should be transported in a way that preserves its viability for potential reattachment by maintaining its oxygen supply, preventing further injury, and minimizing bacterial contamination.",
+      "pattern": "B",
+      "output_text": "The amputated finger should be transported in a way that preserves its viability for potential reattachment by maintaining its oxygen supply, preventing further injury, and minimizing bacterial contamination.",
+      "notes": "Causal chain: the goal (viability) requires specific actions (oxygen, contamination control)."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Rinsing the finger in normal saline, wrapping it in moist gauze, and placing it in a plastic bag in ice water is a viable option because saline removes debris, moist gauze maintains tissue viability, and the bag prevents contamination and ice water leakage.",
+      "pattern": "A",
+      "notes": "Enumeration of properties/benefits of a single method (Option A)."
+    },
+    {
+      "source_sentences": [
+        8,
+        9,
+        10
+      ],
+      "output": "Rinsing the finger with hydrogen peroxide, wrapping it in moist gauze, and placing it on ice is incorrect because hydrogen peroxide can damage tissues and delay healing.",
+      "pattern": "C",
+      "notes": "Conclusion (incorrect choice) based on the premise of tissue damage."
+    }
+  ]
+}

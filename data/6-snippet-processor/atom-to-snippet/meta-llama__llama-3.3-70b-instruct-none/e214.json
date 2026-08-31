@@ -1,0 +1,207 @@
+{
+  "entry_id": 214,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "is there any specific brand you recommend for the omeprazole?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2866,
+    "output_tokens": 848,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1236,
+      "output_tokens": 532,
+      "cached_input_tokens": 0,
+      "cost": 0.00029384
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1630,
+      "output_tokens": 316,
+      "cached_input_tokens": 0,
+      "cost": 0.00026412
+    }
+  ],
+  "shared_context": {
+    "topic": "omeprazole brand recommendation",
+    "drug_a": "omeprazole"
+  },
+  "sentences": [
+    "There are several brands of omeprazole available on the market, and the choice of brand often depends on factors such as availability, cost, and patient preference",
+    "Common brand names for omeprazole include Prilosec, Prilosec OTC, Losec, Zegerid, Miracid, and Omez",
+    "These brands are generally considered to be equivalent in terms of efficacy and bioavailability",
+    "For example, Prilosec is one of the most widely recognized brands and is available both as a prescription medication and over-the-counter (OTC)",
+    "Additionally, generic versions of omeprazole are available and are often less expensive while providing the same therapeutic benefits"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "There are several brands of omeprazole available on the market.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The choice of omeprazole brand often depends on factors such as availability, cost, and patient preference.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Common brand names for omeprazole include Prilosec.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Common brand names for omeprazole include Prilosec OTC.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Common brand names for omeprazole include Losec.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Common brand names for omeprazole include Zegerid.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Common brand names for omeprazole include Miracid.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Common brand names for omeprazole include Omez.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 9,
+      "text": "These brands are generally considered to be equivalent in terms of efficacy.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "These brands are generally considered to be equivalent in terms of bioavailability.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Prilosec is one of the most widely recognized brands of omeprazole.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Prilosec is available both as a prescription medication and over-the-counter (OTC).",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Generic versions of omeprazole are available.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Generic versions of omeprazole are often less expensive than brand-name versions.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Generic versions of omeprazole provide the same therapeutic benefits as brand-name versions.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "There are several brands of omeprazole available, and the choice often depends on factors like availability, cost, and patient preference.",
+      "pattern": "C",
+      "notes": "Introduction + contextual premise."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "Common brand names for omeprazole include Prilosec, Prilosec OTC, Losec, Zegerid, and Miracid, and Omez.",
+      "pattern": "A",
+      "notes": "Enumeration of brand names."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "These brands are generally considered equivalent in terms of efficacy and bioavailability.",
+      "pattern": "D",
+      "notes": "Standalone fact about brand equivalence."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Prilosec is a widely recognized brand of omeprazole, available both by prescription and over-the-counter (OTC).",
+      "pattern": "C",
+      "notes": "Specific brand details."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15
+      ],
+      "output": "Generic versions of omeprazole are available, often less expensive than brand-name versions, yet provide the same therapeutic benefits.",
+      "pattern": "B",
+      "notes": "Causal chain of generic version benefits."
+    }
+  ]
+}

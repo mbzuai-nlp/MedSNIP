@@ -1,0 +1,88 @@
+{
+  "entry_id": 91,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "What is blepharitis?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1849,
+    "output_tokens": 438,
+    "cached_input_tokens": 0,
+    "cost": 5.45e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1849,
+      "output_tokens": 438,
+      "cached_input_tokens": 0,
+      "cost": 5.45e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "blepharitis",
+    "condition": "blepharitis"
+  },
+  "sentences": [
+    "Blepharitis is an inflammatory condition of the eyelids, characterized by redness, swelling, and irritation of the eyelid margins",
+    "It is a common condition that can be caused by a combination of factors, including bacterial or demodex mite infestation, meibomian gland dysfunction, and seborrheic dermatitis",
+    "The symptoms of blepharitis can include itching, burning, and stinging sensations in the eyes, as well as crusting or flaking of the eyelid margins",
+    "There are two main types of blepharitis: anterior blepharitis, which affects the front of the eyelid, and posterior blepharitis, which affects the back of the eyelid",
+    "Anterior blepharitis is often caused by bacterial or demodex mite infestation, while posterior blepharitis is often associated with meibomian gland dysfunction",
+    "Blepharitis can be treated with a combination of warm compresses, lid hygiene, and antibiotic or anti-inflammatory medications",
+    "In severe cases, more aggressive treatments such as oral antibiotics or corticosteroids may be necessary"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Blepharitis is an inflammatory condition of the eyelids, characterized by redness, swelling, and irritation of the eyelid margins.",
+      "pattern": "D",
+      "notes": "Definition of blepharitis."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The symptoms of blepharitis can include itching, burning, and stinging sensations in the eyes, as well as crusting or flaking of the eyelid margins.",
+      "pattern": "D",
+      "notes": "Enumeration of symptoms; one subject (blepharitis)."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "There are two main types of blepharitis: anterior blepharitis, which affects the front of the eyelid, and posterior blepharitis, which affects the back of the eyelid.",
+      "pattern": "A",
+      "notes": "Enumeration of types of blepharitis."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Anterior blepharitis is often caused by bacterial or demodex mite infestation, while posterior blepharitis is often associated with meibomian gland dysfunction.",
+      "pattern": "B",
+      "notes": "Causal chain; merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Blepharitis can be treated with a combination of warm compresses, lid hygiene, and antibiotic or anti-inflammatory medications. In severe cases, more aggressive treatments such as oral antibiotics or corticosteroids may be necessary.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises; merged because each piece needs the other for verifiability."
+    }
+  ]
+}

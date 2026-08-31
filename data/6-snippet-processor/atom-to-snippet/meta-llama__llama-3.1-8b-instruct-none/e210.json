@@ -1,0 +1,186 @@
+{
+  "entry_id": 210,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2958,
+    "output_tokens": 816,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1353,
+      "output_tokens": 442,
+      "cached_input_tokens": 0,
+      "cost": 4.474e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1605,
+      "output_tokens": 374,
+      "cached_input_tokens": 0,
+      "cost": 4.706e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "corneal abrasion symptoms",
+    "condition": "corneal abrasion"
+  },
+  "sentences": [
+    "A corneal abrasion is a superficial injury to the cornea, the clear layer on the front of the eye",
+    "It can be caused by a variety of factors, including trauma, foreign bodies, or chemical exposure",
+    "In most cases, a corneal abrasion does not typically cause discharge from the eye",
+    "However, some individuals may experience a mild amount of tearing or discharge due to the irritation of the cornea",
+    "This discharge is usually clear or watery in nature and may be accompanied by a foreign body sensation or grittiness in the eye",
+    "The presence of discharge in a corneal abrasion can be influenced by several factors, including the severity of the injury, the presence of a foreign body, and the individual's overall eye health",
+    "If the discharge is excessive, yellow or green in color, or accompanied by other symptoms such as pain, redness, or vision changes, it may indicate a more serious underlying condition that requires medical attention",
+    "It is essential to note that a corneal abrasion can increase the risk of infection, particularly if not properly treated",
+    "If you suspect a corneal abrasion, it is recommended to seek medical attention from an eye care professional for proper evaluation and treatment"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A corneal abrasion is a superficial injury to the cornea.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "A corneal abrasion can be caused by a variety of factors.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A corneal abrasion does not typically cause discharge from the eye.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Some individuals may experience a mild amount of tearing or discharge due to the irritation of the cornea.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The discharge in a corneal abrasion is usually clear or watery in nature.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The discharge in a corneal abrasion may be accompanied by a foreign body sensation or grittiness in the eye.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Excessive discharge in a corneal abrasion may indicate a more serious underlying condition.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Excessive discharge in a corneal abrasion is yellow or green in color.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Excessive discharge in a corneal abrasion may be accompanied by other symptoms such as pain or vision changes.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "A corneal abrasion can increase the risk of infection if not properly treated.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 11,
+      "text": "It is essential to seek medical attention from an eye care professional for a corneal abrasion.",
+      "source_sentences": [
+        8
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A corneal abrasion is a superficial injury to the cornea.",
+      "pattern": "D",
+      "notes": "Definition."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "A corneal abrasion can be caused by a variety of factors.",
+      "pattern": "D",
+      "notes": "Different cause; kept atomic."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "A corneal abrasion does not typically cause discharge from the eye, but some individuals may experience a mild amount of tearing or discharge due to the irritation of the cornea.",
+      "pattern": "C",
+      "notes": "Contrasting claim + supporting premise."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "The discharge in a corneal abrasion is usually clear or watery in nature and may be accompanied by a foreign body sensation or grittiness in the eye.",
+      "pattern": "A",
+      "notes": "Enumeration of discharge characteristics."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "Excessive discharge in a corneal abrasion may indicate a more serious underlying condition, and is typically yellow or green in color, and may be accompanied by other symptoms such as pain or vision changes.",
+      "pattern": "A",
+      "notes": "Enumeration of excessive discharge characteristics."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "A corneal abrasion can increase the risk of infection if not properly treated, and it is essential to seek medical attention from an eye care professional for a corneal abrasion.",
+      "pattern": "B",
+      "notes": "Causal chain."
+    }
+  ]
+}

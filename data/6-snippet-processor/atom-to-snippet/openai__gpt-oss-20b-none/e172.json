@@ -1,0 +1,146 @@
+{
+  "entry_id": 172,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Should I take a lower dose of my sertraline while taking the zofran?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2815,
+    "output_tokens": 3288,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1255,
+      "output_tokens": 2083,
+      "cached_input_tokens": 0,
+      "cost": 0.00032927
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1560,
+      "output_tokens": 1205,
+      "cached_input_tokens": 0,
+      "cost": 0.0002155
+    }
+  ],
+  "shared_context": {
+    "topic": "dose adjustment of sertraline while taking Zofran",
+    "drug_a": "sertraline",
+    "drug_b": "ondansetron (Zofran)",
+    "condition": "serotonin syndrome"
+  },
+  "sentences": [
+    "There is no direct interaction between sertraline and ondansetron (Zofran) that necessitates a dose adjustment of sertraline",
+    "However, both medications can increase the risk of a condition called serotonin syndrome, which is characterized by symptoms such as confusion, rapid heart rate, and high blood pressure",
+    "It is important to monitor for symptoms of serotonin syndrome when these medications are taken together",
+    "Consult your healthcare provider before making any changes to your medication regimen",
+    "They can provide personalized advice based on your medical history and current condition"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "No direct interaction between sertraline and ondansetron necessitates a dose adjustment of sertraline.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Both sertraline and ondansetron can increase the risk of serotonin syndrome.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Serotonin syndrome is characterized by confusion.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Serotonin syndrome is characterized by rapid heart rate.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Serotonin syndrome is characterized by high blood pressure.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "It is important to monitor for symptoms of serotonin syndrome when sertraline and ondansetron are taken together.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Consult your healthcare provider before making any changes to your medication regimen.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "They can provide personalized advice based on your medical history and current condition.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "There is no direct interaction between sertraline and ondansetron that requires a dose adjustment of sertraline.",
+      "pattern": "D",
+      "notes": "Standalone fact about interaction."
+    },
+    {
+      "source_claims": [
+        2,
+        6
+      ],
+      "output": "Both sertraline and ondansetron can increase the risk of serotonin syndrome, so it is important to monitor for its symptoms when they are taken together.",
+      "pattern": "C",
+      "notes": "Conclusion (monitoring) supported by the risk premise."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "Serotonin syndrome is characterized by confusion, rapid heart rate, and high blood pressure.",
+      "pattern": "A",
+      "notes": "Enumeration of symptoms of the same condition."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Consult your healthcare provider before making any changes to your medication regimen; they can give personalized advice based on your medical history and current condition.",
+      "pattern": "F",
+      "notes": "Advice of the same general topic grouped together."
+    }
+  ]
+}

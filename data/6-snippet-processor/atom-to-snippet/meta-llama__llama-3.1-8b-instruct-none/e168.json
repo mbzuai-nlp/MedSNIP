@@ -1,0 +1,212 @@
+{
+  "entry_id": 168,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is pepto peptobismol?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2853,
+    "output_tokens": 845,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1285,
+      "output_tokens": 410,
+      "cached_input_tokens": 0,
+      "cost": 4.21e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1568,
+      "output_tokens": 435,
+      "cached_input_tokens": 0,
+      "cost": 4.876e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "Pepto-Bismol vs peptaibols",
+    "drug_a": "Pepto-Bismol",
+    "condition": "digestive system ailments"
+  },
+  "sentences": [
+    "Pepto-Bismol and peptaibols are not the same, although their names sound somewhat similar",
+    "Pepto-Bismol is an over-the-counter medication commonly used to treat minor digestive system ailments like diarrhea, nausea, heartburn, indigestion, and upset stomach",
+    "It was originally sold as a remedy for infant diarrhea by Norwich Pharmaceutical Company under the name Bismosal and later changed to Pepto-Bismol in 1919",
+    "On the other hand, peptaibols are a class of biologically active peptides produced by certain fungi, particularly from the genus Trichoderma",
+    "These peptides contain unusual amino acids, including α-aminoisobutyric acid (Aib), and have antibiotic and antifungal properties",
+    "Peptaibols are part of a larger group of peptides known as peptaibiotics, which are known for their ability to form helical structures and disrupt cell membranes, leading to cell death"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Pepto-Bismol and peptaibols are not the same.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Pepto-Bismol is an over-the-counter medication.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Pepto-Bismol is used to treat minor digestive system ailments.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Pepto-Bismol was originally sold as a remedy for infant diarrhea.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Peptaibols are a class of biologically active peptides.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Peptaibols are produced by certain fungi, particularly from the genus Trichoderma.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Peptaibols contain unusual amino acids.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Peptaibols have antibiotic and antifungal properties.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Peptaibols are part of a larger group of peptides known as peptaibiotics.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Peptaibiotics are known for their ability to form helical structures.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Peptaibiotics disrupt cell membranes, leading to cell death.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Pepto-Bismol and peptaibols are not the same.",
+      "pattern": "C",
+      "notes": "Contrast + premise."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Pepto-Bismol is an over-the-counter medication.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Pepto-Bismol is used to treat minor digestive system ailments.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Pepto-Bismol was originally sold as a remedy for infant diarrhea.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Peptaibols are produced by certain fungi, particularly from the genus Trichoderma, and contain unusual amino acids.",
+      "pattern": "A",
+      "notes": "Enumeration of properties."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Peptaibols contain unusual amino acids.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Peptaibols have antibiotic and antifungal properties.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Peptaibols are part of a larger group of peptides known as peptaibiotics.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Peptaibiotics are known for their ability to form helical structures.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Peptaibiotics disrupt cell membranes, leading to cell death.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    }
+  ]
+}

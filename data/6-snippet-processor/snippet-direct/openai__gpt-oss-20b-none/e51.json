@@ -1,0 +1,108 @@
+{
+  "entry_id": 51,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is there a reason why my urine is clear",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1957,
+    "output_tokens": 2685,
+    "cached_input_tokens": 0,
+    "cost": 0.00043461
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1957,
+      "output_tokens": 2685,
+      "cached_input_tokens": 0,
+      "cost": 0.00043461
+    }
+  ],
+  "shared_context": {
+    "topic": "clear urine",
+    "symptom": "clear urine"
+  },
+  "sentences": [
+    "Clear urine is typically a sign of adequate hydration",
+    "When an individual consumes enough fluids, the concentration of solutes in the urine decreases, resulting in a dilute, clear appearance",
+    "In most cases, this is not a cause for concern and indicates that the body is well-hydrated",
+    "However, there are other possible explanations for consistently clear urine that may require further evaluation",
+    "Diabetes Insipidus: This condition causes the kidneys to excrete excessive amounts of water due to a deficiency in antidiuretic hormone (ADH) or a resistance to its effects",
+    "This leads to producing large quantities of dilute urine despite normal or low fluid intake",
+    "Diuretics: Use of diuretic medications increases the excretion of water and salts from the body, which can result in clear urine",
+    "Diuretics are often prescribed for conditions such as hypertension and edema",
+    "Diabetes Mellitus: Uncontrolled diabetes can lead to high blood glucose levels, which in turn can cause frequent urination and increased fluid intake, leading to clear urine",
+    "Kidney Conditions: Certain kidney disorders can impair the kidney’s ability to concentrate urine, leading to the production of clear urine",
+    "It is important to consider the context and frequency of clear urine",
+    "If it occurs occasionally and is associated with high fluid intake, it is typically not a concern",
+    "However, if clear urine is persistent and not related to fluid intake, or if it is accompanied by other symptoms, it may warrant a medical evaluation to rule out underlying conditions"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2
+      ],
+      "output": "Clear urine is typically a sign of adequate hydration. When an individual consumes enough fluids, the concentration of solutes in the urine decreases, resulting in a dilute, clear appearance. In most cases, this is not a concern and indicates that the body is well-hydrated.",
+      "pattern": "C",
+      "notes": "Conclusion about normal clear urine linked to hydration, requires preceding premises."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Diabetes insipidus causes the kidneys to excrete excessive amounts of water due to a deficiency in antidiuretic hormone or resistance to its effects, leading to the production of large quantities of dilute urine despite normal or low fluid intake.",
+      "pattern": "B",
+      "notes": "Causal chain linking ADH deficiency to clear urine."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Use of diuretic medications increases the excretion of water and salts from the body, resulting in clear urine; diuretics are often prescribed for hypertension and edema.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of diuretics (effect and typical indications)."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Uncontrolled diabetes mellitus increases blood glucose levels, leading to frequent urination and increased fluid intake, which can cause clear urine.",
+      "pattern": "D",
+      "notes": "Standalone fact describing diabetes mellitus as a cause."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Certain kidney disorders impair the kidney’s ability to concentrate urine, causing the production of clear urine.",
+      "pattern": "D",
+      "notes": "Standalone fact about kidney disorders."
+    },
+    {
+      "source_sentences": [
+        3,
+        10,
+        11,
+        12
+      ],
+      "output": "Other possible explanations for consistently clear urine may require further evaluation. If it occurs occasionally and is associated with high fluid intake, it is typically not a concern. However, if clear urine is persistent and not related to fluid intake, or if it is accompanied by other symptoms, it may warrant a medical evaluation to rule out underlying conditions.",
+      "pattern": "B",
+      "notes": "Conditional reasoning and recommendation, merged to preserve logical flow."
+    }
+  ]
+}

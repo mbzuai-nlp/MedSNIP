@@ -1,0 +1,72 @@
+{
+  "entry_id": 202,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1727,
+    "output_tokens": 251,
+    "cached_input_tokens": 0,
+    "cost": 4.458e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1727,
+      "output_tokens": 251,
+      "cached_input_tokens": 0,
+      "cost": 4.458e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "poison ivy contagious between people",
+    "condition": "contact dermatitis"
+  },
+  "sentences": [
+    "Poison ivy itself is not contagious between people",
+    "The rash caused by poison ivy, known as contact dermatitis, results from an allergic reaction to urushiol, an oil found in the plant",
+    "Poison ivy itself is not contagious between people",
+    "The rash caused by poison ivy is known as contact dermatitis",
+    "The rash results from an allergic reaction to urushiol, an oil found in the plant",
+    "Urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        2
+      ],
+      "output": "Poison ivy itself is not contagious between people.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of poison ivy; one subject (contagious property)."
+    },
+    {
+      "source_sentences": [
+        1,
+        4
+      ],
+      "output": "The rash caused by poison ivy results from an allergic reaction to urushiol, an oil found in the plant.",
+      "pattern": "C",
+      "notes": "Conclusion (rash cause) + supporting premises (urushiol reaction); merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces.",
+      "pattern": "D",
+      "notes": "Standalone fact about urushiol transfer; no surrounding text needed."
+    }
+  ]
+}

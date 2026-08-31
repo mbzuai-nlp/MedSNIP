@@ -1,0 +1,151 @@
+{
+  "entry_id": 144,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 32-year-old man presents to the emergency department for evaluation of headache. His symptoms started last night and have persisted. He occasionally has migraine headaches, but he has not had a headache like this in the past. He reports associated nausea, vomiting, fevers, and neck pain. He has a medical history of asthma. His temperature is 100.4°F (38.0°C), blood pressure is 110/60 mmHg, pulse is 95/min, respirations are 17/min, and oxygen saturation is 98% on room air. On physical exam, he appears uncomfortable. Neurologic exam reveals no focal deficits. There is pain with passive neck flexion. No edema or rashes are noted. Lungs are clear to auscultation bilaterally. Lumbar puncture is performed and CSF results are obtained as shown below. Cerebrospinal fluid (CSF): Cell count: 175/mm^3 RBCs: 0/mm^3 Cl-: 119 mEq/L Glucose: 49 mg/dL Pressure: 150 mmH2O Total protein: 55 mg/dL Based on these results, which of the following is the most appropriate treatment regimen for this patient? (A) Acyclovir (B) Amphotericin and 5-flucytosine (C) Ceftriaxone and vancomycin (D) Ceftriaxone, vancomycin and steroids (E) Supportive care and monitoring",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2846,
+    "output_tokens": 911,
+    "cached_input_tokens": 0,
+    "cost": 0.00057612
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2846,
+      "output_tokens": 911,
+      "cached_input_tokens": 0,
+      "cost": 0.00057612
+    }
+  ],
+  "shared_context": {
+    "age": "32",
+    "sex": "male",
+    "chief_complaint": "headache",
+    "medical_history": "asthma; occasional migraine headaches",
+    "vitals": "temperature 100.4°F (38.0°C), blood pressure 110/60 mmHg, pulse 95/min, respirations 17/min, oxygen saturation 98% on room air",
+    "exam_findings": "pain with passive neck flexion, no focal neurologic deficits, no edema or rashes, clear lungs",
+    "correct_answer": "Ceftriaxone and vancomycin (C)"
+  },
+  "sentences": [
+    "To determine the most appropriate treatment for the patient based on his clinical presentation and cerebrospinal fluid (CSF) analysis, we need to systematically analyze the given information",
+    "The patient is a 32-year-old man with a headache, nausea, vomiting, fevers, and neck pain starting last night",
+    "His symptoms are atypical for his known migraine headaches",
+    "He has a fever of 100.4°F (38.0°C), indicative of an infectious process",
+    "He reports neck pain and has pain with passive neck flexion, suggesting possible meningitis",
+    "The patient is uncomfortable, which is consistent with the severity of symptoms",
+    "The neurologic exam reveals no focal deficits, ruling out significant intracranial pathology like a stroke",
+    "No edema or rashes, making some infectious processes like certain viral infections less likely",
+    "Clear lungs, ruling out concurrent respiratory infection",
+    "WBC count: 175/mm^3 (elevated, indicating inflammation or infection)",
+    "RBC count: 0/mm^3 (no bleeding or traumatic lumbar puncture)",
+    "Chloride: 119 mEq/L (within normal limits)",
+    "Glucose: 49 mg/dL (slightly lower than normal, can be seen in bacterial meningitis)",
+    "Pressure: 150 mmH2O (elevated, suggesting increased intracranial pressure)",
+    "Total protein: 55 mg/dL (elevated, consistent with infection/inflammation)",
+    "Interpretation of CSF Results",
+    "Elevated WBC count and protein, along with slightly decreased glucose and elevated opening pressure, point towards bacterial meningitis",
+    "Viral meningitis typically shows a lower WBC count and normal glucose levels",
+    "Fungal meningitis would typically present with a more chronic picture and different patient demographics",
+    "Step 4: Determine the Most Appropriate Treatment Regimen",
+    "Since the CSF findings are most consistent with bacterial meningitis, the appropriate treatment should be empiric antibiotics that cover common bacterial pathogens",
+    "(C) Ceftriaxone and vancomycin: This combination covers a broad range of bacteria, including Streptococcus pneumoniae and Neisseria meningitidis",
+    "Steroids may be added to reduce inflammation and prevent complications in some cases, but the primary need here is to cover bacterial organisms",
+    "The most appropriate treatment regimen based on the patient's clinical presentation and CSF findings is",
+    "(C) Ceftriaxone and vancomycin"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate treatment for this 32-year-old male patient with headache, nausea, vomiting, fevers, and neck pain, we need to analyze his clinical presentation and cerebrospinal fluid (CSF) analysis.",
+      "pattern": "D",
+      "notes": "Introduction to the case, setting up the need for analysis."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "The patient presents with headache, nausea, vomiting, fevers, and neck pain, which are atypical for his known migraine headaches, and has a fever of 100.4°F (38.0°C), indicative of an infectious process; he reports neck pain and has pain with passive neck flexion, suggesting possible meningitis, and appears uncomfortable.",
+      "pattern": "A",
+      "notes": " Enumeration of the patient's symptoms and presentation."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        8
+      ],
+      "output": "The neurologic exam reveals no focal deficits, ruling out significant intracranial pathology like a stroke, and there are no edema or rashes, making some infectious processes less likely, with clear lungs also noted.",
+      "pattern": "A",
+      "notes": "Properties of the physical and neurologic examination."
+    },
+    {
+      "source_sentences": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "output": "The CSF analysis shows an elevated WBC count of 175/mm^3, no RBCs, normal chloride levels, slightly decreased glucose at 49 mg/dL, and elevated pressure at 150 mmH2O, with an elevated total protein of 55 mg/dL, indicating inflammation or infection.",
+      "pattern": "A",
+      "notes": "Enumeration of CSF analysis results."
+    },
+    {
+      "source_sentences": [
+        15,
+        16
+      ],
+      "output": "The elevated WBC count and protein, along with slightly decreased glucose and elevated opening pressure, point towards bacterial meningitis, as these findings are consistent with this diagnosis.",
+      "pattern": "B",
+      "notes": "Causal link between CSF findings and diagnosis of bacterial meningitis."
+    },
+    {
+      "source_sentences": [
+        17,
+        18
+      ],
+      "output": "Viral meningitis typically shows a lower WBC count and normal glucose levels, and fungal meningitis would present with a more chronic picture and different patient demographics, distinguishing these from the patient's presentation.",
+      "pattern": "A",
+      "notes": "Properties of other types of meningitis to differentiate them from bacterial meningitis."
+    },
+    {
+      "source_sentences": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "output": "Given the CSF findings consistent with bacterial meningitis, the appropriate treatment should be empiric antibiotics covering common bacterial pathogens, such as Ceftriaxone and vancomycin, which cover a broad range of bacteria, including Streptococcus pneumoniae and Neisseria meningitidis.",
+      "pattern": "C",
+      "notes": "Conclusion and reasoning for the chosen treatment regimen based on the diagnosis."
+    },
+    {
+      "source_sentences": [
+        23,
+        24
+      ],
+      "output": "The most appropriate treatment regimen for this patient, based on his clinical presentation and CSF findings, is Ceftriaxone and vancomycin.",
+      "pattern": "D",
+      "notes": "Final conclusion and treatment recommendation."
+    }
+  ]
+}

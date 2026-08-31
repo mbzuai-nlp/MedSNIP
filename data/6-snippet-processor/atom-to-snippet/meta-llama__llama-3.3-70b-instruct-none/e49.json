@@ -1,0 +1,238 @@
+{
+  "entry_id": 49,
+  "batch_id": 5,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is there a reason why my urine is clear",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2968,
+    "output_tokens": 1011,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1353,
+      "output_tokens": 521,
+      "cached_input_tokens": 0,
+      "cost": 0.00030202
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1615,
+      "output_tokens": 490,
+      "cached_input_tokens": 0,
+      "cost": 0.0003183
+    }
+  ],
+  "shared_context": {
+    "topic": "clear urine",
+    "symptom": "clear urine"
+  },
+  "sentences": [
+    "Clear urine can be a normal finding, but it can also be a sign of various conditions",
+    "The color of urine is influenced by the concentration of waste products, such as urea, creatinine, and bilirubin, as well as the presence of certain substances like glucose, ketones, and myoglobin",
+    "In a well-hydrated individual, urine is typically pale yellow or clear due to the high water content",
+    "However, if the urine is consistently clear, it may indicate that the kidneys are not concentrating the urine properly, which can be a sign of kidney disease or diabetes insipidus",
+    "On the other hand, clear urine can also be a sign of a low concentration of waste products, which can be seen in individuals with a low-protein diet or those who are taking certain medications, such as diuretics",
+    "Additionally, certain medical conditions, such as liver disease or a urinary tract infection, can also cause clear urine",
+    "It is essential to note that clear urine can also be a normal finding in individuals who are taking certain medications, such as certain antibiotics or antihistamines",
+    "However, if you are concerned about the color of your urine, it is always best to consult with a healthcare professional for a proper evaluation and diagnosis"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Clear urine can be a normal finding.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Clear urine can be a sign of various conditions.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The color of urine is influenced by the concentration of waste products, such as urea, creatinine, and bilirubin.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The color of urine is influenced by the presence of certain substances like glucose, ketones, and myoglobin.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "In a well-hydrated individual, urine is typically pale yellow or clear due to the high water content.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Consistently clear urine may indicate that the kidneys are not concentrating the urine properly.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Kidney disease can cause clear urine.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Diabetes insipidus can cause clear urine.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Clear urine can be a sign of a low concentration of waste products.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "A low-protein diet can cause clear urine.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Taking diuretics can cause clear urine.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Liver disease can cause clear urine.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 13,
+      "text": "A urinary tract infection can cause clear urine.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Certain medications, such as certain antibiotics or antihistamines, can cause clear urine.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 15,
+      "text": "If concerned about the color of urine, it is best to consult with a healthcare professional for a proper evaluation and diagnosis.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Clear urine can be a normal finding.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Clear urine can be a sign of various conditions.",
+      "pattern": "D",
+      "notes": "Standalone fact, different implication."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "The color of urine is influenced by the concentration of waste products, such as urea, creatinine, and bilirubin, as well as the presence of certain substances like glucose, ketones, and myoglobin.",
+      "pattern": "A",
+      "notes": "Enumeration of factors influencing urine color."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "In a well-hydrated individual, urine is typically pale yellow or clear due to the high water content.",
+      "pattern": "D",
+      "notes": "Standalone explanation for normal urine color."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Consistently clear urine may indicate that the kidneys are not concentrating the urine properly.",
+      "pattern": "D",
+      "notes": "Specific condition related to kidney function."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        12,
+        13
+      ],
+      "output": "Clear urine can be associated with kidney disease, diabetes insipidus, liver disease, or a urinary tract infection.",
+      "pattern": "A",
+      "notes": "Enumeration of potential underlying conditions."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Clear urine can be a sign of a low concentration of waste products.",
+      "pattern": "D",
+      "notes": "Alternative explanation, less condition-specific."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        14
+      ],
+      "output": "Clear urine can also be caused by a low-protein diet, taking diuretics, or certain medications like antibiotics or antihistamines.",
+      "pattern": "A",
+      "notes": "Enumeration of lifestyle and medication factors."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "If concerned about the color of urine, it is best to consult with a healthcare professional for a proper evaluation and diagnosis.",
+      "pattern": "D",
+      "notes": "Standalone advice for concerned individuals."
+    }
+  ]
+}

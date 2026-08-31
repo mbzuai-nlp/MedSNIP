@@ -1,0 +1,192 @@
+{
+  "entry_id": 188,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 43-year-old man presents to the emergency department with bright red blood in his stool this morning. He noticed this yesterday as well, but it was much scanter. The patient is otherwise healthy. He was celebrating his birthday last night and admits having \"too much to drink\" and vomited profusely overnight. He currently feels well and is not nauseous. He has no other significant medical history and does not take any medications. His temperature is 99.2°F (37.3°C), blood pressure is 110/75 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 100% on room air. Physical exam reveals a nontender abdomen with normal bowel sounds. Rectal exam reveals grossly bloody stool. Laboratory studies are ordered as shown below.\n\nHemoglobin: 12 g/dL\nHematocrit: 36%\nLeukocyte count: 5,500/mm^3 with normal differential\nPlatelet count: 179,000/mm^3\n\nWhich of the following is the most likely cause of this patient's symptoms? (A) Erosion into a gastric vessel (B) Inflammation and infection of colonic outpouching (C) Malignancy (D) Submucosal esophageal tear (E) Vascular malformation",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2738,
+    "output_tokens": 1233,
+    "cached_input_tokens": 0,
+    "cost": 0.00010408
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2738,
+      "output_tokens": 1233,
+      "cached_input_tokens": 0,
+      "cost": 0.00010408
+    }
+  ],
+  "shared_context": {
+    "age": "43",
+    "sex": "male",
+    "chief_complaint": "bright red blood in his stool for two days",
+    "medical_history": "no other significant medical history",
+    "vitals": "temperature 99.2°F (37.3°C), blood pressure 110/75 mmHg, pulse 82/min, respirations 16/min, oxygen saturation 100% on room air",
+    "exam_findings": "nontender abdomen with normal bowel sounds, grossly bloody stool on rectal exam",
+    "correct_answer": "D"
+  },
+  "sentences": [
+    "To approach this patient's symptoms, let's break down the key findings",
+    "Chief Complaint and History: The patient is a 43-year-old man who presents with bright red blood in his stool for two days, which started with a large volume the night before",
+    "He has no other significant medical history, does not take any medications, and has no symptoms of nausea or abdominal pain",
+    "His vital signs are within normal limits, indicating no acute distress or instability",
+    "His abdomen is nontender with normal bowel sounds, which reduces the likelihood of an intra-abdominal source of bleeding",
+    "The rectal exam reveals grossly bloody stool",
+    "Hemoglobin and hematocrit levels are within normal limits, suggesting that there is no significant acute blood loss",
+    "Leukocyte count and differential are normal, which does not indicate an acute infection",
+    "Platelet count is normal, which reduces the likelihood of a bleeding disorder",
+    "Based on these findings, the most likely cause of this patient's symptoms is a submucosal esophageal tear (Mallory-Weiss syndrome)",
+    "This condition typically presents with hematemesis or hematochezia, often after a period of intense or prolonged vomiting, which aligns with the patient's history of vomiting overnight",
+    "It is more common in individuals who consume a large amount of alcohol in a short period, such as on a special occasion like a birthday celebration",
+    "This condition is less likely to cause significant hemodynamic instability or anemia due to its upper GI origin and the patient's normal laboratory values",
+    "Erosion into a gastric vessel is more likely to present with hematemesis rather than hematochezia",
+    "Inflammation and infection of colonic outpouching (diverticulitis) typically presents with abdominal pain, fever, and leukocytosis, which is not present in this case",
+    "Malignancy would likely have a more gradual onset and additional signs and symptoms, such as weight loss or abdominal pain, which are not mentioned",
+    "Vascular malformation could be a possible cause but would likely have been diagnosed earlier in life and would not be the first suspicion given the patient's age and symptoms"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To approach this patient's symptoms, let's break down the key findings.",
+      "pattern": "D",
+      "notes": "Standalone introductory sentence; no additional context."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "A 43-year-old man presents with bright red blood in his stool for two days, which started with a large volume the night before.",
+      "pattern": "D",
+      "notes": "Standalone chief complaint with patient details inlined."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "He has no other significant medical history, does not take any medications, and has no symptoms of nausea or abdominal pain. His vital signs are within normal limits, indicating no acute distress or instability.",
+      "pattern": "A",
+      "notes": "Multiple properties of one subject (patient's history and vital signs)."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "His abdomen is nontender with normal bowel sounds, which reduces the likelihood of an intra-abdominal source of bleeding.",
+      "pattern": "D",
+      "notes": "Standalone clinical finding with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "The rectal exam reveals grossly bloody stool.",
+      "pattern": "D",
+      "notes": "Standalone exam finding with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Hemoglobin and hematocrit levels are within normal limits, suggesting that there is no significant acute blood loss.",
+      "pattern": "D",
+      "notes": "Standalone laboratory finding with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Leukocyte count and differential are normal, which does not indicate an acute infection.",
+      "pattern": "D",
+      "notes": "Standalone laboratory finding with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Platelet count is normal, which reduces the likelihood of a bleeding disorder.",
+      "pattern": "D",
+      "notes": "Standalone laboratory finding with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Based on these findings, the most likely cause of this patient's symptoms is a submucosal esophageal tear (Mallory-Weiss syndrome).",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises inlined."
+    },
+    {
+      "source_sentences": [
+        10,
+        11
+      ],
+      "output": "This condition typically presents with hematemesis or hematochezia, often after a period of intense or prolonged vomiting, which aligns with the patient's history of vomiting overnight. It is more common in individuals who consume a large amount of alcohol in a short period, such as on a special occasion like a birthday celebration.",
+      "pattern": "A",
+      "notes": "Multiple properties of one subject (Mallory-Weiss syndrome)."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "This condition is less likely to cause significant hemodynamic instability or anemia due to its upper GI origin and the patient's normal laboratory values.",
+      "pattern": "D",
+      "notes": "Standalone differential characteristic with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Erosion into a gastric vessel is more likely to present with hematemesis rather than hematochezia.",
+      "pattern": "D",
+      "notes": "Standalone differential consideration with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Inflammation and infection of colonic outpouching (diverticulitis) typically presents with abdominal pain, fever, and leukocytosis, which is not present in this case.",
+      "pattern": "D",
+      "notes": "Standalone differential consideration with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "Malignancy would likely have a more gradual onset and additional signs and symptoms, such as weight loss or abdominal pain, which are not mentioned.",
+      "pattern": "D",
+      "notes": "Standalone differential consideration with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "Vascular malformation could be a possible cause but would likely have been diagnosed earlier in life and would not be the first suspicion given the patient's age and symptoms.",
+      "pattern": "D",
+      "notes": "Standalone differential consideration with patient context inlined."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "In this case, the most likely cause of this patient's symptoms is a submucosal esophageal tear (Mallory-Weiss syndrome).",
+      "pattern": "C",
+      "notes": "Conclusion with patient context inlined."
+    }
+  ]
+}

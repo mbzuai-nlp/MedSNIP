@@ -1,0 +1,194 @@
+{
+  "entry_id": 262,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 37-year-old woman presents to the emergency department in cardiac arrest. She was found to have altered mental status at home, and during transport to the hospital, she became pulseless. Cardiopulmonary resuscitation is ongoing and 2 intravenous lines are placed. The patient is obese, and her only medication is an oral contraceptive pill. She recently underwent Achilles tendon repair. She otherwise is known to smoke cigarettes on occasion. Physical exam is notable for a critically ill patient with chest compressions ongoing. The monitor shows pulseless electrical activity. Her right lower extremity is in a post-operative splint. The patient regains her pulse after several rounds of CPR and epinephrine. A bedside echocardiograph is notable for a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle. Which of the following is the most likely diagnosis? (A) Cardiogenic shock (B) Hemorrhagic shock (C) Neurogenic shock (D) Obstructive shock (E) Septic shock",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 4341,
+    "output_tokens": 1128,
+    "cached_input_tokens": 1920
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1770,
+      "output_tokens": 620,
+      "cached_input_tokens": 0,
+      "cost": 0.010625
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2571,
+      "output_tokens": 508,
+      "cached_input_tokens": 1920,
+      "cost": 0.0091075
+    }
+  ],
+  "shared_context": {
+    "age": 37,
+    "sex": "female",
+    "chief_complaint": "cardiac arrest",
+    "medical_history": "recent Achilles tendon repair, occasional smoking",
+    "medications": "oral contraceptive pill",
+    "exam_findings": "pulseless electrical activity, dilated and hypokinetic right ventricle, septal bowing, hyperkinetic left ventricle",
+    "treatment_history": "CPR, epinephrine",
+    "correct_answer": "Cardiogenic shock"
+  },
+  "sentences": [
+    "To approach this question, we need to analyze the patient's presentation and the information provided",
+    "The patient is found to be in cardiac arrest, with altered mental status and pulseless electrical activity (PEA), which is a sign of cardiogenic shock",
+    "The presence of a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle on echocardiography further supports this diagnosis",
+    "Cardiogenic shock is characterized by inadequate cardiac output and tissue perfusion due to a primary cardiac problem, such as a myocardial infarction or heart failure",
+    "The patient's presentation of cardiac arrest, altered mental status, and PEA in the context of recent surgery (Achilles tendon repair) and smoking history increases the likelihood of cardiac-related complications",
+    "Hemorrhagic shock, neurogenic shock, and obstructive shock can be ruled out based on the information provided",
+    "Hemorrhagic shock typically presents with signs of blood loss, such as tachycardia and hypotension, which are not mentioned",
+    "Neurogenic shock typically occurs in the setting of a spinal cord injury or neurological insult, which is not described here",
+    "Obstructive shock is caused by mechanical obstruction of blood flow, such as pulmonary embolism or cardiac tamponade, which is not indicated by the patient's presentation",
+    "The patient's presentation and the echocardiography findings make cardiogenic shock the most likely diagnosis",
+    "Answer: A"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "To approach this question, we need to analyze the patient's presentation and the information provided.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient is found to be in cardiac arrest, with altered mental status and pulseless electrical activity (PEA), which is a sign of cardiogenic shock.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The presence of a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle on echocardiography further supports this diagnosis.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Cardiogenic shock is characterized by inadequate cardiac output and tissue perfusion due to a primary cardiac problem, such as a myocardial infarction or heart failure.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's presentation of cardiac arrest, altered mental status, and PEA in the context of recent surgery and smoking history increases the likelihood of cardiac-related complications.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Hemorrhagic shock, neurogenic shock, and obstructive shock can be ruled out based on the information provided.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Hemorrhagic shock typically presents with signs of blood loss, such as tachycardia and hypotension, which are not mentioned.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Neurogenic shock typically occurs in the setting of a spinal cord injury or neurological insult, which is not described here.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Obstructive shock is caused by mechanical obstruction of blood flow, such as pulmonary embolism or cardiac tamponade, which is not indicated by the patient's presentation.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The patient's presentation and the echocardiography findings make cardiogenic shock the most likely diagnosis.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Answer: A.",
+      "source_sentences": [
+        10
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "To approach the diagnosis for this 37-year-old female presenting with cardiac arrest, altered mental status, and undergoing CPR with pulseless electrical activity, we need to analyze the provided information.",
+      "pattern": "D",
+      "notes": "Introductory analysis statement, standalone."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        10
+      ],
+      "output": "This 37-year-old female in cardiac arrest with altered mental status, pulseless electrical activity, and echocardiography showing a dilated and hypokinetic right ventricle with septal bowing into a hyperkinetic left ventricle supports the diagnosis of cardiogenic shock as the most likely cause.",
+      "pattern": "C",
+      "notes": "Conclusion and support integrated together."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Cardiogenic shock is characterized by inadequate cardiac output and tissue perfusion due to a primary cardiac problem, such as a myocardial infarction or heart failure.",
+      "pattern": "D",
+      "notes": "Self-contained definition of cardiogenic shock."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The 37-year-old woman's presentation of cardiac arrest, altered mental status, and pulseless electrical activity, along with her recent surgery and smoking history, increases the likelihood of cardiac-related complications.",
+      "pattern": "B",
+      "notes": "Causal links between history, symptoms, and potential complications."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "Hemorrhagic shock, neurogenic shock, and obstructive shock can be ruled out based on the information: hemorrhagic shock typically involves tachycardia and hypotension not seen here; neurogenic shock is linked to spinal cord injuries not mentioned; obstructive shock involves mechanical obstructions like pulmonary embolism not indicated in this case.",
+      "pattern": "A",
+      "notes": "One-subject enumeration with differentials being ruled out."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Answer: A. Cardiogenic shock.",
+      "pattern": "C",
+      "notes": "Final answer recap with the correct option highlighted."
+    }
+  ]
+}

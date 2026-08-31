@@ -3,10 +3,10 @@
 Runs 200 fresh LLM calls per critical cell (gpt-5.4-high × {snippet, atom} ×
 {full-context, claim-only} on MedSNIP-Bench dev), captures `usage` and per-call
 `wall_seconds`. Compares the measured aggregate cost to our tiktoken estimate
-in results.md, plus reports actual wall time (which we don't have for baselines
+in `data/8-verifier/metrics.json`, plus reports actual wall time (which we don't have for baselines
 otherwise).
 
-Output: data/!-analysis/baseline_cost_validation.json + .md summary.
+Output: data/!-analysis/baseline_cost_validation.json
 
 Usage:
     python -m src.analysis.validate_baseline_cost
@@ -28,7 +28,6 @@ load_dotenv(ROOT / ".env")
 
 OUT_DIR = ROOT / "data" / "!-analysis"
 OUT_JSON = OUT_DIR / "baseline_cost_validation.json"
-OUT_MD = OUT_DIR / "baseline_cost_validation.md"
 PER_CALL_DIR = OUT_DIR / "baseline_cost_per_call"  # one file per cell
 
 CLAIM_ONLY_PROMPT = (
@@ -235,27 +234,6 @@ def main():
 
     OUT_JSON.write_text(json.dumps(all_results, indent=2))
     print(f"\nwrote {OUT_JSON}")
-
-    # Write markdown
-    md = ["# Baseline cost + wall-time validation\n",
-          f"Sampled {args.n_per_cell} fresh calls per cell on MedSNIP-Bench dev. "
-          "Measured tokens + wall time, then extrapolated to the full dev sweep "
-          "and compared against the tiktoken-estimated costs in [data/8-verifier/results.md](../8-verifier/results.md).\n\n"]
-    md.append(f"| cell | n | tokens in (cached) | tokens out | ¢/call (measured) | "
-              "full dev $ (measured-extrap) | full dev $ (tiktoken-est) | wall p95 (s) |\n")
-    md.append("|---|---:|---:|---:|---:|---:|---:|---:|\n")
-    for cell, r in all_results.items():
-        grain = r["grain"]; n_full = full_dev_counts[grain]
-        per_call = r["per_call_cost_mean"]
-        extrap = per_call * n_full
-        est = tiktoken_estimates.get(cell, 0)
-        md.append(f"| `{cell}` | {r['n_calls']} | "
-                  f"{r['tokens']['input']:,} ({r['tokens']['cached']:,}) | "
-                  f"{r['tokens']['output']:,} | "
-                  f"{per_call*100:.2f}¢ | ${extrap:.2f} | ${est:.2f} | "
-                  f"{r['per_call_wall']['p95']} |\n")
-    OUT_MD.write_text("".join(md))
-    print(f"wrote {OUT_MD}")
 
 
 if __name__ == "__main__":

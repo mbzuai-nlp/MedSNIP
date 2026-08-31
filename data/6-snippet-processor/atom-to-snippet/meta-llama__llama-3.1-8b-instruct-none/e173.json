@@ -1,0 +1,218 @@
+{
+  "entry_id": 173,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Would you recommend something a bit stronger than meloxicam?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2993,
+    "output_tokens": 944,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1350,
+      "output_tokens": 513,
+      "cached_input_tokens": 0,
+      "cost": 4.752e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1643,
+      "output_tokens": 431,
+      "cached_input_tokens": 0,
+      "cost": 5.01e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "recommendation for stronger medication than meloxicam",
+    "drug_a": "meloxicam",
+    "condition": "pain management"
+  },
+  "sentences": [
+    "When considering a stronger medication than meloxicam for pain management, it is important to evaluate the patient's specific condition, pain severity, and any underlying health issues",
+    "Meloxicam is a nonsteroidal anti-inflammatory drug (NSAID) commonly used for its anti-inflammatory and analgesic properties",
+    "If meloxicam is insufficient, several options can be considered",
+    "Stronger NSAIDs: Medications such as diclofenac or indomethacin may be more potent than meloxicam",
+    "Opioids: For severe pain, opioids like tramadol or oxycodone may be prescribed",
+    "These medications are generally reserved for more intense pain due to their potential for dependence and side effects",
+    "Combination Therapy: Combining NSAIDs with acetaminophen can enhance pain relief without significantly increasing side effects",
+    "Adjuvant Medications: Depending on the type of pain, adjuvant medications such as gabapentin or pregabalin may be useful, particularly for neuropathic pain",
+    "It is crucial to consider the patient's overall health, potential drug interactions, and the risk of side effects when prescribing stronger medications",
+    "Always consult with a healthcare provider to tailor the treatment plan to the individual patient's needs"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's specific condition should be evaluated when considering a stronger medication than meloxicam.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's pain severity should be evaluated when considering a stronger medication than meloxicam.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's underlying health issues should be evaluated when considering a stronger medication than meloxicam.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Meloxicam is a nonsteroidal anti-inflammatory drug (NSAID) commonly used for its anti-inflammatory and analgesic properties.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Several options can be considered if meloxicam is insufficient.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Diclofenac or indomethacin may be more potent than meloxicam.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Tramadol or oxycodone may be prescribed for severe pain.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "These medications are generally reserved for more intense pain due to their potential for dependence and side effects.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Combining NSAIDs with acetaminophen can enhance pain relief without significantly increasing side effects.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Gabapentin or pregabalin may be useful for neuropathic pain.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 11,
+      "text": "It is crucial to consider the patient's overall health when prescribing stronger medications.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The risk of side effects should be considered when prescribing stronger medications.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Always consult with a healthcare provider to tailor the treatment plan to the individual patient's needs.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The patient's specific condition should be evaluated when considering a stronger medication than meloxicam.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "The patient's pain severity and underlying health issues should be evaluated when considering a stronger medication than meloxicam.",
+      "pattern": "A",
+      "notes": "Enumeration of factors to consider."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Meloxicam is a nonsteroidal anti-inflammatory drug (NSAID) commonly used for its anti-inflammatory and analgesic properties.",
+      "pattern": "D",
+      "notes": "Standalone composition."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "Options such as diclofenac, indomethacin, tramadol, or oxycodone may be considered for more intense pain, but they are generally reserved due to their potential for dependence and side effects.",
+      "pattern": "A",
+      "notes": "Enumeration of options."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Combining NSAIDs with acetaminophen can enhance pain relief without significantly increasing side effects.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Gabapentin or pregabalin may be useful for neuropathic pain.",
+      "pattern": "D",
+      "notes": "Standalone composition."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "The risk of side effects and the patient's overall health should be considered when prescribing stronger medications.",
+      "pattern": "A",
+      "notes": "Enumeration of considerations."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Always consult with a healthcare provider to tailor the treatment plan to the individual patient's needs.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    }
+  ]
+}

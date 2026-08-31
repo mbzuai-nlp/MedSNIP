@@ -1,0 +1,114 @@
+{
+  "entry_id": 110,
+  "batch_id": 11,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 51-year-old man presents for his annual wellness visit with his primary care physician. His wife has noticed a tremor while he is working on his car and knows that his father died of Parkinson disease. He says that the tremor is nothing to worry about and only occurs during a few activities such as pouring drinks, pointing the remote at the television, or fixing his car. The patient states his wife is just overreacting. His medical problems include hypertension, diabetes, and hyperlipidemia for which he takes lisinopril, metformin, and atorvastatin. He has 3-5 drinks of scotch per night before working on his car. On physical exam, the tremor is replicated during finger to nose testing. Romberg sign is negative. Cranial nerves II-XII are intact. The rest of the exam is benign. Which of the following is the most appropriate treatment for this patient's tremor? (A) Alcoholics anonymous (B) Aripiprazole (C) Carbidopa (D) Phenobarbital (E) Propranolol",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2601,
+    "output_tokens": 2873,
+    "cached_input_tokens": 0,
+    "cost": 0.00048025
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2601,
+      "output_tokens": 2873,
+      "cached_input_tokens": 0,
+      "cost": 0.00048025
+    }
+  ],
+  "shared_context": {
+    "age": "51",
+    "sex": "male",
+    "chief_complaint": "tremor occurring during specific activities such as pouring drinks, pointing the remote, or fixing his car",
+    "medical_history": "hypertension, diabetes, hyperlipidemia",
+    "medications": "lisinopril, metformin, atorvastatin",
+    "alcohol_use": "3–5 scotch drinks per night before working on his car",
+    "family_history": "father died of Parkinson disease",
+    "correct_answer": "Alcoholics Anonymous participation and counseling"
+  },
+  "sentences": [
+    "To determine the most appropriate treatment for this patient's tremor, we must first identify the cause of the tremor",
+    "Based on the provided information, the patient's tremor occurs during specific activities such as pouring drinks, pointing the remote at the television, or fixing his car",
+    "The patient also consumes 3-5 drinks of scotch per night before working on his car",
+    "These factors suggest that the tremor is likely due to alcohol-induced hand tremors, a condition known as alcoholic tremors or alcohol-induced parkinsonism",
+    "Considering the patient's medical problems, including hypertension, diabetes, and hyperlipidemia, and his medication regimen (lisinopril, metformin, and atorvastatin), the most appropriate treatment for this patient's tremor would be to reduce or stop alcohol consumption",
+    "Therefore, the most appropriate treatment for this patient's tremor is Alcoholics Anonymous (AA) participation and counseling to address his alcohol use disorder",
+    "The other options are not suitable for this patient",
+    "Aripiprazole is an antipsychotic medication primarily used to treat schizophrenia and bipolar disorder, not alcohol-induced tremors",
+    "Carbidopa is used in the treatment of Parkinson's disease, not alcohol-induced tremors",
+    "Phenobarbital is a barbiturate used to treat seizures and insomnia, not alcohol-induced tremors",
+    "Propranolol is a beta-blocker used to treat high blood pressure and other cardiovascular conditions, not alcohol-induced tremors",
+    "The patient's tremor is likely exacerbated by his alcohol consumption, and addressing this underlying cause is crucial in managing his symptoms",
+    "Referral to AA and counseling would be an essential part of his treatment plan"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate treatment for this 51-year-old man's tremor, we must first identify its cause.",
+      "pattern": "D",
+      "notes": "Standalone procedural statement, no additional context required."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "The tremor in this 51-year-old man occurs during specific activities such as pouring drinks, pointing the remote at the television, or fixing his car, and is related to his consumption of 3‑5 drinks of scotch per night before working on his car.",
+      "pattern": "A",
+      "notes": "Enumeration of concurrent triggers (specific activities + alcohol intake) of the same tremor."
+    },
+    {
+      "source_sentences": [
+        3,
+        4,
+        5
+      ],
+      "output": "The tremor is likely due to alcohol-induced hand tremors (alcoholic tremors or alcohol-induced parkinsonism); therefore, the most appropriate treatment is to reduce or stop alcohol consumption, specifically Alcoholics Anonymous participation and counseling.",
+      "pattern": "B",
+      "notes": "Causal chain: cause → recommendation."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "The other options—Aripiprazole, Carbidopa, Phenobarbital, and Propranolol—are not suitable for this patient.",
+      "pattern": "A",
+      "notes": "Enumeration of alternative treatments that are inappropriate."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "The patient's tremor is likely exacerbated by his alcohol consumption, and addressing this underlying cause is crucial in managing his symptoms.",
+      "pattern": "D",
+      "notes": "Standalone factual assertion about causation."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Referral to Alcoholics Anonymous and counseling would be an essential part of his treatment plan.",
+      "pattern": "D",
+      "notes": "Standalone recommendation without preceding rationale."
+    }
+  ]
+}

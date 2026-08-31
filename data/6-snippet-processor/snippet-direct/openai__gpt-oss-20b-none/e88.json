@@ -1,0 +1,108 @@
+{
+  "entry_id": 88,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "My cat was just diagnosed with a tapeworm, could that be something I can get from him?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1947,
+    "output_tokens": 2608,
+    "cached_input_tokens": 0,
+    "cost": 0.00042353
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1947,
+      "output_tokens": 2608,
+      "cached_input_tokens": 0,
+      "cost": 0.00042353
+    }
+  ],
+  "shared_context": {
+    "topic": "tapeworm transmission from cat to human",
+    "animal": "cat",
+    "condition": "tapeworm"
+  },
+  "sentences": [
+    "Transmissible tapeworms to humans include Dipylidium caninum, which requires ingestion of the intermediate host, the dog or cat flea containing the larva (cysticercoids) of the agent",
+    "However, for your cat to be a source of transmission, it would require the presence of infected fleas",
+    "Cats infested with Dipylidium caninum may be asymptomatic, but the infection can be detected by the presence of the tapeworms on the flea",
+    "It is essential to note that humans are resistant to infection with Dipylidium caninum due to the high frequency of flea infestation on dogs and cats and the relative rarity of human disease",
+    "However, if your cat has a different species of tapeworm, it may be possible for transmission to occur",
+    "For example, humans can become an accidental host of Dirofilaria when bitten by an infected mosquito, but the microfilaria will not mature to the adult form in humans",
+    "It is crucial to consult with a veterinarian to determine the type of tapeworm infestation and ensure proper treatment for both you and your cat",
+    "Prevention of tapeworm transmission from pets to humans includes regular flea control measures, such as using flea preventatives and keeping the environment clean",
+    "Additionally, proper hand hygiene and avoiding contact with feces or contaminated soil can help prevent the transmission of other parasites, such as Toxocara"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Transmissible tapeworms to humans include Dipylidium caninum, which requires ingestion of the intermediate host, the dog or cat flea containing the larva (cysticercoids) of the agent.",
+      "pattern": "D",
+      "notes": "Standalone factual statement about Dipylidium caninum transmission."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "For your cat to be a source of transmission of Dipylidium caninum, it would require the presence of infected fleas.",
+      "pattern": "D",
+      "notes": "Conditional claim that can be verified independently."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Cats infested with Dipylidium caninum may be asymptomatic, but the infection can be detected by the presence of the tapeworms on the flea.",
+      "pattern": "D",
+      "notes": "Standalone detection fact."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Humans are resistant to infection with Dipylidium caninum due to the relative rarity of human disease, despite high frequency of flea infestation on dogs and cats.",
+      "pattern": "D",
+      "notes": "Standalone resistance fact."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "If your cat has a different species of tapeworm, it may be possible for transmission to occur; for example, humans can become an accidental host of Dirofilaria when bitten by an infected mosquito, but the microfilaria will not mature to the adult form in humans.",
+      "pattern": "B",
+      "notes": "Conditional premise followed by an example, forming a logical chain."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "It is crucial to consult with a veterinarian to determine the type of tapeworm infestation and ensure proper treatment for both you and your cat.",
+      "pattern": "D",
+      "notes": "Standalone medical recommendation."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "Prevention of tapeworm transmission from pets to humans includes regular flea control measures such as using flea preventatives and keeping the environment clean, and proper hand hygiene and avoiding contact with feces or contaminated soil help prevent the transmission of other parasites such as Toxocara.",
+      "pattern": "A",
+      "notes": "Enumeration of multiple prevention strategies for the same topic."
+    }
+  ]
+}

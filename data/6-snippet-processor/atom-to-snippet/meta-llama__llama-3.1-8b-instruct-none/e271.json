@@ -1,0 +1,153 @@
+{
+  "entry_id": 271,
+  "batch_id": 28,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old man presents to urgent care for weakness and weight loss. For the past several months, he has felt progressively weaker and has lost 25 pounds with intermittent abdominal pain. The patient has not seen a physician in 30 years and recalls being current on most of his vaccinations. A few years ago, he went to the emergency department due to abdominal pain and was found to have increased liver enzymes due to excessive alcohol use and incidental gallstones. The patient has a 50 pack-year smoking history. His temperature is 99.5°F (37.5°C), blood pressure is 161/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 95% on room air. Physical exam reveals an emaciated man. The patient has a negative Murphy sign and his abdomen is non-tender. Cardiopulmonary exam is within normal limits. Which of the following is the most appropriate next step in management? (A) CT scan of the abdomen and pelvis (B) CT scan of the chest (C) HIDA scan (D) Right upper quadrant ultrasound (E) Smoking cessation advice and primary care follow up",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4231,
+    "output_tokens": 656,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1765,
+      "output_tokens": 423,
+      "cached_input_tokens": 0,
+      "cost": 5.222e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2466,
+      "output_tokens": 233,
+      "cached_input_tokens": 0,
+      "cost": 5.864e-05
+    }
+  ],
+  "shared_context": {
+    "patient_age": 55,
+    "patient_sex": "male",
+    "chief_complaint": "weakness and weight loss",
+    "medical_history": "excessive alcohol use, gallstones, 50 pack-year smoking history",
+    "exam": "emaciated appearance, negative Murphy sign, non-tender abdomen",
+    "question_type": "most appropriate next step in management"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in management, let's break down the patient's presentation and history",
+    "The patient presents with progressive weakness and weight loss over several months, which could be indicative of a variety of conditions, including malignancy, chronic diseases, or nutritional deficiencies",
+    "His past history of excessive alcohol use and incidental gallstones suggests possible liver disease, which is a significant consideration given his current presentation",
+    "The patient's smoking history of 50 pack-years is a significant risk factor for several cancers, including lung, liver, and pancreatic cancer",
+    "The patient's emaciated appearance, weight loss, and weakness are concerning for a possible malignancy, particularly pancreatic cancer, given his abdominal pain and weight loss",
+    "Considering these points, the most appropriate next step in management would likely involve imaging to evaluate for a possible abdominal malignancy",
+    "A CT scan of the abdomen and pelvis is the most appropriate next step as it provides a comprehensive evaluation of the abdominal organs, including the pancreas, liver, and gallbladder, which are all relevant to the patient's history and symptoms",
+    "This would also allow for the assessment of potential liver or pancreatic malignancy, which is a significant concern given the patient's history and presentation",
+    "(A) CT scan of the abdomen and pelvis"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient presents with progressive weakness and weight loss over several months.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "His past history of excessive alcohol use and incidental gallstones suggests possible liver disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's smoking history of 50 pack-years is a significant risk factor for several cancers.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's emaciated appearance, weight loss, and weakness are concerning for a possible malignancy.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "A CT scan of the abdomen and pelvis is the most appropriate next step in management.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A CT scan of the abdomen and pelvis provides a comprehensive evaluation of the abdominal organs.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "A CT scan of the abdomen and pelvis allows for the assessment of potential liver or pancreatic malignancy.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "A CT scan of the abdomen and pelvis is the most appropriate next step.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Option (A) CT scan of the abdomen and pelvis is the most appropriate next step.",
+      "source_sentences": [
+        8
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "This 55-year-old man presents with progressive weakness and weight loss over several months, and his past history of excessive alcohol use and incidental gallstones suggests possible liver disease, while his 50 pack-year smoking history is a significant risk factor for several cancers.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The patient's emaciated appearance, weight loss, and weakness are concerning for a possible malignancy.",
+      "pattern": "D",
+      "notes": "Standalone concern."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "A CT scan of the abdomen and pelvis is the most appropriate next step in management as it provides a comprehensive evaluation of the abdominal organs, allows for the assessment of potential liver or pancreatic malignancy, and is the most appropriate next step.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises."
+    }
+  ]
+}

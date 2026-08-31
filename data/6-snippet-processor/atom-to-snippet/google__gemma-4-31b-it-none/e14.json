@@ -1,0 +1,232 @@
+{
+  "entry_id": 14,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "The yeast infection is not transferable?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3032,
+    "output_tokens": 951,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1367,
+      "output_tokens": 539,
+      "cached_input_tokens": 0,
+      "cost": 0.00038253
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1665,
+      "output_tokens": 412,
+      "cached_input_tokens": 0,
+      "cost": 0.00037301
+    }
+  ],
+  "shared_context": {
+    "topic": "transferability of yeast infections",
+    "condition": "yeast infection"
+  },
+  "sentences": [
+    "Yeast infections can be transferable, though the likelihood and mode of transmission may vary depending on the specific yeast species and context",
+    "Certain yeast infections, particularly those caused by *Candida* species, can be transmitted between individuals",
+    "For example, *Candida albicans* can be spread through direct contact, such as during sexual intercourse, leading to conditions like vaginal yeast infections",
+    "Nosocomial infections caused by yeasts, such as *Candida* and *Saccharomyces cerevisiae*, can occur in hospital settings, often associated with the use of medical devices like catheters",
+    "Immunocompromised individuals are more susceptible to acquiring and transmitting yeast infections due to their weakened immune systems",
+    "Yeast infections can occur in various parts of the body, including the mouth, throat, and genital areas",
+    "Maintaining good hygiene can reduce the risk of yeast infection transmission",
+    "Yeast infections can cause symptoms such as itching, redness, and discharge"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Yeast infections can be transferable.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The likelihood and mode of yeast infection transmission may vary depending on the specific yeast species and context.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Certain yeast infections, particularly those caused by Candida species, can be transmitted between individuals.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Candida albicans can be spread through direct contact, such as during sexual intercourse.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Spread of Candida albicans through direct contact can lead to conditions like vaginal yeast infections.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Nosocomial infections caused by yeasts, such as Candida and Saccharomyces cerevisiae, can occur in hospital settings.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Nosocomial yeast infections in hospital settings are often associated with the use of medical devices like catheters.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Immunocompromised individuals are more susceptible to acquiring yeast infections due to their weakened immune systems.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Immunocompromised individuals are more susceptible to transmitting yeast infections due to their weakened immune systems.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Yeast infections can occur in the mouth.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Yeast infections can occur in the throat.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Yeast infections can occur in the genital areas.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Maintaining good hygiene can reduce the risk of yeast infection transmission.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Yeast infections can cause itching.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Yeast infections can cause redness.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Yeast infections can cause discharge.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Yeast infections can be transferable, although the likelihood and mode of transmission may vary depending on the specific yeast species and context.",
+      "pattern": "B",
+      "notes": "General claim followed by qualifying condition."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "Certain yeast infections, particularly those caused by Candida species like Candida albicans, can be transmitted between individuals through direct contact, such as during sexual intercourse, which can lead to conditions like vaginal yeast infections.",
+      "pattern": "B",
+      "notes": "Causal chain from species to transmission mode to result."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Nosocomial infections caused by yeasts, such as Candida and Saccharomyces cerevisiae, can occur in hospital settings and are often associated with the use of medical devices like catheters.",
+      "pattern": "A",
+      "notes": "Enumeration of properties regarding nosocomial yeast infections."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Immunocompromised individuals are more susceptible to both acquiring and transmitting yeast infections due to their weakened immune systems.",
+      "pattern": "A",
+      "notes": "Enumeration of effects of being immunocompromised on the same subject."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "Yeast infections can occur in the mouth, the throat, and the genital areas.",
+      "pattern": "A",
+      "notes": "Enumeration of affected body areas."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Maintaining good hygiene can reduce the risk of yeast infection transmission.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        14,
+        15,
+        16
+      ],
+      "output": "Yeast infections can cause itching, redness, and discharge.",
+      "pattern": "A",
+      "notes": "Enumeration of symptoms."
+    }
+  ]
+}

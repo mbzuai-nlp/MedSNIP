@@ -1,0 +1,183 @@
+{
+  "entry_id": 151,
+  "batch_id": 16,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 24-year-old man with epilepsy refractory to valproic acid, phenytoin, and levetiracetam undergoes magnetic resonance imaging of his brain while monitored by anesthetic care. He wakes up screaming in pain due to an electrocardiogram lead having caused a significant thermal burn circumferentially around his left leg. He is admitted to the medical intensive care unit for continuous electroencephalogram monitoring while on a midazolam infusion for seizure suppression and supportive care for his burn. Overnight, the nurse continued to increase the patient's midazolam infusion rate, but she also noticed that his left toes were cold to the touch with significant edema. His temperature is now 100°F (37.8°C), blood pressure is 110/75 mmHg, pulse is 80/min, respirations are 10/min and oxygen saturation is 95% on 2 liters nasal cannula. No dorsalis pedis or posterior tibial pulses are detected on the left lower extremity. A delta pressure of 25 mmHg is obtained in the left leg. What is the most appropriate next step in management? (A) Amputation (B) Escharotomy (C) Fasciotomy (D) Intravenous fluid infusion based on Parkland formula (E) Transfer to burn center",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4435,
+    "output_tokens": 1034,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1841,
+      "output_tokens": 510,
+      "cached_input_tokens": 0,
+      "cost": 0.0003473
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2594,
+      "output_tokens": 524,
+      "cached_input_tokens": 0,
+      "cost": 0.00042708
+    }
+  ],
+  "shared_context": {
+    "age": 24,
+    "sex": "male",
+    "chief_complaint": "thermal burn and epilepsy",
+    "medical_history": "epilepsy refractory to valproic acid, phenytoin, and levetiracetam",
+    "medications": "midazolam infusion",
+    "vitals": "temperature 100°F, blood pressure 110/75 mmHg, pulse 80/min, respirations 10/min, oxygen saturation 95% on 2 liters nasal cannula"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in management, let's analyze the patient's condition",
+    "The patient has a significant thermal burn circumferentially around his left leg, resulting in cold toes, significant edema, and the absence of dorsalis pedis and posterior tibial pulses",
+    "The delta pressure of 25 mmHg suggests a compartment syndrome",
+    "Given the presence of a compartment syndrome, the most appropriate next step in management is to perform a fasciotomy",
+    "This is because fasciotomy is indicated in patients with a gradient of <30 mmHg (gradient = diastolic pressure − compartment pressure), an absolute compartment pressure >30 mmHg, ischemic periods of >6 hours, or combined arterial and venous injuries",
+    "The other options are not the most appropriate next steps",
+    "A) Amputation is a drastic measure and should only be considered after all other options have been exhausted and the patient's condition has worsened",
+    "B) Escharotomy is a surgical procedure to release tension on a burn eschar, but it is not indicated in this case as the primary management for compartment syndrome",
+    "D) Intravenous fluid infusion based on Parkland formula may be necessary to manage the burn, but it does not address the underlying compartment syndrome",
+    "E) Transfer to a burn center may be necessary for further management, but it is not the immediate next step in management of compartment syndrome",
+    "Therefore, the most appropriate next step in management is to perform a fasciotomy"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient has a significant thermal burn circumferentially around his left leg, resulting in cold toes, significant edema, and the absence of dorsalis pedis and posterior tibial pulses.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The delta pressure of 25 mmHg suggests a compartment syndrome.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Fasciotomy is indicated in patients with a gradient of <30 mmHg, an absolute compartment pressure >30 mmHg, ischemic periods of >6 hours, or combined arterial and venous injuries.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The most appropriate next step in management is to perform a fasciotomy due to the presence of a compartment syndrome.",
+      "source_sentences": [
+        3,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Amputation is a drastic measure and should only be considered after all other options have been exhausted and the patient's condition has worsened.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Escharotomy is a surgical procedure to release tension on a burn eschar, but it is not indicated in this case as the primary management for compartment syndrome.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Intravenous fluid infusion based on Parkland formula may be necessary to manage the burn, but it does not address the underlying compartment syndrome.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Transfer to a burn center may be necessary for further management, but it is not the immediate next step in management of compartment syndrome.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This 24-year-old male has a significant thermal burn circumferentially around his left leg, resulting in cold toes, significant edema, and the absence of dorsalis pedis and posterior tibial pulses on the left lower extremity.",
+      "pattern": "D",
+      "notes": "Clinical presentation description."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The delta pressure of 25 mmHg obtained in the left leg of this patient suggests a compartment syndrome.",
+      "pattern": "D",
+      "notes": "Specific diagnostic indicator."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Fasciotomy is indicated in patients with specific compartment syndrome criteria, including a gradient of <30 mmHg, an absolute compartment pressure >30 mmHg, ischemic periods of >6 hours, or combined arterial and venous injuries.",
+      "pattern": "D",
+      "notes": "General clinical guideline."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Given the presence of a compartment syndrome, as indicated by the delta pressure and clinical symptoms, the most appropriate next step in management for this patient is to perform a fasciotomy.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Amputation is a drastic measure and should only be considered after all other options have been exhausted and the patient's condition has worsened.",
+      "pattern": "D",
+      "notes": "General principle for a specific treatment option."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Escharotomy, a surgical procedure to release tension on a burn eschar, is not indicated in this case as the primary management for compartment syndrome.",
+      "pattern": "D",
+      "notes": "Specific treatment not applicable."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Intravenous fluid infusion based on Parkland formula may be necessary to manage the burn, but it does not address the underlying compartment syndrome in this patient.",
+      "pattern": "D",
+      "notes": "Management of a related but distinct issue."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Transfer to a burn center may be necessary for further management of this patient's burn and other related care, but it is not the immediate next step in management of the identified compartment syndrome.",
+      "pattern": "D",
+      "notes": "Future care consideration, not immediate action."
+    }
+  ]
+}

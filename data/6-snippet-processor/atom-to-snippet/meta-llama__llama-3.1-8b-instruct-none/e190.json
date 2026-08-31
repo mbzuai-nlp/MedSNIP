@@ -1,0 +1,264 @@
+{
+  "entry_id": 190,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 36-year-old G3P2002 woman presents to her obstetrician’s office for her 1st prenatal visit at 10 weeks and 2 days gestation. She has felt nauseous the last several mornings and has been tired for a few weeks. The patient has had 2 uncomplicated spontaneous vaginal deliveries at full term with her last child born 6 years ago. She is concerned about the risk of Down syndrome in this fetus, as her sister gave birth to an affected child at age 43. She has a history of generalized anxiety disorder, atopic dermatitis, and she is currently on escitalopram. Her temperature is 98.6°F (37.0°C), pulse is 70/min, blood pressure is 121/67 mmHg, and respirations are 13/min. The patient appears anxious, but overall comfortable, and cardiopulmonary and abdominal exams are unremarkable. Pelvic exam reveals normal external genitalia, a closed and soft cervix, a 10-week-sized uterus, and no adnexal masses. Which of the following is the most appropriate next step for definitively determining whether this patient’s fetus has Down syndrome? (A) Amniocentesis (B) Anatomy ultrasound (C) Chorionic villus sampling (D) Genetic testing of patient’s sister (E) Nuchal translucency test",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4668,
+    "output_tokens": 1310,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1999,
+      "output_tokens": 652,
+      "cached_input_tokens": 0,
+      "cost": 6.606e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2669,
+      "output_tokens": 658,
+      "cached_input_tokens": 0,
+      "cost": 7.97e-05
+    }
+  ],
+  "shared_context": {
+    "patient_age": 36,
+    "patient_sex": "female",
+    "gestational_age": 10,
+    "previous_pregnancies": "2",
+    "previous_deliveries": "2 full-term deliveries",
+    "medical_history": "generalized anxiety disorder, atopic dermatitis",
+    "current_medications": "escitalopram",
+    "concern": "risk of Down syndrome",
+    "family_history": "sister gave birth to an affected child at age 43"
+  },
+  "sentences": [
+    "Patient Background: The patient is a 36-year-old woman, currently at 10 weeks and 2 days of gestation",
+    "She has had two previous uncomplicated full-term deliveries but is now concerned about the potential risk of Down syndrome in her current pregnancy, especially given her sister's history of giving birth to an affected child at age 43",
+    "This concern is heightened by the patient's advanced maternal age, which is a known risk factor for chromosomal abnormalities like Down syndrome",
+    "Risk Assessment: Advanced maternal age (≥ 35 years) significantly increases the risk of Down syndrome in the fetus",
+    "This patient's age and her sister's history further justify the need for definitive testing",
+    "Amniocentesis: Typically performed between 15 and 20 weeks of gestation, it involves sampling the amniotic fluid to analyze fetal chromosomes but is not suitable at 10 weeks",
+    "Anatomy Ultrasound: Generally performed around 18-22 weeks gestation to assess fetal anatomy for structural defects but cannot diagnose Down syndrome definitively at 10 weeks",
+    "Chorionic Villus Sampling (CVS): Performed between 10 and 13 weeks of gestation, CVS involves sampling placental tissue to obtain fetal chromosomes for karyotyping, which can definitively diagnose Down syndrome",
+    "Genetic Testing of Patient’s Sister: This would not provide information on the current pregnancy but could offer insight into the type of genetic disorder present in the family",
+    "However, it does not diagnose the fetus' condition",
+    "Nuchal Translucency Test: Performed between 11 and 14 weeks, this ultrasound measures the fluid at the back of the fetus's neck to assess the risk of Down syndrome but is not definitive",
+    "Choice Justification: Given the timing in the pregnancy (10 weeks) and the need for a definitive diagnosis, Chorionic Villus Sampling (CVS) is the most appropriate test",
+    "CVS provides a definitive chromosomal analysis earlier in the pregnancy compared to amniocentesis and is suitable at the current gestational age",
+    "The most appropriate next step for definitively determining whether this patient’s fetus has Down syndrome is",
+    "(C) Chorionic villus sampling"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient is a 36-year-old woman, currently at 10 weeks and 2 days of gestation.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "She has had two previous uncomplicated full-term deliveries but is now concerned about the potential risk of Down syndrome in her current pregnancy.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "This concern is heightened by the patient's advanced maternal age, which is a known risk factor for chromosomal abnormalities like Down syndrome.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Risk Assessment: Advanced maternal age (≥ 35 years) significantly increases the risk of Down syndrome in the fetus.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "This patient's age and her sister's history further justify the need for definitive testing.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Amniocentesis is typically performed between 15 and 20 weeks of gestation.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Anatomy Ultrasound is generally performed around 18-22 weeks gestation.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Chorionic Villus Sampling (CVS) is performed between 10 and 13 weeks of gestation.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Genetic Testing of Patient's Sister would not provide information on the current pregnancy.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Nuchal Translucency Test is performed between 11 and 14 weeks of gestation.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Given the timing in the pregnancy (10 weeks) and the need for a definitive diagnosis, Chorionic Villus Sampling (CVS) is the most appropriate test.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "CVS provides a definitive chromosomal analysis earlier in the pregnancy compared to amniocentesis.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The most appropriate next step for definitively determining whether this patient’s fetus has Down syndrome is Chorionic Villus Sampling (CVS).",
+      "source_sentences": [
+        13
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The patient is a 36-year-old woman, currently at 10 weeks and 2 days of gestation.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "She has had two previous uncomplicated full-term deliveries but is now concerned about the potential risk of Down syndrome in her current pregnancy.",
+      "pattern": "D",
+      "notes": "Patient's concern."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "This concern is heightened by the patient's advanced maternal age, which is a known risk factor for chromosomal abnormalities like Down syndrome.",
+      "pattern": "D",
+      "notes": "Risk factor mention."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Risk Assessment: Advanced maternal age (≥ 35 years) significantly increases the risk of Down syndrome in the fetus.",
+      "pattern": "D",
+      "notes": "Risk assessment info."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "This patient's age and her sister's history further justify the need for definitive testing.",
+      "pattern": "D",
+      "notes": "Justification for testing."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Amniocentesis is typically performed between 15 and 20 weeks of gestation.",
+      "pattern": "D",
+      "notes": "Procedure timing."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Anatomy Ultrasound is generally performed around 18-22 weeks gestation.",
+      "pattern": "D",
+      "notes": "Procedure timing."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Chorionic Villus Sampling (CVS) is performed between 10 and 13 weeks of gestation.",
+      "pattern": "D",
+      "notes": "Procedure timing."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Genetic Testing of Patient's Sister would not provide information on the current pregnancy.",
+      "pattern": "D",
+      "notes": "Irrelevant family history."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Nuchal Translucency Test is performed between 11 and 14 weeks of gestation.",
+      "pattern": "D",
+      "notes": "Procedure timing."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Given the timing in the pregnancy (10 weeks) and the need for a definitive diagnosis, Chorionic Villus Sampling (CVS) is the most appropriate test.",
+      "pattern": "A",
+      "notes": "Justification for CVS."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "CVS provides a definitive chromosomal analysis earlier in the pregnancy compared to amniocentesis.",
+      "pattern": "A",
+      "notes": "CVS advantages."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "The most appropriate next step for definitively determining whether this patient’s fetus has Down syndrome is Chorionic Villus Sampling (CVS).",
+      "pattern": "C",
+      "notes": "Final answer with reasoning inlined."
+    }
+  ]
+}

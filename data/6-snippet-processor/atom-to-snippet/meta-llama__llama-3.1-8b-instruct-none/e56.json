@@ -1,0 +1,267 @@
+{
+  "entry_id": 56,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "What is a neurological issue",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2970,
+    "output_tokens": 1157,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1329,
+      "output_tokens": 558,
+      "cached_input_tokens": 0,
+      "cost": 4.89e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1641,
+      "output_tokens": 599,
+      "cached_input_tokens": 0,
+      "cost": 5.678e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "neurological issue",
+    "condition": "disorder or dysfunction of the nervous system"
+  },
+  "sentences": [
+    "A neurological issue refers to any disorder or dysfunction of the nervous system, which includes the central nervous system (CNS), peripheral nervous system (PNS), and autonomic nervous system (ANS)",
+    "Neurological issues can encompass a wide range of conditions affecting the brain, spinal cord, nerves, and muscles",
+    "These conditions can manifest through various symptoms such as motor impairments, sensory disturbances, cognitive deficits, and autonomic dysfunctions",
+    "Neurological disorders may involve structural, biochemical, or electrical abnormalities in the nervous system",
+    "Examples of neurological issues include epilepsy, multiple sclerosis, Parkinson's disease, stroke, neuropathic pain, headaches, and neurodegenerative diseases like Alzheimer's disease",
+    "These conditions can be congenital (present at birth) or acquired due to injury, infection, degeneration, or other medical conditions",
+    "In clinical practice, neurologists are the specialists who diagnose and treat neurological disorders",
+    "They use a combination of clinical examination, medical history, neuroimaging, and other diagnostic tests to identify and manage these conditions",
+    "Effective management often requires a multidisciplinary approach, including medication, physical therapy, occupational therapy, and sometimes surgical interventions"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A neurological issue refers to any disorder or dysfunction of the nervous system.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The nervous system includes the central nervous system (CNS), peripheral nervous system (PNS), and autonomic nervous system (ANS).",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Neurological issues can affect the brain, spinal cord, nerves, and muscles.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Neurological issues can manifest through various symptoms.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Symptoms can include motor impairments, sensory disturbances, cognitive deficits, and autonomic dysfunctions.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Neurological disorders can involve structural, biochemical, or electrical abnormalities.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Examples of neurological issues include epilepsy, multiple sclerosis, Parkinson's disease, stroke, neuropathic pain, and headaches.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Examples of neurological issues also include neurodegenerative diseases like Alzheimer's disease.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Neurological conditions can be congenital or acquired.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Congenital conditions are present at birth.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Acquired conditions are due to injury, infection, degeneration, or other medical conditions.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Neurologists diagnose and treat neurological disorders.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Neurologists use clinical examination, medical history, neuroimaging, and other diagnostic tests to identify and manage conditions.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Effective management often requires a multidisciplinary approach.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 15,
+      "text": "A multidisciplinary approach may include medication, physical therapy, occupational therapy, and sometimes surgical interventions.",
+      "source_sentences": [
+        8
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A neurological issue refers to any disorder or dysfunction of the nervous system.",
+      "pattern": "D",
+      "notes": "Standalone definition."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The nervous system includes the central nervous system (CNS), peripheral nervous system (PNS), and autonomic nervous system (ANS).",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Neurological issues can affect the brain, spinal cord, nerves, and muscles.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Neurological issues can manifest through various symptoms.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Neurological disorders can involve structural, biochemical, or electrical abnormalities, and can manifest through various symptoms.",
+      "pattern": "A",
+      "notes": "Enumeration of types."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Examples of neurological issues include epilepsy, multiple sclerosis, Parkinson's disease, stroke, neuropathic pain, and headaches, as well as neurodegenerative diseases like Alzheimer's disease.",
+      "pattern": "A",
+      "notes": "Enumeration of examples."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Neurological conditions can be congenital or acquired.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Congenital conditions are present at birth.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Acquired conditions are due to injury, infection, degeneration, or other medical conditions.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Neurologists diagnose and treat neurological disorders.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Neurologists use clinical examination, medical history, neuroimaging, and other diagnostic tests to identify and manage conditions.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Effective management often requires a multidisciplinary approach.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "A multidisciplinary approach may include medication, physical therapy, occupational therapy, and sometimes surgical interventions.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    }
+  ]
+}

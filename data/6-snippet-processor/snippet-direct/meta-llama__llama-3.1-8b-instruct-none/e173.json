@@ -1,0 +1,109 @@
+{
+  "entry_id": 173,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Would you recommend something a bit stronger than meloxicam?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1875,
+    "output_tokens": 551,
+    "cached_input_tokens": 0,
+    "cost": 5.954e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1875,
+      "output_tokens": 551,
+      "cached_input_tokens": 0,
+      "cost": 5.954e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "medication for pain management",
+    "drug_a": "meloxicam"
+  },
+  "sentences": [
+    "When considering a stronger medication than meloxicam for pain management, it is important to evaluate the patient's specific condition, pain severity, and any underlying health issues",
+    "Meloxicam is a nonsteroidal anti-inflammatory drug (NSAID) commonly used for its anti-inflammatory and analgesic properties",
+    "If meloxicam is insufficient, several options can be considered",
+    "Stronger NSAIDs: Medications such as diclofenac or indomethacin may be more potent than meloxicam",
+    "Opioids: For severe pain, opioids like tramadol or oxycodone may be prescribed",
+    "These medications are generally reserved for more intense pain due to their potential for dependence and side effects",
+    "Combination Therapy: Combining NSAIDs with acetaminophen can enhance pain relief without significantly increasing side effects",
+    "Adjuvant Medications: Depending on the type of pain, adjuvant medications such as gabapentin or pregabalin may be useful, particularly for neuropathic pain",
+    "It is crucial to consider the patient's overall health, potential drug interactions, and the risk of side effects when prescribing stronger medications",
+    "Always consult with a healthcare provider to tailor the treatment plan to the individual patient's needs"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "When considering a stronger medication than meloxicam for pain management, it is important to evaluate the patient's specific condition, pain severity, and any underlying health issues. Meloxicam is a nonsteroidal anti-inflammatory drug (NSAID) commonly used for its anti-inflammatory and analgesic properties.",
+      "pattern": "A",
+      "notes": "Enumeration of factors to consider when evaluating stronger medication + definition of meloxicam."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "If meloxicam is insufficient, several options can be considered, such as stronger NSAIDs like diclofenac or indomethacin, or opioids like tramadol or oxycodone.",
+      "pattern": "B",
+      "notes": "Conditional rule + list of options; merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "These medications are generally reserved for more intense pain due to their potential for dependence and side effects.",
+      "pattern": "D",
+      "notes": "Standalone fact about potential risks of stronger medications."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Combination Therapy: Combining NSAIDs with acetaminophen can enhance pain relief without significantly increasing side effects.",
+      "pattern": "D",
+      "notes": "Standalone fact about combination therapy."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Adjuvant Medications: Depending on the type of pain, adjuvant medications such as gabapentin or pregabalin may be useful, particularly for neuropathic pain.",
+      "pattern": "D",
+      "notes": "Standalone fact about adjuvant medications."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "It is crucial to consider the patient's overall health, potential drug interactions, and the risk of side effects when prescribing stronger medications.",
+      "pattern": "A",
+      "notes": "Enumeration of factors to consider when prescribing stronger medications."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Always consult with a healthcare provider to tailor the treatment plan to the individual patient's needs.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    }
+  ]
+}

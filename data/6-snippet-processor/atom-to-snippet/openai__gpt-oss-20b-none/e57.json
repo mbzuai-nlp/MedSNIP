@@ -1,0 +1,158 @@
+{
+  "entry_id": 57,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "what causes ringworm ?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2753,
+    "output_tokens": 3367,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1237,
+      "output_tokens": 1622,
+      "cached_input_tokens": 0,
+      "cost": 0.00026419
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1516,
+      "output_tokens": 1745,
+      "cached_input_tokens": 0,
+      "cost": 0.00028978
+    }
+  ],
+  "shared_context": {
+    "topic": "ringworm"
+  },
+  "sentences": [
+    "Ringworm, also known as dermatophytosis, is a common fungal infection of the skin",
+    "It is caused by dermatophytes, which are a group of fungi that include species from the genera Trichophyton, Microsporum, and Epidermophyton",
+    "These fungi thrive in warm, moist environments and can infect the skin, hair, and nails",
+    "Transmission occurs through direct contact with an infected person or animal, or indirectly through contact with contaminated objects such as towels, clothing, or surfaces"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Ringworm is a common fungal infection of the skin.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Ringworm is caused by dermatophytes.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Dermatophytes are fungi.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Dermatophytes include species from the Trichophyton genus.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Dermatophytes include species from the Microsporum genus.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Dermatophytes include species from the Epidermophyton genus.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Dermatophytes thrive in warm, moist environments.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Dermatophytes can infect the skin, hair, and nails.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Transmission of ringworm occurs via direct contact with an infected person or animal.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Transmission of ringworm can also occur indirectly through contact with contaminated objects such as towels, clothing, or surfaces.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Ringworm is a common fungal infection of the skin.",
+      "pattern": "D",
+      "notes": "Standalone factual definition."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Ringworm is caused by dermatophytes.",
+      "pattern": "D",
+      "notes": "Standalone causal claim about ringworm."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "Dermatophytes are fungi that include species from the Trichophyton, Microsporum, and Epidermophyton genera.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of dermatophytes."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "Dermatophytes thrive in warm, moist environments; they can infect the skin, hair, and nails; transmission occurs via direct contact with an infected person or animal, or indirectly through contaminated objects such as towels, clothing, or surfaces.",
+      "pattern": "A",
+      "notes": "Enumeration of ecological characteristics and transmission modes."
+    }
+  ]
+}

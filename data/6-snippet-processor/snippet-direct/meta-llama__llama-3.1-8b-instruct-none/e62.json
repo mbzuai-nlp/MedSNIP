@@ -1,0 +1,223 @@
+{
+  "entry_id": 62,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old male bodybuilder presents to the emergency department with weakness of his right arm. The patient states he has experienced these symptoms for a few weeks; however, today his hand felt so weak he dropped his cup of tea. The patient has a medical history of diabetes. He drinks 2-7 alcoholic drinks per day and has smoked 2 packs of cigarettes per day since he was 25. The patient uses anabolic steroids. He has lost 17 pounds since he last came to the emergency department 1 month ago. His temperature is 99.5°F (37.5°C), blood pressure is 177/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 98% on room air. Physical exam reveals decreased sensation in the right arm and 2/5 strength in the right arm and 5/5 strength in in the left arm. The patient states that he is experiencing a dull aching and burning pain in his right arm during the exam. Symptoms are not changed with changes in head and neck position. Which of the following is the most likely diagnosis? (A) Apical lung tumor (B) Brachial plexopathy (C) Cerebral infarction (D) Scalenus anticus syndrome (E) Subclavian steal syndrome",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2791,
+    "output_tokens": 1375,
+    "cached_input_tokens": 0,
+    "cost": 0.00011082
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2791,
+      "output_tokens": 1375,
+      "cached_input_tokens": 0,
+      "cost": 0.00011082
+    }
+  ],
+  "shared_context": {
+    "age": "55",
+    "sex": "male",
+    "chief_complaint": "right arm weakness over a few weeks; dropped a cup of tea today",
+    "medical_history": "diabetes, heavy smoking (2 packs/day since age 25), anabolic steroid use, 2-7 alcoholic drinks/day",
+    "vitals": "BP 177/108 mmHg, pulse 90/min, respirations 17/min, O2 saturation 98% on room air",
+    "exam_findings": "decreased sensation in the right arm, 2/5 strength in the right arm, 5/5 strength in the left arm, dull aching and burning pain in the right arm",
+    "correct_answer": "Apical lung tumor (Pancoast tumor)"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for the patient presenting with right arm weakness and other symptoms, we will analyze the clinical presentation and relevant information step by step",
+    "A 55-year-old male bodybuilder",
+    "Chief complaint: Right arm weakness",
+    "Symptoms: Experienced for a few weeks, worsened to the point of dropping a cup of tea",
+    "Medical history: Diabetes, alcohol use (2-7 drinks/day), heavy smoking (2 packs/day since age 25), anabolic steroid use",
+    "Weight loss: 17 pounds in the past month",
+    "Vital signs: Temperature of 99.5°F (37.5°C), BP 177/108 mmHg, pulse 90/min, respirations 17/min, O2 saturation 98% on room air",
+    "Decreased sensation in the right arm",
+    "Strength: 2/5 in the right arm, 5/5 in the left arm",
+    "Describes dull, aching, and burning pain in the right arm",
+    "Symptoms are not influenced by changes in head and neck position",
+    "Apical lung tumor: Known as Pancoast tumor, which can cause symptoms related to brachial plexus involvement leading to arm weakness, pain, and sensory changes",
+    "Often associated with a history of smoking",
+    "Brachial plexopathy: Might present with weakness and sensory loss, but less likely to be chronic and progressive without an identifiable cause (e.g., trauma)",
+    "Cerebral infarction: Can cause sudden-onset weakness but typically with other neurological deficits (e.g., facial droop)",
+    "The gradual progression over weeks makes this less likely",
+    "Scalenus anticus syndrome: Thoracic outlet syndrome variant, usually exacerbated by neck movements or arm positioning, which is not noted here",
+    "Subclavian steal syndrome: Presents with arm claudication and neurological symptoms due to blood flow reversal, typically worsening with arm exertion",
+    "Apical Lung Tumor (Pancoast tumor): Fits the clinical picture with the smoking history, progressive arm weakness, pain, and sensory changes",
+    "This can cause involvement of the brachial plexus leading to the described symptoms",
+    "Based on the clinical presentation, including the history of smoking, the progressive nature of the symptoms, and the specific findings on physical examination, the most likely diagnosis is an apical lung tumor (Pancoast tumor)",
+    "(A) Apical lung tumor"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely diagnosis for the patient presenting with right arm weakness and other symptoms, we will analyze the clinical presentation and relevant information step by step.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "A 55-year-old male bodybuilder presents with right arm weakness.",
+      "pattern": "D",
+      "notes": "Standalone patient description."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The patient states he has experienced these symptoms for a few weeks; however, today his hand felt so weak he dropped his cup of tea.",
+      "pattern": "D",
+      "notes": "Standalone symptom description."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The patient has a medical history of diabetes, alcohol use (2-7 drinks/day), heavy smoking (2 packs/day since age 25), and anabolic steroid use.",
+      "pattern": "A",
+      "notes": "Multiple properties of one subject (patient's medical history)."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "He has lost 17 pounds since he last came to the emergency department 1 month ago.",
+      "pattern": "D",
+      "notes": "Standalone fact about patient's weight loss."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "The patient's vital signs are temperature of 99.5°F (37.5°C), BP 177/108 mmHg, pulse 90/min, respirations 17/min, and O2 saturation 98% on room air.",
+      "pattern": "A",
+      "notes": "Multiple properties of one subject (patient's vital signs)."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Decreased sensation in the right arm.",
+      "pattern": "D",
+      "notes": "Standalone exam finding."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "The patient's strength is 2/5 in the right arm and 5/5 in the left arm.",
+      "pattern": "A",
+      "notes": "Multiple properties of one subject (patient's strength)."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "The patient describes dull, aching, and burning pain in the right arm.",
+      "pattern": "D",
+      "notes": "Standalone symptom description."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Symptoms are not influenced by changes in head and neck position.",
+      "pattern": "D",
+      "notes": "Standalone fact about patient's symptoms."
+    },
+    {
+      "source_sentences": [
+        10,
+        11,
+        12
+      ],
+      "output": "Apical lung tumor (Pancoast tumor) is known as Pancoast tumor, which can cause symptoms related to brachial plexus involvement leading to arm weakness, pain, and sensory changes. Often associated with a history of smoking.",
+      "pattern": "A",
+      "notes": "All properties of one subject (Pancoast tumor)."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Brachial plexopathy might present with weakness and sensory loss, but less likely to be chronic and progressive without an identifiable cause (e.g., trauma).",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Cerebral infarction can cause sudden-onset weakness but typically with other neurological deficits (e.g., facial droop).",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "The gradual progression over weeks makes this less likely.",
+      "pattern": "D",
+      "notes": "Standalone fact about differential diagnosis."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "Scalenus anticus syndrome: Thoracic outlet syndrome variant, usually exacerbated by neck movements or arm positioning, which is not noted here.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis."
+    },
+    {
+      "source_sentences": [
+        17
+      ],
+      "output": "Subclavian steal syndrome presents with arm claudication and neurological symptoms due to blood flow reversal, typically worsening with arm exertion.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis."
+    },
+    {
+      "source_sentences": [
+        18,
+        19,
+        20
+      ],
+      "output": "Based on the clinical presentation, including the history of smoking, the progressive nature of the symptoms, and the specific findings on physical examination, the most likely diagnosis is an apical lung tumor (Pancoast tumor).",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises."
+    },
+    {
+      "source_sentences": [
+        21
+      ],
+      "output": "This can cause involvement of the brachial plexus leading to the described symptoms.",
+      "pattern": "D",
+      "notes": "Standalone supporting premise."
+    },
+    {
+      "source_sentences": [
+        21
+      ],
+      "output": "The most likely diagnosis is an apical lung tumor (Pancoast tumor).",
+      "pattern": "C",
+      "notes": "Final answer with supporting premises inlined."
+    }
+  ]
+}

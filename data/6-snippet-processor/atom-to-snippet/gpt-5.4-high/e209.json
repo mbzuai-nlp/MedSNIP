@@ -1,0 +1,152 @@
+{
+  "entry_id": 209,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2669,
+    "output_tokens": 1456,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1172,
+      "output_tokens": 716,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1497,
+      "output_tokens": 740,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "corneal abrasion and eye discharge",
+    "condition": "corneal abrasion",
+    "symptom": "eye discharge"
+  },
+  "sentences": [
+    "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, foreign body sensation, and a gritty feeling, but they do not usually result in discharge from the eye",
+    "The primary symptoms are related to the disruption of the corneal epithelium, leading to a reflex production of tears rather than discharge",
+    "Discharge could indicate a secondary infection or a different underlying condition and should be evaluated further"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Corneal abrasions typically cause pain.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Corneal abrasions typically cause tearing.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Corneal abrasions typically cause photophobia.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Corneal abrasions typically cause a foreign body sensation.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Corneal abrasions typically cause a gritty feeling.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Corneal abrasions do not usually result in discharge from the eye.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The primary symptoms of a corneal abrasion are related to disruption of the corneal epithelium.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Disruption of the corneal epithelium leads to reflex production of tears rather than discharge.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Eye discharge could indicate a secondary infection.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Eye discharge could indicate a different underlying condition.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Eye discharge should be evaluated further.",
+      "source_sentences": [
+        2
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "Corneal abrasions typically cause pain, tearing, photophobia, and a foreign body or gritty sensation.",
+      "pattern": "A",
+      "notes": "Enumeration of typical symptoms of the same condition."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "Corneal abrasions do not usually cause eye discharge because their primary symptoms result from disruption of the corneal epithelium, which leads to reflex tearing rather than discharge.",
+      "pattern": "C",
+      "notes": "Main conclusion about discharge is only fully meaningful with the supporting pathophysiologic explanation."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11
+      ],
+      "output": "Eye discharge may indicate a secondary infection or another underlying condition and should be evaluated further.",
+      "pattern": "C",
+      "notes": "Recommendation is supported by the possible explanations for the discharge."
+    }
+  ]
+}

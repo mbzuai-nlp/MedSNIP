@@ -1,0 +1,129 @@
+{
+  "entry_id": 132,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "If the side effects of the Prozac become too much is there a wean down period I would have to go through or would I be able to stop it immediately?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2766,
+    "output_tokens": 1400,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1256,
+      "output_tokens": 773,
+      "cached_input_tokens": 0,
+      "cost": 0.0001459
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1510,
+      "output_tokens": 627,
+      "cached_input_tokens": 0,
+      "cost": 0.00013308
+    }
+  ],
+  "shared_context": {
+    "topic": "Prozac discontinuation",
+    "drug_a": "Prozac (fluoxetine)"
+  },
+  "sentences": [
+    "Abrupt discontinuation of Prozac (fluoxetine), a selective serotonin reuptake inhibitor (SSRI), is not recommended due to the potential for withdrawal symptoms",
+    "Gradual tapering is generally advised to minimize these effects",
+    "These symptoms can include dizziness, nausea, headache, irritability, and insomnia",
+    "Medications that affect the central nervous system, such as SSRIs, should be tapered off under the guidance of a healthcare provider to avoid these withdrawal symptoms"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Abrupt discontinuation of Prozac is not recommended due to the potential for withdrawal symptoms.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Gradual tapering is generally advised to minimize withdrawal symptoms.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Withdrawal symptoms can include dizziness.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Withdrawal symptoms can include nausea.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Withdrawal symptoms can include headache.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Withdrawal symptoms can include irritability.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Withdrawal symptoms can include insomnia.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "SSRIs should be tapered off under the guidance of a healthcare provider to avoid withdrawal symptoms.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        8
+      ],
+      "output": "Abrupt discontinuation of Prozac is not recommended; instead, gradually tapering the medication under a healthcare provider’s guidance is advised to minimize withdrawal symptoms.",
+      "pattern": "C",
+      "notes": "Recommendation + premises forming a causal chain."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Common withdrawal symptoms from discontinuing Prozac include dizziness, nausea, headache, irritability, and insomnia.",
+      "pattern": "A",
+      "notes": "Enumeration of withdrawal symptoms for Prozac."
+    }
+  ]
+}

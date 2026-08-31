@@ -1,0 +1,84 @@
+{
+  "entry_id": 98,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Will the antibiotics prevent the lyme disease from progressing?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1800,
+    "output_tokens": 2818,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1800,
+      "output_tokens": 2818,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "whether antibiotics prevent Lyme disease from progressing",
+    "drug_a": "antibiotics",
+    "condition": "Lyme disease"
+  },
+  "sentences": [
+    "Antibiotics are effective in treating Lyme disease, particularly in its early stages",
+    "The primary goal of antibiotic treatment is to eliminate the infection caused by Borrelia burgdorferi, the bacterium responsible for Lyme disease",
+    "In the early stages of Lyme disease, antibiotics such as doxycycline or amoxicillin are commonly prescribed to prevent the progression of the disease",
+    "These antibiotics work by targeting the bacteria and preventing them from reproducing and spreading",
+    "However, if left untreated, Lyme disease can progress to its later stages, which may involve more severe symptoms such as arthritis, neurological problems, and heart issues",
+    "In these cases, treatment may involve longer courses of antibiotics or additional medications to manage symptoms",
+    "It is essential to note that antibiotics are not effective against the late-stage symptoms of Lyme disease, such as arthritis or neurological problems, which are thought to be caused by the body's immune response to the infection rather than the bacteria itself",
+    "In these cases, treatment focuses on managing symptoms and alleviating discomfort"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Antibiotics are effective in treating Lyme disease, particularly in its early stages.",
+      "pattern": "D",
+      "notes": "Standalone treatment-effectiveness claim."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The primary goal of antibiotic treatment for Lyme disease is to eliminate the infection caused by Borrelia burgdorferi, the bacterium responsible for Lyme disease.",
+      "pattern": "D",
+      "notes": "Standalone statement of treatment goal and causative organism."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "In the early stages of Lyme disease, antibiotics such as doxycycline or amoxicillin are commonly prescribed to prevent progression of the disease, and these antibiotics work by targeting the bacteria and preventing the bacteria from reproducing and spreading.",
+      "pattern": "B",
+      "notes": "Explicit mechanism supports the prevention claim; the two sentences form a causal chain."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "If left untreated, Lyme disease can progress to later stages with more severe symptoms such as arthritis, neurological problems, and heart issues; in later-stage cases, treatment may involve longer courses of antibiotics or additional medications to manage symptoms.",
+      "pattern": "B",
+      "notes": "Conditional progression statement followed by treatment in those cases; the second sentence depends on the first."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Antibiotics are not effective against late-stage Lyme disease symptoms such as arthritis or neurological problems, which are thought to be caused by the body's immune response rather than the bacteria itself; in those cases, treatment focuses on managing symptoms and alleviating discomfort.",
+      "pattern": "C",
+      "notes": "Management recommendation is only meaningful with the premise that late-stage symptoms are not antibiotic-responsive."
+    }
+  ]
+}

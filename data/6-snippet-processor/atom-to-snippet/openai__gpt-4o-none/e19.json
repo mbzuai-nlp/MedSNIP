@@ -1,0 +1,223 @@
+{
+  "entry_id": 19,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "What is the most safe amount of Advil to take at one time",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2994,
+    "output_tokens": 1112,
+    "cached_input_tokens": 1152
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1307,
+      "output_tokens": 658,
+      "cached_input_tokens": 0,
+      "cost": 0.0098475
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1687,
+      "output_tokens": 454,
+      "cached_input_tokens": 1152,
+      "cost": 0.0073175
+    }
+  ],
+  "shared_context": {
+    "topic": "safe amount of Advil to take at one time",
+    "drug_a": "Advil (ibuprofen)"
+  },
+  "sentences": [
+    "The recommended dose of ibuprofen, the active ingredient in Advil, varies depending on the individual's age, weight, and medical condition",
+    "For adults, the typical dose is 200-400 mg every 4-6 hours as needed, not to exceed 1200 mg in 24 hours",
+    "However, it is essential to consult a healthcare professional for personalized advice, as excessive ibuprofen use can lead to adverse effects such as stomach ulcers, kidney damage, and increased risk of heart attack and stroke",
+    "For adults, taking more than 1200 mg of ibuprofen in 24 hours is not recommended, as it may increase the risk of gastrointestinal bleeding and other complications",
+    "Taking more than 800 mg at one time is also not advised, as it can lead to increased risk of stomach ulcers and other adverse effects",
+    "It is also crucial to note that individuals with certain medical conditions, such as kidney disease, liver disease, or stomach ulcers, should consult their healthcare provider before taking ibuprofen, as they may require a lower dose or alternative medication"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The recommended dose of ibuprofen varies depending on the individual's age, weight, and medical condition.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "For adults, the typical dose of ibuprofen is 200-400 mg every 4-6 hours as needed.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "For adults, the total ibuprofen dose should not exceed 1200 mg in 24 hours.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Consulting a healthcare professional for personalized advice on ibuprofen use is essential.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Excessive ibuprofen use can lead to adverse effects such as stomach ulcers.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Excessive ibuprofen use can lead to adverse effects such as kidney damage.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Excessive ibuprofen use can increase the risk of heart attack and stroke.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Taking more than 1200 mg of ibuprofen in 24 hours is not recommended for adults.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Exceeding 1200 mg of ibuprofen in 24 hours may increase the risk of gastrointestinal bleeding and other complications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Taking more than 800 mg of ibuprofen at one time is not advised.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Taking more than 800 mg of ibuprofen at one time can lead to an increased risk of stomach ulcers.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Taking more than 800 mg of ibuprofen at one time can lead to other adverse effects.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Individuals with certain medical conditions, such as kidney disease, should consult their healthcare provider before taking ibuprofen.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Individuals with certain medical conditions, such as liver disease, should consult their healthcare provider before taking ibuprofen.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Individuals with certain medical conditions, such as stomach ulcers, should consult their healthcare provider before taking ibuprofen.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Individuals with certain medical conditions may require a lower dose or alternative medication when taking ibuprofen.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The recommended dose of ibuprofen varies depending on the individual's age, weight, and medical condition.",
+      "pattern": "D",
+      "notes": "Standalone fact about dosing variability."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        8
+      ],
+      "output": "For adults, the typical dose of ibuprofen is 200-400 mg every 4-6 hours as needed, and the total dose should not exceed 1200 mg in 24 hours. Taking more than 1200 mg of ibuprofen in 24 hours is not recommended.",
+      "pattern": "A",
+      "notes": "Enumeration of recommended dosing guidelines."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Consulting a healthcare professional for personalized advice on ibuprofen use is essential.",
+      "pattern": "D",
+      "notes": "Standalone advice about consulting healthcare professionals."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        9
+      ],
+      "output": "Excessive ibuprofen use can lead to adverse effects such as stomach ulcers, kidney damage, and an increased risk of heart attack, stroke, and gastrointestinal bleeding.",
+      "pattern": "A",
+      "notes": "Enumeration of adverse effects from excessive use."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "Taking more than 800 mg of ibuprofen at one time is not advised as it can lead to an increased risk of stomach ulcers and other adverse effects.",
+      "pattern": "C",
+      "notes": "Recommendation with supporting reasons."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "output": "Individuals with certain medical conditions, such as kidney disease, liver disease, or stomach ulcers, should consult their healthcare provider before taking ibuprofen, as they may require a lower dose or alternative medication.",
+      "pattern": "A",
+      "notes": "Conditions requiring special consideration are listed."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "entry_id": 45,
+  "batch_id": 5,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "How do I know if its a canker sore versus herpes",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1995,
+    "output_tokens": 898,
+    "cached_input_tokens": 0,
+    "cost": 7.582e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1995,
+      "output_tokens": 898,
+      "cached_input_tokens": 0,
+      "cost": 7.582e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "distinguishing between canker sore and herpes",
+    "condition": "canker sore (aphthous stomatitis) vs herpes simplex virus (HSV) infection"
+  },
+  "sentences": [
+    "To distinguish between a canker sore (aphthous stomatitis) and herpes simplex virus (HSV) infection, several clinical features can be considered",
+    "Aphthous Stomatitis: Typically occurs on non-keratinized mucosal surfaces like the inside of the lips, cheeks, the floor of the mouth, and the soft palate",
+    "Herpes Simplex Virus: Often affects keratinized mucosal surfaces such as the gingiva (gums), the hard palate, and the lips (herpes labialis)",
+    "Aphthous Stomatitis: Presents as a round or oval ulcer with a yellow or white center and a red border",
+    "Herpes Simplex Virus: Begins as grouped vesicles that rupture to form painful ulcers",
+    "The lesions may crust over if on the lips",
+    "Aphthous Stomatitis: Often recurrent without a clear trigger, although stress, trauma, and certain foods can exacerbate them",
+    "Herpes Simplex Virus: Recurrences often triggered by factors such as fever, stress, sunlight, or immunosuppression",
+    "Aphthous Stomatitis: Typically does not have prodromal symptoms",
+    "Herpes Simplex Virus: Often preceded by prodromal symptoms such as tingling, itching, or pain in the area before the appearance of lesions",
+    "Aphthous Stomatitis: Painful, with ulcers lasting from 7 to 14 days and healing without scarring",
+    "Herpes Simplex Virus: Painful, with lesions healing over 2 to 4 weeks",
+    "Recurrent lesions tend to heal faster",
+    "Aphthous Stomatitis: Usually not associated with systemic symptoms",
+    "Herpes Simplex Virus: Primary infection may be accompanied by systemic symptoms such as fever, malaise, and lymphadenopathy"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Several clinical features can be considered to distinguish between a canker sore (aphthous stomatitis) and herpes simplex virus (HSV) infection.",
+      "pattern": "A",
+      "notes": "Introduction + enumeration of features; one subject (distinguishing between canker sore and herpes)."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Aphthous Stomatitis (canker sore) typically occurs on non-keratinized mucosal surfaces like the inside of the lips, cheeks, the floor of the mouth, and the soft palate.",
+      "pattern": "D",
+      "notes": "Standalone fact about canker sore location."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Herpes Simplex Virus (HSV) infection often affects keratinized mucosal surfaces such as the gingiva (gums), the hard palate, and the lips (herpes labialis).",
+      "pattern": "D",
+      "notes": "Standalone fact about herpes simplex virus location."
+    },
+    {
+      "source_sentences": [
+        3,
+        4
+      ],
+      "output": "Aphthous Stomatitis (canker sore) presents as a round or oval ulcer with a yellow or white center and a red border, whereas Herpes Simplex Virus (HSV) begins as grouped vesicles that rupture to form painful ulcers.",
+      "pattern": "B",
+      "notes": "Causal link between canker sore and herpes presentation; merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "The lesions may crust over if on the lips.",
+      "pattern": "D",
+      "notes": "Standalone fact about canker sore lesions."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Aphthous Stomatitis (canker sore) often recurs without a clear trigger, whereas Herpes Simplex Virus (HSV) recurrences are often triggered by factors such as fever, stress, sunlight, or immunosuppression.",
+      "pattern": "B",
+      "notes": "Conditional rule + instruction; merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        8,
+        9
+      ],
+      "output": "Aphthous Stomatitis (canker sore) typically does not have prodromal symptoms, whereas Herpes Simplex Virus (HSV) often has prodromal symptoms such as tingling, itching, or pain in the area before the appearance of lesions.",
+      "pattern": "B",
+      "notes": "Conditional rule + instruction; merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        10,
+        11
+      ],
+      "output": "Aphthous Stomatitis (canker sore) is painful, with ulcers lasting from 7 to 14 days and healing without scarring, whereas Herpes Simplex Virus (HSV) is painful, with lesions healing over 2 to 4 weeks.",
+      "pattern": "B",
+      "notes": "Conditional rule + instruction; merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Recurrent lesions tend to heal faster.",
+      "pattern": "D",
+      "notes": "Standalone fact about canker sore healing."
+    },
+    {
+      "source_sentences": [
+        13,
+        14
+      ],
+      "output": "Aphthous Stomatitis (canker sore) usually does not have systemic symptoms, whereas Herpes Simplex Virus (HSV) primary infection may be accompanied by systemic symptoms such as fever, malaise, and lymphadenopathy.",
+      "pattern": "B",
+      "notes": "Conditional rule + instruction; merged because each piece needs the other for verifiability."
+    }
+  ]
+}

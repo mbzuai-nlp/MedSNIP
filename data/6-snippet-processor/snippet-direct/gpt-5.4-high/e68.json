@@ -1,0 +1,87 @@
+{
+  "entry_id": 68,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 52-year-old man presents to the emergency department by ambulance for evaluation of hematemesis. His wife states that he began vomiting bright red blood this evening while eating dinner, and has produced about 5 cups total. He has a history of alcohol use disorder and has vomited small streaks of blood in the past, but has never undergone formal medical workup for it. On exam, he has bright red blood in his mouth and pharynx, and also displays a distended abdomen with a fluid wave, jaundice, scattered spider angiomas, and multiple ecchymoses. His temperature is 98.4°F (36.9°C), blood pressure is 98/68 mmHg, pulse is 125/min, and respirations are 22/min. A rapid point-of-care hemoglobin and platelet count is 8.8 g/dL and 80,000/mm^3, respectively. The patient is given 1L of normal saline. Which of the following is the most appropriate initial step in management? (A) Balloon tamponade (B) Ceftriaxone (C) Nadolol (D) Octreotide (E) Platelet transfusion",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2460,
+    "output_tokens": 2833,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2460,
+      "output_tokens": 2833,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "52",
+    "sex": "male",
+    "chief_complaint": "massive bright red hematemesis",
+    "medical_history": "alcohol use disorder; prior small streaks of blood with vomiting",
+    "vitals": "T 98.4 F, BP 98/68 mmHg, pulse 125/min, respirations 22/min",
+    "exam_findings": "bright red blood in mouth and pharynx; distended abdomen with fluid wave; jaundice; scattered spider angiomas; multiple ecchymoses; hemoglobin 8.8 g/dL; platelets 80,000/mm^3",
+    "treatment_history": "received 1 L normal saline",
+    "correct_answer": "Octreotide (D)"
+  },
+  "sentences": [
+    "To determine the most appropriate initial step in management, let's break down the patient's presentation and lab results",
+    "The patient is presenting with hematemesis (vomiting bright red blood) and a history of alcohol use disorder, which is a risk factor for gastrointestinal bleeding, particularly esophageal varices",
+    "The patient has a distended abdomen with a fluid wave, jaundice, and spider angiomas, which are indicative of liver disease, likely cirrhosis",
+    "The patient's rapid point-of-care hemoglobin and platelet count are significantly low, at 8.8 g/dL and 80,000/mm^3, respectively, indicating active bleeding and potential coagulopathy",
+    "The patient's vital signs show tachycardia (increased heart rate) and tachypnea (increased respiratory rate), indicating shock and potential hypovolemic shock due to blood loss",
+    "Considering these factors, the initial step is to stabilize the patient's hemodynamics and control the bleeding",
+    "The best option to address this is to administer octreotide, a synthetic analogue of somatostatin that helps decrease splanchnic blood flow and reduce bleeding from esophageal varices"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "In this 52-year-old man with massive bright red hematemesis and alcohol use disorder, the presentation is concerning for gastrointestinal bleeding, particularly esophageal variceal bleeding.",
+      "pattern": "D",
+      "notes": "Sentence 1 is a standalone clinical interpretation; sentence 0 is a non-substantive framing sentence merged for coverage."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "In this 52-year-old man, a distended abdomen with a fluid wave, jaundice, and spider angiomas are indicative of liver disease, likely cirrhosis.",
+      "pattern": "D",
+      "notes": "Standalone interpretation of exam findings."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "In this 52-year-old man with hematemesis, a hemoglobin of 8.8 g/dL and platelet count of 80,000/mm^3 are significantly low and indicate active bleeding with possible coagulopathy.",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "In this 52-year-old man with hematemesis, tachycardia and tachypnea indicate shock, including possible hypovolemic shock from blood loss.",
+      "pattern": "D",
+      "notes": "Standalone hemodynamic interpretation."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "For this 52-year-old man with massive hematemesis, suspected cirrhosis, and signs of ongoing blood loss, the initial management step is to control bleeding and support hemodynamics by administering octreotide, which decreases splanchnic blood flow and reduces bleeding from esophageal varices.",
+      "pattern": "C",
+      "notes": "Recommendation merged with its supporting rationale/mechanism."
+    }
+  ]
+}

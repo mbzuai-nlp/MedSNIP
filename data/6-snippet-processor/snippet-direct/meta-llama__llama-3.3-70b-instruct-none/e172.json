@@ -1,0 +1,72 @@
+{
+  "entry_id": 172,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Should I take a lower dose of my sertraline while taking the zofran?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1738,
+    "output_tokens": 303,
+    "cached_input_tokens": 0,
+    "cost": 0.00027076
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1738,
+      "output_tokens": 303,
+      "cached_input_tokens": 0,
+      "cost": 0.00027076
+    }
+  ],
+  "shared_context": {
+    "topic": "interaction between sertraline and Zofran",
+    "drug_a": "sertraline",
+    "drug_b": "Zofran (ondansetron)"
+  },
+  "sentences": [
+    "There is no direct interaction between sertraline and ondansetron (Zofran) that necessitates a dose adjustment of sertraline",
+    "However, both medications can increase the risk of a condition called serotonin syndrome, which is characterized by symptoms such as confusion, rapid heart rate, and high blood pressure",
+    "It is important to monitor for symptoms of serotonin syndrome when these medications are taken together",
+    "Consult your healthcare provider before making any changes to your medication regimen",
+    "They can provide personalized advice based on your medical history and current condition"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "There is no direct interaction between sertraline and ondansetron (Zofran) that necessitates a dose adjustment of sertraline.",
+      "pattern": "D",
+      "notes": "Standalone fact about lack of direct interaction."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "Sertraline and ondansetron (Zofran) can increase the risk of serotonin syndrome, characterized by symptoms such as confusion, rapid heart rate, and high blood pressure, and it is important to monitor for these symptoms when taking these medications together.",
+      "pattern": "B",
+      "notes": "Causal link between medication combination and increased risk of serotonin syndrome."
+    },
+    {
+      "source_sentences": [
+        3,
+        4
+      ],
+      "output": "Before making any changes to your medication regimen, consult your healthcare provider for personalized advice based on your medical history and current condition.",
+      "pattern": "C",
+      "notes": "Conclusion (consult healthcare provider) supported by premise (for personalized advice)."
+    }
+  ]
+}

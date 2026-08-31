@@ -1,0 +1,168 @@
+{
+  "entry_id": 215,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "is there any specific brand you recommend for the omeprazole?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2818,
+    "output_tokens": 709,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1241,
+      "output_tokens": 398,
+      "cached_input_tokens": 0,
+      "cost": 0.00025146
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1577,
+      "output_tokens": 311,
+      "cached_input_tokens": 0,
+      "cost": 0.00025722
+    }
+  ],
+  "shared_context": {
+    "topic": "omeprazole brand recommendation",
+    "drug_a": "omeprazole"
+  },
+  "sentences": [
+    "There are several brands of omeprazole available on the market",
+    "Omeprazole is a generic medication, and its availability in various brands can vary depending on the country and region",
+    "In the United States, some commonly available brands include Prilosec , Zegerid , and Omepral",
+    "It is essential to note that the choice of brand may not significantly impact the efficacy of the medication, as long as the active ingredient is the same",
+    "However, some brands may have different inactive ingredients or formulations that may be more suitable for certain individuals",
+    "When selecting a brand, it is recommended to consult with a healthcare professional or pharmacist to determine the best option based on individual needs and preferences"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "There are several brands of omeprazole available on the market.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Omeprazole is a generic medication.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The availability of omeprazole brands varies depending on the country and region.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Prilosec is a commonly available brand of omeprazole in the United States.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Zegerid is a commonly available brand of omeprazole in the United States.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Omepral is a commonly available brand of omeprazole in the United States.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The choice of omeprazole brand may not significantly impact the medication's efficacy, as long as the active ingredient is the same.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Different omeprazole brands may have different inactive ingredients or formulations.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Some omeprazole brands may be more suitable for certain individuals due to their inactive ingredients or formulations.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "It is recommended to consult with a healthcare professional or pharmacist to determine the best omeprazole brand option.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        3
+      ],
+      "output": "There are several brands of omeprazole available, with varying availability depending on the country and region.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of omeprazole brands."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6
+      ],
+      "output": "Commonly available brands of omeprazole in the United States include Prilosec, Zegerid, and Omepral.",
+      "pattern": "A",
+      "notes": "Enumeration of specific omeprazole brands."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Omeprazole is a generic medication.",
+      "pattern": "D",
+      "notes": "Standalone fact about omeprazole."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "While different omeprazole brands may have varying inactive ingredients or formulations, the choice of brand may not significantly impact efficacy as long as the active ingredient is the same; however, some brands may be more suitable for certain individuals.",
+      "pattern": "C",
+      "notes": "Conclusion about brand choice + supporting premises."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "It is recommended to consult with a healthcare professional or pharmacist to determine the best omeprazole brand option.",
+      "pattern": "D",
+      "notes": "Standalone recommendation for consultation."
+    }
+  ]
+}

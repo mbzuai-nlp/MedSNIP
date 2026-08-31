@@ -1,0 +1,190 @@
+{
+  "entry_id": 44,
+  "batch_id": 5,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How am I supposed to put ointment on my nipple if it's pierced",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2908,
+    "output_tokens": 743,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1319,
+      "output_tokens": 440,
+      "cached_input_tokens": 0,
+      "cost": 4.398e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1589,
+      "output_tokens": 303,
+      "cached_input_tokens": 0,
+      "cost": 4.39e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "applying ointment to a pierced nipple",
+    "condition": "pierced nipple"
+  },
+  "sentences": [
+    "To apply ointment to a pierced nipple, follow these steps",
+    "Wash your hands thoroughly before touching the area to prevent infection",
+    "Clean the pierced area gently with saline solution or a mild, fragrance-free soap and water",
+    "Avoid using alcohol or hydrogen peroxide as they can be too harsh",
+    "Dry the area with a clean, soft towel or let it air dry completely",
+    "Remove the jewelry if possible and if advised by your healthcare provider",
+    "This allows for better access to the area and ensures the ointment can be applied directly to the skin",
+    "Apply a small amount of ointment directly to the pierced area",
+    "Use a clean cotton swab or your fingertip to spread the ointment evenly",
+    "Reinsert the jewelry if it was removed, ensuring it is clean before doing so",
+    "Repeat the application as directed by your healthcare provider, typically 2-3 times a day",
+    "If you experience any signs of infection, such as increased redness, swelling, pain, or discharge, contact your healthcare provider promptly"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Wash your hands thoroughly before touching the area to prevent infection.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Clean the pierced area with saline solution or a mild, fragrance-free soap and water.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Avoid using alcohol or hydrogen peroxide as they can be too harsh.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Dry the area with a clean, soft towel or let it air dry completely.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Remove the jewelry if possible and if advised by your healthcare provider.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Removing the jewelry allows for better access to the area.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Removing the jewelry ensures the ointment can be applied directly to the skin.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Apply a small amount of ointment directly to the pierced area.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Use a clean cotton swab or your fingertip to spread the ointment evenly.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Reinsert the jewelry if it was removed, ensuring it is clean before doing so.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Repeat the application as directed by your healthcare provider, typically 2-3 times a day.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Contact your healthcare provider promptly if you experience any signs of infection.",
+      "source_sentences": [
+        11
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Wash your hands thoroughly before touching the pierced nipple to prevent infection.",
+      "pattern": "D",
+      "notes": "Standalone hygiene advice."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Clean the pierced area with saline solution or a mild, fragrance-free soap and water.",
+      "pattern": "D",
+      "notes": "Standalone cleaning advice."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Avoid using alcohol or hydrogen peroxide as they can be too harsh.",
+      "pattern": "D",
+      "notes": "Standalone caution."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Dry the area with a clean, soft towel or let it air dry completely.",
+      "pattern": "D",
+      "notes": "Standalone drying advice."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "To apply ointment to a pierced nipple, remove the jewelry if possible, clean the area with saline solution, dry it, apply a small amount of ointment directly to the skin, spread it evenly, reinsert the jewelry after cleaning it, and repeat the application as directed by your healthcare provider.",
+      "pattern": "A",
+      "notes": "Enumeration of steps to apply ointment to a pierced nipple."
+    }
+  ]
+}

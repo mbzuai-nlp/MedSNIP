@@ -1,0 +1,161 @@
+{
+  "entry_id": 256,
+  "batch_id": 26,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "do chlamdia often cure itself or does it cause permanent damage",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2763,
+    "output_tokens": 3846,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1215,
+      "output_tokens": 1261,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1548,
+      "output_tokens": 2585,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "chlamydia self-resolution and permanent damage",
+    "condition": "Chlamydia trachomatis infection"
+  },
+  "sentences": [
+    "Chlamydia trachomatis infections often do not resolve on their own and can cause permanent damage if left untreated",
+    "While some bacterial infections may occasionally resolve without treatment, this is not typical for chlamydia",
+    "Most women with genital tract chlamydial infections are asymptomatic, which makes it more challenging to diagnose and treat promptly",
+    "Untreated chlamydia can lead to severe reproductive complications, such as pelvic inflammatory disease, tubal factor infertility, and ectopic pregnancy",
+    "The pathogen has evolved mechanisms to evade the host immune system and persist within host epithelial cells, thus making spontaneous resolution unlikely"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlamydia trachomatis infections often do not resolve on their own.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Untreated Chlamydia trachomatis infections can cause permanent damage.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Some bacterial infections may occasionally resolve without treatment.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Chlamydia infections do not typically resolve without treatment.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Most women with genital tract chlamydial infections are asymptomatic.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Asymptomatic genital tract chlamydial infections in women are more challenging to diagnose and treat promptly.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Untreated chlamydia can lead to pelvic inflammatory disease.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Untreated chlamydia can lead to tubal factor infertility.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Untreated chlamydia can lead to ectopic pregnancy.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Chlamydia trachomatis has evolved mechanisms to evade the host immune system.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Chlamydia trachomatis can persist within host epithelial cells.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Immune evasion and persistence within host epithelial cells make spontaneous resolution of chlamydia infection unlikely.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
+      "output": "Although some bacterial infections may occasionally resolve without treatment, Chlamydia trachomatis infection typically does not, because the organism can evade the host immune system and persist within host epithelial cells, making spontaneous resolution unlikely.",
+      "pattern": "B",
+      "notes": "Contrast plus causal explanation for why chlamydia usually does not self-resolve."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Most women with genital tract chlamydial infections are asymptomatic, which can make prompt diagnosis and treatment more difficult.",
+      "pattern": "B",
+      "notes": "Causal link between asymptomatic infection and delayed recognition/treatment."
+    },
+    {
+      "source_claims": [
+        2,
+        7,
+        8,
+        9
+      ],
+      "output": "Untreated chlamydia can cause permanent damage and can lead to pelvic inflammatory disease, tubal factor infertility, and ectopic pregnancy.",
+      "pattern": "A",
+      "notes": "Enumeration of important complications of untreated chlamydia under one subject."
+    }
+  ]
+}

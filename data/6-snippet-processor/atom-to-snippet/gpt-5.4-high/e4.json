@@ -1,0 +1,216 @@
+{
+  "entry_id": 4,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can I take nyquil and benedryl at the same time?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2937,
+    "output_tokens": 5024,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1245,
+      "output_tokens": 2497,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1692,
+      "output_tokens": 2527,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "taking NyQuil and Benadryl at the same time",
+    "drug_a": "NyQuil",
+    "drug_b": "Benadryl"
+  },
+  "sentences": [
+    "Taking NyQuil and Benadryl at the same time is generally not recommended due to the risk of increased side effects and potential for overdose",
+    "Both medications contain antihistamines, which can lead to excessive sedation, dizziness, and impaired coordination when taken together",
+    "NyQuil typically contains doxylamine, an antihistamine, while Benadryl contains diphenhydramine, another antihistamine",
+    "Combining these can enhance the sedative effects and increase the risk of side effects such as dry mouth, urinary retention, and confusion, especially in older adults",
+    "If you are considering taking both medications, it is important to consult with a healthcare provider to ensure it is safe based on your individual health conditions and other medications you may be taking"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Taking NyQuil and Benadryl at the same time is generally not recommended.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Taking NyQuil and Benadryl at the same time carries a risk of increased side effects.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Taking NyQuil and Benadryl at the same time carries a potential for overdose.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "NyQuil and Benadryl both contain antihistamines.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Taking NyQuil and Benadryl together can lead to excessive sedation.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Taking NyQuil and Benadryl together can lead to dizziness.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Taking NyQuil and Benadryl together can lead to impaired coordination.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "text": "NyQuil typically contains doxylamine, an antihistamine.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Benadryl contains diphenhydramine, an antihistamine.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Combining NyQuil and Benadryl can enhance sedative effects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Combining NyQuil and Benadryl can increase the risk of dry mouth.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Combining NyQuil and Benadryl can increase the risk of urinary retention.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Combining NyQuil and Benadryl can increase the risk of confusion.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The enhanced sedative effects and increased side effect risk from combining NyQuil and Benadryl are especially a concern in older adults.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 15,
+      "text": "If a person is considering taking NyQuil and Benadryl together, it is important to consult with a healthcare provider.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Whether taking NyQuil and Benadryl together is safe depends on the person's individual health conditions.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Whether taking NyQuil and Benadryl together is safe depends on the other medications the person may be taking.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Taking NyQuil and Benadryl at the same time is generally not recommended.",
+      "pattern": "D",
+      "notes": "Standalone recommendation that is medically checkable on its own."
+    },
+    {
+      "source_claims": [
+        4,
+        8,
+        9
+      ],
+      "output": "NyQuil typically contains doxylamine and Benadryl contains diphenhydramine; both are antihistamines.",
+      "pattern": "A",
+      "notes": "Enumeration of composition facts about the two products."
+    },
+    {
+      "source_claims": [
+        2,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "output": "Combining NyQuil and Benadryl can increase side effects, including enhanced sedative effects with excessive sedation, dizziness, impaired coordination, dry mouth, urinary retention, and confusion; these risks are especially concerning in older adults.",
+      "pattern": "A",
+      "notes": "General side-effect risk plus an enumeration of specific effects for the same drug combination, with a higher-risk subgroup."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Taking NyQuil and Benadryl at the same time carries a potential for overdose.",
+      "pattern": "D",
+      "notes": "Standalone risk statement."
+    },
+    {
+      "source_claims": [
+        15,
+        16,
+        17
+      ],
+      "output": "If a person is considering taking NyQuil and Benadryl together, it is important to consult a healthcare provider because safety depends on the person's individual health conditions and other medications they may be taking.",
+      "pattern": "C",
+      "notes": "Recommendation merged with the premises that explain why individualized review is needed."
+    }
+  ]
+}

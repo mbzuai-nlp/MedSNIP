@@ -1,0 +1,212 @@
+{
+  "entry_id": 143,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 32-year-old man presents to the emergency department for evaluation of headache. His symptoms started last night and have persisted. He occasionally has migraine headaches, but he has not had a headache like this in the past. He reports associated nausea, vomiting, fevers, and neck pain. He has a medical history of asthma. His temperature is 100.4°F (38.0°C), blood pressure is 110/60 mmHg, pulse is 95/min, respirations are 17/min, and oxygen saturation is 98% on room air. On physical exam, he appears uncomfortable. Neurologic exam reveals no focal deficits. There is pain with passive neck flexion. No edema or rashes are noted. Lungs are clear to auscultation bilaterally. Lumbar puncture is performed and CSF results are obtained as shown below. Cerebrospinal fluid (CSF): Cell count: 175/mm^3 RBCs: 0/mm^3 Cl-: 119 mEq/L Glucose: 49 mg/dL Pressure: 150 mmH2O Total protein: 55 mg/dL Based on these results, which of the following is the most appropriate treatment regimen for this patient? (A) Acyclovir (B) Amphotericin and 5-flucytosine (C) Ceftriaxone and vancomycin (D) Ceftriaxone, vancomycin and steroids (E) Supportive care and monitoring",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4676,
+    "output_tokens": 1122,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1901,
+      "output_tokens": 710,
+      "cached_input_tokens": 0,
+      "cost": 6.642e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2775,
+      "output_tokens": 412,
+      "cached_input_tokens": 0,
+      "cost": 7.198e-05
+    }
+  ],
+  "shared_context": {
+    "patient_age": 32,
+    "patient_sex": "male",
+    "chief_complaint": "headache",
+    "medical_history": "asthma",
+    "symptoms": "nausea, vomiting, fevers, neck pain",
+    "vitals": "temperature 100.4°F (38.0°C), blood pressure 110/60 mmHg, pulse 95/min, respirations 17/min, oxygen saturation 98% on room air",
+    "exam_findings": "pain with passive neck flexion, no focal deficits, no edema or rashes",
+    "treatment_history": "lumbar puncture performed",
+    "csf_results": "cell count 175/mm^3, RBCs 0/mm^3, Cl- 119 mEq/L, glucose 49 mg/dL, pressure 150 mmH2O, total protein 55 mg/dL"
+  },
+  "sentences": [
+    "To determine the most appropriate treatment regimen for the patient, we must first interpret the cerebrospinal fluid (CSF) results and consider the clinical presentation",
+    "The patient presents with headache, nausea, vomiting, fever, and neck pain, which are classic symptoms of meningitis",
+    "The CSF results show a cell count of 175/mm^3, which is within the range of lymphocytic pleocytosis",
+    "The glucose level is mildly decreased at 49 mg/dL, and the protein level is normal",
+    "These findings are consistent with viral meningitis",
+    "Given the patient's symptoms and CSF results, the most likely diagnosis is viral meningitis",
+    "Viral meningitis is typically treated with supportive care, including rest, hydration, and pain management",
+    "Antiviral medications are not typically used for viral meningitis, as they are not effective in treating the condition",
+    "Option A, Acyclovir, is used to treat herpes simplex encephalitis, which is a different diagnosis",
+    "Option B, Amphotericin and 5-flucytosine, is used to treat fungal infections, which is not indicated in this case",
+    "Option C, Ceftriaxone and vancomycin, is used to treat bacterial meningitis, which is less likely given the patient's presentation and CSF results",
+    "Option D, Ceftriaxone, vancomycin, and steroids, is also not indicated for viral meningitis",
+    "Therefore, the most appropriate treatment regimen for this patient is Option E, Supportive care and monitoring"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient presents with headache, nausea, vomiting, fever, and neck pain, which are classic symptoms of meningitis.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The CSF results show a cell count of 175/mm^3, which is within the range of lymphocytic pleocytosis.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The glucose level is mildly decreased at 49 mg/dL, and the protein level is normal.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "These findings are consistent with viral meningitis.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Given the patient's symptoms and CSF results, the most likely diagnosis is viral meningitis.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Viral meningitis is typically treated with supportive care, including rest, hydration, and pain management.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Antiviral medications are not typically used for viral meningitis, as they are not effective in treating the condition.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Option A, Acyclovir, is used to treat herpes simplex encephalitis, which is a different diagnosis.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Option B, Amphotericin and 5-flucytosine, is used to treat fungal infections, which is not indicated in this case.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Option C, Ceftriaxone and vancomycin, is used to treat bacterial meningitis, which is less likely given the patient's presentation and CSF results.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Option D, Ceftriaxone, vancomycin, and steroids, is also not indicated for viral meningitis.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Therefore, the most appropriate treatment regimen for this patient is Option E, Supportive care and monitoring.",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This 32-year-old man presents with headache, nausea, vomiting, fever, and neck pain, which are classic symptoms of meningitis.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "The CSF results show a cell count of 175/mm^3 and a mildly decreased glucose level of 49 mg/dL, which is consistent with viral meningitis.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Given the patient's symptoms and CSF results, the most likely diagnosis is viral meningitis.",
+      "pattern": "A",
+      "notes": "Differential discussion + case alignment."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Viral meningitis is typically treated with supportive care, including rest, hydration, and pain management.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Antiviral medications are not typically used for viral meningitis, as they are not effective in treating the condition.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "output": "Option A is used to treat herpes simplex encephalitis, option B is used to treat fungal infections, and options C and D are used to treat bacterial meningitis, which is less likely given the patient's presentation and CSF results.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "The most appropriate treatment regimen for this patient is supportive care and monitoring.",
+      "pattern": "C",
+      "notes": "Final answer with reasoning inlined."
+    }
+  ]
+}

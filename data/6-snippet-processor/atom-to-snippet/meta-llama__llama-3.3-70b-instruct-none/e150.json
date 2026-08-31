@@ -1,0 +1,232 @@
+{
+  "entry_id": 150,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 24-year-old man with epilepsy refractory to valproic acid, phenytoin, and levetiracetam undergoes magnetic resonance imaging of his brain while monitored by anesthetic care. He wakes up screaming in pain due to an electrocardiogram lead having caused a significant thermal burn circumferentially around his left leg. He is admitted to the medical intensive care unit for continuous electroencephalogram monitoring while on a midazolam infusion for seizure suppression and supportive care for his burn. Overnight, the nurse continued to increase the patient's midazolam infusion rate, but she also noticed that his left toes were cold to the touch with significant edema. His temperature is now 100°F (37.8°C), blood pressure is 110/75 mmHg, pulse is 80/min, respirations are 10/min and oxygen saturation is 95% on 2 liters nasal cannula. No dorsalis pedis or posterior tibial pulses are detected on the left lower extremity. A delta pressure of 25 mmHg is obtained in the left leg. What is the most appropriate next step in management? (A) Amputation (B) Escharotomy (C) Fasciotomy (D) Intravenous fluid infusion based on Parkland formula (E) Transfer to burn center",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4502,
+    "output_tokens": 1209,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1846,
+      "output_tokens": 650,
+      "cached_input_tokens": 0,
+      "cost": 0.0003926
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2656,
+      "output_tokens": 559,
+      "cached_input_tokens": 0,
+      "cost": 0.00044448
+    }
+  ],
+  "shared_context": {
+    "age": 24,
+    "sex": "male",
+    "medical_history": "epilepsy",
+    "medications": "valproic acid, phenytoin, levetiracetam, midazolam",
+    "chief_complaint": "thermal burn and potential compartment syndrome",
+    "vitals": "temperature 100°F, blood pressure 110/75 mmHg, pulse 80/min, respirations 10/min, oxygen saturation 95%",
+    "exam_findings": "cold toes, significant edema, absence of dorsalis pedis and posterior tibial pulses"
+  },
+  "sentences": [
+    "The patient has a significant thermal burn circumferentially around his left leg due to an electrocardiogram lead",
+    "He is experiencing cold toes, significant edema, and absence of dorsalis pedis and posterior tibial pulses in the left lower extremity",
+    "A delta pressure (diastolic pressure - compartment pressure) of 25 mmHg is noted in his left leg",
+    "These symptoms are consistent with compartment syndrome, which is a surgical emergency",
+    "A delta pressure less than 30 mmHg is indicative of compartment syndrome and suggests the need for immediate intervention",
+    "(A) Amputation: This is an extreme intervention and is generally considered only when limb salvage is not possible",
+    "(B) Escharotomy: This procedure is indicated for circumferential burns to relieve pressure caused by tight eschar but does not address compartment pressure directly",
+    "(C) Fasciotomy: This is the definitive treatment for compartment syndrome",
+    "It involves surgical incision to relieve pressure within the muscle compartments",
+    "(D) Intravenous fluid infusion based on Parkland formula: This is used for fluid resuscitation in burn victims but does not address compartment syndrome",
+    "(E) Transfer to burn center: While this might be appropriate for burn care, the immediate concern of compartment syndrome must be addressed first",
+    "Given the patient's symptoms and delta pressure, fasciotomy is the most appropriate next step to relieve the compartment pressure and prevent further complications such as muscle and nerve damage",
+    "(C) Fasciotomy"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient has a significant thermal burn circumferentially around his left leg due to an electrocardiogram lead.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "He is experiencing cold toes, significant edema, and absence of dorsalis pedis and posterior tibial pulses in the left lower extremity.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A delta pressure of 25 mmHg is noted in his left leg.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "These symptoms are consistent with compartment syndrome, which is a surgical emergency.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "A delta pressure less than 30 mmHg is indicative of compartment syndrome and suggests the need for immediate intervention.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Amputation is an extreme intervention and is generally considered only when limb salvage is not possible.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Escharotomy is indicated for circumferential burns to relieve pressure caused by tight eschar but does not address compartment pressure directly.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Fasciotomy is the definitive treatment for compartment syndrome.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Fasciotomy involves surgical incision to relieve pressure within the muscle compartments.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Intravenous fluid infusion based on Parkland formula is used for fluid resuscitation in burn victims but does not address compartment syndrome.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Transfer to a burn center may be appropriate for burn care, but the immediate concern of compartment syndrome must be addressed first.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Given the patient's symptoms and delta pressure, fasciotomy is the most appropriate next step to relieve the compartment pressure and prevent further complications.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The most appropriate next step in management is fasciotomy.",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The 24-year-old man has a significant thermal burn circumferentially around his left leg due to an electrocardiogram lead.",
+      "pattern": "D",
+      "notes": "Independent fact about the burn cause."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "He has cold toes, significant edema, and absence of dorsalis pedis and posterior tibial pulses in the left lower extremity, with a delta pressure of 25 mmHg, indicating compromised circulation.",
+      "pattern": "A",
+      "notes": "Combining related examination findings about the patient's leg."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "These symptoms are consistent with compartment syndrome, a condition indicated by a delta pressure less than 30 mmHg, suggesting the need for immediate intervention.",
+      "pattern": "A",
+      "notes": "Combining diagnosis with diagnostic criteria for compartment syndrome."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Amputation is considered only when limb salvage is not possible and does not address the immediate concern of compartment syndrome.",
+      "pattern": "D",
+      "notes": "Independent fact about a potential treatment option."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Escharotomy is used to relieve pressure from circumferential burns but does not directly address compartment syndrome.",
+      "pattern": "D",
+      "notes": "Another standalone potential intervention."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Fasciotomy, involving surgical incision to relieve pressure within the muscle compartments, is the definitive treatment for compartment syndrome.",
+      "pattern": "A",
+      "notes": "Description of the treatment for compartment syndrome."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Intravenous fluid infusion based on Parkland formula is for burn victim fluid resuscitation and does not address compartment syndrome.",
+      "pattern": "D",
+      "notes": "Standalone fact about burn care not related to compartment syndrome."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Transfer to a burn center may be appropriate for burn care but does not address the immediate need to relieve compartment syndrome.",
+      "pattern": "D",
+      "notes": "Another potential but non-immediate action."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Given the patient's symptoms and delta pressure, the most appropriate next step in management is fasciotomy to relieve compartment pressure and prevent further complications.",
+      "pattern": "C",
+      "notes": "Conclusion based on the clinical presentation and rationale for the chosen action."
+    }
+  ]
+}

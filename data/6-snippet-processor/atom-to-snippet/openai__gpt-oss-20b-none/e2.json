@@ -1,0 +1,171 @@
+{
+  "entry_id": 2,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can I take nyquil and benedryl at the same time?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2959,
+    "output_tokens": 2807,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1349,
+      "output_tokens": 1675,
+      "cached_input_tokens": 0,
+      "cost": 0.00027497
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1610,
+      "output_tokens": 1132,
+      "cached_input_tokens": 0,
+      "cost": 0.00020678
+    }
+  ],
+  "shared_context": {
+    "topic": "drug interaction between Nyquil and Benadryl",
+    "drug_a": "Nyquil",
+    "drug_b": "Benadryl"
+  },
+  "sentences": [
+    "Taking Nyquil and Benadryl at the same time is not recommended without consulting a healthcare professional",
+    "Nyquil is an over-the-counter (OTC) medication that contains a combination of doxylamine (an antihistamine), dextromethorphan (a cough suppressant), and acetaminophen (a pain reliever and fever reducer)",
+    "Benadryl, on the other hand, is also an antihistamine that contains diphenhydramine",
+    "Combining these two medications can increase the risk of adverse effects, particularly drowsiness, dizziness, and confusion",
+    "This is because both medications have sedative properties, and taking them together can lead to excessive sedation",
+    "Additionally, taking high doses of acetaminophen with other medications that contain acetaminophen can increase the risk of liver damage",
+    "It is essential to follow the recommended dosage instructions for each medication and consult a healthcare professional before taking them together",
+    "They can help determine the best course of treatment and ensure your safety"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Taking Nyquil and Benadryl together is not recommended without consulting a healthcare professional.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Nyquil is an OTC medication that contains doxylamine, dextromethorphan, and acetaminophen.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Benadryl is an antihistamine that contains diphenhydramine.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Combining Nyquil and Benadryl can increase the risk of drowsiness.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Combining Nyquil and Benadryl can increase the risk of dizziness.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Combining Nyquil and Benadryl can increase the risk of confusion.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Taking Nyquil and Benadryl together can lead to excessive sedation because both medications have sedative properties.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Taking high doses of acetaminophen with other medications that contain acetaminophen can increase the risk of liver damage.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "It is essential to follow the recommended dosage instructions for each medication and consult a healthcare professional before taking them together.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Healthcare professionals can help determine the best course of treatment and ensure your safety.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        9,
+        10
+      ],
+      "output": "Taking Nyquil and Benadryl together is not recommended without consulting a healthcare professional; it is essential to follow the recommended dosage instructions for each medication and professionals can help determine the best course of treatment and ensure safety.",
+      "pattern": "C",
+      "notes": "Recommendation + supporting advice about professionals."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Nyquil is an over-the-counter medication that contains doxylamine, dextromethorphan, and acetaminophen.",
+      "pattern": "D",
+      "notes": "Standalone definition of Nyquil."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Benadryl is an antihistamine that contains diphenhydramine.",
+      "pattern": "D",
+      "notes": "Standalone definition of Benadryl."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "Combining Nyquil and Benadryl can increase the risk of drowsiness, dizziness, and confusion, and can lead to excessive sedation because both medications have sedative properties.",
+      "pattern": "B",
+      "notes": "Causal chain linking use to side effects."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Taking high doses of acetaminophen with other medications that contain acetaminophen can increase the risk of liver damage.",
+      "pattern": "D",
+      "notes": "Standalone fact about acetaminophen interaction."
+    }
+  ]
+}

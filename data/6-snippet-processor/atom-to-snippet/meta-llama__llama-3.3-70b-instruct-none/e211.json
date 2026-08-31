@@ -1,0 +1,151 @@
+{
+  "entry_id": 211,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2715,
+    "output_tokens": 575,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1186,
+      "output_tokens": 337,
+      "cached_input_tokens": 0,
+      "cost": 0.00022644
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1529,
+      "output_tokens": 238,
+      "cached_input_tokens": 0,
+      "cost": 0.00022906
+    }
+  ],
+  "shared_context": {
+    "topic": "corneal abrasion symptoms",
+    "condition": "corneal abrasion"
+  },
+  "sentences": [
+    "A corneal abrasion typically does not cause significant discharge from the eye",
+    "The primary symptoms of a corneal abrasion include pain, a sensation of a foreign body in the eye, tearing, redness, and sensitivity to light",
+    "While mild discharge can occur due to increased tearing, it is not a prominent feature",
+    "If there is significant discharge, it may indicate a secondary infection or another underlying condition, such as conjunctivitis"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A corneal abrasion typically does not cause significant discharge from the eye.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "A corneal abrasion can cause pain.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A corneal abrasion can cause a sensation of a foreign body in the eye.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "A corneal abrasion can cause tearing.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "A corneal abrasion can cause redness.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A corneal abrasion can cause sensitivity to light.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Mild discharge can occur due to increased tearing in a corneal abrasion.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Significant discharge may indicate a secondary infection in a corneal abrasion.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Significant discharge may indicate another underlying condition, such as conjunctivitis, in a corneal abrasion.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A corneal abrasion typically does not cause significant discharge from the eye.",
+      "pattern": "D",
+      "notes": "Standalone fact about discharge."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "A corneal abrasion can cause pain, a sensation of a foreign body in the eye, tearing, redness, and sensitivity to light.",
+      "pattern": "A",
+      "notes": "Enumeration of symptoms."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Mild discharge can occur due to increased tearing in a corneal abrasion.",
+      "pattern": "D",
+      "notes": "Specific type of discharge, standalone fact."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Significant discharge may indicate a secondary infection or another underlying condition, such as conjunctivitis, in a corneal abrasion.",
+      "pattern": "B",
+      "notes": "Causal link between discharge and possible underlying conditions."
+    }
+  ]
+}

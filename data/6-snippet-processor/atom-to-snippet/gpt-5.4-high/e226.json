@@ -1,0 +1,149 @@
+{
+  "entry_id": 226,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 77-year-old man presents to the emergency department with a complaint of sudden onset weakness in his right upper extremity. At home, the patient thought he was simply dehydrated, but he rapidly began to have trouble speaking. When his wife noted this she brought him into the hospital. On arrival to the emergency department, the patient is not responding to verbal stimuli and only withdraws his left upper extremity and lower extremity to pain. His past medical history is notable for hypertension and atrial fibrillation treated with metoprolol, apixaban, and lisinopril. His temperature is 99.0°F (37.2°C), blood pressure is 170/100 mmHg, pulse is 95/min, and respirations are 16/min. The patient has a seizure and subsequently demonstrates agonal breathing. He no longer responds to painful stimuli. A fingerstick blood glucose is 122 mg/dL. Which of the following is the most likely etiology of this patient's symptoms? (A) Epidural hematoma (B) Intracerebral hemorrhage (C) Ischemic stroke (D) Subarachnoid hemorrhage (E) Subdural hematoma",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 4271,
+    "output_tokens": 5138,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1741,
+      "output_tokens": 1735,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2530,
+      "output_tokens": 3403,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": 77,
+    "sex": "male",
+    "chief_complaint": "sudden right upper extremity weakness with trouble speaking",
+    "medical_history": "hypertension, atrial fibrillation",
+    "medications": "metoprolol, apixaban, lisinopril",
+    "vitals": "T 37.2°C, BP 170/100 mmHg, HR 95/min, RR 16/min, glucose 122 mg/dL",
+    "exam_findings": "not responding to verbal stimuli, withdraws left upper and lower extremities to pain, seizure, agonal breathing, later no response to pain",
+    "correct_answer": "ischemic stroke"
+  },
+  "sentences": [
+    "To evaluate this patient's symptoms, we must consider the following",
+    "Sudden onset of weakness in the right upper extremity: This could be indicative of a neurological issue, such as a stroke or hemorrhage",
+    "Rapid progression of symptoms: The patient's condition quickly deteriorated, suggesting a rapidly evolving process",
+    "History of atrial fibrillation: Atrial fibrillation is a risk factor for ischemic stroke, but it can also increase the risk of hemorrhagic stroke",
+    "Hypertension: Uncontrolled hypertension is a risk factor for hemorrhagic stroke",
+    "Seizure and agonal breathing: These symptoms suggest a severe intracranial process",
+    "Considering these factors, the most likely etiology of this patient's symptoms is an ischemic stroke",
+    "Ischemic strokes are more likely than hemorrhagic strokes in patients with atrial fibrillation and hypertension, especially if the blood pressure is not well-controlled",
+    "The patient's symptoms, including sudden onset and rapid progression, are consistent with ischemic stroke",
+    "However, we should also consider the possibility of a hemorrhagic stroke, such as a subarachnoid hemorrhage, given the patient's history of hypertension and the presence of head trauma"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's sudden right upper extremity weakness could indicate a neurologic process such as stroke or hemorrhage.",
+      "source_sentences": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The rapid progression of the patient's condition suggests a rapidly evolving process.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Atrial fibrillation is a risk factor for ischemic stroke and can also increase the risk of hemorrhagic stroke.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Uncontrolled hypertension is a risk factor for hemorrhagic stroke.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Seizure and agonal breathing suggest a severe intracranial process.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The most likely etiology of this patient's symptoms is an ischemic stroke.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "In patients with atrial fibrillation and hypertension, ischemic strokes are more likely than hemorrhagic strokes, especially if blood pressure is not well controlled.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's sudden symptom onset and rapid progression are consistent with ischemic stroke.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Hemorrhagic stroke such as subarachnoid hemorrhage should also be considered because of the patient's history of hypertension and the presence of head trauma.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        5
+      ],
+      "output": "This 77-year-old man’s sudden right upper extremity weakness, rapid neurologic deterioration, seizure, and agonal breathing suggest a rapidly evolving severe intracranial neurologic process such as stroke or hemorrhage.",
+      "pattern": "A",
+      "notes": "Enumeration of multiple presentation features of the same clinical event."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "output": "The most likely etiology of this 77-year-old man with atrial fibrillation, hypertension, blood pressure 170/100 mmHg, sudden right upper extremity weakness, and trouble speaking is ischemic stroke, because atrial fibrillation is a risk factor for ischemic stroke and can also increase hemorrhagic stroke risk, hypertension increases hemorrhagic stroke risk, ischemic stroke is presented as more likely than hemorrhagic stroke in patients with atrial fibrillation and hypertension, and his sudden symptom onset with rapid progression is consistent with ischemic stroke.",
+      "pattern": "C",
+      "notes": "Conclusion merged with its supporting risk-factor and presentation premises."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "The response also considers hemorrhagic stroke such as subarachnoid hemorrhage because this 77-year-old man has hypertension and the response asserts head trauma.",
+      "pattern": "F",
+      "notes": "Same differential topic but a separate alternative; the atom includes a head-trauma premise not present in the vignette."
+    }
+  ]
+}

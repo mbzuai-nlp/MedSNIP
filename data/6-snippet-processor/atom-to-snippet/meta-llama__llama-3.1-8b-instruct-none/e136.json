@@ -1,0 +1,176 @@
+{
+  "entry_id": 136,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2960,
+    "output_tokens": 768,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1388,
+      "output_tokens": 358,
+      "cached_input_tokens": 0,
+      "cost": 4.208e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1572,
+      "output_tokens": 410,
+      "cached_input_tokens": 0,
+      "cost": 4.784e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "losartan administration timing",
+    "drug_a": "losartan",
+    "condition": "hypertension"
+  },
+  "sentences": [
+    "The bioavailability of losartan can be affected by the administration time",
+    "According to the study by Huangfu et al. , the administration time of losartan and indapamide can affect the reduction of blood pressure and the rate of decline of blood pressure in the night",
+    "The study suggests that taking losartan and indapamide together in the night may have advantages over taking them at separate times",
+    "However, the study on the new formulation of losartan, Losartan Cronos, a bilayer tablet containing 50 mg of Losartan immediate release (IR) and 50 mg extended release (ER), suggests that this formulation maintains its antihypertensive effect for 24 hours, regardless of the administration time",
+    "It is essential to note that the pharmacokinetics of losartan can be affected by various factors, including food intake, and the presence of other medications",
+    "A study on the bioequivalence of two losartan tablets in fasting conditions suggests that losartan can be taken with or without food, but the bioavailability may be affected by the presence of food",
+    "To answer the question, taking two losartan pills at once or at separate times is not recommended without consulting a healthcare professional",
+    "Losartan should be taken as directed by the healthcare provider, and the timing of administration may vary depending on the individual patient's needs and medical conditions"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The administration time of losartan can affect its bioavailability.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Taking losartan and indapamide together at night may have advantages over taking them at separate times.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The new formulation of losartan, Losartan Cronos, maintains its antihypertensive effect for 24 hours, regardless of the administration time.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The pharmacokinetics of losartan can be affected by various factors, including food intake and the presence of other medications.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Losartan can be taken with or without food, but its bioavailability may be affected by the presence of food.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Taking two losartan pills at once is not recommended without consulting a healthcare professional.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Losartan should be taken as directed by the healthcare provider.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The timing of losartan administration may vary depending on the individual patient's needs and medical conditions.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The administration time of losartan can affect its bioavailability.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Taking losartan and indapamide together at night may have advantages over taking them at separate times.",
+      "pattern": "D",
+      "notes": "Different combination; kept atomic."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The new formulation of losartan, Losartan Cronos, maintains its antihypertensive effect for 24 hours, regardless of the administration time.",
+      "pattern": "D",
+      "notes": "Different formulation; kept atomic."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The pharmacokinetics of losartan can be affected by various factors, including food intake and the presence of other medications.",
+      "pattern": "D",
+      "notes": "General pharmacokinetics; kept atomic."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Losartan can be taken with or without food, but its bioavailability may be affected by the presence of food.",
+      "pattern": "D",
+      "notes": "Different aspect of pharmacokinetics; kept atomic."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Taking two losartan pills at once is not recommended without consulting a healthcare professional.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Losartan should be taken as directed by the healthcare provider.",
+      "pattern": "C",
+      "notes": "Recommendation."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The timing of losartan administration may vary depending on the individual patient's needs and medical conditions.",
+      "pattern": "D",
+      "notes": "General statement; kept atomic."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "entry_id": 234,
+  "batch_id": 24,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 45-year-old African American woman presents to her primary care physician for not feeling well. She states she has had a cough for the past week. She also has abdominal pain and trouble focusing that has been worsening and has lost 5 pounds recently. Her gastroesophageal reflux disease (GERD) has been poorly controlled recently. The patient is a non-smoker and has a history of GERD for which she takes antacids. Her temperature is 98.6°F (37°C), blood pressure is 115/71 mmHg, pulse is 72/min, and respirations are 12/min. A physical exam is within normal limits. Laboratory studies are ordered and are below:\n\nSerum:\nNa+: 139 mEq/L\nK+: 4.1 mEq/L\nCl-: 101 mEq/L\nHCO3-: 24 mEq/L\nUrea nitrogen: 12 mg/dL\nGlucose: 70 mg/dL\nCreatinine: 0.9 mg/dL\nCa2+: 12.5 mg/dL\nAlkaline phosphatase: 150 U/L\nPhosphorus: 2.0 mg/dL\n\nUrine:\nColor: amber\nNitrites: negative\nSodium: 5 mmol/24 hours\nRed blood cells: 0/hpf\n\nWhich of the following is the most likely explanation of this patient's current presentation? (A) Antacid overuse (B) Increased 1,25-dihydroxyvitamin D (C) Increased parathyroid hormone (D) Malignancy (E) Viral illness",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3062,
+    "output_tokens": 1051,
+    "cached_input_tokens": 0,
+    "cost": 0.00079744
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 3062,
+      "output_tokens": 1051,
+      "cached_input_tokens": 0,
+      "cost": 0.00079744
+    }
+  ],
+  "shared_context": {
+    ",": "",
+    "age": "45",
+    "sex": "female",
+    "race": "African American",
+    "chief_complaint": "cough, abdominal pain, trouble focusing",
+    "medical_history": "GERD",
+    "medications": "antacids",
+    "vitals": "temp 98.6F, BP 115/71, pulse 72, resp 12",
+    "exam_findings": "within normal limits",
+    "weight_loss": "5 lbs",
+    "laboratory_studies": {
+      ",": "",
+      "Na": "139",
+      "K": "4.1",
+      "Cl": "101",
+      "HCO3": "24",
+      "BUN": "12",
+      "Glucose": "70",
+      "Creatinine": "0.9",
+      "Ca2+": "12.5",
+      "ALP": "150",
+      "Phosphorus": "2.0"
+    }
+  },
+  "sentences": [
+    "To determine the most likely explanation for the patient's presentation, we will evaluate each symptom and lab result in relation to the provided options",
+    "Cough: While cough can be associated with various conditions, the lack of fever (98.6°F or 37°C) and normal physical exam suggests it might not be a primary concern",
+    "Abdominal pain and difficulty focusing (possibly due to malnutrition): These symptoms could be indicative of malabsorption, especially given her recent weight loss (5 pounds)",
+    "Recent weight loss and poorly controlled GERD: This could suggest malabsorption or another underlying condition",
+    "Elevated alkaline phosphatase (150 U/L): This enzyme is often elevated in liver or bone diseases, particularly in cases of hyperparathyroidism, vitamin D deficiency, or malignancy",
+    "High calcium levels (12.5 mg/dL) with normal parathyroid hormone (PTH) not provided: A high calcium level can be associated with several conditions, including primary hyperparathyroidism, malignancy, or vitamin D toxicity",
+    "Recent weight loss and malabsorption symptoms: This points towards malabsorption, which can lead to secondary hyperparathyroidism and osteomalacia",
+    "Malabsorption as the primary concern: Given the patient's symptoms and lab results, particularly her low phosphorus, elevated alkaline phosphatase, and high calcium levels, we should consider the impact of malabsorption",
+    "The recent weight loss and malabsorption symptoms suggest a chronic issue, which may be due to gastrointestinal diseases such as celiac disease, Crohn's disease, or chronic pancreatitis",
+    "These conditions can lead to vitamin D deficiency and secondary hyperparathyroidism",
+    "Considering the options, (B) Increased 1,25-dihydroxyvitamin D is not the most likely explanation as a decrease in vitamin D can lead to secondary hyperparathyroidism",
+    "Similarly, (A) Antacid overuse might not directly explain the elevated alkaline phosphatase or malabsorption symptoms",
+    "(D) Malignancy could be a consideration given elevated alkaline phosphatase, but it is not the most direct explanation without further evidence",
+    "(E) Viral illness does not account for the prolonged nature of the patient's symptoms and lab results",
+    "(C) Increased parathyroid hormone (PTH) could be a consideration, as it is associated with hypercalcemia, but the primary issue seems to be malabsorption leading to secondary hyperparathyroidism",
+    "However, the primary issue here seems to be the malabsorption, which is not listed among the options",
+    "The closest correct option, given the choices provided and considering the malabsorption and subsequent secondary hyperparathyroidism, would be (C) Increased parathyroid hormone in the context of secondary hyperparathyroidism caused by malabsorption"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely explanation for the 45-year-old African American woman's presentation, each symptom and lab result will be evaluated in relation to the provided options.",
+      "pattern": "D",
+      "notes": "Introductory process statement."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "In this 45-year-old woman, the lack of fever (98.6°F) and a normal physical exam suggest that her cough might not be a primary concern.",
+      "pattern": "D",
+      "notes": "Standalone clinical interpretation."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "The 45-year-old woman's abdominal pain, difficulty focusing, recent weight loss of 5 pounds, and poorly controlled GERD could be indicative of malabsorption or another underlying condition.",
+      "pattern": "A",
+      "notes": "Enumeration of symptoms linked to one possible cause (malabsorption)."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The patient's elevated alkaline phosphatase (150 U/L) is an enzyme often elevated in liver or bone diseases, particularly in cases of hyperparathyroidism, vitamin D deficiency, or malignancy.",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "The patient's high calcium level (12.5 mg/dL) can be associated with several conditions, including primary hyperparathyroidism, malignancy, or vitamin D toxicity.",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "The 45-year-old woman's recent weight loss and malabsorption symptoms point towards a chronic issue such as celiac disease, Crohn's disease, or chronic pancreatitis; given her low phosphorus (2.0 mg/dL), elevated alkaline phosphatase (150 U/L), and high calcium levels (12.5 mg/dL), malabsorption is a primary concern because it can lead to vitamin D deficiency and secondary hyperparathyroidism and osteomalacia.",
+      "pattern": "B",
+      "notes": "Causal chain linking symptoms to malabsorption to secondary hyperparathyroidism."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Increased 1,25-dihydroxyvitamin D is not the most likely explanation for this 45-year-old woman, as a decrease in vitamin D is what leads to secondary hyperparathyroidism.",
+      "pattern": "B",
+      "notes": "Causal link explaining why an option is incorrect."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Antacid overuse might not directly explain the elevated alkaline phosphatase (150 U/L) or malabsorption symptoms in this patient.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of an option."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Malignancy could be a consideration for this patient given the elevated alkaline phosphatase, but it is not the most direct explanation without further evidence.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of an option."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Viral illness does not account for the prolonged nature of the 45-year-old woman's symptoms and lab results.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of an option."
+    },
+    {
+      "source_sentences": [
+        14,
+        15,
+        16
+      ],
+      "output": "While increased parathyroid hormone (PTH) is associated with hypercalcemia, the primary issue in this patient seems to be malabsorption (which is not listed among the options); therefore, the closest correct option is (C) Increased parathyroid hormone, in the context of secondary hyperparathyroidism caused by malabsorption.",
+      "pattern": "C",
+      "notes": "Conclusion supported by the reasoning of malabsorption."
+    }
+  ]
+}

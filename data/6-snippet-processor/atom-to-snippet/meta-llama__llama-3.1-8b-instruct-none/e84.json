@@ -1,0 +1,163 @@
+{
+  "entry_id": 84,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Do fissures and hemmroids heal on their own?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2860,
+    "output_tokens": 589,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1347,
+      "output_tokens": 307,
+      "cached_input_tokens": 0,
+      "cost": 3.922e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1513,
+      "output_tokens": 282,
+      "cached_input_tokens": 0,
+      "cost": 4.154e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "fissures and hemorrhoids healing",
+    "condition": "anal fissures",
+    "symptom": "healing"
+  },
+  "sentences": [
+    "Anal fissures and hemorrhoids have different healing outcomes depending on the severity and treatment methods employed",
+    "Acute Anal Fissures: These can often heal on their own with conservative management, which includes dietary modification (high-fiber diet), adequate hydration, and stool softeners to reduce strain during defecation",
+    "Chronic Anal Fissures: These are less likely to heal without medical intervention",
+    "Chronic fissures may require treatments such as topical nitrates, calcium channel blockers, or surgical options like lateral internal sphincterotomy, which has a high success rate for healing chronic fissures",
+    "Internal Hemorrhoids: Mild cases can resolve on their own with conservative measures like high-fiber diet, increased fluid intake, and over-the-counter treatments (e.g., topical agents, sitz baths)",
+    "Severe cases (grade III and IV) often require procedural interventions such as rubber band ligation, sclerotherapy, or surgical hemorrhoidectomy",
+    "External Hemorrhoids: These can also often resolve on their own, especially if they are not thrombosed",
+    "Conservative measures similar to those for internal hemorrhoids are recommended",
+    "Thrombosed external hemorrhoids can be very painful and may require medical procedures for relief"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Acute Anal Fissures can often heal on their own.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Chronic Anal Fissures are less likely to heal without medical intervention.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Chronic fissures may require treatments such as topical nitrates or surgical options.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Mild internal hemorrhoids can resolve on their own with conservative measures.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Severe internal hemorrhoids often require procedural interventions.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "External hemorrhoids can often resolve on their own, especially if they are not thrombosed.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "External hemorrhoids can resolve on their own with conservative measures.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Thrombosed external hemorrhoids may require medical procedures for relief.",
+      "source_sentences": [
+        8
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Anal fissures can often heal on their own, but chronic fissures may require medical intervention.",
+      "pattern": "C",
+      "notes": "Conclusion + premise."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Chronic fissures may require treatments such as topical nitrates or surgical options.",
+      "pattern": "D",
+      "notes": "Different treatment option; kept atomic."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Mild internal hemorrhoids can resolve on their own with conservative measures.",
+      "pattern": "D",
+      "notes": "Different condition; kept atomic."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Severe internal hemorrhoids often require procedural interventions.",
+      "pattern": "D",
+      "notes": "Different condition; kept atomic."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "External hemorrhoids can often resolve on their own, especially if they are not thrombosed.",
+      "pattern": "A",
+      "notes": "Enumeration of conditions."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Thrombosed external hemorrhoids may require medical procedures for relief.",
+      "pattern": "D",
+      "notes": "Different condition; kept atomic."
+    }
+  ]
+}

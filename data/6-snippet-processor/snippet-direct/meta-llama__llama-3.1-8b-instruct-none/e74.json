@@ -1,0 +1,179 @@
+{
+  "entry_id": 74,
+  "batch_id": 8,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 72-year-old man presents to his primary care physician for a general checkup. He states that he has been a bit more fatigued lately but believes it is secondary to poor sleep at his new house. The patient is otherwise healthy and takes no medications. His temperature is 98.0°F (36.7°C), blood pressure is 141/90 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 98% on room air. Physical exam is notable only for minor pallor but is otherwise unremarkable. Basic laboratory studies are ordered as seen below.\n\nHemoglobin: 10 g/dL\nHematocrit: 30%\nLeukocyte count: 67,500/mm^3\nPlatelet count: 119,000/mm^3\n\nSerum:\nNa: 141 mEq/L\nCl: 103 mEq/L\nK: 4.0 Eq/L\nHCO3-: 24 mEq/L\nBUN: 22 mg/dL\nGlucose: 109 mg/dL\nCreatinine: 1.2 mg/dL\nCa: 10.0 mg/dL\n\nWhich of the following is the most likely diagnosis? (A) Acute lymphoblastic leukemia (B) Acute myelogenous leukemia (C) Chronic lymphocytic leukemia (D) Chronic myelogenous leukemia (E) Hairy cell leukemia",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2786,
+    "output_tokens": 1043,
+    "cached_input_tokens": 0,
+    "cost": 9.744e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2786,
+      "output_tokens": 1043,
+      "cached_input_tokens": 0,
+      "cost": 9.744e-05
+    }
+  ],
+  "shared_context": {
+    "age": "72",
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "medical_history": "otherwise healthy, no medications",
+    "vitals": "temperature 98.0°F (36.7°C), BP 141/90 mmHg, pulse 82/min, respirations 16/min, O2 98% on room air",
+    "exam_findings": "minor pallor, otherwise unremarkable",
+    "correct_answer": "C"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for this 72-year-old man, we need to analyze his clinical presentation and laboratory results step-by-step",
+    "The patient is 72 years old and presents with fatigue and minor pallor but otherwise feels healthy",
+    "Fatigue and pallor can be indicative of anemia or a hematologic disorder",
+    "*Reference*: Patients with chronic lymphocytic leukemia (CLL) typically present with symptoms like fatigue and pallor as a result of anemia or other blood count abnormalities",
+    "Minor pallor is noted, but there are no other significant findings",
+    "Absence of lymphadenopathy, hepatosplenomegaly, or other organomegaly which are common in CLL and other leukemias",
+    "Hemoglobin: 10 g/dL (Low)",
+    "Hematocrit: 30% (Low)",
+    "Leukocyte count: 67,500/mm^3 (High)",
+    "Platelet count: 119,000/mm^3 (Low normal to low)",
+    "*Reference*: A high leukocyte count combined with anemia and thrombocytopenia can be indicative of leukemia",
+    "(A) Acute lymphoblastic leukemia (ALL) and (B) Acute myelogenous leukemia (AML): These are less likely because acute leukemias often present with more severe symptoms, rapid onset, and higher blast counts in blood and bone marrow",
+    "(D) Chronic myelogenous leukemia (CML): CML typically presents with marked leukocytosis (often >100,000/mm^3), and may show symptoms related to splenomegaly which is not seen here",
+    "(E) Hairy cell leukemia (HCL): HCL usually presents with pancytopenia and splenomegaly; the patient’s leukocyte count is significantly higher than expected in HCL",
+    "CLL is common in elderly patients and often presents with high leukocyte counts, anemia, and sometimes thrombocytopenia",
+    "The patient’s age, fatigue, minor pallor, and laboratory findings match well with CLL presentation",
+    "Given the patient's age, clinical presentation, and specific blood count abnormalities, the most likely diagnosis is Chronic lymphocytic leukemia (C)",
+    "Answer: (C) Chronic lymphocytic leukemia"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely diagnosis for this 72-year-old man, we need to analyze his clinical presentation and laboratory results step-by-step.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement; no new information."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The patient is 72 years old and presents with fatigue and minor pallor but otherwise feels healthy.",
+      "pattern": "D",
+      "notes": "Standalone clinical description; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4
+      ],
+      "output": "Fatigue and pallor can be indicative of anemia or a hematologic disorder, minor pallor is noted, but there are no other significant findings.",
+      "pattern": "A",
+      "notes": "All properties of one subject (anemia/hematologic disorder)."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Absence of lymphadenopathy, hepatosplenomegaly, or other organomegaly which are common in CLL and other leukemias.",
+      "pattern": "D",
+      "notes": "Standalone differential characteristic; CLL inlined."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Hemoglobin: 10 g/dL (Low), Hematocrit: 30% (Low)",
+      "pattern": "D",
+      "notes": "Standalone laboratory findings; anemia inlined."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Leukocyte count: 67,500/mm^3 (High)",
+      "pattern": "D",
+      "notes": "Standalone laboratory finding; high leukocyte count inlined."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Platelet count: 119,000/mm^3 (Low normal to low)",
+      "pattern": "D",
+      "notes": "Standalone laboratory finding; thrombocytopenia inlined."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "A high leukocyte count combined with anemia and thrombocytopenia can be indicative of leukemia.",
+      "pattern": "D",
+      "notes": "Standalone differential characterization; leukemia inlined."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Acute leukemias often present with more severe symptoms, rapid onset, and higher blast counts in blood and bone marrow.",
+      "pattern": "D",
+      "notes": "Standalone differential characteristic; acute leukemias inlined."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "CML typically presents with marked leukocytosis (often >100,000/mm^3), and may show symptoms related to splenomegaly which is not seen here.",
+      "pattern": "D",
+      "notes": "Standalone differential characteristic; CML inlined."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "HCL usually presents with pancytopenia and splenomegaly; the patient’s leukocyte count is significantly higher than expected in HCL.",
+      "pattern": "D",
+      "notes": "Standalone differential characteristic; HCL inlined."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "CLL is common in elderly patients and often presents with high leukocyte counts, anemia, and sometimes thrombocytopenia.",
+      "pattern": "D",
+      "notes": "Standalone differential characterization; CLL inlined."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "The patient’s age, fatigue, minor pallor, and laboratory findings match well with CLL presentation.",
+      "pattern": "D",
+      "notes": "Standalone differential characterization; CLL inlined."
+    },
+    {
+      "source_sentences": [
+        16,
+        17
+      ],
+      "output": "Given the patient's age, clinical presentation, and specific blood count abnormalities, the most likely diagnosis is Chronic lymphocytic leukemia (C).",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises."
+    }
+  ]
+}

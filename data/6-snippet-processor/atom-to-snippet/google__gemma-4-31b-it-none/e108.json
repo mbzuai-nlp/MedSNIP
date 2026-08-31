@@ -1,0 +1,435 @@
+{
+  "entry_id": 108,
+  "batch_id": 11,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 46-year-old man presents with his wife to his primary care provider for depression and strange movements. His wife reports that her husband has not been himself for the last 2 months. Whereas he was previously outgoing and “the life of the party,” the patient is now irritable and withdrawn. He is a partner at an accounting firm, but his colleagues are threatening to fire him if he continues to perform poorly at work. The patient cannot explain the recent changes to his mood and tearfully admits he fears there is something seriously wrong with him. His wife says that he is getting worse. The patient’s medical history is significant for hypertension, for which he takes lisinopril. His family history is unknown as he was adopted. The patient met his mother once and never knew his father but was told he died in his 50s. He drinks a few glasses of wine per week and has never smoked. His temperature is 98.6°F (37°C), blood pressure is 141/87 mmHg, pulse is 81/min, and respirations are 12/min. On physical exam, the patient has a flat affect with a facial grimace and sudden jerky movements of his upper extremities. Which of the following is most likely to be seen on further workup? (A) Alpha-synuclein aggregates on brain biopsy (B) Dorsal striatum atrophy on head CT (C) Frontotemporal atrophy on head CT (D) Neurofibrillary tangles on brain biopsy (E) Positive 14-3-3 CSF assay",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5574,
+    "output_tokens": 2453,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2326,
+      "output_tokens": 1351,
+      "cached_input_tokens": 0,
+      "cost": 0.00081576
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 3248,
+      "output_tokens": 1102,
+      "cached_input_tokens": 0,
+      "cost": 0.000841
+    }
+  ],
+  "shared_context": {
+    "age": 46,
+    "sex": "male",
+    "chief_complaint": "depression and strange movements",
+    "medical_history": "hypertension",
+    "medications": "lisinopril",
+    "vitals": "Temp 98.6°F, BP 141/87 mmHg, Pulse 81/min, Resp 12/min",
+    "exam_findings": "flat affect, facial grimace, sudden jerky movements of upper extremities",
+    "treatment_history": null,
+    "correct_answer": "(B) Dorsal striatum atrophy on head CT"
+  },
+  "sentences": [
+    "To approach the query methodically, let's start by analyzing the patient's presentation and history",
+    "Age: 46-year-old male",
+    "Symptoms: Depression, strange movements, irritability, withdrawal from social interactions, poor work performance",
+    "Physical exam: Flat affect, facial grimace, sudden jerky movements of upper extremities",
+    "Significant past medical history: Hypertension, managed with lisinopril",
+    "Family history: Adopted, minimal information, but noted his father died in his 50s",
+    "Temperature: 98.6°F (37°C)",
+    "Blood pressure: 141/87 mmHg",
+    "Pulse: 81/min",
+    "Respirations: 12/min",
+    "The combination of psychiatric symptoms (depression, irritability) and neurological signs (jerky movements, flat affect, facial grimace) in a middle-aged individual, along with a family history of early death in the father, strongly suggests a neurodegenerative disorder",
+    "Huntington's disease (HD): Progressive neurodegenerative disorder characterized by motor dysfunction (chorea), psychiatric symptoms, and cognitive decline",
+    "The patient's symptoms and age are consistent with HD",
+    "Parkinson's disease (PD): Characterized by bradykinesia, rigidity, tremors, and sometimes psychiatric symptoms",
+    "However, the patient's jerky movements (chorea) are not typical for PD",
+    "Frontotemporal dementia (FTD): Behavioral changes and executive dysfunction are prominent, but motor symptoms as described are less characteristic",
+    "Alzheimer's disease (AD): Primarily affects memory and cognitive functions, not typically associated with chorea",
+    "Creutzfeldt-Jakob disease (CJD): Rapidly progressive dementia, myoclonus, and positive 14-3-3 CSF assay",
+    "Considering the symptoms and the family history, Huntington's disease is the most likely diagnosis",
+    "Huntington's disease typically shows",
+    "Dorsal striatum (caudate nucleus and putamen) atrophy on head CT or MRI",
+    "This atrophy is a hallmark of the disease and can be detected with imaging studies",
+    "(A) Alpha-synuclein aggregates on brain biopsy: Seen in Parkinson's disease and multiple system atrophy",
+    "Not consistent with the patient's presentation",
+    "(B) Dorsal striatum atrophy on head CT: Consistent with Huntington's disease",
+    "(C) Frontotemporal atrophy on head CT: Seen in frontotemporal dementia",
+    "Less likely given the motor symptoms",
+    "(D) Neurofibrillary tangles on brain biopsy: Characteristic of Alzheimer's disease",
+    "Not consistent with the patient's motor symptoms",
+    "(E) Positive 14-3-3 CSF assay: Indicative of Creutzfeldt-Jakob disease",
+    "This disease progresses rapidly and is less consistent with the gradual symptom onset described",
+    "After thorough consideration, the most likely finding on further workup for this patient is",
+    "(B) Dorsal striatum atrophy on head CT"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The process begins by analyzing the patient's presentation and history.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient is a 46-year-old male.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's symptoms include depression, strange movements, irritability, withdrawal from social interactions, and poor work performance.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's physical exam shows flat affect, facial grimace, and sudden jerky movements of upper extremities.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's significant past medical history includes hypertension managed with lisinopril.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient is adopted with minimal family history, though his father died in his 50s.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient's temperature is 98.6°F (37°C).",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's blood pressure is 141/87 mmHg.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient's pulse is 81/min.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The patient's respirations are 12/min.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The combination of psychiatric symptoms, neurological signs, and a family history of early death in the father strongly suggests a neurodegenerative disorder.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Huntington's disease (HD) is a progressive neurodegenerative disorder characterized by motor dysfunction (chorea), psychiatric symptoms, and cognitive decline.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The patient's symptoms and age are consistent with Huntington's disease.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Parkinson's disease (PD) is characterized by bradykinesia, rigidity, tremors, and sometimes psychiatric symptoms.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The patient's jerky movements (chorea) are not typical for Parkinson's disease.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Frontotemporal dementia (FTD) features prominent behavioral changes and executive dysfunction, but the described motor symptoms are less characteristic.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Alzheimer's disease (AD) primarily affects memory and cognitive functions and is not typically associated with chorea.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Creutzfeldt-Jakob disease (CJD) involves rapidly progressive dementia, myoclonus, and a positive 14-3-3 CSF assay.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Huntington's disease is the most likely diagnosis given the symptoms and family history.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Huntington's disease typically shows dorsal striatum (caudate nucleus and putamen) atrophy on head CT or MRI.",
+      "source_sentences": [
+        19,
+        20
+      ]
+    },
+    {
+      "index": 21,
+      "text": "Dorsal striatum atrophy is a hallmark of Huntington's disease and can be detected with imaging studies.",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 22,
+      "text": "Alpha-synuclein aggregates on brain biopsy are seen in Parkinson's disease and multiple system atrophy.",
+      "source_sentences": [
+        22
+      ]
+    },
+    {
+      "index": 23,
+      "text": "Alpha-synuclein aggregates are not consistent with the patient's presentation.",
+      "source_sentences": [
+        23
+      ]
+    },
+    {
+      "index": 24,
+      "text": "Dorsal striatum atrophy on head CT is consistent with Huntington's disease.",
+      "source_sentences": [
+        24
+      ]
+    },
+    {
+      "index": 25,
+      "text": "Frontotemporal atrophy on head CT is seen in frontotemporal dementia.",
+      "source_sentences": [
+        25
+      ]
+    },
+    {
+      "index": 26,
+      "text": "Frontotemporal atrophy is less likely given the patient's motor symptoms.",
+      "source_sentences": [
+        26
+      ]
+    },
+    {
+      "index": 27,
+      "text": "Neurofibrillary tangles on brain biopsy are characteristic of Alzheimer's disease.",
+      "source_sentences": [
+        27
+      ]
+    },
+    {
+      "index": 28,
+      "text": "Neurofibrillary tangles are not consistent with the patient's motor symptoms.",
+      "source_sentences": [
+        28
+      ]
+    },
+    {
+      "index": 29,
+      "text": "A positive 14-3-3 CSF assay is indicative of Creutzfeldt-Jakob disease.",
+      "source_sentences": [
+        29
+      ]
+    },
+    {
+      "index": 30,
+      "text": "Creutzfeldt-Jakob disease progresses rapidly and is less consistent with the gradual symptom onset described.",
+      "source_sentences": [
+        30
+      ]
+    },
+    {
+      "index": 31,
+      "text": "The most likely finding on further workup for this patient is dorsal striatum atrophy on head CT.",
+      "source_sentences": [
+        31,
+        32
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "output": "The patient is a 46-year-old male presenting with depression, strange movements, irritability, social withdrawal, and poor work performance. His physical exam shows flat affect, facial grimace, and sudden jerky movements of upper extremities. His history includes hypertension managed with lisinopril, and he is adopted with a father who died in his 50s. Vitals are stable: temperature 98.6°F (37°C), blood pressure 141/87 mmHg, pulse 81/min, and respirations 12/min.",
+      "pattern": "A",
+      "notes": "Enumeration of patient demographics, history, and exam findings."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "The combination of psychiatric symptoms, neurological signs, and a family history of early death in the father for this 46-year-old male strongly suggests a neurodegenerative disorder.",
+      "pattern": "C",
+      "notes": "Conclusion based on patient premises."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Huntington's disease (HD) is a progressive neurodegenerative disorder characterized by motor dysfunction (chorea), psychiatric symptoms, and cognitive decline, which is consistent with this 46-year-old male's symptoms and age.",
+      "pattern": "B",
+      "notes": "Causal link between disease definition and patient consistency."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Parkinson's disease (PD) is characterized by bradykinesia, rigidity, tremors, and sometimes psychiatric symptoms; however, the jerky movements (chorea) seen in this 46-year-old male are not typical for PD.",
+      "pattern": "C",
+      "notes": "Differential reasoning: disease properties vs patient presentation."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Frontotemporal dementia (FTD) features prominent behavioral changes and executive dysfunction, but the motor symptoms described in this 46-year-old male are less characteristic of FTD.",
+      "pattern": "C",
+      "notes": "Differential reasoning: disease properties vs patient presentation."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Alzheimer's disease (AD) primarily affects memory and cognitive functions and is not typically associated with the chorea seen in this 46-year-old male.",
+      "pattern": "C",
+      "notes": "Differential reasoning: disease properties vs patient presentation."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "Creutzfeldt-Jakob disease (CJD) involves rapidly progressive dementia, myoclonus, and a positive 14-3-3 CSF assay.",
+      "pattern": "D",
+      "notes": "Standalone definition of CJD."
+    },
+    {
+      "source_claims": [
+        19,
+        20,
+        21
+      ],
+      "output": "Huntington's disease is the most likely diagnosis given the symptoms and family history; it typically shows dorsal striatum (caudate nucleus and putamen) atrophy on head CT or MRI, which is a hallmark of the disease.",
+      "pattern": "B",
+      "notes": "Logical chain: diagnosis -> typical finding -> hallmark."
+    },
+    {
+      "source_claims": [
+        22,
+        23
+      ],
+      "output": "Alpha-synuclein aggregates on brain biopsy are seen in Parkinson's disease and multiple system atrophy, but are not consistent with the presentation of this 46-year-old male.",
+      "pattern": "C",
+      "notes": "Differential reasoning for finding A."
+    },
+    {
+      "source_claims": [
+        24
+      ],
+      "output": "Dorsal striatum atrophy on head CT is consistent with Huntington's disease.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        25,
+        26
+      ],
+      "output": "Frontotemporal atrophy on head CT is seen in frontotemporal dementia, but is less likely given the motor symptoms of this 46-year-old male.",
+      "pattern": "C",
+      "notes": "Differential reasoning for finding C."
+    },
+    {
+      "source_claims": [
+        27,
+        28
+      ],
+      "output": "Neurofibrillary tangles on brain biopsy are characteristic of Alzheimer's disease and are not consistent with the motor symptoms of this 46-year-old male.",
+      "pattern": "C",
+      "notes": "Differential reasoning for finding D."
+    },
+    {
+      "source_claims": [
+        29,
+        30
+      ],
+      "output": "A positive 14-3-3 CSF assay is indicative of Creutzfeldt-Jakob disease, which progresses rapidly and is less consistent with the gradual symptom onset described in this 46-year-old male.",
+      "pattern": "B",
+      "notes": "Causal link between marker, disease, and timeline."
+    },
+    {
+      "source_claims": [
+        31
+      ],
+      "output": "The most likely finding on further workup for this 46-year-old male is dorsal striatum atrophy on head CT.",
+      "pattern": "C",
+      "notes": "Final diagnosis/finding conclusion."
+    }
+  ]
+}

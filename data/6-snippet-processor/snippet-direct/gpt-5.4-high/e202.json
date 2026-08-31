@@ -1,0 +1,79 @@
+{
+  "entry_id": 202,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1696,
+    "output_tokens": 2702,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1696,
+      "output_tokens": 2702,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "poison ivy contagion between people",
+    "condition": "poison ivy rash"
+  },
+  "sentences": [
+    "Poison ivy itself is not contagious between people",
+    "The rash caused by poison ivy, known as contact dermatitis, results from an allergic reaction to urushiol, an oil found in the plant",
+    "Poison ivy itself is not contagious between people",
+    "The rash caused by poison ivy is known as contact dermatitis",
+    "The rash results from an allergic reaction to urushiol, an oil found in the plant",
+    "Urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Poison ivy itself is not contagious between people.",
+      "pattern": "D",
+      "notes": "Standalone fact directly answering the contagion question."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The rash caused by poison ivy is known as contact dermatitis and results from an allergic reaction to urushiol, an oil found in poison ivy.",
+      "pattern": "A",
+      "notes": "One sentence gives multiple properties of the same subject, the poison ivy rash."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Poison ivy itself is not contagious between people.",
+      "pattern": "D",
+      "notes": "Repeated standalone fact; kept separate to preserve exact sentence coverage."
+    },
+    {
+      "source_sentences": [
+        3,
+        4
+      ],
+      "output": "The rash caused by poison ivy is known as contact dermatitis and results from an allergic reaction to urushiol, an oil found in poison ivy.",
+      "pattern": "A",
+      "notes": "Two consecutive sentences enumerate properties of the same rash, so they are merged."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Urushiol can be transferred from one person to another if urushiol remains on the skin, clothing, or other surfaces.",
+      "pattern": "B",
+      "notes": "Conditional transmission statement is self-contained and medically verifiable."
+    }
+  ]
+}

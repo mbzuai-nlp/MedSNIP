@@ -1,0 +1,305 @@
+{
+  "entry_id": 107,
+  "batch_id": 11,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 46-year-old man presents with his wife to his primary care provider for depression and strange movements. His wife reports that her husband has not been himself for the last 2 months. Whereas he was previously outgoing and “the life of the party,” the patient is now irritable and withdrawn. He is a partner at an accounting firm, but his colleagues are threatening to fire him if he continues to perform poorly at work. The patient cannot explain the recent changes to his mood and tearfully admits he fears there is something seriously wrong with him. His wife says that he is getting worse. The patient’s medical history is significant for hypertension, for which he takes lisinopril. His family history is unknown as he was adopted. The patient met his mother once and never knew his father but was told he died in his 50s. He drinks a few glasses of wine per week and has never smoked. His temperature is 98.6°F (37°C), blood pressure is 141/87 mmHg, pulse is 81/min, and respirations are 12/min. On physical exam, the patient has a flat affect with a facial grimace and sudden jerky movements of his upper extremities. Which of the following is most likely to be seen on further workup? (A) Alpha-synuclein aggregates on brain biopsy (B) Dorsal striatum atrophy on head CT (C) Frontotemporal atrophy on head CT (D) Neurofibrillary tangles on brain biopsy (E) Positive 14-3-3 CSF assay",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5180,
+    "output_tokens": 1703,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2135,
+      "output_tokens": 915,
+      "cached_input_tokens": 0,
+      "cost": 0.00062525
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 3045,
+      "output_tokens": 788,
+      "cached_input_tokens": 0,
+      "cost": 0.00069529
+    }
+  ],
+  "shared_context": {
+    "age": 46,
+    "sex": "male",
+    "chief_complaint": "depression and strange movements",
+    "medical_history": "hypertension",
+    "medications": "lisinopril",
+    "vitals": {
+      "temperature": "98.6°F",
+      "blood_pressure": "141/87 mmHg",
+      "pulse": "81/min",
+      "respirations": "12/min"
+    },
+    "exam_findings": "flat affect, facial grimace, sudden jerky movements of upper extremities",
+    "treatment_history": null,
+    "correct_answer": "(A)"
+  },
+  "sentences": [
+    "To approach this question, let's break down the key information provided and narrow down the possible causes",
+    "The patient presents with a 2-month history of depression, irritability, and withdrawal, which is a new onset of symptoms for him",
+    "This suggests a possible psychiatric or neurological cause",
+    "The patient's symptoms have affected his daily life and work performance, leading to concerns about his health",
+    "The patient has a facial grimace and sudden jerky movements of his upper extremities on physical exam, which suggests a possible movement disorder",
+    "The patient's medical history is significant for hypertension, but there is no mention of other neurological conditions that may predispose him to these symptoms",
+    "The patient's family history is unknown, which may make it harder to look for genetic causes",
+    "The patient's neuropsychiatric symptoms and movement disorder symptoms are concerning for neurodegenerative disorders",
+    "From the options provided, we can see that option (A) refers to alpha-synuclein aggregates, option (B) refers to dorsal striatum atrophy, option (C) refers to frontotemporal atrophy, option (D) refers to neurofibrillary tangles, and option (E) refers to a positive 14-3-3 CSF assay",
+    "Based on the patient's symptoms, let's evaluate the options",
+    "Alpha-synuclein aggregates are seen in Parkinson's disease and other synucleinopathies, such as multiple system atrophy and dementia with Lewy bodies",
+    "Dorsal striatum atrophy is seen in a variety of conditions, including Huntington's disease",
+    "Frontotemporal atrophy is seen in frontotemporal dementia",
+    "Neurofibrillary tangles are seen in Alzheimer's disease",
+    "A positive 14-3-3 CSF assay is seen in Creutzfeldt-Jakob disease",
+    "Given the patient's sudden onset of neuropsychiatric symptoms, movement disorder symptoms, and the presence of facial grimace and sudden jerky movements, the most likely diagnosis is a synucleinopathy, such as Parkinson's disease or multiple system atrophy",
+    "The most likely finding on further workup is alpha-synuclein aggregates on brain biopsy, which is a pathological hallmark of synucleinopathies",
+    "Final Answer: (A)"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient presents with a 2-month history of depression, irritability, and withdrawal, which is a new onset of symptoms for him.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's psychiatric and neurological symptoms suggest a possible psychiatric or neurological cause.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's symptoms have affected his daily life and work performance, leading to concerns about his health.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's facial grimace and sudden jerky movements of his upper extremities on physical exam suggest a possible movement disorder.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's medical history is significant for hypertension, but there is no mention of other neurological conditions that may predispose him to these symptoms.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient's unknown family history may make it harder to look for genetic causes.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient's neuropsychiatric symptoms and movement disorder symptoms are concerning for neurodegenerative disorders.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Option (A) refers to alpha-synuclein aggregates, option (B) refers to dorsal striatum atrophy, option (C) refers to frontotemporal atrophy, option (D) refers to neurofibrillary tangles, and option (E) refers to a positive 14-3-3 CSF assay.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient's symptoms will be used to evaluate the provided options.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Alpha-synuclein aggregates are seen in Parkinson's disease and other synucleinopathies, such as multiple system atrophy and dementia with Lewy bodies.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Dorsal striatum atrophy is seen in a variety of conditions, including Huntington's disease.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Frontotemporal atrophy is seen in frontotemporal dementia.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Neurofibrillary tangles are seen in Alzheimer's disease.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "A positive 14-3-3 CSF assay is seen in Creutzfeldt-Jakob disease.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Given the patient's sudden onset of neuropsychiatric symptoms, movement disorder symptoms, and the presence of facial grimace and sudden jerky movements, the most likely diagnosis is a synucleinopathy, such as Parkinson's disease or multiple system atrophy.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "text": "The most likely finding on further workup is alpha-synuclein aggregates on brain biopsy, which is a pathological hallmark of synucleinopathies.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 17,
+      "text": "The final answer is (A).",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "text": "The approach to the question involves breaking down the key information and narrowing possible causes.",
+      "source_sentences": [
+        0
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        3
+      ],
+      "output": "The 46-year-old male presents with a 2-month history of depression, irritability, and withdrawal, which is a new onset of symptoms for him that has affected his daily life and work performance.",
+      "pattern": "A",
+      "notes": "Grouping symptoms and their impact on the subject."
+    },
+    {
+      "source_claims": [
+        2,
+        4,
+        7
+      ],
+      "output": "In this 46-year-old male, the combination of neuropsychiatric symptoms and a physical exam showing facial grimace and sudden jerky movements of the upper extremities suggests a possible movement disorder and is concerning for neurodegenerative disorders.",
+      "pattern": "A",
+      "notes": "Grouping exam findings and the resulting clinical impression."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The 46-year-old male's medical history is significant for hypertension, but there is no mention of other neurological conditions that may predispose him to these symptoms.",
+      "pattern": "D",
+      "notes": "Standalone medical history fact."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "The 46-year-old male's unknown family history may make it harder to look for genetic causes.",
+      "pattern": "D",
+      "notes": "Standalone fact about family history."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Option (A) refers to alpha-synuclein aggregates, option (B) refers to dorsal striatum atrophy, option (C) refers to frontotemporal atrophy, option (D) refers to neurofibrillary tangles, and option (E) refers to a positive 14-3-3 CSF assay.",
+      "pattern": "A",
+      "notes": "Enumeration of options."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Alpha-synuclein aggregates are seen in Parkinson's disease and other synucleinopathies, such as multiple system atrophy and dementia with Lewy bodies.",
+      "pattern": "D",
+      "notes": "Standalone medical definition/fact."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Dorsal striatum atrophy is seen in a variety of conditions, including Huntington's disease.",
+      "pattern": "D",
+      "notes": "Standalone medical definition/fact."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Frontotemporal atrophy is seen in frontotemporal dementia.",
+      "pattern": "D",
+      "notes": "Standalone medical definition/fact."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Neurofibrillary tangles are seen in Alzheimer's disease.",
+      "pattern": "D",
+      "notes": "Standalone medical definition/fact."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "A positive 14-3-3 CSF assay is seen in Creutzfeldt-Jakob disease.",
+      "pattern": "D",
+      "notes": "Standalone medical definition/fact."
+    },
+    {
+      "source_claims": [
+        15,
+        16,
+        17
+      ],
+      "output": "Given the 46-year-old male's sudden onset of neuropsychiatric symptoms, facial grimace, and sudden jerky movements, the most likely diagnosis is a synucleinopathy (such as Parkinson's disease or multiple system atrophy); therefore, the most likely finding on further workup is alpha-synuclein aggregates on brain biopsy (Option A).",
+      "pattern": "C",
+      "notes": "Conclusion linked to supporting clinical premises."
+    },
+    {
+      "source_claims": [
+        9,
+        18
+      ],
+      "output": "The approach to the question involves breaking down the key information and using the patient's symptoms to evaluate the provided options.",
+      "pattern": "A",
+      "notes": "Grouping procedural steps of the reasoning process."
+    }
+  ]
+}

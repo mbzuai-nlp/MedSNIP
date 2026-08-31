@@ -1,0 +1,166 @@
+{
+  "entry_id": 106,
+  "batch_id": 11,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 46-year-old man presents with his wife to his primary care provider for depression and strange movements. His wife reports that her husband has not been himself for the last 2 months. Whereas he was previously outgoing and “the life of the party,” the patient is now irritable and withdrawn. He is a partner at an accounting firm, but his colleagues are threatening to fire him if he continues to perform poorly at work. The patient cannot explain the recent changes to his mood and tearfully admits he fears there is something seriously wrong with him. His wife says that he is getting worse. The patient’s medical history is significant for hypertension, for which he takes lisinopril. His family history is unknown as he was adopted. The patient met his mother once and never knew his father but was told he died in his 50s. He drinks a few glasses of wine per week and has never smoked. His temperature is 98.6°F (37°C), blood pressure is 141/87 mmHg, pulse is 81/min, and respirations are 12/min. On physical exam, the patient has a flat affect with a facial grimace and sudden jerky movements of his upper extremities. Which of the following is most likely to be seen on further workup? (A) Alpha-synuclein aggregates on brain biopsy (B) Dorsal striatum atrophy on head CT (C) Frontotemporal atrophy on head CT (D) Neurofibrillary tangles on brain biopsy (E) Positive 14-3-3 CSF assay",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2901,
+    "output_tokens": 938,
+    "cached_input_tokens": 0,
+    "cost": 0.00073357
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2901,
+      "output_tokens": 938,
+      "cached_input_tokens": 0,
+      "cost": 0.00073357
+    }
+  ],
+  "shared_context": {
+    "age": "46",
+    "sex": "man",
+    "chief_complaint": "depression and strange movements",
+    "medical_history": "hypertension",
+    "medications": "lisinopril",
+    "vitals": "temp 98.6°F, BP 141/87 mmHg, pulse 81/min, respirations 12/min",
+    "exam_findings": "flat affect, facial grimace, sudden jerky movements of upper extremities",
+    "correct_answer": "Dorsal striatum atrophy on head CT (B)"
+  },
+  "sentences": [
+    "To answer the multiple-choice question provided, we need to take a detailed, step-by-step approach by analyzing the patient's symptoms, medical history, and physical examination findings",
+    "Step 1: Identifying key clinical features",
+    "Depression and personality changes over the last 2 months",
+    "Irritability and withdrawal",
+    "Poor performance at work",
+    "Tearful and fearful of his worsening condition",
+    "Facial grimace and sudden jerky movements of the upper extremities, indicative of choreiform movements",
+    "Step 2: Considering the differential diagnosis",
+    "Given the combination of psychiatric symptoms (depression, irritability, withdrawal) and neurological signs (facial grimace, chorea), a neurodegenerative disorder should be considered",
+    "Step 3: Reviewing the options and matching them to the likely diagnosis",
+    "(A) Alpha-synuclein aggregates on brain biopsy: This is associated with Parkinson’s disease and Lewy body dementia, which typically present with rigidity, bradykinesia, and cognitive fluctuations, not chorea",
+    "(B) Dorsal striatum atrophy on head CT: This finding is characteristic of Huntington’s disease, which presents with psychiatric symptoms, cognitive decline, and choreiform movements",
+    "(C) Frontotemporal atrophy on head CT: Frontotemporal dementia presents primarily with personality changes and language deficits, without the choreiform movements",
+    "(D) Neurofibrillary tangles on brain biopsy: This is associated with Alzheimer’s disease, which does not typically present with chorea",
+    "(E) Positive 14-3-3 CSF assay: This is a marker for Creutzfeldt-Jakob disease, which presents with rapidly progressive dementia, myoclonus, and other neurological signs, but not typically chorea",
+    "Step 4: Selecting the most likely diagnosis based on the above analysis",
+    "Huntington’s disease is the most likely diagnosis given the patient's combination of psychiatric symptoms and choreiform movements, which aligns with dorsal striatum atrophy on head CT",
+    "(B) Dorsal striatum atrophy on head CT"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "To analyze the case of this 46-year-old man with depression and strange movements, a step-by-step approach is taken by analyzing clinical features, history, and physical exam findings.",
+      "pattern": "D",
+      "notes": "Introductory procedural statement."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "This 46-year-old man presents with depression, personality changes (irritability and withdrawal), poor work performance, and fear of his worsening condition over the last 2 months.",
+      "pattern": "A",
+      "notes": "Enumeration of psychiatric/behavioral properties of the patient."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "The physical examination of this 46-year-old man reveals a facial grimace and sudden jerky movements of the upper extremities, indicative of choreiform movements.",
+      "pattern": "D",
+      "notes": "Standalone exam finding interpretation."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "Given the combination of psychiatric symptoms (depression, irritability, withdrawal) and neurological signs (facial grimace, chorea) in this 46-year-old man, a neurodegenerative disorder should be considered.",
+      "pattern": "B",
+      "notes": "Causal link between findings and differential consideration."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "The available options are reviewed to match them to the likely diagnosis.",
+      "pattern": "D",
+      "notes": "Procedural step."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Alpha-synuclein aggregates on brain biopsy are associated with Parkinson’s disease and Lewy body dementia, which typically present with rigidity, bradykinesia, and cognitive fluctuations, rather than chorea.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Alpha-synuclein/PD/LBD."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Dorsal striatum atrophy on head CT is characteristic of Huntington’s disease, which presents with psychiatric symptoms, cognitive decline, and choreiform movements.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Huntington's disease."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Frontotemporal atrophy on head CT is seen in frontotemporal dementia, which presents primarily with personality changes and language deficits without choreiform movements.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of FTD."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Neurofibrillary tangles on brain biopsy are associated with Alzheimer’s disease, which does not typically present with chorea.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Alzheimer's."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "A positive 14-3-3 CSF assay is a marker for Creutzfeldt-Jakob disease, which presents with rapidly progressive dementia, myoclonus, and other neurological signs, but not typically chorea.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of CJD."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "The most likely diagnosis is then selected based on the previous analysis.",
+      "pattern": "D",
+      "notes": "Procedural step."
+    },
+    {
+      "source_sentences": [
+        16,
+        17
+      ],
+      "output": "In this 46-year-old man, Huntington’s disease is the most likely diagnosis given the combination of psychiatric symptoms and choreiform movements, which aligns with dorsal striatum atrophy on head CT (Option B).",
+      "pattern": "C",
+      "notes": "Conclusion based on clinical reasoning."
+    }
+  ]
+}

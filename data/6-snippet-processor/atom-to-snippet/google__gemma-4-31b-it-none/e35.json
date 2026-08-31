@@ -1,0 +1,163 @@
+{
+  "entry_id": 35,
+  "batch_id": 4,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 57-year-old man presents to the emergency department for weight loss and abdominal pain. The patient has felt steadily more fatigued over the past month and has lost 22 pounds without effort. Today, he fainted prompting his presentation. The patient has no significant medical history. He does have a 33-pack-year smoking history and drinks 4 to 5 alcoholic drinks per day. His temperature is 99.5°F (37.5°C), blood pressure is 100/58 mmHg, pulse is 100/min, respirations are 17/min, and oxygen saturation is 98% on room air. The patient is very thin and appears pale. Stool fecal occult blood testing is positive. A CT scan of the abdomen is performed demonstrating a mass in the colon with multiple metastatic lesions scattered throughout the abdomen. The patient is informed of his diagnosis of metastatic colon cancer. When the patient conveys the information to his family, he focuses his efforts on discussing the current literature in the field and the novel therapies that have been invented. He demonstrates his likely mortality outcome which he calculated using the results of a large multi-center study. Which of the following is this patient most likely demonstrating? (A) Dissociation (B) Intellectualization (C) Optimism (D) Pessimism (E) Rationalization",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4501,
+    "output_tokens": 810,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1801,
+      "output_tokens": 482,
+      "cached_input_tokens": 0,
+      "cost": 0.00041729
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2700,
+      "output_tokens": 328,
+      "cached_input_tokens": 0,
+      "cost": 0.00047564
+    }
+  ],
+  "shared_context": {
+    ",": "none",
+    "age": 57,
+    "sex": "male",
+    "chief_complaint": "weight loss, abdominal pain, syncope",
+    "medical_history": "33-pack-year smoking history, alcohol use (4-5 drinks/day)",
+    "vitals": "temp 99.5°F, BP 100/58 mmHg, pulse 100/min, resp 17/min, SpO2 98%",
+    "exam_findings": "thin, pale, positive fecal occult blood",
+    "treatment_history": "CT scan demonstrated colon mass with abdominal metastases",
+    "correct_answer": "Intellectualization"
+  },
+  "sentences": [
+    "To answer this question, we need to analyze the patient's behavior and determine which coping mechanism he is exhibiting",
+    "The patient is a 57-year-old man who has just been diagnosed with metastatic colon cancer",
+    "Despite his serious diagnosis, he focuses on discussing the current literature in the field and the novel therapies that have been invented",
+    "He also demonstrates his likely mortality outcome by calculating the results of a large multi-center study",
+    "This behavior suggests that he is attempting to intellectualize his situation",
+    "Intellectualization is a defense mechanism that involves using intellectual reasoning to detach oneself from one's emotions and reactions to a difficult situation",
+    "In this case, the patient is using his knowledge of medical literature and statistics to distract himself from the emotional impact of his diagnosis",
+    "(B) Intellectualization",
+    "This behavior is consistent with intellectualization, which is characterized by a rational and detached approach to a difficult situation"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's behavior must be analyzed to determine which coping mechanism he is exhibiting.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient is a 57-year-old man diagnosed with metastatic colon cancer.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Despite his diagnosis, the patient focuses on discussing current literature and novel therapies in the field.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient demonstrates his likely mortality outcome by calculating results from a large multi-center study.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's behavior suggests he is attempting to intellectualize his situation.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Intellectualization is a defense mechanism involving the use of intellectual reasoning to detach oneself from emotions and reactions to a difficult situation.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient is using medical literature and statistics to distract himself from the emotional impact of his diagnosis.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The most likely answer is (B) Intellectualization.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "This behavior is consistent with intellectualization, which is characterized by a rational and detached approach to a difficult situation.",
+      "source_sentences": [
+        8
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "To determine the coping mechanism being exhibited, the behavior of this 57-year-old man diagnosed with metastatic colon cancer must be analyzed.",
+      "pattern": "B",
+      "notes": "Causal chain linking patient identity to the need for analysis."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Despite his diagnosis of metastatic colon cancer, this 57-year-old man focuses on discussing current literature and novel therapies in the field and calculates his likely mortality outcome using results from a large multi-center study.",
+      "pattern": "A",
+      "notes": "Enumeration of properties/behaviors of the same subject."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "The patient's behavior suggests he is attempting to intellectualize his situation, a defense mechanism involving the use of intellectual reasoning to detach oneself from emotions and reactions to a difficult situation; specifically, this 57-year-old man is using medical literature and statistics to distract himself from the emotional impact of his diagnosis.",
+      "pattern": "C",
+      "notes": "Conclusion (intellectualization) supported by definition and application to case."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "The most likely answer is (B) Intellectualization, as this behavior is consistent with intellectualization, which is characterized by a rational and detached approach to a difficult situation.",
+      "pattern": "B",
+      "notes": "Conclusion connected to its justification via causal link."
+    }
+  ]
+}

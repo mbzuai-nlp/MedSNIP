@@ -1,0 +1,97 @@
+{
+  "entry_id": 237,
+  "batch_id": 24,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "If this is just muscle strain, how many days should I expect the pain to go away?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 1790,
+    "output_tokens": 457,
+    "cached_input_tokens": 1664,
+    "cost": 0.006965
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1790,
+      "output_tokens": 457,
+      "cached_input_tokens": 1664,
+      "cost": 0.006965
+    }
+  ],
+  "shared_context": {
+    "condition": "muscle strain"
+  },
+  "sentences": [
+    "Muscle strain is a common injury that can be caused by overuse, overstretching, or direct blows to the muscle",
+    "The duration of pain from muscle strain can vary depending on the severity of the injury and the individual's overall health",
+    "Mild muscle strains typically resolve on their own within 7-14 days",
+    "However, more severe strains may take longer to heal, often requiring 4-6 weeks or more for full recovery",
+    "Factors that can influence the healing time include the location of the strain, the severity of the injury, and the effectiveness of treatment",
+    "For example, strains in the lower back may take longer to heal than those in the upper body",
+    "It's essential to note that if the pain persists or worsens over time, it may be a sign of a more serious underlying condition, such as a herniated disc or a stress fracture",
+    "In such cases, medical attention should be sought"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Muscle strain is a common injury that can be caused by overuse, overstretching, or direct blows to the muscle.",
+      "pattern": "D",
+      "notes": "Standalone definition of muscle strain."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The duration of pain from muscle strain can vary depending on the severity of the injury and the individual's overall health.",
+      "pattern": "A",
+      "notes": "Enumeration of factors affecting the duration; one subject (pain duration)."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Mild muscle strains typically resolve on their own within 7-14 days.",
+      "pattern": "D",
+      "notes": "Standalone fact about mild muscle strain recovery."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "More severe muscle strains may take longer to heal, often requiring 4-6 weeks or more for full recovery.",
+      "pattern": "D",
+      "notes": "Standalone fact about more severe muscle strain recovery."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Factors that can influence the healing time of a muscle strain include the location of the strain, the severity of the injury, and the effectiveness of treatment. For example, strains in the lower back may take longer to heal than those in the upper body.",
+      "pattern": "A",
+      "notes": "Enumeration with example detailing factors influencing healing time."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "If the pain persists or worsens over time, it may be a sign of a more serious underlying condition, such as a herniated disc or a stress fracture. In such cases, medical attention should be sought.",
+      "pattern": "B",
+      "notes": "Causal: persistent/worsening pain may signal a serious condition requiring medical attention."
+    }
+  ]
+}

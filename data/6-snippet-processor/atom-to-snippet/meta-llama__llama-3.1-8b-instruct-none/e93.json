@@ -1,0 +1,355 @@
+{
+  "entry_id": 93,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "What is chlorhexidine?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2913,
+    "output_tokens": 1353,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1290,
+      "output_tokens": 646,
+      "cached_input_tokens": 0,
+      "cost": 5.164e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1623,
+      "output_tokens": 707,
+      "cached_input_tokens": 0,
+      "cost": 6.074e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "chlorhexidine",
+    "drug_a": "chlorhexidine"
+  },
+  "sentences": [
+    "Chlorhexidine is a disinfectant and antiseptic that is used for skin disinfection before surgery, to sterilize surgical instruments, and for various other medical and dental applications",
+    "It is effective against a range of microorganisms, but does not inactivate spores",
+    "Chlorhexidine is available in different formulations, including liquid and powder forms, and can be used to disinfect both the skin of patients and the hands of healthcare providers",
+    "Chlorhexidine has been used since the 1950s and has a broad spectrum of antiseptic activity",
+    "It is effective in preventing healthcare-associated infections (HAIs) and has been used in various applications, including skin cleansing, skin decolonization, preoperative showering and bathing, vascular catheter site preparation, and oral decontamination",
+    "Chlorhexidine has been reported to have a low risk of causing side effects such as skin irritation, teeth discoloration, and allergic reactions, similar to other topical antiseptics"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlorhexidine is a disinfectant and antiseptic.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "It is used for skin disinfection before surgery.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "It is used to sterilize surgical instruments.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "It is used for various other medical and dental applications.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "text": "It is effective against a range of microorganisms.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "It does not inactivate spores.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "text": "It is available in different formulations.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "It can be used to disinfect the skin of patients.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 9,
+      "text": "It can be used to disinfect the hands of healthcare providers.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 10,
+      "text": "It has been used since the 1950s.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 11,
+      "text": "It has a broad spectrum of antiseptic activity.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "text": "It is effective in preventing healthcare-associated infections (HAIs).",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 13,
+      "text": "It has been used in various applications.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 14,
+      "text": "It is used for skin cleansing.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 15,
+      "text": "It is used for skin decolonization.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 16,
+      "text": "It is used for preoperative showering and bathing.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 17,
+      "text": "It is used for vascular catheter site preparation.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 18,
+      "text": "It is used for oral decontamination.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 19,
+      "text": "It has a low risk of causing side effects.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 20,
+      "text": "It can cause skin irritation.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 21,
+      "text": "It can cause teeth discoloration.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 22,
+      "text": "It can cause allergic reactions.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "Chlorhexidine is a disinfectant and antiseptic used for skin disinfection before surgery, sterilizing surgical instruments, and various other medical and dental applications.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "It is effective against a range of microorganisms.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "It does not inactivate spores.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "It is available in different formulations.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "It can be used to disinfect the skin of patients and the hands of healthcare providers.",
+      "pattern": "A",
+      "notes": "Enumeration of uses."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "It has been used since the 1950s.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "It has a broad spectrum of antiseptic activity.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "It is effective in preventing healthcare-associated infections (HAIs).",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "It has been used in various applications.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "It is used for skin cleansing.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "It is used for skin decolonization.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "It is used for preoperative showering and bathing.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "It is used for vascular catheter site preparation.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "It is used for oral decontamination.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        19
+      ],
+      "output": "It has a low risk of causing side effects.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        20
+      ],
+      "output": "It can cause skin irritation.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        21
+      ],
+      "output": "It can cause teeth discoloration.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        22
+      ],
+      "output": "It can cause allergic reactions.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    }
+  ]
+}

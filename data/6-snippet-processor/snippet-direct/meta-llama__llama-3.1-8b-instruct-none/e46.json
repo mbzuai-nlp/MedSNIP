@@ -1,0 +1,94 @@
+{
+  "entry_id": 46,
+  "batch_id": 5,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "How do I know if its a canker sore versus herpes",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1898,
+    "output_tokens": 536,
+    "cached_input_tokens": 0,
+    "cost": 5.94e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1898,
+      "output_tokens": 536,
+      "cached_input_tokens": 0,
+      "cost": 5.94e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "distinguishing between canker sore and herpes",
+    "condition": "oral mucosa",
+    "symptom": "lesions"
+  },
+  "sentences": [
+    "The distinction between a canker sore and herpes can be challenging, but there are several clinical features that can help differentiate between the two",
+    "Generally, canker sores are more common and usually present as a single lesion within the oral cavity, whereas herpes infections often present with multiple lesions",
+    "Canker sores typically heal within 7-14 days and are limited to the oral mucosa, whereas herpes infections can persist for longer and are associated with viral shedding",
+    "Patients with canker sores often report a history of recurring lesions, whereas those with herpes infections may report a history of multiple episodes of oral or genital herpes",
+    "Other distinguishing features include the presence of prodromal symptoms, which are often reported by patients with herpes infections but not typically with canker sores",
+    "In terms of clinical presentation, canker sores are typically smaller and more shallow, with a well-defined border, whereas herpes lesions can be larger and more diffuse, with a less distinct border",
+    "However, it is essential to note that these features are not always reliable, and a definitive diagnosis often requires laboratory confirmation",
+    "Laboratory tests can help differentiate between the two; for example, a viral culture or PCR can confirm the presence of herpes simplex virus",
+    "It is also worth noting that some patients may experience overlapping symptoms, making it challenging to make a definitive diagnosis without further testing"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The distinction between a canker sore and herpes can be challenging, but there are several clinical features that can help differentiate between the two.",
+      "pattern": "A",
+      "notes": "Enumeration of clinical features; one subject (the distinction)."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Canker sores are typically more common and present as a single lesion within the oral cavity, whereas herpes infections often present with multiple lesions.",
+      "pattern": "B",
+      "notes": "Causal chain (one vs multiple lesions); merged because each piece needs the other for verifiability."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Canker sores typically heal within 7-14 days and are limited to the oral mucosa, whereas herpes infections can persist for longer and are associated with viral shedding.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises (healing time and location); merged because each piece is needed for a complete understanding."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Other distinguishing features include the presence of prodromal symptoms, which are often reported by patients with herpes infections but not typically with canker sores, and the clinical presentation, which can be smaller and more shallow with a well-defined border for canker sores, whereas herpes lesions can be larger and more diffuse with a less distinct border.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises (prodromal symptoms and clinical presentation); merged because each piece is needed for a complete understanding."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        8
+      ],
+      "output": "However, it is essential to note that these features are not always reliable, and a definitive diagnosis often requires laboratory confirmation, which can be done through a viral culture or PCR to confirm the presence of herpes simplex virus, and some patients may experience overlapping symptoms, making it challenging to make a definitive diagnosis without further testing.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises (reliability of features and need for laboratory confirmation); merged because each piece is needed for a complete understanding."
+    }
+  ]
+}

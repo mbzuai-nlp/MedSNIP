@@ -20,17 +20,12 @@ Reads:
 
 Writes:
   data/6-snippet-processor/results.json
-  data/6-snippet-processor/results.md
-  data/6-snippet-processor/plots/*.png
 """
 import json
 import statistics
 from collections import defaultdict
 from pathlib import Path
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import numpy as np
 from rouge_score import rouge_scorer
 from sentence_transformers import SentenceTransformer, util
@@ -38,10 +33,12 @@ from sentence_transformers import SentenceTransformer, util
 ROOT = Path(__file__).resolve().parents[3]
 ANNOTATED_PATH = ROOT / "data" / "3-annotated" / "medsnip-bench.json"
 DATA_DIR = ROOT / "data" / "6-snippet-processor"
+# Where results are written. Overridable with --out-dir so evaluating a
+# second decomposer cannot clobber the published GPT-5.4 results.
+OUT_DIR = DATA_DIR
 ALIGN_PATH = DATA_DIR / "sentence_alignment.json"
 
 MODES = ("atom-to-snippet", "snippet-direct")
-MODE_COLORS = {"atom-to-snippet": "#4C72B0", "snippet-direct": "#55A868"}
 
 
 # ---------------------------------------------------------------------------
@@ -77,9 +74,14 @@ def aggregate_human(rows: list[dict]) -> dict[int, dict]:
     return by
 
 
-def load_outputs(mode: str) -> dict[int, dict]:
+def load_outputs(mode: str, model_slug: str | None = None) -> dict[int, dict]:
+    """Read per-entry JSONs from `DATA_DIR / mode / [model_slug] /`.
+
+    If `model_slug` is given (e.g. "gpt-5.4-high"), read from that nested
+    subdir. Otherwise fall back to the legacy flat layout `DATA_DIR / mode /`.
+    """
     out: dict[int, dict] = {}
-    mode_dir = DATA_DIR / mode
+    mode_dir = DATA_DIR / mode / model_slug if model_slug else DATA_DIR / mode
     if not mode_dir.exists():
         return out
     for f in sorted(mode_dir.glob("e*.json")):
@@ -214,97 +216,25 @@ def aggregate(per_entry: list[dict]) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# plots + markdown
-# ---------------------------------------------------------------------------
-
-def _write_plots(per_entry):
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-
-    fig, ax = plt.subplots(figsize=(8, 4))
-    for m in MODES:
-        if m not in per_entry:
-            continue
-        f1s = [p["sent_f1"] for e in per_entry[m] for p in e.get("pairs", [])]
-        if f1s:
-            ax.hist(f1s, bins=30, alpha=0.6, label=f"{m} (n={len(f1s)})",
-                    color=MODE_COLORS[m])
-    ax.set_xlabel("Sentence-set F1 (predicted snippet ↔ best human snippet)")
-    ax.set_ylabel("# snippet pairs")
-    ax.set_title("Clustering agreement with human gold")
-    ax.legend()
-    fig.tight_layout()
-    fig.savefig(DATA_DIR / "sentence_f1_distribution.png", dpi=130)
-    plt.close(fig)
-
-    fig, axes = plt.subplots(1, len(MODES), figsize=(5 * len(MODES), 4))
-    if len(MODES) == 1:
-        axes = [axes]
-    for ax, m in zip(axes, MODES):
-        if m not in per_entry:
-            continue
-        xs = [e["n_human"] for e in per_entry[m]]
-        ys = [e["n_pred"]  for e in per_entry[m]]
-        ax.scatter(xs, ys, alpha=0.6, color=MODE_COLORS[m])
-        lim = max(max(xs, default=1), max(ys, default=1)) + 1
-        ax.plot([0, lim], [0, lim], color="grey", linestyle="--", linewidth=1)
-        ax.set_xlabel("# human snippets")
-        ax.set_ylabel("# predicted snippets")
-        ax.set_title(f"{m}: snippet count per entry")
-        ax.set_xlim(0, lim)
-        ax.set_ylim(0, lim)
-    fig.tight_layout()
-    fig.savefig(DATA_DIR / "snippet_count_scatter.png", dpi=130)
-    plt.close(fig)
-
-
-def _write_md(summary, n_entries):
-    md = []
-    md.append("# Snippet Processor — Sentence-Grounded Evaluation\n")
-    md.append(f"Evaluated **{n_entries}** entries against human gold "
-              f"(data/3-annotated/medsnip-bench.json).\n")
-    md.append("Evaluation currency: **sentence indices** into a deterministic "
-              "segmentation of `full_text` (see sentence_utils.py). Gold atoms are "
-              "pre-mapped to sentence indices once (sentence_alignment.json), so "
-              "all snippet comparisons are on the same currency — no embedding "
-              "alignment.\n")
-    md.append("## Pipelines\n")
-    md.append("| Mode | Input | API calls | Role |")
-    md.append("|---|---|---|---|")
-    md.append("| **atom-to-snippet** | `(query, full_text)` | **2** | Default. Sentence-split → extract atoms (+ shared_context) → cluster atoms into snippets. Mirrors the human annotation workflow. |")
-    md.append("| **snippet-direct** | `(query, full_text)` | **1** | Single-pass: sentences directly to snippets + shared_context. Cheaper; slightly weaker on dense consumer responses. |")
-    md.append("")
-    md.append("## Headline numbers (sentence-set F1)\n")
-    md.append("| Mode | sent F1 | sent P | sent R | embed cos | ROUGE-L | n pred / human |")
-    md.append("|---|---|---|---|---|---|---|")
-    for m in MODES:
-        s = summary.get(m)
-        if not s or not s.get("n_pairs"):
-            continue
-        md.append(f"| {m} | **{s['sent_f1_mean']:.3f}** | {s['sent_precision_mean']:.3f} "
-                  f"| {s['sent_recall_mean']:.3f} | {s['embedding_cosine_mean']:.3f} "
-                  f"| {s['rouge_l_f1_mean']:.3f} "
-                  f"| {s['n_pred_snippets_total']} / {s['n_human_snippets_total']} |")
-    md.append("")
-    md.append("![Sentence F1](sentence_f1_distribution.png)\n")
-    md.append("![Snippet count](snippet_count_scatter.png)\n")
-    md.append("## By subset\n")
-    md.append("| Mode | consumer F1 | vignette F1 |")
-    md.append("|---|---|---|")
-    for m in MODES:
-        s = summary.get(m)
-        if not s or not s.get("n_pairs"):
-            continue
-        bs = s["sent_f1_by_subset"]
-        md.append(f"| {m} | {bs.get('consumer', 0.0):.3f} | {bs.get('vignette', 0.0):.3f} |")
-    md.append("")
-    (DATA_DIR / "results.md").write_text("\n".join(md))
-
-
-# ---------------------------------------------------------------------------
 # main
 # ---------------------------------------------------------------------------
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--model-slug", default=None,
+                    help="read from data/6-snippet-processor/<mode>/<slug>/ "
+                         "(e.g. 'gpt-5.4-high'); omit for legacy flat layout")
+    ap.add_argument("--out-dir", default=None,
+                    help="write results here instead of data/6-snippet-processor/ "
+                         "(use when evaluating a non-default decomposer)")
+    args = ap.parse_args()
+
+    global OUT_DIR
+    if args.out_dir:
+        OUT_DIR = Path(args.out_dir)
+        OUT_DIR.mkdir(parents=True, exist_ok=True)
+
     if not ALIGN_PATH.exists():
         raise SystemExit(
             f"missing {ALIGN_PATH}; run "
@@ -316,7 +246,7 @@ def main():
     print(f"loaded {len(human_entries)} human entries, "
           f"{len(alignment)} alignment records")
 
-    pred = {m: load_outputs(m) for m in MODES}
+    pred = {m: load_outputs(m, args.model_slug) for m in MODES}
     for m in MODES:
         print(f"  {m}: {len(pred[m])} entries on disk")
 
@@ -344,12 +274,10 @@ def main():
 
     summary = {m: aggregate(per_entry[m]) for m in MODES}
 
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    (DATA_DIR / "results.json").write_text(
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    (OUT_DIR / "results.json").write_text(
         json.dumps({"summary": summary, "per_entry": per_entry}, indent=2)
     )
-    _write_plots(per_entry)
-    _write_md(summary, len(common))
 
     print("\n=== summary (sentence-set F1) ===")
     for m in MODES:

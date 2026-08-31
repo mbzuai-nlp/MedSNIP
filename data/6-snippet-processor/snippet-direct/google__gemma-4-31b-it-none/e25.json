@@ -1,0 +1,136 @@
+{
+  "entry_id": 25,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to his primary care physician with a 6-month history of increasing lower back pain. He first felt the pain while lifting boxes at work but thought that he had just strained a muscle. The pain appears to be worse in the mornings and after rest. Exercise and physical activity appear to temporarily make the pain better. He has taken acetaminophen and ibuprofen for the pain. He has no significant medical history and takes no medications. His temperature is 98.6°F (37.0°C), blood pressure is 115/70 mmHg, pulse is 70/min, and respirations are 12/min. On physical exam, he is found to have limited flexion and extension of his spine as well as tenderness to palpation over the insertion of his patellar tendons bilaterally. Results from laboratory tests are shown below:\n\nSerum:\nErythrocyte sedimentation rate (ESR): 61 mm/hr\nC-reactive protein (CRP): 36 mg/L (normal <10 mg/L)\n\nWhich of the following is the most accurate test for this patient's condition? (A) Bone scan (B) Computed tomography (C) Magnetic resonance imaging (D) Radiograph (E) Ultrasound",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2856,
+    "output_tokens": 876,
+    "cached_input_tokens": 0,
+    "cost": 0.00070416
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2856,
+      "output_tokens": 876,
+      "cached_input_tokens": 0,
+      "cost": 0.00070416
+    }
+  ],
+  "shared_context": {
+    ":": "26-year-old man",
+    "chief_complaint": "6-month history of increasing lower back pain",
+    "medical_history": "none significant",
+    "vitals": "T 98.6 F, BP 115/70 mmHg, HR 70/min, RR 12/min",
+    "exam_findings": "limited spinal flexion and extension; bilateral patellar tendon insertion tenderness",
+    "laboratory_results": "ESR 61 mm/hr, CRP 36 mg/L",
+    "correct_answer": "Radiograph (D)"
+  },
+  "sentences": [
+    "To determine the most accurate test for this patient's condition, we need to consider his symptoms and laboratory results",
+    "The patient presents with a 6-month history of increasing lower back pain that worsens in the mornings and after rest, and improves with exercise and physical activity",
+    "This pattern of pain is suggestive of a mechanical cause, such as a musculoskeletal strain or a degenerative joint disease",
+    "The limited flexion and extension of his spine, as well as tenderness to palpation over the insertion of his patellar tendons bilaterally, support this diagnosis",
+    "The laboratory results show an elevated erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP) levels",
+    "While these tests are often used to assess for inflammation, their sensitivity and specificity are not ideal for diagnosing musculoskeletal conditions",
+    "A high ESR and CRP can be seen in various conditions, including infection, autoimmune diseases, and malignancies, so these results alone are not sufficient to make a definitive diagnosis",
+    "Considering the patient's symptoms and physical examination findings, the most accurate test for this patient's condition would be a radiograph (X-ray) of the lower back",
+    "Radiographs are useful for evaluating bone structure, detecting lytic lesions, and visualizing joint space narrowing",
+    "They are a good first-line imaging modality for musculoskeletal pain, especially when clinical findings are suggestive of a mechanical cause",
+    "Bone scans (A) are more sensitive for detecting bone metastases or osteomyelitis, but are not the best choice for evaluating musculoskeletal pain in this patient",
+    "Computed tomography (B) and magnetic resonance imaging (C) are more sensitive for detecting soft tissue injuries and may be more useful in cases where there is a high suspicion of a soft tissue injury or a specific diagnosis that would require imaging of these tissues",
+    "Ultrasound (E) is also not the best choice for evaluating musculoskeletal pain in this patient, as it is better suited for evaluating soft tissue injuries and conditions that affect the musculoskeletal system",
+    "In summary, the most accurate test for this patient's condition is a radiograph of the lower back, as it is a good first-line imaging modality for evaluating musculoskeletal pain and detecting lytic lesions or joint space narrowing"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most accurate test for this 26-year-old man with lower back pain and elevated inflammatory markers, his symptoms and laboratory results must be considered.",
+      "pattern": "D",
+      "notes": "Introductory setup; patient context inlined."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3
+      ],
+      "output": "This 26-year-old man presents with a 6-month history of increasing lower back pain that worsens in the mornings and after rest and improves with exercise, combined with limited spinal flexion/extension and bilateral patellar tendon tenderness, which is suggestive of a mechanical cause such as a musculoskeletal strain or degenerative joint disease.",
+      "pattern": "C",
+      "notes": "Conclusion of mechanical cause based on specific symptoms and exam findings."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6
+      ],
+      "output": "The laboratory results for this 26-year-old man show an elevated erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP) levels; however, because high ESR and CRP can be seen in various conditions including infection, autoimmune diseases, and malignancies, these results alone are not sufficient for a definitive diagnosis and their sensitivity/specificity are not ideal for musculoskeletal conditions.",
+      "pattern": "B",
+      "notes": "Causal chain explaining why lab results are non-definitive."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Considering the symptoms and physical examination findings of this 26-year-old man, the most accurate test for his condition would be a radiograph (X-ray) of the lower back.",
+      "pattern": "C",
+      "notes": "Conclusion/recommendation based on prior premises."
+    },
+    {
+      "source_sentences": [
+        8,
+        9
+      ],
+      "output": "Radiographs are useful for evaluating bone structure, detecting lytic lesions, and visualizing joint space narrowing, making them a good first-line imaging modality for musculoskeletal pain, especially when clinical findings suggest a mechanical cause.",
+      "pattern": "A",
+      "notes": "Enumeration of properties and uses of radiographs."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Bone scans are more sensitive for detecting bone metastases or osteomyelitis, but are not the best choice for evaluating musculoskeletal pain in this 26-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of one option."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Computed tomography and magnetic resonance imaging are more sensitive for detecting soft tissue injuries and may be more useful in cases where there is a high suspicion of a soft tissue injury or a specific diagnosis requiring soft tissue imaging.",
+      "pattern": "D",
+      "notes": "Standalone evaluation of CT and MRI."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Ultrasound is not the best choice for evaluating musculoskeletal pain in this 26-year-old man, as it is better suited for evaluating soft tissue injuries and conditions affecting the musculoskeletal system.",
+      "pattern": "B",
+      "notes": "Causal link (as it is better suited...) explaining why it is not the best choice."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "In summary, the most accurate test for this 26-year-old man's condition is a radiograph of the lower back, as it is a good first-line imaging modality for evaluating musculoskeletal pain and detecting lytic lesions or joint space narrowing.",
+      "pattern": "C",
+      "notes": "Final summary conclusion with supporting reasoning."
+    }
+  ]
+}

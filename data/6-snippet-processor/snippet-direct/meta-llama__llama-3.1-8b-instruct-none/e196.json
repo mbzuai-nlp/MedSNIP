@@ -1,0 +1,159 @@
+{
+  "entry_id": 196,
+  "batch_id": 20,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 15-year-old boy presents to his pediatrician after an appendectomy 1 week ago. The patient denies any abdominal pain, fevers, chills, nausea, vomiting, diarrhea, or constipation. He eats solids and drinks liquids without difficulty. He is back to playing basketball for his school team without any difficulty. His urine appears more amber than usual but he suspects dehydration. His temperature is 98.6°F (37°C), blood pressure is 110/70 mmHg, pulse is 76/min, and respirations are 15/min. His physical exam is unremarkable. The laparoscopic incision sites are all clean without erythema. The pediatrician orders a urinalysis, which is notable for the following. Urine: Epithelial cells: Scant Glucose: Negative Protein: 3+ WBC: 3/hpf Bacteria: None Leukocyte esterase: Negative Nitrites: Negative The patient is told to return in 3 days for a follow-up appointment; however, his urinalysis at that time is similar. Which of the following is the most appropriate next step in management? (A) CT scan abdomen and pelvis with contrast (B) Renal biopsy (C) Repeat urinalysis (D) Urine dipstick in the morning and in the afternoon (E) Urine electrolytes and creatinine",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2742,
+    "output_tokens": 1012,
+    "cached_input_tokens": 0,
+    "cost": 9.532e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2742,
+      "output_tokens": 1012,
+      "cached_input_tokens": 0,
+      "cost": 9.532e-05
+    }
+  ],
+  "shared_context": {
+    "age": "15",
+    "sex": "male",
+    "chief_complaint": "persistent proteinuria after appendectomy",
+    "medical_history": "appendectomy 1 week ago, no current symptoms of abdominal pain, fever, or gastrointestinal disturbances",
+    "vitals": "98.6°F (37°C), blood pressure 110/70 mmHg, pulse 76/min, respirations 15/min",
+    "exam_findings": "unremarkable physical exam, laparoscopic incision sites clean without erythema",
+    "correct_answer": "D"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in the management of this 15-year-old boy with persistent proteinuria on two consecutive urinalyses, we need to analyze the provided clinical information and consider relevant medical guidelines",
+    "Patient's recent history of appendectomy with no current symptoms of abdominal pain, fever, or gastrointestinal disturbances",
+    "Physical exam is unremarkable, and incision sites are clean",
+    "Urinalysis from two different instances showed persistent proteinuria (3+), with scant epithelial cells, no glucose, few WBCs (3/hpf), no bacteria, and negative leukocyte esterase and nitrites",
+    "The most significant finding here is persistent proteinuria",
+    "Persistent proteinuria in an adolescent could be indicative of underlying renal pathology, but it is essential to assess whether this proteinuria is transient or orthostatic (postural), as well as to rule out more serious conditions",
+    "Repeat Urinalysis: Simply repeating the urinalysis without any changes in the testing protocol might not provide additional information",
+    "CT Scan: A CT scan may be utilized in cases where structural abnormalities are suspected, but it is not the first-line investigation for isolated persistent proteinuria without other clinical indications of renal pathology",
+    "Renal Biopsy: A renal biopsy is a more invasive procedure and typically indicated if there is a high suspicion of intrinsic renal disease or if initial less invasive assessments suggest significant pathology",
+    "Urine Dipstick Testing: Performing urine dipstick tests at different times of the day (morning and afternoon) will help determine if the proteinuria is orthostatic, which is a benign and common condition in adolescents",
+    "Urine Electrolytes and Creatinine: These tests can give additional information about renal function but are not the primary step in distinguishing orthostatic proteinuria from persistent proteinuria",
+    "Given the clinical details and considering the least invasive and most informative next step, urine dipstick testing in the morning and in the afternoon is appropriate",
+    "This helps to differentiate orthostatic proteinuria from persistent proteinuria",
+    "Orthostatic proteinuria typically shows proteinuria in the afternoon while morning samples are negative",
+    "Answer: (D) Urine dipstick in the morning and in the afternoon"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate next step in the management of this 15-year-old boy with persistent proteinuria on two consecutive urinalyses, we need to analyze the provided clinical information and consider relevant medical guidelines.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement; demographics inlined."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The patient's recent history of appendectomy with no current symptoms of abdominal pain, fever, or gastrointestinal disturbances is notable.",
+      "pattern": "D",
+      "notes": "Standalone clinical detail; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4
+      ],
+      "output": "The urinalysis from two different instances showed persistent proteinuria (3+), with scant epithelial cells, no glucose, few WBCs (3/hpf), no bacteria, and negative leukocyte esterase and nitrites; the most significant finding here is persistent proteinuria.",
+      "pattern": "A",
+      "notes": "All properties of one subject (urinalysis findings)."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Persistent proteinuria in an adolescent could be indicative of underlying renal pathology, but it is essential to assess whether this proteinuria is transient or orthostatic (postural), as well as to rule out more serious conditions.",
+      "pattern": "D",
+      "notes": "Standalone differential characterization."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Repeat Urinalysis: Simply repeating the urinalysis without any changes in the testing protocol might not provide additional information.",
+      "pattern": "D",
+      "notes": "Standalone statement; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "A CT scan may be utilized in cases where structural abnormalities are suspected, but it is not the first-line investigation for isolated persistent proteinuria without other clinical indications of renal pathology.",
+      "pattern": "D",
+      "notes": "Standalone statement; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "A renal biopsy is a more invasive procedure and typically indicated if there is a high suspicion of intrinsic renal disease or if initial less invasive assessments suggest significant pathology.",
+      "pattern": "D",
+      "notes": "Standalone statement; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Performing urine dipstick tests at different times of the day (morning and afternoon) will help determine if the proteinuria is orthostatic, which is a benign and common condition in adolescents.",
+      "pattern": "D",
+      "notes": "Standalone recommendation; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "These tests can give additional information about renal function but are not the primary step in distinguishing orthostatic proteinuria from persistent proteinuria.",
+      "pattern": "D",
+      "notes": "Standalone statement; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "Given the clinical details and considering the least invasive and most informative next step, urine dipstick testing in the morning and in the afternoon is appropriate; this helps to differentiate orthostatic proteinuria from persistent proteinuria.",
+      "pattern": "A",
+      "notes": "All properties of one subject (recommendation for urine dipstick testing)."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Orthostatic proteinuria typically shows proteinuria in the afternoon while morning samples are negative.",
+      "pattern": "D",
+      "notes": "Standalone statement; patient details inlined."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Answer: (D) Urine dipstick in the morning and in the afternoon",
+      "pattern": "C",
+      "notes": "Conclusion with patient context inlined."
+    }
+  ]
+}

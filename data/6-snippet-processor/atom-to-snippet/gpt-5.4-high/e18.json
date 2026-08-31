@@ -1,0 +1,113 @@
+{
+  "entry_id": 18,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "What is the most safe amount of Advil to take at one time",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2685,
+    "output_tokens": 1328,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1171,
+      "output_tokens": 766,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1514,
+      "output_tokens": 562,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "safest amount of Advil to take at one time",
+    "drug_a": "Advil (ibuprofen)",
+    "condition": "pain relief"
+  },
+  "sentences": [
+    "The safest amount of Advil (ibuprofen) to take at one time, for an adult, is 400 mg",
+    "This dosage is generally effective for pain relief and is the standard over-the-counter dose",
+    "It is important to not exceed this amount unless directed by a healthcare provider, as higher doses can increase the risk of adverse effects such as gastrointestinal bleeding, kidney damage, and cardiovascular issues"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "For an adult, the safest amount of Advil (ibuprofen) to take at one time is 400 mg.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "A 400 mg dosage of Advil (ibuprofen) is generally effective for pain relief.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A 400 mg dosage of Advil (ibuprofen) is the standard over-the-counter dose.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "An adult should not exceed 400 mg of Advil (ibuprofen) at one time unless directed by a healthcare provider.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Higher doses of Advil (ibuprofen) can increase the risk of gastrointestinal bleeding.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Higher doses of Advil (ibuprofen) can increase the risk of kidney damage.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Higher doses of Advil (ibuprofen) can increase the risk of cardiovascular issues.",
+      "source_sentences": [
+        2
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "For an adult, 400 mg of Advil (ibuprofen) is the safest amount to take at one time; this dose is generally effective for pain relief, is the standard over-the-counter dose, and adults should not exceed 400 mg at one time unless directed by a healthcare provider.",
+      "pattern": "C",
+      "notes": "Main dosing recommendation grouped with the supporting facts that explain why 400 mg is presented as the safest one-time adult dose."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Higher doses of Advil (ibuprofen) can increase the risk of gastrointestinal bleeding, kidney damage, and cardiovascular issues.",
+      "pattern": "A",
+      "notes": "Enumeration of multiple risks associated with the same subject, higher ibuprofen doses."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "entry_id": 66,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 52-year-old man presents to the emergency department by ambulance for evaluation of hematemesis. His wife states that he began vomiting bright red blood this evening while eating dinner, and has produced about 5 cups total. He has a history of alcohol use disorder and has vomited small streaks of blood in the past, but has never undergone formal medical workup for it. On exam, he has bright red blood in his mouth and pharynx, and also displays a distended abdomen with a fluid wave, jaundice, scattered spider angiomas, and multiple ecchymoses. His temperature is 98.4°F (36.9°C), blood pressure is 98/68 mmHg, pulse is 125/min, and respirations are 22/min. A rapid point-of-care hemoglobin and platelet count is 8.8 g/dL and 80,000/mm^3, respectively. The patient is given 1L of normal saline. Which of the following is the most appropriate initial step in management? (A) Balloon tamponade (B) Ceftriaxone (C) Nadolol (D) Octreotide (E) Platelet transfusion",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2705,
+    "output_tokens": 1093,
+    "cached_input_tokens": 1920,
+    "cost": 0.0152925
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2705,
+      "output_tokens": 1093,
+      "cached_input_tokens": 1920,
+      "cost": 0.0152925
+    }
+  ],
+  "shared_context": {
+    "age": "52",
+    "sex": "male",
+    "chief_complaint": "hematemesis",
+    "medical_history": "alcohol use disorder",
+    "exam_findings": "bright red blood in mouth/pharynx, distended abdomen with fluid wave, jaundice, spider angiomas, multiple ecchymoses",
+    "vitals": "98.4°F, BP 98/68, pulse 125, respirations 22",
+    "lab_results": "hemoglobin 8.8 g/dL, platelets 80,000/mm^3",
+    "treatment_history": "1L of normal saline",
+    "correct_answer": "D (Octreotide)"
+  },
+  "sentences": [
+    "To determine the most appropriate initial step in management for the patient, let's break down the information provided and analyze it step by step",
+    "Initial Assessment: The patient presents with hematemesis (vomiting bright red blood), a history of alcohol use disorder, and signs of possible liver disease (jaundice, spider angiomas, ecchymoses)",
+    "Vital Signs: The patient's blood pressure is 98/68 mmHg, which is low, indicating hypotension",
+    "The heart rate is 125/min, which is tachycardic",
+    "Laboratory Results: The patient has a low hemoglobin of 8.8 g/dL and a low platelet count of 80,000/mm^3",
+    "Initial Management: The patient is given 1L of normal saline",
+    "Considering the patient's presentation and initial management, the primary concern is the need to stabilize the patient and address the cause of the bleeding",
+    "Balloon Tamponade: This is a procedure used to treat bleeding esophageal varices, which are a complication of liver disease",
+    "However, there is no indication that the patient has esophageal varices (no mention of a dilated esophagus or abdominal swelling due to ascites)",
+    "Ceftriaxone: This antibiotic is used to treat bacterial infections",
+    "While the patient has signs of possible liver disease, there is no indication of a bacterial infection",
+    "Nadolol: This is a beta-blocker used to manage bleeding varices",
+    "However, there is no indication that the patient has esophageal varices",
+    "Octreotide: This medication is used to treat bleeding varices and acute variceal hemorrhage",
+    "Given the patient's signs of possible liver disease and history of alcohol use disorder, this is a possible cause of the bleeding",
+    "Octreotide can help reduce blood flow to the gastrointestinal tract and potentially stop the bleeding",
+    "Platelet Transfusion: The patient's platelet count is 80,000/mm^3, which is low, but the primary concern is the immediate risk of severe bleeding, not just a low platelet count",
+    "Conclusion: Considering the patient's presentation and possible liver disease, the most appropriate initial step in management is to try to stop the bleeding",
+    "Among the options provided, Octreotide (D) is the most likely to be effective in this situation"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "This 52-year-old male presents with hematemesis, a history of alcohol use disorder, and signs of possible liver disease, including jaundice, spider angiomas, and ecchymoses.",
+      "pattern": "D",
+      "notes": "Standalone summary of patient's condition and history."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "The patient's vital signs show a low blood pressure of 98/68 mmHg, indicating hypotension, and a heart rate of 125/min, indicating tachycardia.",
+      "pattern": "A",
+      "notes": "Enumeration of vital sign abnormalities presenting a clinical picture of instability."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The 52-year-old male has a low hemoglobin of 8.8 g/dL and a low platelet count of 80,000/mm^3.",
+      "pattern": "D",
+      "notes": "Standalone laboratory results reflecting bleeding risk."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "This patient was given 1L of normal saline as an initial management step.",
+      "pattern": "D",
+      "notes": "Standalone initial treatment fact; no merging needed."
+    },
+    {
+      "source_sentences": [
+        6,
+        17
+      ],
+      "output": "Considering this 52-year-old male's presentation with hematemesis and possible liver disease, the primary concern is to stabilize him and address the cause of the bleeding. The most appropriate initial step in management is to try to stop the bleeding.",
+      "pattern": "B",
+      "notes": "Causal chain between the patient's condition and the need to act quickly to stop bleeding."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "Balloon tamponade is used to treat bleeding esophageal varices, which can be a complication of liver disease. However, there is no indication that this 52-year-old male has esophageal varices.",
+      "pattern": "B",
+      "notes": "Causal reasoning regarding when balloon tamponade is used and why it doesn't apply."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "Ceftriaxone is an antibiotic used to treat bacterial infections. In this 52-year-old male, while there are signs of liver disease, there's no indication of a bacterial infection.",
+      "pattern": "B",
+      "notes": "Causal and conditional evaluation of Ceftriaxone's relevance."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "Nadolol is a beta-blocker used to manage bleeding varices. However, there is no indication that this 52-year-old male has esophageal varices.",
+      "pattern": "B",
+      "notes": "Causal reasoning about when Nadolol is used and why it's not applicable here."
+    },
+    {
+      "source_sentences": [
+        13,
+        14,
+        15
+      ],
+      "output": "Octreotide is used to treat bleeding varices and acute variceal hemorrhage. Given this 52-year-old male's signs of possible liver disease and history of alcohol use disorder, varices are a possible cause of the bleeding. Octreotide can help reduce blood flow to the gastrointestinal tract and potentially stop the bleeding.",
+      "pattern": "B",
+      "notes": "Causal explanation linking Octreotide's action mechanism to potential effectiveness in this scenario."
+    },
+    {
+      "source_sentences": [
+        16
+      ],
+      "output": "Although this 52-year-old male has a low platelet count of 80,000/mm^3, the primary concern is the immediate risk of severe bleeding, not just a low platelet count.",
+      "pattern": "C",
+      "notes": "Conclusion about priority of concerns in management context; merging logic over a simple platelet transfusion rationale."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Among the management options for this 52-year-old male with hematemesis and liver disease signs, Octreotide (D) is the most likely to be effective.",
+      "pattern": "C",
+      "notes": "Final answer with patient context inlined; supports preceding differential analysis."
+    }
+  ]
+}

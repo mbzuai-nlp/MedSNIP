@@ -1,0 +1,174 @@
+{
+  "entry_id": 180,
+  "batch_id": 18,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to the emergency department with fatigue and dark urine over the past day. He was recently diagnosed with cellulitis of his left leg, for which he was prescribed trimethoprim-sulfamethoxazole. He denies having nausea, vomiting, or diarrhea. He has no significant medical history and does not currently take any medications. His temperature is 98.6°F (37°C), blood pressure is 115/72 mmHg, pulse is 98/min, and respirations are 14/min. Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg. Laboratory workup is performed, and the results are shown below: Serum: Hemoglobin: 7.2 g/dL Total bilirubin: 2.1 mg/dL Direct bilirubin: 0.8 mg/dL Lactate dehydrogenase: 470 U/L Glucose-6-phosphate dehydrogenase: 7 U/gHb (normal: 6-20 U/gHb) Which of the following would most likely be seen on a peripheral blood smear in this patient? (A) Acanthocytes (B) Codocytes (C) Degmacytes (D) Schistocytes (E) Spherocytes",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2846,
+    "output_tokens": 1019,
+    "cached_input_tokens": 0,
+    "cost": 0.0007572
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2846,
+      "output_tokens": 1019,
+      "cached_input_tokens": 0,
+      "cost": 0.0007572
+    }
+  ],
+  "shared_context": {
+    "age": "26",
+    "sex": "male",
+    "chief_complaint": "fatigue and dark urine",
+    "medical_history": "cellulitis of left leg",
+    "medications": "trimethoprim-sulfamethoxazole",
+    "vitals": "T 98.6°F, BP 115/72 mmHg, P 98/min, R 14/min",
+    "exam_findings": "conjunctival icterus, bilateral flank tenderness, erythema of left leg",
+    "treatment_history": "prescribed trimethoprim-sulfamethoxazole for cellulitis",
+    "correct_answer": "Spherocytes (E)"
+  },
+  "sentences": [
+    "To approach this question, let's break down the key information from the patient's presentation and lab results",
+    "The patient is presenting with fatigue and dark urine",
+    "Fatigue is a non-specific symptom that can be associated with various conditions, including anemia, which is suggested by the low hemoglobin level",
+    "The patient was recently diagnosed with cellulitis and prescribed trimethoprim-sulfamethoxazole",
+    "Trimethoprim-sulfamethoxazole can cause hemolysis in patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency",
+    "The patient's bilirubin levels are elevated, with a higher indirect fraction, indicating hemolysis",
+    "The direct bilirubin level is within the normal range",
+    "The lactate dehydrogenase (LDH) level is elevated, which is another indicator of hemolysis",
+    "The patient's G6PD level is normal, but the patient's ethnicity suggests that G6PD deficiency is a possible consideration, which was ruled out in this case",
+    "Given the presence of hemolysis, elevated lactate dehydrogenase, and the patient's recent use of a medication that can cause hemolysis in susceptible individuals, the most likely diagnosis is hemolytic anemia",
+    "Now, let's look at the options provided for the peripheral blood smear findings",
+    "Acanthocytes are usually associated with conditions such as abetalipoproteinemia and liver disease",
+    "Codocytes are associated with conditions that cause spherocytes or spherocyte-like changes, such as hereditary spherocytosis",
+    "Degmacytes are not a commonly used term in hematology",
+    "Schistocytes are fragmented RBCs that are seen in conditions such as microangiopathic hemolytic anemia and thrombotic thrombocytopenic purpura",
+    "Spherocytes are a hallmark feature of hereditary spherocytosis but can also be seen in conditions that cause oxidative stress and hemolysis",
+    "Considering the patient's recent use of trimethoprim-sulfamethoxazole and the presentation of hemolysis, the most likely peripheral blood smear finding would be spherocytes, which can be seen in conditions that cause oxidative stress and hemolysis",
+    "Answer: (E) Spherocytes"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The process involves breaking down key information from the 26-year-old male patient's presentation and lab results.",
+      "pattern": "D",
+      "notes": "Introductory procedural sentence."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "The 26-year-old male patient is presenting with fatigue and dark urine, where the fatigue is a non-specific symptom that can be associated with anemia, which is suggested by his low hemoglobin level of 7.2 g/dL.",
+      "pattern": "B",
+      "notes": "Causal link between symptom (fatigue) and lab finding (hemoglobin)."
+    },
+    {
+      "source_sentences": [
+        3,
+        4
+      ],
+      "output": "The 26-year-old male patient was recently diagnosed with cellulitis and prescribed trimethoprim-sulfamethoxazole, a medication that can cause hemolysis in patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency.",
+      "pattern": "B",
+      "notes": "Causal link between medication and potential hemolytic effect."
+    },
+    {
+      "source_sentences": [
+        5,
+        6,
+        7
+      ],
+      "output": "In this 26-year-old male, the bilirubin levels are elevated with a higher indirect fraction (Total 2.1 mg/dL, Direct 0.8 mg/dL) and the lactate dehydrogenase (LDH) level is elevated (470 U/L), both of which indicate hemolysis.",
+      "pattern": "A",
+      "notes": "Enumeration of lab properties indicating the same condition (hemolysis)."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "The 26-year-old male patient's G6PD level is normal (7 U/gHb), ruling out G6PD deficiency despite his ethnicity.",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Given the presence of hemolysis, elevated lactate dehydrogenase, and the 26-year-old male's recent use of trimethoprim-sulfamethoxazole, the most likely diagnosis is hemolytic anemia.",
+      "pattern": "C",
+      "notes": "Conclusion based on supporting premises."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "The following are the options provided for the peripheral blood smear findings in this 26-year-old male.",
+      "pattern": "D",
+      "notes": "Transition sentence."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Acanthocytes are usually associated with conditions such as abetalipoproteinemia and liver disease.",
+      "pattern": "D",
+      "notes": "Standalone definition/fact."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Codocytes are associated with conditions that cause spherocytes or spherocyte-like changes, such as hereditary spherocytosis.",
+      "pattern": "D",
+      "notes": "Standalone definition/fact."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Degmacytes are not a commonly used term in hematology.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Schistocytes are fragmented RBCs seen in conditions such as microangiopathic hemolytic anemia and thrombotic thrombocytopenic purpura.",
+      "pattern": "D",
+      "notes": "Standalone definition/fact."
+    },
+    {
+      "source_sentences": [
+        15
+      ],
+      "output": "Spherocytes are a hallmark feature of hereditary spherocytosis but can also be seen in conditions that cause oxidative stress and hemolysis.",
+      "pattern": "D",
+      "notes": "Standalone definition/fact."
+    },
+    {
+      "source_sentences": [
+        16,
+        17
+      ],
+      "output": "Considering the 26-year-old male patient's recent use of trimethoprim-sulfamethoxazole and the presentation of hemolysis, the most likely peripheral blood smear finding is (E) Spherocytes, as they can be seen in conditions that cause oxidative stress and hemolysis.",
+      "pattern": "C",
+      "notes": "Conclusion linked to reasoning and final answer."
+    }
+  ]
+}

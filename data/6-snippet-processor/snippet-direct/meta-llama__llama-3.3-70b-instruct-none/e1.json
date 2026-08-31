@@ -1,0 +1,70 @@
+{
+  "entry_id": 1,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Can I take nyquil and benedryl at the same time?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1721,
+    "output_tokens": 294,
+    "cached_input_tokens": 0,
+    "cost": 0.00026618
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1721,
+      "output_tokens": 294,
+      "cached_input_tokens": 0,
+      "cost": 0.00026618
+    }
+  ],
+  "shared_context": {
+    "topic": "interactions between NyQuil and Benadryl",
+    "drug_a": "NyQuil",
+    "drug_b": "Benadryl"
+  },
+  "sentences": [
+    "It is not recommended to take NyQuil and Benadryl at the same time",
+    "Both medications contain antihistamines: NyQuil usually contains doxylamine, and Benadryl contains diphenhydramine",
+    "Taking them together can increase the risk of side effects such as severe drowsiness, dizziness, confusion, and impaired coordination",
+    "Moreover, combining these medications can also potentially lead to an overdose of antihistamines, which can be dangerous"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "It is not recommended to take NyQuil and Benadryl at the same time.",
+      "pattern": "D",
+      "notes": "Standalone recommendation fact."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "NyQuil usually contains doxylamine, and Benadryl contains diphenhydramine, which are both antihistamines.",
+      "pattern": "D",
+      "notes": "Standalone fact about ingredients; does not require additional context for verification."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Taking NyQuil and Benadryl together can increase the risk of side effects such as severe drowsiness, dizziness, confusion, and impaired coordination, and potentially lead to an overdose of antihistamines, which can be dangerous.",
+      "pattern": "B",
+      "notes": "Causal chain describing risks of combining medications; sentences merged because the list of side effects and the warning about overdose are more verifiable together."
+    }
+  ]
+}

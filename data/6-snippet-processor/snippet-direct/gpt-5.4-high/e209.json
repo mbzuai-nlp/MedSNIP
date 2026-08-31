@@ -1,0 +1,53 @@
+{
+  "entry_id": 209,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1676,
+    "output_tokens": 718,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1676,
+      "output_tokens": 718,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "whether corneal abrasion causes eye discharge",
+    "condition": "corneal abrasion",
+    "symptom": "eye discharge"
+  },
+  "sentences": [
+    "Corneal abrasions typically cause symptoms such as pain, tearing, photophobia, foreign body sensation, and a gritty feeling, but they do not usually result in discharge from the eye",
+    "The primary symptoms are related to the disruption of the corneal epithelium, leading to a reflex production of tears rather than discharge",
+    "Discharge could indicate a secondary infection or a different underlying condition and should be evaluated further"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "Corneal abrasions typically cause pain, tearing, photophobia, foreign body sensation, and a gritty feeling, but they do not usually cause eye discharge because disruption of the corneal epithelium leads to reflex tearing rather than discharge.",
+      "pattern": "B",
+      "notes": "Sentence 1 provides the causal explanation for the symptom pattern stated in sentence 0, so the reasoning should stay together."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "In the setting of a corneal abrasion, eye discharge could indicate a secondary infection or a different underlying condition and should be evaluated further.",
+      "pattern": "C",
+      "notes": "This is a recommendation paired with its supporting premise within the same sentence."
+    }
+  ]
+}

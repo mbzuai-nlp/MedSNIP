@@ -1,0 +1,100 @@
+{
+  "entry_id": 16,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "The yeast infection is not transferable?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1852,
+    "output_tokens": 530,
+    "cached_input_tokens": 0,
+    "cost": 0.0003548
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1852,
+      "output_tokens": 530,
+      "cached_input_tokens": 0,
+      "cost": 0.0003548
+    }
+  ],
+  "shared_context": {
+    "topic": "yeast infection transferability",
+    "condition": "yeast infection"
+  },
+  "sentences": [
+    "Yeast infections are typically not transferable from one person to another through casual contact, such as hugging, kissing, or sharing personal items",
+    "However, there are some exceptions and considerations to note",
+    "Yeast infections are caused by a fungus called Candida, which is a normal inhabitant of the human body",
+    "In most cases, Candida exists in balance with other microorganisms on the skin and mucous membranes, but when the balance is disrupted, it can lead to an overgrowth and infection",
+    "While it is rare, it is possible for a yeast infection to be transmitted through sexual contact, particularly if one partner has a weakened immune system or is taking antibiotics",
+    "This is because Candida can be present in the genital area and can be transmitted through skin-to-skin contact",
+    "It's also worth noting that Candida can be spread through sharing personal items, such as towels or clothing, that have come into contact with an infected person's bodily fluids",
+    "However, this is not a common mode of transmission",
+    "In general, yeast infections are not contagious in the classical sense and do not spread from person to person through casual contact"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Yeast infections are typically not transferable from one person to another through casual contact, such as hugging, kissing, or sharing personal items.",
+      "pattern": "D",
+      "notes": "Standalone fact about non-transferability."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "There are some exceptions and considerations to note regarding yeast infection transferability.",
+      "pattern": "D",
+      "notes": "Introduction to exceptions; a standalone fact about the existence of exceptions."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Yeast infections are caused by a fungus called Candida, which is a normal inhabitant of the human body, and in most cases, Candida exists in balance with other microorganisms on the skin and mucous membranes, but when the balance is disrupted, it can lead to an overgrowth and infection.",
+      "pattern": "C",
+      "notes": "Conclusion (infection cause) and supporting premise (balance disruption) merged for verifiability."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "While it is rare, it is possible for a yeast infection to be transmitted through sexual contact, particularly if one partner has a weakened immune system or is taking antibiotics, because Candida can be present in the genital area and can be transmitted through skin-to-skin contact.",
+      "pattern": "B",
+      "notes": "Causal chain (transmission possibility due to skin-to-skin contact) merged for logical link."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Candida can be spread through sharing personal items, such as towels or clothing, that have come into contact with an infected person's bodily fluids, although this is not a common mode of transmission.",
+      "pattern": "B",
+      "notes": "Conditional transmission fact (through items) and its rarity merged for context."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "In general, yeast infections are not contagious in the classical sense and do not spread from person to person through casual contact.",
+      "pattern": "D",
+      "notes": "Standalone general conclusion about non-contagiousness."
+    }
+  ]
+}

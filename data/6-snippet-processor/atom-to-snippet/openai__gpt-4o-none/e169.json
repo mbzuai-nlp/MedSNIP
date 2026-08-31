@@ -1,0 +1,226 @@
+{
+  "entry_id": 169,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Should I take a lower dose of my sertraline while taking the zofran?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 3100,
+    "output_tokens": 1165,
+    "cached_input_tokens": 1152
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1401,
+      "output_tokens": 647,
+      "cached_input_tokens": 0,
+      "cost": 0.0099725
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1699,
+      "output_tokens": 518,
+      "cached_input_tokens": 1152,
+      "cost": 0.0079875
+    }
+  ],
+  "shared_context": {
+    "drug_a": "sertraline",
+    "drug_b": "ondansetron (Zofran)"
+  },
+  "sentences": [
+    "To determine whether you should take a lower dose of sertraline while taking ondansetron (Zofran), it's essential to consider the potential interactions between these medications",
+    "Sertraline is a selective serotonin reuptake inhibitor (SSRI) used to treat depression, anxiety disorders, and other conditions",
+    "Ondansetron, on the other hand, is an antiemetic medication used to prevent nausea and vomiting caused by cancer chemotherapy, radiation therapy, and surgery",
+    "There is limited information available on the specific interaction between sertraline and ondansetron",
+    "However, it is known that ondansetron can increase the levels of serotonin in the body, which may lead to serotonin syndrome, a potentially life-threatening condition",
+    "Serotonin syndrome can occur when the body has too much serotonin, which can be caused by taking certain medications, including SSRIs like sertraline, in combination with other medications that increase serotonin levels, such as ondansetron",
+    "To minimize the risk of serotonin syndrome, it is recommended to monitor your symptoms closely while taking both medications",
+    "If you experience any of the following symptoms, seek medical attention immediately: agitation, confusion, rapid heart rate, changes in blood pressure, dilated pupils, loss of muscle coordination, or muscle stiffness",
+    "As for adjusting the dose of sertraline, it is best to consult with your healthcare provider before making any changes",
+    "They can assess your individual situation and make a decision based on your specific needs and medical history"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "To determine whether you should take a lower dose of sertraline while taking ondansetron (Zofran), it's essential to consider the potential interactions between these medications.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Sertraline is a selective serotonin reuptake inhibitor (SSRI) used to treat depression.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Sertraline is used to treat anxiety disorders.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Sertraline is used to treat other conditions.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Ondansetron is an antiemetic medication used to prevent nausea and vomiting caused by cancer chemotherapy.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Ondansetron is used to prevent nausea and vomiting caused by radiation therapy.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Ondansetron is used to prevent nausea and vomiting caused by surgery.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "There is limited information available on the specific interaction between sertraline and ondansetron.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Ondansetron can increase the levels of serotonin in the body.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Increasing serotonin levels can lead to serotonin syndrome, a potentially life-threatening condition.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Serotonin syndrome can occur when the body has too much serotonin, which can be caused by taking certain medications, including SSRIs like sertraline, in combination with other medications that increase serotonin levels, such as ondansetron.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 12,
+      "text": "To minimize the risk of serotonin syndrome, it is recommended to monitor your symptoms closely while taking both medications.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 13,
+      "text": "If you experience any of the following symptoms, seek medical attention immediately: agitation, confusion, rapid heart rate, changes in blood pressure, dilated pupils, loss of muscle coordination, or muscle stiffness.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 14,
+      "text": "As for adjusting the dose of sertraline, it is best to consult with your healthcare provider before making any changes.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Healthcare providers can assess your individual situation and make a decision based on your specific needs and medical history.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "To determine whether you should take a lower dose of sertraline while taking ondansetron (Zofran), it's essential to consider the potential interactions between these medications.",
+      "pattern": "C",
+      "notes": "Introduction to the necessity of considering interactions supports next statements."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "Sertraline is a selective serotonin reuptake inhibitor (SSRI) used to treat depression, anxiety disorders, and other conditions.",
+      "pattern": "A",
+      "notes": "Enumeration of uses."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Ondansetron is an antiemetic medication used to prevent nausea and vomiting caused by cancer chemotherapy, radiation therapy, and surgery.",
+      "pattern": "A",
+      "notes": "Enumeration of uses."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "There is limited information available on the specific interaction between sertraline and ondansetron.",
+      "pattern": "D",
+      "notes": "Standalone fact about the interaction."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11
+      ],
+      "output": "Ondansetron can increase the levels of serotonin in the body. Increasing serotonin levels can lead to serotonin syndrome, a potentially life-threatening condition. Serotonin syndrome can occur when taking SSRIs like sertraline with medications that increase serotonin levels, such as ondansetron.",
+      "pattern": "B",
+      "notes": "Causal chain involving serotonin level increase and risk of serotonin syndrome."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "To minimize the risk of serotonin syndrome, it is recommended to monitor your symptoms closely while taking both medications. If you experience symptoms like agitation, confusion, rapid heart rate, changes in blood pressure, dilated pupils, loss of muscle coordination, or muscle stiffness, seek medical attention immediately.",
+      "pattern": "C",
+      "notes": "Recommendation supported by symptoms to watch for."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "As for adjusting the dose of sertraline, it is best to consult with your healthcare provider before making any changes. Healthcare providers can assess your individual situation and make a decision based on your specific needs and medical history.",
+      "pattern": "C",
+      "notes": "Consultation recommendation with rationale about personalized assessment."
+    }
+  ]
+}

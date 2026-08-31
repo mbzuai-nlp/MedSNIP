@@ -1,0 +1,294 @@
+{
+  "entry_id": 228,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 77-year-old man presents to the emergency department with a complaint of sudden onset weakness in his right upper extremity. At home, the patient thought he was simply dehydrated, but he rapidly began to have trouble speaking. When his wife noted this she brought him into the hospital. On arrival to the emergency department, the patient is not responding to verbal stimuli and only withdraws his left upper extremity and lower extremity to pain. His past medical history is notable for hypertension and atrial fibrillation treated with metoprolol, apixaban, and lisinopril. His temperature is 99.0°F (37.2°C), blood pressure is 170/100 mmHg, pulse is 95/min, and respirations are 16/min. The patient has a seizure and subsequently demonstrates agonal breathing. He no longer responds to painful stimuli. A fingerstick blood glucose is 122 mg/dL. Which of the following is the most likely etiology of this patient's symptoms? (A) Epidural hematoma (B) Intracerebral hemorrhage (C) Ischemic stroke (D) Subarachnoid hemorrhage (E) Subdural hematoma",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4698,
+    "output_tokens": 7952,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1962,
+      "output_tokens": 3887,
+      "cached_input_tokens": 0,
+      "cost": 0.00060304
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2736,
+      "output_tokens": 4065,
+      "cached_input_tokens": 0,
+      "cost": 0.00065118
+    }
+  ],
+  "shared_context": {
+    "age": 77,
+    "sex": "male",
+    "chief_complaint": "sudden onset right upper extremity weakness with loss of responsiveness",
+    "medical_history": "hypertension, atrial fibrillation",
+    "medications": "metoprolol, apixaban, lisinopril",
+    "vitals": "BP 170/100, pulse 95, respirations 16, temp 99°F, glucose 122 mg/dL",
+    "exam_findings": "non-responsive to verbal stimuli, withdraws left upper/lower extremities to pain, seizure, agonal breathing",
+    "correct_answer": "intracerebral hemorrhage"
+  },
+  "sentences": [
+    "To determine the most likely etiology of the patient's symptoms, let's break down the key information provided",
+    "Sudden onset weakness in one upper extremity and subsequent loss of responsiveness: This indicates a possible neurological event affecting motor function and potentially consciousness",
+    "History of hypertension and atrial fibrillation: Atrial fibrillation is a risk factor for ischemic stroke due to the potential for clot formation, while hypertension is a risk factor for both ischemic and hemorrhagic strokes",
+    "Rise in blood pressure and heart rate: Elevated blood pressure in the context of neurological deterioration may indicate a hypertensive emergency, which is often seen in ischemic stroke or intracerebral hemorrhage",
+    "High fingerstick blood glucose (122 mg/dL): Although not significantly elevated, this may indicate some degree of metabolic stress or underlying diabetes mellitus, but it's unlikely to be the primary cause of the patient's neurological symptoms",
+    "Seizure and agonal breathing: These signs can be seen in various severe neurological injuries, including intracerebral hemorrhage, subarachnoid hemorrhage, epidural hematoma, and ischemic stroke",
+    "Epidural hematoma: Typically presents with a history of trauma and a lucid interval, which is not present in this case",
+    "Intracerebral hemorrhage: More common in patients with hypertension and can present with sudden onset of neurological deficits",
+    "The patient's history of hypertension and sudden rise in blood pressure support this option",
+    "Ischemic stroke: Atrial fibrillation is a significant risk factor for ischemic stroke",
+    "However, the patient's rapid decline in consciousness suggests a more catastrophic event",
+    "Subarachnoid hemorrhage: Often associated with a \"thunderclap headache\" and typically not seen in isolation without a history of trauma or aneurysm",
+    "Subdural hematoma: Like epidural hematoma, it's typically associated with trauma and would not explain the absence of a history of trauma",
+    "Based on the information provided, the most likely etiology is an intracerebral hemorrhage"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The goal of this analysis is to determine the most likely etiology of the patient's symptoms.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Sudden onset right upper extremity weakness and loss of responsiveness suggest a neurological event affecting motor function and consciousness.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Hypertension and atrial fibrillation increase the patient's risk for both ischemic and hemorrhagic strokes.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Elevated blood pressure during neurological deterioration indicates a hypertensive emergency, which is often seen in ischemic stroke or intracerebral hemorrhage.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "A fingerstick glucose of 122 mg/dL indicates metabolic stress but is unlikely to be the primary cause of the neurological symptoms.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Seizure and agonal breathing can be seen in intracerebral hemorrhage.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Seizure and agonal breathing can be seen in subarachnoid hemorrhage.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Seizure and agonal breathing can be seen in epidural hematoma.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Seizure and agonal breathing can be seen in ischemic stroke.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The absence of a history of trauma and lucid interval argues against epidural hematoma.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Intracerebral hemorrhage is more common in patients with hypertension and presents with sudden onset of neurological deficits.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The patient's hypertension and sudden rise in blood pressure support intracerebral hemorrhage.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Atrial fibrillation is a significant risk factor for ischemic stroke.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The patient's rapid decline in consciousness suggests a catastrophic event.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Subarachnoid hemorrhage is typically associated with thunderclap headache and is not usually seen without trauma or aneurysm.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Subdural hematoma is typically associated with trauma and does not explain the absence of trauma.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Based on the information provided, the most likely etiology is an intracerebral hemorrhage.",
+      "source_sentences": [
+        13
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The goal of this analysis is to determine the most likely etiology of the 77‑year‑old man's sudden right upper extremity weakness and loss of responsiveness.",
+      "pattern": "D",
+      "notes": "Standalone objective statement."
+    },
+    {
+      "source_claims": [
+        2,
+        5,
+        14
+      ],
+      "output": "On arrival, this 77‑year‑old male presented with sudden right upper extremity weakness, loss of responsiveness to verbal stimuli, withdrawal of the left arm and leg to pain, a seizure, and agonal breathing. A fingerstick glucose of 122 mg/dL indicates metabolic stress but is unlikely to be the primary cause of these neurological findings. The rapid decline in consciousness suggests a catastrophic neurologic event.",
+      "pattern": "B",
+      "notes": "Presentation + causal link to catastrophic event."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Hypertension and atrial fibrillation increase the 77‑year‑old man's risk for both ischemic and hemorrhagic strokes.",
+      "pattern": "D",
+      "notes": "Independent risk‑factor statement."
+    },
+    {
+      "source_claims": [
+        4,
+        11,
+        12
+      ],
+      "output": "Elevated blood pressure (170/100 mmHg) during neurological deterioration indicates a hypertensive emergency, which is commonly seen in ischemic stroke or intracerebral hemorrhage. Intracerebral hemorrhage is more common in patients with hypertension and presents with sudden onset neurological deficits; the patient's hypertension and sudden rise in blood pressure support intracerebral hemorrhage.",
+      "pattern": "B",
+      "notes": "Causal chain linking hypertension, hypertensive emergency, and intracerebral hemorrhage."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Seizure and agonal breathing can be seen in intracerebral hemorrhage.",
+      "pattern": "D",
+      "notes": "Standalone symptom‑etiology association."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Seizure and agonal breathing can be seen in subarachnoid hemorrhage.",
+      "pattern": "D",
+      "notes": "Standalone symptom‑etiology association."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Seizure and agonal breathing can be seen in epidural hematoma.",
+      "pattern": "D",
+      "notes": "Standalone symptom‑etiology association."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Seizure and agonal breathing can be seen in ischemic stroke.",
+      "pattern": "D",
+      "notes": "Standalone symptom‑etiology association."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "The absence of a history of trauma and a lucid interval argue against epidural hematoma in this 77‑year‑old male.",
+      "pattern": "D",
+      "notes": "Independent exclusionary statement."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Atrial fibrillation is a significant risk factor for ischemic stroke.",
+      "pattern": "D",
+      "notes": "Independent risk‑factor statement."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Subarachnoid hemorrhage is typically associated with a thunderclap headache and is not usually seen without trauma or aneurysm.",
+      "pattern": "D",
+      "notes": "Independent descriptive statement."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Subdural hematoma is typically associated with trauma and does not explain the absence of trauma in this patient.",
+      "pattern": "D",
+      "notes": "Independent descriptive statement."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Based on the information provided, the most likely etiology of the 77‑year‑old man's sudden neurological deterioration is intracerebral hemorrhage.",
+      "pattern": "C",
+      "notes": "Conclusion supported by prior reasoning."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "entry_id": 238,
+  "batch_id": 24,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "If this is just muscle strain, how many days should I expect the pain to go away?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1789,
+    "output_tokens": 189,
+    "cached_input_tokens": 0,
+    "cost": 0.00030439
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1789,
+      "output_tokens": 189,
+      "cached_input_tokens": 0,
+      "cost": 0.00030439
+    }
+  ],
+  "shared_context": {
+    "topic": "recovery time for muscle strain",
+    "condition": "muscle strain"
+  },
+  "sentences": [
+    "For a typical muscle strain, the pain usually begins to improve within a few days to a week",
+    "Most minor muscle strains heal within 2 to 3 weeks",
+    "However, the exact duration can vary depending on the severity of the strain, the specific muscle involved, and the individual's overall health and activity level"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "For a typical muscle strain, the pain usually begins to improve within a few days to a week.",
+      "pattern": "D",
+      "notes": "Standalone fact regarding initial pain improvement."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Most minor muscle strains heal within 2 to 3 weeks.",
+      "pattern": "D",
+      "notes": "Standalone fact regarding overall healing time for minor strains."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The exact duration of recovery for a muscle strain can vary depending on the severity of the strain, the specific muscle involved, and the individual's overall health and activity level.",
+      "pattern": "A",
+      "notes": "Enumeration of factors affecting the duration of recovery."
+    }
+  ]
+}

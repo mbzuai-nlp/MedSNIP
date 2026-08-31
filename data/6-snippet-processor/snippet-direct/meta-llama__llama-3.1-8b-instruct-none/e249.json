@@ -1,0 +1,68 @@
+{
+  "entry_id": 249,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "So the singulair is an oral tablet not an inhaler?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1695,
+    "output_tokens": 255,
+    "cached_input_tokens": 0,
+    "cost": 4.41e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1695,
+      "output_tokens": 255,
+      "cached_input_tokens": 0,
+      "cost": 4.41e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "Singulair (montelukast) formulation",
+    "drug_a": "Singulair (montelukast)",
+    "condition": "asthma, seasonal allergies"
+  },
+  "sentences": [
+    "Yes, Singulair (montelukast) is an oral tablet, not an inhaler",
+    "It is a leukotriene receptor antagonist used for the maintenance treatment of asthma and to relieve symptoms of seasonal allergies",
+    "Montelukast is available in various formulations, including tablets, chewable tablets, and an oral granule for suspension, but not an inhaler"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Singulair (montelukast) is an oral tablet, not an inhaler.",
+      "pattern": "D",
+      "notes": "Standalone fact about Singulair formulation."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "It is a leukotriene receptor antagonist used for the maintenance treatment of asthma and to relieve symptoms of seasonal allergies.",
+      "pattern": "D",
+      "notes": "Standalone fact about Singulair's mechanism and use."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Montelukast is available in various formulations, including tablets, chewable tablets, and an oral granule for suspension, but not an inhaler.",
+      "pattern": "D",
+      "notes": "Standalone fact about Montelukast's available formulations."
+    }
+  ]
+}

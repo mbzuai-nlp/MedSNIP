@@ -1,0 +1,70 @@
+{
+  "entry_id": 1,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Can I take nyquil and benedryl at the same time?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1807,
+    "output_tokens": 231,
+    "cached_input_tokens": 0,
+    "cost": 0.00032269
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1807,
+      "output_tokens": 231,
+      "cached_input_tokens": 0,
+      "cost": 0.00032269
+    }
+  ],
+  "shared_context": {
+    "drug_a": "NyQuil",
+    "drug_b": "Benadryl",
+    "topic": "drug interaction"
+  },
+  "sentences": [
+    "It is not recommended to take NyQuil and Benadryl at the same time",
+    "Both medications contain antihistamines: NyQuil usually contains doxylamine, and Benadryl contains diphenhydramine",
+    "Taking them together can increase the risk of side effects such as severe drowsiness, dizziness, confusion, and impaired coordination",
+    "Moreover, combining these medications can also potentially lead to an overdose of antihistamines, which can be dangerous"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "It is not recommended to take NyQuil and Benadryl at the same time.",
+      "pattern": "D",
+      "notes": "Standalone recommendation/fact."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Both NyQuil and Benadryl contain antihistamines: NyQuil usually contains doxylamine, and Benadryl contains diphenhydramine.",
+      "pattern": "A",
+      "notes": "Enumeration of properties (ingredients) of the two medications."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Taking NyQuil and Benadryl together can increase the risk of side effects such as severe drowsiness, dizziness, confusion, and impaired coordination, and can potentially lead to a dangerous overdose of antihistamines.",
+      "pattern": "A",
+      "notes": "Enumeration of risks/side effects resulting from the same action (combining the drugs)."
+    }
+  ]
+}

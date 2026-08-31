@@ -1,0 +1,222 @@
+{
+  "entry_id": 129,
+  "batch_id": 13,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "If the side effects of the Prozac become too much is there a wean down period I would have to go through or would I be able to stop it immediately?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3022,
+    "output_tokens": 921,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1328,
+      "output_tokens": 602,
+      "cached_input_tokens": 0,
+      "cost": 0.00032544
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1694,
+      "output_tokens": 319,
+      "cached_input_tokens": 0,
+      "cost": 0.00027148
+    }
+  ],
+  "shared_context": {
+    "topic": "stopping Prozac",
+    "drug_a": "Prozac (fluoxetine)",
+    "condition": "withdrawal symptoms"
+  },
+  "sentences": [
+    "When discontinuing fluoxetine (Prozac), a gradual tapering of the dose is generally recommended to minimize the risk of withdrawal symptoms",
+    "The American Psychiatric Association recommends a gradual tapering of the dose over a period of 2-4 weeks",
+    "This allows the body to adjust to the decrease in medication levels and reduces the risk of withdrawal symptoms, such as dizziness, headaches, and irritability",
+    "The exact tapering schedule may vary depending on the individual's response to the medication and the severity of their symptoms",
+    "A healthcare provider may recommend a specific tapering schedule, which may involve reducing the dose by 10-20% every 1-2 weeks",
+    "It is essential to work closely with a healthcare provider to determine the best tapering schedule for your specific situation",
+    "Abruptly stopping fluoxetine can lead to withdrawal symptoms, including dizziness, headaches, irritability, and flu-like symptoms",
+    "In severe cases, withdrawal from fluoxetine can lead to more serious symptoms, such as seizures and serotonin syndrome"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A gradual tapering of the Prozac dose is generally recommended when discontinuing.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The American Psychiatric Association recommends tapering the Prozac dose over 2-4 weeks.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Gradual tapering of Prozac allows the body to adjust to the decrease in medication levels.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Gradual tapering of Prozac reduces the risk of withdrawal symptoms.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Dizziness is a potential withdrawal symptom when stopping Prozac.",
+      "source_sentences": [
+        2,
+        6
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Headaches are a potential withdrawal symptom when stopping Prozac.",
+      "source_sentences": [
+        2,
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Irritability is a potential withdrawal symptom when stopping Prozac.",
+      "source_sentences": [
+        2,
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The exact tapering schedule for Prozac may vary depending on the individual's response to the medication.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The exact tapering schedule for Prozac may vary depending on the severity of symptoms.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "A healthcare provider may recommend a specific tapering schedule for Prozac.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The tapering schedule for Prozac may involve reducing the dose by 10-20% every 1-2 weeks.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 12,
+      "text": "It is essential to work closely with a healthcare provider to determine the best tapering schedule for Prozac.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Abruptly stopping Prozac can lead to withdrawal symptoms.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Flu-like symptoms are a potential withdrawal symptom when stopping Prozac.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Withdrawal from Prozac can lead to seizures in severe cases.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Withdrawal from Prozac can lead to serotonin syndrome in severe cases.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "output": "When discontinuing Prozac, a gradual tapering of the dose is recommended over 2-4 weeks, allowing the body to adjust and reducing the risk of withdrawal symptoms.",
+      "pattern": "C",
+      "notes": "Recommendation with underlying reasoning."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7,
+        14
+      ],
+      "output": "Potential withdrawal symptoms when stopping Prozac include dizziness, headaches, irritability, and flu-like symptoms.",
+      "pattern": "A",
+      "notes": "Enumeration of withdrawal symptoms."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "The exact tapering schedule for Prozac may vary depending on individual response and symptom severity, and a healthcare provider can recommend a specific schedule, potentially reducing the dose by 10-20% every 1-2 weeks.",
+      "pattern": "C",
+      "notes": "Guideline with conditional adjustments."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Abruptly stopping Prozac can lead to withdrawal symptoms.",
+      "pattern": "D",
+      "notes": "Standalone warning about abrupt cessation."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "In severe cases, withdrawal from Prozac can lead to seizures or serotonin syndrome.",
+      "pattern": "A",
+      "notes": "Enumeration of severe potential outcomes."
+    }
+  ]
+}

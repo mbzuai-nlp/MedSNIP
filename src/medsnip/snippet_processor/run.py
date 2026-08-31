@@ -18,7 +18,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 
-from .processor import DEFAULT_MODE, MODES, SnippetProcessor
+from .processor import DEFAULT_MODE, DEFAULT_MODEL, MODES, SnippetProcessor
 
 ROOT = Path(__file__).resolve().parents[3]
 SPLIT_PATH = ROOT / "data" / "4-split" / "medsnip-bench.json"
@@ -43,9 +43,9 @@ def aggregate_entries(rows: list[dict]) -> list[dict]:
     return [by_id[k] for k in sorted(by_id)]
 
 
-def run_one(proc: SnippetProcessor, entry: dict) -> dict:
+def run_one(proc: SnippetProcessor, entry: dict, max_retries: int = 2) -> dict:
     result = proc(query=entry["full_query"], full_text=entry["full_text"],
-                  subset=entry["subset"])
+                  subset=entry["subset"], max_retries=max_retries)
     return {
         "entry_id":        entry["entry_id"],
         "batch_id":        entry["batch_id"],
@@ -55,6 +55,10 @@ def run_one(proc: SnippetProcessor, entry: dict) -> dict:
         "detected_subset": result["subset"],
         "full_query":      entry["full_query"],
         "model":           result["_model"],
+        "reasoning_effort": result.get("_reasoning_effort"),
+        "route":            result.get("_route"),
+        "provider_pin":     result.get("_provider_pin"),
+        "upstream_providers": result.get("_upstream_providers"),
         "usage":           result["_usage"],
         "usage_steps":     result.get("_usage_steps"),
         "shared_context":  result["shared_context"],
@@ -74,6 +78,18 @@ def main():
                     help="run only on entries in this split")
     ap.add_argument("--skip-existing", action="store_true")
     ap.add_argument("--model", default=None, help="override default model")
+    ap.add_argument("--reasoning", default=None,
+                    choices=["minimal", "low", "medium", "high"],
+                    help="reasoning_effort for gpt-5.x; omit for none")
+    ap.add_argument("--route", choices=["openrouter", "openai"], default="openrouter",
+                    help="API route (default: openrouter)")
+    ap.add_argument("--max-retries", type=int, default=2,
+                    help="per-call retries. Weaker decomposers need more, since "
+                         "schema violations now trigger a retry rather than "
+                         "being silently accepted")
+    ap.add_argument("--provider-pin", default=None,
+                    help="pin one OpenRouter upstream (fallbacks off), e.g. deepinfra. "
+                         "Omit to use the model's default pin from decomposer_matrix.models")
     ap.add_argument("--workers", type=int, default=8,
                     help="concurrent worker threads (default 8)")
     args = ap.parse_args()
@@ -91,9 +107,22 @@ def main():
     kwargs = {"mode": args.mode}
     if args.model:
         kwargs["model"] = args.model
+    if args.reasoning:
+        kwargs["reasoning_effort"] = args.reasoning
+    kwargs["route"] = args.route
+    if args.provider_pin:
+        kwargs["provider_pin"] = args.provider_pin
+    else:
+        # Fall back to the matrix's per-model pin so every entry point agrees.
+        from ...decomposer_matrix.models import PROVIDER_PIN
+        kwargs["provider_pin"] = PROVIDER_PIN.get(kwargs.get("model", DEFAULT_MODEL))
     proc = SnippetProcessor(**kwargs)
 
-    out_dir = OUT_ROOT / args.mode
+    # Output goes under <mode>/<model_slug>/eN.json so different model/reasoning
+    # configs don't clobber each other; legacy outputs at <mode>/eN.json remain.
+    suffix = args.reasoning or "none"
+    model_slug = f"{proc.model.replace('/', '__')}-{suffix}"
+    out_dir = OUT_ROOT / args.mode / model_slug
     out_dir.mkdir(parents=True, exist_ok=True)
 
     tasks = []
@@ -114,7 +143,7 @@ def main():
         eid = entry["entry_id"]
         t0 = time.time()
         try:
-            result = run_one(proc, entry)
+            result = run_one(proc, entry, max_retries=args.max_retries)
         except Exception as exc:
             with print_lock:
                 print(f"  e{eid:3d}: ERROR {exc}")

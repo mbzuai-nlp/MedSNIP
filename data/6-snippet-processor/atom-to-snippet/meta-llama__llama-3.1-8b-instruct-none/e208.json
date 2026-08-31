@@ -1,0 +1,144 @@
+{
+  "entry_id": 208,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Whats good for muscular pain",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2742,
+    "output_tokens": 521,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1261,
+      "output_tokens": 264,
+      "cached_input_tokens": 0,
+      "cost": 3.578e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1481,
+      "output_tokens": 257,
+      "cached_input_tokens": 0,
+      "cost": 3.99e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "muscular pain",
+    "condition": "muscular pain"
+  },
+  "sentences": [
+    "For managing muscular pain, several options are available, depending on the severity and cause of the pain",
+    "Topical creams and ointments containing capsaicin or menthol can provide temporary relief by blocking the production of a chemical called substance P, which transmits pain signals to the brain",
+    "Over-the-counter pain relievers such as ibuprofen (Advil, Motrin) or naproxen (Aleve) can also be effective in reducing pain and inflammation",
+    "Heat or cold therapy, such as applying a warm or cold compress to the affected area, can help relax muscles and reduce pain",
+    "Physical therapy, including massage, stretching, and strengthening exercises, can also be beneficial in managing muscular pain",
+    "In some cases, prescription medications such as muscle relaxants or corticosteroid injections may be necessary to manage severe or chronic pain"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Topical creams and ointments can provide temporary relief from muscular pain.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Capsaicin or menthol can block pain signals to the brain.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Ibuprofen (Advil, Motrin) or naproxen (Aleve) can reduce pain and inflammation.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Heat or cold therapy can help relax muscles and reduce pain.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Physical therapy can be beneficial in managing muscular pain.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Massage, stretching, and strengthening exercises can help manage muscular pain.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Prescription medications may be necessary to manage severe or chronic pain.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Topical creams and ointments containing capsaicin or menthol can provide temporary relief from muscular pain by blocking pain signals to the brain.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Ibuprofen (Advil, Motrin) or naproxen (Aleve) can reduce pain and inflammation.",
+      "pattern": "D",
+      "notes": "Standalone pain management option."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Heat or cold therapy can help relax muscles and reduce pain.",
+      "pattern": "D",
+      "notes": "Standalone pain management option."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Physical therapy and exercises such as massage, stretching, and strengthening can help manage muscular pain.",
+      "pattern": "A",
+      "notes": "Enumeration of exercises."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Prescription medications may be necessary to manage severe or chronic muscular pain.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    }
+  ]
+}

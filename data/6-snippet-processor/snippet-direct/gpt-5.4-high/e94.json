@@ -1,0 +1,109 @@
+{
+  "entry_id": 94,
+  "batch_id": 10,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "What is chlorhexidine?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1945,
+    "output_tokens": 2681,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1945,
+      "output_tokens": 2681,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "chlorhexidine"
+  },
+  "sentences": [
+    "Chlorhexidine is a disinfectant and antiseptic used widely in medical and dental settings",
+    "It is known by salt forms such as chlorhexidine gluconate (CHG) and chlorhexidine digluconate",
+    "It is used for skin disinfection before surgery, sterilization of surgical instruments, cleaning wounds, preventing dental plaque, treating yeast infections of the mouth, and keeping urinary catheters from blocking",
+    "Chlorhexidine is available in various formulations, including liquid and powder, and can be mixed with alcohol, water, or surfactant solutions",
+    "Chlorhexidine's antimicrobial properties make it effective against a broad range of microorganisms, although it does not inactivate spores",
+    "Its effectiveness is due to its ability to bind strongly to proteins in the skin and mucosa, providing persistent antimicrobial action",
+    "Chlorhexidine is utilized in healthcare settings for applications such as general skin cleansing, skin decolonization, preoperative showering and bathing, vascular catheter site preparation, impregnated catheter site dressings, impregnated catheters, and oral decontamination",
+    "Despite its benefits, chlorhexidine use can come with side effects such as skin irritation, teeth discoloration, and allergic reactions, which can range from mild contact dermatitis to severe anaphylaxis",
+    "The incidence of contact dermatitis is relatively low among healthcare workers but is higher in atopic patients, with rates between 2.5% and 5.4%",
+    "There are rising concerns about decreased microbial susceptibility to chlorhexidine and potential cross-resistance with antibiotics, particularly among pathogens like S. aureus and K. pneumoniae",
+    "Therefore, it is crucial to use chlorhexidine according to recommended guidelines to mitigate resistance development and ensure patient safety"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Chlorhexidine is a disinfectant and antiseptic used widely in medical and dental settings.",
+      "pattern": "D",
+      "notes": "Standalone definition and use-context statement."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Chlorhexidine is known by salt forms such as chlorhexidine gluconate (CHG) and chlorhexidine digluconate.",
+      "pattern": "D",
+      "notes": "Standalone naming fact about chlorhexidine salt forms."
+    },
+    {
+      "source_sentences": [
+        2,
+        6
+      ],
+      "output": "Chlorhexidine is used for skin disinfection before surgery, sterilization of surgical instruments, wound cleaning, prevention of dental plaque, treatment of yeast infections of the mouth, prevention of urinary catheter blockage, general skin cleansing, skin decolonization, preoperative showering and bathing, vascular catheter site preparation, impregnated catheter site dressings, impregnated catheters, and oral decontamination.",
+      "pattern": "A",
+      "notes": "Both sentences enumerate applications of the same subject, so the use-list is merged."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Chlorhexidine is available in various formulations, including liquid and powder, and can be mixed with alcohol, water, or surfactant solutions.",
+      "pattern": "A",
+      "notes": "Enumeration of formulation-related properties for one subject."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Chlorhexidine is effective against a broad range of microorganisms but does not inactivate spores, and this effectiveness is due to strong binding to proteins in the skin and mucosa, which provides persistent antimicrobial action.",
+      "pattern": "B",
+      "notes": "Explicit mechanism/explanation chain: effectiveness is linked to protein binding and persistence."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Chlorhexidine can cause side effects such as skin irritation, teeth discoloration, and allergic reactions ranging from mild contact dermatitis to severe anaphylaxis.",
+      "pattern": "A",
+      "notes": "Enumeration of adverse effects of the same agent."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "The incidence of chlorhexidine-associated contact dermatitis is relatively low among healthcare workers but is higher in atopic patients, with rates between 2.5% and 5.4%.",
+      "pattern": "F",
+      "notes": "Same safety topic as the prior sentence, but this is a distinct, separately checkable incidence claim."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "There are rising concerns about decreased microbial susceptibility to chlorhexidine and potential cross-resistance with antibiotics, particularly among pathogens such as S. aureus and K. pneumoniae; therefore, chlorhexidine should be used according to recommended guidelines to mitigate resistance development and ensure patient safety.",
+      "pattern": "C",
+      "notes": "Recommendation is supported by the preceding resistance concern, so conclusion and premise are merged."
+    }
+  ]
+}

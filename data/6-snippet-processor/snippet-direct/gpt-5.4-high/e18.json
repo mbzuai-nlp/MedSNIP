@@ -1,0 +1,60 @@
+{
+  "entry_id": 18,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "What is the most safe amount of Advil to take at one time",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1675,
+    "output_tokens": 805,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1675,
+      "output_tokens": 805,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "safe one-time adult dose of Advil",
+    "drug_a": "Advil (ibuprofen)",
+    "condition": "pain"
+  },
+  "sentences": [
+    "The safest amount of Advil (ibuprofen) to take at one time, for an adult, is 400 mg",
+    "This dosage is generally effective for pain relief and is the standard over-the-counter dose",
+    "It is important to not exceed this amount unless directed by a healthcare provider, as higher doses can increase the risk of adverse effects such as gastrointestinal bleeding, kidney damage, and cardiovascular issues"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "For an adult, the safest amount of Advil (ibuprofen) to take at one time is 400 mg.",
+      "pattern": "D",
+      "notes": "Standalone dosing statement."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "A 400 mg dose of Advil (ibuprofen) is generally effective for pain relief and is the standard over-the-counter dose.",
+      "pattern": "F",
+      "notes": "Same topic as the prior sentence, but a distinct checkable fact about effectiveness and standard OTC dosing, so it remains separate."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Adults should not exceed 400 mg of Advil (ibuprofen) at one time unless directed by a healthcare provider, because higher doses can increase the risk of adverse effects such as gastrointestinal bleeding, kidney damage, and cardiovascular issues.",
+      "pattern": "B",
+      "notes": "Caution and supporting reason form a causal chain that should stay together."
+    }
+  ]
+}

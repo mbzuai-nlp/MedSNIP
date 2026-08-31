@@ -1,0 +1,178 @@
+{
+  "entry_id": 174,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Would you recommend something a bit stronger than meloxicam?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3006,
+    "output_tokens": 871,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1358,
+      "output_tokens": 469,
+      "cached_input_tokens": 0,
+      "cost": 0.00028588
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1648,
+      "output_tokens": 402,
+      "cached_input_tokens": 0,
+      "cost": 0.00029344
+    }
+  ],
+  "shared_context": {
+    "topic": "alternative to meloxicam",
+    "drug_a": "meloxicam",
+    "condition": "pain, inflammation, and stiffness"
+  },
+  "sentences": [
+    "To determine if a stronger alternative to meloxicam is suitable, we need to consider the patient's specific condition, medical history, and current treatment plan",
+    "Meloxicam is a nonsteroidal anti-inflammatory drug (NSAID) that is commonly used to treat pain, inflammation, and stiffness associated with osteoarthritis, rheumatoid arthritis, and other conditions",
+    "If the patient is not responding adequately to meloxicam or experiences side effects, a stronger alternative may be considered",
+    "A stronger NSAID option could be diclofenac, which has a similar mechanism of action to meloxicam but with a slightly higher potency",
+    "However, diclofenac may have a higher risk of gastrointestinal side effects, such as ulcers and bleeding",
+    "Another option could be a cyclooxygenase-2 (COX-2) inhibitor, such as celecoxib, which is designed to have a lower risk of gastrointestinal side effects compared to traditional NSAIDs",
+    "However, COX-2 inhibitors may have a higher risk of cardiovascular events, such as heart attack and stroke",
+    "It is essential to consult with a healthcare professional to determine the best course of treatment for the patient, as they can assess the individual's specific needs and medical history to recommend the most appropriate medication"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's specific condition, medical history, and current treatment plan should be considered to determine if a stronger alternative to meloxicam is suitable.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Meloxicam is used to treat pain, inflammation, and stiffness associated with osteoarthritis, rheumatoid arthritis, and other conditions.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A stronger alternative to meloxicam may be considered if the patient is not responding adequately to meloxicam.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "A stronger alternative to meloxicam may be considered if the patient experiences side effects.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Diclofenac is a stronger NSAID option with a similar mechanism of action to meloxicam but with a slightly higher potency.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Diclofenac may have a higher risk of gastrointestinal side effects, such as ulcers and bleeding.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Celecoxib is a cyclooxygenase-2 (COX-2) inhibitor that may be an alternative to meloxicam.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Celecoxib is designed to have a lower risk of gastrointestinal side effects compared to traditional NSAIDs.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "COX-2 inhibitors, such as celecoxib, may have a higher risk of cardiovascular events, such as heart attack and stroke.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "A healthcare professional should be consulted to determine the best course of treatment for the patient.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The patient's specific condition, medical history, and current treatment plan should be considered to determine if a stronger alternative to meloxicam is suitable.",
+      "pattern": "D",
+      "notes": "Standalone consideration for treatment adjustment."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Meloxicam is used to treat pain, inflammation, and stiffness associated with osteoarthritis, rheumatoid arthritis, and other conditions.",
+      "pattern": "D",
+      "notes": "Standalone description of meloxicam's use."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "A stronger alternative to meloxicam may be considered if the patient is not responding adequately to meloxicam or experiences side effects.",
+      "pattern": "A",
+      "notes": "Enumeration of reasons for considering a stronger alternative."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Diclofenac is a stronger NSAID option with a similar mechanism of action to meloxicam but with a slightly higher potency, although it may have a higher risk of gastrointestinal side effects.",
+      "pattern": "C",
+      "notes": "Introduction of an alternative with its associated risks."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "Celecoxib is a cyclooxygenase-2 (COX-2) inhibitor that may be an alternative to meloxicam, with a lower risk of gastrointestinal side effects, but it may have a higher risk of cardiovascular events.",
+      "pattern": "C",
+      "notes": "Introduction of another alternative with its benefits and risks."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "A healthcare professional should be consulted to determine the best course of treatment for the patient.",
+      "pattern": "D",
+      "notes": "Standalone recommendation for professional consultation."
+    }
+  ]
+}

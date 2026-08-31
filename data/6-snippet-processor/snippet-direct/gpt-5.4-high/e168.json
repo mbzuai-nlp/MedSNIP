@@ -1,0 +1,73 @@
+{
+  "entry_id": 168,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is pepto peptobismol?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1784,
+    "output_tokens": 2313,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1784,
+      "output_tokens": 2313,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "whether Pepto-Bismol is the same as peptaibols",
+    "drug_a": "Pepto-Bismol",
+    "drug_b": "peptaibols"
+  },
+  "sentences": [
+    "Pepto-Bismol and peptaibols are not the same, although their names sound somewhat similar",
+    "Pepto-Bismol is an over-the-counter medication commonly used to treat minor digestive system ailments like diarrhea, nausea, heartburn, indigestion, and upset stomach",
+    "It was originally sold as a remedy for infant diarrhea by Norwich Pharmaceutical Company under the name Bismosal and later changed to Pepto-Bismol in 1919",
+    "On the other hand, peptaibols are a class of biologically active peptides produced by certain fungi, particularly from the genus Trichoderma",
+    "These peptides contain unusual amino acids, including α-aminoisobutyric acid (Aib), and have antibiotic and antifungal properties",
+    "Peptaibols are part of a larger group of peptides known as peptaibiotics, which are known for their ability to form helical structures and disrupt cell membranes, leading to cell death"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Pepto-Bismol and peptaibols are not the same, although their names sound somewhat similar.",
+      "pattern": "D",
+      "notes": "Standalone comparison claim that is medically verifiable on its own."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Pepto-Bismol is an over-the-counter medication commonly used to treat minor digestive ailments such as diarrhea, nausea, heartburn, indigestion, and upset stomach.",
+      "pattern": "F",
+      "notes": "Same topic as other Pepto-Bismol statements, but this is a distinct checkable fact about indications."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Pepto-Bismol was originally sold by Norwich Pharmaceutical Company as a remedy for infant diarrhea under the name Bismosal and was later renamed Pepto-Bismol in 1919.",
+      "pattern": "F",
+      "notes": "Same subject as sentence 1, but a separate historical fact that can be checked independently."
+    },
+    {
+      "source_sentences": [
+        3,
+        4,
+        5
+      ],
+      "output": "Peptaibols are a class of biologically active peptides produced by certain fungi, particularly Trichoderma; peptaibols contain unusual amino acids including α-aminoisobutyric acid (Aib), have antibiotic and antifungal properties, and are part of the larger peptaibiotic group known for forming helical structures and disrupting cell membranes, leading to cell death.",
+      "pattern": "A",
+      "notes": "Multiple sentences enumerate related properties and classification details of the same subject, peptaibols."
+    }
+  ]
+}

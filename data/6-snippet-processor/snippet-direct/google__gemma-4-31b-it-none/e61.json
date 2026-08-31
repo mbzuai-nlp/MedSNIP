@@ -1,0 +1,203 @@
+{
+  "entry_id": 61,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old male bodybuilder presents to the emergency department with weakness of his right arm. The patient states he has experienced these symptoms for a few weeks; however, today his hand felt so weak he dropped his cup of tea. The patient has a medical history of diabetes. He drinks 2-7 alcoholic drinks per day and has smoked 2 packs of cigarettes per day since he was 25. The patient uses anabolic steroids. He has lost 17 pounds since he last came to the emergency department 1 month ago. His temperature is 99.5°F (37.5°C), blood pressure is 177/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 98% on room air. Physical exam reveals decreased sensation in the right arm and 2/5 strength in the right arm and 5/5 strength in in the left arm. The patient states that he is experiencing a dull aching and burning pain in his right arm during the exam. Symptoms are not changed with changes in head and neck position. Which of the following is the most likely diagnosis? (A) Apical lung tumor (B) Brachial plexopathy (C) Cerebral infarction (D) Scalenus anticus syndrome (E) Subclavian steal syndrome",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3017,
+    "output_tokens": 2199,
+    "cached_input_tokens": 0,
+    "cost": 0.00122783
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 3017,
+      "output_tokens": 2199,
+      "cached_input_tokens": 0,
+      "cost": 0.00122783
+    }
+  ],
+  "shared_context": {
+    ".age": "55",
+    "sex": "male",
+    "chief_complaint": "right arm weakness",
+    "medical_history": "diabetes, alcohol use (2-7 drinks/day), smoking (2 packs/day since age 25), anabolic steroid use, weight loss (17 lb in 1 month)",
+    "vitals": "BP 177/108, Temp 99.5F, Pulse 90, RR 17, O2 98%",
+    "exam_findings": "decreased sensation right arm, 2/5 strength right arm, 5/5 left arm, dull aching/burning right arm pain, symptoms unchanged with head/neck position",
+    "correct_answer": "Cerebral infarction"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for this 55-year-old male bodybuilder presenting with right arm weakness, we'll follow a step-by-step approach to analyze his symptoms and medical history while referencing authoritative sources where necessary",
+    "The patient presents with right arm weakness, which has been progressive over a few weeks",
+    "The sudden exacerbation of weakness causing him to drop a cup of tea indicates a significant functional impairment",
+    "He reports decreased sensation and a dull aching and burning pain in the right arm during the exam",
+    "Relevant medical history includes diabetes, significant alcohol use (2-7 drinks per day), heavy smoking (2 packs of cigarettes per day for 30 years), and anabolic steroid use",
+    "The patient has experienced notable weight loss (17 pounds in the past month)",
+    "Vital signs show elevated blood pressure (177/108 mmHg), which is a risk factor for cardiovascular events",
+    "Decreased sensation and significant weakness (2/5 strength) in the right arm while the left arm strength is normal (5/5)",
+    "Symptoms are not altered by changes in head and neck position, potentially ruling out certain compressive neuropathies",
+    "Given the combination of neurological deficits and the absence of positional changes in symptoms, we need to consider both central and peripheral causes",
+    "The patient's history of smoking and hypertension significantly raise the risk for vascular events",
+    "The profound weakness and sensory changes suggest a potential central nervous system involvement",
+    "Typically, an apical lung tumor (Pancoast tumor) may present with shoulder pain and muscle wasting, often affecting the ulnar nerve distribution",
+    "However, this patient's symptoms do not change with head and neck positions and are not consistent with Horner syndrome, which often accompanies Pancoast tumors",
+    "Brachial plexopathy can present with weakness and sensory deficits in the arm, but it often results from trauma, compression, or radiation",
+    "The absence of positional changes somewhat argues against this diagnosis",
+    "A cerebral infarction (stroke) can cause sudden onset of unilateral weakness and sensory loss",
+    "The patient's risk factors (diabetes, hypertension, smoking) and the acute exacerbation of symptoms align well with this diagnosis",
+    "This syndrome, a type of thoracic outlet syndrome, typically presents with positional changes in symptoms and is less likely given the patient's presentation",
+    "This syndrome can cause arm weakness, but it usually presents with arm claudication, dizziness, or syncope due to reversed blood flow in the vertebral artery",
+    "It's less likely without these additional symptoms",
+    "Based on the patient's sudden exacerbation of right arm weakness, decreased sensation, risk factors, and clinical presentation, Cerebral Infarction (stroke) is the most likely diagnosis",
+    "Final Answer: (C) Cerebral Infarction"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "A step-by-step approach is used to determine the diagnosis for this 55-year-old male bodybuilder presenting with right arm weakness.",
+      "pattern": "D",
+      "notes": "Introductory sentence."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "This 55-year-old male presents with right arm weakness that has been progressive over a few weeks, with a sudden exacerbation causing him to drop a cup of tea, indicating significant functional impairment.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of the patient's current presentation."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "This 55-year-old male reports decreased sensation and a dull aching and burning pain in the right arm during the exam.",
+      "pattern": "D",
+      "notes": "Standalone exam finding."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Relevant medical history for this 55-year-old male includes diabetes, significant alcohol use (2-7 drinks per day), heavy smoking (2 packs of cigarettes per day for 30 years), anabolic steroid use, and notable weight loss (17 pounds in the past month).",
+      "pattern": "A",
+      "notes": "Enumeration of medical history properties."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "The 55-year-old male's vital signs show elevated blood pressure (177/108 mmHg), which is a risk factor for cardiovascular events.",
+      "pattern": "B",
+      "notes": "Causal link between blood pressure and risk."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Physical exam of this 55-year-old male reveals decreased sensation and significant weakness (2/5 strength) in the right arm while the left arm strength is normal (5/5).",
+      "pattern": "D",
+      "notes": "Standalone exam finding."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "In this 55-year-old male, symptoms are not altered by changes in head and neck position, potentially ruling out certain compressive neuropathies.",
+      "pattern": "B",
+      "notes": "Causal/logical link between clinical finding and diagnostic ruling."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Given the combination of neurological deficits and the absence of positional changes in symptoms in this 55-year-old male, both central and peripheral causes must be considered.",
+      "pattern": "B",
+      "notes": "Logical chain from symptoms to differential considerations."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "This 55-year-old male's history of smoking and hypertension significantly raise the risk for vascular events.",
+      "pattern": "B",
+      "notes": "Causal link between history and risk."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "The profound weakness and sensory changes in this 55-year-old male suggest a potential central nervous system involvement.",
+      "pattern": "B",
+      "notes": "Causal link between findings and anatomical localization."
+    },
+    {
+      "source_sentences": [
+        12,
+        13
+      ],
+      "output": "Typically, an apical lung tumor (Pancoast tumor) may present with shoulder pain, muscle wasting, and ulnar nerve distribution effects; however, this 55-year-old male's symptoms are not consistent with Horner syndrome, which often accompanies Pancoast tumors, and his symptoms do not change with head and neck positions.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of Pancoast tumor relative to the patient."
+    },
+    {
+      "source_sentences": [
+        14,
+        15
+      ],
+      "output": "Brachial plexopathy can present with weakness and sensory deficits in the arm, often resulting from trauma, compression, or radiation; however, the absence of positional changes in this 55-year-old male somewhat argues against this diagnosis.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of brachial plexopathy relative to the patient."
+    },
+    {
+      "source_sentences": [
+        16,
+        17
+      ],
+      "output": "A cerebral infarction (stroke) can cause sudden onset of unilateral weakness and sensory loss, and this 55-year-old male's risk factors (diabetes, hypertension, smoking) and acute exacerbation of symptoms align well with this diagnosis.",
+      "pattern": "C",
+      "notes": "Conclusion (diagnosis) supported by premises (risk factors/symptoms)."
+    },
+    {
+      "source_sentences": [
+        18
+      ],
+      "output": "Scalenus anticus syndrome, a type of thoracic outlet syndrome, typically presents with positional changes in symptoms and is less likely given this 55-year-old male's presentation.",
+      "pattern": "A",
+      "notes": "Properties of Scalenus anticus syndrome."
+    },
+    {
+      "source_sentences": [
+        19,
+        20
+      ],
+      "output": "Subclavian steal syndrome can cause arm weakness but usually presents with arm claudication, dizziness, or syncope due to reversed blood flow in the vertebral artery; it is less likely in this 55-year-old male without these additional symptoms.",
+      "pattern": "A",
+      "notes": "Properties of Subclavian steal syndrome relative to the patient."
+    },
+    {
+      "source_sentences": [
+        21,
+        22
+      ],
+      "output": "Based on the sudden exacerbation of right arm weakness, decreased sensation, risk factors, and clinical presentation, Cerebral Infarction (stroke) is the most likely diagnosis for this 55-year-old male.",
+      "pattern": "C",
+      "notes": "Final diagnosis supported by premises."
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "entry_id": 142,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 32-year-old man presents to the emergency department for evaluation of headache. His symptoms started last night and have persisted. He occasionally has migraine headaches, but he has not had a headache like this in the past. He reports associated nausea, vomiting, fevers, and neck pain. He has a medical history of asthma. His temperature is 100.4°F (38.0°C), blood pressure is 110/60 mmHg, pulse is 95/min, respirations are 17/min, and oxygen saturation is 98% on room air. On physical exam, he appears uncomfortable. Neurologic exam reveals no focal deficits. There is pain with passive neck flexion. No edema or rashes are noted. Lungs are clear to auscultation bilaterally. Lumbar puncture is performed and CSF results are obtained as shown below. Cerebrospinal fluid (CSF): Cell count: 175/mm^3 RBCs: 0/mm^3 Cl-: 119 mEq/L Glucose: 49 mg/dL Pressure: 150 mmH2O Total protein: 55 mg/dL Based on these results, which of the following is the most appropriate treatment regimen for this patient? (A) Acyclovir (B) Amphotericin and 5-flucytosine (C) Ceftriaxone and vancomycin (D) Ceftriaxone, vancomycin and steroids (E) Supportive care and monitoring",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4892,
+    "output_tokens": 1526,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2089,
+      "output_tokens": 820,
+      "cached_input_tokens": 0,
+      "cost": 0.0004713
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2803,
+      "output_tokens": 706,
+      "cached_input_tokens": 0,
+      "cost": 0.00050622
+    }
+  ],
+  "shared_context": {
+    "age": 32,
+    "sex": "male",
+    "chief_complaint": "headache",
+    "medical_history": "asthma",
+    "vitals": "temperature 100.4°F, blood pressure 110/60 mmHg, pulse 95/min, respirations 17/min, oxygen saturation 98% on room air",
+    "exam_findings": "no focal deficits, pain with passive neck flexion",
+    "csf_results": "cell count 175/mm^3, RBCs 0/mm^3, Cl- 119 mEq/L, glucose 49 mg/dL, pressure 150 mmH2O, total protein 55 mg/dL"
+  },
+  "sentences": [
+    "To determine the most appropriate treatment regimen for this patient, we must first analyze the cerebrospinal fluid (CSF) findings and clinical presentation",
+    "The patient has a headache, nausea, vomiting, fever, and neck pain, all of which are concerning for meningitis",
+    "The presence of neck stiffness (pain with passive neck flexion) further suggests meningeal irritation",
+    "Cell count: 175/mm³",
+    "This indicates pleocytosis (increased white blood cell count), which is a common finding in meningitis",
+    "RBCs: 0/mm³",
+    "The absence of red blood cells rules out a traumatic tap or subarachnoid hemorrhage",
+    "Glucose: 49 mg/dL",
+    "This value is low compared to normal CSF glucose levels, which typically range from 60-80% of serum glucose levels",
+    "Low glucose can be indicative of bacterial or tuberculous meningitis",
+    "Total protein: 55 mg/dL",
+    "This is elevated, as normal CSF protein levels are typically 15-45 mg/dL, again suggesting infection",
+    "Bacterial Meningitis: Typically presents with elevated protein, low glucose, and pleocytosis",
+    "The clinical presentation and CSF findings fit this diagnosis closely",
+    "Tuberculous Meningitis: Also presents with elevated protein and low glucose, but it typically has a more chronic presentation and is less common in acute settings",
+    "Viral/Aseptic Meningitis: Usually has normal or slightly low glucose, normal protein, and lymphocytic pleocytosis",
+    "The glucose level here is too low for viral meningitis",
+    "Fungal Meningitis: Generally has chronic presentation and is more common in immunocompromised patients",
+    "Based on the clinical and CSF findings, the most likely diagnosis is bacterial meningitis",
+    "Ceftriaxone and vancomycin are appropriate initial empiric antibiotics for bacterial meningitis to cover Streptococcus pneumoniae, Neisseria meningitidis, and other common pathogens",
+    "Steroids (dexamethasone) are recommended in cases of suspected bacterial meningitis to reduce inflammation and improve outcomes, especially in pneumococcal meningitis",
+    "Therefore, the most appropriate treatment regimen for this patient is Ceftriaxone, vancomycin, and steroids",
+    "Final Answer: (D) Ceftriaxone, vancomycin, and steroids"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's symptoms of headache, nausea, vomiting, fever, and neck pain are concerning for meningitis.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The presence of neck stiffness (pain with passive neck flexion) suggests meningeal irritation.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The cerebrospinal fluid (CSF) cell count is 175/mm³, indicating pleocytosis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Pleocytosis is a common finding in meningitis.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The absence of red blood cells in the CSF rules out a traumatic tap or subarachnoid hemorrhage.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The low glucose level in the CSF (49 mg/dL) is indicative of bacterial or tuberculous meningitis.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The elevated total protein level in the CSF (55 mg/dL) suggests infection.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Bacterial meningitis typically presents with elevated protein, low glucose, and pleocytosis.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The clinical presentation and CSF findings fit the diagnosis of bacterial meningitis closely.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Tuberculous meningitis typically has a more chronic presentation and is less common in acute settings.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Viral/Aseptic meningitis usually has normal or slightly low glucose, normal protein, and lymphocytic pleocytosis.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The glucose level in this case is too low for viral meningitis.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Fungal meningitis generally has a chronic presentation and is more common in immunocompromised patients.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The most likely diagnosis is bacterial meningitis based on the clinical and CSF findings.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Ceftriaxone and vancomycin are appropriate initial empiric antibiotics for bacterial meningitis.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Steroids (dexamethasone) are recommended in cases of suspected bacterial meningitis to reduce inflammation and improve outcomes.",
+      "source_sentences": [
+        20
+      ]
+    },
+    {
+      "index": 17,
+      "text": "The most appropriate treatment regimen for this patient is Ceftriaxone, vancomycin, and steroids.",
+      "source_sentences": [
+        21
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The 32-year-old male's symptoms of headache, nausea, vomiting, fever, and neck pain are concerning for meningitis, and the presence of neck stiffness suggests meningeal irritation.",
+      "pattern": "A",
+      "notes": "Initial presentation and concern for meningitis."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "The cerebrospinal fluid (CSF) cell count is 175/mm³, indicating pleocytosis, a common finding in meningitis.",
+      "pattern": "A",
+      "notes": "CSF finding and its implication for meningitis."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The absence of red blood cells in the CSF rules out a traumatic tap or subarachnoid hemorrhage.",
+      "pattern": "D",
+      "notes": "Standalone ruling out of other conditions based on CSF findings."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "The low glucose level in the CSF (49 mg/dL) is indicative of bacterial or tuberculous meningitis, and the elevated total protein level suggests infection.",
+      "pattern": "A",
+      "notes": "CSF findings pointing towards type of meningitis."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Bacterial meningitis typically presents with elevated protein, low glucose, and pleocytosis.",
+      "pattern": "D",
+      "notes": "General characteristic of bacterial meningitis."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "The clinical presentation and CSF findings fit the diagnosis of bacterial meningitis closely in this 32-year-old male.",
+      "pattern": "D",
+      "notes": "Clinical correlation with a specific diagnosis."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Tuberculous meningitis typically has a more chronic presentation and is less common in acute settings.",
+      "pattern": "D",
+      "notes": "Differential diagnosis consideration."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Viral/Aseptic meningitis usually has normal or slightly low glucose, normal protein, and lymphocytic pleocytosis, but the glucose level in this case is too low for viral meningitis.",
+      "pattern": "A",
+      "notes": "Another differential diagnosis and why it's less likely."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Fungal meningitis generally has a chronic presentation and is more common in immunocompromised patients.",
+      "pattern": "D",
+      "notes": "Consideration of another differential diagnosis."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "The most likely diagnosis is bacterial meningitis based on the clinical and CSF findings in this patient.",
+      "pattern": "C",
+      "notes": "Conclusion of diagnosis based on evidence."
+    },
+    {
+      "source_claims": [
+        15,
+        16,
+        17
+      ],
+      "output": "Ceftriaxone and vancomycin are appropriate initial empiric antibiotics for bacterial meningitis, and steroids (dexamethasone) are recommended to reduce inflammation and improve outcomes, making the most appropriate treatment regimen for this patient Ceftriaxone, vancomycin, and steroids.",
+      "pattern": "A",
+      "notes": "Treatment regimen based on diagnosis."
+    }
+  ]
+}

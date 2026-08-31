@@ -1,0 +1,92 @@
+{
+  "entry_id": 84,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Do fissures and hemmroids heal on their own?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1844,
+    "output_tokens": 4131,
+    "cached_input_tokens": 1408
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1844,
+      "output_tokens": 4131,
+      "cached_input_tokens": 1408
+    }
+  ],
+  "shared_context": {
+    "topic": "whether anal fissures and hemorrhoids heal on their own",
+    "condition": "anal fissures and hemorrhoids"
+  },
+  "sentences": [
+    "Anal fissures and hemorrhoids have different healing outcomes depending on the severity and treatment methods employed",
+    "Acute Anal Fissures: These can often heal on their own with conservative management, which includes dietary modification (high-fiber diet), adequate hydration, and stool softeners to reduce strain during defecation",
+    "Chronic Anal Fissures: These are less likely to heal without medical intervention",
+    "Chronic fissures may require treatments such as topical nitrates, calcium channel blockers, or surgical options like lateral internal sphincterotomy, which has a high success rate for healing chronic fissures",
+    "Internal Hemorrhoids: Mild cases can resolve on their own with conservative measures like high-fiber diet, increased fluid intake, and over-the-counter treatments (e.g., topical agents, sitz baths)",
+    "Severe cases (grade III and IV) often require procedural interventions such as rubber band ligation, sclerotherapy, or surgical hemorrhoidectomy",
+    "External Hemorrhoids: These can also often resolve on their own, especially if they are not thrombosed",
+    "Conservative measures similar to those for internal hemorrhoids are recommended",
+    "Thrombosed external hemorrhoids can be very painful and may require medical procedures for relief"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Anal fissures and hemorrhoids have different healing outcomes depending on severity and the treatment methods used.",
+      "pattern": "D",
+      "notes": "Standalone general fact about prognosis."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Acute anal fissures can often heal on their own with conservative management, including a high-fiber diet, adequate hydration, and stool softeners to reduce straining during defecation.",
+      "pattern": "F",
+      "notes": "Kept separate because acute fissures are a distinct, independently checkable subtype-specific claim."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Chronic anal fissures are less likely to heal without medical intervention and may require treatments such as topical nitrates, calcium channel blockers, or surgery such as lateral internal sphincterotomy, which has a high success rate for healing chronic fissures.",
+      "pattern": "B",
+      "notes": "Merged because the need for treatment follows from the lower likelihood of healing without intervention."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Mild internal hemorrhoids can resolve on their own with conservative measures such as a high-fiber diet, increased fluid intake, topical treatments, and sitz baths, whereas severe internal hemorrhoids (grade III and IV) often require procedures such as rubber band ligation, sclerotherapy, or surgical hemorrhoidectomy.",
+      "pattern": "A",
+      "notes": "Merged because the sentences enumerate severity-based outcomes and treatments for the same subject, internal hemorrhoids."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "External hemorrhoids can often resolve on their own, especially when they are not thrombosed, and conservative measures similar to those used for internal hemorrhoids are recommended for external hemorrhoids.",
+      "pattern": "A",
+      "notes": "Merged because both sentences describe management and expected course of the same subject, external hemorrhoids, and sentence 7 depends on sentence 6 for the subject."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Thrombosed external hemorrhoids can be very painful and may require medical procedures for relief.",
+      "pattern": "F",
+      "notes": "Kept separate because thrombosed external hemorrhoids are a distinct subtype-specific fact that is independently verifiable."
+    }
+  ]
+}

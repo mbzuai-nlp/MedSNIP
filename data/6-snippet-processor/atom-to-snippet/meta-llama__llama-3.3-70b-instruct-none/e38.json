@@ -1,0 +1,176 @@
+{
+  "entry_id": 38,
+  "batch_id": 4,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 23-year-old man presents to the emergency department. He was brought in by police for shouting on a subway. The patient claims that little people were trying to kill him and he was acting within his rights to defend himself. The patient has a medical history of marijuana and IV drug use as well as multiple suicide attempts. He is currently homeless. While in the ED, the patient is combative and refuses a physical exam. He is given IM haloperidol and diphenhydramine. The patient is transferred to the inpatient psychiatric unit and is continued on haloperidol throughout the next week. Though he is no longer aggressive, he is seen making \"armor\" out of paper plates and plastic silverware to defend himself. His temperature is 98.6°F (37°C), blood pressure is 115/71 mmHg, pulse is 72/min, and respirations are 12/min. The patient's treatment history is significant for failure to obtain symptom control with risperidone, haloperidol, and ziprasidone. Which of the following is the most appropriate next step in management? (A) Chlorpromazine (B) Clozapine (C) Fluphenazine (D) Olanzapine (E) Thioridazine",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4528,
+    "output_tokens": 1004,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1896,
+      "output_tokens": 568,
+      "cached_input_tokens": 0,
+      "cost": 0.00037136
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2632,
+      "output_tokens": 436,
+      "cached_input_tokens": 0,
+      "cost": 0.00040272
+    }
+  ],
+  "shared_context": {
+    "age": 23,
+    "sex": "male",
+    "chief_complaint": "shouting on a subway, claiming little people are trying to kill him",
+    "medical_history": "marijuana and IV drug use, multiple suicide attempts",
+    "social_history": "homeless",
+    "treatment_history": "failed to respond to risperidone, haloperidol, and ziprasidone",
+    "vitals": "temperature 98.6°F (37°C), blood pressure 115/71 mmHg, pulse 72/min, respirations 12/min"
+  },
+  "sentences": [
+    "To address this patient's situation, let's break down the information and consider the most appropriate next step in management",
+    "The patient exhibits symptoms of schizophrenia, as indicated by auditory hallucinations (hearing little people trying to kill him) and delusions of grandeur (acting within his rights to defend himself)",
+    "He has a history of psychiatric illness, including multiple suicide attempts and a history of substance abuse, which may impact his ability to adhere to treatment",
+    "The patient has failed to respond to multiple antipsychotic medications, including risperidone, haloperidol, and ziprasidone, which are typical and atypical antipsychotics respectively",
+    "The patient's current behavior of making armor out of paper plates and plastic silverware to defend himself indicates a need for continued antipsychotic treatment, but he has not responded to previously tried medications",
+    "Considering the patient's failed response to typical antipsychotics (haloperidol and fluphenazine are both typical antipsychotics) and atypical antipsychotics (risperidone and ziprasidone), the most appropriate next step would be to try an atypical antipsychotic that has a different pharmacological profile",
+    "Among the options provided, clozapine is the most likely candidate, as it is a second-generation antipsychotic with a different mechanism of action that may be effective in patients who have failed to respond to multiple other antipsychotics",
+    "Clozapine is often considered for treatment-resistant schizophrenia and has been shown to be effective in patients who have failed to respond to multiple other antipsychotics",
+    "However, before starting clozapine, several factors need to be considered, including the patient's medical history, lab values, and the presence of any underlying medical conditions",
+    "Answer: B"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient exhibits symptoms of schizophrenia, as indicated by auditory hallucinations and delusions of grandeur.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient has a history of psychiatric illness, including multiple suicide attempts and a history of substance abuse.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient has failed to respond to multiple antipsychotic medications, including risperidone, haloperidol, and ziprasidone.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's current behavior indicates a need for continued antipsychotic treatment, but he has not responded to previously tried medications.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Considering the patient's failed response to typical and atypical antipsychotics, the most appropriate next step would be to try an atypical antipsychotic with a different pharmacological profile.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Clozapine is the most likely candidate, as it is a second-generation antipsychotic with a different mechanism of action that may be effective in patients who have failed to respond to multiple other antipsychotics.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Clozapine is often considered for treatment-resistant schizophrenia and has been shown to be effective in patients who have failed to respond to multiple other antipsychotics.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Before starting clozapine, several factors need to be considered, including the patient's medical history, lab values, and the presence of any underlying medical conditions.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The most appropriate next step in management is to start the patient on clozapine.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This 23-year-old male patient exhibits symptoms of schizophrenia, as indicated by auditory hallucinations and delusions of grandeur.",
+      "pattern": "D",
+      "notes": "Standalone diagnosis."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The patient has a history of psychiatric illness, including multiple suicide attempts and a history of substance abuse, including marijuana and IV drug use.",
+      "pattern": "D",
+      "notes": "Standalone medical history."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "The patient has failed to respond to multiple antipsychotic medications, including risperidone, haloperidol, and ziprasidone, and his current behavior indicates a need for continued antipsychotic treatment.",
+      "pattern": "A",
+      "notes": "One-subject enumeration of treatment failures and current need."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Considering the patient's failed response to typical and atypical antipsychotics, the most appropriate next step would be to try an atypical antipsychotic with a different pharmacological profile; clozapine is a second-generation antipsychotic with a different mechanism of action that may be effective in patients who have failed to respond to multiple other antipsychotics and is often considered for treatment-resistant schizophrenia.",
+      "pattern": "A",
+      "notes": "Differential discussion + rationale for next step."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Before starting clozapine, several factors need to be considered, including the patient's medical history, lab values, and the presence of any underlying medical conditions.",
+      "pattern": "D",
+      "notes": "Standalone consideration for starting clozapine."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "The most appropriate next step in management is to start the patient on clozapine.",
+      "pattern": "C",
+      "notes": "Conclusion with implicit supporting premises from previous claims."
+    }
+  ]
+}

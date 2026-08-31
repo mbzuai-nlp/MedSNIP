@@ -1,0 +1,249 @@
+{
+  "entry_id": 122,
+  "batch_id": 13,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How is PID treated?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3169,
+    "output_tokens": 1134,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1437,
+      "output_tokens": 654,
+      "cached_input_tokens": 0,
+      "cost": 0.00043533
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1732,
+      "output_tokens": 480,
+      "cached_input_tokens": 0,
+      "cost": 0.00040756
+    }
+  ],
+  "shared_context": {
+    "topic": "PID treatment",
+    "condition": "Pelvic inflammatory disease (PID)"
+  },
+  "sentences": [
+    "Pelvic inflammatory disease (PID) is typically treated with a combination of antibiotics and supportive care",
+    "The primary goal of treatment is to eliminate the infection, alleviate symptoms, and prevent long-term complications",
+    "The choice of antibiotics depends on the severity of the infection, the patient's medical history, and any allergies or sensitivities",
+    "For mild to moderate PID, a combination of oral antibiotics such as ceftriaxone and doxycycline is often prescribed",
+    "For more severe cases, hospitalization may be necessary, and intravenous antibiotics such as cefotetan and clindamycin may be administered",
+    "In addition to antibiotics, supportive care is essential in managing PID symptoms",
+    "This may include",
+    "Pain management with over-the-counter pain relievers such as ibuprofen or acetaminophen",
+    "Rest and hydration to help the body recover from the infection",
+    "Avoiding sexual activity until symptoms resolve and the patient is no longer contagious",
+    "Follow-up appointments with a healthcare provider to monitor progress and adjust treatment as needed",
+    "In some cases, surgical intervention may be necessary to treat complications of PID, such as tubo-ovarian abscesses or infertility",
+    "A healthcare provider will determine the need for surgery on a case-by-case basis"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Pelvic inflammatory disease (PID) is typically treated with a combination of antibiotics and supportive care",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The primary goal of treatment is to eliminate the infection",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The primary goal of treatment is to alleviate symptoms",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The primary goal of treatment is to prevent long-term complications",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The choice of antibiotics depends on the severity of the infection",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The choice of antibiotics depends on the patient's medical history",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The choice of antibiotics depends on any allergies or sensitivities",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "For mild to moderate PID, a combination of oral antibiotics such as ceftriaxone and doxycycline is often prescribed",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Hospitalization may be necessary for more severe cases of PID",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Intravenous antibiotics such as cefotetan and clindamycin may be administered for more severe cases of PID",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Supportive care is essential in managing PID symptoms in addition to antibiotics",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Supportive care for PID may include pain management with over-the-counter pain relievers such as ibuprofen or acetaminophen",
+      "source_sentences": [
+        6,
+        7
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Supportive care for PID may include rest and hydration to help the body recover from the infection",
+      "source_sentences": [
+        6,
+        8
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Supportive care for PID may include avoiding sexual activity until symptoms resolve and the patient is no longer contagious",
+      "source_sentences": [
+        6,
+        9
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Supportive care for PID may include follow-up appointments with a healthcare provider to monitor progress and adjust treatment as needed",
+      "source_sentences": [
+        6,
+        10
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Surgical intervention may be necessary in some cases to treat complications of PID, such as tubo-ovarian abscesses or infertility",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 17,
+      "text": "A healthcare provider will determine the need for surgery for PID on a case-by-case basis",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Pelvic inflammatory disease (PID) is typically treated with a combination of antibiotics and supportive care",
+      "pattern": "D",
+      "notes": "Standalone summary of treatment."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "The primary goals of treatment for PID are to eliminate the infection, alleviate symptoms, and prevent long-term complications.",
+      "pattern": "A",
+      "notes": "Enumeration of treatment goals."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "The choice of antibiotics for PID depends on the severity of the infection, the patient's medical history, and any allergies or sensitivities.",
+      "pattern": "A",
+      "notes": "Enumeration of factors influencing antibiotic choice."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "For mild to moderate PID, a combination of oral antibiotics such as ceftriaxone and doxycycline is often prescribed.",
+      "pattern": "D",
+      "notes": "Standalone fact about mild/moderate treatment."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Hospitalization may be necessary for more severe cases of PID, where intravenous antibiotics such as cefotetan and clindamycin may be administered.",
+      "pattern": "B",
+      "notes": "Causal chain connecting hospitalization to IV administration."
+    },
+    {
+      "source_claims": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "output": "Supportive care is essential in managing PID symptoms alongside antibiotics and may include pain management with over-the-counter relievers (such as ibuprofen or acetaminophen), rest, hydration, avoiding sexual activity until symptoms resolve and the patient is no longer contagious, and follow-up appointments to monitor progress.",
+      "pattern": "A",
+      "notes": "Enumeration of supportive care components."
+    },
+    {
+      "source_claims": [
+        16,
+        17
+      ],
+      "output": "Surgical intervention may be necessary in some cases to treat PID complications, such as tubo-ovarian abscesses or infertility, with the need for surgery determined by a healthcare provider on a case-by-case basis.",
+      "pattern": "C",
+      "notes": "Recommendation/intervention paired with the premise of a provider's determination."
+    }
+  ]
+}

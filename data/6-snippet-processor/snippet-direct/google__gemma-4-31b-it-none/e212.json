@@ -1,0 +1,60 @@
+{
+  "entry_id": 212,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "does a corneal abrasion usually cause discharge from the eye",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1778,
+    "output_tokens": 172,
+    "cached_input_tokens": 0,
+    "cost": 0.0002965
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1778,
+      "output_tokens": 172,
+      "cached_input_tokens": 0,
+      "cost": 0.0002965
+    }
+  ],
+  "shared_context": {
+    "topic": "corneal abrasion",
+    "symptom": "eye discharge"
+  },
+  "sentences": [
+    "Corneal abrasions can cause a reflex production of tears, which may result in a watery discharge from the eye",
+    "This is a common symptom of corneal abrasions, but it may not always be present",
+    "In some cases, the discharge may be minimal or absent, especially in the early stages of the injury"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Corneal abrasions can cause a reflex production of tears, which may result in a watery discharge from the eye.",
+      "pattern": "B",
+      "notes": "Causal chain linking the injury to the mechanism (reflex tears) and the resulting symptom (watery discharge)."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "Watery discharge is a common symptom of corneal abrasions, though it may not always be present and may be minimal or absent, particularly in the early stages of the injury.",
+      "pattern": "A",
+      "notes": "Enumeration of properties regarding the prevalence and timing of the symptom."
+    }
+  ]
+}

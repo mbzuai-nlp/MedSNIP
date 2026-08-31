@@ -1,0 +1,190 @@
+{
+  "entry_id": 120,
+  "batch_id": 12,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 16-year-old girl who recently immigrated to the United States from Bolivia presents to her primary care physician with a chief complaint of inattentiveness in school. The patient's teacher describes her as occasionally \"daydreaming\" for periods of time during where the patient does not respond or participate in school activities. Nothing has helped the patient change her behavior, including parent-teacher conferences or punishment. The patient has no other concerns. The only other concern that the patient's mother has is that, upon awakening, she notices that sometimes the patient's arm will jerk back and forth. The patient states she is not doing this intentionally. The patient has an unknown medical history and is currently not on any medications. She is not sexually active and does not intend to become pregnant in the near future. Her temperature is 98.6°F (37°C), blood pressure is 112/74 mmHg, pulse is 63/min, and respirations are 11/min. On physical exam, you note a young, healthy girl whose neurological exam is within normal limits. Which of the following is the most appropriate initial treatment? (A) Carbamazepine (B) Cognitive behavioral therapy (C) Ethosuximide (D) Lamotrigine (E) Valproic acid",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4503,
+    "output_tokens": 4789,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1916,
+      "output_tokens": 2019,
+      "cached_input_tokens": 0,
+      "cost": 0.00034014
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2587,
+      "output_tokens": 2770,
+      "cached_input_tokens": 0,
+      "cost": 0.00046541
+    }
+  ],
+  "shared_context": {
+    "age": 16,
+    "sex": "female",
+    "chief_complaint": "inattentiveness in school",
+    "medications": "none",
+    "vitals": {
+      "temperature": "98.6°F",
+      "blood_pressure": "112/74 mmHg",
+      "pulse": "63/min",
+      "respirations": "11/min"
+    },
+    "neurologic_exam": "normal"
+  },
+  "sentences": [
+    "To determine the most appropriate initial treatment for the 16-year-old girl presenting with symptoms of inattentiveness and possible nocturnal myoclonus (sudden, involuntary muscle jerks), we must first identify the underlying condition causing these symptoms",
+    "Based on the patient's presentation, the differential diagnosis may include attention deficit hyperactivity disorder (ADHD), sleep disorder, or a seizure disorder",
+    "The physical examination and laboratory findings do not provide any evidence of a severe underlying medical condition, and the neurological exam is within normal limits",
+    "The patient's symptoms of inattentiveness and daydreaming are characteristic of ADHD, particularly attention deficit hyperactivity disorder, inattentive type (ADHD-PI)",
+    "However, the presence of nocturnal myoclonus may suggest an underlying seizure disorder or a sleep disorder, such as restless legs syndrome (RLS)",
+    "Given the lack of clear evidence of a seizure disorder, we can rule out the option of using antiepileptic medications (A)",
+    "The patient's symptoms do not meet the diagnostic criteria for a sleep disorder such as RLS, as she does not report discomfort in her legs or an urge to move",
+    "Cognitive behavioral therapy (B) is an effective treatment for ADHD, particularly in conjunction with pharmacological therapy",
+    "It may be beneficial in addressing the patient's inattentive symptoms and improving her daily functioning",
+    "Lamotrigine (D) and valproic acid (E) are antiepileptic medications that may be used in the treatment of seizures or bipolar disorder, which is not suggested in this case",
+    "Based on the information provided and the patient's symptoms, the most appropriate initial treatment is cognitive behavioral therapy (C) in conjunction with a thorough evaluation for ADHD"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The presentation of inattentiveness and possible nocturnal myoclonus requires identification of the underlying condition.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "ADHD, sleep disorder, or a seizure disorder are possible diagnoses.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Physical exam and laboratory findings reveal no severe underlying medical condition, and the neurological exam is normal.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Inattentiveness and daydreaming are characteristic of ADHD inattentive type.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Nocturnal myoclonus may suggest an underlying seizure disorder or a sleep disorder like restless legs syndrome.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Antiepileptic medications (option A) can be ruled out due to lack of clear evidence of a seizure disorder.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient's symptoms do not meet diagnostic criteria for restless legs syndrome because she does not report leg discomfort or urge to move.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Cognitive behavioral therapy is an effective treatment for ADHD, particularly when combined with pharmacologic therapy.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Cognitive behavioral therapy may benefit the patient by addressing inattentive symptoms and improving daily functioning.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Lamotrigine and valproic acid are antiepileptic medications that may treat seizures or bipolar disorder, but that is not suggested in this case.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The most appropriate initial treatment is cognitive behavioral therapy with a thorough evaluation for ADHD.",
+      "source_sentences": [
+        10
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "For this 16‑year‑old female presenting with inattentiveness in school and occasional nocturnal arm jerking, the presentation requires identification of the underlying condition. Possible diagnoses include ADHD, a sleep disorder, or a seizure disorder. A normal physical exam, labs, and neurological exam suggest no severe underlying medical condition.",
+      "pattern": "B",
+      "notes": "This snippet follows a causal chain: presentation leads to need for diagnosis, lists possibilities, and notes normal exam findings."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "In a 16‑year‑old female, inattentiveness and daydreaming are characteristic of ADHD inattentive type.",
+      "pattern": "D",
+      "notes": "Standalone fact/definition."
+    },
+    {
+      "source_claims": [
+        5,
+        7
+      ],
+      "output": "Nocturnal myoclonus in a 16‑year‑old female may suggest an underlying seizure disorder or a sleep disorder like restless legs syndrome; however, the absence of leg discomfort or an urge to move makes restless legs syndrome unlikely.",
+      "pattern": "A",
+      "notes": "Enumeration of possible underlying causes and the refutation of one."
+    },
+    {
+      "source_claims": [
+        6,
+        10
+      ],
+      "output": "Antiepileptic medications such as carbamazepine (option A), lamotrigine, and valproic acid can be ruled out because there is no clear evidence of a seizure disorder, and these agents are not indicated in this case.",
+      "pattern": "A",
+      "notes": "Enumeration of medication options and their exclusion."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        11
+      ],
+      "output": "For this 16‑year‑old female with inattentive symptoms, cognitive behavioral therapy is an effective treatment for ADHD, may improve daily functioning, and is the most appropriate initial therapy.",
+      "pattern": "C",
+      "notes": "Conclusion (most appropriate treatment) supported by premises about CBT efficacy."
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "entry_id": 275,
+  "batch_id": 28,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 60-year-old woman presents to the emergency department with back pain after gardening. Her pain is 7/10 in severity, non-radiating, and not relieved by rest. She has never experienced this pain in the past and denies fever, night sweats, unintentional weight loss, and bowel or bladder incontinence. She has hypertension for which she takes hydrochlorothiazide and had a recent asthma flare requiring a prednisone taper. She does not drink alcohol or smoke. Her temperature is 98.6°F (37.0°C), blood pressure is 120/80 mmHg, pulse is 90/min, and respirations are 18/min. Physical exam reveals an uncomfortable middle-aged woman in no acute distress. There is no tenderness to palpation of the spinous processes. Flexion of the hip with the knee extended while the patient is supine does not elicit any pain, nor does forced dorsiflexion of the foot at terminal hip extension. She has 5/5 strength to hip flexion, extension, abduction, and adduction; knee flexion and extension; and ankle dorsiflexion and plantarflexion bilaterally. Bilateral patellar and Achilles reflexes are 2+. Serum laboratory results are as follows: Hemoglobin: 12.0 g/dL Creatinine: 1.1 mg/dL Ca2+: 10.6 mg/dL Which of the following is the most likely diagnosis? (A) Herniated disc (B) Lumbosacral strain (C) Multiple myeloma (D) Spondylolisthesis (E) Vertebral compression fracture",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 4919,
+    "output_tokens": 1763,
+    "cached_input_tokens": 1920
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2034,
+      "output_tokens": 970,
+      "cached_input_tokens": 0,
+      "cost": 0.014785
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2885,
+      "output_tokens": 793,
+      "cached_input_tokens": 1920,
+      "cost": 0.0127425
+    }
+  ],
+  "shared_context": {
+    "age": 60,
+    "sex": "female",
+    "chief_complaint": "back pain",
+    "medical_history": "hypertension, recent asthma flare",
+    "medications": "hydrochlorothiazide, prednisone taper",
+    "vitals": "98.6°F, 120/80 mmHg, 90/min pulse, 18/min respirations",
+    "exam_findings": "uncomfortable but in no acute distress, no tenderness to palpation, negative maneuvers, 5/5 strength, 2+ reflexes",
+    "treatment_history": "prednisone taper",
+    "correct_answer": "Multiple myeloma"
+  },
+  "sentences": [
+    "To determine the most likely diagnosis for the 60-year-old woman presenting with back pain, let's go through the possible diagnoses step-by-step",
+    "Back Pain Characteristics: Severe, non-radiating, not relieved by rest, and new-onset",
+    "No Red Flag Symptoms: Denies fever, night sweats, unintentional weight loss, bowel/bladder incontinence",
+    "Physical Exam: No tenderness over spinous processes, no pain with specific maneuvers (e.g., flexion of hip with knee extended), normal strength and reflexes",
+    "Lab Results: Hemoglobin 12.0 g/dL (normal), Creatinine 1.1 mg/dL (normal), Calcium 10.6 mg/dL (elevated)",
+    "Typically causes radicular pain (radiating along a nerve), often with neurological deficits like weakness or altered reflexes",
+    "Given no radiation of pain and normal strength/reflexes, this is less likely",
+    "Often presents with acute onset of pain related to activity, non-radiating, and without neurological deficits",
+    "Physical exam might not reveal significant findings; thus, this is possible but not strongly indicated by elevated calcium",
+    "Commonly presents with bone pain, hypercalcemia, normocytic anemia, and renal dysfunction",
+    "Elevated calcium and back pain fit this condition",
+    "Although no anemia or renal dysfunction is noted, it remains a strong possibility",
+    "Involves slippage of a vertebra, which can cause back pain often with radicular symptoms",
+    "Given the absence of radiating pain or neurological signs, this is less likely",
+    "Common in elderly, especially with osteoporosis or corticosteroid use",
+    "Presents with acute, severe back pain typically worsened by movement or palpation",
+    "Given her recent prednisone use, this is possible but less likely with no tenderness on palpation",
+    "Given the elevated calcium (hypercalcemia), severe back pain, and considering her risk factors, Multiple Myeloma stands out as the most likely diagnosis",
+    "This condition commonly presents with bone pain and hypercalcemia",
+    "Final Answer: (C) Multiple myeloma"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "To determine the most likely diagnosis for the 60-year-old woman presenting with back pain, let's go through the possible diagnoses step-by-step.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Back pain characteristics include severity, non-radiation, not relieved by rest, and are new-onset.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient denies fever, night sweats, unintentional weight loss, and bowel/bladder incontinence.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Physical exam shows no tenderness over spinous processes, no pain with specific maneuvers, normal strength and reflexes.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Lab results indicate hemoglobin at 12.0 g/dL, creatinine at 1.1 mg/dL, and calcium at 10.6 mg/dL.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Herniated discs typically cause radicular pain with neurological deficits.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Given the lack of radiation of pain and normal strength/reflexes, a herniated disc is less likely.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Lumbosacral strain often presents with acute onset of pain, related to activity, non-radiating, and without neurological deficits.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Physical exam might not reveal significant findings; lumbosacral strain is possible but not strongly indicated by the elevated calcium.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Multiple myeloma commonly presents with bone pain, hypercalcemia, normocytic anemia, and renal dysfunction.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Elevated calcium and back pain fit multiple myeloma.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Even though anemia or renal dysfunction is absent, multiple myeloma remains a strong possibility.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Spondylolisthesis involves slippage of a vertebra, causing back pain often with radicular symptoms.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Given the absence of radiating pain or neurological signs, spondylolisthesis is less likely.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Vertebral compression fractures are common in the elderly, especially with osteoporosis or corticosteroid use.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Vertebral compression fracture presents with acute, severe back pain typically worsened by movement or palpation.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Given her recent prednisone use, a vertebral compression fracture is possible but less likely with no tenderness on palpation.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Given the elevated calcium, severe back pain, and considering her risk factors, multiple myeloma stands out as the most likely diagnosis.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Multiple myeloma commonly presents with bone pain and hypercalcemia.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Final answer: Multiple myeloma.",
+      "source_sentences": [
+        19
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "To determine the most likely diagnosis for this 60-year-old woman presenting with back pain, characteristics include severity of 7/10, non-radiation, not relieved by rest, and new-onset. The patient denies fever, night sweats, unintentional weight loss, and bowel or bladder incontinence. Physical exam shows no tenderness over spinous processes, no pain with specific maneuvers, normal strength and reflexes. Lab results indicate hemoglobin at 12.0 g/dL, creatinine at 1.1 mg/dL, and calcium at 10.6 mg/dL.",
+      "pattern": "C",
+      "notes": "Overall summary of patient's presentation and initial considerations."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Herniated discs typically cause radicular pain with neurological deficits. Given the lack of radiation of pain and normal strength/reflexes, a herniated disc is less likely in this 60-year-old woman.",
+      "pattern": "A",
+      "notes": "Causal discussion of why herniated disc is unlikely."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Lumbosacral strain often presents with acute onset of pain related to activity, non-radiating, and without neurological deficits. Although physical exam might not reveal significant findings, lumbosacral strain is possible but not strongly indicated by the elevated calcium in this woman.",
+      "pattern": "A",
+      "notes": "Lumbosacral strain possibility with reasons against it."
+    },
+    {
+      "source_claims": [
+        10,
+        11,
+        12
+      ],
+      "output": "Multiple myeloma commonly presents with bone pain, hypercalcemia, normocytic anemia, and renal dysfunction. The elevated calcium and back pain in this 60-year-old woman fit multiple myeloma. Even though anemia or renal dysfunction is absent, multiple myeloma remains a strong possibility.",
+      "pattern": "C",
+      "notes": "Discussion of multiple myeloma with elevated calcium as key factor."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "Spondylolisthesis involves the slippage of a vertebra, causing back pain often with radicular symptoms. Given the absence of radiating pain or neurological signs in this 60-year-old woman, spondylolisthesis is less likely.",
+      "pattern": "A",
+      "notes": "Spondylolisthesis explanation with reasons against it."
+    },
+    {
+      "source_claims": [
+        15,
+        16,
+        17
+      ],
+      "output": "Vertebral compression fractures are common in the elderly, especially with osteoporosis or corticosteroid use. They present with acute, severe back pain typically worsened by movement or palpation. Given her recent prednisone use, a vertebral compression fracture is possible but less likely due to the lack of tenderness on palpation in this 60-year-old woman.",
+      "pattern": "A",
+      "notes": "Explanation of VCF possibility with counter-argument."
+    },
+    {
+      "source_claims": [
+        18,
+        19,
+        20
+      ],
+      "output": "Given the elevated calcium, severe back pain, and considering her risk factors, multiple myeloma stands out as the most likely diagnosis for this 60-year-old woman. Multiple myeloma commonly presents with bone pain and hypercalcemia. Final answer: Multiple myeloma.",
+      "pattern": "C",
+      "notes": "Final diagnosis with supporting details."
+    }
+  ]
+}

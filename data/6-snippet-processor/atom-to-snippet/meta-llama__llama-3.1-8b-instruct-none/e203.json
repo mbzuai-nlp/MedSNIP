@@ -1,0 +1,154 @@
+{
+  "entry_id": 203,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2901,
+    "output_tokens": 663,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1341,
+      "output_tokens": 362,
+      "cached_input_tokens": 0,
+      "cost": 4.13e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1560,
+      "output_tokens": 301,
+      "cached_input_tokens": 0,
+      "cost": 4.324e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "poison ivy contagious between people",
+    "condition": "poison ivy"
+  },
+  "sentences": [
+    "Poison Ivy's powers in the DC Comics universe are based on her ability to control and manipulate plants, not a contagious disease",
+    "However, in certain storylines, her powers have been transferred to others through physical contact or exposure to her essence",
+    "Specifically, in the Batman comics, it is stated that Poison Ivy can transfer her powers to others through skin-to-skin contact or by injecting them with her venom",
+    "In the episode \"Trust Destiny\" of the Batwoman series, Poison Ivy's essence is transmitted to another character, Mary Hamilton, who is dubbed \"Poison Mary\"",
+    "In the same series, Poison Ivy also infects another character, Poison Mary, with her essence, although it is unclear if this is a direct transfer of powers or a separate phenomenon",
+    "In the 1992 film \"Poison Ivy,\" the main character, Ivy, is able to transfer her powers to her partner, Sylvie, through a kiss",
+    "It is worth noting that these instances are exceptions rather than the norm in the DC Comics universe, and Poison Ivy's powers are not typically depicted as contagious between people",
+    "However, in specific storylines and adaptations, the transfer of her powers to others has been explored as a plot device"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Poison Ivy's powers in the DC Comics universe are not based on a contagious disease.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Poison Ivy's powers can be transferred to others through physical contact or exposure to her essence in certain storylines.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Poison Ivy can transfer her powers to others through skin-to-skin contact or by injecting them with her venom.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Poison Ivy's essence can be transmitted to another character through skin-to-skin contact.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Poison Ivy can infect another character with her essence, although it is unclear if this is a direct transfer of powers or a separate phenomenon.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Poison Ivy's powers can be transferred to her partner through a kiss in the 1992 film 'Poison Ivy'.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "These instances of power transfer are exceptions rather than the norm in the DC Comics universe.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "In specific storylines and adaptations, the transfer of Poison Ivy's powers to others has been explored as a plot device.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Poison Ivy's powers in the DC Comics universe are not based on a contagious disease.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "In the DC Comics universe, Poison Ivy's powers can be transferred to others through physical contact, skin-to-skin contact, or injection of her venom.",
+      "pattern": "A",
+      "notes": "Enumeration of transfer methods."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "In specific storylines, Poison Ivy can infect another character with her essence, although it is unclear if this is a direct transfer of powers or a separate phenomenon.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "In the 1992 film 'Poison Ivy', Poison Ivy's powers were transferred to her partner through a kiss.",
+      "pattern": "D",
+      "notes": "Specific, concrete example."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "In the DC Comics universe, the transfer of Poison Ivy's powers to others is an exception rather than the norm, and has been explored as a plot device in specific storylines and adaptations.",
+      "pattern": "C",
+      "notes": "Conclusion + premise."
+    }
+  ]
+}

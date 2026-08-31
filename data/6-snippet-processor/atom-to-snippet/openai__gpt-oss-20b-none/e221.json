@@ -1,0 +1,240 @@
+{
+  "entry_id": 221,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 27-year-old man presents for an appointment to establish care. He recently was released from prison. He has felt very fatigued and has had a cough. He has lost roughly 15 pounds over the past 3 weeks. He attributes this to intravenous drug use in prison. His temperature is 99.5°F (37.5°C), blood pressure is 127/68 mmHg, pulse is 100/min, respirations are 18/min, and oxygen saturation is 98% on room air. QuantiFERON gold testing is positive. The patient is started on appropriate treatment. Which of the following is the most likely indication to discontinue this patient's treatment? (A) Elevated liver enzymes (B) Hyperuricemia (C) Optic neuritis (D) Peripheral neuropathy (E) Red body excretions",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4499,
+    "output_tokens": 4872,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1859,
+      "output_tokens": 2001,
+      "cached_input_tokens": 0,
+      "cost": 0.00033591
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2640,
+      "output_tokens": 2871,
+      "cached_input_tokens": 0,
+      "cost": 0.00048114
+    }
+  ],
+  "shared_context": {
+    "age": 27,
+    "sex": "male",
+    "chief_complaint": "fatigue, cough",
+    "weight_loss": "15 lbs over 3 weeks",
+    "recent_prison_release": true,
+    "intravenous_drug_use": true,
+    "medical_history": "latent tuberculosis infection",
+    "medications": "isoniazid, rifampicin, pyrazinamide, ethambutol",
+    "vitals": {
+      "temperature": "99.5°F",
+      "blood_pressure": "127/68 mmHg",
+      "pulse": "100/min",
+      "respirations": "18/min",
+      "oxygen_saturation": "98% room air"
+    }
+  },
+  "sentences": [
+    "To determine the most likely indication to discontinue the patient's treatment, we need to understand the underlying condition being treated and potential side effects or contraindications of the treatment",
+    "The patient has tested positive for QuantiFERON gold testing, which indicates an immune response to Mycobacterium tuberculosis (M. tuberculosis) antigen",
+    "This suggests that the patient has latent tuberculosis (TB) or active TB infection",
+    "The patient has been started on treatment for TB, likely a combination of isoniazid (INH), rifampicin, pyrazinamide, and ethambutol for the first 2 months followed by isoniazid and rifampicin for the subsequent 4 months",
+    "Elevated liver enzymes (A) is a common side effect of several anti-TB medications, including isoniazid and pyrazinamide",
+    "If liver enzymes are significantly elevated, treatment may need to be adjusted or discontinued to prevent liver damage",
+    "Hyperuricemia (B) is not a direct indication to discontinue TB treatment",
+    "Optic neuritis (C) is a rare but serious side effect of ethambutol, which can cause visual disturbances",
+    "If the patient develops optic neuritis, treatment with ethambutol should be discontinued",
+    "Peripheral neuropathy (D) is a known side effect of isoniazid, which can cause numbness, tingling, or pain in the hands and feet",
+    "Treatment with pyridoxine (vitamin B6) can help prevent or treat peripheral neuropathy, and treatment is not typically discontinued due to this side effect",
+    "Red body excretions (E) are not a common or recognized side effect of TB treatment",
+    "Based on the information provided, the most likely indication to discontinue the patient's treatment is optic neuritis, a rare but serious side effect of ethambutol"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Discontinuing TB treatment requires understanding the underlying condition and its potential side effects or contraindications.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "A positive QuantiFERON gold test indicates an immune response to Mycobacterium tuberculosis antigens.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The positive QuantiFERON gold result suggests latent tuberculosis infection or active TB disease.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient is treated with a TB regimen of isoniazid, rifampicin, pyrazinamide, and ethambutol for the first 2 months, followed by isoniazid and rifampicin for the next 4 months.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Elevated liver enzymes are a common adverse effect of anti-TB medications such as isoniazid and pyrazinamide.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Significant elevation of liver enzymes may necessitate adjusting or discontinuing TB treatment to prevent liver damage.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Hyperuricemia is not a direct indication for discontinuing TB treatment.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Optic neuritis is a rare but serious side effect of ethambutol that can cause visual disturbances.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "If optic neuritis develops, ethambutol should be discontinued.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Peripheral neuropathy is a known side effect of isoniazid that can produce numbness, tingling, or pain in the hands and feet.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Pyridoxine (vitamin B6) can prevent or treat peripheral neuropathy, so treatment is usually not stopped for this side effect.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Red body excretions are not a common or recognized side effect of TB treatment.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The most likely indication to discontinue the patient's treatment is optic neuritis caused by ethambutol.",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Discontinuing TB treatment for this 27‑year‑old male requires understanding the underlying condition (latent TB infection) and its potential side effects or contraindications.",
+      "pattern": "D",
+      "notes": "Standalone requirement statement."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "A positive QuantiFERON gold test in this 27‑year‑old male indicates an immune response to *Mycobacterium tuberculosis* antigens.",
+      "pattern": "D",
+      "notes": "Definition‐type fact."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The positive QuantiFERON gold result in this 27‑year‑old male suggests latent tuberculosis infection.",
+      "pattern": "D",
+      "notes": "Standalone inference."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Treatment of this 27‑year‑old male’s latent TB infection involves a regimen of isoniazid, rifampicin, pyrazinamide, and ethambutol for the first 2 months, followed by isoniazid and rifampicin for the next 4 months.",
+      "pattern": "D",
+      "notes": "Treatment regimen description."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Elevated liver enzymes are a common adverse effect of anti‑TB medications such as isoniazid and pyrazinamide; significant elevation may necessitate adjusting or discontinuing TB treatment to prevent liver damage in this 27‑year‑old male.",
+      "pattern": "B",
+      "notes": "Causal chain of side effect to treatment modification."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Hyperuricemia is not a direct indication for discontinuing TB treatment in this 27‑year‑old male.",
+      "pattern": "D",
+      "notes": "Negative indication fact."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        13
+      ],
+      "output": "Optic neuritis is a rare but serious side effect of ethambutol that can cause visual disturbances; if optic neuritis develops in this 27‑year‑old male, ethambutol should be discontinued—and therefore, the most likely indication to discontinue the patient's TB treatment is optic neuritis caused by ethambutol.",
+      "pattern": "C",
+      "notes": "Conclusion supported by causal premises."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Peripheral neuropathy is a known side effect of isoniazid that can produce numbness, tingling, or pain in the hands and feet in this 27‑year‑old male, but pyridoxine (vitamin B6) can prevent or treat it, so treatment is usually not stopped for this side effect.",
+      "pattern": "B",
+      "notes": "Causal chain explaining mitigation and lack of discontinuation."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Red body excretions are not a common or recognized side effect of TB treatment in this 27‑year‑old male.",
+      "pattern": "D",
+      "notes": "Negative side‑effect fact."
+    }
+  ]
+}

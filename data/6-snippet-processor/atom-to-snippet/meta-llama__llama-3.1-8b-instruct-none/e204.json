@@ -1,0 +1,137 @@
+{
+  "entry_id": 204,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2728,
+    "output_tokens": 545,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1215,
+      "output_tokens": 293,
+      "cached_input_tokens": 0,
+      "cost": 3.602e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1513,
+      "output_tokens": 252,
+      "cached_input_tokens": 0,
+      "cost": 4.034e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "is poison ivy contagious between people",
+    "condition": "poison ivy"
+  },
+  "sentences": [
+    "No, poison ivy is not contagious between people",
+    "The rash resulting from poison ivy is caused by an allergic reaction to urushiol oil, which is found in the plant's leaves, stems, and roots",
+    "This oil can stick to skin, clothes, tools, and other surfaces",
+    "The rash itself cannot be spread from person to person",
+    "However, contact with urushiol oil from an affected person's skin, clothing, or other contaminated objects can cause a reaction in another person",
+    "Therefore, it is the urushiol oil that is responsible for spreading the reaction and not the rash itself"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Poison ivy is not contagious between people.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The rash resulting from poison ivy is caused by an allergic reaction to urushiol oil.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The rash is caused by an allergic reaction to urushiol oil found in the plant's leaves, stems, and roots.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Urushiol oil can stick to skin, clothes, tools, and other surfaces.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The rash itself cannot be spread from person to person.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Contact with urushiol oil from an affected person's skin, clothing, or other contaminated objects can cause a reaction in another person.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The urushiol oil is responsible for spreading the reaction, not the rash itself.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Poison ivy is not contagious between people; the rash is caused by an allergic reaction to urushiol oil.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The rash is caused by an allergic reaction to urushiol oil found in the plant's leaves, stems, and roots.",
+      "pattern": "D",
+      "notes": "Detailed composition."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Urushiol oil can stick to skin, clothes, tools, and other surfaces, and the rash itself cannot be spread from person to person.",
+      "pattern": "A",
+      "notes": "Enumeration of properties."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Contact with urushiol oil from an affected person's skin, clothing, or other contaminated objects can cause a reaction in another person, and the urushiol oil is responsible for spreading the reaction, not the rash itself.",
+      "pattern": "B",
+      "notes": "Causal chain."
+    }
+  ]
+}

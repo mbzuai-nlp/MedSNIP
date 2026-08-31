@@ -1,0 +1,199 @@
+{
+  "entry_id": 254,
+  "batch_id": 26,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "do chlamdia often cure itself or does it cause permanent damage",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2824,
+    "output_tokens": 808,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1243,
+      "output_tokens": 436,
+      "cached_input_tokens": 0,
+      "cost": 0.00026382
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1581,
+      "output_tokens": 372,
+      "cached_input_tokens": 0,
+      "cost": 0.00027714
+    }
+  ],
+  "shared_context": {
+    "topic": "Chlamydia",
+    "condition": "sexually transmitted infection"
+  },
+  "sentences": [
+    "Chlamydia is a common sexually transmitted infection caused by the bacterium *Chlamydia trachomatis*",
+    "Chlamydia does not often cure itself without treatment",
+    "Most individuals with chlamydia are asymptomatic, which means they may not seek treatment, allowing the infection to persist",
+    "If left untreated, chlamydia can cause permanent damage",
+    "In women, it can lead to pelvic inflammatory disease (PID), which can result in chronic pelvic pain, ectopic pregnancy, and infertility",
+    "In men, untreated chlamydia can cause epididymitis, which may lead to infertility",
+    "Additionally, untreated chlamydia can increase the risk of acquiring or transmitting HIV"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Chlamydia is a common sexually transmitted infection caused by the bacterium *Chlamydia trachomatis*.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Chlamydia does not often cure itself without treatment.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Most individuals with chlamydia are asymptomatic.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Asymptomatic individuals with chlamydia may not seek treatment, allowing the infection to persist.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "If left untreated, chlamydia can cause permanent damage.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Untreated chlamydia in women can lead to pelvic inflammatory disease (PID).",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Pelvic inflammatory disease (PID) can result in chronic pelvic pain.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Pelvic inflammatory disease (PID) can result in ectopic pregnancy.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Pelvic inflammatory disease (PID) can result in infertility.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Untreated chlamydia in men can cause epididymitis.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Epididymitis may lead to infertility.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Untreated chlamydia can increase the risk of acquiring or transmitting HIV.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Chlamydia is a common sexually transmitted infection caused by the bacterium *Chlamydia trachomatis*.",
+      "pattern": "D",
+      "notes": "Standalone definition."
+    },
+    {
+      "source_claims": [
+        2,
+        4
+      ],
+      "output": "Chlamydia does not often cure itself without treatment, and asymptomatic individuals may not seek treatment, allowing the infection to persist.",
+      "pattern": "C",
+      "notes": "Claim + underlying reason."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Most individuals with chlamydia are asymptomatic.",
+      "pattern": "D",
+      "notes": "Standalone fact about symptoms."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "If left untreated, chlamydia can cause permanent damage.",
+      "pattern": "D",
+      "notes": "Standalone consequence."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "Untreated chlamydia in women can lead to pelvic inflammatory disease (PID), which can result in chronic pelvic pain, ectopic pregnancy, and infertility.",
+      "pattern": "A",
+      "notes": "Enumeration of consequences in women."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Untreated chlamydia in men can cause epididymitis, which may lead to infertility.",
+      "pattern": "B",
+      "notes": "Causal chain in men."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Untreated chlamydia can increase the risk of acquiring or transmitting HIV.",
+      "pattern": "D",
+      "notes": "Standalone fact about additional risk."
+    }
+  ]
+}

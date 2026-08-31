@@ -1,0 +1,99 @@
+{
+  "entry_id": 174,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Would you recommend something a bit stronger than meloxicam?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1977,
+    "output_tokens": 490,
+    "cached_input_tokens": 0,
+    "cost": 0.00044321
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1977,
+      "output_tokens": 490,
+      "cached_input_tokens": 0,
+      "cost": 0.00044321
+    }
+  ],
+  "shared_context": {
+    "topic": "alternatives to meloxicam",
+    "drug_a": "meloxicam"
+  },
+  "sentences": [
+    "To determine if a stronger alternative to meloxicam is suitable, we need to consider the patient's specific condition, medical history, and current treatment plan",
+    "Meloxicam is a nonsteroidal anti-inflammatory drug (NSAID) that is commonly used to treat pain, inflammation, and stiffness associated with osteoarthritis, rheumatoid arthritis, and other conditions",
+    "If the patient is not responding adequately to meloxicam or experiences side effects, a stronger alternative may be considered",
+    "A stronger NSAID option could be diclofenac, which has a similar mechanism of action to meloxicam but with a slightly higher potency",
+    "However, diclofenac may have a higher risk of gastrointestinal side effects, such as ulcers and bleeding",
+    "Another option could be a cyclooxygenase-2 (COX-2) inhibitor, such as celecoxib, which is designed to have a lower risk of gastrointestinal side effects compared to traditional NSAIDs",
+    "However, COX-2 inhibitors may have a higher risk of cardiovascular events, such as heart attack and stroke",
+    "It is essential to consult with a healthcare professional to determine the best course of treatment for the patient, as they can assess the individual's specific needs and medical history to recommend the most appropriate medication"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Determining if a stronger alternative to meloxicam is suitable requires considering the patient's specific condition, medical history, and current treatment plan.",
+      "pattern": "C",
+      "notes": "A recommendation/determination that is dependent on the listed premises."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Meloxicam is a nonsteroidal anti-inflammatory drug (NSAID) commonly used to treat pain, inflammation, and stiffness associated with osteoarthritis, rheumatoid arthritis, and other conditions.",
+      "pattern": "D",
+      "notes": "Standalone definition and use case for meloxicam."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "A stronger alternative to meloxicam may be considered if the patient is not responding adequately to meloxicam or experiences side effects.",
+      "pattern": "B",
+      "notes": "Causal/conditional chain: stronger alternative depends on response or side effects."
+    },
+    {
+      "source_sentences": [
+        3,
+        4
+      ],
+      "output": "Diclofenac is a stronger NSAID option with a similar mechanism of action to meloxicam but higher potency, although it may have a higher risk of gastrointestinal side effects, such as ulcers and bleeding.",
+      "pattern": "A",
+      "output_pattern": "A",
+      "notes": "Enumeration of properties (potency and side effects) of the same drug (diclofenac)."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "Celecoxib is a cyclooxygenase-2 (COX-2) inhibitor designed to have a lower risk of gastrointestinal side effects compared to traditional NSAIDs, but it may have a higher risk of cardiovascular events, such as heart attack and stroke.",
+      "pattern": "A",
+      "notes": "Enumeration of properties (benefits and risks) of the same drug (celecoxib)."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Consulting with a healthcare professional is essential to determine the best course of treatment, as they can assess the individual's specific needs and medical history to recommend the most appropriate medication.",
+      "pattern": "B",
+      "notes": "Causal link: consultation is essential because the professional performs the assessment."
+    }
+  ]
+}

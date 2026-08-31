@@ -1,0 +1,166 @@
+{
+  "entry_id": 87,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "My cat was just diagnosed with a tapeworm, could that be something I can get from him?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2800,
+    "output_tokens": 689,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1241,
+      "output_tokens": 341,
+      "cached_input_tokens": 0,
+      "cost": 3.846e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1559,
+      "output_tokens": 348,
+      "cached_input_tokens": 0,
+      "cost": 4.51e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "contracting a tapeworm from a pet",
+    "condition": "tapeworm infection",
+    "subject": "humans"
+  },
+  "sentences": [
+    "Yes, it is possible for humans to contract a tapeworm infection from their pets, although it is relatively rare",
+    "The most common tapeworm in dogs and cats is *Dipylidium caninum*",
+    "Humans can become infected if they accidentally ingest an infected flea that contains the larval tapeworm",
+    "This typically happens when infants or young children come into close contact with pets and may accidentally swallow a flea while playing or cuddling with the animal",
+    "To prevent infection, ensure your pet is regularly treated for fleas and practice good hygiene, such as washing hands after handling pets and avoiding close contact with pets' bedding or areas where fleas might be present"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "It is possible for humans to contract a tapeworm infection from their pets.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The most common tapeworm in dogs and cats is *Dipylidium caninum*.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Humans can become infected if they accidentally ingest an infected flea that contains the larval tapeworm.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Infants or young children are at risk of infection if they come into close contact with pets and swallow a flea.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Infected fleas can be present in pets' bedding or areas where fleas might be present.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "To prevent infection, ensure your pet is regularly treated for fleas.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Practice good hygiene, such as washing hands after handling pets.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Avoid close contact with pets' bedding or areas where fleas might be present to prevent infection.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "It is possible for humans to contract a tapeworm infection from their pets.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The most common tapeworm in dogs and cats is *Dipylidium caninum*.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Humans can become infected if they accidentally ingest an infected flea that contains the larval tapeworm, especially infants or young children who come into close contact with pets and swallow a flea.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Infected fleas can be present in pets' bedding or areas where fleas might be present.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "To prevent infection, ensure your pet is regularly treated for fleas.",
+      "pattern": "D",
+      "notes": "Standalone prevention advice."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Practice good hygiene, such as washing hands after handling pets.",
+      "pattern": "D",
+      "notes": "Standalone prevention advice."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Avoid close contact with pets' bedding or areas where fleas might be present to prevent infection.",
+      "pattern": "D",
+      "notes": "Standalone prevention advice."
+    }
+  ]
+}

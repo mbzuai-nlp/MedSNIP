@@ -1,0 +1,253 @@
+{
+  "entry_id": 116,
+  "batch_id": 12,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 40-year-old south asian man presents to a primary care provider with a chronic cough that is worse at night. He has had the cough for several years but it has been getting worse over the last few months. He recently moved to the United States to work in construction. He has lost 10 pounds in the last 3 months along with darker stools which he believes is caused by a Western diet. He denies any difficulty swallowing or feeling of food getting stuck in his throat. He drinks alcohol 1-2 times per week and has never smoked. He denies any family history of cancer. His temperature is 98.6°F (37°C), blood pressure is 114/72 mmHg, pulse is 82/min, and respirations are 12/min. On physical exam, his lungs are clear to auscultation bilaterally without wheezing. His abdomen is soft and non-distended. He has no tenderness to palpation and bowel sounds are present. Which of the following is the most appropriate next step in management? (A) Barium swallow (B) Colonoscopy (C) Helicobacter pylori stool antigen test (D) Trial of lansoprazole (E) Upper endoscopy",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4807,
+    "output_tokens": 1377,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1946,
+      "output_tokens": 784,
+      "cached_input_tokens": 0,
+      "cost": 0.0005509
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2861,
+      "output_tokens": 593,
+      "cached_input_tokens": 0,
+      "cost": 0.00059727
+    }
+  ],
+  "shared_context": {
+    "age": 40,
+    "sex": "male",
+    "chief_complaint": "chronic cough (worse at night), weight loss, darker stools",
+    "medical_history": "south Asian, recently moved to US, works in construction",
+    "vitals": "T 98.6°F, BP 114/72 mmHg, P 82/min, R 12/min",
+    "exam_findings": "lungs clear, abdomen soft/non-distended, no tenderness, bowel sounds present",
+    "treatment_history": "none",
+    "correct_answer": "Helicobacter pylori stool antigen test"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in management for the patient, we need to assess the symptoms and risk factors presented",
+    "The patient is a 40-year-old south Asian man with a chronic cough, which is worse at night, and has lost 10 pounds in the last 3 months",
+    "He has darker stools, which he attributes to a Western diet",
+    "He denies difficulty swallowing or a feeling of food getting stuck in his throat",
+    "The patient's physical exam is unremarkable, with clear lungs and a soft, non-distended abdomen without tenderness or bowel obstruction",
+    "The patient's cough is worse at night, which is a common symptom of gastroesophageal reflux disease (GERD)",
+    "However, the patient's lack of difficulty swallowing or a feeling of food getting stuck in his throat reduces the likelihood of a mechanical obstruction",
+    "Weight Loss and Darker Stools",
+    "The patient's weight loss and darker stools could be indicative of a gastrointestinal issue",
+    "Darker stools can be caused by gastrointestinal bleeding, which could be due to a peptic ulcer disease (PUD) or a more sinister cause such as gastric cancer",
+    "Risk Factors",
+    "The patient has no family history of cancer, but his southern Asian background increases his risk for Helicobacter pylori infection and subsequent peptic ulcers",
+    "Next Steps",
+    "Given the patient's symptoms and risk factors, the most appropriate next step is to investigate the cause of his gastrointestinal symptoms and possible bleeding",
+    "Option C, Helicobacter pylori stool antigen test, is the most appropriate next step",
+    "This test can help diagnose H. pylori infection, which is associated with PUD and gastric cancer"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "To determine the most appropriate next step in management for the patient, the symptoms and risk factors presented must be assessed.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient is a 40-year-old south Asian man with a chronic cough that is worse at night and has lost 10 pounds in the last 3 months.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient has darker stools, which he attributes to a Western diet.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient denies difficulty swallowing or a feeling of food getting stuck in his throat.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's physical exam is unremarkable, featuring clear lungs and a soft, non-distended abdomen without tenderness or bowel obstruction.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "A cough that is worse at night is a common symptom of gastroesophageal reflux disease (GERD).",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient's lack of difficulty swallowing or a feeling of food getting stuck in his throat reduces the likelihood of a mechanical obstruction.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient presents with weight loss and darker stools.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient's weight loss and darker stools could be indicative of a gastrointestinal issue.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Darker stools can be caused by gastrointestinal bleeding, which could be due to peptic ulcer disease (PUD) or gastric cancer.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The patient has specific risk factors.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The patient's southern Asian background increases his risk for Helicobacter pylori infection and subsequent peptic ulcers, despite no family history of cancer.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Next steps in management are required.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Given the patient's symptoms and risk factors, the most appropriate next step is to investigate the cause of his gastrointestinal symptoms and possible bleeding.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The most appropriate next step is the Helicobacter pylori stool antigen test (Option C).",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 16,
+      "text": "The Helicobacter pylori stool antigen test can help diagnose H. pylori infection, which is associated with PUD and gastric cancer.",
+      "source_sentences": [
+        15
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "To determine the most appropriate next step in management for this 40-year-old south Asian man, the symptoms and risk factors presented must be assessed.",
+      "pattern": "D",
+      "notes": "Introductory statement."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "The patient is a 40-year-old south Asian man with a chronic cough (worse at night), a 10-pound weight loss in the last 3 months, and darker stools; he denies difficulty swallowing or a feeling of food getting stuck, and his physical exam is unremarkable with clear lungs and a soft, non-distended abdomen.",
+      "pattern": "A",
+      "notes": "Enumeration of patient's clinical presentation."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "A cough that is worse at night, as seen in this 40-year-old man, is a common symptom of gastroesophageal reflux disease (GERD).",
+      "pattern": "D",
+      "notes": "Standalone medical fact linked to patient."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The patient's lack of difficulty swallowing or a feeling of food getting stuck in his throat reduces the likelihood of a mechanical obstruction.",
+      "pattern": "D",
+      "notes": "Standalone clinical interpretation."
+    },
+    {
+      "source_claims": [
+        8,
+        9,
+        10
+      ],
+      "output": "The patient presents with weight loss and darker stools, which could be indicative of a gastrointestinal issue; specifically, darker stools can be caused by gastrointestinal bleeding, which could be due to peptic ulcer disease (PUD) or gastric cancer.",
+      "pattern": "B",
+      "notes": "Causal chain linking symptoms to potential diagnoses."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "The patient's south Asian background increases his risk for Helicobacter pylori infection and subsequent peptic ulcers, despite no family history of cancer.",
+      "pattern": "B",
+      "notes": "Risk factor linked to specific pathology."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "Next steps in management are required; given the 40-year-old man's symptoms and risk factors, the most appropriate next step is to investigate the cause of his gastrointestinal symptoms and possible bleeding.",
+      "pattern": "C",
+      "notes": "Conclusion based on preceding clinical reasoning."
+    },
+    {
+      "source_claims": [
+        15,
+        16
+      ],
+      "output": "The most appropriate next step is the Helicobacter pylori stool antigen test (Option C), as it can help diagnose H. pylori infection, which is associated with PUD and gastric cancer.",
+      "pattern": "B",
+      "notes": "Recommendation linked to its diagnostic utility."
+    }
+  ]
+}

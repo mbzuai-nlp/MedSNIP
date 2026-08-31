@@ -1,0 +1,189 @@
+{
+  "entry_id": 110,
+  "batch_id": 11,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 51-year-old man presents for his annual wellness visit with his primary care physician. His wife has noticed a tremor while he is working on his car and knows that his father died of Parkinson disease. He says that the tremor is nothing to worry about and only occurs during a few activities such as pouring drinks, pointing the remote at the television, or fixing his car. The patient states his wife is just overreacting. His medical problems include hypertension, diabetes, and hyperlipidemia for which he takes lisinopril, metformin, and atorvastatin. He has 3-5 drinks of scotch per night before working on his car. On physical exam, the tremor is replicated during finger to nose testing. Romberg sign is negative. Cranial nerves II-XII are intact. The rest of the exam is benign. Which of the following is the most appropriate treatment for this patient's tremor? (A) Alcoholics anonymous (B) Aripiprazole (C) Carbidopa (D) Phenobarbital (E) Propranolol",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4418,
+    "output_tokens": 946,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1840,
+      "output_tokens": 584,
+      "cached_input_tokens": 0,
+      "cost": 6.016e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2578,
+      "output_tokens": 362,
+      "cached_input_tokens": 0,
+      "cost": 6.604e-05
+    }
+  ],
+  "shared_context": {
+    "patient_age": 51,
+    "patient_sex": "male",
+    "chief_complaint": "tremor",
+    "medical_history": "hypertension, diabetes, hyperlipidemia",
+    "medications": "lisinopril, metformin, atorvastatin",
+    "lifestyle": "3-5 drinks of scotch per night",
+    "exam_findings": "tremor during finger to nose testing, negative Romberg sign, intact cranial nerves II-XII",
+    "question_type": "most appropriate treatment for tremor"
+  },
+  "sentences": [
+    "To determine the most appropriate treatment for this patient's tremor, we must first identify the cause of the tremor",
+    "Based on the provided information, the patient's tremor occurs during specific activities such as pouring drinks, pointing the remote at the television, or fixing his car",
+    "The patient also consumes 3-5 drinks of scotch per night before working on his car",
+    "These factors suggest that the tremor is likely due to alcohol-induced hand tremors, a condition known as alcoholic tremors or alcohol-induced parkinsonism",
+    "Considering the patient's medical problems, including hypertension, diabetes, and hyperlipidemia, and his medication regimen (lisinopril, metformin, and atorvastatin), the most appropriate treatment for this patient's tremor would be to reduce or stop alcohol consumption",
+    "Therefore, the most appropriate treatment for this patient's tremor is Alcoholics Anonymous (AA) participation and counseling to address his alcohol use disorder",
+    "The other options are not suitable for this patient",
+    "Aripiprazole is an antipsychotic medication primarily used to treat schizophrenia and bipolar disorder, not alcohol-induced tremors",
+    "Carbidopa is used in the treatment of Parkinson's disease, not alcohol-induced tremors",
+    "Phenobarbital is a barbiturate used to treat seizures and insomnia, not alcohol-induced tremors",
+    "Propranolol is a beta-blocker used to treat high blood pressure and other cardiovascular conditions, not alcohol-induced tremors",
+    "The patient's tremor is likely exacerbated by his alcohol consumption, and addressing this underlying cause is crucial in managing his symptoms",
+    "Referral to AA and counseling would be an essential part of his treatment plan"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's tremor occurs during specific activities such as pouring drinks, pointing the remote at the television, or fixing his car.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient also consumes 3-5 drinks of scotch per night before working on his car.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "These factors suggest that the tremor is likely due to alcohol-induced hand tremors.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The most appropriate treatment for this patient's tremor would be to reduce or stop alcohol consumption.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The most appropriate treatment for this patient's tremor is Alcoholics Anonymous (AA) participation and counseling to address his alcohol use disorder.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Aripiprazole is an antipsychotic medication primarily used to treat schizophrenia and bipolar disorder, not alcohol-induced tremors.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Carbidopa is used in the treatment of Parkinson's disease, not alcohol-induced tremors.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Phenobarbital is a barbiturate used to treat seizures and insomnia, not alcohol-induced tremors.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Propranolol is a beta-blocker used to treat high blood pressure and other cardiovascular conditions, not alcohol-induced tremors.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The patient's tremor is likely exacerbated by his alcohol consumption, and addressing this underlying cause is crucial in managing his symptoms.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Referral to AA and counseling would be an essential part of his treatment plan.",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The patient's tremor occurs during activities like pouring drinks, pointing the remote, or fixing his car, and he consumes 3-5 drinks of scotch per night before these activities.",
+      "pattern": "D",
+      "notes": "Standalone risk-factor."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "The patient's tremor is likely due to alcohol-induced hand tremors, and the most appropriate treatment is to reduce or stop alcohol consumption.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The most appropriate treatment for this patient's tremor is Alcoholics Anonymous (AA) participation and counseling to address his alcohol use disorder.",
+      "pattern": "C",
+      "notes": "Final answer with reasoning inlined."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "Aripiprazole, Carbidopa, Phenobarbital, and Propranolol are not the most appropriate treatments for this patient's tremor, as they are used to treat other conditions such as schizophrenia, Parkinson's disease, seizures, and high blood pressure, respectively.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "The patient's tremor is likely exacerbated by his alcohol consumption, and addressing this underlying cause is crucial in managing his symptoms; referral to AA and counseling is an essential part of his treatment plan.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "entry_id": 10,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "So what does the non reactive mean for the hep a igm",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2577,
+    "output_tokens": 174,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1161,
+      "output_tokens": 109,
+      "cached_input_tokens": 0,
+      "cost": 2.758e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1416,
+      "output_tokens": 65,
+      "cached_input_tokens": 0,
+      "cost": 3.092e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "non-reactive result for Hepatitis A IgM antibody test",
+    "condition": "Hepatitis A infection"
+  },
+  "sentences": [
+    "A non-reactive result for the Hepatitis A IgM antibody test indicates that there is no detectable level of IgM antibodies against the Hepatitis A virus in the blood sample",
+    "This typically means that the individual has not been recently infected with the Hepatitis A virus, as IgM antibodies are usually present during an acute or recent infection"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A non-reactive result indicates no detectable level of IgM antibodies.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "This typically means the individual has not been recently infected.",
+      "source_sentences": [
+        1
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "A non-reactive result for Hepatitis A IgM antibodies typically means the individual has not been recently infected.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise."
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "entry_id": 59,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "what causes ringworm ?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3057,
+    "output_tokens": 1184,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1398,
+      "output_tokens": 571,
+      "cached_input_tokens": 0,
+      "cost": 5.08e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1659,
+      "output_tokens": 613,
+      "cached_input_tokens": 0,
+      "cost": 5.77e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "ringworm",
+    "condition": "fungal infection",
+    "cause": "dermatophytes (a type of fungus)"
+  },
+  "sentences": [
+    "Ringworm, also known as tinea corporis, is a fungal infection caused by dermatophytes, a type of fungus that infects the outer layer of the skin",
+    "The most common causative agents of ringworm are Trichophyton rubrum, Trichophyton mentagrophytes, and Microsporum canis",
+    "Ringworm is typically spread through direct contact with an infected person or animal, contaminated objects, or contaminated soil",
+    "It can also be spread through sharing personal items such as towels, clothing, or combs",
+    "The infection can also be transmitted through contact with an infected animal, such as a cat or dog",
+    "Risk factors for developing ringworm include skin-to-skin contact with an infected person or animal, sharing personal items, and having a weakened immune system",
+    "People with compromised immune systems, such as those with diabetes or taking immunosuppressive medications, are more susceptible to ringworm infections",
+    "Symptoms of ringworm include a circular, itchy rash with a clear center, often accompanied by redness, scaling, and inflammation",
+    "The rash can appear anywhere on the body, but it is most commonly found on the arms, legs, and torso",
+    "Treatment for ringworm typically involves topical or oral antifungal medications, such as terbinafine or itraconazole",
+    "In severe cases, oral antifungal medications may be prescribed",
+    "It is essential to complete the full course of treatment to prevent recurrence and spread of the infection"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Ringworm is a fungal infection caused by dermatophytes.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The most common causative agents of ringworm are Trichophyton rubrum, Trichophyton mentagrophytes, and Microsporum canis.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Ringworm can be spread through direct contact with an infected person or animal.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Ringworm can also be spread through contaminated objects or soil.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Ringworm can be spread through sharing personal items such as towels, clothing, or combs.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Ringworm can be transmitted through contact with an infected animal, such as a cat or dog.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Skin-to-skin contact with an infected person or animal is a risk factor for developing ringworm.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Sharing personal items is a risk factor for developing ringworm.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Having a weakened immune system is a risk factor for developing ringworm.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "People with compromised immune systems are more susceptible to ringworm infections.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Symptoms of ringworm include a circular, itchy rash.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The rash can appear anywhere on the body, but it is most commonly found on the arms, legs, and torso.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Treatment for ringworm typically involves topical or oral antifungal medications.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Oral antifungal medications may be prescribed in severe cases.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Completing the full course of treatment is essential to prevent recurrence and spread of the infection.",
+      "source_sentences": [
+        11
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Ringworm is a fungal infection caused by dermatophytes.",
+      "pattern": "D",
+      "notes": "Definition."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The most common causative agents of ringworm are Trichophyton rubrum, Trichophyton mentagrophytes, and Microsporum canis.",
+      "pattern": "D",
+      "notes": "Standalone list of causative agents."
+    },
+    {
+      "source_claims": [
+        3,
+        4
+      ],
+      "output": "Ringworm can be spread through direct contact with an infected person or animal, or through contaminated objects or soil.",
+      "pattern": "A",
+      "notes": "Enumeration of modes of transmission."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Ringworm can be transmitted through contact with an infected animal, such as a cat or dog, or through sharing personal items.",
+      "pattern": "A",
+      "notes": "Enumeration of risk factors."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Skin-to-skin contact with an infected person or animal is a risk factor for developing ringworm.",
+      "pattern": "D",
+      "notes": "Standalone risk factor."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Sharing personal items is a risk factor for developing ringworm.",
+      "pattern": "D",
+      "notes": "Standalone risk factor."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Having a weakened immune system is a risk factor for developing ringworm.",
+      "pattern": "D",
+      "notes": "Standalone risk factor."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "People with compromised immune systems are more susceptible to ringworm infections.",
+      "pattern": "D",
+      "notes": "Standalone risk factor."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Symptoms of ringworm include a circular, itchy rash.",
+      "pattern": "D",
+      "notes": "Definition of symptoms."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "The rash can appear anywhere on the body, but it is most commonly found on the arms, legs, and torso.",
+      "pattern": "D",
+      "notes": "Description of rash location."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Treatment for ringworm typically involves topical or oral antifungal medications.",
+      "pattern": "D",
+      "notes": "Description of treatment."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Oral antifungal medications may be prescribed in severe cases.",
+      "pattern": "D",
+      "notes": "Description of treatment."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Completing the full course of treatment is essential to prevent recurrence and spread of the infection.",
+      "pattern": "D",
+      "notes": "Description of treatment outcome."
+    }
+  ]
+}

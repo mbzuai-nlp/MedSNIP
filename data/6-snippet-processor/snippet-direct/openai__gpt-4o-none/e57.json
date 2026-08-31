@@ -1,0 +1,76 @@
+{
+  "entry_id": 57,
+  "batch_id": 6,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "what causes ringworm ?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 1689,
+    "output_tokens": 324,
+    "cached_input_tokens": 0,
+    "cost": 0.0074625
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1689,
+      "output_tokens": 324,
+      "cached_input_tokens": 0,
+      "cost": 0.0074625
+    }
+  ],
+  "shared_context": {
+    "topic": "causes of ringworm",
+    "condition": "ringworm (dermatophytosis)"
+  },
+  "sentences": [
+    "Ringworm, also known as dermatophytosis, is a common fungal infection of the skin",
+    "It is caused by dermatophytes, which are a group of fungi that include species from the genera Trichophyton, Microsporum, and Epidermophyton",
+    "These fungi thrive in warm, moist environments and can infect the skin, hair, and nails",
+    "Transmission occurs through direct contact with an infected person or animal, or indirectly through contact with contaminated objects such as towels, clothing, or surfaces"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Ringworm, also known as dermatophytosis, is a common fungal infection of the skin.",
+      "pattern": "D",
+      "notes": "Standalone fact about ringworm being a fungal infection."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Ringworm is caused by dermatophytes, which are a group of fungi that include species from the genera Trichophyton, Microsporum, and Epidermophyton.",
+      "pattern": "D",
+      "notes": "Standalone cause fact: fungi types that cause ringworm."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "These fungi, causing ringworm, thrive in warm, moist environments and can infect the skin, hair, and nails.",
+      "pattern": "A",
+      "notes": "Enumeration of the environments and body parts affected by the fungi; one subject (the fungi)."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Transmission of ringworm occurs through direct contact with an infected person or animal, or indirectly through contact with contaminated objects such as towels, clothing, or surfaces.",
+      "pattern": "A",
+      "notes": "Enumeration of transmission methods: direct and indirect contact."
+    }
+  ]
+}

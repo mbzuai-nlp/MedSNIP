@@ -1,0 +1,176 @@
+{
+  "entry_id": 193,
+  "batch_id": 20,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 15-year-old boy presents to his pediatrician after an appendectomy 1 week ago. The patient denies any abdominal pain, fevers, chills, nausea, vomiting, diarrhea, or constipation. He eats solids and drinks liquids without difficulty. He is back to playing basketball for his school team without any difficulty. His urine appears more amber than usual but he suspects dehydration. His temperature is 98.6°F (37°C), blood pressure is 110/70 mmHg, pulse is 76/min, and respirations are 15/min. His physical exam is unremarkable. The laparoscopic incision sites are all clean without erythema. The pediatrician orders a urinalysis, which is notable for the following. Urine: Epithelial cells: Scant Glucose: Negative Protein: 3+ WBC: 3/hpf Bacteria: None Leukocyte esterase: Negative Nitrites: Negative The patient is told to return in 3 days for a follow-up appointment; however, his urinalysis at that time is similar. Which of the following is the most appropriate next step in management? (A) CT scan abdomen and pelvis with contrast (B) Renal biopsy (C) Repeat urinalysis (D) Urine dipstick in the morning and in the afternoon (E) Urine electrolytes and creatinine",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2747,
+    "output_tokens": 977,
+    "cached_input_tokens": 0,
+    "cost": 9.402e-05
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2747,
+      "output_tokens": 977,
+      "cached_input_tokens": 0,
+      "cost": 9.402e-05
+    }
+  ],
+  "shared_context": {
+    "age": "15",
+    "sex": "male",
+    "chief_complaint": "urine appears more amber than usual after appendectomy",
+    "medical_history": "appendectomy 1 week ago",
+    "vitals": "temperature 98.6°F (37°C), blood pressure 110/70 mmHg, pulse 76/min, respirations 15/min",
+    "exam_findings": "unremarkable physical exam, laparoscopic incision sites clean without erythema",
+    "correct_answer": "D"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in management for this patient, we need to analyze the clinical context and the urinalysis findings in detail",
+    "The patient is a 15-year-old boy who underwent an appendectomy a week ago",
+    "He denies having any abdominal pain, fevers, chills, nausea, vomiting, diarrhea, or constipation",
+    "He is able to eat solids and drink liquids without difficulty",
+    "He has returned to playing basketball without any problems",
+    "His urine appears more amber than usual, which he attributes to dehydration",
+    "Temperature: 98.6°F (37°C) (Normal)",
+    "Blood pressure: 110/70 mmHg (Normal)",
+    "Pulse: 76/min (Normal)",
+    "Respirations: 15/min (Normal)",
+    "Physical exam: Unremarkable",
+    "Laparoscopic incision sites are clean without erythema",
+    "Epithelial cells: Scant",
+    "Glucose: Negative",
+    "Protein: 3+",
+    "WBC: 3/hpf (Normal, as it's a low count)",
+    "Bacteria: None",
+    "Leukocyte esterase: Negative",
+    "Nitrites: Negative",
+    "The primary abnormality in the urinalysis is the presence of 3+ protein, which indicates significant proteinuria",
+    "The other measures are largely unremarkable or within normal limits",
+    "Transient or Orthostatic Proteinuria: This is a common cause of proteinuria in adolescents and is usually benign",
+    "It can be evaluated with a urine dipstick test performed in the morning and in the afternoon to distinguish between persistent and orthostatic proteinuria",
+    "Persistent Proteinuria: If proteinuria is persistent, further evaluation such as renal function tests, renal ultrasound, or even a renal biopsy might be warranted",
+    "Given the patient's clinical stability, lack of symptoms, and the specific finding of proteinuria, the most appropriate next step would involve confirming whether the proteinuria is transient or orthostatic",
+    "This can be achieved with sequential urine dipstick testing",
+    "The most appropriate next step in management is (D) Urine dipstick in the morning and in the afternoon"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate next step in management, we need to analyze the clinical context and the urinalysis findings in detail.",
+      "pattern": "D",
+      "notes": "Standalone introductory sentence; no specific patient details."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "The patient is a 15-year-old boy who underwent an appendectomy a week ago, denies having any abdominal pain or gastrointestinal symptoms, is able to eat solids and drink liquids without difficulty, has returned to playing basketball, and attributes his urine's amber color to dehydration.",
+      "pattern": "A",
+      "notes": "All properties of one subject (patient's clinical context)."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "The patient's vital signs are within normal limits: temperature 98.6°F (37°C), blood pressure 110/70 mmHg, pulse 76/min, and respirations 15/min.",
+      "pattern": "A",
+      "notes": "All properties of one subject (patient's vital signs)."
+    },
+    {
+      "source_sentences": [
+        10,
+        11
+      ],
+      "output": "The physical exam is unremarkable, and the laparoscopic incision sites are clean without erythema.",
+      "pattern": "A",
+      "notes": "All properties of one subject (patient's physical exam findings)."
+    },
+    {
+      "source_sentences": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "output": "The urinalysis shows scant epithelial cells, negative glucose, 3+ protein, normal WBC, no bacteria, negative leukocyte esterase, and negative nitrites.",
+      "pattern": "A",
+      "notes": "All properties of one subject (urinalysis findings)."
+    },
+    {
+      "source_sentences": [
+        19,
+        20
+      ],
+      "output": "The primary abnormality in the urinalysis is the presence of 3+ protein, indicating significant proteinuria; the other measures are largely unremarkable or within normal limits.",
+      "pattern": "D",
+      "notes": "Standalone interpretation of urinalysis findings."
+    },
+    {
+      "source_sentences": [
+        21,
+        22
+      ],
+      "output": "Transient or Orthostatic Proteinuria: This is a common cause of proteinuria in adolescents and is usually benign; it can be evaluated with a urine dipstick test performed in the morning and in the afternoon to distinguish between persistent and orthostatic proteinuria.",
+      "pattern": "A",
+      "notes": "All properties of one subject (definition of transient proteinuria)."
+    },
+    {
+      "source_sentences": [
+        23
+      ],
+      "output": "If proteinuria is persistent, further evaluation such as renal function tests, renal ultrasound, or even a renal biopsy might be warranted.",
+      "pattern": "D",
+      "notes": "Standalone statement of potential next steps."
+    },
+    {
+      "source_sentences": [
+        24
+      ],
+      "output": "Given the patient's clinical stability, lack of symptoms, and the specific finding of proteinuria, the most appropriate next step would involve confirming whether the proteinuria is transient or orthostatic.",
+      "pattern": "D",
+      "notes": "Standalone clinical reasoning."
+    },
+    {
+      "source_sentences": [
+        25
+      ],
+      "output": "This can be achieved with sequential urine dipstick testing.",
+      "pattern": "D",
+      "notes": "Standalone method for evaluating proteinuria."
+    },
+    {
+      "source_sentences": [
+        26
+      ],
+      "output": "The most appropriate next step in management is to perform urine dipstick in the morning and in the afternoon.",
+      "pattern": "C",
+      "notes": "Final answer with logical link to previous sentences."
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "entry_id": 5,
+  "batch_id": 1,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How long does this years flu usually last?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2771,
+    "output_tokens": 707,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1244,
+      "output_tokens": 355,
+      "cached_input_tokens": 0,
+      "cost": 0.000238
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1527,
+      "output_tokens": 352,
+      "cached_input_tokens": 0,
+      "cost": 0.00026534
+    }
+  ],
+  "shared_context": {
+    "topic": "duration of this year's flu season",
+    "condition": "flu"
+  },
+  "sentences": [
+    "The duration of a typical flu season can vary, but it generally lasts about six to eight weeks from the peak of flu activity",
+    "Flu seasons usually begin in the fall and can last until spring",
+    "Influenza activity can be predicted and tracked geographically, with the season typically occurring during the colder months in each hemisphere",
+    "For each specific location, minor epidemics usually take about three weeks to reach their peak and another three weeks to significantly diminish",
+    "The flu virus is transmitted throughout populations all year round, although the incidence of flu cases increases tenfold or more during periods of cooler temperatures",
+    "Annually, about 3 to 5 million cases of severe illness and 290,000 to 650,000 deaths from seasonal flu occur worldwide"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A typical flu season usually lasts about six to eight weeks from the peak of flu activity.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Flu seasons usually begin in the fall.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Flu seasons can last until spring.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Influenza activity occurs during the colder months in each hemisphere.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Minor epidemics usually take about three weeks to reach their peak.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Minor epidemics usually take another three weeks to significantly diminish.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The flu virus is transmitted throughout populations all year round.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The incidence of flu cases increases tenfold or more during periods of cooler temperatures.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "About 3 to 5 million cases of severe illness from seasonal flu occur worldwide annually.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "About 290,000 to 650,000 deaths from seasonal flu occur worldwide annually.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A typical flu season usually lasts about six to eight weeks from the peak of flu activity.",
+      "pattern": "D",
+      "notes": "Standalone fact about flu season duration."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "Flu seasons usually begin in the fall and can last until spring.",
+      "pattern": "A",
+      "notes": "Enumeration of flu season timeline."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Influenza activity occurs during the colder months in each hemisphere.",
+      "pattern": "D",
+      "notes": "Standalone fact about influenza activity."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Minor epidemics usually take about three weeks to reach their peak and another three weeks to significantly diminish.",
+      "pattern": "A",
+      "notes": "Enumeration of epidemic progression."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The flu virus is transmitted throughout populations all year round.",
+      "pattern": "D",
+      "notes": "Standalone fact about flu transmission."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The incidence of flu cases increases tenfold or more during periods of cooler temperatures.",
+      "pattern": "D",
+      "notes": "Standalone fact about flu case incidence."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "About 3 to 5 million cases of severe illness from seasonal flu and 290,000 to 650,000 deaths occur worldwide annually.",
+      "pattern": "A",
+      "notes": "Enumeration of annual flu impact statistics."
+    }
+  ]
+}

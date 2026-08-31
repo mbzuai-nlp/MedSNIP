@@ -1,0 +1,454 @@
+{
+  "entry_id": 220,
+  "batch_id": 22,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 33-year-old woman presents to the emergency department with muscle spasms. She has noticed \"twitching\" in both her upper and lower extremities over the past 3 days that have interfered with her training for a marathon. She has felt more fatigued over the past month. She has no significant medical history. She takes no medication other than whey protein supplements, a multivitamin, and fish oil. Her temperature is 98.5°F (36.9°C), blood pressure is 103/71 mmHg, pulse is 105/min, respirations are 11/min, and oxygen saturation is 100% on room air. Physical exam reveals a thin woman with thinning hair. She appears pale and her mucous membranes are dry. Her neurological and cardiac exams are unremarkable. Laboratory studies are ordered as seen below. Hemoglobin: 10 g/dL Hematocrit: 30% Leukocyte count: 6,100/mm^3 with normal differential Platelet count: 187,500/mm^3 Serum: Na+: 130 mEq/L Cl-: 100 mEq/L K+: 2.3 mEq/L HCO3-: 28 mEq/L BUN: 40 mg/dL Glucose: 79 mg/dL Creatinine: 0.9 mg/dL Ca2+: 8.2 mg/dL Mg2+: 1.8 mg/dL Thyroid stimulating hormone (TSH): 4.0 mIU/L Free T4: 0.4 ng/dL (normal: 0.7-1.53 ng/dL) The patient is given 4 liters of lactated ringer solution and 40 mEq of potassium. Her repeat whole blood potassium 3 hours later is 2.4 mEq/L, and her repeat BUN is 20 mEq/L. Another 40 mEq of potassium is administered. Another repeat whole blood potassium is 2.5 mEq/L. The patient’s muscle spasms persist. Which of the following is the most likely underlying etiology for this patient’s chief concern? (A) Hypocalcemia (B) Hypomagnesemia (C) Hyponatremia (D) Hypothyroidism (E) Hypovolemia",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5607,
+    "output_tokens": 2378,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2330,
+      "output_tokens": 1274,
+      "cached_input_tokens": 0,
+      "cost": 9.756e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 3277,
+      "output_tokens": 1104,
+      "cached_input_tokens": 0,
+      "cost": 0.0001097
+    }
+  ],
+  "shared_context": {
+    "patient_age": 33,
+    "patient_sex": "female",
+    "chief_complaint": "muscle spasms",
+    "medical_history": "none significant",
+    "medications": "whey protein supplements, multivitamin, fish oil",
+    "vitals": "98.5°F (36.9°C), 103/71 mmHg, 105/min, 11/min, 100% on room air",
+    "exam": "thin woman, thinning hair, pale, dry mucous membranes, unremarkable neurological and cardiac exams",
+    "treatment_history": "given 4 liters of lactated ringer solution and 80 mEq of potassium",
+    "lab_results": {
+      "hemoglobin": 10,
+      "leukocyte_count": 6100,
+      "platelet_count": 187500,
+      "sodium": 130,
+      "potassium": 2.3,
+      "bun": 40,
+      "creatinine": 0.9,
+      "calcium": 8.2,
+      "magnesium": 1.8,
+      "tsh": 4.0,
+      "free_t4": 0.4
+    },
+    "correct_answer": "hypomagnesemia"
+  },
+  "sentences": [
+    "To determine the underlying etiology for the patient's muscle spasms, let's analyze the provided information step by step",
+    "The patient presents with muscle spasms, fatigue, and twitching in both upper and lower extremities",
+    "These symptoms have been ongoing for 3 days and have been interfering with her training for a marathon",
+    "The patient has a normal neurological and cardiac exam but appears pale, has thinning hair, and dry mucous membranes",
+    "Hemoglobin: 10 g/dL (low)",
+    "Leukocyte count: 6,100/mm^3 (normal)",
+    "Platelet count: 187,500/mm^3 (normal)",
+    "Na+: 130 mEq/L (low)",
+    "K+: 2.3 mEq/L (low)",
+    "HCO3-: 28 mEq/L (normal)",
+    "BUN: 40 mg/dL (high)",
+    "Creatinine: 0.9 mg/dL (normal)",
+    "Ca2+: 8.2 mg/dL (normal)",
+    "Mg2+: 1.8 mg/dL (low)",
+    "TSH: 4.0 mIU/L (normal)",
+    "Free T4: 0.4 ng/dL (low)",
+    "Despite receiving 80 mEq of potassium, the patient's potassium level remains low at 2.5 mEq/L",
+    "(A) Hypocalcemia: The patient's calcium level is normal (8.2 mg/dL), making hypocalcemia an unlikely cause of her muscle spasms",
+    "(B) Hypomagnesemia: The patient's magnesium level is low (1.8 mg/dL), which can cause muscle spasms, weakness, and fatigue",
+    "This is a plausible underlying etiology",
+    "(C) Hyponatremia: The patient's sodium level is low (130 mEq/L), but the primary issue seems to be the patient's presentation of muscle spasms and fatigue, which is more closely associated with the low potassium and magnesium levels",
+    "(D) Hypothyroidism: The patient's TSH is normal (4.0 mIU/L), and her free T4 is low (0.4 ng/dL)",
+    "However, the low free T4 is within the normal range for her TSH level and does not necessarily indicate hypothyroidism",
+    "(E) Hypovolemia: The patient received 4 liters of lactated ringer solution, which should have helped to correct any hypovolemia",
+    "Considering the above information, the most likely underlying etiology for this patient's muscle spasms is hypomagnesemia (B)",
+    "Hypomagnesemia can cause muscle spasms, weakness, and fatigue, which are consistent with the patient's presentation"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient presents with muscle spasms, fatigue, and twitching in both upper and lower extremities.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "These symptoms have been ongoing for 3 days and have been interfering with her training for a marathon.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient has a normal neurological and cardiac exam but appears pale, has thinning hair, and dry mucous membranes.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Hemoglobin: 10 g/dL (low).",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Leukocyte count: 6,100/mm^3 (normal).",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Platelet count: 187,500/mm^3 (normal).",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Na+: 130 mEq/L (low).",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "K+: 2.3 mEq/L (low).",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "HCO3-: 28 mEq/L (normal).",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "BUN: 40 mg/dL (high).",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Creatinine: 0.9 mg/dL (normal).",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Ca2+: 8.2 mg/dL (normal).",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Mg2+: 1.8 mg/dL (low).",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "TSH: 4.0 mIU/L (normal).",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Free T4: 0.4 ng/dL (low).",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Despite receiving 80 mEq of potassium, the patient's potassium level remains low at 2.5 mEq/L.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Hypocalcemia: The patient's calcium level is normal (8.2 mg/dL), making hypocalcemia an unlikely cause of her muscle spasms.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Hypomagnesemia: The patient's magnesium level is low (1.8 mg/dL), which can cause muscle spasms, weakness, and fatigue.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 19,
+      "text": "This is a plausible underlying etiology.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Hyponatremia: The patient's sodium level is low (130 mEq/L), but the primary issue seems to be the patient's presentation of muscle spasms and fatigue, which is more closely associated with the low potassium and magnesium levels.",
+      "source_sentences": [
+        20
+      ]
+    },
+    {
+      "index": 21,
+      "text": "Hypothyroidism: The patient's TSH is normal (4.0 mIU/L), and her free T4 is low (0.4 ng/dL).",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 22,
+      "text": "However, the low free T4 is within the normal range for her TSH level and does not necessarily indicate hypothyroidism.",
+      "source_sentences": [
+        22
+      ]
+    },
+    {
+      "index": 23,
+      "text": "Hypovolemia: The patient received 4 liters of lactated ringer solution, which should have helped to correct any hypovolemia.",
+      "source_sentences": [
+        23
+      ]
+    },
+    {
+      "index": 24,
+      "text": "Considering the above information, the most likely underlying etiology for this patient's muscle spasms is hypomagnesemia (B).",
+      "source_sentences": [
+        24
+      ]
+    },
+    {
+      "index": 25,
+      "text": "Hypomagnesemia can cause muscle spasms, weakness, and fatigue, which are consistent with the patient's presentation.",
+      "source_sentences": [
+        25
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "A 33-year-old woman presents to the emergency department with muscle spasms, fatigue, and twitching in both upper and lower extremities.",
+      "pattern": "D",
+      "notes": "Standalone chief complaint."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "These symptoms have been ongoing for 3 days and have been interfering with her training for a marathon; she appears pale, has thinning hair, and dry mucous membranes.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The patient's hemoglobin is low at 10 g/dL.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The patient's leukocyte count is normal at 6,100/mm^3.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "The patient's platelet count is normal at 187,500/mm^3.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "The patient's sodium level is low at 130 mEq/L.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "The patient's potassium level is low at 2.3 mEq/L.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "The patient's HCO3- level is normal at 28 mEq/L.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "The patient's BUN is high at 40 mg/dL.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "The patient's creatinine is normal at 0.9 mg/dL.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "The patient's calcium level is normal at 8.2 mg/dL.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "The patient's magnesium level is low at 1.8 mg/dL.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "The patient's TSH level is normal at 4.0 mIU/L.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "The patient's free T4 level is low at 0.4 ng/dL.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Despite receiving 80 mEq of potassium, the patient's potassium level remains low at 2.5 mEq/L.",
+      "pattern": "D",
+      "notes": "Standalone lab result."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Hypocalcemia is an unlikely cause of the patient's muscle spasms given her normal calcium level.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "Hypomagnesemia is a plausible underlying etiology for the patient's muscle spasms given her low magnesium level.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        19
+      ],
+      "output": "This is a plausible underlying etiology.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        20
+      ],
+      "output": "Hyponatremia is a possible issue but the primary concern is the patient's muscle spasms and fatigue.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        21
+      ],
+      "output": "Hypothyroidism is unlikely given the patient's normal TSH level.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        22
+      ],
+      "output": "The patient's low free T4 level does not necessarily indicate hypothyroidism given her normal TSH level.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        23
+      ],
+      "output": "Hypovolemia is unlikely given the patient's treatment with 4 liters of lactated ringer solution.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        24,
+        25
+      ],
+      "output": "Considering the above information, the most likely underlying etiology for this patient's muscle spasms is hypomagnesemia (B).",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "entry_id": 252,
+  "batch_id": 26,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "So the singulair is an oral tablet not an inhaler?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2664,
+    "output_tokens": 1405,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1188,
+      "output_tokens": 717,
+      "cached_input_tokens": 0,
+      "cost": 0.00013602
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1476,
+      "output_tokens": 688,
+      "cached_input_tokens": 0,
+      "cost": 0.0001406
+    }
+  ],
+  "shared_context": {
+    "topic": "Singulair",
+    "drug_a": "Singulair (montelukast)",
+    "condition": "not applicable"
+  },
+  "sentences": [
+    "Yes, Singulair (montelukast) is an oral tablet, not an inhaler",
+    "It is available in various formulations, including chewable tablets and oral granules, which are intended to be swallowed, not inhaled"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Singulair (montelukast) is an oral tablet, not an inhaler.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Singulair is available in various formulations.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Chewable tablets of Singulair are intended to be swallowed, not inhaled.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Oral granules of Singulair are intended to be swallowed, not inhaled.",
+      "source_sentences": [
+        1
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Singulair (montelukast) is an oral tablet, not an inhaler.",
+      "pattern": "D",
+      "notes": "Standalone fact about the medication’s form."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "Singulair is available in various formulations, including chewable tablets and oral granules, all of which are intended to be swallowed, not inhaled.",
+      "pattern": "A",
+      "notes": "Enumeration of the different formulations’ intended use."
+    }
+  ]
+}

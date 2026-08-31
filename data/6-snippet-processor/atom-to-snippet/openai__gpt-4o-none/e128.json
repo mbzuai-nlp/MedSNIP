@@ -1,0 +1,223 @@
+{
+  "entry_id": 128,
+  "batch_id": 13,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "I am a 33 years old female with right lower abdominal pain , what could it be?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 3031,
+    "output_tokens": 1186,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1365,
+      "output_tokens": 597,
+      "cached_input_tokens": 0,
+      "cost": 0.0093825
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1666,
+      "output_tokens": 589,
+      "cached_input_tokens": 0,
+      "cost": 0.010055
+    }
+  ],
+  "shared_context": {
+    "condition": "right lower abdominal pain",
+    "symptom": "right lower abdominal pain",
+    "age": "33 years old",
+    "gender": "female"
+  },
+  "sentences": [
+    "Right lower abdominal pain in a 33-year-old female can be caused by various conditions",
+    "The differential diagnosis includes",
+    "Appendicitis: Inflammation of the appendix, often presenting with pain that starts near the navel and then shifts to the right lower abdomen",
+    "Associated symptoms may include nausea, vomiting, and fever",
+    "Ovarian Cyst: A fluid-filled sac on the ovary that can cause pain if it ruptures or becomes twisted (ovarian torsion)",
+    "Symptoms may include sudden, severe pain, nausea, and vomiting",
+    "Ectopic Pregnancy: A pregnancy that occurs outside the uterus, commonly in the fallopian tube",
+    "Symptoms include sharp, stabbing pain, vaginal bleeding, and dizziness",
+    "Pelvic Inflammatory Disease (PID): An infection of the female reproductive organs, often caused by sexually transmitted infections",
+    "Symptoms include pelvic pain, fever, and abnormal vaginal discharge",
+    "Gastrointestinal Issues: Conditions such as Crohn's disease, irritable bowel syndrome (IBS), or a hernia can also cause right lower abdominal pain",
+    "Symptoms vary depending on the specific condition",
+    "A thorough clinical evaluation, including history, physical examination, and possibly imaging studies (e.g., ultrasound, CT scan), is necessary to determine the exact cause of the pain"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Right lower abdominal pain in a 33-year-old female can be caused by various conditions.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Appendicitis is a potential cause of right lower abdominal pain and is the inflammation of the appendix.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Appendicitis pain often starts near the navel and then shifts to the right lower abdomen.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Associated symptoms of appendicitis may include nausea, vomiting, and fever.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "An ovarian cyst is a fluid-filled sac on the ovary that can cause pain if it ruptures or becomes twisted (ovarian torsion).",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Ovarian cyst symptoms may include sudden, severe pain, nausea, and vomiting.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Ectopic pregnancy is a pregnancy that occurs outside the uterus, commonly in the fallopian tube.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Symptoms of an ectopic pregnancy include sharp, stabbing pain, vaginal bleeding, and dizziness.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Pelvic Inflammatory Disease (PID) is an infection of the female reproductive organs, often caused by sexually transmitted infections.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Symptoms of PID include pelvic pain, fever, and abnormal vaginal discharge.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Gastrointestinal issues such as Crohn's disease, irritable bowel syndrome (IBS), or a hernia can also cause right lower abdominal pain.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Symptoms vary depending on the specific gastrointestinal condition.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "text": "A thorough clinical evaluation, including history and physical examination, is necessary to determine the exact cause of the pain.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Determining the exact cause of the pain may also require imaging studies such as ultrasound or CT scan.",
+      "source_sentences": [
+        12
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Right lower abdominal pain in a 33-year-old female can be caused by various conditions.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement about the potential causes."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4
+      ],
+      "output": "Appendicitis is a potential cause of right lower abdominal pain and is the inflammation of the appendix. Appendicitis pain often starts near the navel and then shifts to the right lower abdomen. Associated symptoms of appendicitis may include nausea, vomiting, and fever.",
+      "pattern": "A",
+      "notes": "Enumeration of details related to appendicitis as a cause, including symptoms."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "An ovarian cyst is a fluid-filled sac on the ovary that can cause pain if it ruptures or becomes twisted, known as ovarian torsion. Ovarian cyst symptoms may include sudden, severe pain, nausea, and vomiting.",
+      "pattern": "A",
+      "notes": "Details about ovarian cyst causes and symptoms."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "Ectopic pregnancy is a pregnancy that occurs outside the uterus, commonly in the fallopian tube. Symptoms of an ectopic pregnancy include sharp, stabbing pain, vaginal bleeding, and dizziness.",
+      "pattern": "A",
+      "notes": "Details about ectopic pregnancy causes and symptoms."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Pelvic Inflammatory Disease (PID) is an infection of the female reproductive organs, often caused by sexually transmitted infections. Symptoms of PID include pelvic pain, fever, and abnormal vaginal discharge.",
+      "pattern": "A",
+      "notes": "Details about PID causes and symptoms."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Gastrointestinal issues such as Crohn's disease, irritable bowel syndrome (IBS), or a hernia can also cause right lower abdominal pain. Symptoms vary depending on the specific gastrointestinal condition.",
+      "pattern": "A",
+      "notes": "Details about gastrointestinal causes and variable symptoms."
+    },
+    {
+      "source_claims": [
+        13,
+        14
+      ],
+      "output": "A thorough clinical evaluation, including history and physical examination, is necessary to determine the exact cause of the pain. Determining the exact cause of the pain may also require imaging studies such as ultrasound or CT scan.",
+      "pattern": "B",
+      "notes": "Causal chain regarding the need for clinical evaluation and imaging to determine the cause."
+    }
+  ]
+}

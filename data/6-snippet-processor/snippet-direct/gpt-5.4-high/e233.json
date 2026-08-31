@@ -1,0 +1,146 @@
+{
+  "entry_id": 233,
+  "batch_id": 24,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 45-year-old African American woman presents to her primary care physician for not feeling well. She states she has had a cough for the past week. She also has abdominal pain and trouble focusing that has been worsening and has lost 5 pounds recently. Her gastroesophageal reflux disease (GERD) has been poorly controlled recently. The patient is a non-smoker and has a history of GERD for which she takes antacids. Her temperature is 98.6°F (37°C), blood pressure is 115/71 mmHg, pulse is 72/min, and respirations are 12/min. A physical exam is within normal limits. Laboratory studies are ordered and are below:\n\nSerum:\nNa+: 139 mEq/L\nK+: 4.1 mEq/L\nCl-: 101 mEq/L\nHCO3-: 24 mEq/L\nUrea nitrogen: 12 mg/dL\nGlucose: 70 mg/dL\nCreatinine: 0.9 mg/dL\nCa2+: 12.5 mg/dL\nAlkaline phosphatase: 150 U/L\nPhosphorus: 2.0 mg/dL\n\nUrine:\nColor: amber\nNitrites: negative\nSodium: 5 mmol/24 hours\nRed blood cells: 0/hpf\n\nWhich of the following is the most likely explanation of this patient's current presentation? (A) Antacid overuse (B) Increased 1,25-dihydroxyvitamin D (C) Increased parathyroid hormone (D) Malignancy (E) Viral illness",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2724,
+    "output_tokens": 6778,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2724,
+      "output_tokens": 6778,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "45",
+    "sex": "female",
+    "race": "African American",
+    "chief_complaint": "not feeling well with 1 week of cough, abdominal pain, trouble focusing, and recent 5-lb weight loss",
+    "medical_history": "GERD; non-smoker",
+    "medications": "antacids",
+    "vitals": "T 98.6°F (37°C), BP 115/71 mmHg, pulse 72/min, respirations 12/min",
+    "exam_findings": "physical exam within normal limits; labs notable for calcium 12.5 mg/dL, alkaline phosphatase 150 U/L, phosphorus 2.0 mg/dL",
+    "correct_answer": "Malignancy (D)"
+  },
+  "sentences": [
+    "To approach this patient's presentation, we must first identify the key findings and potential underlying causes",
+    "The patient has a cough for the past week, abdominal pain, trouble focusing, and has lost 5 pounds recently, despite poorly controlled GERD",
+    "The laboratory studies reveal a normal potassium level, slightly low calcium level, and elevated alkaline phosphatase",
+    "Normal potassium level: A normal potassium level makes hypokalemia and hypokalemic metabolic alkalosis less likely",
+    "Slightly low calcium level: A calcium level of 12.5 mg/dL is slightly below the normal range",
+    "This could be due to several factors, including hypoparathyroidism, vitamin D deficiency, or malignancy",
+    "Elevated alkaline phosphatase: An elevated alkaline phosphatase level can be seen in a variety of conditions, including bone disorders, liver disease, and malignancy",
+    "Considering the patient's presentation and lab results, we must consider the potential diagnoses provided in the options",
+    "(A) Antacid overuse: Antacid overuse can lead to hypokalemia and hypochloremic metabolic alkalosis, which is not consistent with the patient's presentation",
+    "(B) Increased 1,25-dihydroxyvitamin D: Elevated 1,25-dihydroxyvitamin D can cause hypercalcemia, not hypocalcemia",
+    "(C) Increased parathyroid hormone (PTH): Hyperparathyroidism would typically cause hypercalcemia, not hypocalcemia",
+    "(D) Malignancy: Malignancy can cause a variety of electrolyte imbalances, including hypocalcemia",
+    "The patient's recent weight loss, poorly controlled GERD, and slightly low calcium level make malignancy a possible explanation",
+    "(E) Viral illness: Viral illnesses can cause a variety of electrolyte imbalances, but hypocalcemia is not typically one of them",
+    "Considering the options, the most likely explanation for the patient's current presentation is D) Malignancy"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "For this 45-year-old African American woman, the key presenting findings are 1 week of cough, abdominal pain, trouble focusing, recent 5-lb weight loss, and poorly controlled GERD.",
+      "pattern": "A",
+      "notes": "Introductory framing is merged with the symptom list because both describe the same patient presentation."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The laboratory studies in this 45-year-old African American woman are interpreted as showing a normal potassium level, a slightly low calcium level, and an elevated alkaline phosphatase level.",
+      "pattern": "A",
+      "notes": "Single sentence enumerates multiple properties of the same lab panel."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "In this 45-year-old African American woman, a normal potassium level makes hypokalemia and hypokalemic metabolic alkalosis less likely.",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "In this 45-year-old African American woman, a calcium level of 12.5 mg/dL is interpreted as slightly below the normal range, and that finding is attributed as possibly due to hypoparathyroidism, vitamin D deficiency, or malignancy.",
+      "pattern": "B",
+      "notes": "The proposed causes depend on the preceding calcium interpretation, so the reasoning is kept together."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "In this 45-year-old African American woman, an elevated alkaline phosphatase level can be seen in bone disorders, liver disease, and malignancy.",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "For this 45-year-old African American woman, the differential diagnosis should be considered using the clinical presentation and laboratory results.",
+      "pattern": "E",
+      "notes": "Transition sentence marking a shift from lab interpretation to option-by-option differential diagnosis."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Antacid overuse is considered inconsistent with this 45-year-old African American woman's presentation because antacid overuse can lead to hypokalemia and hypochloremic metabolic alkalosis.",
+      "pattern": "F",
+      "notes": "Separate answer-choice rationale kept atomic as a distinct checkable fact."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Increased 1,25-dihydroxyvitamin D is considered inconsistent with this 45-year-old African American woman's presentation because elevated 1,25-dihydroxyvitamin D can cause hypercalcemia rather than hypocalcemia.",
+      "pattern": "F",
+      "notes": "Separate answer-choice rationale kept atomic as a distinct checkable fact."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Increased parathyroid hormone is considered inconsistent with this 45-year-old African American woman's presentation because hyperparathyroidism would typically cause hypercalcemia rather than hypocalcemia.",
+      "pattern": "F",
+      "notes": "Separate answer-choice rationale kept atomic as a distinct checkable fact."
+    },
+    {
+      "source_sentences": [
+        11,
+        12,
+        14
+      ],
+      "output": "Malignancy is presented as the most likely explanation for this 45-year-old African American woman's presentation because malignancy can cause electrolyte abnormalities, and the cited supporting features are recent weight loss, poorly controlled GERD, and the interpreted low calcium level.",
+      "pattern": "C",
+      "notes": "Final conclusion is merged with its supporting premises because the diagnosis is only meaningful with the stated reasoning."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Viral illness is considered less likely in this 45-year-old African American woman because viral illnesses are not typically associated with hypocalcemia.",
+      "pattern": "F",
+      "notes": "Separate answer-choice rationale kept atomic as a distinct checkable fact."
+    }
+  ]
+}

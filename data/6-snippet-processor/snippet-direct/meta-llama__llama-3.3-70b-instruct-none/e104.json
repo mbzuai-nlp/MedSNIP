@@ -1,0 +1,116 @@
+{
+  "entry_id": 104,
+  "batch_id": 11,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 55-year-old woman presents to a primary care physician with persistent nausea and abdominal discomfort. She has experienced these symptoms daily for the past 3 months. She feels bloated and has episodic loose and watery stools. She has a history of hypertension and hyperlipidemia for which she takes amlodipine and atorvastatin. She immigrated from Vietnam 6 months ago. Her temperature is 98.6°F (37.0°C), blood pressure is 110/60 mmHg, pulse is 70/min, and respirations are 18/min. Physical exam reveals a thin-appearing woman in no acute distress. Her mucous membranes are moist. Cardiac and lung examinations are unremarkable. Laboratory results are as follows: Leukocyte count: 13,000/mm^3 Segmented neutrophils: 54% Bands: 2% Eosinophils: 6% Basophils: 0.4% Lymphocytes: 30% Monocytes: 5% A vitamin D level is 26 ng/mL (reference: >= 30 ng/mL). Which of the following is the most appropriate test in making the diagnosis? (A) Bowel wall biopsy (B) CT scan of the abdomen (C) Lower endoscopy (D) Stool ova and parasite assay (E) Stool toxin assay",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2546,
+    "output_tokens": 769,
+    "cached_input_tokens": 0,
+    "cost": 0.00050068
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2546,
+      "output_tokens": 769,
+      "cached_input_tokens": 0,
+      "cost": 0.00050068
+    }
+  ],
+  "shared_context": {
+    "age": "55",
+    "sex": "female",
+    "chief_complaint": "persistent nausea and abdominal discomfort",
+    "medical_history": "hypertension; hyperlipidemia; amlodipine; atorvastatin; immigrated from Vietnam 6 months ago",
+    "vitals": "temperature 98.6°F (37.0°C), blood pressure 110/60 mmHg, pulse 70/min, respirations 18/min",
+    "exam_findings": "thin-appearing woman in no acute distress; mucous membranes moist; cardiac and lung examinations unremarkable",
+    "laboratory_results": "leukocyte count 13,000/mm^3; segmented neutrophils 54%; bands 2%; eosinophils 6%; basophils 0.4%; lymphocytes 30%; monocytes 5%; vitamin D level 26 ng/mL"
+  },
+  "sentences": [
+    "To determine the most appropriate test for diagnosis, we need to consider the patient's symptoms and medical history",
+    "The patient presents with persistent nausea, abdominal discomfort, bloating, and episodic loose and watery stools for the past 3 months",
+    "She has a history of hypertension and hyperlipidemia and takes amlodipine and atorvastatin",
+    "Her laboratory results show a normal leukocyte count with eosinophilia (6%)",
+    "Her vitamin D level is low (26 ng/mL)",
+    "Given the patient's symptoms and history, the differential diagnosis includes gastrointestinal infections, inflammatory bowel disease, and malabsorption syndromes",
+    "Since she immigrated from Vietnam 6 months ago, we should also consider the possibility of parasitic infections, such as Strongyloides stercoralis or Giardia lamblia",
+    "The most appropriate test in making the diagnosis would be",
+    "Stool ova and parasite assay",
+    "This test is essential, especially given the patient's travel history, to rule out parasitic infections",
+    "Stool toxin assays are not typically used to diagnose gastrointestinal infections, and bowel wall biopsy or CT scan of the abdomen may not be immediately necessary without more specific symptoms or laboratory results"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most appropriate test for diagnosis for this 55-year-old woman with persistent nausea and abdominal discomfort, we need to consider her symptoms and medical history.",
+      "pattern": "D",
+      "notes": "Introduction to diagnostic process; patient context inlined."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "The patient presents with persistent nausea, abdominal discomfort, bloating, and episodic loose and watery stools for the past 3 months, and has a history of hypertension and hyperlipidemia for which she takes amlodipine and atorvastatin.",
+      "pattern": "A",
+      "notes": "Enumeration of patient's symptoms and medical history."
+    },
+    {
+      "source_sentences": [
+        3,
+        4
+      ],
+      "output": "Her laboratory results show a normal leukocyte count with eosinophilia (6%) and a low vitamin D level (26 ng/mL).",
+      "pattern": "A",
+      "notes": "Enumeration of laboratory results."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Given the patient's symptoms and history, the differential diagnosis includes gastrointestinal infections, inflammatory bowel disease, and malabsorption syndromes.",
+      "pattern": "D",
+      "notes": "Standalone differential diagnosis statement."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Since this 55-year-old woman immigrated from Vietnam 6 months ago, we should also consider the possibility of parasitic infections, such as Strongyloides stercoralis or Giardia lamblia.",
+      "pattern": "D",
+      "notes": "Travel history informs differential diagnosis; patient context inlined."
+    },
+    {
+      "source_sentences": [
+        7,
+        8,
+        9
+      ],
+      "output": "The most appropriate test in making the diagnosis for this patient would be a stool ova and parasite assay, especially given her travel history, to rule out parasitic infections.",
+      "pattern": "C",
+      "notes": "Conclusion (most appropriate test) with supporting premises (importance of test due to travel history); patient context inlined."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Stool toxin assays are not typically used to diagnose gastrointestinal infections, and bowel wall biopsy or CT scan of the abdomen may not be immediately necessary without more specific symptoms or laboratory results for this patient.",
+      "pattern": "D",
+      "notes": "Standalone statement regarding less relevant diagnostic options; patient context inlined."
+    }
+  ]
+}

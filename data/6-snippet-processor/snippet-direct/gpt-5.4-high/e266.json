@@ -1,0 +1,136 @@
+{
+  "entry_id": 266,
+  "batch_id": 27,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 36-year-old man presents to the office for follow up after initiating antidepressant therapy. Two months ago, he was started on citalopram after several weeks of depressed mood, loss of interest in activities, depressed appetite, and inability to sleep. Today, he reports minimal improvement in his symptoms. He had some nausea after starting the medication, but this has resolved. He denies thoughts of suicide or self-harm. His temperature is 98.6°F (37.0°C), pulse is 80/min, blood pressure is 120/80 mmHg, respirations are 22/min, and oxygen saturation is 97% on room air. Exam reveals a depressed, tired appearing man. Which of the following is the most appropriate next step in management? (A) Add mirtazapine (B) Electroconvulsive therapy (C) Switch to amitriptyline (D) Switch to paroxetine (E) Switch to phenelzine",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2643,
+    "output_tokens": 3963,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2643,
+      "output_tokens": 3963,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "36",
+    "sex": "male",
+    "chief_complaint": "follow-up for depression with minimal improvement after 2 months of citalopram",
+    "medical_history": "depressed mood, loss of interest, decreased appetite, insomnia; denies suicidal ideation or self-harm",
+    "medications": "citalopram",
+    "vitals": "T 98.6 F, HR 80, BP 120/80 mmHg, RR 22, O2 sat 97% on room air",
+    "exam_findings": "depressed, tired-appearing man",
+    "treatment_history": "started citalopram 2 months ago; initial nausea resolved",
+    "correct_answer": "Add mirtazapine"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in managing a 36-year-old man who reports minimal improvement in depressive symptoms after two months on citalopram, we need to evaluate the efficacy and typical management strategies for inadequate response to initial antidepressant therapy",
+    "Initial Assessment: The patient has been on citalopram for two months with minimal improvement",
+    "According to clinical guidelines, a full therapeutic trial typically lasts 6-8 weeks at an adequate dose",
+    "Since he has been on the medication for two months, it is reasonable to consider next steps",
+    "Side Effects: The patient initially experienced nausea, a common side effect of citalopram, but this has resolved",
+    "This suggests that side effects are not a limiting factor in his case",
+    "Suicide Risk: He denies thoughts of suicide or self-harm, which is crucial in deciding the safety and urgency of treatment changes",
+    "Add mirtazapine: This is an option, as mirtazapine can be used to augment SSRIs like citalopram",
+    "Mirtazapine has a different mechanism of action and can help with insomnia and appetite issues",
+    "Electroconvulsive therapy (ECT): ECT is typically reserved for severe, treatment-resistant depression or when a rapid response is required due to severe symptoms or high suicide risk",
+    "This does not seem to be the case here",
+    "Switch to amitriptyline: Amitriptyline is a tricyclic antidepressant and generally not a first-line option due to its side effect profile and potential for toxicity in overdose",
+    "Switch to paroxetine: Paroxetine is another SSRI",
+    "Switching to another SSRI can be considered if there is no response to the first one, but trying augmentation first with a different class of medication might be more beneficial",
+    "Switch to phenelzine: Phenelzine is a monoamine oxidase inhibitor (MAOI) and is typically reserved for treatment-resistant depression due to dietary restrictions and side effects",
+    "Given these considerations, the most appropriate next step is to augment the current treatment with mirtazapine, which can address the patient's residual symptoms and has an acceptable side effect profile",
+    "Final Answer: (A) Add mirtazapine"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "output": "Management of this 36-year-old man with persistent depressive symptoms after starting citalopram should be based on reassessing efficacy after an adequate initial antidepressant trial; a full therapeutic trial usually lasts 6-8 weeks at an adequate dose, and this patient has already had 2 months with minimal improvement, so it is reasonable to consider the next step now.",
+      "pattern": "B",
+      "notes": "Explicit adequacy-of-trial reasoning chain across these sentences."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "This 36-year-old man had nausea after starting citalopram, but the nausea resolved, so medication side effects are not currently a limiting factor in management.",
+      "pattern": "B",
+      "notes": "Side effect followed by inference that it is no longer limiting."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "This 36-year-old man denies suicidal ideation or self-harm, which is important in determining the safety and urgency of changing antidepressant treatment.",
+      "pattern": "D",
+      "notes": "Standalone clinical management fact."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "Mirtazapine can be used to augment an SSRI such as citalopram, and its different mechanism of action may also help this 36-year-old man's insomnia and decreased appetite.",
+      "pattern": "A",
+      "notes": "Two properties of the same option, mirtazapine, are listed together."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "Electroconvulsive therapy is typically reserved for severe, treatment-resistant depression or when a rapid response is needed because of severe symptoms or high suicide risk; this 36-year-old man does not appear to meet those criteria.",
+      "pattern": "C",
+      "notes": "Option conclusion is only meaningful with its indication-based rationale."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Amitriptyline is a tricyclic antidepressant and is generally not a first-line next step because of its side effect burden and potential toxicity in overdose.",
+      "pattern": "D",
+      "notes": "Standalone appraisal of one answer choice."
+    },
+    {
+      "source_sentences": [
+        12,
+        13
+      ],
+      "output": "Paroxetine is another SSRI; after no response to an initial SSRI, switching to another SSRI can be considered, but augmenting with a medication from a different class may be more beneficial for this 36-year-old man.",
+      "pattern": "C",
+      "notes": "The management conclusion about switching is supported by identifying paroxetine as another SSRI."
+    },
+    {
+      "source_sentences": [
+        14
+      ],
+      "output": "Phenelzine is a monoamine oxidase inhibitor and is typically reserved for treatment-resistant depression because of dietary restrictions and side effects.",
+      "pattern": "D",
+      "notes": "Standalone fact about one answer choice."
+    },
+    {
+      "source_sentences": [
+        15,
+        16
+      ],
+      "output": "For this 36-year-old man with persistent depressive symptoms after an adequate citalopram trial and resolved initial nausea, the most appropriate next step is to add mirtazapine to address residual symptoms with an acceptable side effect profile.",
+      "pattern": "C",
+      "notes": "Final recommendation paired with its supporting rationale."
+    }
+  ]
+}

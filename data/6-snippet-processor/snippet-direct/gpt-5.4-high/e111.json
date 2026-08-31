@@ -1,0 +1,95 @@
+{
+  "entry_id": 111,
+  "batch_id": 12,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 51-year-old man presents for his annual wellness visit with his primary care physician. His wife has noticed a tremor while he is working on his car and knows that his father died of Parkinson disease. He says that the tremor is nothing to worry about and only occurs during a few activities such as pouring drinks, pointing the remote at the television, or fixing his car. The patient states his wife is just overreacting. His medical problems include hypertension, diabetes, and hyperlipidemia for which he takes lisinopril, metformin, and atorvastatin. He has 3-5 drinks of scotch per night before working on his car. On physical exam, the tremor is replicated during finger to nose testing. Romberg sign is negative. Cranial nerves II-XII are intact. The rest of the exam is benign. Which of the following is the most appropriate treatment for this patient's tremor? (A) Alcoholics anonymous (B) Aripiprazole (C) Carbidopa (D) Phenobarbital (E) Propranolol",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2461,
+    "output_tokens": 4305,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2461,
+      "output_tokens": 4305,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "51",
+    "sex": "male",
+    "chief_complaint": "task-specific tremor during activities such as pouring drinks, pointing a remote, and fixing his car",
+    "medical_history": "hypertension, diabetes, hyperlipidemia, family history of Parkinson disease, drinks 3-5 scotches nightly",
+    "medications": "lisinopril, metformin, atorvastatin",
+    "exam_findings": "tremor reproduced during finger-to-nose testing; Romberg negative; cranial nerves II-XII intact; otherwise benign exam",
+    "correct_answer": "Propranolol (E)"
+  },
+  "sentences": [
+    "To approach this question, we need to analyze the patient's symptoms and medical history",
+    "The patient presents with a tremor that is exacerbated by specific activities such as pouring drinks, pointing the remote at the television, or fixing his car",
+    "The tremor is only seen during these activities and not at rest, suggesting that it may not be a typical resting tremor seen in Parkinson disease",
+    "The patient's family history of Parkinson disease is a concern, but his own symptoms do not seem to align with the classic presentation of PD, which typically includes a resting tremor, rigidity, bradykinesia, and postural instability",
+    "The patient's use of alcohol in the evening may play a role in the exacerbation of his tremor, as excessive alcohol consumption can cause a type of tremor known as \"action tremor\" or \"intention tremor\"",
+    "Given the patient's history of excessive alcohol consumption and the presence of a tremor that improves with rest, the most appropriate treatment is likely cessation of alcohol use",
+    "The patient's wife overreacting is likely not the case, as tremors in patients with a family history of PD should always be taken seriously and investigated",
+    "Therefore, the most appropriate treatment for this patient's tremor is addressing his alcohol use disorder"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Evaluation of this 51-year-old man with a task-specific tremor should consider the symptoms and medical history.",
+      "pattern": "D",
+      "notes": "Generic framing statement that stands alone as a diagnostic approach."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "This 51-year-old man has a tremor that is exacerbated during specific activities such as pouring drinks, pointing a remote at the television, or fixing his car.",
+      "pattern": "D",
+      "notes": "Standalone description of the tremor pattern."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Because this 51-year-old man's tremor occurs during activities and not at rest, the response interprets the tremor as less consistent with typical Parkinson disease; despite a family history of Parkinson disease, the response states that the symptoms do not match classic Parkinson disease features such as resting tremor, rigidity, bradykinesia, and postural instability.",
+      "pattern": "C",
+      "notes": "Conclusion about Parkinson disease supported by the tremor pattern and comparison with classic PD features."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "The response states that this 51-year-old man's evening alcohol use may worsen the tremor because excessive alcohol consumption can cause an 'action tremor' or 'intention tremor.'",
+      "pattern": "B",
+      "notes": "Single-sentence causal chain linking alcohol use to tremor."
+    },
+    {
+      "source_sentences": [
+        5,
+        7
+      ],
+      "output": "Given this 51-year-old man's reported excessive alcohol consumption and a tremor that improves with rest, the response concludes that the most appropriate treatment is cessation of alcohol use or addressing alcohol use disorder.",
+      "pattern": "C",
+      "notes": "Treatment recommendation merged with its explicit supporting premise and repeated conclusion."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "In this 51-year-old man with a family history of Parkinson disease, the response argues that the wife's concern should not be dismissed because tremor in patients with a family history of Parkinson disease should be taken seriously and investigated.",
+      "pattern": "F",
+      "notes": "Same Parkinson-related topic as earlier sentences, but a distinct checkable claim about clinical concern and investigation."
+    }
+  ]
+}

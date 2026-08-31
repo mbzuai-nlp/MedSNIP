@@ -1,0 +1,134 @@
+{
+  "entry_id": 223,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 27-year-old man presents for an appointment to establish care. He recently was released from prison. He has felt very fatigued and has had a cough. He has lost roughly 15 pounds over the past 3 weeks. He attributes this to intravenous drug use in prison. His temperature is 99.5°F (37.5°C), blood pressure is 127/68 mmHg, pulse is 100/min, respirations are 18/min, and oxygen saturation is 98% on room air. QuantiFERON gold testing is positive. The patient is started on appropriate treatment. Which of the following is the most likely indication to discontinue this patient's treatment? (A) Elevated liver enzymes (B) Hyperuricemia (C) Optic neuritis (D) Peripheral neuropathy (E) Red body excretions",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2503,
+    "output_tokens": 861,
+    "cached_input_tokens": 2304,
+    "cost": 0.0119875
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2503,
+      "output_tokens": 861,
+      "cached_input_tokens": 2304,
+      "cost": 0.0119875
+    }
+  ],
+  "shared_context": {
+    "age": "27",
+    "sex": "male",
+    "medical_history": "intravenous drug use in prison",
+    "vitals": "temperature 99.5°F, BP 127/68, pulse 100, respirations 18, O2 saturation 98% room air",
+    "correct_answer": "C) Optic neuritis"
+  },
+  "sentences": [
+    "To answer this question, we need to consider the adverse effects of antituberculosis medications and their implications on treatment discontinuation",
+    "The patient has tested positive for tuberculosis (TB) (QuantiFERON gold testing positive) and has been started on appropriate treatment",
+    "Antituberculosis drugs, especially isoniazid, rifampin, and pyrazinamide, are known to cause hepatotoxicity",
+    "Elevated liver enzymes may indicate hepatotoxicity, which is a significant adverse effect that could warrant discontinuation of the medications until liver function normalizes",
+    "Pyrazinamide is associated with causing hyperuricemia",
+    "While hyperuricemia can be uncomfortable, it typically does not necessitate discontinuation of treatment unless it leads to symptomatic gout or severe uric acid nephropathy",
+    "Ethambutol can cause optic neuritis, which manifests as visual disturbances and can lead to permanent vision loss if not addressed promptly",
+    "This is a serious adverse effect and is indeed an indication for discontinuation of ethambutol to prevent permanent damage",
+    "Isoniazid can cause peripheral neuropathy due to pyridoxine (vitamin B6) deficiency",
+    "This can often be prevented or managed by supplementing pyridoxine, and typically does not require discontinuation of isoniazid unless symptoms are severe",
+    "Rifampin can cause red-orange discoloration of body fluids (e.g., urine, sweat, saliva)",
+    "This is a benign side effect and does not necessitate discontinuation of treatment",
+    "Given the above considerations, the most likely indication to discontinue this patient's treatment would be optic neuritis",
+    "Final Answer: (C) Optic neuritis"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To determine the most likely indication to discontinue this 27-year-old male's antituberculosis treatment, we need to consider the adverse effects of antituberculosis medications and their implications on treatment discontinuation.",
+      "pattern": "D",
+      "notes": "Introductory sentence setting the scope without any further detail."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "This 27-year-old male has tested positive for tuberculosis (QuantiFERON gold testing positive) and has been started on appropriate treatment.",
+      "pattern": "D",
+      "notes": "Standalone fact about tuberculosis diagnosis and treatment initiation."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Antituberculosis drugs, especially isoniazid, rifampin, and pyrazinamide, are known to cause hepatotoxicity. Elevated liver enzymes may indicate hepatotoxicity, which is a significant adverse effect that could warrant discontinuation of the medications until liver function normalizes.",
+      "pattern": "B",
+      "notes": "Causal chain linking drugs to hepatotoxicity risk and treatment discontinuation criteria."
+    },
+    {
+      "source_sentences": [
+        4,
+        5
+      ],
+      "output": "Pyrazinamide is associated with causing hyperuricemia. While hyperuricemia can be uncomfortable, it typically does not necessitate discontinuation of treatment unless it leads to symptomatic gout or severe uric acid nephropathy.",
+      "pattern": "B",
+      "notes": "Causation and conditions where hyperuricemia may lead to discontinuation."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Ethambutol can cause optic neuritis, which manifests as visual disturbances and can lead to permanent vision loss if not addressed promptly. This is a serious adverse effect and is indeed an indication for discontinuation of ethambutol to prevent permanent damage.",
+      "pattern": "B",
+      "notes": "Causation with outcome that would necessitate discontinuation."
+    },
+    {
+      "source_sentences": [
+        8,
+        9
+      ],
+      "output": "Isoniazid can cause peripheral neuropathy due to pyridoxine (vitamin B6) deficiency. This can often be prevented or managed by supplementing pyridoxine, and typically does not require discontinuation of isoniazid unless symptoms are severe.",
+      "pattern": "B",
+      "notes": "Causal chain and mitigation strategies impacting discontinuation decision."
+    },
+    {
+      "source_sentences": [
+        10,
+        11
+      ],
+      "output": "Rifampin can cause red-orange discoloration of body fluids (e.g., urine, sweat, saliva). This is a benign side effect and does not necessitate discontinuation of treatment.",
+      "pattern": "B",
+      "notes": "Benign nature of side effect stated with conclusion on discontinuation."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "Given the side effects of antituberculosis drugs, the most likely indication to discontinue this 27-year-old male's treatment would be optic neuritis.",
+      "pattern": "C",
+      "notes": "Conclusion supported by prior premises about optic neuritis."
+    },
+    {
+      "source_sentences": [
+        13
+      ],
+      "output": "Final Answer: Optic neuritis is the most likely indication to discontinue treatment in this 27-year-old male.",
+      "pattern": "C",
+      "notes": "Reaffirms final conclusion."
+    }
+  ]
+}

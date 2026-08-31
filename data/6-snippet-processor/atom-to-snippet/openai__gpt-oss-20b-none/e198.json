@@ -1,0 +1,153 @@
+{
+  "entry_id": 198,
+  "batch_id": 20,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can a nausea prescription be taken at the same time as Dramamine?",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2864,
+    "output_tokens": 2423,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1289,
+      "output_tokens": 1206,
+      "cached_input_tokens": 0,
+      "cost": 0.00020751
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1575,
+      "output_tokens": 1217,
+      "cached_input_tokens": 0,
+      "cost": 0.00021763
+    }
+  ],
+  "shared_context": {
+    "topic": "medication interaction between Dramamine and a nausea prescription",
+    "drug_a": "nausea prescription",
+    "drug_b": "Dramamine (dimenhydrinate)",
+    "condition": "nausea"
+  },
+  "sentences": [
+    "Yes, a nausea prescription can generally be taken at the same time as Dramamine (dimenhydrinate), but it depends on the specific medication prescribed for nausea",
+    "Dramamine is an over-the-counter antihistamine commonly used to prevent and treat motion sickness and nausea",
+    "Some prescription medications for nausea, such as ondansetron (Zofran), work through different mechanisms and can be safely combined with Dramamine",
+    "However, combining multiple medications that have sedative effects, such as promethazine (Phenergan) and Dramamine, can increase the risk of excessive drowsiness and other side effects",
+    "It is essential to consult with a healthcare provider before combining medications to ensure safety and avoid potential drug interactions"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "A nausea prescription can generally be taken at the same time as Dramamine.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Whether a nausea prescription can be taken with Dramamine depends on the specific medication prescribed for nausea.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Dramamine is an over-the-counter antihistamine used to prevent and treat motion sickness and nausea.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Some prescription medications for nausea, such as ondansetron, work through different mechanisms.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "These nausea medications can be safely combined with Dramamine.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Combining multiple sedative medications, such as promethazine and Dramamine, can increase the risk of excessive drowsiness.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "text": "It can also increase other side effects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "It is essential to consult a healthcare provider before combining medications to ensure safety and avoid potential drug interactions.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Whether a nausea prescription can generally be taken at the same time as Dramamine depends on the specific medication prescribed for nausea.",
+      "pattern": "C",
+      "notes": "Recommendation accompanied by a premise explaining conditionality."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Dramamine is an over-the-counter antihistamine used to prevent and treat motion sickness and nausea.",
+      "pattern": "D",
+      "notes": "Standalone fact about the drug."
+    },
+    {
+      "source_claims": [
+        4,
+        5
+      ],
+      "output": "Some prescription medications for nausea, such as ondansetron, work through different mechanisms and can be safely combined with Dramamine.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of nausea medications and their safe combination."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "Combining multiple sedative medications, such as promethazine and Dramamine, can increase the risk of excessive drowsiness and other side effects.",
+      "pattern": "B",
+      "notes": "Causal chain linking combination to increased risk."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "It is essential to consult a healthcare provider before combining medications to ensure safety and avoid potential drug interactions.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    }
+  ]
+}

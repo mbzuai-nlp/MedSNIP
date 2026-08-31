@@ -1,0 +1,143 @@
+{
+  "entry_id": 123,
+  "batch_id": 13,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "How is PID treated?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2888,
+    "output_tokens": 688,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1327,
+      "output_tokens": 328,
+      "cached_input_tokens": 0,
+      "cost": 3.966e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1561,
+      "output_tokens": 360,
+      "cached_input_tokens": 0,
+      "cost": 4.562e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "PID treatment",
+    "condition": "Pelvic inflammatory disease (PID)"
+  },
+  "sentences": [
+    "Pelvic inflammatory disease (PID) is treated with a combination of antibiotics to cover the most likely pathogens, including Neisseria gonorrhoeae, Chlamydia trachomatis, anaerobes, Gram-negative facultative bacteria, and streptococci",
+    "The treatment regimen typically includes a combination of a cephalosporin and doxycycline, with or without metronidazole",
+    "For outpatient treatment, a common regimen is ceftriaxone 250 mg intramuscularly in a single dose, plus doxycycline 100 mg orally twice a day for 14 days, with or without metronidazole 500 mg orally twice a day for 14 days",
+    "For inpatient treatment, one option is cefotetan 2 g intravenously every 12 hours or cefoxitin 2 g intravenously every 6 hours, plus doxycycline 100 mg orally or intravenously every 12 hours",
+    "Patients should be re-evaluated within 48-72 hours to ensure clinical improvement",
+    "Sexual partners should also be treated to prevent reinfection"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "PID is treated with a combination of antibiotics.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The antibiotics used to treat PID include cephalosporin, doxycycline, and metronidazole.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A common outpatient treatment regimen is ceftriaxone 250 mg intramuscularly in a single dose, plus doxycycline 100 mg orally twice a day for 14 days, with or without metronidazole 500 mg orally twice a day for 14 days.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "For inpatient treatment, options include cefotetan 2 g intravenously every 12 hours or cefoxitin 2 g intravenously every 6 hours, plus doxycycline 100 mg orally or intravenously every 12 hours.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Patients should be re-evaluated within 48-72 hours to ensure clinical improvement.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Sexual partners should also be treated to prevent reinfection.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "PID is treated with a combination of antibiotics.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The antibiotics used to treat PID include cephalosporin, doxycycline, and metronidazole.",
+      "pattern": "D",
+      "notes": "List of antibiotics."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "A common outpatient treatment regimen is ceftriaxone 250 mg intramuscularly in a single dose, plus doxycycline 100 mg orally twice a day for 14 days, with or without metronidazole 500 mg orally twice a day for 14 days.",
+      "pattern": "C",
+      "notes": "Recommendation with supporting details."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "For inpatient treatment, options include cefotetan 2 g intravenously every 12 hours or cefoxitin 2 g intravenously every 6 hours, plus doxycycline 100 mg orally or intravenously every 12 hours.",
+      "pattern": "C",
+      "notes": "Recommendation with supporting details."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Patients should be re-evaluated within 48-72 hours to ensure clinical improvement.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Sexual partners should also be treated to prevent reinfection.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    }
+  ]
+}

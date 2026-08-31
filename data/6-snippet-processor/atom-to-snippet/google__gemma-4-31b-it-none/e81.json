@@ -1,0 +1,230 @@
+{
+  "entry_id": 81,
+  "batch_id": 9,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Do fissures and hemmroids heal on their own?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3095,
+    "output_tokens": 1043,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1391,
+      "output_tokens": 553,
+      "cached_input_tokens": 0,
+      "cost": 0.00039097
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1704,
+      "output_tokens": 490,
+      "cached_input_tokens": 0,
+      "cost": 0.00040772
+    }
+  ],
+  "shared_context": {
+    "topic": "healing of fissures and hemorrhoids",
+    "condition": "hemorrhoids and anal fissures"
+  },
+  "sentences": [
+    "Most hemorrhoids are self-limiting and can heal on their own over time, but not all hemorrhoids or fissures have the potential to heal spontaneously",
+    "For hemorrhoids, studies have shown that most small, internal hemorrhoids (grade 1 or 2) can resolve on their own without treatment within 1-2 months",
+    "However, larger internal hemorrhoids (grade 3 or 4) or those with significant prolapse may not heal without treatment and may require medical or surgical intervention",
+    "Regarding anal fissures, most acute fissures can heal on their own within 6-8 weeks, but the healing process can be prolonged in some cases",
+    "A study found that 80% of patients with acute fissures achieved healing within 6 weeks, while the remaining 20% required additional treatment",
+    "However, chronic fissures may not heal without treatment and may require medical or surgical intervention",
+    "A study found that 10% of patients with chronic fissures did not heal after conservative treatment and required surgical intervention"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Most hemorrhoids are self-limiting and can heal on their own over time.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Not all hemorrhoids have the potential to heal spontaneously.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Not all fissures have the potential to heal spontaneously.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Most small, internal hemorrhoids (grade 1 or 2) can resolve on their own without treatment within 1-2 months.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Larger internal hemorrhoids (grade 3 or 4) may not heal without treatment.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Internal hemorrhoids with significant prolapse may not heal without treatment.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Larger internal hemorrhoids (grade 3 or 4) or those with significant prolapse may require medical or surgical intervention.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Most acute anal fissures can heal on their own within 6-8 weeks.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The healing process for acute anal fissures can be prolonged in some cases.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "text": "A study found that 80% of patients with acute fissures achieved healing within 6 weeks.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "text": "A study found that 20% of patients with acute fissures required additional treatment.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Chronic fissures may not heal without treatment.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Chronic fissures may require medical or surgical intervention.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 14,
+      "text": "A study found that 10% of patients with chronic fissures did not heal after conservative treatment.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 15,
+      "text": "A study found that 10% of patients with chronic fissures required surgical intervention.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Most hemorrhoids are self-limiting and can heal on their own over time, although not all hemorrhoids have the potential to heal spontaneously.",
+      "pattern": "F",
+      "notes": "Two complementary facts about general hemorrhoid healing."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Most small, internal hemorrhoids (grade 1 or 2) can resolve on their own without treatment within 1-2 months.",
+      "pattern": "D",
+      "notes": "Standalone fact regarding grade 1 and 2 hemorrhoids."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Larger internal hemorrhoids (grade 3 or 4) or those with significant prolapse may not heal without treatment and may require medical or surgical intervention.",
+      "pattern": "A",
+      "notes": "Enumeration of properties/conditions of non-healing hemorrhoids."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Not all fissures have the potential to heal spontaneously.",
+      "pattern": "D",
+      "notes": "Standalone fact; topic shift from hemorrhoids to fissures."
+    },
+    {
+      "source_claims": [
+        8,
+        9
+      ],
+      "output": "Most acute anal fissures can heal on their own within 6-8 weeks, though the healing process can be prolonged in some cases.",
+      "pattern": "F",
+      "notes": "Two related facts about acute fissure healing."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "A study found that 80% of patients with acute fissures achieved healing within 6 weeks, while 20% required additional treatment.",
+      "pattern": "A",
+      "notes": "Enumeration of study results for acute fissures."
+    },
+    {
+      "source_claims": [
+        12,
+        13
+      ],
+      "output": "Chronic fissures may not heal without treatment and may require medical or surgical intervention.",
+      "pattern": "B",
+      "notes": "Causal link between lack of healing and need for intervention."
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "A study found that 10% of patients with chronic fissures did not heal after conservative treatment and 10% required surgical intervention.",
+      "pattern": "A",
+      "notes": "Enumeration of study results for chronic fissures."
+    }
+  ]
+}

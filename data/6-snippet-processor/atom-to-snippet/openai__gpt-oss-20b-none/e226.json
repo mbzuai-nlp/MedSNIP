@@ -1,0 +1,171 @@
+{
+  "entry_id": 226,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 77-year-old man presents to the emergency department with a complaint of sudden onset weakness in his right upper extremity. At home, the patient thought he was simply dehydrated, but he rapidly began to have trouble speaking. When his wife noted this she brought him into the hospital. On arrival to the emergency department, the patient is not responding to verbal stimuli and only withdraws his left upper extremity and lower extremity to pain. His past medical history is notable for hypertension and atrial fibrillation treated with metoprolol, apixaban, and lisinopril. His temperature is 99.0°F (37.2°C), blood pressure is 170/100 mmHg, pulse is 95/min, and respirations are 16/min. The patient has a seizure and subsequently demonstrates agonal breathing. He no longer responds to painful stimuli. A fingerstick blood glucose is 122 mg/dL. Which of the following is the most likely etiology of this patient's symptoms? (A) Epidural hematoma (B) Intracerebral hemorrhage (C) Ischemic stroke (D) Subarachnoid hemorrhage (E) Subdural hematoma",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4356,
+    "output_tokens": 4037,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1792,
+      "output_tokens": 1654,
+      "cached_input_tokens": 0,
+      "cost": 0.00028532
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2564,
+      "output_tokens": 2383,
+      "cached_input_tokens": 0,
+      "cost": 0.00041054
+    }
+  ],
+  "shared_context": {
+    "age": 77,
+    "sex": "male",
+    "chief_complaint": "sudden onset weakness of the right upper extremity",
+    "medical_history": "hypertension, atrial fibrillation",
+    "medications": "metoprolol, apixaban, lisinopril",
+    "vitals": "BP 170/100 mmHg, HR 95/min, RR 16/min, Temp 99.0°F (37.2°C)",
+    "exam_findings": "not responding to verbal stimuli, withdraws left arm and leg to pain, seizure, agonal breathing, loss of pain response",
+    "treatment_history": "none noted"
+  },
+  "sentences": [
+    "To evaluate this patient's symptoms, we must consider the following",
+    "Sudden onset of weakness in the right upper extremity: This could be indicative of a neurological issue, such as a stroke or hemorrhage",
+    "Rapid progression of symptoms: The patient's condition quickly deteriorated, suggesting a rapidly evolving process",
+    "History of atrial fibrillation: Atrial fibrillation is a risk factor for ischemic stroke, but it can also increase the risk of hemorrhagic stroke",
+    "Hypertension: Uncontrolled hypertension is a risk factor for hemorrhagic stroke",
+    "Seizure and agonal breathing: These symptoms suggest a severe intracranial process",
+    "Considering these factors, the most likely etiology of this patient's symptoms is an ischemic stroke",
+    "Ischemic strokes are more likely than hemorrhagic strokes in patients with atrial fibrillation and hypertension, especially if the blood pressure is not well-controlled",
+    "The patient's symptoms, including sudden onset and rapid progression, are consistent with ischemic stroke",
+    "However, we should also consider the possibility of a hemorrhagic stroke, such as a subarachnoid hemorrhage, given the patient's history of hypertension and the presence of head trauma"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Evaluating the patient's symptoms requires considering several factors.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Sudden onset of right upper extremity weakness indicates a neurological issue such as stroke or hemorrhage.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Rapid progression of symptoms indicates a rapidly evolving process.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Atrial fibrillation increases the risk of both ischemic and hemorrhagic stroke.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Uncontrolled hypertension increases the risk of hemorrhagic stroke.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Seizure and agonal breathing suggest a severe intracranial process.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The most likely etiology of the patient's symptoms is an ischemic stroke.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 8,
+      "text": "In patients with atrial fibrillation and uncontrolled hypertension, ischemic stroke is more likely than hemorrhagic stroke.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient's sudden onset and rapid progression of symptoms are consistent with ischemic stroke.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The possibility of a hemorrhagic stroke such as subarachnoid hemorrhage should also be considered given hypertension and head trauma.",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Evaluating this 77-year-old male's symptoms requires considering several factors.",
+      "pattern": "D",
+      "notes": "Standalone meta-statement."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "In this 77-year-old male with hypertension and atrial fibrillation, the sudden onset of right upper‑extremity weakness, rapid progression of symptoms, the presence of seizures and agonal breathing, and the fact that atrial fibrillation increases the risk of both ischemic and hemorrhagic stroke while uncontrolled hypertension increases the risk of hemorrhagic stroke, all point to a rapidly evolving intracranial process.",
+      "pattern": "A",
+      "notes": "Enumeration of multiple relevant features and risk factors for this patient."
+    },
+    {
+      "source_claims": [
+        7,
+        8,
+        9
+      ],
+      "output": "The most likely etiology of this 77‑year‑old male’s symptoms is an ischemic stroke; atrial fibrillation raises the risk of both ischemic and hemorrhagic stroke, but with uncontrolled hypertension ischemic stroke is more likely than hemorrhagic, and the patient’s sudden onset and rapid progression of deficits are consistent with an ischemic event.",
+      "pattern": "C",
+      "notes": "Conclusion combined with supporting premises."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "The possibility of a hemorrhagic stroke such as subarachnoid hemorrhage should also be considered, given the patient’s hypertension and potential head trauma.",
+      "pattern": "D",
+      "notes": "Standalone consideration of an alternative diagnosis."
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "entry_id": 217,
+  "batch_id": 22,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 33-year-old woman presents to the emergency department with muscle spasms. She has noticed \"twitching\" in both her upper and lower extremities over the past 3 days that have interfered with her training for a marathon. She has felt more fatigued over the past month. She has no significant medical history. She takes no medication other than whey protein supplements, a multivitamin, and fish oil. Her temperature is 98.5°F (36.9°C), blood pressure is 103/71 mmHg, pulse is 105/min, respirations are 11/min, and oxygen saturation is 100% on room air. Physical exam reveals a thin woman with thinning hair. She appears pale and her mucous membranes are dry. Her neurological and cardiac exams are unremarkable. Laboratory studies are ordered as seen below. Hemoglobin: 10 g/dL Hematocrit: 30% Leukocyte count: 6,100/mm^3 with normal differential Platelet count: 187,500/mm^3 Serum: Na+: 130 mEq/L Cl-: 100 mEq/L K+: 2.3 mEq/L HCO3-: 28 mEq/L BUN: 40 mg/dL Glucose: 79 mg/dL Creatinine: 0.9 mg/dL Ca2+: 8.2 mg/dL Mg2+: 1.8 mg/dL Thyroid stimulating hormone (TSH): 4.0 mIU/L Free T4: 0.4 ng/dL (normal: 0.7-1.53 ng/dL) The patient is given 4 liters of lactated ringer solution and 40 mEq of potassium. Her repeat whole blood potassium 3 hours later is 2.4 mEq/L, and her repeat BUN is 20 mEq/L. Another 40 mEq of potassium is administered. Another repeat whole blood potassium is 2.5 mEq/L. The patient’s muscle spasms persist. Which of the following is the most likely underlying etiology for this patient’s chief concern? (A) Hypocalcemia (B) Hypomagnesemia (C) Hyponatremia (D) Hypothyroidism (E) Hypovolemia",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5382,
+    "output_tokens": 1641,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2393,
+      "output_tokens": 875,
+      "cached_input_tokens": 0,
+      "cost": 0.0005193
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2989,
+      "output_tokens": 766,
+      "cached_input_tokens": 0,
+      "cost": 0.00054402
+    }
+  ],
+  "shared_context": {
+    "age": 33,
+    "sex": "female",
+    "chief_complaint": "muscle spasms and twitching",
+    "medical_history": "none",
+    "medications": "whey protein supplements, multivitamin, fish oil",
+    "vitals": "temperature 98.5°F, blood pressure 103/71 mmHg, pulse 105/min, respirations 11/min, oxygen saturation 100%",
+    "exam_findings": "thinning hair, pale mucous membranes, dry mucous membranes",
+    "lab_results": "low hemoglobin, low hematocrit, low potassium, low magnesium, low free T4"
+  },
+  "sentences": [
+    "To solve this question, let's analyze the given information step by step",
+    "The patient presents with muscle spasms and twitching in both upper and lower extremities over the past 3 days, which suggests a possible neuromuscular issue",
+    "The patient has been feeling fatigued over the past month, which can be related to a variety of underlying conditions",
+    "The patient has no significant medical history, and she takes no medication except for supplements, which suggests that her symptoms may not be medication-related",
+    "The physical exam reveals a thin woman with thinning hair and pale mucous membranes, which can indicate malnutrition or a systemic illness",
+    "Low hemoglobin (10 g/dL) and hematocrit (30%) indicate anemia",
+    "Normal leukocyte count with a normal differential suggests no acute infection",
+    "Platelet count is within the normal range",
+    "Electrolyte imbalances: low potassium (2.3 mEq/L) and magnesium (1.8 mg/dL) levels are noted",
+    "Low sodium (130 mEq/L) is not significantly low and may not be the primary concern",
+    "Low free T4 level (0.4 ng/dL) suggests hypothyroidism",
+    "The patient was given IV fluids and potassium supplements, but her potassium levels remained low (2.4 mEq/L and 2.5 mEq/L), which suggests that simple potassium supplementation may not be sufficient to correct her electrolyte imbalance",
+    "The patient's muscle spasms persist despite the correction of the potassium and magnesium levels",
+    "Hypocalcemia (A): While calcium levels are within the normal range (8.2 mg/dL), mild hypocalcemia can still cause muscle spasms",
+    "However, the primary concern seems to be electrolyte imbalance, and hypocalcemia is not the most likely cause",
+    "Hypomagnesemia (B): The patient's magnesium level is low (1.8 mg/dL), which can cause muscle spasms and weakness, especially in the context of low potassium levels",
+    "Hypomagnesemia is often associated with hypokalemia, and the patient's low potassium levels may be exacerbated by her hypomagnesemia",
+    "Hyponatremia (C): The patient's sodium level (130 mEq/L) is only slightly low, and it is not significantly contributing to her symptoms",
+    "Hypothyroidism (D): The patient's free T4 level is low (0.4 ng/dL), which can cause fatigue, weakness, and muscle spasms",
+    "However, the primary symptoms presented are muscle spasms and twitching, which are more directly related to electrolyte imbalance than hypothyroidism",
+    "Hypovolemia (E): The patient received 4 liters of IV fluids, which should have corrected any significant volume depletion",
+    "While hypovolemia could explain fatigue, it is less likely to cause muscle spasms",
+    "The most likely underlying etiology for this patient's chief concern is hypomagnesemia, as it can cause muscle spasms and weakness, especially in the context of low potassium levels"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient presents with muscle spasms and twitching in both upper and lower extremities over the past 3 days, which suggests a possible neuromuscular issue.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient has been feeling fatigued over the past month, which can be related to a variety of underlying conditions.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient has no significant medical history, and she takes no medication except for supplements, which suggests that her symptoms may not be medication-related.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The physical exam reveals a thin woman with thinning hair and pale mucous membranes, which can indicate malnutrition or a systemic illness.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Low hemoglobin and hematocrit indicate anemia.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Normal leukocyte count with a normal differential suggests no acute infection.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Platelet count is within the normal range.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Electrolyte imbalances include low potassium and magnesium levels.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Low sodium is not significantly low and may not be the primary concern.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Low free T4 level suggests hypothyroidism.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The patient was given IV fluids and potassium supplements, but her potassium levels remained low.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The patient's muscle spasms persist despite the correction of the potassium and magnesium levels.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Hypocalcemia is not the most likely cause of the patient's symptoms.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Hypomagnesemia can cause muscle spasms and weakness, especially in the context of low potassium levels.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Hypomagnesemia is often associated with hypokalemia, and the patient's low potassium levels may be exacerbated by her hypomagnesemia.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Hyponatremia is not significantly contributing to the patient's symptoms.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Hypothyroidism can cause fatigue, weakness, and muscle spasms, but it is not the primary cause of the patient's symptoms.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Hypovolemia could explain fatigue, but it is less likely to cause muscle spasms.",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 19,
+      "text": "The most likely underlying etiology for this patient's chief concern is hypomagnesemia.",
+      "source_sentences": [
+        22
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The 33-year-old woman presents with muscle spasms and twitching in both upper and lower extremities over the past 3 days and has been feeling fatigued over the past month, suggesting a possible neuromuscular issue with underlying conditions.",
+      "pattern": "A",
+      "notes": "Introduction to symptoms"
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The patient has no significant medical history and takes no medication except for supplements.",
+      "pattern": "D",
+      "notes": "Standalone medical history"
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The physical exam reveals a thin woman with thinning hair and pale mucous membranes, indicating possible malnutrition or systemic illness.",
+      "pattern": "D",
+      "notes": "Clinical impression"
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Lab results show low hemoglobin and hematocrit indicating anemia, a normal leukocyte count suggesting no acute infection, and a normal platelet count.",
+      "pattern": "A",
+      "notes": "One-subject enumeration of lab results"
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Electrolyte imbalances include low potassium and magnesium levels in this patient.",
+      "pattern": "D",
+      "notes": "Standalone lab result"
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "The patient's low sodium is not significantly low and may not be the primary concern.",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation"
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "The low free T4 level suggests hypothyroidism in this patient.",
+      "pattern": "D",
+      "notes": "Standalone lab result"
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Despite the administration of IV fluids and potassium supplements, the patient's potassium levels remained low, and her muscle spasms persisted.",
+      "pattern": "B",
+      "notes": "Causal link between treatment and ongoing symptoms"
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Hypocalcemia is not the most likely cause of the patient's symptoms.",
+      "pattern": "D",
+      "notes": "Ruled-out differential diagnosis"
+    },
+    {
+      "source_claims": [
+        14,
+        15
+      ],
+      "output": "Hypomagnesemia can cause muscle spasms and weakness, especially in the context of low potassium levels, and is often associated with hypokalemia, exacerbating the patient's low potassium levels.",
+      "pattern": "A",
+      "notes": "One-subject explanation of hypomagnesemia effects"
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "Hyponatremia is not significantly contributing to the patient's symptoms.",
+      "pattern": "D",
+      "notes": "Ruled-out differential diagnosis"
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Hypothyroidism can cause fatigue, weakness, and muscle spasms but is not the primary cause of this patient's symptoms.",
+      "pattern": "D",
+      "notes": "Differential discussion"
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "Hypovolemia could explain fatigue but is less likely to cause muscle spasms.",
+      "pattern": "D",
+      "notes": "Ruled-out differential diagnosis"
+    },
+    {
+      "source_claims": [
+        19
+      ],
+      "output": "The most likely underlying etiology for this patient's chief concern is hypomagnesemia.",
+      "pattern": "C",
+      "notes": "Final diagnosis with rationale inlined"
+    }
+  ]
+}

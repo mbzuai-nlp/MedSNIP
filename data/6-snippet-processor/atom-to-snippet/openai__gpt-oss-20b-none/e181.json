@@ -1,0 +1,332 @@
+{
+  "entry_id": 181,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 45-year-old man presents to a physician due to difficulty swallowing and slurred speech. For the past 3 months, the patient has been coughing when he drinks liquids. His speech also sounds different according to his wife. The patient has no significant medical history. His temperature is 98.6°F (37.0°C), blood pressure is 110/80 mmHg, pulse is 60/min, and respirations are 12/min. On physical exam, he is unable to fully extend his tongue, and there are fasciculations on his tongue. When tapping the mandible at the chin while the mouth is held open, there is pronounced upward movement of the lower jaw. Sensory exam reveals no deficits. Which of the following therapies is most likely to improve survival for this patient's disease process? (A) Baclofen (B) Dextromethorphan and quinidine (C) Edaravone (D) Riluzole (E) Tizanidine",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4677,
+    "output_tokens": 4634,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1889,
+      "output_tokens": 1667,
+      "cached_input_tokens": 0,
+      "cost": 0.00029005
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2788,
+      "output_tokens": 2967,
+      "cached_input_tokens": 0,
+      "cost": 0.00049902
+    }
+  ],
+  "shared_context": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "difficulty swallowing and slurred speech",
+    "medical_history": "none",
+    "vitals": {
+      "temperature": "98.6°F (37.0°C)",
+      "blood_pressure": "110/80 mmHg",
+      "pulse": "60/min",
+      "respirations": "12/min"
+    },
+    "exam_findings": [
+      "difficulty swallowing (dysphagia)",
+      "slurred speech",
+      "coughing when drinking liquids",
+      "speech sounds different",
+      "tongue fasciculations",
+      "inability to fully extend the tongue",
+      "pronounced upward jaw movement on chin tap (jaw jerk)",
+      "normal sensory exam"
+    ],
+    "diagnosis": "amyotrophic lateral sclerosis (ALS)",
+    "correct_answer": "Riluzole"
+  },
+  "sentences": [
+    "Difficulty swallowing (dysphagia)",
+    "Slurred speech",
+    "Coughing when drinking liquids",
+    "Different sounding speech (reported by wife)",
+    "Fasciculations on the tongue",
+    "Pronounced upward movement of the lower jaw when tapping the mandible (jaw jerk reflex)",
+    "Temperature: 98.6°F (37.0°C)",
+    "Blood pressure: 110/80 mmHg",
+    "Pulse: 60/min",
+    "Respirations: 12/min",
+    "Unable to fully extend the tongue",
+    "Fasciculations on the tongue",
+    "Normal sensory exam",
+    "The symptoms and physical findings suggest involvement of the lower motor neurons (tongue fasciculations) and upper motor neurons (pronounced jaw jerk reflex)",
+    "The combination of dysphagia, slurred speech, tongue fasciculations, and a pronounced jaw jerk reflex is highly indicative of amyotrophic lateral sclerosis (ALS)",
+    "The clinical presentation is consistent with ALS, which affects both upper and lower motor neurons",
+    "Amyotrophic lateral sclerosis (ALS)",
+    "(A) Baclofen: Typically used for spasticity, not specifically for improving survival in ALS",
+    "(B) Dextromethorphan and quinidine: Used for treating pseudobulbar affect in ALS, not directly improving survival",
+    "(C) Edaravone: Shown to slow the decline in functional status in ALS",
+    "(D) Riluzole: The only drug known to modestly prolong survival in ALS by approximately 2-3 months",
+    "(E) Tizanidine: Used for muscle spasticity, not specific for improving survival in ALS",
+    "Among the given options, Riluzole is the drug most likely to improve survival in a patient with ALS",
+    "(D) Riluzole"
+  ],
+  "generated_atoms": [
+    {
+      "index": 0,
+      "text": "The patient is experiencing difficulty swallowing.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "text": "The patient is experiencing slurred speech.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient is coughing when drinking liquids.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's speech sounds different according to his wife.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient has fasciculations on the tongue.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's lower jaw shows pronounced upward movement when the mandible is tapped (jaw jerk reflex).",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient's temperature is 98.6°F (37.0°C).",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The patient's blood pressure is 110/80 mmHg.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "The patient's pulse is 60/min.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The patient's respirations are 12/min.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The patient is unable to fully extend the tongue.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "The patient has fasciculations on the tongue.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "The patient has a normal sensory exam.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "The symptoms and physical findings suggest involvement of the lower motor neurons (tongue fasciculations) and upper motor neurons (pronounced jaw jerk reflex).",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The combination of dysphagia, slurred speech, tongue fasciculations, and a pronounced jaw jerk reflex is highly indicative of amyotrophic lateral sclerosis (ALS).",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "The clinical presentation is consistent with ALS, which affects both upper and lower motor neurons.",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Amyotrophic lateral sclerosis (ALS).",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Baclofen is typically used for spasticity and does not specifically improve survival in ALS.",
+      "source_sentences": [
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Dextromethorphan and quinidine is used for treating pseudobulbar affect in ALS and does not directly improve survival.",
+      "source_sentences": [
+        18
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Edaravone has been shown to slow the decline in functional status in ALS.",
+      "source_sentences": [
+        19
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Riluzole is the only drug known to modestly prolong survival in ALS by approximately 2-3 months.",
+      "source_sentences": [
+        20
+      ]
+    },
+    {
+      "index": 21,
+      "text": "Tizanidine is used for muscle spasticity and is not specific for improving survival in ALS.",
+      "source_sentences": [
+        21
+      ]
+    },
+    {
+      "index": 22,
+      "text": "Among the given options, Riluzole is the drug most likely to improve survival in a patient with ALS.",
+      "source_sentences": [
+        22
+      ]
+    },
+    {
+      "index": 23,
+      "text": "Riluzole.",
+      "source_sentences": [
+        23
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "This 45‑year‑old male presents with difficulty swallowing, slurred speech, coughing when drinking liquids, and speech that sounds different to his wife. On examination he has fasciculations on the tongue, cannot fully extend his tongue, exhibits pronounced jaw‑jerk reflex when the mandible is tapped, and has a normal sensory exam. His vitals are normal: temperature 98.6 °F (37.0 °C), blood pressure 110/80 mmHg, pulse 60/min, respirations 12/min.",
+      "pattern": "A",
+      "notes": "Unified enumeration of all clinical findings for this single patient."
+    },
+    {
+      "source_claims": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "output": "The combination of dysphagia, slurred speech, tongue fasciculations, and a pronounced jaw‑jerk reflex is highly indicative of amyotrophic lateral sclerosis (ALS). ALS involves both upper and lower motor neurons, explaining the observed upper‑motor‑neuron sign (jaw‑jerk) and lower‑motor‑neuron sign (tongue fasciculations).",
+      "pattern": "A",
+      "notes": "Diagnostic reasoning about a single disease entity."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Baclofen is typically used for spasticity and does not specifically improve survival in ALS.",
+      "pattern": "D",
+      "notes": "Standalone fact about drug indication."
+    },
+    {
+      "source_claims": [
+        18
+      ],
+      "output": "Dextromethorphan and quinidine is used for treating pseudobulbar affect in ALS and does not directly improve survival.",
+      "pattern": "D",
+      "notes": "Standalone fact about drug use."
+    },
+    {
+      "source_claims": [
+        19
+      ],
+      "output": "Edaravone has been shown to slow the decline in functional status in ALS.",
+      "pattern": "D",
+      "notes": "Standalone fact about drug effect."
+    },
+    {
+      "source_claims": [
+        20,
+        22,
+        23
+      ],
+      "output": "Riluzole is the only drug known to modestly prolong survival in ALS by approximately 2–3 months, and among the given options it is the medication most likely to improve survival in this patient. Riluzole.",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premises."
+    },
+    {
+      "source_claims": [
+        21
+      ],
+      "output": "Tizanidine is used for muscle spasticity and is not specific for improving survival in ALS.",
+      "pattern": "D",
+      "notes": "Standalone fact about drug use."
+    }
+  ]
+}

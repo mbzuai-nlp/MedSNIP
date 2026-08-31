@@ -1,0 +1,95 @@
+{
+  "entry_id": 161,
+  "batch_id": 17,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is flu test same as influenza test ?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1855,
+    "output_tokens": 467,
+    "cached_input_tokens": 0,
+    "cost": 0.00033494
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1855,
+      "output_tokens": 467,
+      "cached_input_tokens": 0,
+      "cost": 0.00033494
+    }
+  ],
+  "shared_context": {
+    "topic": "flu test vs influenza test",
+    "condition": "influenza virus infection"
+  },
+  "sentences": [
+    "The terms \"flu test\" and \"influenza test\" are often used interchangeably, but they can refer to different types of diagnostic tests for influenza virus infection",
+    "A flu test typically refers to a rapid diagnostic test (RDT) that detects the presence of influenza virus antigens in respiratory specimens, such as nasal swabs or throat swabs",
+    "These tests are usually rapid, point-of-care tests that provide results within 15-30 minutes",
+    "On the other hand, an influenza test can refer to a more comprehensive diagnostic approach that includes various tests, such as",
+    "Rapid antigen detection tests (RADTs)",
+    "Molecular tests, such as reverse transcription polymerase chain reaction (RT-PCR)",
+    "Viral culture",
+    "Serological tests, which detect antibodies against the influenza virus",
+    "These tests can be used to diagnose influenza virus infection, monitor the spread of the virus, and guide treatment decisions",
+    "In summary, while the terms \"flu test\" and \"influenza test\" are often used interchangeably, a flu test typically refers to a rapid diagnostic test, whereas an influenza test can refer to a broader range of diagnostic approaches"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The terms 'flu test' and 'influenza test' are often used interchangeably, but they can refer to different types of diagnostic tests for influenza virus infection.",
+      "pattern": "D",
+      "notes": "Standalone introductory fact."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "A flu test typically refers to a rapid diagnostic test that detects the presence of influenza virus antigens in respiratory specimens, such as nasal swabs or throat swabs, and provides results within 15-30 minutes.",
+      "pattern": "C",
+      "notes": "Definition + supporting details about the flu test; merged for verifiability."
+    },
+    {
+      "source_sentences": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "An influenza test can refer to a more comprehensive diagnostic approach that includes various tests, such as rapid antigen detection tests, molecular tests like reverse transcription polymerase chain reaction, viral culture, and serological tests that detect antibodies against the influenza virus.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of one subject (influenza test); merged because items describe a unified concept."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "These tests can be used to diagnose influenza virus infection, monitor the spread of the virus, and guide treatment decisions.",
+      "pattern": "D",
+      "notes": "Standalone fact about the uses of influenza tests."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "In summary, while the terms 'flu test' and 'influenza test' are often used interchangeably, a flu test typically refers to a rapid diagnostic test, whereas an influenza test can refer to a broader range of diagnostic approaches.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premises; merged because conclusion needs preceding context for verifiability."
+    }
+  ]
+}

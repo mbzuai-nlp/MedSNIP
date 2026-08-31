@@ -1,0 +1,103 @@
+{
+  "entry_id": 23,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 1-year-old girl is brought to a neurologist due to increasing seizure frequency over the past 2 months. She recently underwent a neurology evaluation which revealed hypsarrhythmia on electroencephalography (EEG) with a mix of slow waves, multifocal spikes, and asynchrony. Her parents have noticed the patient occasionally stiffens and spreads her arms at home. She was born at 38-weeks gestational age without complications. She has no other medical problems. Her medications consist of lamotrigine and valproic acid. Her temperature is 98.3°F (36.8°C), blood pressure is 90/75 mmHg, pulse is 94/min, and respirations are 22/min. Physical exam reveals innumerable hypopigmented macules on the skin and an irregularly shaped, thickened, and elevated plaque on the lower back. Which of the following is most strongly associated with this patient's condition? (A) Cardiac rhabdomyoma (B) Glaucoma (C) Optic glioma (D) Polyostotic fibrous dysplasia (E) Renal cell carcinoma",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2709,
+    "output_tokens": 2649,
+    "cached_input_tokens": 0,
+    "cost": 0.00045213
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2709,
+      "output_tokens": 2649,
+      "cached_input_tokens": 0,
+      "cost": 0.00045213
+    }
+  ],
+  "shared_context": {
+    "age": "1",
+    "sex": "female",
+    "chief_complaint": "increasing seizure frequency over 2 months",
+    "medical_history": "no other medical problems",
+    "medications": "lamotrigine; valproic acid",
+    "vitals": "BP 90/75; HR 94; RR 22; Temp 98.3°F",
+    "exam_findings": "innumerable hypopigmented macules; thickened plaque on lower back",
+    "correct_answer": "Cardiac rhabdomyoma"
+  },
+  "sentences": [
+    "To determine the most strongly associated condition with the patient's symptoms, we need to analyze the information provided",
+    "The patient is a 1-year-old girl with increasing seizure frequency and hypsarrhythmia on EEG",
+    "She also has episodes of stiffening and spreading her arms, which may indicate a seizure",
+    "The physical examination reveals innumerable hypopigmented macules on the skin and an irregularly shaped, thickened, and elevated plaque on the lower back",
+    "The combination of these skin findings, especially the plaque, is suggestive of tuberous sclerosis complex (TSC)",
+    "Tuberous sclerosis complex is a genetic disorder characterized by the growth of non-cancerous (benign) tumors in many different organs, including the skin, brain, kidneys, heart, liver, lungs, and eyes",
+    "It often presents with skin manifestations, such as hypopigmented macules (ash-leaf spots) and adenoma sebaceum (facial angiofibromas)",
+    "A) Cardiac rhabdomyoma is a type of benign tumor that can be associated with TSC, particularly in infants and young children",
+    "However, it is not the most strongly associated condition with the patient's symptoms",
+    "B) Glaucoma can be associated with TSC, as it is one of the potential complications of the eye abnormalities seen in the disorder",
+    "However, it is not the most strongly associated condition with the patient's symptoms",
+    "C) Optic glioma is a type of tumor that can occur in the brain, but it is not as strongly associated with TSC as other conditions",
+    "D) Polyostotic fibrous dysplasia is a condition that involves abnormal bone development, but it is not as strongly associated with TSC as other conditions",
+    "E) Renal cell carcinoma is a type of kidney cancer that can occur in TSC patients, but it is typically seen in adulthood, not in a 1-year-old child",
+    "Therefore, the most strongly associated condition with the patient's symptoms is tuberous sclerosis complex, which is closely linked to option A) Cardiac rhabdomyoma"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        1,
+        2,
+        3
+      ],
+      "output": "This 1‑year‑old female presents with increasing seizure frequency over 2 months, hypsarrhythmia on EEG, episodes of stiffening and spreading her arms, innumerable hypopigmented macules, and a thickened plaque on the lower back.",
+      "pattern": "A",
+      "notes": "Enumeration of the patient’s clinical features."
+    },
+    {
+      "source_sentences": [
+        4,
+        14
+      ],
+      "output": "The combination of this 1‑year‑old female's skin findings suggests tuberous sclerosis complex, and the most strongly associated condition is cardiac rhabdomyoma.",
+      "pattern": "C",
+      "notes": "Conclusion linked to earlier diagnostic inference."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "Tuberous sclerosis complex is a genetic disorder characterized by benign tumors in many organs, including skin, brain, kidneys, heart, liver, lungs, and eyes, and often presents with hypopigmented macules (ash‑leaf spots) and adenoma sebaceum (facial angiofibromas).",
+      "pattern": "A",
+      "notes": "Enumeration of the disease’s main features."
+    },
+    {
+      "source_sentences": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "output": "Cardiac rhabdomyoma is a benign tumor associated with tuberous sclerosis complex; glaucoma, optic glioma, polyostotic fibrous dysplasia, and renal cell carcinoma are also associated with the disorder, but only cardiac rhabdomyoma is strongly linked to this patient's presentation.",
+      "pattern": "A",
+      "notes": "Enumeration of potential complications and their relative association."
+    }
+  ]
+}

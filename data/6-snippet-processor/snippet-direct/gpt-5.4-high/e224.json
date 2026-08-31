@@ -1,0 +1,140 @@
+{
+  "entry_id": 224,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 27-year-old man presents for an appointment to establish care. He recently was released from prison. He has felt very fatigued and has had a cough. He has lost roughly 15 pounds over the past 3 weeks. He attributes this to intravenous drug use in prison. His temperature is 99.5°F (37.5°C), blood pressure is 127/68 mmHg, pulse is 100/min, respirations are 18/min, and oxygen saturation is 98% on room air. QuantiFERON gold testing is positive. The patient is started on appropriate treatment. Which of the following is the most likely indication to discontinue this patient's treatment? (A) Elevated liver enzymes (B) Hyperuricemia (C) Optic neuritis (D) Peripheral neuropathy (E) Red body excretions",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2605,
+    "output_tokens": 4188,
+    "cached_input_tokens": 1792
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2605,
+      "output_tokens": 4188,
+      "cached_input_tokens": 1792
+    }
+  ],
+  "shared_context": {
+    "age": "27",
+    "sex": "male",
+    "chief_complaint": "fatigue, cough, and 15-lb weight loss over 3 weeks",
+    "medical_history": "recently released from prison; intravenous drug use in prison",
+    "vitals": "T 99.5 F, BP 127/68 mmHg, pulse 100/min, respirations 18/min, oxygen saturation 98% on room air",
+    "treatment_history": "started on treatment for tuberculosis after a positive QuantiFERON gold test",
+    "correct_answer": "Optic neuritis (C)"
+  },
+  "sentences": [
+    "To determine the most appropriate answer to the question, we'll analyze each option step-by-step",
+    "Step 1: Understanding the Clinical Scenario",
+    "The patient has been diagnosed with tuberculosis (TB) based on a positive QuantiFERON gold test",
+    "He is being started on appropriate treatment for TB",
+    "Step 2: Recognizing Common Anti-Tuberculosis Medications and Side Effects",
+    "The standard initial treatment for active TB typically includes a combination of isoniazid, rifampin, pyrazinamide, and ethambutol",
+    "We will consider the side effects of these medications to determine which one would warrant discontinuation of treatment",
+    "(A) Elevated liver enzymes: Isoniazid, rifampin, and pyrazinamide are known to cause hepatotoxicity",
+    "While elevated liver enzymes are a serious side effect, they do not typically necessitate the immediate discontinuation of all TB medications, but rather dose adjustment or closer monitoring",
+    "(B) Hyperuricemia: Pyrazinamide can cause hyperuricemia",
+    "However, hyperuricemia alone usually does not require discontinuation of treatment unless it leads to symptomatic gout",
+    "(C) Optic neuritis: Ethambutol can cause optic neuritis, which can lead to vision loss",
+    "This is a serious side effect and would typically prompt discontinuation of ethambutol to prevent permanent damage",
+    "(D) Peripheral neuropathy: Isoniazid can cause peripheral neuropathy",
+    "This side effect can often be managed with pyridoxine (Vitamin B6) supplementation rather than discontinuing treatment",
+    "(E) Red body excretions: Rifampin can cause red-orange discoloration of body fluids like urine, sweat, and tears",
+    "This is a benign side effect and does not require discontinuation of treatment",
+    "Step 4: Determining the Most Likely Indication for Discontinuation",
+    "Among the options provided, optic neuritis (C) is the most severe and warrants immediate discontinuation of the offending drug (ethambutol) to prevent permanent vision loss",
+    "(C) Optic neuritis"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The response states that it will analyze the answer choices step by step for this 27-year-old man with fatigue, cough, weight loss, and a positive QuantiFERON gold test.",
+      "pattern": "D",
+      "notes": "Standalone introductory statement."
+    },
+    {
+      "source_sentences": [
+        1,
+        2,
+        3
+      ],
+      "output": "In the clinical-scenario section, the response states that this 27-year-old man has been diagnosed with tuberculosis based on a positive QuantiFERON gold test and is being started on appropriate TB treatment.",
+      "pattern": "A",
+      "notes": "Merged because these sentences jointly describe the same clinical scenario and treatment status, and the heading is not self-contained alone."
+    },
+    {
+      "source_sentences": [
+        4,
+        5,
+        6
+      ],
+      "output": "In the medication-side-effect section, the response states that standard initial treatment for active tuberculosis typically includes isoniazid, rifampin, pyrazinamide, and ethambutol, and that the side effects of these drugs should be reviewed to determine which adverse effect would warrant discontinuation in this 27-year-old man.",
+      "pattern": "A",
+      "notes": "Merged as one setup unit about the same subject: standard TB therapy and evaluating its adverse effects."
+    },
+    {
+      "source_sentences": [
+        7,
+        8
+      ],
+      "output": "For this 27-year-old man being treated for tuberculosis, isoniazid, rifampin, and pyrazinamide are described as causes of hepatotoxicity; elevated liver enzymes are presented as serious but not usually an indication to immediately discontinue all TB medications, instead prompting dose adjustment or closer monitoring.",
+      "pattern": "C",
+      "notes": "Conclusion about management of elevated liver enzymes depends on the preceding premise about hepatotoxicity."
+    },
+    {
+      "source_sentences": [
+        9,
+        10
+      ],
+      "output": "For this 27-year-old man being treated for tuberculosis, pyrazinamide can cause hyperuricemia, but hyperuricemia alone usually does not require discontinuation of treatment unless it causes symptomatic gout.",
+      "pattern": "C",
+      "notes": "Management recommendation is only meaningful with the side-effect premise."
+    },
+    {
+      "source_sentences": [
+        11,
+        12
+      ],
+      "output": "For this 27-year-old man being treated for tuberculosis, ethambutol can cause optic neuritis that may lead to vision loss, and this adverse effect would typically prompt discontinuation of ethambutol to prevent permanent damage.",
+      "pattern": "C",
+      "notes": "Discontinuation recommendation is supported by the preceding causal adverse-effect statement."
+    },
+    {
+      "source_sentences": [
+        13,
+        14
+      ],
+      "output": "For this 27-year-old man being treated for tuberculosis, isoniazid can cause peripheral neuropathy, but this adverse effect can often be managed with pyridoxine (vitamin B6) supplementation rather than by discontinuing treatment.",
+      "pattern": "C",
+      "notes": "Treatment recommendation depends on the side-effect premise."
+    },
+    {
+      "source_sentences": [
+        15,
+        16
+      ],
+      "output": "For this 27-year-old man being treated for tuberculosis, rifampin can cause red-orange discoloration of body fluids such as urine, sweat, and tears, and this benign effect does not require discontinuation of treatment.",
+      "pattern": "C",
+      "notes": "Interpretation of the adverse effect is linked to the preceding drug-side-effect fact."
+    },
+    {
+      "source_sentences": [
+        17,
+        18,
+        19
+      ],
+      "output": "In the final determination for this 27-year-old man, the response states that optic neuritis is the most severe listed adverse effect and warrants immediate discontinuation of the offending drug, ethambutol; the selected answer is (C) Optic neuritis.",
+      "pattern": "C",
+      "notes": "Final answer sentence is merged with its supporting rationale and heading."
+    }
+  ]
+}

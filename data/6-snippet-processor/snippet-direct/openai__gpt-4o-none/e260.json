@@ -1,0 +1,115 @@
+{
+  "entry_id": 260,
+  "batch_id": 26,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 3-year-old girl is brought to the office for a routine well-child appointment. She was delivered preterm at 35 weeks, and her medical history is significant for several ear infections over the last year. Her older brother has been diagnosed with attention-deficit hyperactivity disorder (ADHD), but the rest of her family history is otherwise unremarkable. The patient has become more withdrawn lately and has sometimes been ignoring her parents when asked to perform tasks at home. This seems to have worsened over the last 8 weeks. Otherwise, the patient is energetic and started preschool 3 months ago. Her temperature is 98.6°F (37°C), blood pressure is 98/62 mmHg, pulse is 97/min, and respirations are 26/min. The patient successfully draws a square and can stand on 1 foot. Her language skills are unchanged from her appointment 6 months ago. Her neurological examination is normal, and she is at the 50th percentile for height and weight. She seems distracted during the interview and responds only intermittently to the physician’s directions. Which of the following is the most appropriate next step in management? (A) Audiometry testing (B) Autism spectrum screening questionnaire (C) Parent and teacher ADHD rating scales (D) Refer to genetic testing (E) Speech and language assessment",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2561,
+    "output_tokens": 718,
+    "cached_input_tokens": 1920,
+    "cost": 0.0111825
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2561,
+      "output_tokens": 718,
+      "cached_input_tokens": 1920,
+      "cost": 0.0111825
+    }
+  ],
+  "shared_context": {
+    "age": "3",
+    "sex": "female",
+    "chief_complaint": "withdrawn behavior, ignoring tasks, unchanged language skills",
+    "medical_history": "multiple ear infections over the last year; delivered preterm at 35 weeks",
+    "family_history": "brother with ADHD; otherwise unremarkable",
+    "vitals": "temp 98.6°F, BP 98/62 mmHg, pulse 97/min, resp 26/min",
+    "exam_findings": "normal neurological exam, 50th percentile for height and weight; distracted during interview, responds intermittently",
+    "correct_answer": "Autism spectrum screening questionnaire (B)"
+  },
+  "sentences": [
+    "The patient, a 3-year-old girl, has a history of multiple ear infections over the last year, which may indicate a possible issue with her Eustachian tube function or middle ear development",
+    "This could potentially lead to issues with hearing, which may impact her speech and language development",
+    "The patient's family history of ADHD may increase her risk for attention deficits or behavioral issues",
+    "However, her current behavior of becoming withdrawn and ignoring tasks seems to have worsened over the last 8 weeks, which could be indicative of a change in her developmental trajectory",
+    "The fact that she is energetic and has made recent progress in preschool (started 3 months ago) suggests that her gross motor skills and social interactions are developing normally",
+    "Her language skills are unchanged from 6 months ago, and her neurological examination is normal, which suggests that her language development is not significantly delayed",
+    "Her height and weight are at the 50th percentile, indicating normal growth",
+    "However, she is distracted during the interview and responds only intermittently to the physician's directions, which could indicate attention issues or developmental delays",
+    "Given the patient's history of ear infections and possible attention issues, and the recent worsening of her behavior, the most appropriate next step in management would be to perform an Autism Spectrum Disorder (ASD) screening questionnaire",
+    "Option B) Autism spectrum screening questionnaire is the most appropriate answer because it will allow the physician to gather more information about the patient's social interactions, communication, and behavior, which can help to identify potential ASD"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "The 3-year-old girl's history of multiple ear infections over the last year may indicate an issue with her Eustachian tube function or middle ear development, which could potentially lead to issues with hearing that may impact her speech and language development.",
+      "pattern": "B",
+      "notes": "The causal relationship between ear infection history and potential hearing/speech impact indicates Pattern B."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The patient's family history of ADHD in her older brother may increase her risk for attention deficits or behavioral issues.",
+      "pattern": "D",
+      "notes": "Standalone fact about potential familial risk; no merge needed."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The 3-year-old girl has become more withdrawn and is ignoring tasks, a behavior that has worsened over the last 8 weeks, indicating a possible change in her developmental trajectory.",
+      "pattern": "D",
+      "notes": "Descriptive change in behavior; self-contained."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Since the 3-year-old girl is energetic and has made recent progress in preschool, her gross motor skills and social interactions are likely developing normally.",
+      "pattern": "D",
+      "notes": "Observation about normal development progress; standalone conclusion."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "Her language skills are unchanged from 6 months ago and her neurological examination is normal, suggesting her language development is not significantly delayed. Her height and weight are at the 50th percentile, indicating normal growth.",
+      "pattern": "A",
+      "notes": "Enumerates developmental and growth parameters."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "During the interview, the 3-year-old girl is distracted and responds only intermittently to the physician's directions, indicating possible attention issues or developmental delays.",
+      "pattern": "D",
+      "notes": "Behavioral observation; self-contained."
+    },
+    {
+      "source_sentences": [
+        8,
+        9
+      ],
+      "output": "Given the history of ear infections, potential attention issues, and recent worsening of behavior, performing an Autism Spectrum Disorder (ASD) screening questionnaire is most appropriate. This will allow the physician to gather more information about the patient's social interactions, communication, and behavior, which can help to identify potential ASD.",
+      "pattern": "C",
+      "notes": "Conclusion with justification; logical reasoning included."
+    }
+  ]
+}

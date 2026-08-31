@@ -1,0 +1,68 @@
+{
+  "entry_id": 133,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1686,
+    "output_tokens": 769,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1686,
+      "output_tokens": 769,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "losartan dosing schedule",
+    "drug_a": "losartan"
+  },
+  "sentences": [
+    "Losartan is an angiotensin II receptor antagonist used to treat high blood pressure and certain types of kidney disease",
+    "The recommended dosage of losartan is typically 50-100 mg once daily",
+    "Taking two pills at once is not recommended, as it may increase the risk of adverse effects and does not provide additional benefits",
+    "Instead, it is best to take losartan at the same time every day, as directed by your healthcare provider"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Losartan is an angiotensin II receptor antagonist used to treat high blood pressure and certain types of kidney disease.",
+      "pattern": "D",
+      "notes": "Standalone drug-class and indication fact."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The recommended dosage of losartan is typically 50-100 mg once daily.",
+      "pattern": "D",
+      "notes": "Standalone dosing fact."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Taking two pills of losartan at once is not recommended because it may increase the risk of adverse effects and does not provide additional benefits.",
+      "pattern": "B",
+      "notes": "Recommendation and supporting causal rationale are linked by 'because/as' structure."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "Losartan is best taken at the same time every day, as directed by a healthcare provider.",
+      "pattern": "D",
+      "notes": "Standalone administration instruction."
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "entry_id": 27,
+  "batch_id": 3,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to his primary care physician with a 6-month history of increasing lower back pain. He first felt the pain while lifting boxes at work but thought that he had just strained a muscle. The pain appears to be worse in the mornings and after rest. Exercise and physical activity appear to temporarily make the pain better. He has taken acetaminophen and ibuprofen for the pain. He has no significant medical history and takes no medications. His temperature is 98.6°F (37.0°C), blood pressure is 115/70 mmHg, pulse is 70/min, and respirations are 12/min. On physical exam, he is found to have limited flexion and extension of his spine as well as tenderness to palpation over the insertion of his patellar tendons bilaterally. Results from laboratory tests are shown below:\n\nSerum:\nErythrocyte sedimentation rate (ESR): 61 mm/hr\nC-reactive protein (CRP): 36 mg/L (normal <10 mg/L)\n\nWhich of the following is the most accurate test for this patient's condition? (A) Bone scan (B) Computed tomography (C) Magnetic resonance imaging (D) Radiograph (E) Ultrasound",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4467,
+    "output_tokens": 979,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1869,
+      "output_tokens": 556,
+      "cached_input_tokens": 0,
+      "cost": 0.00036482
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2598,
+      "output_tokens": 423,
+      "cached_input_tokens": 0,
+      "cost": 0.00039516
+    }
+  ],
+  "shared_context": {
+    "patient_age": 26,
+    "patient_sex": "male",
+    "presenting_complaint": "lower back pain",
+    "key_history": "6-month history of increasing pain, worse in mornings and after rest, improved with exercise",
+    "medications": "acetaminophen, ibuprofen",
+    "vitals": "temperature 98.6°F, blood pressure 115/70 mmHg, pulse 70/min, respirations 12/min",
+    "exam_findings": "limited flexion and extension of spine, tenderness to palpation over patellar tendons",
+    "lab_results": "ESR 61 mm/hr, CRP 36 mg/L"
+  },
+  "sentences": [
+    "To determine the most accurate test for this patient's condition, let's analyze the provided information step-by-step",
+    "The patient's symptoms of increasing lower back pain that worsens in the mornings and after rest, and improves with exercise and physical activity, are characteristic of inflammatory back pain",
+    "However, the elevation in ESR and CRP levels (64 times and 3.6 times their normal values, respectively) also suggests an underlying inflammatory process",
+    "Given the presence of limited flexion and extension of the spine as well as tenderness to palpation over the insertion of the patellar tendons bilaterally, this is suggestive of spondyloarthritis (SpA), particularly ankylosing spondylitis",
+    "In spondyloarthritis, plain radiographs (X-rays) can show changes in the spine and sacroiliac joints, but they may not be visible in the early stages of the disease",
+    "Bone scans are not generally used for diagnosing spondyloarthritis; they are more often used for detecting bone metastasis or osteomyelitis",
+    "Computed tomography (CT) scans can provide more detailed images than X-rays and can help identify sacroiliitis and spinal changes in more detail, but MRI provides the most sensitive detection of early changes and is the preferred imaging modality for diagnosing spondyloarthritis",
+    "Ultrasound is not typically used for initial imaging of spondyloarthritis",
+    "Given the information, the most accurate test for this patient's condition is Magnetic Resonance Imaging (MRI) since it provides the most sensitive detection of early changes in spondyloarthritis",
+    "Final Answer: C"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's symptoms are characteristic of inflammatory back pain.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Elevated ESR and CRP levels suggest an underlying inflammatory process.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's symptoms and exam findings are suggestive of spondyloarthritis (SpA), particularly ankylosing spondylitis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Plain radiographs can show changes in the spine and sacroiliac joints in spondyloarthritis, but may not be visible in early stages.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Bone scans are not generally used for diagnosing spondyloarthritis.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Computed tomography (CT) scans can provide more detailed images than X-rays, but MRI is the preferred imaging modality for diagnosing spondyloarthritis.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Ultrasound is not typically used for initial imaging of spondyloarthritis.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Magnetic Resonance Imaging (MRI) provides the most sensitive detection of early changes in spondyloarthritis.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The most accurate test for this patient's condition is Magnetic Resonance Imaging (MRI).",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "text": "The final answer is Magnetic Resonance Imaging (MRI).",
+      "source_sentences": [
+        9
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This 26-year-old male's lower back pain, which is worse in the mornings and after rest but improves with exercise, is characteristic of inflammatory back pain.",
+      "pattern": "D",
+      "notes": "Standalone symptom description."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The patient's elevated ESR and CRP levels suggest an underlying inflammatory process.",
+      "pattern": "D",
+      "notes": "Lab results interpretation."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The combination of symptoms and exam findings, including limited flexion and extension of the spine and tenderness to palpation over the patellar tendons, are suggestive of spondyloarthritis (SpA), particularly ankylosing spondylitis, in this 26-year-old male.",
+      "pattern": "D",
+      "notes": "Clinical impression."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "output": "For diagnosing spondyloarthritis, plain radiographs can show changes in the spine and sacroiliac joints but may not be visible in early stages; bone scans are not generally used; CT scans provide more detailed images than X-rays but are not the preferred modality; and ultrasound is not typically used for initial imaging.",
+      "pattern": "A",
+      "notes": "Enumeration of less-preferred diagnostic methods."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Magnetic Resonance Imaging (MRI) provides the most sensitive detection of early changes in spondyloarthritis.",
+      "pattern": "D",
+      "notes": "Standalone description of MRI's capabilities."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Given the patient's presentation, the most accurate test for this condition is Magnetic Resonance Imaging (MRI).",
+      "pattern": "C",
+      "notes": "Conclusion with supporting premise, final diagnosis decision."
+    }
+  ]
+}

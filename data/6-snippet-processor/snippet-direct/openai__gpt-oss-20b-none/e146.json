@@ -1,0 +1,162 @@
+{
+  "entry_id": 146,
+  "batch_id": 15,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 44-year-old homeless man presents to the emergency department after being stabbed multiple times in the abdomen. The patient is intoxicated and is unable to offer further history. His temperature is 97.5°F (36.4°C), blood pressure is 92/52 mmHg, pulse is 145/min, respirations are 33/min, and oxygen saturation is 90% on room air. He is intubated to protect his airway, given 2 units of packed red blood cells, and sent to the operating room for an exploratory laparotomy. The patient is subsequently admitted to the intensive care unit. He is extubated the next day and appears well. His vitals are within normal limits. Physical exam reveals sparse hair that is falling out throughout the patient’s body. He has a rash by the corners of his mouth. The patient has multiple loose bowel movements and on day 6 the patient’s surgical wound does not appear to be healing. It is held together only by the sutures with minimal underlying healing. Which of the following is most likely deficient in this patient? (A) Riboflavin (B) Thiamine (C) Vitamin C (D) Vitamin D (E) Zinc",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2639,
+    "output_tokens": 1699,
+    "cached_input_tokens": 0,
+    "cost": 0.00031703
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2639,
+      "output_tokens": 1699,
+      "cached_input_tokens": 0,
+      "cost": 0.00031703
+    }
+  ],
+  "shared_context": {
+    "age": "44",
+    "sex": "male",
+    "chief_complaint": "abdominal stab wounds",
+    "medical_history": "intubation due to trauma; multiple blood transfusions",
+    "vitals": "BP 92/52 mmHg, pulse 145/min, respirations 33/min, oxygen saturation 90% RA",
+    "exam_findings": "rash at corners of mouth, sparse hair loss, loose bowel movements, poor wound healing on day 6",
+    "correct_answer": "Zinc (E)"
+  },
+  "sentences": [
+    "To address this clinical scenario, let's analyze the patient's presentation step-by-step",
+    "The patient presents with multiple stab wounds, is intoxicated, and has hemodynamic instability (BP 92/52 mmHg, pulse 145/min, respirations 33/min, oxygen saturation 90%)",
+    "He is intubated, given blood transfusions, and sent for an exploratory laparotomy",
+    "This initial management is consistent with trauma protocols and addressing immediate life-threatening conditions",
+    "The patient is extubated the next day and appears well",
+    "On physical examination, there is a rash at the corners of his mouth (angular cheilitis), sparse hair falling out, multiple loose bowel movements, and poor wound healing observed on day 6",
+    "Riboflavin (Vitamin B2) deficiency can cause angular cheilitis and stomatitis but is less likely to cause poor wound healing and hair loss",
+    "Thiamine (Vitamin B1) deficiency is related to conditions like beriberi and Wernicke-Korsakoff syndrome, which do not correspond with the described symptoms",
+    "Vitamin C deficiency (scurvy) can lead to poor wound healing, easy bruising, and bleeding gums, but is less likely to cause hair loss and diarrhea",
+    "Vitamin D deficiency mainly leads to bone-related issues such as osteomalacia and rickets, not specifically the symptoms described here",
+    "Zinc deficiency can cause alopecia (hair loss), dermatitis (rashes), diarrhea, and poor wound healing, aligning well with the patient's symptoms",
+    "Given the patient's symptoms of sparse hair, rash at the corners of the mouth (angular cheilitis), loose bowel movements, and poor wound healing, the most likely deficiency is Zinc",
+    "(E) Zinc"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "To address this patient, let's analyze the presentation step-by-step.",
+      "pattern": "D",
+      "notes": "Introductory framing sentence."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "This 44-year-old male presents with multiple stab wounds to the abdomen, is intoxicated, and has hemodynamic instability (BP 92/52 mmHg, pulse 145/min, respirations 33/min, oxygen saturation 90%).",
+      "pattern": "D",
+      "notes": "Standalone clinical description."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "He is intubated, given packed red blood cells, and sent for an exploratory laparotomy.",
+      "pattern": "D",
+      "notes": "Immediate trauma management."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "This initial management is consistent with trauma protocols and addresses immediate life‑threatening conditions.",
+      "pattern": "D",
+      "notes": "Comment on appropriateness of care."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "He is extubated the next day and appears well, with vitals within normal limits.",
+      "pattern": "D",
+      "notes": "Post‑operative status."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "On physical examination, the patient has a rash at the corners of his mouth (angular cheilitis), sparse hair loss, multiple loose bowel movements, and poor wound healing on day 6.",
+      "pattern": "D",
+      "notes": "Enumerated exam findings."
+    },
+    {
+      "source_sentences": [
+        6
+      ],
+      "output": "Riboflavin (Vitamin B2) deficiency can cause angular cheilitis and stomatitis but is less likely to cause poor wound healing and hair loss.",
+      "pattern": "D",
+      "notes": "Deficiency and associated features."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Thiamine (Vitamin B1) deficiency is related to beriberi and Wernicke‑Korsakoff syndrome, which do not align with the patient’s described symptoms.",
+      "pattern": "D",
+      "notes": "Deficiency and nonspecificity."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "Vitamin C deficiency (scurvy) can lead to poor wound healing, easy bruising, and bleeding gums, but is less likely to cause hair loss and diarrhea.",
+      "pattern": "D",
+      "notes": "Deficiency and symptom mismatch."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Vitamin D deficiency mainly leads to bone‑related issues such as osteomalacia and rickets, not specifically the patient’s symptoms.",
+      "pattern": "D",
+      "notes": "Deficiency and irrelevant manifestations."
+    },
+    {
+      "source_sentences": [
+        10
+      ],
+      "output": "Zinc deficiency can cause alopecia (hair loss), dermatitis (rashes), diarrhea, and poor wound healing, aligning well with the patient’s symptoms.",
+      "pattern": "D",
+      "notes": "Deficiency fitting the clinical picture."
+    },
+    {
+      "source_sentences": [
+        11
+      ],
+      "output": "Given the patient’s sparse hair loss, angular cheilitis, loose bowel movements, and poor wound healing, the most likely deficiency is Zinc.",
+      "pattern": "C",
+      "notes": "Conclusion supported by prior premises."
+    },
+    {
+      "source_sentences": [
+        12
+      ],
+      "output": "(E) Zinc.",
+      "pattern": "D",
+      "notes": "Answer indicator; standalone statement."
+    }
+  ]
+}

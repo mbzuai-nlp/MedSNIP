@@ -1,0 +1,59 @@
+{
+  "entry_id": 251,
+  "batch_id": 26,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "So the singulair is an oral tablet not an inhaler?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1660,
+    "output_tokens": 775,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1660,
+      "output_tokens": 775,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "Singulair dosage form",
+    "drug_a": "Singulair (montelukast)"
+  },
+  "sentences": [
+    "Yes, Singulair (montelukast) is an oral tablet, not an inhaler",
+    "It is commonly used for the management of asthma and allergic rhinitis",
+    "Montelukast works by blocking leukotrienes, which are chemicals in the body that cause inflammation, bronchoconstriction, and mucus production"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Singulair (montelukast) is an oral tablet, not an inhaler.",
+      "pattern": "D",
+      "notes": "Standalone fact answering the dosage-form question."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Singulair (montelukast) is commonly used for the management of asthma and allergic rhinitis.",
+      "pattern": "F",
+      "notes": "Same drug, but this is a separate independently checkable use statement rather than part of the dosage-form fact."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Montelukast works by blocking leukotrienes, which are chemicals in the body that cause inflammation, bronchoconstriction, and mucus production.",
+      "pattern": "F",
+      "notes": "Same drug, but this is a separate independently checkable mechanism-of-action statement."
+    }
+  ]
+}

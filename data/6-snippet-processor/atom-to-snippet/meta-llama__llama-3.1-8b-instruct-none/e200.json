@@ -1,0 +1,192 @@
+{
+  "entry_id": 200,
+  "batch_id": 20,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can a nausea prescription be taken at the same time as Dramamine?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2909,
+    "output_tokens": 772,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1334,
+      "output_tokens": 381,
+      "cached_input_tokens": 0,
+      "cost": 4.192e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1575,
+      "output_tokens": 391,
+      "cached_input_tokens": 0,
+      "cost": 4.714e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "concurrent administration of nausea prescription with Dramamine",
+    "drug_a": "nausea prescription",
+    "drug_b": "Dramamine (dimenhydrinate)",
+    "condition": "nausea, vomiting, dizziness"
+  },
+  "sentences": [
+    "Concurrent administration of Dramamine (dimenhydrinate) with other antiemetic medications can be considered, but caution is necessary due to potential interactions and overlapping side effects",
+    "Dramamine is an antihistamine used to prevent and treat nausea, vomiting, and dizziness caused by motion sickness",
+    "Combining it with other antiemetics, especially those with sedative effects or similar mechanisms, can lead to increased sedation or other side effects",
+    "When considering concurrent administration with other antiemetics, it is crucial to evaluate the patient's overall medication regimen and health condition, and it is advisable to consult a healthcare professional to avoid adverse effects",
+    "For example, serotonin antagonists like ondansetron and granisetron are commonly used for chemotherapy-induced nausea and vomiting (CINV) and postoperative nausea and vomiting (PONV)",
+    "These medications have different mechanisms of action compared to antihistamines and can be combined under medical supervision",
+    "However, combining multiple medications that affect the central nervous system can increase the risk of side effects like drowsiness, dry mouth, and confusion",
+    "Thus, careful consideration and possible dose adjustments may be needed"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Concurrent administration of Dramamine (dimenhydrinate) with other antiemetic medications can be considered.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Caution is necessary due to potential interactions and overlapping side effects.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Combining Dramamine with other antiemetics can lead to increased sedation or other side effects.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "It is crucial to evaluate the patient's overall medication regimen and health condition.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Consult a healthcare professional to avoid adverse effects.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Serotonin antagonists like ondansetron and granisetron can be combined with Dramamine under medical supervision.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "These medications have different mechanisms of action compared to antihistamines.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Combining multiple medications that affect the central nervous system can increase the risk of side effects.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Careful consideration and possible dose adjustments may be needed.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Concurrent administration of Dramamine with other antiemetic medications can be considered.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "Caution is necessary due to potential interactions and overlapping side effects.",
+      "pattern": "D",
+      "notes": "Standalone warning."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Combining Dramamine with other antiemetics can lead to increased sedation or other side effects.",
+      "pattern": "C",
+      "notes": "Recommendation with premise."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "It is crucial to evaluate the patient's overall medication regimen and health condition.",
+      "pattern": "D",
+      "notes": "General advice."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Consult a healthcare professional to avoid adverse effects.",
+      "pattern": "D",
+      "notes": "Direct advice."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Serotonin antagonists like ondansetron and granisetron can be combined with Dramamine under medical supervision.",
+      "pattern": "D",
+      "notes": "Specific example."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "These medications have different mechanisms of action compared to antihistamines.",
+      "pattern": "D",
+      "notes": "Comparison of mechanisms."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Combining multiple medications that affect the central nervous system can increase the risk of side effects.",
+      "pattern": "C",
+      "notes": "General warning."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Careful consideration and possible dose adjustments may be needed.",
+      "pattern": "D",
+      "notes": "General advice."
+    }
+  ]
+}

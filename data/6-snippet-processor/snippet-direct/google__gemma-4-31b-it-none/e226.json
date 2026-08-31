@@ -1,0 +1,114 @@
+{
+  "entry_id": 226,
+  "batch_id": 23,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "vignette",
+  "full_query": "A 77-year-old man presents to the emergency department with a complaint of sudden onset weakness in his right upper extremity. At home, the patient thought he was simply dehydrated, but he rapidly began to have trouble speaking. When his wife noted this she brought him into the hospital. On arrival to the emergency department, the patient is not responding to verbal stimuli and only withdraws his left upper extremity and lower extremity to pain. His past medical history is notable for hypertension and atrial fibrillation treated with metoprolol, apixaban, and lisinopril. His temperature is 99.0°F (37.2°C), blood pressure is 170/100 mmHg, pulse is 95/min, and respirations are 16/min. The patient has a seizure and subsequently demonstrates agonal breathing. He no longer responds to painful stimuli. A fingerstick blood glucose is 122 mg/dL. Which of the following is the most likely etiology of this patient's symptoms? (A) Epidural hematoma (B) Intracerebral hemorrhage (C) Ischemic stroke (D) Subarachnoid hemorrhage (E) Subdural hematoma",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2612,
+    "output_tokens": 648,
+    "cached_input_tokens": 0,
+    "cost": 0.0005858
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 2612,
+      "output_tokens": 648,
+      "cached_input_tokens": 0,
+      "cost": 0.0005858
+    }
+  ],
+  "shared_context": {
+    "age": "77",
+    "sex": "male",
+    "chief_complaint": "sudden onset right upper extremity weakness and difficulty speaking",
+    "medical_history": "hypertension, atrial fibrillation",
+    "medications": "metoprolol, apixaban, lisinopril",
+    "vitals": "Temp 99.0°F, BP 170/100 mmHg, Pulse 95/min, RR 16/min",
+    "exam_findings": "not responding to verbal stimuli, withdraws left extremities to pain, seizure, agonal breathing, no longer responds to painful stimuli, blood glucose 122 mg/dL"
+  },
+  "sentences": [
+    "To evaluate this patient's symptoms, we must consider the following",
+    "Sudden onset of weakness in the right upper extremity: This could be indicative of a neurological issue, such as a stroke or hemorrhage",
+    "Rapid progression of symptoms: The patient's condition quickly deteriorated, suggesting a rapidly evolving process",
+    "History of atrial fibrillation: Atrial fibrillation is a risk factor for ischemic stroke, but it can also increase the risk of hemorrhagic stroke",
+    "Hypertension: Uncontrolled hypertension is a risk factor for hemorrhagic stroke",
+    "Seizure and agonal breathing: These symptoms suggest a severe intracranial process",
+    "Considering these factors, the most likely etiology of this patient's symptoms is an ischemic stroke",
+    "Ischemic strokes are more likely than hemorrhagic strokes in patients with atrial fibrillation and hypertension, especially if the blood pressure is not well-controlled",
+    "The patient's symptoms, including sudden onset and rapid progression, are consistent with ischemic stroke",
+    "However, we should also consider the possibility of a hemorrhagic stroke, such as a subarachnoid hemorrhage, given the patient's history of hypertension and the presence of head trauma"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0,
+        1
+      ],
+      "output": "To evaluate the 77-year-old male's symptoms, the sudden onset of weakness in the right upper extremity must be considered, which could be indicative of a neurological issue, such as a stroke or hemorrhage.",
+      "pattern": "C",
+      "notes": "Conclusion/setup merged with its immediate premise."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "The rapid progression of symptoms in this 77-year-old male, whose condition quickly deteriorated, suggests a rapidly evolving process.",
+      "pattern": "D",
+      "notes": "Standalone interpretation of clinical course."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "The patient's history of atrial fibrillation is a risk factor for ischemic stroke, but it can also increase the risk of hemorrhagic stroke.",
+      "pattern": "D",
+      "notes": "Standalone fact regarding risk factors."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Uncontrolled hypertension, as seen in this patient with a BP of 170/100 mmHg, is a risk factor for hemorrhagic stroke.",
+      "pattern": "D",
+      "notes": "Standalone fact regarding risk factors."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "The occurrence of seizure and agonal breathing in this 77-year-old male suggests a severe intracranial process.",
+      "pattern": "D",
+      "notes": "Standalone interpretation of symptoms."
+    },
+    {
+      "source_sentences": [
+        6,
+        7,
+        8
+      ],
+      "output": "Considering these factors, the most likely etiology of this 77-year-old male's symptoms is an ischemic stroke; ischemic strokes are more likely than hemorrhagic strokes in patients with atrial fibrillation and hypertension, especially if the blood pressure is not well-controlled, and the patient's symptoms, including sudden onset and rapid progression, are consistent with ischemic stroke.",
+      "pattern": "C",
+      "notes": "Diagnosis merged with the reasoning and supporting premises."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "The possibility of a hemorrhagic stroke, such as a subarachnoid hemorrhage, should also be considered given the 77-year-old male's history of hypertension and the presence of head trauma.",
+      "pattern": "B",
+      "notes": "Causal link between history/trauma and the differential consideration."
+    }
+  ]
+}

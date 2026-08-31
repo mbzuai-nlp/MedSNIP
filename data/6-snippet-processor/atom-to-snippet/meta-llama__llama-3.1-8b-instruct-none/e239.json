@@ -1,0 +1,194 @@
+{
+  "entry_id": 239,
+  "batch_id": 24,
+  "subset": "consumer",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "If this is just muscle strain, how many days should I expect the pain to go away?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2953,
+    "output_tokens": 771,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1375,
+      "output_tokens": 429,
+      "cached_input_tokens": 0,
+      "cost": 4.466e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1578,
+      "output_tokens": 342,
+      "cached_input_tokens": 0,
+      "cost": 4.524e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "duration of muscle strain pain",
+    "condition": "muscle strain",
+    "symptom": "pain"
+  },
+  "sentences": [
+    "Muscle strain, also known as muscle pull or muscle tear, is a common injury that occurs when a muscle is stretched or torn, causing pain, stiffness, and limited mobility",
+    "The duration of muscle strain pain can vary depending on the severity of the injury and the individual's overall health",
+    "Generally, the pain from muscle strain can last anywhere from a few days to several weeks or even months",
+    "Mild muscle strain may resolve within 1-3 days, while moderate strain may take 7-14 days to heal, and severe strain may take longer than 14 days to recover",
+    "According to a study published in the Journal of Pain, the severity of muscle strain can be classified into three stages: acute (0-24 hours), sub-acute (24-72 hours), and chronic (beyond 72 hours)",
+    "In this study, the researchers found that the accuracy of expected pain intensity increased during the study, with actual pain intensity accounting for up to 55% of the variance in expected pain intensity",
+    "While there is no one-size-fits-all answer to how many days muscle strain pain will last, most people can expect to recover from mild muscle strain within 1-2 weeks",
+    "However, it is essential to note that some muscle strains may take longer to heal, and in some cases, may require medical attention"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The duration of muscle strain pain can vary depending on the severity of the injury.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The pain from muscle strain can last anywhere from a few days to several weeks or even months.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Mild muscle strain may resolve within 1-3 days.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Moderate muscle strain may take 7-14 days to heal.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Severe muscle strain may take longer than 14 days to recover.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The severity of muscle strain can be classified into three stages: acute, sub-acute, and chronic.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Acute muscle strain lasts up to 24 hours.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Sub-acute muscle strain lasts 24-72 hours.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Chronic muscle strain lasts beyond 72 hours.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Most people can expect to recover from mild muscle strain within 1-2 weeks.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Some muscle strains may take longer to heal.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "text": "In some cases, muscle strains may require medical attention.",
+      "source_sentences": [
+        7
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The pain from muscle strain can last anywhere from a few days to several weeks or even months, depending on the severity of the injury.",
+      "pattern": "C",
+      "notes": "Conclusion + premise."
+    },
+    {
+      "source_claims": [
+        3,
+        4,
+        5
+      ],
+      "output": "Mild muscle strain may resolve within 1-3 days, moderate muscle strain may take 7-14 days to heal, and severe muscle strain may take longer than 14 days to recover.",
+      "pattern": "A",
+      "notes": "Enumeration of recovery times."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "The severity of muscle strain can be classified into three stages: acute (lasting up to 24 hours), sub-acute (lasting 24-72 hours), and chronic (lasting beyond 72 hours).",
+      "pattern": "C",
+      "notes": "Classification of muscle strain severity."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Most people can expect to recover from mild muscle strain within 1-2 weeks.",
+      "pattern": "D",
+      "notes": "Standalone recovery time."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Some muscle strains may take longer to heal.",
+      "pattern": "D",
+      "notes": "Standalone statement."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "In some cases, muscle strains may require medical attention.",
+      "pattern": "D",
+      "notes": "Standalone statement."
+    }
+  ]
+}

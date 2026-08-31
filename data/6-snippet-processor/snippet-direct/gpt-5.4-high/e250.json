@@ -1,0 +1,50 @@
+{
+  "entry_id": 250,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "So the singulair is an oral tablet not an inhaler?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1655,
+    "output_tokens": 567,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1655,
+      "output_tokens": 567,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "Singulair dosage form",
+    "drug_a": "Singulair (montelukast)"
+  },
+  "sentences": [
+    "Yes, Singulair (montelukast) is an oral medication, not an inhaler",
+    "Montelukast is a leukotriene receptor antagonist used for the prophylaxis and treatment of chronic asthma, the prevention of exercise-induced bronchoconstriction, and the symptomatic relief of allergic rhinitis"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Singulair (montelukast) is an oral medication, not an inhaler.",
+      "pattern": "D",
+      "notes": "Standalone fact about the route/form of Singulair."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Montelukast is a leukotriene receptor antagonist used for the prophylaxis and treatment of chronic asthma, the prevention of exercise-induced bronchoconstriction, and the symptomatic relief of allergic rhinitis.",
+      "pattern": "F",
+      "notes": "Same drug, but a different independently verifiable fact about drug class and indications, so it stays separate."
+    }
+  ]
+}

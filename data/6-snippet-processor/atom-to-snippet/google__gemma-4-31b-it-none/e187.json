@@ -1,0 +1,267 @@
+{
+  "entry_id": 187,
+  "batch_id": 19,
+  "subset": "vignette",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 43-year-old man presents to the emergency department with bright red blood in his stool this morning. He noticed this yesterday as well, but it was much scanter. The patient is otherwise healthy. He was celebrating his birthday last night and admits having \"too much to drink\" and vomited profusely overnight. He currently feels well and is not nauseous. He has no other significant medical history and does not take any medications. His temperature is 99.2°F (37.3°C), blood pressure is 110/75 mmHg, pulse is 82/min, respirations are 16/min, and oxygen saturation is 100% on room air. Physical exam reveals a nontender abdomen with normal bowel sounds. Rectal exam reveals grossly bloody stool. Laboratory studies are ordered as shown below.\n\nHemoglobin: 12 g/dL\nHematocrit: 36%\nLeukocyte count: 5,500/mm^3 with normal differential\nPlatelet count: 179,000/mm^3\n\nWhich of the following is the most likely cause of this patient's symptoms? (A) Erosion into a gastric vessel (B) Inflammation and infection of colonic outpouching (C) Malignancy (D) Submucosal esophageal tear (E) Vascular malformation",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 5013,
+    "output_tokens": 1540,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2084,
+      "output_tokens": 795,
+      "cached_input_tokens": 0,
+      "cost": 0.00057302
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2929,
+      "output_tokens": 745,
+      "cached_input_tokens": 0,
+      "cost": 0.00066387
+    }
+  ],
+  "shared_context": {
+    "age": 43,
+    "sex": "male",
+    "chief_complaint": "bright red blood in stool",
+    "medical_history": "otherwise healthy",
+    "medications": "none",
+    "vitals": "T 99.2°F, BP 110/75 mmHg, P 82/min, R 16/min, SpO2 100%",
+    "exam_findings": "nontender abdomen, normal bowel sounds, grossly bloody stool on rectal exam",
+    "treatment_history": "vomited profusely after heavy drinking",
+    "correct_answer": "Submucosal esophageal tear (Mallory-Weiss syndrome)"
+  },
+  "sentences": [
+    "To approach this case, let's break down the key information provided",
+    "The patient presents with bright red blood in his stool, which he noticed for the first time yesterday but was more scant",
+    "This suggests a recent onset of symptoms",
+    "The patient had a history of \"too much to drink\" and vomited profusely overnight, which may be a contributing factor to his current condition",
+    "He is otherwise healthy and has no significant medical history or current medications",
+    "His vital signs are stable, with a normal temperature, blood pressure, pulse, respirations, and oxygen saturation",
+    "His physical exam reveals a nontender abdomen with normal bowel sounds and grossly bloody stool on rectal exam",
+    "Laboratory studies show a normal hemoglobin and hematocrit, which indicate that the patient is not significantly anemic",
+    "Erosion into a gastric vessel: This could be a possibility, but it's less likely given the patient's symptoms of melena (black, tarry stools) would be more characteristic of upper GI bleeding, and the patient's presentation with bright red blood in the stool",
+    "Inflammation and infection of colonic outpouching (Diverticulitis): Diverticulitis typically presents with abdominal pain, fever, and signs of infection (e.g., leukocytosis), which are not present in this case",
+    "Malignancy: While colon cancer is a possible cause of bright red blood in the stool, it is less likely given the patient's age (43) and the acute onset of symptoms",
+    "Submucosal esophageal tear (Mallory-Weiss syndrome): This condition is characterized by a mucosal tear in the esophagus, which can be caused by intense, forceful emesis, such as after vomiting after heavy drinking",
+    "The tear can lead to bleeding, and the patient's history of vomiting profusely overnight makes this a likely cause of his symptoms",
+    "Vascular malformation: This is an unlikely cause, as there is no mention of a personal or family history of vascular malformations and no other associated symptoms",
+    "Based on the patient's history of vomiting after heavy drinking and the acute onset of symptoms, the most likely cause of his bleeding is",
+    "Submucosal esophageal tear (Mallory-Weiss syndrome)"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient presents with bright red blood in his stool, which he noticed for the first time yesterday but was more scant.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient's presentation suggests a recent onset of symptoms.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient had a history of excessive alcohol consumption and profuse vomiting overnight, which may be a contributing factor to his current condition.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient is otherwise healthy and has no significant medical history or current medications.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The patient's vital signs (temperature, blood pressure, pulse, respirations, and oxygen saturation) are stable.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The patient's physical exam reveals a nontender abdomen, normal bowel sounds, and grossly bloody stool on rectal exam.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Laboratory studies show a normal hemoglobin and hematocrit, indicating the patient is not significantly anemic.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Erosion into a gastric vessel is less likely because the patient presents with bright red blood in the stool rather than melena (black, tarry stools).",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Inflammation and infection of colonic outpouching (Diverticulitis) typically presents with abdominal pain, fever, and signs of infection (e.g., leukocytosis), which are not present in this case.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Malignancy (colon cancer) is less likely given the patient's age (43) and the acute onset of symptoms.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Submucosal esophageal tear (Mallory-Weiss syndrome) is characterized by a mucosal tear in the esophagus caused by intense, forceful emesis, such as after heavy drinking.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "A submucosal esophageal tear can lead to bleeding, and the patient's history of vomiting profusely overnight makes this a likely cause of his symptoms.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Vascular malformation is an unlikely cause due to the absence of personal/family history and other associated symptoms.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Based on the patient's history of vomiting after heavy drinking and the acute onset of symptoms, the most likely cause of his bleeding is a submucosal esophageal tear (Mallory-Weiss syndrome).",
+      "source_sentences": [
+        14,
+        15
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "The 43-year-old male presents with bright red blood in his stool, which he first noticed yesterday in a scanter amount, suggesting a recent onset of symptoms.",
+      "pattern": "A",
+      "notes": "Enumeration of symptom properties."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The patient's history of excessive alcohol consumption and profuse vomiting overnight may be a contributing factor to his current condition.",
+      "pattern": "D",
+      "notes": "Standalone clinical fact."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "This 43-year-old male is otherwise healthy and has no significant medical history or current medications.",
+      "pattern": "D",
+      "notes": "Standalone patient history."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "The patient's vital signs (temperature, blood pressure, pulse, respirations, and oxygen saturation) are stable.",
+      "pattern": "D",
+      "notes": "Standalone vitals interpretation."
+    },
+    {
+      "source_claims": [
+        6
+      ],
+      "output": "Physical exam of the 43-year-old male reveals a nontender abdomen, normal bowel sounds, and grossly bloody stool on rectal exam.",
+      "pattern": "D",
+      "notes": "Standalone exam findings."
+    },
+    {
+      "source_claims": [
+        7
+      ],
+      "output": "Laboratory studies show a normal hemoglobin and hematocrit, indicating the patient is not significantly anemic.",
+      "pattern": "D",
+      "notes": "Standalone lab interpretation."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "Erosion into a gastric vessel is less likely because this 43-year-old male presents with bright red blood in the stool rather than melena (black, tarry stools).",
+      "pattern": "B",
+      "notes": "Causal chain for exclusion."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Inflammation and infection of colonic outpouching (Diverticulitis) typically presents with abdominal pain, fever, and signs of infection (e.g., leukocytosis), which are not present in this patient.",
+      "pattern": "B",
+      "notes": "Causal chain for exclusion."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Malignancy (colon cancer) is less likely given the patient's age (43) and the acute onset of symptoms.",
+      "pattern": "B",
+      "notes": "Causal chain for exclusion."
+    },
+    {
+      "source_claims": [
+        11,
+        12
+      ],
+      "output": "Submucosal esophageal tear (Mallory-Weiss syndrome) is characterized by a mucosal tear in the esophagus caused by intense, forceful emesis, such as after heavy drinking; because this 43-year-old male vomited profusely overnight, this is a likely cause of his bleeding.",
+      "pattern": "B",
+      "notes": "Causal chain connecting definition to patient case."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Vascular malformation is an unlikely cause in this patient due to the absence of personal/family history and other associated symptoms.",
+      "pattern": "B",
+      "notes": "Causal chain for exclusion."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Based on the 43-year-old male's history of vomiting after heavy drinking and the acute onset of symptoms, the most likely cause of his bleeding is a submucosal esophageal tear (Mallory-Weiss syndrome).",
+      "pattern": "C",
+      "notes": "Conclusion based on supporting premises."
+    }
+  ]
+}

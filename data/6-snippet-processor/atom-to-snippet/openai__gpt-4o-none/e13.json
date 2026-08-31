@@ -1,0 +1,144 @@
+{
+  "entry_id": 13,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "The yeast infection is not transferable?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2660,
+    "output_tokens": 561,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1208,
+      "output_tokens": 291,
+      "cached_input_tokens": 0,
+      "cost": 0.00593
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1452,
+      "output_tokens": 270,
+      "cached_input_tokens": 0,
+      "cost": 0.00633
+    }
+  ],
+  "shared_context": {
+    "condition": "yeast infection"
+  },
+  "sentences": [
+    "Yeast infections, primarily caused by the fungus Candida albicans, are generally not considered highly contagious",
+    "However, there are certain circumstances under which they can be transmitted",
+    "Sexual Transmission: Yeast infections can be transmitted through sexual contact, although this is relatively uncommon",
+    "Both men and women can develop symptoms after sexual intercourse with an infected partner",
+    "Mother to Infant: During childbirth, a mother with a vaginal yeast infection can pass the infection to her baby, leading to oral thrush in the infant",
+    "Shared Personal Items: In rare cases, sharing personal items like towels or underwear can potentially spread the infection"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Yeast infections are primarily caused by the fungus Candida albicans.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Yeast infections are generally not considered highly contagious.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "There are certain circumstances under which yeast infections can be transmitted.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Yeast infections can be transmitted through sexual contact, although this is relatively uncommon.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Both men and women can develop symptoms after sexual intercourse with an infected partner.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "text": "During childbirth, a mother with a vaginal yeast infection can pass the infection to her baby.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "This transmission can lead to oral thrush in the infant.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "In rare cases, sharing personal items like towels or underwear can potentially spread the infection.",
+      "source_sentences": [
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Yeast infections are primarily caused by the fungus Candida albicans.",
+      "pattern": "D",
+      "notes": "Standalone causation fact related to the condition's origin."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        8
+      ],
+      "output": "Yeast infections are generally not considered highly contagious, but there are certain circumstances under which they can be transmitted, such as through sexual contact or sharing personal items like towels or underwear, although these are relatively uncommon.",
+      "pattern": "A",
+      "notes": "Enumeration of transmission factors."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Both men and women can develop symptoms after sexual intercourse with an infected partner.",
+      "pattern": "D",
+      "notes": "Standalone statement about symptom development."
+    },
+    {
+      "source_claims": [
+        6,
+        7
+      ],
+      "output": "During childbirth, a mother with a vaginal yeast infection can pass the infection to her baby, leading to oral thrush in the infant.",
+      "pattern": "B",
+      "notes": "Causal chain of transmission and resulting condition."
+    }
+  ]
+}

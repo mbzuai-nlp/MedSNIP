@@ -1,0 +1,189 @@
+{
+  "entry_id": 157,
+  "batch_id": 16,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Can you provide a short term solution that is designed for insomnia?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 3028,
+    "output_tokens": 876,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1377,
+      "output_tokens": 508,
+      "cached_input_tokens": 0,
+      "cost": 4.786e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1651,
+      "output_tokens": 368,
+      "cached_input_tokens": 0,
+      "cost": 4.774e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "short-term solution for insomnia",
+    "condition": "insomnia"
+  },
+  "sentences": [
+    "For short-term management of insomnia, several approaches can be considered",
+    "Cognitive Behavioral Therapy for Insomnia (CBT-I): This is the first-line treatment for insomnia and involves techniques such as stimulus control, sleep restriction, and relaxation training",
+    "It is effective in both the short and long term",
+    "Pharmacological Treatments: Short-term use of medications can be considered when immediate relief is necessary",
+    "Common options include",
+    "Benzodiazepines: These are effective but should be used with caution due to the risk of dependence and tolerance",
+    "Non-benzodiazepine Hypnotics (Z-drugs): Medications like zolpidem, eszopiclone, and zaleplon are commonly used for short-term treatment and have a lower risk of dependence compared to benzodiazepines",
+    "Melatonin Receptor Agonists: Ramelteon is an option that can be used for short-term treatment and has a favorable safety profile",
+    "Antihistamines: Over-the-counter options like diphenhydramine can be used, but they are generally less effective and can cause next-day drowsiness",
+    "Sleep Hygiene: Implementing good sleep practices can help improve sleep quality",
+    "This includes maintaining a regular sleep schedule, creating a comfortable sleep environment, and avoiding stimulants like caffeine and nicotine close to bedtime"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Cognitive Behavioral Therapy for Insomnia (CBT-I) is the first-line treatment for insomnia.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "CBT-I involves techniques such as stimulus control, sleep restriction, and relaxation training.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "CBT-I is effective in both the short and long term.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Pharmacological treatments can be considered for short-term use when immediate relief is necessary.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Benzodiazepines are effective for insomnia, but should be used with caution due to the risk of dependence and tolerance.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Non-benzodiazepine hypnotics (Z-drugs) like zolpidem, eszopiclone, and zaleplon are commonly used for short-term treatment and have a lower risk of dependence compared to benzodiazepines.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Melatonin receptor agonists like ramelteon can be used for short-term treatment and have a favorable safety profile.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Antihistamines like diphenhydramine can be used for insomnia, but are generally less effective and can cause next-day drowsiness.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Implementing good sleep practices can help improve sleep quality.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Maintaining a regular sleep schedule is important for good sleep quality.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Creating a comfortable sleep environment is essential for good sleep quality.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Avoiding stimulants like caffeine and nicotine close to bedtime can help improve sleep quality.",
+      "source_sentences": [
+        10
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2,
+        3
+      ],
+      "output": "Cognitive Behavioral Therapy for Insomnia (CBT-I) is the first-line treatment for insomnia, involving techniques such as stimulus control, sleep restriction, and relaxation training, and is effective in both the short and long term.",
+      "pattern": "C",
+      "notes": "Recommendation + premise."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Pharmacological treatments can be considered for short-term use when immediate relief is necessary.",
+      "pattern": "D",
+      "notes": "Standalone recommendation."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Benzodiazepines are effective for insomnia, but should be used with caution due to the risk of dependence and tolerance.",
+      "pattern": "D",
+      "notes": "Standalone warning."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "Non-benzodiazepine hypnotics (Z-drugs) like zolpidem, eszopiclone, and zaleplon, and melatonin receptor agonists like ramelteon are commonly used for short-term treatment and have a favorable safety profile compared to antihistamines like diphenhydramine.",
+      "pattern": "A",
+      "notes": "Enumeration of short-term treatment options."
+    },
+    {
+      "source_claims": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "output": "Implementing good sleep practices, maintaining a regular sleep schedule, creating a comfortable sleep environment, and avoiding stimulants like caffeine and nicotine close to bedtime can help improve sleep quality.",
+      "pattern": "A",
+      "notes": "Enumeration of sleep improvement techniques."
+    }
+  ]
+}

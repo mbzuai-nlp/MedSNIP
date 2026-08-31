@@ -1,0 +1,199 @@
+{
+  "entry_id": 50,
+  "batch_id": 5,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is there a reason why my urine is clear",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 2851,
+    "output_tokens": 878,
+    "cached_input_tokens": 1152
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1297,
+      "output_tokens": 460,
+      "cached_input_tokens": 0,
+      "cost": 0.0078425
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1554,
+      "output_tokens": 418,
+      "cached_input_tokens": 1152,
+      "cost": 0.006625
+    }
+  ],
+  "shared_context": {
+    "symptom": "clear urine"
+  },
+  "sentences": [
+    "Clear urine can be a sign of several conditions or behaviors",
+    "High Fluid Intake: One of the most common reasons for clear urine is high fluid intake",
+    "When you drink a lot of water, your kidneys excrete the excess fluid, resulting in clear urine",
+    "This does not typically require a reference as it is a well-known physiological response",
+    "Diabetes Insipidus: Clear urine can also be a symptom of diabetes insipidus, a condition characterized by an imbalance of fluids in the body, leading to excessive urination and thirst",
+    "Diuretic Use: The use of diuretics, medications that increase urine production, can also result in clear urine",
+    "Alcohol Consumption: Alcohol can act as a diuretic, leading to increased urine production and potentially clear urine",
+    "Medical Conditions: Certain medical conditions, such as chronic kidney disease, can affect urine concentration and result in clear urine",
+    "If you are concerned about the clarity of your urine, it is advisable to consult a healthcare professional for a thorough evaluation"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Clear urine can be a sign of several conditions or behaviors.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "High fluid intake is one of the most common reasons for clear urine.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "When you drink a lot of water, your kidneys excrete the excess fluid, resulting in clear urine.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "This excretion of excess fluid does not typically require a reference as it is a well-known physiological response.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Clear urine can also be a symptom of diabetes insipidus.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Diabetes insipidus is characterized by an imbalance of fluids in the body, leading to excessive urination and thirst.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "The use of diuretics can also result in clear urine.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Diuretics are medications that increase urine production.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Alcohol can act as a diuretic, leading to increased urine production and potentially clear urine.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Certain medical conditions can affect urine concentration and result in clear urine.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Chronic kidney disease is an example of a medical condition that can affect urine concentration and result in clear urine.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "text": "If you are concerned about the clarity of your urine, it is advisable to consult a healthcare professional for a thorough evaluation.",
+      "source_sentences": [
+        8
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Clear urine can be a sign of several conditions or behaviors.",
+      "pattern": "D",
+      "notes": "Introductory standalone fact about clear urine."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "High fluid intake is one of the most common reasons for clear urine. When you drink a lot of water, your kidneys excrete the excess fluid, resulting in clear urine.",
+      "pattern": "B",
+      "notes": "Causal chain linking high fluid intake to clear urine."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Clear urine can also be a symptom of diabetes insipidus, which is characterized by an imbalance of fluids in the body, leading to excessive urination and thirst.",
+      "pattern": "C",
+      "notes": "Condition noted with supporting explanation."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "The use of diuretics can also result in clear urine. Diuretics are medications that increase urine production.",
+      "pattern": "C",
+      "notes": "Explanation of how diuretics work linked to clear urine."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "Alcohol can act as a diuretic, leading to increased urine production and potentially clear urine.",
+      "pattern": "D",
+      "notes": "Standalone causal link between alcohol and clear urine."
+    },
+    {
+      "source_claims": [
+        10,
+        11
+      ],
+      "output": "Certain medical conditions can affect urine concentration and result in clear urine. Chronic kidney disease is an example of such a medical condition.",
+      "pattern": "A",
+      "notes": "Enumeration of medical conditions affecting urine."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "If you are concerned about the clarity of your urine, it is advisable to consult a healthcare professional for a thorough evaluation.",
+      "pattern": "D",
+      "notes": "Standalone advice."
+    }
+  ]
+}

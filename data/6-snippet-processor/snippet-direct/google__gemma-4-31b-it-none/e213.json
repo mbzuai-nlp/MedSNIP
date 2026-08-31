@@ -1,0 +1,109 @@
+{
+  "entry_id": 213,
+  "batch_id": 22,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "is there any specific brand you recommend for the omeprazole?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1928,
+    "output_tokens": 433,
+    "cached_input_tokens": 0,
+    "cost": 0.00041518
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1928,
+      "output_tokens": 433,
+      "cached_input_tokens": 0,
+      "cost": 0.00041518
+    }
+  ],
+  "shared_context": {
+    "topic": "omeprazole brand recommendation",
+    "drug_a": "omeprazole"
+  },
+  "sentences": [
+    "There are several brands of omeprazole available, and the choice of brand can depend on factors such as cost, availability, and patient preference",
+    "Omeprazole is available both as a prescription medication and over-the-counter (OTC)",
+    "Commonly recommended brands include",
+    "Prilosec: This is a well-known OTC brand of omeprazole",
+    "It is widely available and often recommended for its efficacy and safety profile",
+    "Losec: This is another brand name for omeprazole, commonly used in various countries and available by prescription",
+    "Generic Omeprazole: Generic versions of omeprazole are also available and are typically less expensive than brand-name versions",
+    "They are considered equally effective and safe as the branded versions",
+    "When choosing a brand, it is important to consider the patient's insurance coverage, as some insurance plans may prefer certain brands over others",
+    "Additionally, patient adherence to the medication regimen can be influenced by the cost and availability of the medication"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The choice of omeprazole brand can depend on factors such as cost, availability, and patient preference.",
+      "pattern": "A",
+      "notes": "Enumeration of factors influencing brand choice."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "Omeprazole is available both as a prescription medication and over-the-counter (OTC).",
+      "pattern": "D",
+      "notes": "Standalone fact about availability."
+    },
+    {
+      "source_sentences": [
+        2,
+        3,
+        4
+      ],
+      "output": "Prilosec is a well-known over-the-counter (OTC) brand of omeprazole that is widely available and often recommended for its efficacy and safety profile.",
+      "pattern": "A",
+      "notes": "Enumeration of properties for a single brand (Prilosec)."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "Losec is a brand name for omeprazole that is available by prescription and commonly used in various countries.",
+      "pattern": "D",
+      "notes": "Standalone fact about Losec brand."
+    },
+    {
+      "source_sentences": [
+        6,
+        7
+      ],
+      "output": "Generic versions of omeprazole are typically less expensive than brand-name versions and are considered equally effective and safe.",
+      "pattern": "A",
+      "notes": "Enumeration of properties regarding generic omeprazole."
+    },
+    {
+      "source_sentences": [
+        8
+      ],
+      "output": "When choosing an omeprazole brand, it is important to consider the patient's insurance coverage, as some insurance plans may prefer certain brands over others.",
+      "pattern": "B",
+      "notes": "Causal link: insurance coverage influences brand choice."
+    },
+    {
+      "source_sentences": [
+        9
+      ],
+      "output": "Patient adherence to the omeprazole medication regimen can be influenced by the cost and availability of the medication.",
+      "pattern": "B",
+      "notes": "Causal link: cost/availability influences adherence."
+    }
+  ]
+}

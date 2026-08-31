@@ -1,0 +1,232 @@
+{
+  "entry_id": 151,
+  "batch_id": 16,
+  "subset": "vignette",
+  "split": "test",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 24-year-old man with epilepsy refractory to valproic acid, phenytoin, and levetiracetam undergoes magnetic resonance imaging of his brain while monitored by anesthetic care. He wakes up screaming in pain due to an electrocardiogram lead having caused a significant thermal burn circumferentially around his left leg. He is admitted to the medical intensive care unit for continuous electroencephalogram monitoring while on a midazolam infusion for seizure suppression and supportive care for his burn. Overnight, the nurse continued to increase the patient's midazolam infusion rate, but she also noticed that his left toes were cold to the touch with significant edema. His temperature is now 100°F (37.8°C), blood pressure is 110/75 mmHg, pulse is 80/min, respirations are 10/min and oxygen saturation is 95% on 2 liters nasal cannula. No dorsalis pedis or posterior tibial pulses are detected on the left lower extremity. A delta pressure of 25 mmHg is obtained in the left leg. What is the most appropriate next step in management? (A) Amputation (B) Escharotomy (C) Fasciotomy (D) Intravenous fluid infusion based on Parkland formula (E) Transfer to burn center",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4751,
+    "output_tokens": 1351,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1894,
+      "output_tokens": 738,
+      "cached_input_tokens": 0,
+      "cost": 0.00052666
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2857,
+      "output_tokens": 613,
+      "cached_input_tokens": 0,
+      "cost": 0.00060435
+    }
+  ],
+  "shared_context": {
+    ":": "24-year-old man",
+    "chief_complaint": "circumferential thermal burn on left leg",
+    "medical_history": "epilepsy refractory to valproic acid, phenytoin, and levetiracetam",
+    "medications": "midazolam infusion",
+    "vitals": "temperature 100°F, BP 110/75 mmHg, pulse 80/min, respirations 10/min, O2 saturation 95% on 2L nasal cannula",
+    "exam_findings": "cold left toes, significant edema, absent dorsalis pedis and posterior tibial pulses, delta pressure 25 mmHg",
+    "treatment_history": "hospitalized for EEG monitoring and burn care",
+    "correct_answer": "Fasciotomy"
+  },
+  "sentences": [
+    "To determine the most appropriate next step in management, let's analyze the patient's condition",
+    "The patient has a significant thermal burn circumferentially around his left leg, resulting in cold toes, significant edema, and the absence of dorsalis pedis and posterior tibial pulses",
+    "The delta pressure of 25 mmHg suggests a compartment syndrome",
+    "Given the presence of a compartment syndrome, the most appropriate next step in management is to perform a fasciotomy",
+    "This is because fasciotomy is indicated in patients with a gradient of <30 mmHg (gradient = diastolic pressure − compartment pressure), an absolute compartment pressure >30 mmHg, ischemic periods of >6 hours, or combined arterial and venous injuries",
+    "The other options are not the most appropriate next steps",
+    "A) Amputation is a drastic measure and should only be considered after all other options have been exhausted and the patient's condition has worsened",
+    "B) Escharotomy is a surgical procedure to release tension on a burn eschar, but it is not indicated in this case as the primary management for compartment syndrome",
+    "D) Intravenous fluid infusion based on Parkland formula may be necessary to manage the burn, but it does not address the underlying compartment syndrome",
+    "E) Transfer to a burn center may be necessary for further management, but it is not the immediate next step in management of compartment syndrome",
+    "Therefore, the most appropriate next step in management is to perform a fasciotomy"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient's condition must be analyzed to determine the most appropriate next step in management.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient has a significant circumferential thermal burn around his left leg, resulting in cold toes, significant edema, and the absence of dorsalis pedis and posterior tibial pulses.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "A delta pressure of 25 mmHg suggests a compartment syndrome.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Given the presence of a compartment syndrome, the most appropriate next step in management is to perform a fasciotomy.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Fasciotomy is indicated in patients with a gradient of <30 mmHg (gradient = diastolic pressure − compartment pressure).",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Fasciotomy is indicated in patients with an absolute compartment pressure >30 mmHg.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Fasciotomy is indicated in patients with ischemic periods of >6 hours.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Fasciotomy is indicated in patients with combined arterial and venous injuries.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "text": "The other options are not the most appropriate next steps.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Amputation is a drastic measure and should only be considered after all other options have been exhausted and the patient's condition has worsened.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Escharotomy is a surgical procedure to release tension on a burn eschar, but it is not indicated in this case as the primary management for compartment syndrome.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Intravenous fluid infusion based on Parkland formula may be necessary to manage the burn, but it does not address the underlying compartment syndrome.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Transfer to a burn center may be necessary for further management, but it is not the immediate next step in management of compartment syndrome.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 14,
+      "text": "The most appropriate next step in management is to perform a fasciotomy.",
+      "source_sentences": [
+        10
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The 24-year-old man's clinical condition must be analyzed to determine the most appropriate next step in management.",
+      "pattern": "D",
+      "notes": "Introductory statement."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "This 24-year-old man has a significant circumferential thermal burn around his left leg, resulting in cold toes, significant edema, and the absence of dorsalis pedis and posterior tibial pulses; furthermore, the obtained delta pressure of 25 mmHg suggests a compartment syndrome.",
+      "pattern": "B",
+      "notes": "Causal link between physical findings and the diagnosis of compartment syndrome."
+    },
+    {
+      "source_claims": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "output": "Given the presence of compartment syndrome, the most appropriate next step in management is to perform a fasciotomy, which is indicated in patients with a gradient <30 mmHg (diastolic pressure − compartment pressure), an absolute compartment pressure >30 mmHg, ischemic periods >6 hours, or combined arterial and venous injuries.",
+      "pattern": "C",
+      "notes": "Conclusion (fasciotomy) supported by a list of medical indications (Pattern A)."
+    },
+    {
+      "source_claims": [
+        9,
+        10
+      ],
+      "output": "Other options are not the most appropriate next steps, such as amputation, which is a drastic measure that should only be considered after all other options have been exhausted and the patient's condition has worsened.",
+      "pattern": "A",
+      "notes": "Enumeration of why other options are incorrect."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Escharotomy is a surgical procedure to release tension on a burn eschar, but it is not indicated in this case as the primary management for compartment syndrome in this 24-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone explanation of a specific option."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Intravenous fluid infusion based on the Parkland formula may be necessary to manage the burn, but it does not address the underlying compartment syndrome seen in this 24-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone explanation of a specific option."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Transfer to a burn center may be necessary for further management, but it is not the immediate next step in the management of compartment syndrome for this 24-year-old man.",
+      "pattern": "D",
+      "notes": "Standalone explanation of a specific option."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "The most appropriate next step in management for this 24-year-old man with a suspected compartment syndrome is to perform a fasciotomy.",
+      "pattern": "D",
+      "notes": "Final conclusion statement."
+    }
+  ]
+}

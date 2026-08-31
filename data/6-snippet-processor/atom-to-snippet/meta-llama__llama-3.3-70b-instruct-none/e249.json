@@ -1,0 +1,150 @@
+{
+  "entry_id": 249,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "So the singulair is an oral tablet not an inhaler?",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2686,
+    "output_tokens": 573,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1170,
+      "output_tokens": 308,
+      "cached_input_tokens": 0,
+      "cost": 0.00021556
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1516,
+      "output_tokens": 265,
+      "cached_input_tokens": 0,
+      "cost": 0.0002364
+    }
+  ],
+  "shared_context": {
+    "topic": "Singulair",
+    "drug_a": "Singulair (montelukast)"
+  },
+  "sentences": [
+    "Yes, Singulair (montelukast) is an oral tablet, not an inhaler",
+    "It is a leukotriene receptor antagonist used for the maintenance treatment of asthma and to relieve symptoms of seasonal allergies",
+    "Montelukast is available in various formulations, including tablets, chewable tablets, and an oral granule for suspension, but not an inhaler"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Singulair (montelukast) is an oral tablet.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Singulair (montelukast) is not an inhaler.",
+      "source_sentences": [
+        0,
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Singulair (montelukast) is a leukotriene receptor antagonist.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Singulair (montelukast) is used for the maintenance treatment of asthma.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Singulair (montelukast) is used to relieve symptoms of seasonal allergies.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Montelukast is available in tablet form.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Montelukast is available in chewable tablet form.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Montelukast is available as an oral granule for suspension.",
+      "source_sentences": [
+        2
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        2
+      ],
+      "output": "Singulair (montelukast) is an oral tablet, not an inhaler.",
+      "pattern": "C",
+      "notes": "Confirmation of form and distinction from another form."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Singulair (montelukast) is a leukotriene receptor antagonist.",
+      "pattern": "D",
+      "notes": "Standalone drug classification."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Singulair (montelukast) is used for the maintenance treatment of asthma.",
+      "pattern": "D",
+      "notes": "Single use case."
+    },
+    {
+      "source_claims": [
+        5
+      ],
+      "output": "Singulair (montelukast) is used to relieve symptoms of seasonal allergies.",
+      "pattern": "D",
+      "notes": "Another single use case."
+    },
+    {
+      "source_claims": [
+        6,
+        7,
+        8
+      ],
+      "output": "Montelukast is available in various oral forms, including tablets, chewable tablets, and oral granules for suspension.",
+      "pattern": "A",
+      "notes": "Enumeration of different forms of the drug."
+    }
+  ]
+}

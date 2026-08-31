@@ -1,0 +1,67 @@
+{
+  "entry_id": 18,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "What is the most safe amount of Advil to take at one time",
+  "model": "openai/gpt-oss-20b",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1726,
+    "output_tokens": 574,
+    "cached_input_tokens": 0,
+    "cost": 0.00013214
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1726,
+      "output_tokens": 574,
+      "cached_input_tokens": 0,
+      "cost": 0.00013214
+    }
+  ],
+  "shared_context": {
+    "topic": "most safe amount of Advil to take at one time",
+    "drug_a": "Advil (ibuprofen)"
+  },
+  "sentences": [
+    "The safest amount of Advil (ibuprofen) to take at one time, for an adult, is 400 mg",
+    "This dosage is generally effective for pain relief and is the standard over-the-counter dose",
+    "It is important to not exceed this amount unless directed by a healthcare provider, as higher doses can increase the risk of adverse effects such as gastrointestinal bleeding, kidney damage, and cardiovascular issues"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The safest amount of Advil (ibuprofen) to take at one time for an adult is 400 mg.",
+      "pattern": "D",
+      "notes": "Standalone dosage fact."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "This dosage is generally effective for pain relief and is the standard over-the-counter dose.",
+      "pattern": "D",
+      "notes": "Standalone description of effectiveness and standard status."
+    },
+    {
+      "source_sentences": [
+        2
+      ],
+      "output": "Higher doses above 400 mg can increase the risk of adverse effects such as gastrointestinal bleeding, kidney damage, and cardiovascular issues, so it is important not to exceed this amount unless directed by a healthcare provider.",
+      "pattern": "D",
+      "notes": "Standalone risk statement regarding dose escalation."
+    }
+  ]
+}

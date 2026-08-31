@@ -1,0 +1,143 @@
+{
+  "entry_id": 68,
+  "batch_id": 7,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 52-year-old man presents to the emergency department by ambulance for evaluation of hematemesis. His wife states that he began vomiting bright red blood this evening while eating dinner, and has produced about 5 cups total. He has a history of alcohol use disorder and has vomited small streaks of blood in the past, but has never undergone formal medical workup for it. On exam, he has bright red blood in his mouth and pharynx, and also displays a distended abdomen with a fluid wave, jaundice, scattered spider angiomas, and multiple ecchymoses. His temperature is 98.4°F (36.9°C), blood pressure is 98/68 mmHg, pulse is 125/min, and respirations are 22/min. A rapid point-of-care hemoglobin and platelet count is 8.8 g/dL and 80,000/mm^3, respectively. The patient is given 1L of normal saline. Which of the following is the most appropriate initial step in management? (A) Balloon tamponade (B) Ceftriaxone (C) Nadolol (D) Octreotide (E) Platelet transfusion",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 4280,
+    "output_tokens": 939,
+    "cached_input_tokens": 1280
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1732,
+      "output_tokens": 487,
+      "cached_input_tokens": 1280,
+      "cost": 0.0076
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2548,
+      "output_tokens": 452,
+      "cached_input_tokens": 0,
+      "cost": 0.01089
+    }
+  ],
+  "shared_context": {
+    "age": 52,
+    "sex": "male",
+    "chief_complaint": "hematemesis",
+    "medical_history": "alcohol use disorder",
+    "exam_findings": "bright red blood in mouth and pharynx, distended abdomen with fluid wave, jaundice, scattered spider angiomas, multiple ecchymoses",
+    "vitals": "temperature 98.4°F, blood pressure 98/68 mmHg, pulse 125/min, respirations 22/min",
+    "lab_results": "hemoglobin 8.8 g/dL, platelet count 80,000/mm^3",
+    "correct_answer": "octreotide"
+  },
+  "sentences": [
+    "To determine the most appropriate initial step in management, let's break down the patient's presentation and lab results",
+    "The patient is presenting with hematemesis (vomiting bright red blood) and a history of alcohol use disorder, which is a risk factor for gastrointestinal bleeding, particularly esophageal varices",
+    "The patient has a distended abdomen with a fluid wave, jaundice, and spider angiomas, which are indicative of liver disease, likely cirrhosis",
+    "The patient's rapid point-of-care hemoglobin and platelet count are significantly low, at 8.8 g/dL and 80,000/mm^3, respectively, indicating active bleeding and potential coagulopathy",
+    "The patient's vital signs show tachycardia (increased heart rate) and tachypnea (increased respiratory rate), indicating shock and potential hypovolemic shock due to blood loss",
+    "Considering these factors, the initial step is to stabilize the patient's hemodynamics and control the bleeding",
+    "The best option to address this is to administer octreotide, a synthetic analogue of somatostatin that helps decrease splanchnic blood flow and reduce bleeding from esophageal varices"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "The patient is presenting with hematemesis (vomiting bright red blood) and a history of alcohol use disorder, which is a risk factor for gastrointestinal bleeding, particularly esophageal varices.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The patient has a distended abdomen with a fluid wave, jaundice, and spider angiomas, which are indicative of liver disease, likely cirrhosis.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The patient's rapid point-of-care hemoglobin and platelet count are significantly low, at 8.8 g/dL and 80,000/mm^3, respectively, indicating active bleeding and potential coagulopathy.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The patient's vital signs show tachycardia (increased heart rate) and tachypnea (increased respiratory rate), indicating shock and potential hypovolemic shock due to blood loss.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Considering these factors, the initial step is to stabilize the patient's hemodynamics and control the bleeding.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The best option to address this is to administer octreotide, a synthetic analogue of somatostatin that helps decrease splanchnic blood flow and reduce bleeding from esophageal varices.",
+      "source_sentences": [
+        6
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "This 52-year-old male is presenting with hematemesis (vomiting bright red blood) and a history of alcohol use disorder, which is a risk factor for gastrointestinal bleeding, particularly esophageal varices.",
+      "pattern": "C",
+      "notes": "The clinical presentation and risk factor are linked, forming a coherent snippet."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The findings of a distended abdomen with a fluid wave, jaundice, and spider angiomas in this 52-year-old male indicate liver disease, likely cirrhosis.",
+      "pattern": "D",
+      "notes": "These exam findings together point to liver disease and don't need merging."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "This 52-year-old male has a rapid point-of-care hemoglobin of 8.8 g/dL and platelet count of 80,000/mm^3, which are significantly low, indicating active bleeding and potential coagulopathy.",
+      "pattern": "C",
+      "notes": "Lab results describe a single diagnostic impression requiring context on bleeding risk."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The vital signs show tachycardia (pulse 125/min) and tachypnea (respirations 22/min), indicating shock and potential hypovolemic shock due to blood loss in this 52-year-old male.",
+      "pattern": "C",
+      "notes": "Shows a causal relationship between vitals and clinical impression."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "Considering the patient's condition, the initial step is to stabilize hemodynamics and control bleeding. The best option is to administer octreotide, a synthetic analogue of somatostatin, to decrease splanchnic blood flow and reduce bleeding from esophageal varices.",
+      "pattern": "B",
+      "notes": "Management decision tied to rationale, requiring explanation of choice."
+    }
+  ]
+}

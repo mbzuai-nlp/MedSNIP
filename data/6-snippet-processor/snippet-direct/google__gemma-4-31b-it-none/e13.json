@@ -1,0 +1,88 @@
+{
+  "entry_id": 13,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "dev",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "The yeast infection is not transferable?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 1836,
+    "output_tokens": 313,
+    "cached_input_tokens": 0,
+    "cost": 0.00035762
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1836,
+      "output_tokens": 313,
+      "cached_input_tokens": 0,
+      "cost": 0.00035762
+    }
+  ],
+  "shared_context": {
+    "topic": "transmissibility of yeast infections",
+    "condition": "yeast infection",
+    "pathogen": "Candida albicans"
+  },
+  "sentences": [
+    "Yeast infections, primarily caused by the fungus Candida albicans, are generally not considered highly contagious",
+    "However, there are certain circumstances under which they can be transmitted",
+    "Sexual Transmission: Yeast infections can be transmitted through sexual contact, although this is relatively uncommon",
+    "Both men and women can develop symptoms after sexual intercourse with an infected partner",
+    "Mother to Infant: During childbirth, a mother with a vaginal yeast infection can pass the infection to her baby, leading to oral thrush in the infant",
+    "Shared Personal Items: In rare cases, sharing personal items like towels or underwear can potentially spread the infection"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Yeast infections, primarily caused by the fungus Candida albicans, are generally not considered highly contagious.",
+      "pattern": "D",
+      "notes": "Standalone definition and general fact."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "There are certain circumstances under which yeast infections can be transmitted.",
+      "pattern": "D",
+      "notes": "Standalone transitional statement regarding transmission."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Yeast infections can be transmitted through sexual contact, although this is relatively uncommon, and both men and women can develop symptoms after sexual intercourse with an infected partner.",
+      "pattern": "C",
+      "notes": "Conclusion about sexual transmission merged with the supporting premise of who can develop symptoms."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "During childbirth, a mother with a vaginal yeast infection can pass the infection to her baby, leading to oral thrush in the infant.",
+      "pattern": "B",
+      "notes": "Causal chain: childbirth leads to transmission, which leads to oral thrush."
+    },
+    {
+      "source_sentences": [
+        5
+      ],
+      "output": "In rare cases, sharing personal items like towels or underwear can potentially spread yeast infections.",
+      "pattern": "D",
+      "notes": "Standalone fact about non-sexual transmission."
+    }
+  ]
+}

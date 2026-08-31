@@ -1,0 +1,151 @@
+{
+  "entry_id": 133,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "google/gemma-4-31b-it",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2837,
+    "output_tokens": 541,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1277,
+      "output_tokens": 296,
+      "cached_input_tokens": 0,
+      "cost": 0.00027849
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1560,
+      "output_tokens": 245,
+      "cached_input_tokens": 0,
+      "cost": 0.0002959
+    }
+  ],
+  "shared_context": {
+    "topic": "losartan dosing frequency",
+    "drug_a": "losartan",
+    "condition": "high blood pressure, kidney disease"
+  },
+  "sentences": [
+    "Losartan is an angiotensin II receptor antagonist used to treat high blood pressure and certain types of kidney disease",
+    "The recommended dosage of losartan is typically 50-100 mg once daily",
+    "Taking two pills at once is not recommended, as it may increase the risk of adverse effects and does not provide additional benefits",
+    "Instead, it is best to take losartan at the same time every day, as directed by your healthcare provider"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Losartan is an angiotensin II receptor antagonist.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Losartan is used to treat high blood pressure.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Losartan is used to treat certain types of kidney disease.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "The recommended dosage of losartan is typically 50-100 mg once daily.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Taking two pills of losartan at once is not recommended.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Taking two pills of losartan at once may increase the risk of adverse effects.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Taking two pills of losartan at once does not provide additional benefits.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "text": "It is best to take losartan at the same time every day as directed by a healthcare provider.",
+      "source_sentences": [
+        3
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "Losartan is an angiotensin II receptor antagonist.",
+      "pattern": "D",
+      "notes": "Standalone definition."
+    },
+    {
+      "source_claims": [
+        2,
+        3
+      ],
+      "output": "Losartan is used to treat high blood pressure and certain types of kidney disease.",
+      "pattern": "A",
+      "notes": "Enumeration of indications for the same drug."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "The recommended dosage of losartan is typically 50-100 mg once daily.",
+      "pattern": "D",
+      "notes": "Standalone dosage fact."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "Taking two pills of losartan at once is not recommended because it may increase the risk of adverse effects and does not provide additional benefits.",
+      "pattern": "C",
+      "notes": "Recommendation combined with supporting reasoning/premises."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "It is best to take losartan at the same time every day as directed by a healthcare provider.",
+      "pattern": "D",
+      "notes": "Standalone administration instruction."
+    }
+  ]
+}

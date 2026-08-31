@@ -1,0 +1,62 @@
+{
+  "entry_id": 17,
+  "batch_id": 2,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "What is the most safe amount of Advil to take at one time",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1715,
+    "output_tokens": 1120,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1715,
+      "output_tokens": 1120,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "safe one-time Advil dosing",
+    "drug_a": "Advil (ibuprofen)",
+    "condition": "pain or fever"
+  },
+  "sentences": [
+    "The safe amount of Advil (ibuprofen) to take at one time depends on several factors, including the individual's age, weight, and overall health",
+    "For adults and children over 12 years old, the typical over-the-counter dose is 200-400 mg every 4-6 hours as needed for pain or fever",
+    "The maximum daily dose should not exceed 1200 mg unless directed by a healthcare provider",
+    "For children under 12 years old, dosing is based on weight, and it is essential to follow the dosing instructions provided by a healthcare provider or the product label"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "The safe amount of Advil (ibuprofen) to take at one time depends on several factors, including the individual's age, weight, and overall health.",
+      "pattern": "A",
+      "notes": "Enumeration of factors affecting the safe dose of one subject: Advil dosing."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "For adults and children over 12 years old, the typical over-the-counter dose of Advil (ibuprofen) is 200-400 mg every 4-6 hours as needed for pain or fever, and the maximum daily dose should not exceed 1200 mg unless directed by a healthcare provider.",
+      "pattern": "A",
+      "notes": "Merged because the sentences enumerate dosing properties of the same subject and age group: usual dose, interval, and maximum daily dose."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "For children under 12 years old, Advil (ibuprofen) dosing is based on weight, and dosing instructions from a healthcare provider or the product label should be followed.",
+      "pattern": "D",
+      "notes": "Standalone pediatric dosing rule and instruction."
+    }
+  ]
+}

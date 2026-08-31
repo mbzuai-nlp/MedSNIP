@@ -1,0 +1,131 @@
+{
+  "entry_id": 172,
+  "batch_id": 18,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Should I take a lower dose of my sertraline while taking the zofran?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 2743,
+    "output_tokens": 2240,
+    "cached_input_tokens": 1152
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1204,
+      "output_tokens": 667,
+      "cached_input_tokens": 0
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1539,
+      "output_tokens": 1573,
+      "cached_input_tokens": 1152
+    }
+  ],
+  "shared_context": {
+    "topic": "whether to lower sertraline dose while taking Zofran",
+    "drug_a": "sertraline",
+    "drug_b": "ondansetron (Zofran)",
+    "condition": "serotonin syndrome"
+  },
+  "sentences": [
+    "There is no direct interaction between sertraline and ondansetron (Zofran) that necessitates a dose adjustment of sertraline",
+    "However, both medications can increase the risk of a condition called serotonin syndrome, which is characterized by symptoms such as confusion, rapid heart rate, and high blood pressure",
+    "It is important to monitor for symptoms of serotonin syndrome when these medications are taken together",
+    "Consult your healthcare provider before making any changes to your medication regimen",
+    "They can provide personalized advice based on your medical history and current condition"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "There is no direct interaction between sertraline and ondansetron (Zofran) that necessitates a dose adjustment of sertraline.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Sertraline and ondansetron (Zofran) can increase the risk of serotonin syndrome when taken together.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Serotonin syndrome can be characterized by confusion.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Serotonin syndrome can be characterized by rapid heart rate.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Serotonin syndrome can be characterized by high blood pressure.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "It is important to monitor for symptoms of serotonin syndrome when sertraline and ondansetron (Zofran) are taken together.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 7,
+      "text": "A person should consult a healthcare provider before making any changes to their medication regimen.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "text": "A healthcare provider can provide personalized advice based on the person's medical history and current condition.",
+      "source_sentences": [
+        4
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "There is no direct interaction between sertraline and ondansetron (Zofran) that necessitates a dose adjustment of sertraline.",
+      "pattern": "D",
+      "notes": "Standalone factual statement about dose adjustment."
+    },
+    {
+      "source_claims": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "Sertraline and ondansetron (Zofran) can increase the risk of serotonin syndrome when taken together, so symptoms such as confusion, rapid heart rate, and high blood pressure should be monitored.",
+      "pattern": "C",
+      "notes": "Monitoring recommendation supported by the interaction risk and the listed serotonin syndrome symptoms."
+    },
+    {
+      "source_claims": [
+        7,
+        8
+      ],
+      "output": "A person should consult a healthcare provider before making any changes to their medication regimen, because a healthcare provider can give personalized advice based on the person's medical history and current condition.",
+      "pattern": "C",
+      "notes": "Recommendation paired with its supporting rationale."
+    }
+  ]
+}

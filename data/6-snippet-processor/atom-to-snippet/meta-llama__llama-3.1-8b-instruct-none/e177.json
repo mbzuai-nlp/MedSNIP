@@ -1,0 +1,329 @@
+{
+  "entry_id": 177,
+  "batch_id": 18,
+  "subset": "vignette",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "vignette",
+  "full_query": "A 26-year-old man presents to the emergency department with fatigue and dark urine over the past day. He was recently diagnosed with cellulitis of his left leg, for which he was prescribed trimethoprim-sulfamethoxazole. He denies having nausea, vomiting, or diarrhea. He has no significant medical history and does not currently take any medications. His temperature is 98.6°F (37°C), blood pressure is 115/72 mmHg, pulse is 98/min, and respirations are 14/min. Physical exam reveals conjunctival icterus, bilateral flank tenderness, and erythema of the left leg. Laboratory workup is performed, and the results are shown below: Serum: Hemoglobin: 7.2 g/dL Total bilirubin: 2.1 mg/dL Direct bilirubin: 0.8 mg/dL Lactate dehydrogenase: 470 U/L Glucose-6-phosphate dehydrogenase: 7 U/gHb (normal: 6-20 U/gHb) Which of the following would most likely be seen on a peripheral blood smear in this patient? (A) Acanthocytes (B) Codocytes (C) Degmacytes (D) Schistocytes (E) Spherocytes",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 4924,
+    "output_tokens": 1926,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 2055,
+      "output_tokens": 929,
+      "cached_input_tokens": 0,
+      "cost": 7.826e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 2869,
+      "output_tokens": 997,
+      "cached_input_tokens": 0,
+      "cost": 9.726e-05
+    }
+  ],
+  "shared_context": {
+    "patient_age": 26,
+    "patient_sex": "male",
+    "presenting_complaint": "fatigue, dark urine",
+    "key_history": "recently diagnosed with cellulitis, prescribed trimethoprim-sulfamethoxazole",
+    "exam": "conjunctival icterus, bilateral flank tenderness, erythema of the left leg",
+    "lab_results": "low hemoglobin, elevated total bilirubin, elevated lactate dehydrogenase, normal G6PD",
+    "diagnosis": "likely G6PD deficiency-induced hemolysis"
+  },
+  "sentences": [
+    "To determine the correct answer for the multiple-choice question, we need to analyze the clinical presentation, laboratory results, and pathophysiology of the patient's condition",
+    "Fatigue and dark urine: These symptoms suggest hemolysis (the breakdown of red blood cells)",
+    "Recent trimethoprim-sulfamethoxazole prescription: This antibiotic can trigger hemolysis in patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency",
+    "Physical Exam: Conjunctival icterus (yellowing of the eyes due to elevated bilirubin from hemolysis) and bilateral flank tenderness (possibly indicating hemoglobinuria or renal involvement from hemolysis)",
+    "Laboratory Results",
+    "Hemoglobin: 7.2 g/dL: Low, indicating anemia from hemolysis",
+    "Total bilirubin: 2.1 mg/dL (with indirect bilirubin predominance): Elevated, consistent with hemolysis",
+    "Lactate dehydrogenase (LDH): 470 U/L: Elevated, a marker of cell turnover and hemolysis",
+    "G6PD: 7 U/gHb: Within the normal range, but G6PD levels can be normal during an acute hemolytic episode due to the destruction of older, more enzyme-deficient cells, leaving younger cells with relatively higher G6PD activity",
+    "To determine the specific type of cells seen on a peripheral blood smear, we must understand the typical findings associated with different conditions",
+    "Acanthocytes: Associated with liver disease or abetalipoproteinemia",
+    "Codocytes (target cells): Seen in thalassemias, liver disease, and hemoglobinopathies",
+    "Degmacytes (bite cells): Formed when macrophages \"bite\" out a portion of the red cell containing denatured hemoglobin (Heinz bodies), commonly seen in G6PD deficiency",
+    "Schistocytes: Fragmented cells seen in microangiopathic hemolytic anemias like DIC, TTP, or HUS",
+    "Spherocytes: Seen in hereditary spherocytosis and autoimmune hemolytic anemia",
+    "Given the patient's clinical presentation and the likely diagnosis of G6PD deficiency-induced hemolysis, the peripheral blood smear will most likely show degmacytes (bite cells)",
+    "This results from the oxidative damage caused by the drug, leading to the removal of denatured hemoglobin by the spleen",
+    "(C) Degmacytes"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Fatigue and dark urine: These symptoms suggest hemolysis (the breakdown of red blood cells).",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Recent trimethoprim-sulfamethoxazole prescription: This antibiotic can trigger hemolysis in patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency.",
+      "source_sentences": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Physical Exam: Conjunctival icterus (yellowing of the eyes due to elevated bilirubin from hemolysis) and bilateral flank tenderness (possibly indicating hemoglobinuria or renal involvement from hemolysis).",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Laboratory Results",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Hemoglobin: 7.2 g/dL: Low, indicating anemia from hemolysis.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Total bilirubin: 2.1 mg/dL (with indirect bilirubin predominance): Elevated, consistent with hemolysis.",
+      "source_sentences": [
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Lactate dehydrogenase (LDH): 470 U/L: Elevated, a marker of cell turnover and hemolysis.",
+      "source_sentences": [
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "text": "G6PD: 7 U/gHb: Within the normal range, but G6PD levels can be normal during an acute hemolytic episode due to the destruction of older, more enzyme-deficient cells, leaving younger cells with relatively higher G6PD activity.",
+      "source_sentences": [
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "text": "To determine the specific type of cells seen on a peripheral blood smear, we must understand the typical findings associated with different conditions.",
+      "source_sentences": [
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Acanthocytes: Associated with liver disease or abetalipoproteinemia.",
+      "source_sentences": [
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Codocytes (target cells): Seen in thalassemias, liver disease, and hemoglobinopathies.",
+      "source_sentences": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Degmacytes (bite cells): Formed when macrophages 'bite' out a portion of the red cell containing denatured hemoglobin (Heinz bodies), commonly seen in G6PD deficiency.",
+      "source_sentences": [
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Schistocytes: Fragmented cells seen in microangiopathic hemolytic anemias like DIC, TTP, or HUS.",
+      "source_sentences": [
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Spherocytes: Seen in hereditary spherocytosis and autoimmune hemolytic anemia.",
+      "source_sentences": [
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Given the patient's clinical presentation and the likely diagnosis of G6PD deficiency-induced hemolysis, the peripheral blood smear will most likely show degmacytes (bite cells).",
+      "source_sentences": [
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "text": "This results from the oxidative damage caused by the drug, leading to the removal of denatured hemoglobin by the spleen.",
+      "source_sentences": [
+        16
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Degmacytes (bite cells) are commonly seen in G6PD deficiency.",
+      "source_sentences": [
+        17
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1
+      ],
+      "output": "The patient's fatigue and dark urine suggest hemolysis (the breakdown of red blood cells).",
+      "pattern": "D",
+      "notes": "Standalone symptom."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The recent trimethoprim-sulfamethoxazole prescription can trigger hemolysis in patients with G6PD deficiency.",
+      "pattern": "D",
+      "notes": "Risk factor."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "Physical examination reveals conjunctival icterus (yellowing of the eyes due to elevated bilirubin from hemolysis) and bilateral flank tenderness (possibly indicating hemoglobinuria or renal involvement from hemolysis).",
+      "pattern": "D",
+      "notes": "Clinical findings."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Laboratory results show low hemoglobin, elevated total bilirubin, and elevated lactate dehydrogenase, consistent with hemolysis.",
+      "pattern": "D",
+      "notes": "Lab findings."
+    },
+    {
+      "source_claims": [
+        5,
+        6,
+        7
+      ],
+      "output": "The patient's laboratory results indicate anemia (low hemoglobin), elevated total bilirubin, and elevated lactate dehydrogenase, consistent with hemolysis.",
+      "pattern": "A",
+      "notes": "Enumeration of lab findings."
+    },
+    {
+      "source_claims": [
+        8
+      ],
+      "output": "In G6PD deficiency, G6PD levels can be normal during an acute hemolytic episode due to the destruction of older, more enzyme-deficient cells, leaving younger cells with relatively higher G6PD activity.",
+      "pattern": "D",
+      "notes": "Special case explanation."
+    },
+    {
+      "source_claims": [
+        9
+      ],
+      "output": "To determine the specific type of cells seen on a peripheral blood smear, we must understand the typical findings associated with different conditions.",
+      "pattern": "D",
+      "notes": "Intro to differential diagnosis."
+    },
+    {
+      "source_claims": [
+        10
+      ],
+      "output": "Acanthocytes are associated with liver disease or abetalipoproteinemia.",
+      "pattern": "D",
+      "notes": "Specific condition explanation."
+    },
+    {
+      "source_claims": [
+        11
+      ],
+      "output": "Codocytes (target cells) are seen in thalassemias, liver disease, and hemoglobinopathies.",
+      "pattern": "D",
+      "notes": "Specific condition explanation."
+    },
+    {
+      "source_claims": [
+        12
+      ],
+      "output": "Degmacytes (bite cells) are formed when macrophages 'bite' out a portion of the red cell containing denatured hemoglobin (Heinz bodies), commonly seen in G6PD deficiency.",
+      "pattern": "D",
+      "notes": "Specific condition explanation."
+    },
+    {
+      "source_claims": [
+        13
+      ],
+      "output": "Schistocytes are fragmented cells seen in microangiopathic hemolytic anemias like DIC, TTP, or HUS.",
+      "pattern": "D",
+      "notes": "Specific condition explanation."
+    },
+    {
+      "source_claims": [
+        14
+      ],
+      "output": "Spherocytes are seen in hereditary spherocytosis and autoimmune hemolytic anemia.",
+      "pattern": "D",
+      "notes": "Specific condition explanation."
+    },
+    {
+      "source_claims": [
+        15
+      ],
+      "output": "Given the patient's clinical presentation and the likely diagnosis of G6PD deficiency-induced hemolysis, the peripheral blood smear will most likely show degmacytes (bite cells).",
+      "pattern": "C",
+      "notes": "Conclusion with reasoning."
+    },
+    {
+      "source_claims": [
+        16
+      ],
+      "output": "This results from the oxidative damage caused by the drug, leading to the removal of denatured hemoglobin by the spleen.",
+      "pattern": "D",
+      "notes": "Mechanistic explanation."
+    },
+    {
+      "source_claims": [
+        17
+      ],
+      "output": "Degmacytes (bite cells) are commonly seen in G6PD deficiency.",
+      "pattern": "D",
+      "notes": "Specific condition explanation."
+    },
+    {
+      "source_claims": [
+        15,
+        17
+      ],
+      "output": "Given the patient's clinical presentation and the likely diagnosis of G6PD deficiency-induced hemolysis, the peripheral blood smear will most likely show degmacytes (bite cells), as they are commonly seen in G6PD deficiency.",
+      "pattern": "A",
+      "notes": "One-subject enumeration."
+    },
+    {
+      "source_claims": [
+        15,
+        17
+      ],
+      "output": "The peripheral blood smear will most likely show degmacytes (bite cells), as they are commonly seen in G6PD deficiency.",
+      "pattern": "F",
+      "notes": "Same topic, different checkable facts."
+    }
+  ]
+}

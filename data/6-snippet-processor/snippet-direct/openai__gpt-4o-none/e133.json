@@ -1,0 +1,69 @@
+{
+  "entry_id": 133,
+  "batch_id": 14,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "On the losartan can I take two pills at once or at separate times?",
+  "model": "openai/gpt-4o",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": null,
+  "upstream_providers": [
+    "OpenAI"
+  ],
+  "usage": {
+    "input_tokens": 1685,
+    "output_tokens": 252,
+    "cached_input_tokens": 1536,
+    "cost": 0.0048125
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1685,
+      "output_tokens": 252,
+      "cached_input_tokens": 1536,
+      "cost": 0.0048125
+    }
+  ],
+  "shared_context": {
+    "drug_a": "losartan",
+    "condition": "high blood pressure"
+  },
+  "sentences": [
+    "Losartan is an angiotensin II receptor antagonist used to treat high blood pressure and certain types of kidney disease",
+    "The recommended dosage of losartan is typically 50-100 mg once daily",
+    "Taking two pills at once is not recommended, as it may increase the risk of adverse effects and does not provide additional benefits",
+    "Instead, it is best to take losartan at the same time every day, as directed by your healthcare provider"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Losartan is an angiotensin II receptor antagonist used to treat high blood pressure and certain types of kidney disease.",
+      "pattern": "D",
+      "notes": "Standalone fact about losartan's use and mechanism."
+    },
+    {
+      "source_sentences": [
+        1
+      ],
+      "output": "The recommended dosage of losartan is typically 50-100 mg once daily.",
+      "pattern": "D",
+      "notes": "Standalone dosing recommendation."
+    },
+    {
+      "source_sentences": [
+        2,
+        3
+      ],
+      "output": "Taking two pills of losartan at once is not recommended, as it may increase the risk of adverse effects and does not provide additional benefits. Instead, it is best to take losartan at the same time every day, as directed by your healthcare provider.",
+      "pattern": "B",
+      "notes": "Causal chain explaining why not to take two pills at once and the recommendation for consistent timing."
+    }
+  ]
+}

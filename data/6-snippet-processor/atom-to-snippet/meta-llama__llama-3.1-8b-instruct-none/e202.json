@@ -1,0 +1,145 @@
+{
+  "entry_id": 202,
+  "batch_id": 21,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "atom-to-snippet",
+  "detected_subset": "consumer",
+  "full_query": "Is poison ivy contagious between people?",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "reasoning_effort": null,
+  "route": "openrouter",
+  "provider_pin": "deepinfra",
+  "upstream_providers": [
+    "DeepInfra"
+  ],
+  "usage": {
+    "input_tokens": 2696,
+    "output_tokens": 554,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "extract",
+      "input_tokens": 1202,
+      "output_tokens": 281,
+      "cached_input_tokens": 0,
+      "cost": 3.528e-05
+    },
+    {
+      "step": "cluster",
+      "input_tokens": 1494,
+      "output_tokens": 273,
+      "cached_input_tokens": 0,
+      "cost": 4.08e-05
+    }
+  ],
+  "shared_context": {
+    "topic": "poison ivy contagiousness"
+  },
+  "sentences": [
+    "Poison ivy itself is not contagious between people",
+    "The rash caused by poison ivy, known as contact dermatitis, results from an allergic reaction to urushiol, an oil found in the plant",
+    "Poison ivy itself is not contagious between people",
+    "The rash caused by poison ivy is known as contact dermatitis",
+    "The rash results from an allergic reaction to urushiol, an oil found in the plant",
+    "Urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces"
+  ],
+  "generated_atoms": [
+    {
+      "index": 1,
+      "text": "Poison ivy itself is not contagious between people.",
+      "source_sentences": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "The rash caused by poison ivy is known as contact dermatitis.",
+      "source_sentences": [
+        3
+      ]
+    },
+    {
+      "index": 3,
+      "text": "The rash results from an allergic reaction to urushiol, an oil found in the plant.",
+      "source_sentences": [
+        4
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces.",
+      "source_sentences": [
+        5
+      ]
+    },
+    {
+      "index": 5,
+      "text": "The rash caused by poison ivy results from an allergic reaction.",
+      "source_sentences": [
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "text": "The rash caused by poison ivy results from an allergic reaction to an oil found in the plant.",
+      "source_sentences": [
+        2,
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Poison ivy is not contagious between people, but urushiol can be transferred.",
+      "source_sentences": [
+        0,
+        5
+      ]
+    }
+  ],
+  "snippets": [
+    {
+      "source_claims": [
+        1,
+        7
+      ],
+      "output": "Poison ivy itself is not contagious between people, but urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces.",
+      "pattern": "C",
+      "notes": "Conclusion + supporting premise."
+    },
+    {
+      "source_claims": [
+        2
+      ],
+      "output": "The rash caused by poison ivy is known as contact dermatitis.",
+      "pattern": "D",
+      "notes": "Standalone definition."
+    },
+    {
+      "source_claims": [
+        3
+      ],
+      "output": "The rash results from an allergic reaction to urushiol, an oil found in the plant.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        4
+      ],
+      "output": "Urushiol can be transferred from one person to another if it remains on the skin, clothing, or other surfaces.",
+      "pattern": "D",
+      "notes": "Standalone fact."
+    },
+    {
+      "source_claims": [
+        5,
+        6
+      ],
+      "output": "The rash caused by poison ivy results from an allergic reaction to an oil found in the plant.",
+      "pattern": "A",
+      "notes": "Enumeration of properties of the same thing (oil)."
+    }
+  ]
+}

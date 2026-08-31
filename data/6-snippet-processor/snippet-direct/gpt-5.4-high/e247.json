@@ -1,0 +1,90 @@
+{
+  "entry_id": 247,
+  "batch_id": 25,
+  "subset": "consumer",
+  "split": "train",
+  "mode": "snippet-direct",
+  "detected_subset": "consumer",
+  "full_query": "Is there anti nausea medication that can be taken to allow fluids to stay down?",
+  "model": "gpt-5.4",
+  "usage": {
+    "input_tokens": 1822,
+    "output_tokens": 2484,
+    "cached_input_tokens": 0
+  },
+  "usage_steps": [
+    {
+      "step": "snippet_direct",
+      "input_tokens": 1822,
+      "output_tokens": 2484,
+      "cached_input_tokens": 0
+    }
+  ],
+  "shared_context": {
+    "topic": "anti-nausea medication to help keep fluids down",
+    "symptom": "nausea and vomiting"
+  },
+  "sentences": [
+    "Yes, there are several anti-nausea medications available that can help patients keep fluids down",
+    "Common pharmacological treatments include",
+    "Ondansetron: This is a serotonin 5-HT3 receptor antagonist widely used to prevent nausea and vomiting caused by surgery, chemotherapy, or gastroenteritis",
+    "A single oral dose of ondansetron has been shown to reduce the risk of recurrent vomiting, the need for intravenous fluids, and hospital admissions in children with acute gastroenteritis",
+    "Domperidone: Another effective antiemetic, domperidone, works as a dopamine antagonist and is often used off-label to manage nausea and vomiting, including cases related to gastroparesis and gastrointestinal disorders",
+    "Metoclopramide: This drug increases gastrointestinal motility and is effective in treating nausea and vomiting",
+    "It acts as a dopamine antagonist and can be particularly useful in patients with delayed gastric emptying",
+    "Prochlorperazine: Often used to control severe nausea and vomiting, prochlorperazine is a dopamine antagonist that can be administered orally, rectally, or parenterally"
+  ],
+  "generated_atoms": null,
+  "snippets": [
+    {
+      "source_sentences": [
+        0
+      ],
+      "output": "Several anti-nausea medications are available that can help patients keep fluids down.",
+      "pattern": "D",
+      "notes": "Standalone general claim answering the question."
+    },
+    {
+      "source_sentences": [
+        1,
+        2
+      ],
+      "output": "Common pharmacological treatments for nausea and vomiting include ondansetron, a serotonin 5-HT3 receptor antagonist widely used to prevent nausea and vomiting caused by surgery, chemotherapy, or gastroenteritis.",
+      "pattern": "A",
+      "notes": "Sentence 1 is a non-standalone list lead-in and is merged with the first listed treatment option."
+    },
+    {
+      "source_sentences": [
+        3
+      ],
+      "output": "A single oral dose of ondansetron has been shown to reduce recurrent vomiting, the need for intravenous fluids, and hospital admissions in children with acute gastroenteritis.",
+      "pattern": "F",
+      "notes": "Same drug as the prior snippet, but a distinct checkable efficacy claim that stands on its own."
+    },
+    {
+      "source_sentences": [
+        4
+      ],
+      "output": "Domperidone is an antiemetic that works as a dopamine antagonist and is often used off-label to manage nausea and vomiting, including cases related to gastroparesis and gastrointestinal disorders.",
+      "pattern": "F",
+      "notes": "Distinct drug-specific fact on the same topic; kept separate."
+    },
+    {
+      "source_sentences": [
+        5,
+        6
+      ],
+      "output": "Metoclopramide increases gastrointestinal motility, is effective in treating nausea and vomiting, acts as a dopamine antagonist, and can be particularly useful in patients with delayed gastric emptying.",
+      "pattern": "A",
+      "notes": "Multiple properties and uses of the same drug are merged into one self-contained statement."
+    },
+    {
+      "source_sentences": [
+        7
+      ],
+      "output": "Prochlorperazine is often used to control severe nausea and vomiting, acts as a dopamine antagonist, and can be administered orally, rectally, or parenterally.",
+      "pattern": "F",
+      "notes": "Distinct drug-specific fact on the same topic; kept separate."
+    }
+  ]
+}
